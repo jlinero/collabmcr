@@ -131,7 +131,7 @@ async function getJweToken() {
   myHeaders.append("Authorization", `Bearer ${service_app_token}`);
 
   const payload =  JSON.stringify({
-    "calledNumber": "7102", // Place your call queue/hunt group/destination number here
+    "calledNumber": "5102", // Place your call queue/hunt group/destination number here
     "guestName": "" // Any guest name can be given
   });
 
