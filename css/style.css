@@ -195,15 +195,18 @@ ul.nav.navbar-nav {
 }
 .slider-grid {
   display: none;
-}
-/* Style for the large logo image */
-.large-logo {
+/* Style for the centered logo image */
+.centered-logo {
   display: block;
-  max-width: 80vw; /* Up to 80% of viewport width */
-  max-height: 80vh; /* Up to 80% of viewport height */
-  margin: 0 auto; /* Center horizontally */
-  position: relative;
-  top: 10vh; /* Adjust vertical position as needed */
+  max-width: 40vw;   /* up to 40% of viewport width */
+  max-height: 40vh;  /* up to 40% of viewport height */
+  margin: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Optional: add some shadow or border if desired */
+  /* box-shadow: 0 0 10px rgba(0,0,0,0.3); */
 }
 .copyright {
   margin: 1em 0 0 0;
