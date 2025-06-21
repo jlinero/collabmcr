@@ -167,32 +167,20 @@ ul.nav.navbar-nav {
   background-size: cover;
 }
 .slider-grid {
-  width: 200px !important;
-  height: auto;
-  top: 40%;
-  left: 50%;
+  width: 290px !important;
+  top: 23%;
   position: absolute;
-  margin: 0;
-  padding: 0;
+  height: 290px;
+  margin: 3em auto 0;
   text-align: center;
-  border: none;
-  border-radius: 0;
-  transform: translate(-50%, -50%);
+  /* Removed border and border-radius to eliminate the circle */
+  padding: 5em 0 0 0;
 }
-.slider-grid h3 {
-  color: #fff;
-  font-size: 3em;
-  margin: 0;
-  font-family: "Sofia", "Pacifico", cursive;
-}
-.slider-grid p {
-  color: #fff;
-  font-size: 0.875em;
-  width: 84%;
-  margin: 2em auto 0;
-}
-.slider-grid {
-  display: none;
+.centered-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .copyright {
   margin: 1em 0 0 0;
