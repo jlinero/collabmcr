@@ -196,6 +196,15 @@ ul.nav.navbar-nav {
 .slider-grid {
   display: none;
 }
+/* Style for the large logo image */
+.large-logo {
+  display: block;
+  max-width: 80vw; /* Up to 80% of viewport width */
+  max-height: 80vh; /* Up to 80% of viewport height */
+  margin: 0 auto; /* Center horizontally */
+  position: relative;
+  top: 10vh; /* Adjust vertical position as needed */
+}
 .copyright {
   margin: 1em 0 0 0;
   text-align: center;
