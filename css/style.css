@@ -167,17 +167,23 @@ ul.nav.navbar-nav {
   background-size: cover;
 }
 .slider-grid {
-  width: 200px !important;       /* Smaller width */
-  height: auto;                  /* Adjust height automatically */
-  top: 40%;                     /* Position vertically near center */
-  left: 50%;                    /* Position horizontally center */
+  width: 200px !important;
+  height: auto;
+  top: 40%;
+  left: 50%;
   position: absolute;
-  margin: 0;                    /* Remove auto margin */
-  padding: 1em 0 0 0;           /* Less padding on top */
+  margin: 0;
+  padding: 0;
   text-align: center;
-  border: none;                 /* Remove border */
-  border-radius: 0;             /* Remove border radius */
-  transform: translate(-50%, -50%); /* Center the element exactly */
+  border: none;
+  border-radius: 0;
+  transform: translate(-50%, -50%);
+}
+.centered-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 .slider-grid h3 {
   color: #fff;
