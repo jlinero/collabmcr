@@ -173,14 +173,25 @@ ul.nav.navbar-nav {
   height: 290px;
   margin: 3em auto 0;
   text-align: center;
-  /* Removed border and border-radius to eliminate the circle */
+  border: solid 2px #fff;
   padding: 5em 0 0 0;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  -moz-border-radius: 50%;
 }
-.centered-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+.slider-grid h3 {
+  color: #fff;
+  font-size: 3em;
+  margin: 0;
+  font-family: "Sofia", "Pacifico", cursive;
+}
+.slider-grid p {
+  color: #fff;
+  font-size: 0.875em;
+  width: 84%;
+  margin: 2em auto 0;
 }
 .copyright {
   margin: 1em 0 0 0;
