@@ -522,9 +522,12 @@ async function initWebex(){
       jwe:         callingConfig.callingClientConfig.jwe
     });
 
-    // Mostrar métodos disponibles para debugging
-    const methods = Object.keys(S.calling).filter(k=>typeof S.calling[k]==='function').join(', ');
-    log('Métodos SDK: '+methods,'info');
+    // Inspeccionar TODOS los métodos y propiedades del objeto
+    const allKeys = [];
+    let obj = S.calling;
+    do { allKeys.push(...Object.getOwnPropertyNames(obj)); } while(obj = Object.getPrototypeOf(obj));
+    const fns = [...new Set(allKeys)].filter(k => { try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }});
+    log('Funciones disponibles: '+fns.join(', '),'info');
 
     setStatus('registered');
     setBtns(true,false);
@@ -537,18 +540,21 @@ async function initWebex(){
 }
 
 async function placeCall(){
-  log('🔍 S.calling: '+(S.calling?'OK':'NULL'),'info');
   if(!S.calling){log('SDK no inicializado.','err');return;}
-  log('🔍 makeCall: '+(typeof S.calling.makeCall),'info');
-  log('Iniciando llamada...','info');
+  // Mostrar todas las funciones disponibles al intentar llamar
+  const allKeys = [];
+  let obj = S.calling;
+  do { allKeys.push(...Object.getOwnPropertyNames(obj)); } while(obj = Object.getPrototypeOf(obj));
+  const fns = [...new Set(allKeys)].filter(k => { try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }});
+  log('Funciones al llamar: '+fns.join(', '),'info');
+  log('Intentando llamada...','info');
   try{
     S.call = await S.calling.makeCall({});
-    log('makeCall OK. Esperando conexión...','info');
     S.call.on('connect',  ()=>{ log('✅ Llamada conectada.','ok'); });
     S.call.on('disconnect', onEnd);
     setBtns(false,true);
   }
-  catch(e){log('Error al llamar: '+e.message,'err');}
+  catch(e){log('Error: '+e.message,'err');}
 }
 function hangupCall(){if(S.call){S.call.end();log('Terminando llamada...','muted');}}
 function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada.','muted');}
