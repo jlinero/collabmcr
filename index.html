@@ -498,81 +498,102 @@ function updateTB(){
 
 async function initWebex(){
   setStatus('connecting');
-  log('Inicializando Webex SDK con Service App...','info');
+  log('Inicializando con Service App...','info');
   try{
+    // getWebexConfig() y getCallingConfig() vienen de app.js
     const webexConfig   = await getWebexConfig();
     const callingConfig = await getCallingConfig();
 
-    S.webex = window.Webex.init(webexConfig);
-    log('Webex SDK inicializado con Guest Token.','ok');
+    log('Tokens obtenidos. Iniciando Calling SDK...','ok');
 
-    if(!window.Calling){
-      log('Calling SDK no disponible.','err');
-      setStatus('offline');
-      return;
-    }
+    // Según la doc oficial: Calling.init recibe { webexConfig, callingConfig }
+    const calling = await Calling.init({ webexConfig, callingConfig });
 
-    log('Iniciando Calling SDK (guest)...','info');
+    // Esperar el evento 'ready' y luego registrar
+    calling.on('ready', () => {
+      log('SDK listo. Registrando...','info');
+      calling.register().then(async () => {
+        // callingClient se expone tras el register
+        S.calling = calling.callingClient;
+        log('Calling client OK.','ok');
 
-    // Calling.init espera: { webex, clientConfig, callingClientConfig, logger }
-    // Hacemos spread del callingConfig completo junto con webex
-    S.calling = window.Calling.init({
-      webex: S.webex,
-      ...callingConfig          // spread: clientConfig + callingClientConfig + logger
+        // Obtener la línea
+        const lines = Object.values(S.calling.getLines());
+        if(!lines || lines.length === 0){
+          log('No se encontraron líneas.','err');
+          setStatus('offline');
+          return;
+        }
+        S.line = lines[0];
+
+        // Escuchar registro de línea
+        S.line.on('registered', (lineInfo) => {
+          log('✅ Línea registrada. Listo para llamar.','ok');
+          setStatus('registered');
+          setBtns(true, false);
+        });
+
+        // Escuchar llamadas entrantes
+        S.line.on('line:incoming_call', (call) => {
+          S.call = call;
+          log('📞 Llamada entrante.','info');
+          setBtns(false, true);
+          call.on('disconnect', onEnd);
+          call.on('remote_media', (track) => {
+            let audio = document.getElementById('remote-audio');
+            if(!audio){ audio = document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
+            audio.srcObject = new MediaStream([track]);
+          });
+        });
+
+        S.line.register();
+      });
     });
-
-    // Inspeccionar métodos disponibles
-    const allKeys = [];
-    let proto = S.calling;
-    do { allKeys.push(...Object.getOwnPropertyNames(proto)); }
-    while(proto = Object.getPrototypeOf(proto));
-    const fns = [...new Set(allKeys)].filter(k => {
-      try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }
-    });
-    log('SDK fns: '+fns.slice(0,20).join(', '),'info');
-
-    setStatus('registered');
-    setBtns(true,false);
-    log('✅ Listo para llamar.','ok');
 
   }catch(e){
-    log('Error init: '+e.message,'err');
+    log('Error: '+e.message,'err');
     setStatus('offline');
   }
 }
 
 async function placeCall(){
-  if(!S.calling){log('SDK no inicializado.','err');return;}
-  const allKeys = [];
-  let proto = S.calling;
-  do { allKeys.push(...Object.getOwnPropertyNames(proto)); }
-  while(proto = Object.getPrototypeOf(proto));
-  const fns = [...new Set(allKeys)].filter(k => {
-    try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }
-  });
-  log('Fns al llamar: '+fns.join(', '),'info');
+  if(!S.line){ log('Línea no registrada.','err'); return; }
+  log('Solicitando micrófono...','info');
   try{
-    if(typeof S.calling.makeCall === 'function'){
-      S.call = await S.calling.makeCall({});
-    } else if(typeof S.calling.dial === 'function'){
-      S.call = await S.calling.dial({});
-    } else if(typeof S.calling.call === 'function'){
-      S.call = await S.calling.call({});
-    } else if(typeof S.calling.placeCall === 'function'){
-      S.call = await S.calling.placeCall({});
-    } else {
-      log('No se encontró método para llamar.','err');
-      return;
-    }
-    log('Llamada iniciada.','ok');
-    S.call.on('connect',   ()=>{ log('✅ Llamada conectada.','ok'); });
-    S.call.on('disconnect', onEnd);
-    setBtns(false,true);
+    // Crear stream de micrófono (método oficial CDN)
+    const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
+    log('Micrófono OK. Iniciando llamada...','info');
+
+    // makeCall() sin parámetros — destino embebido en el JWE
+    S.call = S.line.makeCall();
+
+    // Escuchar eventos de la llamada
+    S.call.on('progress',    () => log('Llamando...','info'));
+    S.call.on('connect',     () => log('✅ Llamada conectada.','ok'));
+    S.call.on('established', () => log('Media establecida.','ok'));
+    S.call.on('disconnect',  onEnd);
+    S.call.on('remote_media', (track) => {
+      let audio = document.getElementById('remote-audio');
+      if(!audio){ audio = document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
+      audio.srcObject = new MediaStream([track]);
+    });
+
+    // Marcar con el stream de audio
+    await S.call.dial({ localAudioStream });
+    setBtns(false, true);
+    log('Llamada en progreso.','info');
   }
-  catch(e){log('Error: '+e.message,'err');}
+  catch(e){ log('Error al llamar: '+e.message,'err'); }
 }
-function hangupCall(){if(S.call){S.call.end();log('Terminando llamada...','muted');}}
-function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada.','muted');}
+
+function hangupCall(){
+  if(S.call){ S.call.end(); log('Terminando llamada...','muted'); }
+}
+function onEnd(){
+  S.call = null;
+  setBtns(true, false);
+  log('Llamada finalizada.','muted');
+}
 
 // ═══════════════════════════════════════════════════
 //  LOCAL STORAGE — guardar / cargar / borrar tokens
