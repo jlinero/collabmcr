@@ -337,8 +337,8 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
             <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar</button>
             <button class="cbtn stop" id="btnHangup" onclick="hangupCall()" disabled><i class="fa fa-phone-slash"></i> Colgar</button>
           </div>
-          <label class="f-label" style="display:none;">Log de eventos</label>
-          <div class="call-log" id="callLog" style="display:none;">
+          <label class="f-label">Log de eventos</label>
+          <div class="call-log" id="callLog">
             <p class="l-info">» Sistema inicializado.</p>
             <p class="l-muted">» Configura tu token OAuth para registrarte.</p>
           </div>
@@ -514,8 +514,6 @@ async function initWebex(){
 
     log('Iniciando Calling SDK (guest)...','info');
 
-    // En guest calling con JWE, Calling.init devuelve el cliente directamente
-    // NO tiene getLines() — la llamada se hace con makeCall() en el cliente
     S.calling = window.Calling.init({
       webex:       S.webex,
       logger:      callingConfig.callingClientConfig.logger,
@@ -524,7 +522,7 @@ async function initWebex(){
       jwe:         callingConfig.callingClientConfig.jwe
     });
 
-    log('Calling SDK listo.','ok');
+    log('Calling SDK listo. Métodos disponibles: '+Object.keys(S.calling).filter(k=>typeof S.calling[k]==='function').join(', '),'info');
     setStatus('registered');
     setBtns(true,false);
     log('✅ Listo para llamar.','ok');
@@ -538,11 +536,13 @@ async function initWebex(){
 }
 
 async function placeCall(){
-  if(!S.calling){log('SDK no disponible.','err');return;}
+  log('🔍 Verificando S.calling: '+(S.calling?'existe':'NULL'),'info');
+  if(!S.calling){log('SDK no inicializado.','err');return;}
+  log('🔍 Tipo makeCall: '+(typeof S.calling.makeCall),'info');
   log('Iniciando llamada...','info');
   try{
-    // En guest calling con JWE el destino ya está embebido en el token (calledNumber en app.js)
     S.call = await S.calling.makeCall({});
+    log('makeCall ejecutado. Esperando conexión...','info');
     S.call.on('connect',  ()=>{ log('✅ Llamada conectada.','ok'); });
     S.call.on('disconnect', onEnd);
     setBtns(false,true);
