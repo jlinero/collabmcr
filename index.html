@@ -522,27 +522,28 @@ async function initWebex(){
       jwe:         callingConfig.callingClientConfig.jwe
     });
 
-    log('Calling SDK listo. Métodos disponibles: '+Object.keys(S.calling).filter(k=>typeof S.calling[k]==='function').join(', '),'info');
+    // Mostrar métodos disponibles para debugging
+    const methods = Object.keys(S.calling).filter(k=>typeof S.calling[k]==='function').join(', ');
+    log('Métodos SDK: '+methods,'info');
+
     setStatus('registered');
     setBtns(true,false);
     log('✅ Listo para llamar.','ok');
 
   }catch(e){
-    log('Error: '+e.message,'err');
-    if(e.message&&e.message.includes('401'))log('Service App token inválido o expirado.','err');
-    if(e.message&&e.message.includes('403'))log('Sin permisos. Verifica los scopes del Service App.','err');
+    log('Error init: '+e.message,'err');
     setStatus('offline');
   }
 }
 
 async function placeCall(){
-  log('🔍 Verificando S.calling: '+(S.calling?'existe':'NULL'),'info');
+  log('🔍 S.calling: '+(S.calling?'OK':'NULL'),'info');
   if(!S.calling){log('SDK no inicializado.','err');return;}
-  log('🔍 Tipo makeCall: '+(typeof S.calling.makeCall),'info');
+  log('🔍 makeCall: '+(typeof S.calling.makeCall),'info');
   log('Iniciando llamada...','info');
   try{
     S.call = await S.calling.makeCall({});
-    log('makeCall ejecutado. Esperando conexión...','info');
+    log('makeCall OK. Esperando conexión...','info');
     S.call.on('connect',  ()=>{ log('✅ Llamada conectada.','ok'); });
     S.call.on('disconnect', onEnd);
     setBtns(false,true);
