@@ -517,7 +517,6 @@ async function initWebex(){
           return;
         }
         S.line = lines[0];
-        log('Línea obtenida. Registrando línea...','info');
 
         S.line.on('registered', () => {
           log('✅ Línea registrada. Listo para llamar.','ok');
@@ -552,13 +551,13 @@ async function initWebex(){
 
 async function placeCall(){
   if(!S.line){ log('Línea no registrada aún.','err'); return; }
+  // Evitar llamadas duplicadas
+  if(S.call){ log('Ya hay una llamada activa.','err'); return; }
   log('Solicitando micrófono...','info');
   try{
-    // Crear stream de micrófono
     const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
     log('Micrófono OK. Iniciando llamada al 5102...','info');
 
-    // makeCall() sin parámetros — destino viene del JWE token
     S.call = S.line.makeCall();
 
     S.call.on('progress',    () => log('Marcando...','info'));
@@ -571,17 +570,26 @@ async function placeCall(){
       audio.srcObject = new MediaStream([track]);
     });
 
-    // ✅ dial() recibe el stream directamente, NO dentro de un objeto
     await S.call.dial(localAudioStream);
     setBtns(false, true);
     log('Llamada en progreso...','info');
   }
-  catch(e){ log('Error al llamar: '+e.message,'err'); }
+  catch(e){ log('Error al llamar: '+e.message,'err'); S.call=null; }
 }
 
 function hangupCall(){
-  if(S.call){ S.call.end(); log('Terminando llamada...','muted'); }
+  if(!S.call){ log('No hay llamada activa.','muted'); return; }
+  log('Terminando llamada...','muted');
+  try{
+    // Intentar end() y disconnect() — el SDK usa uno u otro según versión
+    if(typeof S.call.end === 'function')        S.call.end();
+    else if(typeof S.call.disconnect === 'function') S.call.disconnect();
+    else if(typeof S.call.hangup === 'function')     S.call.hangup();
+  }catch(e){ log('Error al colgar: '+e.message,'err'); }
+  // Forzar limpieza por si el evento disconnect no dispara
+  setTimeout(() => { if(S.call){ S.call=null; setBtns(true,false); log('Llamada finalizada.','muted'); } }, 1500);
 }
+
 function onEnd(){
   S.call = null;
   setBtns(true, false);
