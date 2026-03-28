@@ -11,8 +11,8 @@ const secondCallTimer = document.querySelector('#secondCallNotification #call-ti
 const profileDropDown = document.getElementById("myDropdown");
 const profileOnline = document.querySelector(".dropbtn #availability");
 
-let service_app_token = 'ODU3NzUzZTYtZjg4MS00MzgzLThjYmUtY2E4OTYzMTg0MDA4NWE0N2FiOWQtZmEz_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856'; // Add the service app account token here
-const refresh_token = 'ZTBmMzE3MDYtM2Q1NS00MmM4LTg1MWUtOTE2NDFjMGRkYTkzZWE1OWEzZjgtYjBh_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856';
+let service_app_token = 'MmQ1MTA5MGItYWY3Yy00OThjLTk3YjEtMzcwYzBlY2Q5YzdjYzU2MzZmOGUtMGNm_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856'; // Add the service app account token here
+const refresh_token = 'RmRlNTI0YzEtMDM3NC00Mzc0LWJlMGEtNzI4NTY3ODBjMDE3ZDVkNWFkZWUtNjJk_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856';
 
 class callNotificationElement {
     constructor(element,callTimerElement){
