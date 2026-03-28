@@ -500,24 +500,24 @@ async function initWebex(){
   setStatus('connecting');
   log('Inicializando Webex SDK con Service App...','info');
   try{
-    // Usar getWebexConfig() y getCallingConfig() de app.js
+    // Obtener configuraciones desde app.js
     const webexConfig   = await getWebexConfig();
     const callingConfig = await getCallingConfig();
 
+    // Inicializar instancia Webex con el Guest Token
     S.webex = window.Webex.init(webexConfig);
     log('Webex SDK inicializado con Guest Token.','ok');
 
-    // Registrar dispositivo
-    log('Registrando dispositivo...','info');
-    await S.webex.internal.device.register();
-    log('Dispositivo registrado en Webex.','ok');
-
-    // Inicializar Calling SDK
+    // Con Guest Token (guestcalling) NO se usa internal.device.register()
+    // El Calling SDK maneja el registro internamente via JWE token
     if(window.Calling){
-      log('Iniciando Calling SDK...','info');
+      log('Iniciando Calling SDK (guest)...','info');
       S.calling = window.Calling.init({
-        webex: S.webex,
-        ...callingConfig.callingClientConfig
+        webex:  S.webex,
+        logger: callingConfig.logger,
+        discovery:   callingConfig.callingClientConfig.discovery,
+        serviceData: callingConfig.callingClientConfig.serviceData,
+        jwe:         callingConfig.callingClientConfig.jwe
       });
 
       await S.calling.register();
