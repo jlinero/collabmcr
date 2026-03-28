@@ -1,109 +1,535 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<title>My Trip a Travel Category Flat Bootstrap responsive Website Template | Home :: w3layouts</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="My Trip Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- bootstrap-css -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-<!--// bootstrap-css -->
-<!-- css -->
-<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-<!--// css -->
-<link rel="stylesheet" href="css/ken-burns.css">
-<!-- font-awesome icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome icons -->
-<!-- font -->
-<link href='//fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-<!-- //font -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/bootstrap.js"></script>
-<!-- //parallax -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CollabMCR Technology Corporation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#04080f;--bg2:#070d1a;--surface:#0a1020;--card:#0d1628;--card2:#111e35;
+  --border:#1a2d50;--border2:#223660;
+  --cyan:#00d4ff;--cyan-dim:rgba(0,212,255,.12);
+  --blue:#1a56db;--blue2:#2563eb;
+  --green:#00ffa3;--red:#ff3b6b;--amber:#ffaa00;
+  --text:#dde6f5;--muted:#4a6080;--muted2:#6b84a8;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Outfit',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.65;overflow-x:hidden;cursor:none;}
+.cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s;mix-blend-mode:screen;}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(0,212,255,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s;}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;background:rgba(4,8,15,.88);backdrop-filter:blur(24px);border-bottom:1px solid rgba(26,45,80,.8);}
+.topbar-inner{max-width:1360px;margin:0 auto;width:100%;padding:0 36px;display:flex;align-items:center;justify-content:space-between;}
+.logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-svg-box{position:relative;width:46px;height:46px;flex-shrink:0;}
+.logo-svg-box svg{width:100%;height:100%;}
+.logo-orbit{position:absolute;inset:-7px;border:1px solid rgba(0,212,255,.22);border-radius:50%;animation:spin 9s linear infinite;}
+.logo-orbit::before{content:'';position:absolute;width:6px;height:6px;border-radius:50%;background:var(--cyan);top:-3px;left:50%;transform:translateX(-50%);box-shadow:0 0 10px var(--cyan);}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-name{font-family:var(--font-display);font-size:23px;letter-spacing:2px;color:#fff;}
+.logo-tag{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2.5px;color:var(--cyan);text-transform:uppercase;margin-top:3px;}
+.nav{display:flex;align-items:center;gap:2px;}
+.nav a{font-size:13px;font-weight:500;color:var(--muted2);text-decoration:none;padding:7px 16px;border-radius:8px;transition:color .2s,background .2s;}
+.nav a:hover,.nav a.active{color:var(--cyan);}
+.topbar-right{display:flex;align-items:center;gap:12px;}
+.status-pill{display:flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-size:10.5px;font-weight:600;font-family:var(--font-mono);letter-spacing:.5px;border:1px solid rgba(0,255,163,.2);background:rgba(0,255,163,.07);color:var(--green);transition:all .4s;}
+.status-pill.offline{border-color:rgba(255,59,107,.2);background:rgba(255,59,107,.07);color:var(--red);}
+.status-pill.connecting{border-color:rgba(255,170,0,.2);background:rgba(255,170,0,.07);color:var(--amber);}
+.status-dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.btn-token{font-size:11px;font-weight:600;font-family:var(--font-mono);padding:8px 18px;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--muted2);cursor:none;transition:all .2s;letter-spacing:.4px;}
+.btn-token:hover{color:var(--cyan);border-color:var(--cyan);background:var(--cyan-dim);}
+/* HERO */
+.hero{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 36px 80px;overflow:hidden;}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.hero-blob{position:absolute;width:860px;height:860px;border-radius:50%;background:radial-gradient(circle,rgba(26,86,219,.24) 0%,rgba(0,212,255,.07) 40%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-55%);pointer-events:none;animation:blobP 7s ease-in-out infinite;}
+@keyframes blobP{0%,100%{transform:translate(-50%,-55%) scale(1)}50%{transform:translate(-50%,-55%) scale(1.07)}}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:920px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:36px;padding:7px 22px;border:1px solid rgba(0,212,255,.22);border-radius:999px;background:rgba(0,212,255,.05);}
+.hero-eyebrow::before{content:'//';opacity:.4;margin-right:4px;}
+.hero h1{font-family:var(--font-display);font-size:clamp(54px,10vw,118px);line-height:.93;letter-spacing:3px;color:#fff;margin-bottom:10px;}
+.line2{display:block;background:linear-gradient(90deg,var(--cyan) 0%,var(--blue2) 50%,var(--cyan) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite;}
+@keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
+.line3{display:block;font-size:clamp(14px,2vw,26px);font-family:var(--font-body);font-weight:300;color:var(--muted2);letter-spacing:6px;text-transform:uppercase;-webkit-text-fill-color:var(--muted2);margin-top:18px;}
+.hero-desc{color:var(--muted2);font-size:17px;font-weight:300;max-width:520px;margin:28px auto 44px;line-height:1.75;}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-glow{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:14px;cursor:none;text-decoration:none;border:none;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;transition:transform .2s,box-shadow .2s;}
+.btn-glow:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,212,255,.4);}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:10px;font-family:var(--font-body);font-weight:500;font-size:14px;cursor:none;text-decoration:none;border:1px solid var(--border2);background:transparent;color:var(--text);transition:border-color .2s,color .2s,background .2s;}
+.btn-outline:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim);}
+/* STATS */
+.stats-bar{position:relative;z-index:2;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);padding:28px 36px;}
+.stats-inner{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+@media(max-width:700px){.stats-inner{grid-template-columns:repeat(2,1fr);}}
+.stat-item{text-align:center;}
+.stat-num{font-family:var(--font-display);font-size:46px;letter-spacing:2px;color:#fff;display:block;line-height:1;}
+.stat-num span{color:var(--cyan);}
+.stat-label{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+/* SECTIONS */
+section{position:relative;z-index:2;}
+.sw{max-width:1360px;margin:0 auto;padding:110px 36px;}
+.s-label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.s-label::before{content:'';display:block;width:22px;height:1px;background:var(--cyan);}
+.s-title{font-family:var(--font-display);font-size:clamp(34px,5vw,62px);letter-spacing:2px;color:#fff;line-height:1;margin-bottom:18px;}
+.s-sub{color:var(--muted2);font-size:16px;font-weight:300;max-width:480px;margin-bottom:64px;}
+/* PRODUCTS */
+.products-bg{background:var(--bg2);}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+@media(max-width:860px){.products-grid{grid-template-columns:1fr;}}
+.prod-card{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:border-color .35s,transform .35s,box-shadow .35s;cursor:none;}
+.prod-card::before{content:'';position:absolute;top:0;left:36px;right:36px;height:2px;border-radius:0 0 2px 2px;background:linear-gradient(90deg,transparent,currentColor,transparent);opacity:0;transition:opacity .35s;}
+.prod-card.c1{color:var(--cyan)}.prod-card.c2{color:var(--green)}.prod-card.c3{color:#818cf8}.prod-card.c4{color:var(--amber)}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.55);border-color:currentColor;}
+.prod-card:hover::before{opacity:1;}
+.prod-num{position:absolute;right:24px;top:12px;font-family:var(--font-display);font-size:90px;color:currentColor;opacity:.04;line-height:1;pointer-events:none;transition:opacity .35s;}
+.prod-card:hover .prod-num{opacity:.1;}
+.prod-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);color:currentColor;}
+.prod-title{font-family:var(--font-display);font-size:28px;letter-spacing:1px;color:#fff;margin-bottom:10px;}
+.prod-desc{color:var(--muted2);font-size:13.5px;line-height:1.7;margin-bottom:22px;}
+.prod-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px;}
+.prod-tag{font-family:var(--font-mono);font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:currentColor;padding:4px 10px;border-radius:4px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.prod-link{font-family:var(--font-mono);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:currentColor;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:gap .2s;}
+.prod-link:hover{gap:14px;}
+/* CALLING */
+.calling-bg{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.calling-layout{display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:center;}
+@media(max-width:960px){.calling-layout{grid-template-columns:1fr;}}
+.feature-list{display:flex;flex-direction:column;gap:14px;margin-top:36px;}
+.feature-row{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:var(--card);border:1px solid var(--border);border-radius:12px;transition:border-color .2s;}
+.feature-row:hover{border-color:var(--border2);}
+.feat-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.fi-a{background:rgba(0,212,255,.1);color:var(--cyan);}
+.fi-b{background:rgba(0,255,163,.1);color:var(--green);}
+.fi-c{background:rgba(129,140,248,.1);color:#818cf8;}
+.feat-t{font-weight:600;font-size:13.5px;color:#fff;margin-bottom:2px;}
+.feat-d{font-size:12px;color:var(--muted2);}
+/* PANEL */
+.call-panel{background:var(--card2);border:1px solid var(--border2);border-radius:20px;overflow:hidden;}
+.panel-chrome{background:var(--card);padding:0 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;height:44px;}
+.chrome-dot{width:10px;height:10px;border-radius:50%;}
+.ptitle{margin:0 auto;font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.pstatus{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;background:rgba(0,212,255,.03);border-bottom:1px solid var(--border);}
+.pbody{padding:22px;}
+.f-label{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block;}
+.f-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--font-mono);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;margin-bottom:16px;}
+.f-input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,.08);}
+.f-input::placeholder{color:var(--muted);}
+.call-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.cbtn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:10px;border:none;font-family:var(--font-body);font-weight:600;font-size:13px;cursor:none;transition:all .2s;}
+.cbtn.go{background:var(--green);color:#012419;}.cbtn.go:hover:not(:disabled){box-shadow:0 0 28px rgba(0,255,163,.35);transform:translateY(-1px);}
+.cbtn.stop{background:rgba(255,59,107,.12);color:var(--red);border:1px solid rgba(255,59,107,.25);}.cbtn.stop:hover:not(:disabled){background:var(--red);color:#fff;}
+.cbtn:disabled{opacity:.3;cursor:not-allowed;}
+.call-log{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 16px;height:130px;overflow-y:auto;font-family:var(--font-mono);font-size:11px;}
+.call-log p{margin-bottom:5px;line-height:1.5;}
+.l-ok{color:var(--green)}.l-err{color:var(--red)}.l-info{color:var(--cyan)}.l-muted{color:var(--muted);}
+.call-log::-webkit-scrollbar{width:3px;}.call-log::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+/* CONTACT */
+.contact-bg{background:var(--bg);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:16px;text-decoration:none;transition:border-color .2s,transform .2s;cursor:none;margin-bottom:14px;}
+.cc:hover{border-color:var(--cyan);transform:translateX(5px);}
+.cc-icon{width:44px;height:44px;border-radius:10px;background:var(--cyan-dim);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--cyan);flex-shrink:0;}
+.cc-title{font-weight:600;color:#fff;font-size:14px;margin-bottom:2px;}
+.cc-val{font-family:var(--font-mono);font-size:10px;color:var(--muted2);letter-spacing:.5px;}
+/* FOOTER */
+footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-brand{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-size:14px;letter-spacing:2px;color:var(--muted);}
+.footer-copy{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.5px;}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(2,5,12,.9);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--card2);border:1px solid var(--border2);border-radius:22px;padding:40px;width:500px;max-width:95vw;transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.22,.68,0,1.2);}
+.modal-overlay.open .modal{transform:translateY(0) scale(1);}
+.m-eye{font-family:var(--font-mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;}
+.modal h3{font-family:var(--font-display);font-size:30px;letter-spacing:1px;color:#fff;}
+.modal p{color:var(--muted2);font-size:13px;margin-top:6px;margin-bottom:20px;}
+.m-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--font-mono);font-size:12px;outline:none;margin-bottom:10px;transition:border-color .2s;}
+.m-input:focus{border-color:var(--cyan);}
+.m-input::placeholder{color:var(--muted);}
+.m-sep{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:6px 0 14px;display:flex;align-items:center;gap:10px;}
+.m-sep::before,.m-sep::after{content:'';flex:1;height:1px;background:var(--border);}
+.modal-actions{display:flex;gap:10px;margin-top:18px;}
+.modal-actions button{flex:1;padding:13px;border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:14px;cursor:none;border:none;transition:all .2s;}
+.m-confirm{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;}
+.m-confirm:hover{box-shadow:0 6px 28px rgba(0,212,255,.35);}
+.m-cancel{background:var(--surface);color:var(--muted2);}
+.m-cancel:hover{color:var(--text);}
+.tok-box{background:rgba(0,255,163,.05);border:1px solid rgba(0,255,163,.15);border-radius:10px;padding:12px 16px;margin-bottom:14px;font-family:var(--font-mono);font-size:10.5px;color:var(--green);}
+.tok-box strong{display:block;margin-bottom:3px;}
+.tok-box span{color:var(--muted2);}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+</style>
 </head>
 <body>
-    <!-- banner -->
-    <div class="banner">
-        <div class="top-banner">
-            <div class="container">
-                <div class="top-banner-left">
-                    <ul>
-                        <li><a href="call_window.html"><i class="fa fa-phone" aria-hidden="true"></i> Call Us</a></li>
-                        <li><a href="mailto:example@email.com"><i class="fa fa-envelope" aria-hidden="true"></i> clientes@collab-col.wbx.ai</a></li>
-                    </ul>
-                </div>
-                <div class="top-banner-right">
-                    <button class="dropbtn">
-                        <img src="images/Logo-Whatsapp.jpeg" alt="Avatar" class="avatar">
-                        <span class="avatar-name">CollabMCR</span>
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content" id="myDropdown">
-                        <a href="mytrips.html"><i class="fa fa-plane-departure"></i> My Trips</a>
-                        <a href="#"><i class="fa fa-sign-out-alt"></i> Logout</a>
-                    </div>
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
-        <div class="header">
-            <div class="container">
-                <div class="logo">
-                    <h2>
-                                              <a href="index.html" style="color: white;">CollabMCR Technology Corporation</a>
-                                        </h2>
-                </div>
-                <div class="top-nav">
-                    <nav class="navbar navbar-default">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Menu						
-                            </button>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                <li><a class="active" href="index.html">Home</a></li>
-                                <li><a href="mytrips.html">Webex Calling</a></li>
-                                <li><a href="flights.html">Webex Contact Center</a></li>
-                                <li><a href="hotels.html">Support</a></li>
-                                <li><a>Webex Meetings</a></li>
-                                <li><a>AI Agent</a></li>
-                                <div class="clearfix"> </div>
-                            </ul>	
-                        </div>	
-                    </nav>		
-                </div>
-                <div class="clearfix"> </div>
-            </div>
-        </div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#home" class="logo-wrap">
+      <div class="logo-svg-box">
+        <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#1a56db"/>
+            </linearGradient>
+            <filter id="glow1" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <polygon points="23,2.5 41,12.5 41,33.5 23,43.5 5,33.5 5,12.5" fill="url(#lg1)" opacity=".1" stroke="url(#lg1)" stroke-width="1"/>
+          <circle cx="23" cy="23" r="5" fill="url(#lg1)" filter="url(#glow1)"/>
+          <circle cx="23" cy="9"   r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="36" cy="16" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="36" cy="30" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="23" cy="37" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="10" cy="30" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="10" cy="16" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <line x1="23" y1="23" x2="23" y2="9"  stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="36" y2="16" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="36" y2="30" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="23" y2="37" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="10" y2="30" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="10" y2="16" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <polygon points="23,9 36,16 36,30 23,37 10,30 10,16" fill="none" stroke="#00d4ff" stroke-width=".5" opacity=".18"/>
+        </svg>
+        <div class="logo-orbit"></div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CollabMCR</span>
+        <span class="logo-tag">Technology Corporation</span>
+      </div>
+    </a>
+    <nav class="nav">
+      <a href="#home" class="active">Inicio</a>
+      <a href="#products">Productos</a>
+      <a href="#calling">Calling</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+    <div class="topbar-right">
+      <div class="status-pill offline" id="statusPill"><div class="status-dot"></div><span id="statusText">OFFLINE</span></div>
+      <button class="btn-token" onclick="openModal()"><i class="fa fa-key" style="margin-right:6px;font-size:10px;"></i>TOKEN OAUTH</button>
     </div>
-    <!-- //banner -->
-    <div class="carousel-inner" role="listbox">
-    <!-- First Slide -->
-    <div class="item active">
-        <div class="slider">
-            <div class="carousel-caption kb_caption slider-grid">
-                <img src="images/WhatsApp-Logo-v2.png" alt="WhatsApp Logo" class="centered-image" />
-            </div>
-        </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-blob"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Plataforma de Colaboración Empresarial</div>
+    <h1>COLLAB<span class="line2">TECHNOLOGY</span><span class="line3">Corporation &nbsp;·&nbsp; Powered by Cisco Webex</span></h1>
+    <p class="hero-desc">Unified Communications &amp; Collaboration — Webex Calling, Contact Center, Meetings e IA generativa integradas en una sola experiencia diseñada para el futuro empresarial.</p>
+    <div class="hero-cta">
+      <a href="#calling" class="btn-glow"><i class="fa fa-phone-volume"></i> Iniciar llamada</a>
+      <a href="#products" class="btn-outline">Ver portafolio <i class="fa fa-arrow-right"></i></a>
     </div>
-</div> 
-<div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org=""></div>
-<script>var i={t:function(t){var e="https://media.imi.chat/widget/js/imichatinit.js";try{var o=new XMLHttpRequest;o.onreadystatechange=function(){if(this.readyState==4){var t=document.getElementById("divicw");if(this.status==0){i.o(t);return}var e=document.createElement("script");e.innerHTML=this.responseText;t.parentNode.insertBefore(e,t.nextSibling)}};o.open("GET",e,true);o.send()}catch(s){console.error(s)}},o:function(t){t.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow: hidden;height: 208px;width: 394px;position: fixed;display: block;right: 48px;bottom: 12px;z-index: 99999; display:none;"></iframe>');var e=document.getElementById("tls_al_frm");var o=e.contentWindow||(e.contentDocument.document||e.contentDocument);o.document.open();o.document.write('<!doctype html><html><head><meta charset="utf-8"><title>Untitled Document</title><style>body{font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;color: #99a0b0;font-size: 14px;}.popover__content{background-color: #fbfbfe; padding: 1.5rem; border-radius: 5px; width: 300px; box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);position: relative;}.popover__message{font-weight: 600;color:#56627c;font-size: 16px;}.pull-left{float:left;}.clearfix{clear: both;}.hdr-txt{width: 218px; margin-top: 3px;}.para-txt a{text-decoration: none;color: #005cde;}.close-btn{position: absolute;right:15px;top:15px;}.close-btn a{text-decoration: none;font-weight: 400; color: #56627c; font-size: 16px;}</style></head><body><div class="popover__content"><div class="close-btn"><a href="#" onclick="closeTLSAlert();">X</a></div><div class="popover__message"><div class="pull-left hdr-txt">This browser version is not supported on LiveChat.</div></div><div class="clearfix"></div><p class="para-txt">Please update your browser to the latest version and re-open the website to access the widget. </p></div><script>function closeTLSAlert(){window.parent.postMessage({key: "close_tls_alert",value: "close_tls_alert",action: "close_tls_alert"}, "*");}<\/script></body></html>');o.document.close();e.style.display="block";window.addEventListener("message",function(t){if(t.data.action=="close_tls_alert"){i.s()}})},s:function(){var t=document.getElementById("tls_al_frm");t.remove()}};i.t(function(t){});</script>
-    <script src="js/SmoothScroll.min.js"></script>
-    <script src="https://unpkg.com/webex/umd/webex.min.js"></script>
-    <script src='https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js'></script>
-    <script type="text/javascript" src="./js/timer.js"></script>
-    <script type="text/javascript" src="./js/app.js"></script>
-    <script type="text/javascript" src="./sdk/calling-sdk.js"></script>
-</body>	
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><span class="stat-num">500<span>+</span></span><div class="stat-label">Clientes activos</div></div>
+    <div class="stat-item reveal d1"><span class="stat-num">99<span>.9%</span></span><div class="stat-label">Uptime garantizado</div></div>
+    <div class="stat-item reveal d2"><span class="stat-num">12<span>ms</span></span><div class="stat-label">Latencia promedio</div></div>
+    <div class="stat-item reveal d3"><span class="stat-num">24<span>/7</span></span><div class="stat-label">Soporte técnico</div></div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section id="products" class="products-bg">
+  <div class="sw">
+    <div class="s-label reveal">Portafolio de Soluciones</div>
+    <div class="s-title reveal">NUESTROS<br>PRODUCTOS</div>
+    <p class="s-sub reveal">Tecnología de clase enterprise para empresas que no se conforman con lo ordinario.</p>
+    <div class="products-grid">
+      <div class="prod-card c1 reveal">
+        <div class="prod-num">01</div>
+        <div class="prod-icon"><i class="fa fa-phone-volume"></i></div>
+        <div class="prod-title">WEBEX CALLING</div>
+        <div class="prod-tags"><span class="prod-tag">Click-to-Call</span><span class="prod-tag">HD Audio</span><span class="prod-tag">OAuth SDK</span></div>
+        <div class="prod-desc">Telefonía en la nube de nueva generación. Llama desde cualquier navegador sin instalar nada. Token OAuth con renovación automática para sesiones sin interrupción.</div>
+        <a href="#calling" class="prod-link">Probar ahora <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="prod-card c2 reveal d1">
+        <div class="prod-num">02</div>
+        <div class="prod-icon"><i class="fa fa-headset"></i></div>
+        <div class="prod-title">CONTACT CENTER</div>
+        <div class="prod-tags"><span class="prod-tag">Omnicanal</span><span class="prod-tag">Real-time</span><span class="prod-tag">IVR IA</span></div>
+        <div class="prod-desc">Centro de contacto omnicanal con enrutamiento basado en habilidades, dashboards en tiempo real para supervisores y herramientas de productividad para agentes.</div>
+        <a href="#" class="prod-link">Saber más <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="prod-card c3 reveal d2">
+        <div class="prod-num">03</div>
+        <div class="prod-icon"><i class="fa fa-video"></i></div>
+        <div class="prod-title">WEBEX MEETINGS</div>
+        <div class="prod-tags"><span class="prod-tag">4K Video</span><span class="prod-tag">1000 part.</span><span class="prod-tag">Whiteboard</span></div>
+        <div class="prod-desc">Reuniones de alta definición con colaboración en documentos, pizarras digitales y salas de descanso para equipos distribuidos globalmente.</div>
+        <a href="#" class="prod-link">Saber más <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="prod-card c4 reveal d3">
+        <div class="prod-num">04</div>
+        <div class="prod-icon"><i class="fa fa-robot"></i></div>
+        <div class="prod-title">AI AGENT</div>
+        <div class="prod-tags"><span class="prod-tag">LLM Nativo</span><span class="prod-tag">Sentiment</span><span class="prod-tag">Auto-Summary</span></div>
+        <div class="prod-desc">Agente de IA generativa integrado en cada canal. Resumen automático de llamadas, análisis de sentimiento y atención al cliente 24/7 sin intervención humana.</div>
+        <a href="#" class="prod-link">Explorar <i class="fa fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALLING -->
+<section id="calling" class="calling-bg">
+  <div class="sw">
+    <div class="calling-layout">
+      <div>
+        <div class="s-label reveal">Webex Web Calling SDK</div>
+        <div class="s-title reveal">CLICK-TO-CALL<br>EN VIVO</div>
+        <p class="s-sub reveal" style="margin-bottom:0;">Conecta con cualquier número Webex directamente desde el navegador. Sin plugins, sin descargas, siempre activo.</p>
+        <div class="feature-list">
+          <div class="feature-row reveal d1">
+            <div class="feat-icon fi-a"><i class="fa fa-rotate"></i></div>
+            <div><div class="feat-t">OAuth con Refresh Automático</div><div class="feat-d">El token se renueva antes de expirar. Sesión siempre activa sin reingresar credenciales.</div></div>
+          </div>
+          <div class="feature-row reveal d2">
+            <div class="feat-icon fi-b"><i class="fa fa-wave-square"></i></div>
+            <div><div class="feat-t">Audio HD + Noise Cancellation</div><div class="feat-d">Supresión de ruido en tiempo real con codec Opus de Webex Calling para máxima claridad.</div></div>
+          </div>
+          <div class="feature-row reveal d3">
+            <div class="feat-icon fi-c"><i class="fa fa-bell"></i></div>
+            <div><div class="feat-t">Llamadas Entrantes en Tiempo Real</div><div class="feat-d">Recibe y contesta llamadas desde la página con notificación instantánea y log de eventos.</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- CALL PANEL -->
+      <div class="call-panel reveal d2">
+        <div class="panel-chrome">
+          <div class="chrome-dot" style="background:#ff5f57;"></div>
+          <div class="chrome-dot" style="background:#febc2e;"></div>
+          <div class="chrome-dot" style="background:#28c840;"></div>
+          <div class="ptitle">WEBEX CALLING TERMINAL</div>
+        </div>
+        <div class="pstatus">
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:1px;">ESTADO DEL REGISTRO</div>
+          <div class="status-pill offline" id="callStatusPill" style="font-size:10px;padding:4px 12px;"><div class="status-dot"></div><span id="callStatusText">OFFLINE</span></div>
+        </div>
+        <div class="pbody">
+          <label class="f-label">Número destino</label>
+          <input class="f-input" type="tel" id="dialInput" placeholder="+1 555 000 0000"/>
+          <div class="call-btns">
+            <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar</button>
+            <button class="cbtn stop" id="btnHangup" onclick="hangupCall()" disabled><i class="fa fa-phone-slash"></i> Colgar</button>
+          </div>
+          <label class="f-label">Log de eventos</label>
+          <div class="call-log" id="callLog">
+            <p class="l-info">» Sistema inicializado.</p>
+            <p class="l-muted">» Configura tu token OAuth para registrarte.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-bg">
+  <div class="sw" style="padding-top:80px;padding-bottom:80px;">
+    <div class="contact-grid">
+      <div>
+        <div class="s-label reveal">Soporte &amp; Contacto</div>
+        <div class="s-title reveal" style="font-size:clamp(30px,4vw,52px);">ESTAMOS<br>CONTIGO</div>
+        <p class="s-sub reveal" style="margin-bottom:0;">Ingenieros certificados en Cisco Webex disponibles para acompañarte en cada etapa de la implementación.</p>
+      </div>
+      <div>
+        <a href="mailto:clientes@collab-col.wbx.ai" class="cc reveal"><div class="cc-icon"><i class="fa fa-envelope"></i></div><div><div class="cc-title">Email de Soporte</div><div class="cc-val">clientes@collab-col.wbx.ai</div></div></a>
+        <a href="https://developer.webex.com/support" target="_blank" class="cc reveal d1"><div class="cc-icon"><i class="fa fa-life-ring"></i></div><div><div class="cc-title">Webex Developer Support</div><div class="cc-val">developer.webex.com/support</div></div></a>
+        <a href="https://community.cisco.com/t5/webex-for-developers/bd-p/disc-webex-developers" target="_blank" class="cc reveal d2"><div class="cc-icon"><i class="fa fa-comments"></i></div><div><div class="cc-title">Comunidad Cisco Webex</div><div class="cc-val">Developers Community Forum</div></div></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <svg width="20" height="20" viewBox="0 0 46 46" fill="none">
+      <polygon points="23,2.5 41,12.5 41,33.5 23,43.5 5,33.5 5,12.5" fill="none" stroke="#1a56db" stroke-width="1.2"/>
+      <circle cx="23" cy="23" r="4" fill="#00d4ff"/>
+      <line x1="23" y1="23" x2="23" y2="9"  stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+      <line x1="23" y1="23" x2="36" y2="30" stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+      <line x1="23" y1="23" x2="10" y2="30" stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+    </svg>
+    COLLABMCR TECHNOLOGY CORPORATION
+  </div>
+  <span class="footer-copy">© <span id="yr"></span> · Powered by Cisco Webex SDK</span>
+</footer>
+
+<!-- TOKEN MODAL -->
+<div class="modal-overlay" id="tokenModal">
+  <div class="modal">
+    <div class="m-eye">// OAuth Configuration</div>
+    <h3>TOKEN OAUTH</h3>
+    <p>Ingresa tus credenciales Webex. El sistema renovará el token automáticamente antes de que expire.</p>
+    <div class="tok-box" id="tokenBox" style="display:none;"><strong>● TOKEN ACTIVO</strong><span id="tokenExpText">—</span></div>
+    <label class="f-label">Access Token *</label>
+    <input class="m-input" type="text" id="atInput" placeholder="eyJhbGciOiJSUzI1NiJ9..."/>
+    <div class="m-sep">OAuth Refresh — activa renovación automática</div>
+    <label class="f-label">Refresh Token</label>
+    <input class="m-input" type="text" id="rtInput" placeholder="Refresh token de tu integración Webex"/>
+    <label class="f-label">Client ID</label>
+    <input class="m-input" type="text" id="ciInput" placeholder="Client ID"/>
+    <label class="f-label">Client Secret</label>
+    <input class="m-input" type="password" id="csInput" placeholder="Client Secret"/>
+    <div class="modal-actions">
+      <button class="m-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="m-confirm" onclick="applyToken()">Aplicar Token</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/webex/umd/webex.min.js"></script>
+<script src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
+<script>
+// CURSOR
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function ar(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(ar);})();
+document.querySelectorAll('a,button,.prod-card,.cc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='16px';cursor.style.height='16px';ring.style.width='52px';ring.style.height='52px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='10px';cursor.style.height='10px';ring.style.width='36px';ring.style.height='36px';});
+});
+
+// PARTICLES
+const cv=document.getElementById('heroCanvas'),cx=cv.getContext('2d');
+let W,H,pts=[];
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;}
+rs();window.addEventListener('resize',()=>{rs();ip();});
+function ip(){pts=[];const n=Math.floor(W*H/12000);for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.4,a:Math.random()*.6+.1});}
+ip();
+function dp(){
+  cx.clearRect(0,0,W,H);
+  for(let p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fillStyle=`rgba(0,212,255,${p.a})`;cx.fill();}
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.strokeStyle=`rgba(0,212,255,${.14*(1-d/110)})`;cx.lineWidth=.6;cx.stroke();}}
+  requestAnimationFrame(dp);
+}
+dp();
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// NAV ACTIVE
+window.addEventListener('scroll',()=>{
+  let cur='';document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id;});
+  document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// STATE
+const S={at:null,rt:null,ci:null,cs:null,expiry:null,timer:null,webex:null,calling:null,line:null,call:null};
+
+function log(msg,t='muted'){
+  const el=document.getElementById('callLog'),p=document.createElement('p');
+  p.className='l-'+t;
+  p.textContent='['+new Date().toLocaleTimeString('es',{hour12:false})+'] '+msg;
+  el.appendChild(p);el.scrollTop=el.scrollHeight;
+}
+function setStatus(s){
+  const pills=[document.getElementById('statusPill'),document.getElementById('callStatusPill')];
+  const texts=[document.getElementById('statusText'),document.getElementById('callStatusText')];
+  const map={registered:'ONLINE',connecting:'SYNC...',offline:'OFFLINE'};
+  pills.forEach(p=>p.className='status-pill '+s);
+  texts.forEach(t=>t.textContent=map[s]||s.toUpperCase());
+}
+function setBtns(c,h){document.getElementById('btnCall').disabled=!c;document.getElementById('btnHangup').disabled=!h;}
+
+async function doRefresh(){
+  if(!S.rt||!S.ci||!S.cs){log('Sin credenciales OAuth para auto-renovar.','err');return;}
+  log('Renovando Access Token...','info');
+  try{
+    const r=await fetch('https://webexapis.com/v1/access_token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({grant_type:'refresh_token',refresh_token:S.rt,client_id:S.ci,client_secret:S.cs})});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    S.at=d.access_token;S.rt=d.refresh_token||S.rt;S.expiry=Date.now()+(d.expires_in-120)*1000;
+    if(S.webex)S.webex.credentials.supertoken.value=S.at;
+    log('Token renovado correctamente.','ok');scheduleR();updateTB();
+  }catch(e){log('Error renovando token: '+e.message,'err');}
+}
+function scheduleR(){
+  if(S.timer)clearTimeout(S.timer);
+  if(!S.expiry)return;
+  const ms=S.expiry-Date.now();
+  if(ms<=0){doRefresh();return;}
+  log('Proximo refresh en ~'+Math.round(ms/60000)+' min.','muted');
+  S.timer=setTimeout(doRefresh,ms);
+}
+function updateTB(){
+  const b=document.getElementById('tokenBox'),t=document.getElementById('tokenExpText');
+  if(S.expiry){b.style.display='block';t.textContent='Expira en: ~'+Math.round((S.expiry-Date.now())/60000)+' min';}
+}
+
+async function initWebex(){
+  if(!S.at){log('Sin Access Token.','err');return;}
+  setStatus('connecting');log('Inicializando Webex SDK...','info');
+  try{
+    S.webex=window.Webex.init({credentials:{access_token:S.at}});
+    await S.webex.authenticate();log('Autenticado con Webex.','ok');
+    if(window.Calling){
+      S.calling=Calling.init({webex:S.webex,logger:{level:'silent'}});
+      await S.calling.register();
+      const lines=S.calling.getLines();
+      if(lines&&lines.length>0){
+        S.line=lines[0];await S.line.connect();
+        log('Linea conectada: '+(S.line.lineId||'principal')+'.','ok');
+        S.line.on('incoming_call',call=>{S.call=call;log('Llamada entrante de: '+(call.callerId||'Desconocido'),'info');setBtns(false,true);call.on('disconnect',onEnd);});
+      }
+      setStatus('registered');setBtns(true,false);log('Registrado en Webex Calling.','ok');
+    }else log('Calling SDK no disponible.','err');
+  }catch(e){log('Error: '+e.message,'err');setStatus('offline');}
+}
+
+async function placeCall(){
+  const dest=document.getElementById('dialInput').value.trim();
+  if(!dest){log('Ingresa un numero destino.','err');return;}
+  if(!S.line){log('No estas registrado.','err');return;}
+  log('Marcando '+dest+'...','info');
+  try{S.call=await S.line.makeCall({address:dest});S.call.on('connect',()=>log('Llamada conectada.','ok'));S.call.on('disconnect',onEnd);setBtns(false,true);}
+  catch(e){log('Error: '+e.message,'err');}
+}
+function hangupCall(){if(S.call){S.call.end();log('Terminando llamada...','muted');}}
+function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada.','muted');}
+
+function openModal(){document.getElementById('tokenModal').classList.add('open');updateTB();}
+function closeModal(){document.getElementById('tokenModal').classList.remove('open');}
+async function applyToken(){
+  S.at=document.getElementById('atInput').value.trim();
+  S.rt=document.getElementById('rtInput').value.trim();
+  S.ci=document.getElementById('ciInput').value.trim();
+  S.cs=document.getElementById('csInput').value.trim();
+  if(!S.at){alert('El Access Token es obligatorio.');return;}
+  S.expiry=Date.now()+50*60*1000;
+  scheduleR();closeModal();await initWebex();
+}
+document.getElementById('tokenModal').addEventListener('click',function(e){if(e.target===this)closeModal();});
+</script>
+</body>
 </html>
