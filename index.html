@@ -514,6 +514,8 @@ async function initWebex(){
 
     log('Iniciando Calling SDK (guest)...','info');
 
+    // En guest calling con JWE, Calling.init devuelve el cliente directamente
+    // NO tiene getLines() — la llamada se hace con makeCall() en el cliente
     S.calling = window.Calling.init({
       webex:       S.webex,
       logger:      callingConfig.callingClientConfig.logger,
@@ -522,26 +524,7 @@ async function initWebex(){
       jwe:         callingConfig.callingClientConfig.jwe
     });
 
-    log('Calling SDK inicializado.','ok');
-
-    // En guest calling con JWE, intentar obtener línea primero
-    // Si no hay línea, el SDK maneja la llamada directamente
-    const lines = S.calling.getLines ? S.calling.getLines() : [];
-    if(lines && lines.length > 0){
-      S.line = lines[0];
-      log('Registrando linea...','info');
-      await S.line.register();
-      log('Linea registrada.','ok');
-      S.line.on('incoming_call', call=>{
-        S.call=call;
-        log('📞 Llamada entrante: '+(call.callerId||'Desconocido'),'info');
-        setBtns(false,true);
-        call.on('disconnect',onEnd);
-      });
-    } else {
-      log('Modo guest activo (llamada via JWE).','ok');
-    }
-
+    log('Calling SDK listo.','ok');
     setStatus('registered');
     setBtns(true,false);
     log('✅ Listo para llamar.','ok');
@@ -555,24 +538,16 @@ async function initWebex(){
 }
 
 async function placeCall(){
+  if(!S.calling){log('SDK no disponible.','err');return;}
   log('Iniciando llamada...','info');
   try{
-    // En guest calling con JWE el destino ya está embebido en el token
-    // Se usa S.line si existe, si no S.calling directamente
-    if(S.line && typeof S.line.makeCall === 'function'){
-      S.call = await S.line.makeCall({});
-    } else if(S.calling && typeof S.calling.makeCall === 'function'){
-      S.call = await S.calling.makeCall({});
-    } else {
-      log('SDK no disponible para marcar.','err');
-      return;
-    }
-    S.call.on('connect',  ()=>{ log('✅ Llamada conectada.','ok'); setBtns(false,true); });
+    // En guest calling con JWE el destino ya está embebido en el token (calledNumber en app.js)
+    S.call = await S.calling.makeCall({});
+    S.call.on('connect',  ()=>{ log('✅ Llamada conectada.','ok'); });
     S.call.on('disconnect', onEnd);
-    log('Llamada en progreso...','info');
     setBtns(false,true);
   }
-  catch(e){log('Error al marcar: '+e.message,'err');}
+  catch(e){log('Error al llamar: '+e.message,'err');}
 }
 function hangupCall(){if(S.call){S.call.end();log('Terminando llamada...','muted');}}
 function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada.','muted');}
