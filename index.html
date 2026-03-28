@@ -399,7 +399,15 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
     <input class="m-input" type="password" id="csInput" placeholder="Client Secret"/>
     <div class="modal-actions">
       <button class="m-cancel" onclick="closeModal()">Cancelar</button>
-      <button class="m-confirm" onclick="applyToken()">Aplicar Token</button>
+      <button class="m-confirm" onclick="applyToken()"><i class="fa fa-bolt" style="margin-right:6px;"></i>Guardar y Conectar</button>
+    </div>
+    <div style="margin-top:14px;text-align:center;">
+      <button id="btnClear" onclick="clearCredentials();closeModal();" style="display:none;background:none;border:none;font-family:var(--font-mono);font-size:10px;letter-spacing:1px;color:var(--red);cursor:pointer;text-transform:uppercase;opacity:.7;">
+        <i class="fa fa-trash" style="margin-right:5px;"></i>Borrar credenciales guardadas
+      </button>
+    </div>
+    <div style="margin-top:10px;padding:10px 14px;background:rgba(0,255,163,.04);border:1px solid rgba(0,255,163,.12);border-radius:8px;font-family:var(--font-mono);font-size:9.5px;color:var(--muted2);text-align:center;letter-spacing:.5px;">
+      🔒 Los datos se guardan solo en este navegador. Nadie más puede verlos.
     </div>
   </div>
 </div>
@@ -555,11 +563,91 @@ async function placeCall(){
 function hangupCall(){if(S.call){S.call.end();log('Terminando llamada...','muted');}}
 function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada.','muted');}
 
-function openModal(){document.getElementById('tokenModal').classList.add('open');updateTB();}
-function closeModal(){document.getElementById('tokenModal').classList.remove('open');}
+// ═══════════════════════════════════════════════════
+//  LOCAL STORAGE — guardar / cargar / borrar tokens
+// ═══════════════════════════════════════════════════
+const LS = 'collabmcr_v1';
+
+function saveCredentials(){
+  try{
+    localStorage.setItem(LS, JSON.stringify({at:S.at,rt:S.rt,ci:S.ci,cs:S.cs,expiry:S.expiry}));
+    log('💾 Credenciales guardadas en este navegador.','ok');
+  }catch(e){ log('No se pudo guardar en localStorage.','err'); }
+}
+
+function loadCredentials(){
+  try{
+    const raw=localStorage.getItem(LS);
+    if(!raw)return false;
+    const d=JSON.parse(raw);
+    if(!d.at)return false;
+    S.at=d.at; S.rt=d.rt||null; S.ci=d.ci||null; S.cs=d.cs||null; S.expiry=d.expiry||null;
+    // Rellenar campos del modal con los datos guardados
+    document.getElementById('atInput').value=S.at;
+    document.getElementById('rtInput').value=S.rt||'';
+    document.getElementById('ciInput').value=S.ci||'';
+    document.getElementById('csInput').value=S.cs||'';
+    log('📂 Credenciales cargadas automáticamente desde este navegador.','ok');
+    return true;
+  }catch(e){ return false; }
+}
+
+function clearCredentials(){
+  localStorage.removeItem(LS);
+  S.at=null;S.rt=null;S.ci=null;S.cs=null;S.expiry=null;
+  if(S.timer)clearTimeout(S.timer);
+  document.getElementById('atInput').value='';
+  document.getElementById('rtInput').value='';
+  document.getElementById('ciInput').value='';
+  document.getElementById('csInput').value='';
+  setStatus('offline');
+  setBtns(false,false);
+  updateTB();
+  log('🗑️ Credenciales eliminadas del navegador.','muted');
+}
+
+// Actualizar también el botón de borrar en el modal
+function updateModalSavedBadge(){
+  const raw=localStorage.getItem(LS);
+  const btn=document.getElementById('btnClear');
+  if(btn) btn.style.display = raw ? 'block' : 'none';
+}
+
+function openModal(){
+  document.getElementById('tokenModal').classList.add('open');
+  updateTB();
+  updateModalSavedBadge();
+}
+function closeModal(){ document.getElementById('tokenModal').classList.remove('open'); }
+
 async function applyToken(){
   S.at=document.getElementById('atInput').value.trim();
   S.rt=document.getElementById('rtInput').value.trim();
   S.ci=document.getElementById('ciInput').value.trim();
   S.cs=document.getElementById('csInput').value.trim();
-  if(!S.at){alert('El Ac
+  if(!S.at){alert('El Access Token es requerido.');return;}
+  S.expiry=Date.now()+50*60*1000;
+  saveCredentials();
+  scheduleR();
+  closeModal();
+  await initWebex();
+}
+
+window.addEventListener('DOMContentLoaded', async ()=>{
+  const found=loadCredentials();
+  if(found){
+    if(S.expiry && Date.now()>=S.expiry){
+      log('⏰ Token expirado. Intentando renovar...','info');
+      const ok=await doRefresh();
+      if(!ok){log('⚠️ Haz clic en TOKEN OAUTH para ingresar uno nuevo.','err');return;}
+    }
+    log('🔄 Reconectando automáticamente con credenciales guardadas...','info');
+    scheduleR();
+    await initWebex();
+  } else {
+    log('👆 Haz clic en TOKEN OAUTH (arriba derecha) para configurar tu acceso.','muted');
+  }
+});
+</script>
+</body>
+</html>
