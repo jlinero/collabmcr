@@ -500,34 +500,31 @@ async function initWebex(){
   setStatus('connecting');
   log('Inicializando con Service App...','info');
   try{
-    // getWebexConfig() y getCallingConfig() vienen de app.js
     const webexConfig   = await getWebexConfig();
     const callingConfig = await getCallingConfig();
+    log('Tokens OK. Iniciando SDK...','ok');
 
-    log('Tokens obtenidos. Iniciando Calling SDK...','ok');
-
-    // Según la doc oficial: Calling.init recibe { webexConfig, callingConfig }
+    // Paso 1: Calling.init con webexConfig y callingConfig (doc oficial)
     const calling = await Calling.init({ webexConfig, callingConfig });
 
-    // Esperar el evento 'ready' y luego registrar
+    // Paso 2: esperar evento 'ready' y luego register()
     calling.on('ready', () => {
-      log('SDK listo. Registrando...','info');
-      calling.register().then(async () => {
-        // callingClient se expone tras el register
-        S.calling = calling.callingClient;
-        log('Calling client OK.','ok');
+      log('SDK ready. Registrando...','info');
+      calling.register().then(() => {
 
-        // Obtener la línea
-        const lines = Object.values(S.calling.getLines());
+        // Paso 3: obtener callingClient y línea
+        const callingClient = calling.callingClient;
+        const lines = Object.values(callingClient.getLines());
         if(!lines || lines.length === 0){
           log('No se encontraron líneas.','err');
           setStatus('offline');
           return;
         }
         S.line = lines[0];
+        log('Línea obtenida. Registrando línea...','info');
 
-        // Escuchar registro de línea
-        S.line.on('registered', (lineInfo) => {
+        // Paso 4: escuchar evento 'registered' en la línea
+        S.line.on('registered', () => {
           log('✅ Línea registrada. Listo para llamar.','ok');
           setStatus('registered');
           setBtns(true, false);
@@ -541,47 +538,51 @@ async function initWebex(){
           call.on('disconnect', onEnd);
           call.on('remote_media', (track) => {
             let audio = document.getElementById('remote-audio');
-            if(!audio){ audio = document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
+            if(!audio){ audio=document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
             audio.srcObject = new MediaStream([track]);
           });
         });
 
+        // Paso 5: registrar la línea
         S.line.register();
+      }).catch(e => {
+        log('Error register: '+e.message,'err');
+        setStatus('offline');
       });
     });
 
   }catch(e){
-    log('Error: '+e.message,'err');
+    log('Error init: '+e.message,'err');
     setStatus('offline');
   }
 }
 
 async function placeCall(){
-  if(!S.line){ log('Línea no registrada.','err'); return; }
+  if(!S.line){ log('Línea no registrada aún.','err'); return; }
   log('Solicitando micrófono...','info');
   try{
-    // Crear stream de micrófono (método oficial CDN)
+    // Crear stream de micrófono — método oficial para CDN
     const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
-    log('Micrófono OK. Iniciando llamada...','info');
+    log('Micrófono OK. Iniciando llamada al 5102...','info');
 
-    // makeCall() sin parámetros — destino embebido en el JWE
+    // makeCall() sin parámetros — destino viene del JWE token (calledNumber: 5102)
     S.call = S.line.makeCall();
 
-    // Escuchar eventos de la llamada
-    S.call.on('progress',    () => log('Llamando...','info'));
+    // Eventos de la llamada
+    S.call.on('progress',    () => log('Marcando...','info'));
     S.call.on('connect',     () => log('✅ Llamada conectada.','ok'));
     S.call.on('established', () => log('Media establecida.','ok'));
     S.call.on('disconnect',  onEnd);
     S.call.on('remote_media', (track) => {
       let audio = document.getElementById('remote-audio');
-      if(!audio){ audio = document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
+      if(!audio){ audio=document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
       audio.srcObject = new MediaStream([track]);
     });
 
-    // Marcar con el stream de audio
+    // dial() con el stream — aquí se inicia realmente la llamada
     await S.call.dial({ localAudioStream });
     setBtns(false, true);
-    log('Llamada en progreso.','info');
+    log('Llamada en progreso...','info');
   }
   catch(e){ log('Error al llamar: '+e.message,'err'); }
 }
