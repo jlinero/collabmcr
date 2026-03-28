@@ -513,13 +513,15 @@ async function initWebex(){
     }
 
     log('Iniciando Calling SDK (guest)...','info');
-    log('Config: '+JSON.stringify(Object.keys(callingConfig)),'info');
 
-    // Pasar el objeto callingConfig COMPLETO tal como viene de app.js
-    // y awaitearlo — en algunas versiones init() es async
-    S.calling = await window.Calling.init(callingConfig);
+    // Calling.init espera: { webex, clientConfig, callingClientConfig, logger }
+    // Hacemos spread del callingConfig completo junto con webex
+    S.calling = window.Calling.init({
+      webex: S.webex,
+      ...callingConfig          // spread: clientConfig + callingClientConfig + logger
+    });
 
-    // Inspeccionar métodos disponibles en el objeto retornado
+    // Inspeccionar métodos disponibles
     const allKeys = [];
     let proto = S.calling;
     do { allKeys.push(...Object.getOwnPropertyNames(proto)); }
@@ -527,7 +529,7 @@ async function initWebex(){
     const fns = [...new Set(allKeys)].filter(k => {
       try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }
     });
-    log('SDK keys: '+fns.slice(0,15).join(', '),'info');
+    log('SDK fns: '+fns.slice(0,20).join(', '),'info');
 
     setStatus('registered');
     setBtns(true,false);
@@ -548,9 +550,8 @@ async function placeCall(){
   const fns = [...new Set(allKeys)].filter(k => {
     try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }
   });
-  log('Fns: '+fns.join(', '),'info');
+  log('Fns al llamar: '+fns.join(', '),'info');
   try{
-    // Intentar todos los posibles nombres del método
     if(typeof S.calling.makeCall === 'function'){
       S.call = await S.calling.makeCall({});
     } else if(typeof S.calling.dial === 'function'){
@@ -560,11 +561,11 @@ async function placeCall(){
     } else if(typeof S.calling.placeCall === 'function'){
       S.call = await S.calling.placeCall({});
     } else {
-      log('No se encontró método para llamar en: '+fns.join(', '),'err');
+      log('No se encontró método para llamar.','err');
       return;
     }
     log('Llamada iniciada.','ok');
-    S.call.on('connect',  ()=>{ log('✅ Llamada conectada.','ok'); });
+    S.call.on('connect',   ()=>{ log('✅ Llamada conectada.','ok'); });
     S.call.on('disconnect', onEnd);
     setBtns(false,true);
   }
