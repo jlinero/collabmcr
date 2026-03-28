@@ -500,23 +500,22 @@ async function initWebex(){
   setStatus('connecting');
   log('Inicializando Webex SDK con Service App...','info');
   try{
-    // Obtener configuraciones desde app.js
     const webexConfig   = await getWebexConfig();
     const callingConfig = await getCallingConfig();
 
-    // Inicializar instancia Webex con el Guest Token
     S.webex = window.Webex.init(webexConfig);
     log('Webex SDK inicializado con Guest Token.','ok');
 
     if(!window.Calling){
-      log('Calling SDK no disponible. Verifica que el script cargó.','err');
+      log('Calling SDK no disponible.','err');
       setStatus('offline');
       return;
     }
 
     log('Iniciando Calling SDK (guest)...','info');
 
-    // Para guest calling con JWE, Calling.init recibe la config completa
+    // En guest calling, Calling.init() inicializa el cliente internamente
+    // NO se llama .register() en el cliente — el registro va en la línea
     S.calling = window.Calling.init({
       webex:       S.webex,
       logger:      callingConfig.callingClientConfig.logger,
@@ -525,52 +524,29 @@ async function initWebex(){
       jwe:         callingConfig.callingClientConfig.jwe
     });
 
-    if(!S.calling){
-      log('No se pudo inicializar el Calling SDK.','err');
-      setStatus('offline');
-      return;
-    }
+    log('Calling SDK inicializado.','ok');
 
-    // Registrar — en algunas versiones del SDK es register(), en otras connect()
-    if(typeof S.calling.register === 'function'){
-      await S.calling.register();
-      log('Calling SDK registrado.','ok');
-    } else if(typeof S.calling.connect === 'function'){
-      await S.calling.connect();
-      log('Calling SDK conectado.','ok');
-    } else {
-      // Para guest calling con JWE el SDK puede no necesitar registro explícito
-      log('Calling SDK listo (modo guest).','ok');
-    }
-
-    // Obtener líneas disponibles
-    let lines = [];
-    if(typeof S.calling.getLines === 'function'){
-      lines = S.calling.getLines();
-    } else if(typeof S.calling.getLine === 'function'){
-      const l = S.calling.getLine();
-      if(l) lines = [l];
-    }
-
+    // Obtener la línea y registrarla
+    const lines = S.calling.getLines();
     if(lines && lines.length > 0){
       S.line = lines[0];
-      if(typeof S.line.connect === 'function') await S.line.connect();
-      log('Linea activa: '+(S.line.lineId||'principal')+'.','ok');
+      log('Registrando linea...','info');
+      await S.line.register();  // register va en la LÍNEA, no en el cliente
+      log('Linea registrada: '+(S.line.lineId||'principal')+'.','ok');
+
       S.line.on('incoming_call', call=>{
         S.call = call;
         log('📞 Llamada entrante: '+(call.callerId||'Desconocido'),'info');
         setBtns(false,true);
         call.on('disconnect', onEnd);
       });
+
       setStatus('registered');
       setBtns(true,false);
       log('✅ Listo para llamar.','ok');
     } else {
-      // En guest calling puede no haber líneas tradicionales — usar S.calling directamente
-      log('Modo guest activo. Usando Calling SDK para marcar.','ok');
-      setStatus('registered');
-      setBtns(true,false);
-      log('✅ Listo para llamar.','ok');
+      log('No se encontraron lineas. Verifica tu cuenta Webex Calling.','err');
+      setStatus('offline');
     }
 
   }catch(e){
@@ -584,16 +560,10 @@ async function initWebex(){
 async function placeCall(){
   const dest=document.getElementById('dialInput').value.trim();
   if(!dest){log('Ingresa un numero destino.','err');return;}
+  if(!S.line){log('No estas registrado.','err');return;}
   log('Marcando '+dest+'...','info');
   try{
-    if(S.line && typeof S.line.makeCall === 'function'){
-      S.call=await S.line.makeCall({address:dest});
-    } else if(S.calling && typeof S.calling.makeCall === 'function'){
-      S.call=await S.calling.makeCall({address:dest});
-    } else {
-      log('No hay línea disponible para marcar.','err');
-      return;
-    }
+    S.call=await S.line.makeCall({address:dest});
     S.call.on('connect',()=>log('Llamada conectada.','ok'));
     S.call.on('disconnect',onEnd);
     setBtns(false,true);
