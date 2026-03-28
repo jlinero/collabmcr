@@ -504,15 +504,11 @@ async function initWebex(){
     const callingConfig = await getCallingConfig();
     log('Tokens OK. Iniciando SDK...','ok');
 
-    // Paso 1: Calling.init con webexConfig y callingConfig (doc oficial)
     const calling = await Calling.init({ webexConfig, callingConfig });
 
-    // Paso 2: esperar evento 'ready' y luego register()
     calling.on('ready', () => {
       log('SDK ready. Registrando...','info');
       calling.register().then(() => {
-
-        // Paso 3: obtener callingClient y línea
         const callingClient = calling.callingClient;
         const lines = Object.values(callingClient.getLines());
         if(!lines || lines.length === 0){
@@ -523,14 +519,12 @@ async function initWebex(){
         S.line = lines[0];
         log('Línea obtenida. Registrando línea...','info');
 
-        // Paso 4: escuchar evento 'registered' en la línea
         S.line.on('registered', () => {
           log('✅ Línea registrada. Listo para llamar.','ok');
           setStatus('registered');
           setBtns(true, false);
         });
 
-        // Escuchar llamadas entrantes
         S.line.on('line:incoming_call', (call) => {
           S.call = call;
           log('📞 Llamada entrante.','info');
@@ -543,7 +537,6 @@ async function initWebex(){
           });
         });
 
-        // Paso 5: registrar la línea
         S.line.register();
       }).catch(e => {
         log('Error register: '+e.message,'err');
@@ -561,14 +554,13 @@ async function placeCall(){
   if(!S.line){ log('Línea no registrada aún.','err'); return; }
   log('Solicitando micrófono...','info');
   try{
-    // Crear stream de micrófono — método oficial para CDN
+    // Crear stream de micrófono
     const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
     log('Micrófono OK. Iniciando llamada al 5102...','info');
 
-    // makeCall() sin parámetros — destino viene del JWE token (calledNumber: 5102)
+    // makeCall() sin parámetros — destino viene del JWE token
     S.call = S.line.makeCall();
 
-    // Eventos de la llamada
     S.call.on('progress',    () => log('Marcando...','info'));
     S.call.on('connect',     () => log('✅ Llamada conectada.','ok'));
     S.call.on('established', () => log('Media establecida.','ok'));
@@ -579,8 +571,8 @@ async function placeCall(){
       audio.srcObject = new MediaStream([track]);
     });
 
-    // dial() con el stream — aquí se inicia realmente la llamada
-    await S.call.dial({ localAudioStream });
+    // ✅ dial() recibe el stream directamente, NO dentro de un objeto
+    await S.call.dial(localAudioStream);
     setBtns(false, true);
     log('Llamada en progreso...','info');
   }
