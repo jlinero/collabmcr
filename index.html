@@ -331,14 +331,14 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
           <div class="status-pill offline" id="callStatusPill" style="font-size:10px;padding:4px 12px;"><div class="status-dot"></div><span id="callStatusText">OFFLINE</span></div>
         </div>
         <div class="pbody">
-          <label class="f-label">Número destino</label>
-          <input class="f-input" type="tel" id="dialInput" placeholder="+1 555 000 0000"/>
+          <label class="f-label" style="display:none;">Número destino</label>
+          <input class="f-input" type="tel" id="dialInput" placeholder="+1 555 000 0000" style="display:none;"/>
           <div class="call-btns">
             <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar</button>
             <button class="cbtn stop" id="btnHangup" onclick="hangupCall()" disabled><i class="fa fa-phone-slash"></i> Colgar</button>
           </div>
-          <label class="f-label">Log de eventos</label>
-          <div class="call-log" id="callLog">
+          <label class="f-label" style="display:none;">Log de eventos</label>
+          <div class="call-log" id="callLog" style="display:none;">
             <p class="l-info">» Sistema inicializado.</p>
             <p class="l-muted">» Configura tu token OAuth para registrarte.</p>
           </div>
@@ -514,8 +514,6 @@ async function initWebex(){
 
     log('Iniciando Calling SDK (guest)...','info');
 
-    // En guest calling, Calling.init() inicializa el cliente internamente
-    // NO se llama .register() en el cliente — el registro va en la línea
     S.calling = window.Calling.init({
       webex:       S.webex,
       logger:      callingConfig.callingClientConfig.logger,
@@ -526,28 +524,27 @@ async function initWebex(){
 
     log('Calling SDK inicializado.','ok');
 
-    // Obtener la línea y registrarla
-    const lines = S.calling.getLines();
+    // En guest calling con JWE, intentar obtener línea primero
+    // Si no hay línea, el SDK maneja la llamada directamente
+    const lines = S.calling.getLines ? S.calling.getLines() : [];
     if(lines && lines.length > 0){
       S.line = lines[0];
       log('Registrando linea...','info');
-      await S.line.register();  // register va en la LÍNEA, no en el cliente
-      log('Linea registrada: '+(S.line.lineId||'principal')+'.','ok');
-
+      await S.line.register();
+      log('Linea registrada.','ok');
       S.line.on('incoming_call', call=>{
-        S.call = call;
+        S.call=call;
         log('📞 Llamada entrante: '+(call.callerId||'Desconocido'),'info');
         setBtns(false,true);
-        call.on('disconnect', onEnd);
+        call.on('disconnect',onEnd);
       });
-
-      setStatus('registered');
-      setBtns(true,false);
-      log('✅ Listo para llamar.','ok');
     } else {
-      log('No se encontraron lineas. Verifica tu cuenta Webex Calling.','err');
-      setStatus('offline');
+      log('Modo guest activo (llamada via JWE).','ok');
     }
+
+    setStatus('registered');
+    setBtns(true,false);
+    log('✅ Listo para llamar.','ok');
 
   }catch(e){
     log('Error: '+e.message,'err');
@@ -558,17 +555,24 @@ async function initWebex(){
 }
 
 async function placeCall(){
-  const dest=document.getElementById('dialInput').value.trim();
-  if(!dest){log('Ingresa un numero destino.','err');return;}
-  if(!S.line){log('No estas registrado.','err');return;}
-  log('Marcando '+dest+'...','info');
+  log('Iniciando llamada...','info');
   try{
-    S.call=await S.line.makeCall({address:dest});
-    S.call.on('connect',()=>log('Llamada conectada.','ok'));
-    S.call.on('disconnect',onEnd);
+    // En guest calling con JWE el destino ya está embebido en el token
+    // Se usa S.line si existe, si no S.calling directamente
+    if(S.line && typeof S.line.makeCall === 'function'){
+      S.call = await S.line.makeCall({});
+    } else if(S.calling && typeof S.calling.makeCall === 'function'){
+      S.call = await S.calling.makeCall({});
+    } else {
+      log('SDK no disponible para marcar.','err');
+      return;
+    }
+    S.call.on('connect',  ()=>{ log('✅ Llamada conectada.','ok'); setBtns(false,true); });
+    S.call.on('disconnect', onEnd);
+    log('Llamada en progreso...','info');
     setBtns(false,true);
   }
-  catch(e){log('Error: '+e.message,'err');}
+  catch(e){log('Error al marcar: '+e.message,'err');}
 }
 function hangupCall(){if(S.call){S.call.end();log('Terminando llamada...','muted');}}
 function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada.','muted');}
