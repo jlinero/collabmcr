@@ -513,21 +513,21 @@ async function initWebex(){
     }
 
     log('Iniciando Calling SDK (guest)...','info');
+    log('Config: '+JSON.stringify(Object.keys(callingConfig)),'info');
 
-    S.calling = window.Calling.init({
-      webex:       S.webex,
-      logger:      callingConfig.callingClientConfig.logger,
-      discovery:   callingConfig.callingClientConfig.discovery,
-      serviceData: callingConfig.callingClientConfig.serviceData,
-      jwe:         callingConfig.callingClientConfig.jwe
-    });
+    // Pasar el objeto callingConfig COMPLETO tal como viene de app.js
+    // y awaitearlo — en algunas versiones init() es async
+    S.calling = await window.Calling.init(callingConfig);
 
-    // Inspeccionar TODOS los métodos y propiedades del objeto
+    // Inspeccionar métodos disponibles en el objeto retornado
     const allKeys = [];
-    let obj = S.calling;
-    do { allKeys.push(...Object.getOwnPropertyNames(obj)); } while(obj = Object.getPrototypeOf(obj));
-    const fns = [...new Set(allKeys)].filter(k => { try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }});
-    log('Funciones disponibles: '+fns.join(', '),'info');
+    let proto = S.calling;
+    do { allKeys.push(...Object.getOwnPropertyNames(proto)); }
+    while(proto = Object.getPrototypeOf(proto));
+    const fns = [...new Set(allKeys)].filter(k => {
+      try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }
+    });
+    log('SDK keys: '+fns.slice(0,15).join(', '),'info');
 
     setStatus('registered');
     setBtns(true,false);
@@ -541,15 +541,29 @@ async function initWebex(){
 
 async function placeCall(){
   if(!S.calling){log('SDK no inicializado.','err');return;}
-  // Mostrar todas las funciones disponibles al intentar llamar
   const allKeys = [];
-  let obj = S.calling;
-  do { allKeys.push(...Object.getOwnPropertyNames(obj)); } while(obj = Object.getPrototypeOf(obj));
-  const fns = [...new Set(allKeys)].filter(k => { try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }});
-  log('Funciones al llamar: '+fns.join(', '),'info');
-  log('Intentando llamada...','info');
+  let proto = S.calling;
+  do { allKeys.push(...Object.getOwnPropertyNames(proto)); }
+  while(proto = Object.getPrototypeOf(proto));
+  const fns = [...new Set(allKeys)].filter(k => {
+    try{ return typeof S.calling[k]==='function'; }catch(e){ return false; }
+  });
+  log('Fns: '+fns.join(', '),'info');
   try{
-    S.call = await S.calling.makeCall({});
+    // Intentar todos los posibles nombres del método
+    if(typeof S.calling.makeCall === 'function'){
+      S.call = await S.calling.makeCall({});
+    } else if(typeof S.calling.dial === 'function'){
+      S.call = await S.calling.dial({});
+    } else if(typeof S.calling.call === 'function'){
+      S.call = await S.calling.call({});
+    } else if(typeof S.calling.placeCall === 'function'){
+      S.call = await S.calling.placeCall({});
+    } else {
+      log('No se encontró método para llamar en: '+fns.join(', '),'err');
+      return;
+    }
+    log('Llamada iniciada.','ok');
     S.call.on('connect',  ()=>{ log('✅ Llamada conectada.','ok'); });
     S.call.on('disconnect', onEnd);
     setBtns(false,true);
