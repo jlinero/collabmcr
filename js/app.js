@@ -364,10 +364,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-  
-      trigger.addEventListener('mouseout', function() {
-        tooltip.classList.remove('show-tooltip');
-      });
-    });
-});
-
