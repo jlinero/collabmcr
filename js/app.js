@@ -1,6 +1,6 @@
 // ─── CONFIG ───────────────────────────────────────────────────────────────────
-const CLIENT_ID     = 'C8908b036cfe625883fea046f09d3c86bafde3dad78d76e31084806b073dd6402';      // <-- Rellena con tu Client ID
-const CLIENT_SECRET = '05a24d27c8b542d34621add5f8cdf92e2069b707d5e1a324b52e093602e6d3ce';  // <-- Rellena con tu Client Secret
+const CLIENT_ID     = 'C8908b036cfe625883fea046f09d3c86bafde3dad78d76e31084806b073dd6402';
+const CLIENT_SECRET = '05a24d27c8b542d34621add5f8cdf92e2069b707d5e1a324b52e093602e6d3ce';
 
 const INITIAL_ACCESS_TOKEN  = 'MmQ1MTA5MGItYWY3Yy00OThjLTk3YjEtMzcwYzBlY2Q5YzdjYzU2MzZmOGUtMGNm_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856';
 const INITIAL_REFRESH_TOKEN = 'RmRlNTI0YzEtMDM3NC00Mzc0LWJlMGEtNzI4NTY3ODBjMDE3ZDVkNWFkZWUtNjJk_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856';
@@ -166,7 +166,7 @@ function openCallNotification(callObj) {
 }
 
 async function getGuestToken() {
-    const token = await TokenManager.getValid(); // <-- MODIFICADO
+    const token = await TokenManager.getValid();
 
     const response = await fetch("https://webexapis.com/v1/guests/token", {
         method: "POST",
@@ -185,7 +185,7 @@ async function getGuestToken() {
 }
 
 async function getJweToken() {
-    const token = await TokenManager.getValid(); // <-- MODIFICADO
+    const token = await TokenManager.getValid();
 
     const response = await fetch("https://webexapis.com/v1/telephony/click2call/callToken", {
         method: "POST",
