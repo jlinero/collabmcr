@@ -1,21 +1,87 @@
+// ─── CONFIG ───────────────────────────────────────────────────────────────────
+const CLIENT_ID     = 'C8908b036cfe625883fea046f09d3c86bafde3dad78d76e31084806b073dd6402';      // <-- Rellena con tu Client ID
+const CLIENT_SECRET = '05a24d27c8b542d34621add5f8cdf92e2069b707d5e1a324b52e093602e6d3ce';  // <-- Rellena con tu Client Secret
+
+const INITIAL_ACCESS_TOKEN  = 'MmQ1MTA5MGItYWY3Yy00OThjLTk3YjEtMzcwYzBlY2Q5YzdjYzU2MzZmOGUtMGNm_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856';
+const INITIAL_REFRESH_TOKEN = 'RmRlNTI0YzEtMDM3NC00Mzc0LWJlMGEtNzI4NTY3ODBjMDE3ZDVkNWFkZWUtNjJk_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856';
+
+// ─── TOKEN MANAGER ────────────────────────────────────────────────────────────
+const TokenManager = {
+  STORAGE_KEY: 'webex_service_tokens',
+
+  load() {
+    try {
+      const stored = localStorage.getItem(this.STORAGE_KEY);
+      if (stored) return JSON.parse(stored);
+    } catch (e) {}
+    return {
+      access_token:  INITIAL_ACCESS_TOKEN,
+      refresh_token: INITIAL_REFRESH_TOKEN,
+      expires_at:    0
+    };
+  },
+
+  save(access_token, refresh_token, expires_in) {
+    const data = {
+      access_token,
+      refresh_token,
+      expires_at: Date.now() + (expires_in * 1000)
+    };
+    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(data));
+    console.log('[TokenManager] Tokens guardados. Expiran en:', new Date(data.expires_at).toLocaleString());
+    return data;
+  },
+
+  isExpiringSoon(expires_at, marginMinutes = 5) {
+    return Date.now() >= expires_at - (marginMinutes * 60 * 1000);
+  },
+
+  async refresh(refresh_token) {
+    console.log('[TokenManager] Renovando access token...');
+    const response = await fetch('https://webexapis.com/v1/access_token', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        grant_type:    'refresh_token',
+        client_id:     CLIENT_ID,
+        client_secret: CLIENT_SECRET,
+        refresh_token: refresh_token
+      })
+    });
+
+    if (!response.ok) {
+      const err = await response.json();
+      throw new Error(`[TokenManager] Error al refrescar token: ${JSON.stringify(err)}`);
+    }
+
+    const data = await response.json();
+    this.save(data.access_token, data.refresh_token, data.expires_in);
+    console.log('[TokenManager] Token renovado correctamente.');
+    return data.access_token;
+  },
+
+  async getValid() {
+    const tokens = this.load();
+    if (this.isExpiringSoon(tokens.expires_at)) {
+      return await this.refresh(tokens.refresh_token);
+    }
+    return tokens.access_token;
+  }
+};
+
+// ─── RESTO DEL CÓDIGO ORIGINAL ────────────────────────────────────────────────
 let agentNumpad, callNotification, secondCallNotification;
-const callNotificationElem = document.getElementById('callNotification');
+const callNotificationElem       = document.getElementById('callNotification');
 const secondCallNotificationElem = document.getElementById('secondCallNotification');
-
-const callTimeOuter = document.querySelector('#callNotification #call-time');
-const callTimer = document.querySelector('#callNotification #call-time span#timer');
-const callHoldStatus = document.querySelector('#callNotification #call-time span#hold-status');
-
-const secondCallTimer = document.querySelector('#secondCallNotification #call-time span#timer');
-
-const profileDropDown = document.getElementById("myDropdown");
-const profileOnline = document.querySelector(".dropbtn #availability");
-
-let service_app_token = 'MmQ1MTA5MGItYWY3Yy00OThjLTk3YjEtMzcwYzBlY2Q5YzdjYzU2MzZmOGUtMGNm_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856'; // Add the service app account token here
-const refresh_token = 'RmRlNTI0YzEtMDM3NC00Mzc0LWJlMGEtNzI4NTY3ODBjMDE3ZDVkNWFkZWUtNjJk_P0A1_01b5077a-1a53-460c-85f4-86fc245a6856';
+const callTimeOuter              = document.querySelector('#callNotification #call-time');
+const callTimer                  = document.querySelector('#callNotification #call-time span#timer');
+const callHoldStatus             = document.querySelector('#callNotification #call-time span#hold-status');
+const secondCallTimer            = document.querySelector('#secondCallNotification #call-time span#timer');
+const profileDropDown            = document.getElementById("myDropdown");
+const profileOnline              = document.querySelector(".dropbtn #availability");
 
 class callNotificationElement {
-    constructor(element,callTimerElement){
+    constructor(element, callTimerElement) {
         this.callNotification = element;
         this.callNotificationTimer = new Timer(callTimerElement);
         this.callNotificationControls = this.callNotification.querySelector('.notifier-a-controls');
@@ -24,33 +90,32 @@ class callNotificationElement {
         this.callNotificationControls_transfer = this.callNotificationControls.querySelector('.transfer');
     }
 
-    toggle(doWhat){
-        if(doWhat === "close" || this.callNotification.classList.contains('show-notification')){
+    toggle(doWhat) {
+        if (doWhat === "close" || this.callNotification.classList.contains('show-notification')) {
             this.callNotification.classList.remove('show-notification');
-            setTimeout(() => { 
+            setTimeout(() => {
                 this.callNotification.classList.remove('timestate');
                 this.callNotificationTimer.stop();
             }, 2500);
-        }
-        else{
+        } else {
             this.callNotification.classList.add('show-notification');
         }
         return this.callNotificationTimer;
     }
 
-    startTimer(){
+    startTimer() {
         this.callNotification.classList.add('timestate');
         this.callNotificationTimer.start();
         this.callNotificationControls.classList.remove('hide-controls');
         return this.callNotificationTimer;
     }
 
-    transferToggle(){
+    transferToggle() {
         this.callNotification.classList.contains('switch-look') ? this.callNotification.classList.remove('switch-look') : this.callNotification.classList.add('switch-look');
         this.callNotificationControls_transfer.classList.contains('in-progress') ? this.callNotificationControls_transfer.classList.remove('in-progress') : this.callNotificationControls_transfer.classList.add('in-progress');
     }
 
-    holdToggle(){
+    holdToggle() {
         callTimeOuter.classList.contains('on-hold') ? callTimeOuter.classList.remove('on-hold') : callTimeOuter.classList.add('on-hold');
         this.callNotificationControls_hold.classList.contains('held') ? (
             this.callNotificationControls_hold.classList.remove('held'),
@@ -58,10 +123,10 @@ class callNotificationElement {
         ) : (
             this.callNotificationControls_hold.classList.add('held'),
             this.callNotificationControls_hold.dataset.tooltip = "Resume"
-        )
+        );
     }
 
-    muteToggle(){
+    muteToggle() {
         this.callNotificationControls_mute.classList.contains('muted') ? (
             this.callNotificationControls_mute.classList.remove('muted'),
             this.callNotificationControls_mute.dataset.tooltip = "Mute"
@@ -71,17 +136,17 @@ class callNotificationElement {
         );
     }
 
-    enableCompleteTransfer(){
+    enableCompleteTransfer() {
         this.callNotificationControls_transfer.classList.remove('disabled');
     }
 }
 
-if(callNotificationElem){
-    callNotification = new callNotificationElement(callNotificationElem,callTimer);
+if (callNotificationElem) {
+    callNotification = new callNotificationElement(callNotificationElem, callTimer);
 }
 
-if(secondCallNotificationElem){
-    secondCallNotification = new callNotificationElement(secondCallNotificationElem,secondCallTimer);
+if (secondCallNotificationElem) {
+    secondCallNotification = new callNotificationElement(secondCallNotificationElem, secondCallTimer);
 }
 
 function fetchCallerBooking() {
@@ -96,132 +161,93 @@ function fetchCallerBooking() {
 }
 
 function openCallNotification(callObj) {
-  callNotification.toggle();
-  callNotifyEvent.detail.callObject = callObj;
+    callNotification.toggle();
+    callNotifyEvent.detail.callObject = callObj;
 }
 
 async function getGuestToken() {
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("Authorization", `Bearer ${service_app_token}`);
+    const token = await TokenManager.getValid(); // <-- MODIFICADO
 
-  const raw = JSON.stringify({
-    "subject": "Webex Click To Call Demo",
-    "displayName": "WebexOne Demo"
-  });
+    const response = await fetch("https://webexapis.com/v1/guests/token", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({
+            "subject": "Webex Click To Call Demo",
+            "displayName": "WebexOne Demo"
+        })
+    });
 
-  const request = {
-    method: "POST",
-    headers: myHeaders,
-    body: raw,
-    redirect: "follow"
-  };
-
-  const response = await fetch("https://webexapis.com/v1/guests/token", request);
-  const data = await response.json();
-  
-  if (data.accessToken) {
-    return data.accessToken;
-  }
+    const data = await response.json();
+    if (data.accessToken) return data.accessToken;
 }
 
 async function getJweToken() {
-  const myHeaders = new Headers();
-  myHeaders.append("Content-Type", "application/json");
-  myHeaders.append("Authorization", `Bearer ${service_app_token}`);
+    const token = await TokenManager.getValid(); // <-- MODIFICADO
 
-  const payload =  JSON.stringify({
-    "calledNumber": "5102", // Place your call queue/hunt group/destination number here
-    "guestName": "" // Any guest name can be given
-  });
+    const response = await fetch("https://webexapis.com/v1/telephony/click2call/callToken", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+        },
+        body: JSON.stringify({
+            "calledNumber": "5102",
+            "guestName": ""
+        })
+    });
 
-  const request = {
-    method: "POST",
-    headers: myHeaders,
-    body: payload,
-    redirect: "follow"
-  };
-  
-  const response = await fetch("https://webexapis.com/v1/telephony/click2call/callToken", request);
-  const result = await response.json();
-  if (result.callToken) {
-    return result.callToken;
-  }
+    const result = await response.json();
+    if (result.callToken) return result.callToken;
 }
 
 async function getWebexConfig(userType) {
-  /*
-    Below values are hardcoded tokens for testing to be done for licensed users
-    let access_token;
-    if (userType === 'customer') {
-      access_token = "";
-    }
-    else {
-      access_token = ""
-    }
-  */
-
- const guestToken = await getGuestToken();
- console.log('Guest token fetch success: ', guestToken);
-  const webexConfig = {
-    config: {
-      logger: {
-        level: "debug", // set the desired log level
-      },
-      meetings: {
-        reconnection: {
-          enabled: true,
+    const guestToken = await getGuestToken();
+    console.log('Guest token fetch success: ', guestToken);
+    const webexConfig = {
+        config: {
+            logger: { level: "debug" },
+            meetings: {
+                reconnection: { enabled: true },
+                enableRtx: true,
+            },
+            encryption: {
+                kmsInitialTimeout: 8000,
+                kmsMaxTimeout: 40000,
+                batcherMaxCalls: 30,
+                caroots: null,
+            },
+            dss: {},
         },
-        enableRtx: true,
-      },
-      encryption: {
-        kmsInitialTimeout: 8000,
-        kmsMaxTimeout: 40000,
-        batcherMaxCalls: 30,
-        caroots: null,
-      },
-      dss: {},
-    },
-    credentials: {
-      access_token: guestToken,
-    },
-  };
-
-  return webexConfig;
-} 
+        credentials: {
+            access_token: guestToken,
+        },
+    };
+    return webexConfig;
+}
 
 async function getCallingConfig() {
-    const jweToken = await getJweToken(); 
+    const jweToken = await getJweToken();
     console.log('Jwe Token: ', jweToken);
 
-    const clientConfig = {
-      calling: true,
-      callHistory: true,
-    };
-  
-    const loggerConfig = {
-      level: "info",
-    };
-  
-    const serviceData = { indicator: 'guestcalling', domain: '', guestName: 'Harvey'};
-  
-    const callingClientConfig = {
-      logger: loggerConfig,
-      discovery: {
-        region: "US-EAST",
-        country: "US",
-      },
-      serviceData,
-      jwe: `${jweToken}`
-    }
+    const clientConfig = { calling: true, callHistory: true };
+    const loggerConfig = { level: "info" };
+    const serviceData  = { indicator: 'guestcalling', domain: '', guestName: 'Harvey' };
 
-    const callingConfig = {
-      clientConfig: clientConfig,
-      callingClientConfig: callingClientConfig,
-      logger: loggerConfig,
+    const callingClientConfig = {
+        logger: loggerConfig,
+        discovery: { region: "US-EAST", country: "US" },
+        serviceData,
+        jwe: `${jweToken}`
     };
-  
-    return callingConfig;
+
+    return {
+        clientConfig,
+        callingClientConfig,
+        logger: loggerConfig,
+    };
 }
 
 function openCallWindow(num) {
@@ -245,38 +271,24 @@ function closeCallWindow() {
 
 function updateBtnText(btnType) {
     switch (btnType.innerText) {
-      case "Mute":
-        btnType.innerText = "Unmute";
-        break;
-      case "Unmute":
-        btnType.innerText = "Mute";
-        break;
-      case "Hold":
-        btnType.innerText = "Resume";
-        break;
-      case "Resume":
-        btnType.innerText = "Hold";
-        break;
-      default:
-        console.log("No case matched");
+        case "Mute":   btnType.innerText = "Unmute"; break;
+        case "Unmute": btnType.innerText = "Mute";   break;
+        case "Hold":   btnType.innerText = "Resume"; break;
+        case "Resume": btnType.innerText = "Hold";   break;
+        default: console.log("No case matched");
     }
 }
-  
+
 function renderCallHistoryItem(call) {
     const avatarInitial = "Harvey Specter".charAt(0).toUpperCase();
-    const directionIcon =
-      call.direction === "OUTGOING" ? "fa-arrow-up" : "fa-arrow-down";
+    const directionIcon = call.direction === "OUTGOING" ? "fa-arrow-up" : "fa-arrow-down";
     const callDate = new Date(call.startTime).toLocaleDateString();
-  
+
     return `
         <div class="call-history-item">
           <div class="call-avatar">${avatarInitial}</div>
           <div class="call-details">
-            <div class="call-name">${
-              call.other.name === "Priya Kesari"
-                ? "Harvey Specter"
-                : "Jane Doe"
-            }</div>
+            <div class="call-name">${call.other.name === "Priya Kesari" ? "Harvey Specter" : "Jane Doe"}</div>
             <div class="call-phone">${call.other.phoneNumber}</div>
           </div>
           <div class="call-indicator">
@@ -284,51 +296,49 @@ function renderCallHistoryItem(call) {
             <i class="fas ${directionIcon}" style="transform: rotate(45deg);"></i>
           </div>
           <div class="make-call">
-              <button class="attend-call-btn"><i class="fa fa-phone" aria-hidden="true" style="transform: rotateZ(90deg);"></i></button>
+            <button class="attend-call-btn"><i class="fa fa-phone" aria-hidden="true" style="transform: rotateZ(90deg);"></i></button>
           </div>
         </div>
-      `;
+    `;
 }
-  
+
 function showHideCallHistory() {
     var container = document.querySelectorAll(".call-history-container")[0];
-  
     if (container.classList.contains("visible")) {
-      container.classList.remove("visible");
-      container.style.height = "40px";
+        container.classList.remove("visible");
+        container.style.height = "40px";
     } else {
-      container.classList.add("visible");
-      container.style.height = "30rem";
+        container.classList.add("visible");
+        container.style.height = "30rem";
     }
 }
-  
+
 function renderCallHistory(callHistoryData) {
     const callHistoryList = document.getElementById("callHistoryList");
     let callHistoryHTMLHeader = `
-          <div id = "call-history-header" class="call-history-header" onclick="showHideCallHistory()">
-              Call History
-              <img src="../images/unfold.png" alt="" style="    margin-left: 180px;height: 20px;cursor: pointer;">
-          </div>
-      `;
+        <div id="call-history-header" class="call-history-header" onclick="showHideCallHistory()">
+            Call History
+            <img src="../images/unfold.png" alt="" style="margin-left: 180px;height: 20px;cursor: pointer;">
+        </div>
+    `;
     let callHistoryHTML = callHistoryData.map(renderCallHistoryItem).join("");
     callHistoryList.innerHTML = callHistoryHTMLHeader + callHistoryHTML;
     callHistoryList.classList.add("show-history");
 }
 
-function updateAvailability(){
+function updateAvailability() {
     profileOnline.classList.add('online');
 }
-  
+
 document.querySelector(".dropbtn").addEventListener("click", (event) => {
     if (profileDropDown.classList.contains("show")) {
-      profileDropDown.classList.remove("show");
+        profileDropDown.classList.remove("show");
     } else {
-      profileDropDown.classList.add("show");
+        profileDropDown.classList.add("show");
     }
     event.stopPropagation();
 });
-  
-  // Close the dropdown menu if the user clicks outside of it
+
 window.onclick = () => {
     profileDropDown.classList.remove("show");
 };
@@ -336,20 +346,24 @@ window.onclick = () => {
 document.addEventListener('DOMContentLoaded', function () {
     var tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
     var tooltip = document.querySelector('.tooltip-calling');
-  
-    tooltipTriggers.forEach(function(trigger) {
-      trigger.addEventListener('mouseover', function() {
-        var tooltipText = this.getAttribute('data-tooltip');
-        tooltip.textContent = tooltipText;
-        
-        var triggerRect = this.getBoundingClientRect();
-        var tooltipRect = tooltip.getBoundingClientRect();
-        
-        tooltip.style.left = (triggerRect.left + (triggerRect.width - tooltipRect.width) / 2 + 10) + 'px';
-        tooltip.style.top = triggerRect.top - tooltipRect.height - 25 + 'px'; // 10px for a little space above the tooltip
-        
-        tooltip.classList.add('show-tooltip');
-      });
+
+    tooltipTriggers.forEach(function (trigger) {
+        trigger.addEventListener('mouseover', function () {
+            var tooltipText = this.getAttribute('data-tooltip');
+            tooltip.textContent = tooltipText;
+
+            var triggerRect  = this.getBoundingClientRect();
+            var tooltipRect  = tooltip.getBoundingClientRect();
+            tooltip.style.left = (triggerRect.left + (triggerRect.width - tooltipRect.width) / 2 + 10) + 'px';
+            tooltip.style.top  = triggerRect.top - tooltipRect.height - 25 + 'px';
+            tooltip.classList.add('show-tooltip');
+        });
+
+        trigger.addEventListener('mouseout', function () {
+            tooltip.classList.remove('show-tooltip');
+        });
+    });
+});
   
       trigger.addEventListener('mouseout', function() {
         tooltip.classList.remove('show-tooltip');
