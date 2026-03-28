@@ -358,7 +358,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
         <p class="s-sub reveal" style="margin-bottom:0;">Ingenieros certificados en Cisco Webex disponibles para acompañarte en cada etapa de la implementación.</p>
       </div>
       <div>
-        <a href="mailto:clientes@collab-col.wbx.ai" class="cc reveal"><div class="cc-icon"><i class="fa fa-envelope"></i></div><div><div class="cc-title">Email de Soporte</div><div class="cc-val">clientes@collab-col.wbx.ai</div></div></a>
+        <a href="/cdn-cgi/l/email-protection#680b04010d061c0d1b280b070404090a450b0704461f0a10460901" class="cc reveal"><div class="cc-icon"><i class="fa fa-envelope"></i></div><div><div class="cc-title">Email de Soporte</div><div class="cc-val"><span class="__cf_email__" data-cfemail="5a3936333f342e3f291a393536363b3877393536742d3822743b33">[email&#160;protected]</span></div></div></a>
         <a href="https://developer.webex.com/support" target="_blank" class="cc reveal d1"><div class="cc-icon"><i class="fa fa-life-ring"></i></div><div><div class="cc-title">Webex Developer Support</div><div class="cc-val">developer.webex.com/support</div></div></a>
         <a href="https://community.cisco.com/t5/webex-for-developers/bd-p/disc-webex-developers" target="_blank" class="cc reveal d2"><div class="cc-icon"><i class="fa fa-comments"></i></div><div><div class="cc-title">Comunidad Cisco Webex</div><div class="cc-val">Developers Community Forum</div></div></a>
       </div>
@@ -404,7 +404,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
   </div>
 </div>
 
-<script src="https://unpkg.com/webex/umd/webex.min.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/webex/umd/webex.min.js"></script>
 <script src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
 <script>
 // CURSOR
@@ -491,20 +491,57 @@ async function initWebex(){
   if(!S.at){log('Sin Access Token.','err');return;}
   setStatus('connecting');log('Inicializando Webex SDK...','info');
   try{
-    S.webex=window.Webex.init({credentials:{access_token:S.at}});
-    await S.webex.authenticate();log('Autenticado con Webex.','ok');
+    // ── Crear instancia Webex con token ──
+    S.webex=window.Webex.init({
+      credentials:{access_token:S.at},
+      config:{logger:{level:'silent'}}
+    });
+
+    // ── Registrar dispositivo (no usar .authenticate()) ──
+    log('Registrando dispositivo...','info');
+    await S.webex.internal.device.register();
+    log('Dispositivo registrado en Webex.','ok');
+
+    // ── Inicializar Calling SDK ──
     if(window.Calling){
-      S.calling=Calling.init({webex:S.webex,logger:{level:'silent'}});
+      log('Iniciando Calling SDK...','info');
+      S.calling=window.Calling.init({
+        webex:S.webex,
+        logger:{level:'warn'}
+      });
+
       await S.calling.register();
+      log('Calling SDK registrado.','ok');
+
       const lines=S.calling.getLines();
       if(lines&&lines.length>0){
-        S.line=lines[0];await S.line.connect();
-        log('Linea conectada: '+(S.line.lineId||'principal')+'.','ok');
-        S.line.on('incoming_call',call=>{S.call=call;log('Llamada entrante de: '+(call.callerId||'Desconocido'),'info');setBtns(false,true);call.on('disconnect',onEnd);});
+        S.line=lines[0];
+        await S.line.connect();
+        log('Linea activa: '+(S.line.lineId||'principal')+'.','ok');
+        S.line.on('incoming_call',call=>{
+          S.call=call;
+          log('📞 Llamada entrante: '+(call.callerId||'Desconocido'),'info');
+          setBtns(false,true);
+          call.on('disconnect',onEnd);
+        });
+        setStatus('registered');
+        setBtns(true,false);
+        log('✅ Listo para llamar.','ok');
+      } else {
+        log('No se encontraron lineas. Verifica tu cuenta Webex Calling.','err');
+        setStatus('offline');
       }
-      setStatus('registered');setBtns(true,false);log('Registrado en Webex Calling.','ok');
-    }else log('Calling SDK no disponible.','err');
-  }catch(e){log('Error: '+e.message,'err');setStatus('offline');}
+    } else {
+      log('Calling SDK no disponible. Verifica que el script cargó.','err');
+      setStatus('offline');
+    }
+  }catch(e){
+    log('Error: '+e.message,'err');
+    // Detalle extra para debugging
+    if(e.message&&e.message.includes('401'))log('Token inválido o expirado. Verifica el Access Token.','err');
+    if(e.message&&e.message.includes('403'))log('Sin permisos. Verifica los scopes de tu Integration.','err');
+    setStatus('offline');
+  }
 }
 
 async function placeCall(){
@@ -525,11 +562,4 @@ async function applyToken(){
   S.rt=document.getElementById('rtInput').value.trim();
   S.ci=document.getElementById('ciInput').value.trim();
   S.cs=document.getElementById('csInput').value.trim();
-  if(!S.at){alert('El Access Token es obligatorio.');return;}
-  S.expiry=Date.now()+50*60*1000;
-  scheduleR();closeModal();await initWebex();
-}
-document.getElementById('tokenModal').addEventListener('click',function(e){if(e.target===this)closeModal();});
-</script>
-</body>
-</html>
+  if(!S.at){alert('El Ac
