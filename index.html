@@ -3,611 +3,554 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Municipio del Distrito Metropolitano de Quito</title>
+<title>CollabMCR Technology Corporation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --azul:#003087;--azul2:#004eb3;--rojo:#c8102e;--gris:#f4f4f4;
-  --gris2:#e8e8e8;--texto:#333;--muted:#666;--blanco:#fff;
+  --bg:#04080f;--bg2:#070d1a;--surface:#0a1020;--card:#0d1628;--card2:#111e35;
+  --border:#1a2d50;--border2:#223660;
+  --cyan:#00d4ff;--cyan-dim:rgba(0,212,255,.12);
+  --blue:#1a56db;--blue2:#2563eb;
+  --green:#00ffa3;--red:#ff3b6b;--amber:#ffaa00;
+  --text:#dde6f5;--muted:#4a6080;--muted2:#6b84a8;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Outfit',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
 }
-body{font-family:'Open Sans',sans-serif;font-size:14px;color:var(--texto);background:#fff;}
-
-/* TOP BAR */
-.topbar-superior{background:#1a1a2e;padding:6px 0;border-bottom:2px solid var(--rojo);}
-.topbar-superior .inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:flex-end;align-items:center;gap:24px;}
-.topbar-superior a{color:#ccc;font-size:12px;text-decoration:none;transition:color .2s;}
-.topbar-superior a:hover{color:#fff;}
-.topbar-superior .sep{color:#555;}
-
-/* HEADER */
-header{background:#fff;border-bottom:1px solid var(--gris2);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.08);}
-.header-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.65;overflow-x:hidden;cursor:none;}
+.cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s;mix-blend-mode:screen;}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(0,212,255,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s;}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;background:rgba(4,8,15,.88);backdrop-filter:blur(24px);border-bottom:1px solid rgba(26,45,80,.8);}
+.topbar-inner{max-width:1360px;margin:0 auto;width:100%;padding:0 36px;display:flex;align-items:center;justify-content:space-between;}
 .logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;}
-.logo-escudo{width:52px;height:52px;background:linear-gradient(135deg,#003087,#c8102e);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;font-weight:700;flex-shrink:0;}
-.logo-texto{line-height:1.2;}
-.logo-texto .quito-renace{font-size:10px;color:var(--muted);font-style:italic;}
-.logo-texto .quito-nombre{font-size:18px;font-weight:700;color:var(--azul);letter-spacing:.5px;}
-.logo-texto .quito-sub{font-size:10px;color:var(--muted);}
-.header-search{display:flex;align-items:center;gap:0;}
-.header-search input{border:1px solid #ccc;border-right:none;padding:8px 14px;font-size:13px;border-radius:4px 0 0 4px;outline:none;width:220px;}
-.header-search button{background:var(--azul);color:#fff;border:none;padding:8px 14px;border-radius:0 4px 4px 0;cursor:pointer;font-size:14px;}
-
-/* NAV */
-nav{background:var(--azul);}
-.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;}
-nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:13px 16px;display:block;transition:background .2s;white-space:nowrap;letter-spacing:.3px;}
-nav a:hover{background:rgba(255,255,255,.15);}
-nav a.active{background:var(--rojo);}
-.nav-dropdown{position:relative;}
-.nav-dropdown:hover .dropdown-menu{display:block;}
-.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:220px;box-shadow:0 4px 16px rgba(0,0,0,.15);z-index:200;border-top:3px solid var(--rojo);}
-.dropdown-menu a{color:var(--texto);font-weight:400;padding:10px 16px;border-bottom:1px solid var(--gris2);display:block;}
-.dropdown-menu a:hover{background:var(--gris);color:var(--azul);}
-
-/* FRANJA COLORES */
-.franja{height:8px;background:linear-gradient(90deg,#003087 0%,#003087 30%,#c8102e 30%,#c8102e 50%,#009fe3 50%,#009fe3 70%,#f7941d 70%,#f7941d 85%,#8dc63f 85%,#8dc63f 100%);}
-
+.logo-svg-box{position:relative;width:46px;height:46px;flex-shrink:0;}
+.logo-svg-box svg{width:100%;height:100%;}
+.logo-orbit{position:absolute;inset:-7px;border:1px solid rgba(0,212,255,.22);border-radius:50%;animation:spin 9s linear infinite;}
+.logo-orbit::before{content:'';position:absolute;width:6px;height:6px;border-radius:50%;background:var(--cyan);top:-3px;left:50%;transform:translateX(-50%);box-shadow:0 0 10px var(--cyan);}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-name{font-family:var(--font-display);font-size:23px;letter-spacing:2px;color:#fff;}
+.logo-tag{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2.5px;color:var(--cyan);text-transform:uppercase;margin-top:3px;}
+.nav{display:flex;align-items:center;gap:2px;}
+.nav a{font-size:13px;font-weight:500;color:var(--muted2);text-decoration:none;padding:7px 16px;border-radius:8px;transition:color .2s,background .2s;}
+.nav a:hover,.nav a.active{color:var(--cyan);}
+.topbar-right{display:flex;align-items:center;gap:12px;}
+.status-pill{display:flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-size:10.5px;font-weight:600;font-family:var(--font-mono);letter-spacing:.5px;border:1px solid rgba(0,255,163,.2);background:rgba(0,255,163,.07);color:var(--green);transition:all .4s;}
+.status-pill.offline{border-color:rgba(255,59,107,.2);background:rgba(255,59,107,.07);color:var(--red);}
+.status-pill.connecting{border-color:rgba(255,170,0,.2);background:rgba(255,170,0,.07);color:var(--amber);}
+.status-dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.btn-token{font-size:11px;font-weight:600;font-family:var(--font-mono);padding:8px 18px;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--muted2);cursor:none;transition:all .2s;letter-spacing:.4px;}
+.btn-token:hover{color:var(--cyan);border-color:var(--cyan);background:var(--cyan-dim);}
 /* HERO */
-.hero{position:relative;height:460px;overflow:hidden;background:linear-gradient(135deg,#001f5c 0%,#003087 40%,#1a4a8a 100%);}
-.hero-bg{position:absolute;inset:0;background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Quito_Montufar_y_Espejo.jpg/1200px-Quito_Montufar_y_Espejo.jpg') center/cover no-repeat;opacity:.35;}
-.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 20px 0;color:#fff;}
-.hero-content h1{font-size:36px;font-weight:700;margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,.5);}
-.hero-content p{font-size:16px;opacity:.9;max-width:520px;line-height:1.6;text-shadow:0 1px 4px rgba(0,0,0,.4);}
-.hero-btns{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;}
-.btn-hero-primary{background:var(--rojo);color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:600;font-size:13px;transition:background .2s;}
-.btn-hero-primary:hover{background:#a50024;}
-.btn-hero-secondary{background:rgba(255,255,255,.15);color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:600;font-size:13px;border:1px solid rgba(255,255,255,.4);transition:background .2s;}
-.btn-hero-secondary:hover{background:rgba(255,255,255,.25);}
-
-/* SERVICIOS RÁPIDOS */
-.servicios-rapidos{background:#fff;padding:32px 0;border-bottom:1px solid var(--gris2);}
-.servicios-rapidos .inner{max-width:1200px;margin:0 auto;padding:0 20px;}
-.servicios-rapidos h3{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:20px;font-weight:600;}
-.servicios-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;}
-@media(max-width:900px){.servicios-grid{grid-template-columns:repeat(3,1fr);}}
-@media(max-width:500px){.servicios-grid{grid-template-columns:repeat(2,1fr);}}
-.servicio-item{text-align:center;padding:20px 12px;border:1px solid var(--gris2);border-radius:8px;cursor:pointer;transition:all .2s;text-decoration:none;color:var(--texto);}
-.servicio-item:hover{border-color:var(--azul);box-shadow:0 4px 12px rgba(0,48,135,.1);transform:translateY(-2px);}
-.servicio-item i{font-size:28px;color:var(--azul);margin-bottom:10px;display:block;}
-.servicio-item span{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--texto);line-height:1.3;}
-
-/* NOTICIAS + ZONAS */
-.main-content{max-width:1200px;margin:40px auto;padding:0 20px;display:grid;grid-template-columns:1fr 340px;gap:36px;}
-@media(max-width:900px){.main-content{grid-template-columns:1fr;}}
-.section-title{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--azul);border-bottom:3px solid var(--rojo);padding-bottom:10px;margin-bottom:20px;}
-.noticias-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-.noticia-card{border:1px solid var(--gris2);border-radius:6px;overflow:hidden;transition:box-shadow .2s;}
-.noticia-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1);}
-.noticia-img{height:140px;background:linear-gradient(135deg,#003087,#009fe3);display:flex;align-items:center;justify-content:center;font-size:36px;color:rgba(255,255,255,.5);}
-.noticia-img.rojo{background:linear-gradient(135deg,#c8102e,#f7941d);}
-.noticia-img.verde{background:linear-gradient(135deg,#2e7d32,#66bb6a);}
-.noticia-img.morado{background:linear-gradient(135deg,#4a148c,#9c27b0);}
-.noticia-body{padding:14px;}
-.noticia-tag{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--rojo);margin-bottom:6px;}
-.noticia-title{font-size:13px;font-weight:600;line-height:1.4;color:var(--texto);margin-bottom:6px;}
-.noticia-date{font-size:11px;color:var(--muted);}
-
-/* SIDEBAR */
-.sidebar-card{border:1px solid var(--gris2);border-radius:6px;overflow:hidden;margin-bottom:20px;}
-.sidebar-card-header{background:var(--azul);color:#fff;padding:12px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
-.sidebar-card-header.rojo{background:var(--rojo);}
-.sidebar-list a{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid var(--gris2);text-decoration:none;color:var(--texto);font-size:13px;transition:background .2s;}
-.sidebar-list a:last-child{border-bottom:none;}
-.sidebar-list a:hover{background:var(--gris);}
-.sidebar-list a i{color:var(--azul);font-size:12px;width:14px;}
-.sidebar-list a.rojo-icon i{color:var(--rojo);}
-
-/* ZONAS */
-.zonas-section{background:var(--gris);padding:40px 0;}
-.zonas-inner{max-width:1200px;margin:0 auto;padding:0 20px;}
-.zonas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px;}
-@media(max-width:800px){.zonas-grid{grid-template-columns:repeat(3,1fr);}}
-.zona-item{background:#fff;border:1px solid var(--gris2);border-radius:6px;padding:14px;text-align:center;cursor:pointer;transition:all .2s;text-decoration:none;color:var(--texto);}
-.zona-item:hover{border-color:var(--azul);transform:translateY(-2px);}
-.zona-item i{font-size:20px;color:var(--azul);margin-bottom:8px;display:block;}
-.zona-item span{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
-
+.hero{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 36px 80px;overflow:hidden;}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.hero-blob{position:absolute;width:860px;height:860px;border-radius:50%;background:radial-gradient(circle,rgba(26,86,219,.24) 0%,rgba(0,212,255,.07) 40%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-55%);pointer-events:none;animation:blobP 7s ease-in-out infinite;}
+@keyframes blobP{0%,100%{transform:translate(-50%,-55%) scale(1)}50%{transform:translate(-50%,-55%) scale(1.07)}}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:920px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:36px;padding:7px 22px;border:1px solid rgba(0,212,255,.22);border-radius:999px;background:rgba(0,212,255,.05);}
+.hero-eyebrow::before{content:'//';opacity:.4;margin-right:4px;}
+.hero h1{font-family:var(--font-display);font-size:clamp(54px,10vw,118px);line-height:.93;letter-spacing:3px;color:#fff;margin-bottom:10px;}
+.line2{display:block;background:linear-gradient(90deg,var(--cyan) 0%,var(--blue2) 50%,var(--cyan) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite;}
+@keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
+.line3{display:block;font-size:clamp(14px,2vw,26px);font-family:var(--font-body);font-weight:300;color:var(--muted2);letter-spacing:6px;text-transform:uppercase;-webkit-text-fill-color:var(--muted2);margin-top:18px;}
+.hero-desc{color:var(--muted2);font-size:17px;font-weight:300;max-width:520px;margin:28px auto 44px;line-height:1.75;}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-glow{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:14px;cursor:none;text-decoration:none;border:none;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;transition:transform .2s,box-shadow .2s;}
+.btn-glow:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,212,255,.4);}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:10px;font-family:var(--font-body);font-weight:500;font-size:14px;cursor:none;text-decoration:none;border:1px solid var(--border2);background:transparent;color:var(--text);transition:border-color .2s,color .2s,background .2s;}
+.btn-outline:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim);}
+/* STATS */
+.stats-bar{position:relative;z-index:2;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);padding:28px 36px;}
+.stats-inner{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+@media(max-width:700px){.stats-inner{grid-template-columns:repeat(2,1fr);}}
+.stat-item{text-align:center;}
+.stat-num{font-family:var(--font-display);font-size:46px;letter-spacing:2px;color:#fff;display:block;line-height:1;}
+.stat-num span{color:var(--cyan);}
+.stat-label{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+/* SECTIONS */
+section{position:relative;z-index:2;}
+.sw{max-width:1360px;margin:0 auto;padding:110px 36px;}
+.s-label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.s-label::before{content:'';display:block;width:22px;height:1px;background:var(--cyan);}
+.s-title{font-family:var(--font-display);font-size:clamp(34px,5vw,62px);letter-spacing:2px;color:#fff;line-height:1;margin-bottom:18px;}
+.s-sub{color:var(--muted2);font-size:16px;font-weight:300;max-width:480px;margin-bottom:64px;}
+/* PRODUCTS */
+.products-bg{background:var(--bg2);}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+@media(max-width:860px){.products-grid{grid-template-columns:1fr;}}
+.prod-card{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:border-color .35s,transform .35s,box-shadow .35s;cursor:none;}
+.prod-card::before{content:'';position:absolute;top:0;left:36px;right:36px;height:2px;border-radius:0 0 2px 2px;background:linear-gradient(90deg,transparent,currentColor,transparent);opacity:0;transition:opacity .35s;}
+.prod-card.c1{color:var(--cyan)}.prod-card.c2{color:var(--green)}.prod-card.c3{color:#818cf8}.prod-card.c4{color:var(--amber)}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.55);border-color:currentColor;}
+.prod-card:hover::before{opacity:1;}
+.prod-num{position:absolute;right:24px;top:12px;font-family:var(--font-display);font-size:90px;color:currentColor;opacity:.04;line-height:1;pointer-events:none;transition:opacity .35s;}
+.prod-card:hover .prod-num{opacity:.1;}
+.prod-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);color:currentColor;}
+.prod-title{font-family:var(--font-display);font-size:28px;letter-spacing:1px;color:#fff;margin-bottom:10px;}
+.prod-desc{color:var(--muted2);font-size:13.5px;line-height:1.7;margin-bottom:22px;}
+.prod-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px;}
+.prod-tag{font-family:var(--font-mono);font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:currentColor;padding:4px 10px;border-radius:4px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.prod-link{font-family:var(--font-mono);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:currentColor;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:gap .2s;}
+.prod-link:hover{gap:14px;}
+/* CALLING */
+.calling-bg{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.calling-layout{display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:center;}
+@media(max-width:960px){.calling-layout{grid-template-columns:1fr;}}
+.feature-list{display:flex;flex-direction:column;gap:14px;margin-top:36px;}
+.feature-row{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:var(--card);border:1px solid var(--border);border-radius:12px;transition:border-color .2s;}
+.feature-row:hover{border-color:var(--border2);}
+.feat-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.fi-a{background:rgba(0,212,255,.1);color:var(--cyan);}
+.fi-b{background:rgba(0,255,163,.1);color:var(--green);}
+.fi-c{background:rgba(129,140,248,.1);color:#818cf8;}
+.feat-t{font-weight:600;font-size:13.5px;color:#fff;margin-bottom:2px;}
+.feat-d{font-size:12px;color:var(--muted2);}
+/* PANEL */
+.call-panel{background:var(--card2);border:1px solid var(--border2);border-radius:20px;overflow:hidden;}
+.panel-chrome{background:var(--card);padding:0 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;height:44px;}
+.chrome-dot{width:10px;height:10px;border-radius:50%;}
+.ptitle{margin:0 auto;font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.pstatus{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;background:rgba(0,212,255,.03);border-bottom:1px solid var(--border);}
+.pbody{padding:22px;}
+.f-label{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block;}
+.f-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--font-mono);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;margin-bottom:16px;}
+.f-input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,.08);}
+.f-input::placeholder{color:var(--muted);}
+.call-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.cbtn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:10px;border:none;font-family:var(--font-body);font-weight:600;font-size:13px;cursor:none;transition:all .2s;}
+.cbtn.go{background:var(--green);color:#012419;}.cbtn.go:hover:not(:disabled){box-shadow:0 0 28px rgba(0,255,163,.35);transform:translateY(-1px);}
+.cbtn.stop{background:rgba(255,59,107,.12);color:var(--red);border:1px solid rgba(255,59,107,.25);}.cbtn.stop:hover:not(:disabled){background:var(--red);color:#fff;}
+.cbtn:disabled{opacity:.3;cursor:not-allowed;}
+.call-log{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 16px;height:130px;overflow-y:auto;font-family:var(--font-mono);font-size:11px;}
+.call-log p{margin-bottom:5px;line-height:1.5;}
+.l-ok{color:var(--green)}.l-err{color:var(--red)}.l-info{color:var(--cyan)}.l-muted{color:var(--muted);}
+.call-log::-webkit-scrollbar{width:3px;}.call-log::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+/* CONTACT */
+.contact-bg{background:var(--bg);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:16px;text-decoration:none;transition:border-color .2s,transform .2s;cursor:none;margin-bottom:14px;}
+.cc:hover{border-color:var(--cyan);transform:translateX(5px);}
+.cc-icon{width:44px;height:44px;border-radius:10px;background:var(--cyan-dim);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--cyan);flex-shrink:0;}
+.cc-title{font-weight:600;color:#fff;font-size:14px;margin-bottom:2px;}
+.cc-val{font-family:var(--font-mono);font-size:10px;color:var(--muted2);letter-spacing:.5px;}
 /* FOOTER */
-footer{background:#1a1a2e;color:#aaa;padding:40px 0 0;}
-.footer-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-@media(max-width:800px){.footer-inner{grid-template-columns:1fr 1fr;}}
-.footer-col h4{color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #333;}
-.footer-col p{font-size:12px;line-height:1.7;margin-bottom:12px;}
-.footer-col a{color:#aaa;text-decoration:none;font-size:12px;display:block;margin-bottom:6px;transition:color .2s;}
-.footer-col a:hover{color:#fff;}
-.footer-bottom{margin-top:30px;padding:16px 20px;background:#111;text-align:center;font-size:11px;color:#666;}
-.footer-social{display:flex;gap:12px;margin-top:14px;}
-.footer-social a{width:32px;height:32px;background:#333;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:13px;transition:all .2s;}
-.footer-social a:hover{background:var(--azul);color:#fff;}
-
-/* ══════════════════════════════════════
-   BOTÓN FLOTANTE CLICK-TO-CALL WEBEX
-   ══════════════════════════════════════ */
-.c2c-fab{
-  position:fixed;bottom:32px;right:32px;z-index:9999;
-  display:flex;flex-direction:column;align-items:flex-end;gap:12px;
-}
-.c2c-btn{
-  width:60px;height:60px;border-radius:50%;
-  background:linear-gradient(135deg,#003087,#009fe3);
-  color:#fff;border:none;cursor:pointer;
-  box-shadow:0 4px 20px rgba(0,48,135,.45);
-  font-size:22px;display:flex;align-items:center;justify-content:center;
-  transition:transform .2s,box-shadow .2s;
-  position:relative;
-}
-.c2c-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(0,48,135,.6);}
-.c2c-pulse{
-  position:absolute;inset:-4px;border-radius:50%;
-  border:2px solid rgba(0,159,227,.5);
-  animation:pulse-ring 2s ease-out infinite;
-}
-@keyframes pulse-ring{0%{transform:scale(1);opacity:1}100%{transform:scale(1.4);opacity:0}}
-.c2c-tooltip{
-  background:#1a1a2e;color:#fff;
-  padding:8px 14px;border-radius:20px;
-  font-size:12px;font-weight:600;white-space:nowrap;
-  box-shadow:0 2px 12px rgba(0,0,0,.3);
-  opacity:0;transform:translateX(10px);
-  transition:all .2s;pointer-events:none;
-}
-.c2c-fab:hover .c2c-tooltip{opacity:1;transform:translateX(0);}
-
-/* PANEL CLICK-TO-CALL */
-.c2c-panel{
-  position:fixed;bottom:32px;right:32px;z-index:9998;
-  width:320px;background:#fff;border-radius:16px;
-  box-shadow:0 8px 40px rgba(0,0,0,.2);
-  overflow:hidden;
-  transform:scale(0.8) translateY(20px);opacity:0;pointer-events:none;
-  transition:all .3s cubic-bezier(.22,.68,0,1.2);
-  transform-origin:bottom right;
-}
-.c2c-panel.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
-.c2c-panel-header{
-  background:linear-gradient(135deg,#003087,#004eb3);
-  padding:20px;color:#fff;
-  display:flex;align-items:center;justify-content:space-between;
-}
-.c2c-panel-header-left{display:flex;align-items:center;gap:12px;}
-.c2c-avatar{
-  width:48px;height:48px;border-radius:50%;
-  background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);
-  display:flex;align-items:center;justify-content:center;font-size:20px;
-}
-.c2c-panel-title{font-size:14px;font-weight:700;letter-spacing:.3px;}
-.c2c-panel-sub{font-size:11px;opacity:.8;margin-top:2px;}
-.c2c-close{background:none;border:none;color:rgba(255,255,255,.7);font-size:16px;cursor:pointer;padding:4px;transition:color .2s;}
-.c2c-close:hover{color:#fff;}
-.c2c-status-bar{
-  background:#f0f4ff;padding:10px 20px;
-  display:flex;align-items:center;justify-content:space-between;
-  border-bottom:1px solid #e0e7ff;
-}
-.c2c-status-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#666;}
-.c2c-status-pill{
-  display:flex;align-items:center;gap:6px;
-  font-size:10px;font-weight:700;letter-spacing:.5px;
-  padding:4px 10px;border-radius:999px;
-  background:#fee2e2;color:#c8102e;border:1px solid #fca5a5;
-  transition:all .4s;
-}
-.c2c-status-pill.online{background:#d1fae5;color:#065f46;border-color:#6ee7b7;}
-.c2c-status-pill.connecting{background:#fef9c3;color:#92400e;border-color:#fcd34d;}
-.c2c-dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
-.c2c-body{padding:20px;}
-.c2c-agent-info{text-align:center;margin-bottom:20px;}
-.c2c-agent-avatar{
-  width:64px;height:64px;border-radius:50%;margin:0 auto 10px;
-  background:linear-gradient(135deg,#003087,#009fe3);
-  display:flex;align-items:center;justify-content:center;
-  font-size:26px;color:#fff;
-  box-shadow:0 0 0 4px rgba(0,48,135,.1);
-}
-.c2c-agent-name{font-size:15px;font-weight:700;color:#1a1a2e;}
-.c2c-agent-dept{font-size:11px;color:#666;margin-top:3px;}
-.c2c-agent-status{
-  display:inline-flex;align-items:center;gap:5px;
-  font-size:10px;font-weight:600;color:#065f46;
-  background:#d1fae5;padding:3px 10px;border-radius:999px;margin-top:8px;
-}
-.c2c-agent-status span{width:6px;height:6px;border-radius:50%;background:#10b981;display:block;}
-.c2c-call-btn{
-  width:100%;padding:14px;border-radius:10px;border:none;
-  background:linear-gradient(135deg,#003087,#004eb3);
-  color:#fff;font-size:14px;font-weight:700;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  transition:all .2s;margin-bottom:10px;
-}
-.c2c-call-btn:hover:not(:disabled){background:linear-gradient(135deg,#002060,#003a8c);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,48,135,.35);}
-.c2c-call-btn:disabled{opacity:.4;cursor:not-allowed;}
-.c2c-hangup-btn{
-  width:100%;padding:14px;border-radius:10px;
-  background:#fee2e2;color:#c8102e;border:1px solid #fca5a5;
-  font-size:14px;font-weight:700;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;gap:10px;
-  transition:all .2s;margin-bottom:14px;
-}
-.c2c-hangup-btn:hover:not(:disabled){background:#c8102e;color:#fff;}
-.c2c-hangup-btn:disabled{opacity:.3;cursor:not-allowed;}
-.c2c-log{
-  background:#0f172a;border-radius:8px;padding:12px;
-  height:90px;overflow-y:auto;font-family:monospace;font-size:10px;
-  margin-bottom:14px;
-}
-.c2c-log p{margin-bottom:3px;line-height:1.4;}
-.l-ok{color:#34d399}.l-err{color:#f87171}.l-info{color:#60a5fa}.l-muted{color:#64748b;}
-.c2c-log::-webkit-scrollbar{width:2px;}.c2c-log::-webkit-scrollbar-thumb{background:#334155;}
-.c2c-footer{text-align:center;font-size:10px;color:#999;display:flex;align-items:center;justify-content:center;gap:5px;}
-.c2c-footer i{color:#10b981;font-size:9px;}
-.c2c-powered{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;font-size:10px;color:#bbb;}
-.c2c-powered strong{color:#003087;}
-/* Esconder input dummy */
-#dialInput{display:none;}
+footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-brand{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-size:14px;letter-spacing:2px;color:var(--muted);}
+.footer-copy{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.5px;}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(2,5,12,.9);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--card2);border:1px solid var(--border2);border-radius:22px;padding:40px;width:500px;max-width:95vw;transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.22,.68,0,1.2);}
+.modal-overlay.open .modal{transform:translateY(0) scale(1);}
+.m-eye{font-family:var(--font-mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;}
+.modal h3{font-family:var(--font-display);font-size:30px;letter-spacing:1px;color:#fff;}
+.modal p{color:var(--muted2);font-size:13px;margin-top:6px;margin-bottom:20px;}
+.m-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--font-mono);font-size:12px;outline:none;margin-bottom:10px;transition:border-color .2s;}
+.m-input:focus{border-color:var(--cyan);}
+.m-input::placeholder{color:var(--muted);}
+.m-sep{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:6px 0 14px;display:flex;align-items:center;gap:10px;}
+.m-sep::before,.m-sep::after{content:'';flex:1;height:1px;background:var(--border);}
+.modal-actions{display:flex;gap:10px;margin-top:18px;}
+.modal-actions button{flex:1;padding:13px;border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:14px;cursor:none;border:none;transition:all .2s;}
+.m-confirm{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;}
+.m-confirm:hover{box-shadow:0 6px 28px rgba(0,212,255,.35);}
+.m-cancel{background:var(--surface);color:var(--muted2);}
+.m-cancel:hover{color:var(--text);}
+.tok-box{background:rgba(0,255,163,.05);border:1px solid rgba(0,255,163,.15);border-radius:10px;padding:12px 16px;margin-bottom:14px;font-family:var(--font-mono);font-size:10.5px;color:var(--green);}
+.tok-box strong{display:block;margin-bottom:3px;}
+.tok-box span{color:var(--muted2);}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
 </style>
 </head>
 <body>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
-<!-- TOP BAR SUPERIOR -->
-<div class="topbar-superior">
-  <div class="inner">
-    <a href="#">Mapa del sitio</a>
-    <span class="sep">|</span>
-    <a href="#">Correo Institucional</a>
-    <span class="sep">|</span>
-    <a href="#">Contáctenos</a>
-  </div>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="header-inner">
-    <a href="#" class="logo-wrap">
-      <div class="logo-escudo">Q</div>
-      <div class="logo-texto">
-        <div class="quito-renace">Quito renace</div>
-        <div class="quito-nombre">🏛 Quito</div>
-        <div class="quito-sub">Municipio del D.M. de Quito</div>
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#home" class="logo-wrap">
+      <div class="logo-svg-box">
+        <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#1a56db"/>
+            </linearGradient>
+            <filter id="glow1" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <polygon points="23,2.5 41,12.5 41,33.5 23,43.5 5,33.5 5,12.5" fill="url(#lg1)" opacity=".1" stroke="url(#lg1)" stroke-width="1"/>
+          <circle cx="23" cy="23" r="5" fill="url(#lg1)" filter="url(#glow1)"/>
+          <circle cx="23" cy="9"   r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="36" cy="16" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="36" cy="30" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="23" cy="37" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="10" cy="30" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="10" cy="16" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <line x1="23" y1="23" x2="23" y2="9"  stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="36" y2="16" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="36" y2="30" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="23" y2="37" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="10" y2="30" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="10" y2="16" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <polygon points="23,9 36,16 36,30 23,37 10,30 10,16" fill="none" stroke="#00d4ff" stroke-width=".5" opacity=".18"/>
+        </svg>
+        <div class="logo-orbit"></div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CollabMCR</span>
+        <span class="logo-tag">Technology Corporation</span>
       </div>
     </a>
-    <div class="header-search">
-      <input type="text" placeholder="Busqueda..."/>
-      <button><i class="fa fa-search"></i></button>
+    <nav class="nav">
+      <a href="#home" class="active">Inicio</a>
+      <a href="#products">Productos</a>
+      <a href="#calling">Calling</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+    <div class="topbar-right">
+      <div class="status-pill offline" id="statusPill"><div class="status-dot"></div><span id="statusText">OFFLINE</span></div>
+      <button class="btn-token" onclick="openModal()" style="display:none;"><i class="fa fa-key" style="margin-right:6px;font-size:10px;"></i>TOKEN OAUTH</button>
     </div>
   </div>
 </header>
 
-<!-- NAV -->
-<nav>
-  <div class="nav-inner">
-    <a href="#" class="active">Inicio</a>
-    <div class="nav-dropdown">
-      <a href="#">Nuestra Institución <i class="fa fa-chevron-down" style="font-size:9px;"></i></a>
-      <div class="dropdown-menu">
-        <a href="#">Alcalde de Quito</a>
-        <a href="#">Filosofía Institucional</a>
-        <a href="#">Gobierno Abierto</a>
-        <a href="#">Concejo Metropolitano</a>
-        <a href="#">Ordenanzas y resoluciones</a>
-      </div>
-    </div>
-    <a href="#">Servicios Municipales</a>
-    <a href="#">Acuerdo Quito</a>
-    <div class="nav-dropdown">
-      <a href="#">PAC <i class="fa fa-chevron-down" style="font-size:9px;"></i></a>
-      <div class="dropdown-menu">
-        <a href="#">2026</a><a href="#">2025</a><a href="#">2024</a>
-      </div>
-    </div>
-    <div class="nav-dropdown">
-      <a href="#">Rendición de Cuentas <i class="fa fa-chevron-down" style="font-size:9px;"></i></a>
-      <div class="dropdown-menu">
-        <a href="#">2025</a><a href="#">2024</a><a href="#">2023</a>
-      </div>
-    </div>
-    <div class="nav-dropdown">
-      <a href="#">Transparencia <i class="fa fa-chevron-down" style="font-size:9px;"></i></a>
-      <div class="dropdown-menu">
-        <a href="#">2026</a><a href="#">2025</a><a href="#">2024</a>
-      </div>
-    </div>
-  </div>
-</nav>
-
-<!-- FRANJA -->
-<div class="franja"></div>
-
 <!-- HERO -->
-<div class="hero">
-  <div class="hero-bg"></div>
+<section id="home" class="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-blob"></div>
   <div class="hero-content">
-    <h1>Quito renace</h1>
-    <p>Trabajamos cada día por una ciudad más segura, moderna y conectada para todos los quiteños y quiteñas.</p>
-    <div class="hero-btns">
-      <a href="#" class="btn-hero-primary"><i class="fa fa-phone-volume" style="margin-right:8px;"></i>Contáctenos</a>
-      <a href="#" class="btn-hero-secondary">Servicios en línea</a>
+    <div class="hero-eyebrow">Plataforma de Colaboración Empresarial</div>
+    <h1>COLLAB<span class="line2">TECHNOLOGY</span><span class="line3">Corporation &nbsp;·&nbsp; Powered by Cisco Webex</span></h1>
+    <p class="hero-desc">Unified Communications &amp; Collaboration — Webex Calling, Contact Center, Meetings e IA generativa integradas en una sola experiencia diseñada para el futuro empresarial.</p>
+    <div class="hero-cta">
+      <a href="#calling" class="btn-glow"><i class="fa fa-phone-volume"></i> Iniciar llamada</a>
+      <a href="#products" class="btn-outline">Ver portafolio <i class="fa fa-arrow-right"></i></a>
     </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><span class="stat-num">500<span>+</span></span><div class="stat-label">Clientes activos</div></div>
+    <div class="stat-item reveal d1"><span class="stat-num">99<span>.9%</span></span><div class="stat-label">Uptime garantizado</div></div>
+    <div class="stat-item reveal d2"><span class="stat-num">12<span>ms</span></span><div class="stat-label">Latencia promedio</div></div>
+    <div class="stat-item reveal d3"><span class="stat-num">24<span>/7</span></span><div class="stat-label">Soporte técnico</div></div>
   </div>
 </div>
 
-<!-- SERVICIOS RÁPIDOS -->
-<div class="servicios-rapidos">
-  <div class="inner">
-    <h3>Accesos rápidos</h3>
-    <div class="servicios-grid">
-      <a href="#" class="servicio-item"><i class="fa fa-receipt"></i><span>Portal Tributario</span></a>
-      <a href="#" class="servicio-item"><i class="fa fa-chart-bar"></i><span>Contratación Pública</span></a>
-      <a href="#" class="servicio-item"><i class="fa fa-radio"></i><span>Radios Metropolitanas</span></a>
-      <a href="#" class="servicio-item"><i class="fa fa-calendar-star"></i><span>Agenda Cultural</span></a>
-      <a href="#" class="servicio-item"><i class="fa fa-newspaper"></i><span>El Quiteño</span></a>
-      <a href="#" class="servicio-item"><i class="fa fa-triangle-exclamation" style="color:#c8102e;"></i><span>Denuncia Corrupción</span></a>
+<!-- PRODUCTS -->
+<section id="products" class="products-bg">
+  <div class="sw">
+    <div class="s-label reveal">Portafolio de Soluciones</div>
+    <div class="s-title reveal">NUESTROS<br>PRODUCTOS</div>
+    <p class="s-sub reveal">Tecnología de clase enterprise para empresas que no se conforman con lo ordinario.</p>
+    <div class="products-grid">
+      <div class="prod-card c1 reveal">
+        <div class="prod-num">01</div>
+        <div class="prod-icon"><i class="fa fa-phone-volume"></i></div>
+        <div class="prod-title">WEBEX CALLING</div>
+        <div class="prod-tags"><span class="prod-tag">Click-to-Call</span><span class="prod-tag">HD Audio</span><span class="prod-tag">OAuth SDK</span></div>
+        <div class="prod-desc">Telefonía en la nube de nueva generación. Llama desde cualquier navegador sin instalar nada. Token OAuth con renovación automática para sesiones sin interrupción.</div>
+        <a href="#calling" class="prod-link">Probar ahora <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="prod-card c2 reveal d1">
+        <div class="prod-num">02</div>
+        <div class="prod-icon"><i class="fa fa-headset"></i></div>
+        <div class="prod-title">CONTACT CENTER</div>
+        <div class="prod-tags"><span class="prod-tag">Omnicanal</span><span class="prod-tag">Real-time</span><span class="prod-tag">IVR IA</span></div>
+        <div class="prod-desc">Centro de contacto omnicanal con enrutamiento basado en habilidades, dashboards en tiempo real para supervisores y herramientas de productividad para agentes.</div>
+        <a href="#" class="prod-link">Saber más <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="prod-card c3 reveal d2">
+        <div class="prod-num">03</div>
+        <div class="prod-icon"><i class="fa fa-video"></i></div>
+        <div class="prod-title">WEBEX MEETINGS</div>
+        <div class="prod-tags"><span class="prod-tag">4K Video</span><span class="prod-tag">1000 part.</span><span class="prod-tag">Whiteboard</span></div>
+        <div class="prod-desc">Reuniones de alta definición con colaboración en documentos, pizarras digitales y salas de descanso para equipos distribuidos globalmente.</div>
+        <a href="#" class="prod-link">Saber más <i class="fa fa-arrow-right"></i></a>
+      </div>
+      <div class="prod-card c4 reveal d3">
+        <div class="prod-num">04</div>
+        <div class="prod-icon"><i class="fa fa-robot"></i></div>
+        <div class="prod-title">AI AGENT</div>
+        <div class="prod-tags"><span class="prod-tag">LLM Nativo</span><span class="prod-tag">Sentiment</span><span class="prod-tag">Auto-Summary</span></div>
+        <div class="prod-desc">Agente de IA generativa integrado en cada canal. Resumen automático de llamadas, análisis de sentimiento y atención al cliente 24/7 sin intervención humana.</div>
+        <a href="#" class="prod-link">Explorar <i class="fa fa-arrow-right"></i></a>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- MAIN CONTENT -->
-<div class="main-content">
-  <!-- NOTICIAS -->
-  <div>
-    <div class="section-title">Quito Informa</div>
-    <div class="noticias-grid">
-      <div class="noticia-card">
-        <div class="noticia-img"><i class="fa fa-baby"></i></div>
-        <div class="noticia-body">
-          <div class="noticia-tag">Social</div>
-          <div class="noticia-title">Quito cuida a sus wawas: inversión pública y una declaración de amor</div>
-          <div class="noticia-date"><i class="fa fa-calendar" style="margin-right:4px;"></i>02 Jun 2025</div>
+<!-- CALLING -->
+<section id="calling" class="calling-bg">
+  <div class="sw">
+    <div class="calling-layout">
+      <div>
+        <div class="s-label reveal">Soporte en Tiempo Real</div>
+        <div class="s-title reveal">CONTÁCTANOS<br><span style="font-size:clamp(22px,3vw,38px);color:var(--cyan);">ESTAMOS AQUÍ PARA AYUDARTE</span></div>
+        <p class="s-sub reveal" style="margin-bottom:32px;">Nuestro equipo de especialistas está disponible para atenderte ahora mismo. Sin esperas, sin formularios — solo haz clic en <strong style="color:var(--text);">Llamar</strong> y un agente te atenderá en segundos.</p>
+        <div class="feature-list">
+          <div class="feature-row reveal d1">
+            <div class="feat-icon fi-a"><i class="fa fa-headset"></i></div>
+            <div>
+              <div class="feat-t">Agentes especializados disponibles</div>
+              <div class="feat-d">Conecta directamente con un experto en soluciones Cisco Webex. Sin bots, sin menús interminables.</div>
+            </div>
+          </div>
+          <div class="feature-row reveal d2">
+            <div class="feat-icon fi-b"><i class="fa fa-bolt"></i></div>
+            <div>
+              <div class="feat-t">Conexión inmediata desde el navegador</div>
+              <div class="feat-d">No necesitas instalar nada. Haz clic en Llamar, acepta el micrófono y estarás hablando con nosotros al instante.</div>
+            </div>
+          </div>
+          <div class="feature-row reveal d3">
+            <div class="feat-icon fi-c"><i class="fa fa-shield-halved"></i></div>
+            <div>
+              <div class="feat-t">Comunicación segura y encriptada</div>
+              <div class="feat-d">Cada llamada viaja cifrada de extremo a extremo sobre la plataforma Webex Calling de Cisco.</div>
+            </div>
+          </div>
+          <div class="feature-row reveal" style="transition-delay:.4s">
+            <div class="feat-icon" style="background:rgba(255,170,0,.1);color:var(--amber);width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;"><i class="fa fa-clock"></i></div>
+            <div>
+              <div class="feat-t">Horario de atención</div>
+              <div class="feat-d">Lunes a viernes · 8:00 AM – 6:00 PM (EST) · Soporte de emergencia 24/7 para clientes enterprise.</div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="noticia-card">
-        <div class="noticia-img rojo"><i class="fa fa-award"></i></div>
-        <div class="noticia-body">
-          <div class="noticia-tag">Innovación</div>
-          <div class="noticia-title">Quito es el primer municipio en América Latina en utilizar la herramienta Wawamor</div>
-          <div class="noticia-date"><i class="fa fa-calendar" style="margin-right:4px;"></i>02 Jun 2025</div>
+      <!-- CALL PANEL -->
+      <div class="call-panel reveal d2">
+        <div class="panel-chrome">
+          <div class="chrome-dot" style="background:#ff5f57;"></div>
+          <div class="chrome-dot" style="background:#febc2e;"></div>
+          <div class="chrome-dot" style="background:#28c840;"></div>
+          <div class="ptitle">SOPORTE EN VIVO</div>
         </div>
-      </div>
-      <div class="noticia-card">
-        <div class="noticia-img verde"><i class="fa fa-shield-halved"></i></div>
-        <div class="noticia-body">
-          <div class="noticia-tag">Seguridad</div>
-          <div class="noticia-title">Sube la percepción de seguridad en el Centro Histórico de Quito</div>
-          <div class="noticia-date"><i class="fa fa-calendar" style="margin-right:4px;"></i>02 Jun 2025</div>
+        <div class="pstatus">
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:1px;">ESTADO DEL AGENTE</div>
+          <div class="status-pill offline" id="callStatusPill" style="font-size:10px;padding:4px 12px;"><div class="status-dot"></div><span id="callStatusText">OFFLINE</span></div>
         </div>
-      </div>
-      <div class="noticia-card">
-        <div class="noticia-img morado"><i class="fa fa-coins"></i></div>
-        <div class="noticia-body">
-          <div class="noticia-tag">Tributario</div>
-          <div class="noticia-title">Hasta el 30 de junio puede aprovechar la remisión de intereses municipales</div>
-          <div class="noticia-date"><i class="fa fa-calendar" style="margin-right:4px;"></i>01 Jun 2025</div>
+        <div class="pbody">
+          <!-- Avatar y mensaje de bienvenida -->
+          <div style="text-align:center;padding:16px 0 20px;">
+            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#fff;box-shadow:0 0 24px rgba(0,212,255,.3);">
+              <i class="fa fa-headset"></i>
+            </div>
+            <div style="font-family:var(--font-display);font-size:18px;color:#fff;letter-spacing:1px;">Equipo CollabMCR</div>
+            <div style="font-family:var(--font-mono);font-size:9px;color:var(--green);letter-spacing:2px;margin-top:4px;" id="agentStatusText">● DISPONIBLE AHORA</div>
+          </div>
+          <label class="f-label" style="display:none;">Número destino</label>
+          <input class="f-input" type="tel" id="dialInput" placeholder="+1 555 000 0000" style="display:none;"/>
+          <div class="call-btns" style="margin-bottom:0;">
+            <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar ahora</button>
+            <button class="cbtn stop" id="btnHangup" onclick="hangupCall()" disabled><i class="fa fa-phone-slash"></i> Colgar</button>
+          </div>
+          <div style="text-align:center;margin-top:14px;font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.5px;">
+            <i class="fa fa-lock" style="margin-right:5px;color:var(--green);"></i>Llamada segura · Powered by Cisco Webex
+          </div>
+          <label class="f-label" style="margin-top:16px;">Log de eventos</label>
+          <div class="call-log" id="callLog">
+            <p class="l-info">» Sistema inicializado.</p>
+            <p class="l-muted">» Configura tu token OAuth para registrarte.</p>
+          </div>
         </div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- SIDEBAR -->
-  <div>
-    <div class="section-title">Servicios en línea</div>
-    <div class="sidebar-card">
-      <div class="sidebar-card-header">Trámites Municipales</div>
-      <div class="sidebar-list">
-        <a href="#"><i class="fa fa-arrow-right"></i> Impuesto predial urbano</a>
-        <a href="#"><i class="fa fa-arrow-right"></i> Patente municipal</a>
-        <a href="#"><i class="fa fa-arrow-right"></i> Permiso de construcción</a>
-        <a href="#"><i class="fa fa-arrow-right"></i> Uso de suelo</a>
-        <a href="#"><i class="fa fa-arrow-right"></i> Registro de vehículos</a>
+<!-- CONTACT -->
+<section id="contact" class="contact-bg">
+  <div class="sw" style="padding-top:80px;padding-bottom:80px;">
+    <div class="contact-grid">
+      <div>
+        <div class="s-label reveal">Soporte &amp; Contacto</div>
+        <div class="s-title reveal" style="font-size:clamp(30px,4vw,52px);">ESTAMOS<br>CONTIGO</div>
+        <p class="s-sub reveal" style="margin-bottom:0;">Ingenieros certificados en Cisco Webex disponibles para acompañarte en cada etapa de la implementación.</p>
+      </div>
+      <div>
+        <a href="/cdn-cgi/l/email-protection#680b04010d061c0d1b280b070404090a450b0704461f0a10460901" class="cc reveal"><div class="cc-icon"><i class="fa fa-envelope"></i></div><div><div class="cc-title">Email de Soporte</div><div class="cc-val"><span class="__cf_email__" data-cfemail="5a3936333f342e3f291a393536363b3877393536742d3822743b33">[email&#160;protected]</span></div></div></a>
+        <a href="https://developer.webex.com/support" target="_blank" class="cc reveal d1"><div class="cc-icon"><i class="fa fa-life-ring"></i></div><div><div class="cc-title">Webex Developer Support</div><div class="cc-val">developer.webex.com/support</div></div></a>
+        <a href="https://community.cisco.com/t5/webex-for-developers/bd-p/disc-webex-developers" target="_blank" class="cc reveal d2"><div class="cc-icon"><i class="fa fa-comments"></i></div><div><div class="cc-title">Comunidad Cisco Webex</div><div class="cc-val">Developers Community Forum</div></div></a>
       </div>
     </div>
-    <div class="sidebar-card">
-      <div class="sidebar-card-header rojo">Emergencias y Contacto</div>
-      <div class="sidebar-list">
-        <a href="#" class="rojo-icon"><i class="fa fa-phone"></i> ECU 911 — Emergencias</a>
-        <a href="#"><i class="fa fa-headset"></i> 1800 510 510 — Call Center</a>
-        <a href="#"><i class="fa fa-location-dot"></i> Venezuela y Espejo, Quito</a>
-        <a href="#"><i class="fa fa-envelope"></i> Correo institucional</a>
-      </div>
-    </div>
-    <!-- BANNER CLICK TO CALL -->
-    <div style="background:linear-gradient(135deg,#003087,#004eb3);border-radius:10px;padding:20px;color:#fff;text-align:center;">
-      <div style="font-size:28px;margin-bottom:10px;">📞</div>
-      <div style="font-size:13px;font-weight:700;margin-bottom:6px;">¿Necesitas ayuda?</div>
-      <div style="font-size:11px;opacity:.85;margin-bottom:14px;line-height:1.5;">Habla con un funcionario municipal ahora mismo desde tu navegador</div>
-      <button onclick="toggleC2C()" style="background:#fff;color:#003087;border:none;padding:10px 20px;border-radius:20px;font-weight:700;font-size:12px;cursor:pointer;width:100%;transition:all .2s;" onmouseover="this.style.background='#f0f4ff'" onmouseout="this.style.background='#fff'">
-        <i class="fa fa-phone" style="margin-right:6px;"></i>Llamar ahora — es gratis
-      </button>
-      <div style="margin-top:10px;font-size:10px;opacity:.6;"><i class="fa fa-lock" style="margin-right:4px;"></i>Powered by Cisco Webex</div>
-    </div>
   </div>
-</div>
-
-<!-- ZONAS -->
-<div class="zonas-section">
-  <div class="zonas-inner">
-    <div class="section-title">Administraciones Zonales</div>
-    <p style="color:var(--muted);font-size:13px;margin-bottom:4px;">Conozca qué sucede en cada zona del Distrito Metropolitano de Quito</p>
-    <div class="zonas-grid">
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Calderón</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Chocó Andino</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Eloy Alfaro</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Eugenio Espejo</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>La Delicia</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>La Mariscal</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Los Chillos</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Manuela Sáenz</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Quitumbe</span></a>
-      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Tumbaco</span></a>
-    </div>
-  </div>
-</div>
+</section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-inner">
-    <div class="footer-col">
-      <h4>Municipio de Quito</h4>
-      <p>El Gobierno Autónomo Descentralizado del Distrito Metropolitano de Quito trabaja por una ciudad más justa, segura y conectada para todos.</p>
-      <p><i class="fa fa-location-dot" style="margin-right:6px;"></i>Venezuela entre Espejo y Chile, Quito 170101</p>
-      <p><i class="fa fa-phone" style="margin-right:6px;"></i>(593-2) 3952300 · 1800 510 510</p>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Servicios</h4>
-      <a href="#">Portal Tributario</a>
-      <a href="#">Servicios Municipales</a>
-      <a href="#">Contratación Pública</a>
-      <a href="#">Gobierno Abierto</a>
-      <a href="#">Agenda Cultural</a>
-    </div>
-    <div class="footer-col">
-      <h4>Institución</h4>
-      <a href="#">Alcalde de Quito</a>
-      <a href="#">Concejo Metropolitano</a>
-      <a href="#">Ordenanzas</a>
-      <a href="#">Rendición de Cuentas</a>
-      <a href="#">Transparencia</a>
-    </div>
-    <div class="footer-col">
-      <h4>Legal</h4>
-      <a href="#">Protección de Datos</a>
-      <a href="#">Política de Cookies</a>
-      <a href="#">Mapa del sitio</a>
-      <a href="#">Accesibilidad</a>
-    </div>
+  <div class="footer-brand">
+    <svg width="20" height="20" viewBox="0 0 46 46" fill="none">
+      <polygon points="23,2.5 41,12.5 41,33.5 23,43.5 5,33.5 5,12.5" fill="none" stroke="#1a56db" stroke-width="1.2"/>
+      <circle cx="23" cy="23" r="4" fill="#00d4ff"/>
+      <line x1="23" y1="23" x2="23" y2="9"  stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+      <line x1="23" y1="23" x2="36" y2="30" stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+      <line x1="23" y1="23" x2="10" y2="30" stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+    </svg>
+    COLLABMCR TECHNOLOGY CORPORATION
   </div>
-  <div class="footer-bottom">
-    © Municipio del Distrito Metropolitano de Quito. Todos los derechos reservados. &nbsp;|&nbsp;
-    <strong style="color:#009fe3;">Click-to-Call</strong> powered by <strong style="color:#009fe3;">Cisco Webex</strong>
-  </div>
+  <span class="footer-copy">© <span id="yr"></span> · Powered by Cisco Webex SDK</span>
 </footer>
 
-<!-- ══════════════════════════════════════
-     BOTÓN FLOTANTE CLICK-TO-CALL
-     ══════════════════════════════════════ -->
-<div class="c2c-fab" id="c2cFab">
-  <span class="c2c-tooltip">Habla con un agente municipal</span>
-  <button class="c2c-btn" onclick="toggleC2C()" title="Click-to-Call">
-    <div class="c2c-pulse"></div>
-    <i class="fa fa-headset"></i>
-  </button>
-</div>
-
-<!-- PANEL CLICK-TO-CALL -->
-<div class="c2c-panel" id="c2cPanel">
-  <div class="c2c-panel-header">
-    <div class="c2c-panel-header-left">
-      <div class="c2c-avatar"><i class="fa fa-headset"></i></div>
-      <div>
-        <div class="c2c-panel-title">Soporte Municipal</div>
-        <div class="c2c-panel-sub">Municipio de Quito · En vivo</div>
-      </div>
+<!-- TOKEN MODAL -->
+<div class="modal-overlay" id="tokenModal">
+  <div class="modal">
+    <div class="m-eye">// OAuth Configuration</div>
+    <h3>TOKEN OAUTH</h3>
+    <p>Ingresa tus credenciales Webex. El sistema renovará el token automáticamente antes de que expire.</p>
+    <div class="tok-box" id="tokenBox" style="display:none;"><strong>● TOKEN ACTIVO</strong><span id="tokenExpText">—</span></div>
+    <label class="f-label">Access Token *</label>
+    <input class="m-input" type="text" id="atInput" placeholder="eyJhbGciOiJSUzI1NiJ9..."/>
+    <div class="m-sep">OAuth Refresh — activa renovación automática</div>
+    <label class="f-label">Refresh Token</label>
+    <input class="m-input" type="text" id="rtInput" placeholder="Refresh token de tu integración Webex"/>
+    <label class="f-label">Client ID</label>
+    <input class="m-input" type="text" id="ciInput" placeholder="Client ID"/>
+    <label class="f-label">Client Secret</label>
+    <input class="m-input" type="password" id="csInput" placeholder="Client Secret"/>
+    <div class="modal-actions">
+      <button class="m-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="m-confirm" onclick="applyToken()"><i class="fa fa-bolt" style="margin-right:6px;"></i>Guardar y Conectar</button>
     </div>
-    <button class="c2c-close" onclick="toggleC2C()"><i class="fa fa-times"></i></button>
-  </div>
-  <div class="c2c-status-bar">
-    <span class="c2c-status-label">Estado del agente</span>
-    <div class="c2c-status-pill" id="statusPill">
-      <div class="c2c-dot"></div>
-      <span id="statusText">OFFLINE</span>
+    <div style="margin-top:14px;text-align:center;">
+      <button id="btnClear" onclick="clearCredentials();closeModal();" style="display:none;background:none;border:none;font-family:var(--font-mono);font-size:10px;letter-spacing:1px;color:var(--red);cursor:pointer;text-transform:uppercase;opacity:.7;">
+        <i class="fa fa-trash" style="margin-right:5px;"></i>Borrar credenciales guardadas
+      </button>
     </div>
-  </div>
-  <div class="c2c-body">
-    <div class="c2c-agent-info">
-      <div class="c2c-agent-avatar"><i class="fa fa-user-tie"></i></div>
-      <div class="c2c-agent-name">Atención Ciudadana</div>
-      <div class="c2c-agent-dept">Municipio del D.M. de Quito</div>
-      <div class="c2c-agent-status"><span></span>Disponible ahora</div>
+    <div style="margin-top:10px;padding:10px 14px;background:rgba(0,255,163,.04);border:1px solid rgba(0,255,163,.12);border-radius:8px;font-family:var(--font-mono);font-size:9.5px;color:var(--muted2);text-align:center;letter-spacing:.5px;">
+      🔒 Los datos se guardan solo en este navegador. Nadie más puede verlos.
     </div>
-    <input type="tel" id="dialInput" style="display:none;"/>
-    <button class="c2c-call-btn" id="btnCall" onclick="placeCall()" disabled>
-      <i class="fa fa-phone"></i> Llamar ahora — es gratis
-    </button>
-    <button class="c2c-hangup-btn" id="btnHangup" onclick="hangupCall()" disabled>
-      <i class="fa fa-phone-slash"></i> Finalizar llamada
-    </button>
-    <div class="c2c-log" id="callLog">
-      <p class="l-muted">» Conectando con el sistema municipal...</p>
-    </div>
-    <div class="c2c-footer">
-      <i class="fa fa-lock"></i> Llamada segura y encriptada
-    </div>
-    <div class="c2c-powered">Powered by <strong>Cisco Webex Calling</strong></div>
   </div>
 </div>
 
-<!-- ══════════════════════════════════════
-     WEBEX SDK + APP.JS
-     ══════════════════════════════════════ -->
-<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/webex.min.js"></script>
-<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
-<script data-cfasync="false" src="js/app.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/webex/umd/webex.min.js"></script>
+<script src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
+<script src="js/app.js"></script>
 <script>
-// ── UI del panel ──────────────────────────────────
-let panelOpen = false;
-function toggleC2C(){
-  panelOpen = !panelOpen;
-  document.getElementById('c2cPanel').classList.toggle('open', panelOpen);
-  document.getElementById('c2cFab').style.display = panelOpen ? 'none' : 'flex';
+// CURSOR
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function ar(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(ar);})();
+document.querySelectorAll('a,button,.prod-card,.cc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='16px';cursor.style.height='16px';ring.style.width='52px';ring.style.height='52px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='10px';cursor.style.height='10px';ring.style.width='36px';ring.style.height='36px';});
+});
+
+// PARTICLES
+const cv=document.getElementById('heroCanvas'),cx=cv.getContext('2d');
+let W,H,pts=[];
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;}
+rs();window.addEventListener('resize',()=>{rs();ip();});
+function ip(){pts=[];const n=Math.floor(W*H/12000);for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.4,a:Math.random()*.6+.1});}
+ip();
+function dp(){
+  cx.clearRect(0,0,W,H);
+  for(let p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fillStyle=`rgba(0,212,255,${p.a})`;cx.fill();}
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.strokeStyle=`rgba(0,212,255,${.14*(1-d/110)})`;cx.lineWidth=.6;cx.stroke();}}
+  requestAnimationFrame(dp);
 }
+dp();
 
-// ── Estado ───────────────────────────────────────
-const S = {webex:null,calling:null,line:null,call:null};
+// SCROLL REVEAL
+const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
 
-function log(msg, t='muted'){
-  const el = document.getElementById('callLog');
-  const p = document.createElement('p');
-  p.className = 'l-'+t;
-  p.textContent = '['+new Date().toLocaleTimeString('es',{hour12:false})+'] '+msg;
-  el.appendChild(p);
-  el.scrollTop = el.scrollHeight;
+// NAV ACTIVE
+window.addEventListener('scroll',()=>{
+  let cur='';document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id;});
+  document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// STATE
+const S={at:null,rt:null,ci:null,cs:null,expiry:null,timer:null,webex:null,calling:null,line:null,call:null};
+
+function log(msg,t='muted'){
+  const el=document.getElementById('callLog'),p=document.createElement('p');
+  p.className='l-'+t;
+  p.textContent='['+new Date().toLocaleTimeString('es',{hour12:false})+'] '+msg;
+  el.appendChild(p);el.scrollTop=el.scrollHeight;
 }
-
 function setStatus(s){
-  const pill = document.getElementById('statusPill');
-  const txt  = document.getElementById('statusText');
-  pill.className = 'c2c-status-pill' + (s==='registered'?' online':s==='connecting'?' connecting':'');
-  const map = {registered:'ONLINE', connecting:'CONECTANDO...', offline:'OFFLINE'};
-  txt.textContent = map[s] || s.toUpperCase();
+  const pills=[document.getElementById('statusPill'),document.getElementById('callStatusPill')];
+  const texts=[document.getElementById('statusText'),document.getElementById('callStatusText')];
+  const map={registered:'ONLINE',connecting:'SYNC...',offline:'OFFLINE'};
+  pills.forEach(p=>p.className='status-pill '+s);
+  texts.forEach(t=>t.textContent=map[s]||s.toUpperCase());
+}
+function setBtns(c,h){document.getElementById('btnCall').disabled=!c;document.getElementById('btnHangup').disabled=!h;}
+
+async function doRefresh(){
+  if(!S.rt||!S.ci||!S.cs){log('Sin credenciales OAuth para auto-renovar.','err');return;}
+  log('Renovando Access Token...','info');
+  try{
+    const r=await fetch('https://webexapis.com/v1/access_token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({grant_type:'refresh_token',refresh_token:S.rt,client_id:S.ci,client_secret:S.cs})});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    S.at=d.access_token;S.rt=d.refresh_token||S.rt;S.expiry=Date.now()+(d.expires_in-120)*1000;
+    if(S.webex)S.webex.credentials.supertoken.value=S.at;
+    log('Token renovado correctamente.','ok');scheduleR();updateTB();
+  }catch(e){log('Error renovando token: '+e.message,'err');}
+}
+function scheduleR(){
+  if(S.timer)clearTimeout(S.timer);
+  if(!S.expiry)return;
+  const ms=S.expiry-Date.now();
+  if(ms<=0){doRefresh();return;}
+  log('Proximo refresh en ~'+Math.round(ms/60000)+' min.','muted');
+  S.timer=setTimeout(doRefresh,ms);
+}
+function updateTB(){
+  const b=document.getElementById('tokenBox'),t=document.getElementById('tokenExpText');
+  if(S.expiry){b.style.display='block';t.textContent='Expira en: ~'+Math.round((S.expiry-Date.now())/60000)+' min';}
 }
 
-function setBtns(call, hangup){
-  document.getElementById('btnCall').disabled   = !call;
-  document.getElementById('btnHangup').disabled = !hangup;
-}
-
-// ── Inicializar Webex ─────────────────────────────
 async function initWebex(){
   setStatus('connecting');
-  log('Conectando con Municipio de Quito...','info');
+  log('Inicializando con Service App...','info');
   try{
     const webexConfig   = await getWebexConfig();
     const callingConfig = await getCallingConfig();
-    log('Sistema listo. Registrando agente...','ok');
+    log('Tokens OK. Iniciando SDK...','ok');
 
     const calling = await Calling.init({ webexConfig, callingConfig });
+
     calling.on('ready', () => {
+      log('SDK ready. Registrando...','info');
       calling.register().then(() => {
         const callingClient = calling.callingClient;
         const lines = Object.values(callingClient.getLines());
         if(!lines || lines.length === 0){
-          log('Sin líneas disponibles.','err');
+          log('No se encontraron líneas.','err');
           setStatus('offline');
           return;
         }
         S.line = lines[0];
+
         S.line.on('registered', () => {
-          log('✅ Agente disponible. Puede llamar.','ok');
+          log('✅ Línea registrada. Listo para llamar.','ok');
           setStatus('registered');
           setBtns(true, false);
         });
+
         S.line.on('line:incoming_call', (call) => {
           S.call = call;
           log('📞 Llamada entrante.','info');
@@ -619,57 +562,139 @@ async function initWebex(){
             audio.srcObject = new MediaStream([track]);
           });
         });
+
         S.line.register();
-      }).catch(e => { log('Error: '+e.message,'err'); setStatus('offline'); });
+      }).catch(e => {
+        log('Error register: '+e.message,'err');
+        setStatus('offline');
+      });
     });
+
   }catch(e){
-    log('Error de conexión: '+e.message,'err');
+    log('Error init: '+e.message,'err');
     setStatus('offline');
   }
 }
 
 async function placeCall(){
-  if(!S.line){ log('Sin conexión.','err'); return; }
-  if(S.call){ log('Llamada ya activa.','err'); return; }
+  if(!S.line){ log('Línea no registrada aún.','err'); return; }
+  // Evitar llamadas duplicadas
+  if(S.call){ log('Ya hay una llamada activa.','err'); return; }
   log('Solicitando micrófono...','info');
   try{
     const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
-    log('Conectando con atención ciudadana...','info');
+    log('Micrófono OK. Iniciando llamada al 5102...','info');
+
     S.call = S.line.makeCall();
-    S.call.on('progress',    () => log('Llamando...','info'));
-    S.call.on('connect',     () => log('✅ Conectado con agente municipal.','ok'));
-    S.call.on('established', () => log('Audio establecido.','ok'));
+
+    S.call.on('progress',    () => log('Marcando...','info'));
+    S.call.on('connect',     () => log('✅ Llamada conectada.','ok'));
+    S.call.on('established', () => log('Media establecida.','ok'));
     S.call.on('disconnect',  onEnd);
     S.call.on('remote_media', (track) => {
       let audio = document.getElementById('remote-audio');
       if(!audio){ audio=document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
       audio.srcObject = new MediaStream([track]);
     });
+
     await S.call.dial(localAudioStream);
     setBtns(false, true);
-    log('Llamada en curso...','info');
+    log('Llamada en progreso...','info');
   }
-  catch(e){ log('Error: '+e.message,'err'); S.call=null; }
+  catch(e){ log('Error al llamar: '+e.message,'err'); S.call=null; }
 }
 
 function hangupCall(){
-  if(!S.call){ return; }
-  log('Finalizando llamada...','muted');
+  if(!S.call){ log('No hay llamada activa.','muted'); return; }
+  log('Terminando llamada...','muted');
   try{
-    if(typeof S.call.end === 'function') S.call.end();
+    // Intentar end() y disconnect() — el SDK usa uno u otro según versión
+    if(typeof S.call.end === 'function')        S.call.end();
     else if(typeof S.call.disconnect === 'function') S.call.disconnect();
-  }catch(e){}
-  setTimeout(() => { if(S.call){ S.call=null; setBtns(true,false); log('Llamada finalizada. ¡Gracias!','muted'); } }, 1500);
+    else if(typeof S.call.hangup === 'function')     S.call.hangup();
+  }catch(e){ log('Error al colgar: '+e.message,'err'); }
+  // Forzar limpieza por si el evento disconnect no dispara
+  setTimeout(() => { if(S.call){ S.call=null; setBtns(true,false); log('Llamada finalizada.','muted'); } }, 1500);
 }
 
 function onEnd(){
   S.call = null;
   setBtns(true, false);
-  log('Llamada finalizada. ¡Gracias por contactarnos!','muted');
+  log('Llamada finalizada.','muted');
 }
 
-// Iniciar al cargar
-window.addEventListener('DOMContentLoaded', async () => {
+// ═══════════════════════════════════════════════════
+//  LOCAL STORAGE — guardar / cargar / borrar tokens
+// ═══════════════════════════════════════════════════
+const LS = 'collabmcr_v1';
+
+function saveCredentials(){
+  try{
+    localStorage.setItem(LS, JSON.stringify({at:S.at,rt:S.rt,ci:S.ci,cs:S.cs,expiry:S.expiry}));
+    log('💾 Credenciales guardadas en este navegador.','ok');
+  }catch(e){ log('No se pudo guardar en localStorage.','err'); }
+}
+
+function loadCredentials(){
+  try{
+    const raw=localStorage.getItem(LS);
+    if(!raw)return false;
+    const d=JSON.parse(raw);
+    if(!d.at)return false;
+    S.at=d.at; S.rt=d.rt||null; S.ci=d.ci||null; S.cs=d.cs||null; S.expiry=d.expiry||null;
+    // Rellenar campos del modal con los datos guardados
+    document.getElementById('atInput').value=S.at;
+    document.getElementById('rtInput').value=S.rt||'';
+    document.getElementById('ciInput').value=S.ci||'';
+    document.getElementById('csInput').value=S.cs||'';
+    log('📂 Credenciales cargadas automáticamente desde este navegador.','ok');
+    return true;
+  }catch(e){ return false; }
+}
+
+function clearCredentials(){
+  localStorage.removeItem(LS);
+  S.at=null;S.rt=null;S.ci=null;S.cs=null;S.expiry=null;
+  if(S.timer)clearTimeout(S.timer);
+  document.getElementById('atInput').value='';
+  document.getElementById('rtInput').value='';
+  document.getElementById('ciInput').value='';
+  document.getElementById('csInput').value='';
+  setStatus('offline');
+  setBtns(false,false);
+  updateTB();
+  log('🗑️ Credenciales eliminadas del navegador.','muted');
+}
+
+// Actualizar también el botón de borrar en el modal
+function updateModalSavedBadge(){
+  const raw=localStorage.getItem(LS);
+  const btn=document.getElementById('btnClear');
+  if(btn) btn.style.display = raw ? 'block' : 'none';
+}
+
+function openModal(){
+  document.getElementById('tokenModal').classList.add('open');
+  updateTB();
+  updateModalSavedBadge();
+}
+function closeModal(){ document.getElementById('tokenModal').classList.remove('open'); }
+
+async function applyToken(){
+  S.at=document.getElementById('atInput').value.trim();
+  S.rt=document.getElementById('rtInput').value.trim();
+  S.ci=document.getElementById('ciInput').value.trim();
+  S.cs=document.getElementById('csInput').value.trim();
+  if(!S.at){alert('El Access Token es requerido.');return;}
+  S.expiry=Date.now()+50*60*1000;
+  saveCredentials();
+  scheduleR();
+  closeModal();
+  await initWebex();
+}
+
+window.addEventListener('DOMContentLoaded', async ()=>{
+  log('🔄 Conectando automáticamente con Service App...','info');
   await initWebex();
 });
 </script>
