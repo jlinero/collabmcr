@@ -300,21 +300,37 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
   <div class="sw">
     <div class="calling-layout">
       <div>
-        <div class="s-label reveal">Webex Web Calling SDK</div>
-        <div class="s-title reveal">CLICK-TO-CALL<br>EN VIVO</div>
-        <p class="s-sub reveal" style="margin-bottom:0;">Conecta con cualquier número Webex directamente desde el navegador. Sin plugins, sin descargas, siempre activo.</p>
+        <div class="s-label reveal">Soporte en Tiempo Real</div>
+        <div class="s-title reveal">CONTÁCTANOS<br><span style="font-size:clamp(22px,3vw,38px);color:var(--cyan);">ESTAMOS AQUÍ PARA AYUDARTE</span></div>
+        <p class="s-sub reveal" style="margin-bottom:32px;">Nuestro equipo de especialistas está disponible para atenderte ahora mismo. Sin esperas, sin formularios — solo haz clic en <strong style="color:var(--text);">Llamar</strong> y un agente te atenderá en segundos.</p>
         <div class="feature-list">
           <div class="feature-row reveal d1">
-            <div class="feat-icon fi-a"><i class="fa fa-rotate"></i></div>
-            <div><div class="feat-t">OAuth con Refresh Automático</div><div class="feat-d">El token se renueva antes de expirar. Sesión siempre activa sin reingresar credenciales.</div></div>
+            <div class="feat-icon fi-a"><i class="fa fa-headset"></i></div>
+            <div>
+              <div class="feat-t">Agentes especializados disponibles</div>
+              <div class="feat-d">Conecta directamente con un experto en soluciones Cisco Webex. Sin bots, sin menús interminables.</div>
+            </div>
           </div>
           <div class="feature-row reveal d2">
-            <div class="feat-icon fi-b"><i class="fa fa-wave-square"></i></div>
-            <div><div class="feat-t">Audio HD + Noise Cancellation</div><div class="feat-d">Supresión de ruido en tiempo real con codec Opus de Webex Calling para máxima claridad.</div></div>
+            <div class="feat-icon fi-b"><i class="fa fa-bolt"></i></div>
+            <div>
+              <div class="feat-t">Conexión inmediata desde el navegador</div>
+              <div class="feat-d">No necesitas instalar nada. Haz clic en Llamar, acepta el micrófono y estarás hablando con nosotros al instante.</div>
+            </div>
           </div>
           <div class="feature-row reveal d3">
-            <div class="feat-icon fi-c"><i class="fa fa-bell"></i></div>
-            <div><div class="feat-t">Llamadas Entrantes en Tiempo Real</div><div class="feat-d">Recibe y contesta llamadas desde la página con notificación instantánea y log de eventos.</div></div>
+            <div class="feat-icon fi-c"><i class="fa fa-shield-halved"></i></div>
+            <div>
+              <div class="feat-t">Comunicación segura y encriptada</div>
+              <div class="feat-d">Cada llamada viaja cifrada de extremo a extremo sobre la plataforma Webex Calling de Cisco.</div>
+            </div>
+          </div>
+          <div class="feature-row reveal" style="transition-delay:.4s">
+            <div class="feat-icon" style="background:rgba(255,170,0,.1);color:var(--amber);width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;"><i class="fa fa-clock"></i></div>
+            <div>
+              <div class="feat-t">Horario de atención</div>
+              <div class="feat-d">Lunes a viernes · 8:00 AM – 6:00 PM (EST) · Soporte de emergencia 24/7 para clientes enterprise.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -324,20 +340,31 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
           <div class="chrome-dot" style="background:#ff5f57;"></div>
           <div class="chrome-dot" style="background:#febc2e;"></div>
           <div class="chrome-dot" style="background:#28c840;"></div>
-          <div class="ptitle">WEBEX CALLING TERMINAL</div>
+          <div class="ptitle">SOPORTE EN VIVO</div>
         </div>
         <div class="pstatus">
-          <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:1px;">ESTADO DEL REGISTRO</div>
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:1px;">ESTADO DEL AGENTE</div>
           <div class="status-pill offline" id="callStatusPill" style="font-size:10px;padding:4px 12px;"><div class="status-dot"></div><span id="callStatusText">OFFLINE</span></div>
         </div>
         <div class="pbody">
+          <!-- Avatar y mensaje de bienvenida -->
+          <div style="text-align:center;padding:16px 0 20px;">
+            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#fff;box-shadow:0 0 24px rgba(0,212,255,.3);">
+              <i class="fa fa-headset"></i>
+            </div>
+            <div style="font-family:var(--font-display);font-size:18px;color:#fff;letter-spacing:1px;">Equipo CollabMCR</div>
+            <div style="font-family:var(--font-mono);font-size:9px;color:var(--green);letter-spacing:2px;margin-top:4px;" id="agentStatusText">● DISPONIBLE AHORA</div>
+          </div>
           <label class="f-label" style="display:none;">Número destino</label>
           <input class="f-input" type="tel" id="dialInput" placeholder="+1 555 000 0000" style="display:none;"/>
-          <div class="call-btns">
-            <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar</button>
+          <div class="call-btns" style="margin-bottom:0;">
+            <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar ahora</button>
             <button class="cbtn stop" id="btnHangup" onclick="hangupCall()" disabled><i class="fa fa-phone-slash"></i> Colgar</button>
           </div>
-          <label class="f-label">Log de eventos</label>
+          <div style="text-align:center;margin-top:14px;font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.5px;">
+            <i class="fa fa-lock" style="margin-right:5px;color:var(--green);"></i>Llamada segura · Powered by Cisco Webex
+          </div>
+          <label class="f-label" style="margin-top:16px;">Log de eventos</label>
           <div class="call-log" id="callLog">
             <p class="l-info">» Sistema inicializado.</p>
             <p class="l-muted">» Configura tu token OAuth para registrarte.</p>
@@ -412,10 +439,9 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/webex.min.js"></script>
-<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
-<script data-cfasync="false" src="js/app.js"></script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/webex/umd/webex.min.js"></script>
+<script src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
+<script src="js/app.js"></script>
 <script>
 // CURSOR
 const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
