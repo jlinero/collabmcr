@@ -361,11 +361,18 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
             <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar ahora</button>
             <button class="cbtn stop" id="btnHangup" onclick="hangupCall()" disabled><i class="fa fa-phone-slash"></i> Colgar</button>
           </div>
+          <div style="margin-top:10px;">
+            <button class="cbtn" id="btnMute" onclick="toggleMute()" disabled
+              style="width:100%;background:rgba(255,255,255,.06);color:var(--muted2);border:1px solid var(--border2);">
+              <i class="fa fa-microphone" id="muteIcon"></i>
+              <span id="muteText">Silenciar</span>
+            </button>
+          </div>
           <div style="text-align:center;margin-top:14px;font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.5px;">
             <i class="fa fa-lock" style="margin-right:5px;color:var(--green);"></i>Llamada segura · Powered by Cisco Webex
           </div>
-          <label class="f-label" style="display:none;margin-top:16px;">Log de eventos</label>
-          <div class="call-log" id="callLog" style="display:none;">
+          <label class="f-label" style="margin-top:16px;">Log de eventos</label>
+          <div class="call-log" id="callLog">
             <p class="l-info">» Sistema inicializado.</p>
             <p class="l-muted">» Configura tu token OAuth para registrarte.</p>
           </div>
@@ -496,7 +503,51 @@ function setStatus(s){
   pills.forEach(p=>p.className='status-pill '+s);
   texts.forEach(t=>t.textContent=map[s]||s.toUpperCase());
 }
-function setBtns(c,h){document.getElementById('btnCall').disabled=!c;document.getElementById('btnHangup').disabled=!h;}
+function setBtns(c,h){
+  document.getElementById('btnCall').disabled=!c;
+  document.getElementById('btnHangup').disabled=!h;
+  document.getElementById('btnMute').disabled=!h;
+  // Al colgar, resetear mute
+  if(!h){ setMuteUI(false); }
+}
+
+let isMuted = false;
+function setMuteUI(muted){
+  isMuted = muted;
+  const icon = document.getElementById('muteIcon');
+  const text = document.getElementById('muteText');
+  const btn  = document.getElementById('btnMute');
+  if(muted){
+    icon.className = 'fa fa-microphone-slash';
+    text.textContent = 'Activar mic';
+    btn.style.background = 'rgba(255,59,107,.15)';
+    btn.style.color = 'var(--red)';
+    btn.style.borderColor = 'rgba(255,59,107,.4)';
+  } else {
+    icon.className = 'fa fa-microphone';
+    text.textContent = 'Silenciar';
+    btn.style.background = 'rgba(255,255,255,.06)';
+    btn.style.color = 'var(--muted2)';
+    btn.style.borderColor = 'var(--border2)';
+  }
+}
+
+function toggleMute(){
+  if(!S.call) return;
+  try{
+    if(isMuted){
+      if(typeof S.call.unmute === 'function') S.call.unmute();
+      else if(typeof S.call.unmuteAudio === 'function') S.call.unmuteAudio();
+      setMuteUI(false);
+      log('Micrófono activado.','ok');
+    } else {
+      if(typeof S.call.mute === 'function') S.call.mute();
+      else if(typeof S.call.muteAudio === 'function') S.call.muteAudio();
+      setMuteUI(true);
+      log('Llamada silenciada.','muted');
+    }
+  }catch(e){ log('Error al silenciar: '+e.message,'err'); }
+}
 
 async function doRefresh(){
   if(!S.rt||!S.ci||!S.cs){log('Sin credenciales OAuth para auto-renovar.','err');return;}
