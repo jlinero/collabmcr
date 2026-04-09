@@ -126,10 +126,22 @@ section{position:relative;z-index:2;}
 .cbtn.go{background:var(--green);color:#012419;}.cbtn.go:hover:not(:disabled){box-shadow:0 0 28px rgba(0,255,163,.35);transform:translateY(-1px);}
 .cbtn.stop{background:rgba(255,59,107,.12);color:var(--red);border:1px solid rgba(255,59,107,.25);}.cbtn.stop:hover:not(:disabled){background:var(--red);color:#fff;}
 .cbtn:disabled{opacity:.3;cursor:not-allowed;}
-.call-log{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 16px;height:130px;overflow-y:auto;font-family:var(--font-mono);font-size:11px;}
-.call-log p{margin-bottom:5px;line-height:1.5;}
 .l-ok{color:var(--green)}.l-err{color:var(--red)}.l-info{color:var(--cyan)}.l-muted{color:var(--muted);}
-.call-log::-webkit-scrollbar{width:3px;}.call-log::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+/* KEYPAD */
+.keypad-display{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:12px 18px;margin-bottom:12px;text-align:right;font-family:var(--font-mono);font-size:22px;font-weight:500;color:#fff;letter-spacing:3px;min-height:50px;display:flex;align-items:center;justify-content:flex-end;gap:8px;overflow:hidden;}
+.keypad-display span{flex:1;overflow:hidden;text-overflow:clip;white-space:nowrap;direction:rtl;}
+.keypad-display .kd-clear{font-size:14px;color:var(--muted);cursor:pointer;flex-shrink:0;padding:2px 4px;transition:color .2s;}
+.keypad-display .kd-clear:hover{color:var(--red);}
+.keypad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:12px;}
+.kbtn{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:12px 6px;text-align:center;cursor:pointer;transition:background .15s,border-color .15s,transform .1s;user-select:none;}
+.kbtn:hover{background:var(--card);border-color:var(--border2);}
+.kbtn:active{transform:scale(.93);background:rgba(0,212,255,.1);border-color:var(--cyan);}
+.kbtn-num{font-family:var(--font-display);font-size:20px;color:#fff;line-height:1;letter-spacing:1px;}
+.kbtn-sub{font-family:var(--font-mono);font-size:7px;letter-spacing:2px;color:var(--muted);margin-top:1px;text-transform:uppercase;}
+.call-btns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:16px;}
+.cbtn.mute{background:rgba(0,212,255,.08);color:var(--cyan);border:1px solid rgba(0,212,255,.2);}.cbtn.mute:hover:not(:disabled){background:rgba(0,212,255,.18);border-color:var(--cyan);}
+.cbtn.mute.muted{background:rgba(255,170,0,.12);color:var(--amber);border-color:rgba(255,170,0,.3);}
+.cbtn.mute.muted:hover:not(:disabled){background:rgba(255,170,0,.22);}
 /* CONTACT */
 .contact-bg{background:var(--bg);}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
@@ -347,28 +359,45 @@ footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30
           <div class="status-pill offline" id="callStatusPill" style="font-size:10px;padding:4px 12px;"><div class="status-dot"></div><span id="callStatusText">OFFLINE</span></div>
         </div>
         <div class="pbody">
-          <!-- Avatar y mensaje de bienvenida -->
-          <div style="text-align:center;padding:16px 0 20px;">
-            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#fff;box-shadow:0 0 24px rgba(0,212,255,.3);">
+          <!-- Avatar y estado -->
+          <div style="text-align:center;padding:12px 0 16px;">
+            <div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:26px;color:#fff;box-shadow:0 0 24px rgba(0,212,255,.3);">
               <i class="fa fa-headset"></i>
             </div>
-            <div style="font-family:var(--font-display);font-size:18px;color:#fff;letter-spacing:1px;">Equipo CollabMCR</div>
-            <div style="font-family:var(--font-mono);font-size:9px;color:var(--green);letter-spacing:2px;margin-top:4px;" id="agentStatusText">● DISPONIBLE AHORA</div>
+            <div style="font-family:var(--font-display);font-size:17px;color:#fff;letter-spacing:1px;">Equipo CollabMCR</div>
+            <div style="font-family:var(--font-mono);font-size:9px;color:var(--green);letter-spacing:2px;margin-top:4px;" id="agentStatusText">DISPONIBLE AHORA</div>
           </div>
-          <label class="f-label" style="display:none;">Número destino</label>
-          <input class="f-input" type="tel" id="dialInput" placeholder="+1 555 000 0000" style="display:none;"/>
-          <div class="call-btns" style="margin-bottom:0;">
-            <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar ahora</button>
+          <!-- Display del teclado -->
+          <div class="keypad-display">
+            <span id="dialDisplay">&#8203;</span>
+            <i class="fa fa-delete-left kd-clear" onclick="keypadDelete()" title="Borrar"></i>
+          </div>
+          <!-- Teclado numerico -->
+          <div class="keypad-grid">
+            <div class="kbtn" onclick="keypadPress('1')"><div class="kbtn-num">1</div><div class="kbtn-sub">&nbsp;</div></div>
+            <div class="kbtn" onclick="keypadPress('2')"><div class="kbtn-num">2</div><div class="kbtn-sub">ABC</div></div>
+            <div class="kbtn" onclick="keypadPress('3')"><div class="kbtn-num">3</div><div class="kbtn-sub">DEF</div></div>
+            <div class="kbtn" onclick="keypadPress('4')"><div class="kbtn-num">4</div><div class="kbtn-sub">GHI</div></div>
+            <div class="kbtn" onclick="keypadPress('5')"><div class="kbtn-num">5</div><div class="kbtn-sub">JKL</div></div>
+            <div class="kbtn" onclick="keypadPress('6')"><div class="kbtn-num">6</div><div class="kbtn-sub">MNO</div></div>
+            <div class="kbtn" onclick="keypadPress('7')"><div class="kbtn-num">7</div><div class="kbtn-sub">PQRS</div></div>
+            <div class="kbtn" onclick="keypadPress('8')"><div class="kbtn-num">8</div><div class="kbtn-sub">TUV</div></div>
+            <div class="kbtn" onclick="keypadPress('9')"><div class="kbtn-num">9</div><div class="kbtn-sub">WXYZ</div></div>
+            <div class="kbtn" onclick="keypadPress('*')"><div class="kbtn-num">*</div><div class="kbtn-sub">&nbsp;</div></div>
+            <div class="kbtn" onclick="keypadPress('0')"><div class="kbtn-num">0</div><div class="kbtn-sub">+</div></div>
+            <div class="kbtn" onclick="keypadPress('#')"><div class="kbtn-num">#</div><div class="kbtn-sub">&nbsp;</div></div>
+          </div>
+          <!-- Botones de accion -->
+          <div class="call-btns">
+            <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar</button>
+            <button class="cbtn mute" id="btnMute" onclick="toggleMute()" disabled><i class="fa fa-microphone-slash"></i> Silenciar</button>
             <button class="cbtn stop" id="btnHangup" onclick="hangupCall()" disabled><i class="fa fa-phone-slash"></i> Colgar</button>
           </div>
-          <div style="text-align:center;margin-top:14px;font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.5px;">
-            <i class="fa fa-lock" style="margin-right:5px;color:var(--green);"></i>Llamada segura · Powered by Cisco Webex
+          <div style="text-align:center;margin-top:2px;font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.5px;">
+            <i class="fa fa-lock" style="margin-right:5px;color:var(--green);"></i>Llamada segura &middot; Powered by Cisco Webex
           </div>
-          <label class="f-label" style="margin-top:16px;">Log de eventos</label>
-          <div class="call-log" id="callLog">
-            <p class="l-info">» Sistema inicializado.</p>
-            <p class="l-muted">» Configura tu token OAuth para registrarte.</p>
-          </div>
+          <!-- Log interno oculto para SDK -->
+          <div id="callLog" style="display:none;"></div>
         </div>
       </div>
     </div>
@@ -496,7 +525,45 @@ function setStatus(s){
   pills.forEach(p=>p.className='status-pill '+s);
   texts.forEach(t=>t.textContent=map[s]||s.toUpperCase());
 }
-function setBtns(c,h){document.getElementById('btnCall').disabled=!c;document.getElementById('btnHangup').disabled=!h;}
+function setBtns(c,h){
+  document.getElementById('btnCall').disabled=!c;
+  document.getElementById('btnHangup').disabled=!h;
+  const m=document.getElementById('btnMute');
+  m.disabled=!h;
+  if(!h){m.classList.remove('muted');m.innerHTML='<i class="fa fa-microphone-slash"></i> Silenciar';}
+}
+
+// ─── TECLADO NUMÉRICO ─────────────────────────────────────────────────────────
+let dialNumber = '';
+function keypadPress(digit){
+  dialNumber += digit;
+  document.getElementById('dialDisplay').textContent = dialNumber || '\u200B';
+}
+function keypadDelete(){
+  dialNumber = dialNumber.slice(0,-1);
+  document.getElementById('dialDisplay').textContent = dialNumber || '\u200B';
+}
+
+// ─── SILENCIAR ────────────────────────────────────────────────────────────────
+let isMuted = false;
+function toggleMute(){
+  if(!S.call) return;
+  const btn = document.getElementById('btnMute');
+  isMuted = !isMuted;
+  try{
+    if(isMuted){
+      if(typeof S.call.mute === 'function') S.call.mute();
+      btn.classList.add('muted');
+      btn.innerHTML='<i class="fa fa-microphone-slash"></i> Activar';
+      log('Micrófono silenciado.','muted');
+    } else {
+      if(typeof S.call.unmute === 'function') S.call.unmute();
+      btn.classList.remove('muted');
+      btn.innerHTML='<i class="fa fa-microphone-slash"></i> Silenciar';
+      log('Micrófono activo.','muted');
+    }
+  }catch(e){ log('Error mute: '+e.message,'err'); }
+}
 
 async function doRefresh(){
   if(!S.rt||!S.ci||!S.cs){log('Sin credenciales OAuth para auto-renovar.','err');return;}
@@ -578,17 +645,18 @@ async function initWebex(){
 
 async function placeCall(){
   if(!S.line){ log('Línea no registrada aún.','err'); return; }
-  // Evitar llamadas duplicadas
   if(S.call){ log('Ya hay una llamada activa.','err'); return; }
+  const destNumber = dialNumber.trim() || '1210';
   log('Solicitando micrófono...','info');
   try{
     const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
-    log('Micrófono OK. Iniciando llamada al 5102...','info');
+    log('Micrófono OK. Llamando a ' + destNumber + '...','info');
 
-    S.call = S.line.makeCall();
+    // Pasar destino al makeCall si el SDK lo soporta
+    S.call = S.line.makeCall({ destination: destNumber });
 
     S.call.on('progress',    () => log('Marcando...','info'));
-    S.call.on('connect',     () => log('✅ Llamada conectada.','ok'));
+    S.call.on('connect',     () => { log('Llamada conectada.','ok'); });
     S.call.on('established', () => log('Media establecida.','ok'));
     S.call.on('disconnect',  onEnd);
     S.call.on('remote_media', (track) => {
@@ -619,6 +687,7 @@ function hangupCall(){
 
 function onEnd(){
   S.call = null;
+  isMuted = false;
   setBtns(true, false);
   log('Llamada finalizada.','muted');
 }
