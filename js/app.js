@@ -184,7 +184,7 @@ async function getGuestToken() {
     if (data.accessToken) return data.accessToken;
 }
 
-async function getJweToken(calledNumber) {
+async function getJweToken() {
     const token = await TokenManager.getValid(); // <-- MODIFICADO
 
     const response = await fetch("https://webexapis.com/v1/telephony/click2call/callToken", {
@@ -194,7 +194,7 @@ async function getJweToken(calledNumber) {
             "Authorization": `Bearer ${token}`
         },
         body: JSON.stringify({
-            "calledNumber": calledNumber || "1210",
+            "calledNumber": "1210",
             "guestName": ""
         })
     });
@@ -228,8 +228,8 @@ async function getWebexConfig(userType) {
     return webexConfig;
 }
 
-async function getCallingConfig(calledNumber) {
-    const jweToken = await getJweToken(calledNumber);
+async function getCallingConfig() {
+    const jweToken = await getJweToken();
     console.log('Jwe Token: ', jweToken);
 
     const clientConfig = { calling: true, callHistory: true };
