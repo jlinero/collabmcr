@@ -1,775 +1,677 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Learn – Cisco Live 2026 Las Vegas</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<title>Municipio del Distrito Metropolitano de Quito</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
-  --cisco-blue:#0076d5;
-  --cisco-blue2:#1e90ff;
-  --cisco-dark:#1a1a2e;
-  --white:#fff;
-  --font:'Inter',sans-serif;
+  --azul:#003087;--azul2:#004eb3;--rojo:#c8102e;--gris:#f4f4f4;
+  --gris2:#e8e8e8;--texto:#333;--muted:#666;--blanco:#fff;
 }
-html{scroll-behavior:smooth;}
-body{background:#0d0d1a;color:#fff;font-family:var(--font);font-size:15px;line-height:1.6;overflow-x:hidden;}
+body{font-family:'Open Sans',sans-serif;font-size:14px;color:var(--texto);background:#fff;}
 
-/* ── TOPBAR (blanco como la imagen) ── */
-.topbar{background:#fff;border-bottom:1px solid #e5e5e5;position:sticky;top:0;z-index:300;height:70px;display:flex;align-items:center;}
-.topbar-inner{max-width:1400px;margin:0 auto;padding:0 32px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
+/* TOP BAR */
+.topbar-superior{background:#1a1a2e;padding:6px 0;border-bottom:2px solid var(--rojo);}
+.topbar-superior .inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;justify-content:flex-end;align-items:center;gap:24px;}
+.topbar-superior a{color:#ccc;font-size:12px;text-decoration:none;transition:color .2s;}
+.topbar-superior a:hover{color:#fff;}
+.topbar-superior .sep{color:#555;}
 
-/* Logo CISCO Live */
-.logo-wrap{display:flex;align-items:center;gap:16px;text-decoration:none;flex-shrink:0;}
-.cisco-wordmark{display:flex;align-items:baseline;gap:0;}
-.cisco-text{font-size:26px;font-weight:900;color:#000;letter-spacing:-0.5px;text-transform:uppercase;line-height:1;}
-.cisco-live{font-size:26px;font-weight:400;color:#000;margin-left:6px;}
-.cisco-excl{color:var(--cisco-blue);font-size:28px;font-weight:900;margin-left:2px;line-height:1;}
-.logo-divider{width:1px;height:32px;background:#ccc;margin:0 16px;}
-.logo-event{display:flex;flex-direction:column;line-height:1.3;}
-.logo-city{font-size:13px;font-weight:600;color:#222;}
-.logo-dates{font-size:12px;color:#666;font-weight:400;}
+/* HEADER */
+header{background:#fff;border-bottom:1px solid var(--gris2);position:sticky;top:0;z-index:100;box-shadow:0 2px 8px rgba(0,0,0,.08);}
+.header-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;justify-content:space-between;height:72px;}
+.logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-escudo{width:52px;height:52px;background:linear-gradient(135deg,#003087,#c8102e);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px;color:#fff;font-weight:700;flex-shrink:0;}
+.logo-texto{line-height:1.2;}
+.logo-texto .quito-renace{font-size:10px;color:var(--muted);font-style:italic;}
+.logo-texto .quito-nombre{font-size:18px;font-weight:700;color:var(--azul);letter-spacing:.5px;}
+.logo-texto .quito-sub{font-size:10px;color:var(--muted);}
+.header-search{display:flex;align-items:center;gap:0;}
+.header-search input{border:1px solid #ccc;border-right:none;padding:8px 14px;font-size:13px;border-radius:4px 0 0 4px;outline:none;width:220px;}
+.header-search button{background:var(--azul);color:#fff;border:none;padding:8px 14px;border-radius:0 4px 4px 0;cursor:pointer;font-size:14px;}
 
-/* Nav */
-.nav-links{display:flex;align-items:center;gap:2px;flex:1;justify-content:center;}
-.nav-links a{color:#222;text-decoration:none;font-size:14px;font-weight:500;padding:8px 14px;display:flex;align-items:center;gap:5px;border-radius:4px;transition:background .15s;white-space:nowrap;}
-.nav-links a:hover{background:#f5f5f5;}
-.nav-links a i{font-size:10px;color:#666;}
-.nav-links a.active{color:var(--cisco-blue);}
+/* NAV */
+nav{background:var(--azul);}
+.nav-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:flex;align-items:center;}
+nav a{color:#fff;text-decoration:none;font-size:13px;font-weight:600;padding:13px 16px;display:block;transition:background .2s;white-space:nowrap;letter-spacing:.3px;}
+nav a:hover{background:rgba(255,255,255,.15);}
+nav a.active{background:var(--rojo);}
+.nav-dropdown{position:relative;}
+.nav-dropdown:hover .dropdown-menu{display:block;}
+.dropdown-menu{display:none;position:absolute;top:100%;left:0;background:#fff;min-width:220px;box-shadow:0 4px 16px rgba(0,0,0,.15);z-index:200;border-top:3px solid var(--rojo);}
+.dropdown-menu a{color:var(--texto);font-weight:400;padding:10px 16px;border-bottom:1px solid var(--gris2);display:block;}
+.dropdown-menu a:hover{background:var(--gris);color:var(--azul);}
 
-.nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0;}
-.user-avatar{width:36px;height:36px;border-radius:50%;background:#1a3a6b;color:#fff;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;cursor:pointer;}
-.btn-register{background:var(--cisco-blue);color:#fff;border:none;padding:10px 22px;border-radius:20px;font-size:14px;font-weight:700;cursor:pointer;transition:background .2s;white-space:nowrap;}
-.btn-register:hover{background:var(--cisco-blue2);}
+/* FRANJA COLORES */
+.franja{height:8px;background:linear-gradient(90deg,#003087 0%,#003087 30%,#c8102e 30%,#c8102e 50%,#009fe3 50%,#009fe3 70%,#f7941d 70%,#f7941d 85%,#8dc63f 85%,#8dc63f 100%);}
 
-/* ── HERO ── */
-.hero{position:relative;height:480px;overflow:hidden;display:flex;align-items:center;justify-content:center;}
-/* Fondo: foto simulada de Las Vegas con palmas y edificio oscuro */
-.hero-bg{
-  position:absolute;inset:0;
-  background:
-    linear-gradient(to bottom, rgba(10,20,60,.72) 0%, rgba(5,10,35,.85) 100%),
-    linear-gradient(135deg, #0a1a3d 0%, #0d2460 30%, #0a3060 60%, #061830 100%);
+/* HERO */
+.hero{position:relative;height:460px;overflow:hidden;background:linear-gradient(135deg,#001f5c 0%,#003087 40%,#1a4a8a 100%);}
+.hero-bg{position:absolute;inset:0;background:url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Quito_Montufar_y_Espejo.jpg/1200px-Quito_Montufar_y_Espejo.jpg') center/cover no-repeat;opacity:.35;}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:80px 20px 0;color:#fff;}
+.hero-content h1{font-size:36px;font-weight:700;margin-bottom:12px;text-shadow:0 2px 8px rgba(0,0,0,.5);}
+.hero-content p{font-size:16px;opacity:.9;max-width:520px;line-height:1.6;text-shadow:0 1px 4px rgba(0,0,0,.4);}
+.hero-btns{margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;}
+.btn-hero-primary{background:var(--rojo);color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:600;font-size:13px;transition:background .2s;}
+.btn-hero-primary:hover{background:#a50024;}
+.btn-hero-secondary{background:rgba(255,255,255,.15);color:#fff;padding:12px 24px;border-radius:4px;text-decoration:none;font-weight:600;font-size:13px;border:1px solid rgba(255,255,255,.4);transition:background .2s;}
+.btn-hero-secondary:hover{background:rgba(255,255,255,.25);}
+
+/* SERVICIOS RÁPIDOS */
+.servicios-rapidos{background:#fff;padding:32px 0;border-bottom:1px solid var(--gris2);}
+.servicios-rapidos .inner{max-width:1200px;margin:0 auto;padding:0 20px;}
+.servicios-rapidos h3{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:20px;font-weight:600;}
+.servicios-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px;}
+@media(max-width:900px){.servicios-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:500px){.servicios-grid{grid-template-columns:repeat(2,1fr);}}
+.servicio-item{text-align:center;padding:20px 12px;border:1px solid var(--gris2);border-radius:8px;cursor:pointer;transition:all .2s;text-decoration:none;color:var(--texto);}
+.servicio-item:hover{border-color:var(--azul);box-shadow:0 4px 12px rgba(0,48,135,.1);transform:translateY(-2px);}
+.servicio-item i{font-size:28px;color:var(--azul);margin-bottom:10px;display:block;}
+.servicio-item span{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--texto);line-height:1.3;}
+
+/* NOTICIAS + ZONAS */
+.main-content{max-width:1200px;margin:40px auto;padding:0 20px;display:grid;grid-template-columns:1fr 340px;gap:36px;}
+@media(max-width:900px){.main-content{grid-template-columns:1fr;}}
+.section-title{font-size:13px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--azul);border-bottom:3px solid var(--rojo);padding-bottom:10px;margin-bottom:20px;}
+.noticias-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.noticia-card{border:1px solid var(--gris2);border-radius:6px;overflow:hidden;transition:box-shadow .2s;}
+.noticia-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.1);}
+.noticia-img{height:140px;background:linear-gradient(135deg,#003087,#009fe3);display:flex;align-items:center;justify-content:center;font-size:36px;color:rgba(255,255,255,.5);}
+.noticia-img.rojo{background:linear-gradient(135deg,#c8102e,#f7941d);}
+.noticia-img.verde{background:linear-gradient(135deg,#2e7d32,#66bb6a);}
+.noticia-img.morado{background:linear-gradient(135deg,#4a148c,#9c27b0);}
+.noticia-body{padding:14px;}
+.noticia-tag{font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--rojo);margin-bottom:6px;}
+.noticia-title{font-size:13px;font-weight:600;line-height:1.4;color:var(--texto);margin-bottom:6px;}
+.noticia-date{font-size:11px;color:var(--muted);}
+
+/* SIDEBAR */
+.sidebar-card{border:1px solid var(--gris2);border-radius:6px;overflow:hidden;margin-bottom:20px;}
+.sidebar-card-header{background:var(--azul);color:#fff;padding:12px 16px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;}
+.sidebar-card-header.rojo{background:var(--rojo);}
+.sidebar-list a{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid var(--gris2);text-decoration:none;color:var(--texto);font-size:13px;transition:background .2s;}
+.sidebar-list a:last-child{border-bottom:none;}
+.sidebar-list a:hover{background:var(--gris);}
+.sidebar-list a i{color:var(--azul);font-size:12px;width:14px;}
+.sidebar-list a.rojo-icon i{color:var(--rojo);}
+
+/* ZONAS */
+.zonas-section{background:var(--gris);padding:40px 0;}
+.zonas-inner{max-width:1200px;margin:0 auto;padding:0 20px;}
+.zonas-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:20px;}
+@media(max-width:800px){.zonas-grid{grid-template-columns:repeat(3,1fr);}}
+.zona-item{background:#fff;border:1px solid var(--gris2);border-radius:6px;padding:14px;text-align:center;cursor:pointer;transition:all .2s;text-decoration:none;color:var(--texto);}
+.zona-item:hover{border-color:var(--azul);transform:translateY(-2px);}
+.zona-item i{font-size:20px;color:var(--azul);margin-bottom:8px;display:block;}
+.zona-item span{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;}
+
+/* FOOTER */
+footer{background:#1a1a2e;color:#aaa;padding:40px 0 0;}
+.footer-inner{max-width:1200px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
+@media(max-width:800px){.footer-inner{grid-template-columns:1fr 1fr;}}
+.footer-col h4{color:#fff;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #333;}
+.footer-col p{font-size:12px;line-height:1.7;margin-bottom:12px;}
+.footer-col a{color:#aaa;text-decoration:none;font-size:12px;display:block;margin-bottom:6px;transition:color .2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{margin-top:30px;padding:16px 20px;background:#111;text-align:center;font-size:11px;color:#666;}
+.footer-social{display:flex;gap:12px;margin-top:14px;}
+.footer-social a{width:32px;height:32px;background:#333;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:13px;transition:all .2s;}
+.footer-social a:hover{background:var(--azul);color:#fff;}
+
+/* ══════════════════════════════════════
+   BOTÓN FLOTANTE CLICK-TO-CALL WEBEX
+   ══════════════════════════════════════ */
+.c2c-fab{
+  position:fixed;bottom:32px;right:32px;z-index:9999;
+  display:flex;flex-direction:column;align-items:flex-end;gap:12px;
 }
-/* Palmas decorativas SVG */
-.hero-palms{position:absolute;inset:0;pointer-events:none;opacity:.18;}
-.hero-content{position:relative;z-index:2;text-align:center;padding:0 24px;}
-.hero h1{font-size:clamp(52px,7vw,88px);font-weight:700;color:#fff;margin-bottom:16px;letter-spacing:-1px;line-height:1;}
-.hero-sub{font-size:18px;font-weight:400;color:rgba(255,255,255,.85);max-width:620px;margin:0 auto 36px;line-height:1.6;}
-
-/* Pill nav dentro del hero */
-.hero-pill-nav{
-  display:inline-flex;align-items:center;
-  border-radius:999px;
-  border:2px solid transparent;
-  background:
-    linear-gradient(#0d0d1a,#0d0d1a) padding-box,
-    linear-gradient(90deg,#0076d5 0%,#6a0dad 40%,#ff6b35 100%) border-box;
-  padding:0;overflow:hidden;
+.c2c-btn{
+  width:60px;height:60px;border-radius:50%;
+  background:linear-gradient(135deg,#003087,#009fe3);
+  color:#fff;border:none;cursor:pointer;
+  box-shadow:0 4px 20px rgba(0,48,135,.45);
+  font-size:22px;display:flex;align-items:center;justify-content:center;
+  transition:transform .2s,box-shadow .2s;
+  position:relative;
 }
-.hero-pill-nav a{
-  color:#fff;text-decoration:none;
-  font-size:13px;font-weight:500;
-  padding:14px 22px;
-  white-space:nowrap;
-  transition:background .2s;
-  display:block;
+.c2c-btn:hover{transform:scale(1.08);box-shadow:0 6px 28px rgba(0,48,135,.6);}
+.c2c-pulse{
+  position:absolute;inset:-4px;border-radius:50%;
+  border:2px solid rgba(0,159,227,.5);
+  animation:pulse-ring 2s ease-out infinite;
 }
-.hero-pill-nav a:hover{background:rgba(255,255,255,.1);}
-.hero-pill-sep{width:1px;background:rgba(255,255,255,.2);height:22px;flex-shrink:0;}
-
-/* ── CONTENT SECTIONS ── */
-.content-bg{background:#0d0d1a;}
-
-/* Tech Tracks header */
-.tracks-header{max-width:1400px;margin:0 auto;padding:56px 32px 32px;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;flex-wrap:wrap;}
-.tracks-header-left h2{font-size:32px;font-weight:700;color:#fff;margin-bottom:10px;letter-spacing:-.3px;}
-.tracks-header-left p{font-size:15px;color:#aaa;max-width:540px;line-height:1.65;}
-.btn-browse{background:#fff;color:#000;border:none;padding:13px 28px;border-radius:999px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap;transition:all .2s;flex-shrink:0;align-self:center;}
-.btn-browse:hover{background:#f0f0f0;}
-
-/* Track tabs accordion */
-.tracks-wrap{max-width:1400px;margin:0 auto;padding:0 32px 32px;}
-.track-accordion{border:1px solid #1e2a40;border-radius:8px;overflow:hidden;margin-bottom:0;}
-.track-item{border-bottom:1px solid #1e2a40;}
-.track-item:last-child{border-bottom:none;}
-.track-item-header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;cursor:pointer;transition:background .2s;gap:12px;}
-.track-item-header:hover{background:rgba(255,255,255,.03);}
-.track-item-header.open{background:rgba(0,118,213,.06);}
-.track-item-title{font-size:16px;font-weight:600;color:#fff;}
-.track-item-arrow{color:#666;font-size:12px;transition:transform .3s;}
-.track-item-header.open .track-item-arrow{transform:rotate(180deg);color:var(--cisco-blue);}
-.track-item-body{display:none;padding:0 24px 24px;background:rgba(0,118,213,.03);}
-.track-item-body.open{display:grid;grid-template-columns:1fr 280px;gap:40px;align-items:start;}
-@media(max-width:768px){.track-item-body.open{grid-template-columns:1fr;}}
-.track-body-desc{font-size:14px;color:#aaa;line-height:1.75;margin-bottom:18px;}
-.track-feat-label{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#666;margin-bottom:10px;}
-.track-feat-links{display:flex;gap:10px;flex-wrap:wrap;}
-.track-feat-link{color:var(--cisco-blue);text-decoration:none;font-size:13px;font-weight:600;border:1px solid rgba(0,118,213,.3);padding:6px 14px;border-radius:4px;transition:all .2s;}
-.track-feat-link:hover{background:rgba(0,118,213,.1);}
-.track-all-link{color:var(--cisco-blue);text-decoration:none;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;margin-top:14px;transition:gap .2s;}
-.track-all-link:hover{gap:10px;}
-.track-visual-box{background:rgba(0,118,213,.06);border:1px solid rgba(0,118,213,.15);border-radius:8px;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;font-size:52px;color:var(--cisco-blue);opacity:.4;}
-
-/* ── SESSION GRID ── */
-.section-wrap{max-width:1400px;margin:0 auto;padding:48px 32px;}
-.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;flex-wrap:wrap;gap:16px;}
-.section-title{font-size:28px;font-weight:700;color:#fff;letter-spacing:-.3px;}
-.sessions-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#1a1a2e;}
-@media(max-width:900px){.sessions-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:580px){.sessions-grid{grid-template-columns:1fr;}}
-.session-card{background:#0d0d1a;padding:28px;transition:background .2s;cursor:pointer;}
-.session-card:hover{background:#111128;}
-.sc-track{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:14px;display:inline-block;padding:4px 10px;border-radius:2px;}
-.sc-ai{background:rgba(0,118,213,.15);color:#4db3ff;}
-.sc-collab{background:rgba(106,191,75,.12);color:#7ed060;}
-.sc-cert{background:rgba(138,99,210,.15);color:#b08eff;}
-.sc-sec{background:rgba(255,82,82,.12);color:#ff7070;}
-.sc-dc{background:rgba(255,166,0,.12);color:#ffc040;}
-.sc-devnet{background:rgba(0,188,188,.12);color:#40d4d4;}
-.sc-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.25;}
-.sc-desc{font-size:13px;color:#888;line-height:1.65;margin-bottom:18px;}
-.sc-link{color:var(--cisco-blue);font-size:12px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:gap .2s;}
-.sc-link:hover{gap:10px;}
-
-/* ── TRAINING ── */
-.training-bg{background:#080812;border-top:1px solid #1a1a2e;}
-.training-inner{max-width:1400px;margin:0 auto;padding:56px 32px;}
-.training-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:32px;}
-@media(max-width:700px){.training-grid{grid-template-columns:1fr;}}
-.training-card{background:#0d0d1a;border:1px solid #1a1a2e;border-top:3px solid var(--cisco-blue);padding:28px;transition:border-color .2s;}
-.training-card:hover{border-color:var(--cisco-blue);}
-.tm{font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--cisco-blue);margin-bottom:12px;}
-.tt{font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;}
-.td{font-size:13px;color:#888;line-height:1.7;margin-bottom:20px;}
-.btn-sm{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;border:1px solid #333;border-radius:4px;color:#ccc;font-size:12px;font-weight:600;text-decoration:none;transition:all .2s;background:transparent;cursor:pointer;}
-.btn-sm:hover{border-color:var(--cisco-blue);color:var(--cisco-blue);}
-
-/* ── ACTIVITIES ── */
-.activities-inner{max-width:1400px;margin:0 auto;padding:56px 32px;}
-.activities-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#1a1a2e;margin-top:32px;}
-@media(max-width:900px){.activities-grid{grid-template-columns:repeat(2,1fr);}}
-.activity-card{background:#0d0d1a;padding:28px;text-align:center;transition:background .2s;cursor:pointer;}
-.activity-card:hover{background:#111128;}
-.ai-icon{font-size:28px;margin-bottom:12px;display:block;}
-.ai-title{font-size:16px;font-weight:700;color:#fff;margin-bottom:8px;}
-.ai-desc{font-size:12px;color:#777;line-height:1.6;}
-
-/* ── CERT ── */
-.cert-bg{background:#080812;border-top:1px solid #1a1a2e;}
-.cert-inner{max-width:1400px;margin:0 auto;padding:56px 32px;display:grid;grid-template-columns:1fr 300px;gap:64px;align-items:start;}
-@media(max-width:900px){.cert-inner{grid-template-columns:1fr;}}
-.cert-table{width:100%;border-collapse:collapse;margin-top:20px;}
-.cert-table th{text-align:left;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#555;padding:8px 12px;border-bottom:1px solid #1a1a2e;}
-.cert-table td{padding:10px 12px;border-bottom:1px solid #1a1a2e;font-size:13px;color:#888;}
-.cert-table td:first-child{color:#ccc;font-weight:500;}
-.cert-card{background:#0d0d1a;border:1px solid #1a1a2e;border-top:3px solid var(--cisco-blue);padding:28px;text-align:center;}
-.cert-card i{font-size:44px;color:var(--cisco-blue);margin-bottom:14px;display:block;}
-.cert-card h3{font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;}
-.cert-card p{font-size:13px;color:#888;line-height:1.65;}
-
-/* ── SPONSORS ── */
-.sponsors-bg{background:#060610;border-top:1px solid #1a1a2e;padding:40px 32px;}
-.sponsors-inner{max-width:1400px;margin:0 auto;}
-.sp-label{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#444;text-align:center;margin-bottom:20px;}
-.sponsors-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:center;}
-.sp-chip{background:#0d0d1a;border:1px solid #1a1a2e;padding:12px 24px;font-size:14px;font-weight:700;color:#555;letter-spacing:.5px;}
-
-/* ── FOOTER ── */
-footer{background:#000;border-top:1px solid #111;padding:32px;}
-.footer-inner{max-width:1400px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
-.footer-left{font-size:14px;font-weight:800;color:#fff;}
-.footer-contact{font-size:12px;color:#555;margin-top:6px;line-height:1.8;}
-.footer-contact a{color:var(--cisco-blue);text-decoration:none;}
-.footer-social{display:flex;gap:8px;}
-.footer-social a{width:30px;height:30px;border:1px solid #222;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#555;font-size:12px;text-decoration:none;transition:all .2s;}
-.footer-social a:hover{border-color:var(--cisco-blue);color:var(--cisco-blue);}
-.footer-links{display:flex;gap:16px;flex-wrap:wrap;}
-.footer-links a{font-size:11px;color:#444;text-decoration:none;transition:color .2s;}
-.footer-links a:hover{color:var(--cisco-blue);}
-.footer-copy{font-size:11px;color:#333;margin-top:4px;}
-
-/* ════════════════════════════════
-   CLICK-TO-CALL WIDGET CollabMCR
-════════════════════════════════ */
-.c2c-fab{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
-.c2c-tooltip{background:#000;border:1px solid #222;color:#fff;padding:7px 14px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
+@keyframes pulse-ring{0%{transform:scale(1);opacity:1}100%{transform:scale(1.4);opacity:0}}
+.c2c-tooltip{
+  background:#1a1a2e;color:#fff;
+  padding:8px 14px;border-radius:20px;
+  font-size:12px;font-weight:600;white-space:nowrap;
+  box-shadow:0 2px 12px rgba(0,0,0,.3);
+  opacity:0;transform:translateX(10px);
+  transition:all .2s;pointer-events:none;
+}
 .c2c-fab:hover .c2c-tooltip{opacity:1;transform:translateX(0);}
-.c2c-btn{width:56px;height:56px;border-radius:50%;background:var(--cisco-blue);color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,118,213,.5);transition:all .2s;position:relative;}
-.c2c-btn:hover{background:var(--cisco-blue2);transform:scale(1.06);}
-.c2c-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(0,118,213,.4);animation:ring-pulse 2s ease-out infinite;}
-@keyframes ring-pulse{0%{transform:scale(1);opacity:1}100%{transform:scale(1.45);opacity:0}}
 
-.c2c-panel{position:fixed;bottom:28px;right:28px;z-index:9998;width:320px;background:#0f0f1c;border:1px solid #1e2a40;border-radius:10px;box-shadow:0 16px 48px rgba(0,0,0,.8);overflow:hidden;transform:scale(.85) translateY(16px);opacity:0;pointer-events:none;transition:all .3s cubic-bezier(.22,.68,0,1.2);transform-origin:bottom right;}
+/* PANEL CLICK-TO-CALL */
+.c2c-panel{
+  position:fixed;bottom:32px;right:32px;z-index:9998;
+  width:320px;background:#fff;border-radius:16px;
+  box-shadow:0 8px 40px rgba(0,0,0,.2);
+  overflow:hidden;
+  transform:scale(0.8) translateY(20px);opacity:0;pointer-events:none;
+  transition:all .3s cubic-bezier(.22,.68,0,1.2);
+  transform-origin:bottom right;
+}
 .c2c-panel.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
-
-.c2c-hdr{background:linear-gradient(135deg,#001240,#002060);padding:16px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,118,213,.2);}
-.c2c-hdr-l{display:flex;align-items:center;gap:11px;}
-.c2c-hdr-av{width:38px;height:38px;border-radius:50%;background:rgba(0,118,213,.25);border:1px solid rgba(0,118,213,.4);display:flex;align-items:center;justify-content:center;font-size:15px;color:#4db3ff;}
-.c2c-hdr-title{font-size:13px;font-weight:700;color:#fff;}
-.c2c-hdr-sub{font-size:10px;color:rgba(255,255,255,.45);margin-top:2px;}
-.c2c-close{background:none;border:none;color:#444;font-size:14px;cursor:pointer;transition:color .2s;padding:4px;}
+.c2c-panel-header{
+  background:linear-gradient(135deg,#003087,#004eb3);
+  padding:20px;color:#fff;
+  display:flex;align-items:center;justify-content:space-between;
+}
+.c2c-panel-header-left{display:flex;align-items:center;gap:12px;}
+.c2c-avatar{
+  width:48px;height:48px;border-radius:50%;
+  background:rgba(255,255,255,.2);border:2px solid rgba(255,255,255,.4);
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+}
+.c2c-panel-title{font-size:14px;font-weight:700;letter-spacing:.3px;}
+.c2c-panel-sub{font-size:11px;opacity:.8;margin-top:2px;}
+.c2c-close{background:none;border:none;color:rgba(255,255,255,.7);font-size:16px;cursor:pointer;padding:4px;transition:color .2s;}
 .c2c-close:hover{color:#fff;}
-
-.c2c-sbar{background:rgba(0,0,0,.35);padding:8px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #151520;}
-.c2c-slabel{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#444;}
-.c2c-spill{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:.5px;padding:3px 9px;border-radius:2px;background:#1a0505;color:#e05c78;border:1px solid rgba(200,16,46,.3);transition:all .4s;}
-.c2c-spill.online{background:#041408;color:#7ed060;border-color:rgba(106,191,75,.3);}
-.c2c-spill.connecting{background:#141005;color:#ffc040;border-color:rgba(255,166,0,.3);}
-.c2c-sdot{width:5px;height:5px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
-@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
-
-.c2c-body{padding:18px;}
-.c2c-agent{text-align:center;margin-bottom:18px;}
-.c2c-av{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,#001240,var(--cisco-blue));display:flex;align-items:center;justify-content:center;margin:0 auto 10px;font-size:20px;color:#fff;box-shadow:0 0 0 4px rgba(0,118,213,.1);}
-.c2c-name{font-size:14px;font-weight:700;color:#fff;}
-.c2c-role{font-size:11px;color:#555;margin-top:2px;}
-.c2c-badge{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:#7ed060;background:rgba(106,191,75,.08);padding:3px 9px;border-radius:2px;margin-top:7px;letter-spacing:.5px;}
-.c2c-badge span{width:5px;height:5px;border-radius:50%;background:#7ed060;display:block;}
-
-.c2c-cbtn{width:100%;padding:12px;border-radius:4px;border:none;background:var(--cisco-blue);color:#fff;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s;margin-bottom:7px;letter-spacing:.2px;}
-.c2c-cbtn:hover:not(:disabled){background:var(--cisco-blue2);transform:translateY(-1px);}
-.c2c-cbtn:disabled{opacity:.3;cursor:not-allowed;}
-.c2c-mbtn{width:100%;padding:9px;border-radius:4px;background:#151520;color:#666;border:1px solid #222;font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:all .2s;margin-bottom:7px;}
-.c2c-mbtn:disabled{opacity:.3;cursor:not-allowed;}
-.c2c-mbtn.muted{background:rgba(200,16,46,.08);color:#e05c78;border-color:rgba(200,16,46,.25);}
-.c2c-hbtn{width:100%;padding:9px;border-radius:4px;background:rgba(200,16,46,.08);color:#e05c78;border:1px solid rgba(200,16,46,.25);font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:all .2s;margin-bottom:14px;}
-.c2c-hbtn:hover:not(:disabled){background:#c8102e;color:#fff;}
-.c2c-hbtn:disabled{opacity:.2;cursor:not-allowed;}
-
-.c2c-log{background:#080810;border:1px solid #151520;border-radius:4px;padding:9px;height:75px;overflow-y:auto;font-family:monospace;font-size:9px;margin-bottom:11px;display:none;}
+.c2c-status-bar{
+  background:#f0f4ff;padding:10px 20px;
+  display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid #e0e7ff;
+}
+.c2c-status-label{font-size:10px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#666;}
+.c2c-status-pill{
+  display:flex;align-items:center;gap:6px;
+  font-size:10px;font-weight:700;letter-spacing:.5px;
+  padding:4px 10px;border-radius:999px;
+  background:#fee2e2;color:#c8102e;border:1px solid #fca5a5;
+  transition:all .4s;
+}
+.c2c-status-pill.online{background:#d1fae5;color:#065f46;border-color:#6ee7b7;}
+.c2c-status-pill.connecting{background:#fef9c3;color:#92400e;border-color:#fcd34d;}
+.c2c-dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+.c2c-body{padding:20px;}
+.c2c-agent-info{text-align:center;margin-bottom:20px;}
+.c2c-agent-avatar{
+  width:64px;height:64px;border-radius:50%;margin:0 auto 10px;
+  background:linear-gradient(135deg,#003087,#009fe3);
+  display:flex;align-items:center;justify-content:center;
+  font-size:26px;color:#fff;
+  box-shadow:0 0 0 4px rgba(0,48,135,.1);
+}
+.c2c-agent-name{font-size:15px;font-weight:700;color:#1a1a2e;}
+.c2c-agent-dept{font-size:11px;color:#666;margin-top:3px;}
+.c2c-agent-status{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:10px;font-weight:600;color:#065f46;
+  background:#d1fae5;padding:3px 10px;border-radius:999px;margin-top:8px;
+}
+.c2c-agent-status span{width:6px;height:6px;border-radius:50%;background:#10b981;display:block;}
+.c2c-call-btn{
+  width:100%;padding:14px;border-radius:10px;border:none;
+  background:linear-gradient(135deg,#003087,#004eb3);
+  color:#fff;font-size:14px;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:all .2s;margin-bottom:10px;
+}
+.c2c-call-btn:hover:not(:disabled){background:linear-gradient(135deg,#002060,#003a8c);transform:translateY(-1px);box-shadow:0 4px 16px rgba(0,48,135,.35);}
+.c2c-call-btn:disabled{opacity:.4;cursor:not-allowed;}
+.c2c-hangup-btn{
+  width:100%;padding:14px;border-radius:10px;
+  background:#fee2e2;color:#c8102e;border:1px solid #fca5a5;
+  font-size:14px;font-weight:700;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  transition:all .2s;margin-bottom:14px;
+}
+.c2c-hangup-btn:hover:not(:disabled){background:#c8102e;color:#fff;}
+.c2c-hangup-btn:disabled{opacity:.3;cursor:not-allowed;}
+.c2c-log{
+  background:#0f172a;border-radius:8px;padding:12px;
+  height:90px;overflow-y:auto;font-family:monospace;font-size:10px;
+  margin-bottom:14px;
+}
 .c2c-log p{margin-bottom:3px;line-height:1.4;}
-.l-ok{color:#7ed060}.l-err{color:#e05c78}.l-info{color:#4db3ff}.l-muted{color:#2a2a3a;}
-.c2c-log::-webkit-scrollbar{width:2px;}.c2c-log::-webkit-scrollbar-thumb{background:#1a1a2e;}
-.c2c-foot{text-align:center;font-size:9px;color:#333;display:flex;align-items:center;justify-content:center;gap:4px;}
-.c2c-foot i{color:#7ed060;}
-.c2c-powered{text-align:center;margin-top:6px;font-size:9px;color:#2a2a3a;}
-.c2c-powered strong{color:#3a3a5a;}
-
-/* Reveal */
-.reveal{opacity:0;transform:translateY(16px);transition:opacity .55s ease,transform .55s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-::-webkit-scrollbar{width:4px;}::-webkit-scrollbar-track{background:#080810;}::-webkit-scrollbar-thumb{background:#1e2a40;}
+.l-ok{color:#34d399}.l-err{color:#f87171}.l-info{color:#60a5fa}.l-muted{color:#64748b;}
+.c2c-log::-webkit-scrollbar{width:2px;}.c2c-log::-webkit-scrollbar-thumb{background:#334155;}
+.c2c-footer{text-align:center;font-size:10px;color:#999;display:flex;align-items:center;justify-content:center;gap:5px;}
+.c2c-footer i{color:#10b981;font-size:9px;}
+.c2c-powered{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;font-size:10px;color:#bbb;}
+.c2c-powered strong{color:#003087;}
+/* Esconder input dummy */
+#dialInput{display:none;}
 </style>
 </head>
 <body>
 
-<!-- ── TOPBAR (blanco, igual a la imagen) ── -->
-<header class="topbar">
-  <div class="topbar-inner">
+<!-- TOP BAR SUPERIOR -->
+<div class="topbar-superior">
+  <div class="inner">
+    <a href="#">Mapa del sitio</a>
+    <span class="sep">|</span>
+    <a href="#">Correo Institucional</a>
+    <span class="sep">|</span>
+    <a href="#">Contáctenos</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
     <a href="#" class="logo-wrap">
-      <div class="cisco-wordmark">
-        <span class="cisco-text">CISCO</span>
-        <span class="cisco-live">Live</span>
-        <span class="cisco-excl">!</span>
-      </div>
-      <div class="logo-divider"></div>
-      <div class="logo-event">
-        <span class="logo-city">Las Vegas, NV</span>
-        <span class="logo-dates">May 31–June 4, 2026</span>
+      <div class="logo-escudo">Q</div>
+      <div class="logo-texto">
+        <div class="quito-renace">Quito renace</div>
+        <div class="quito-nombre">🏛 Quito</div>
+        <div class="quito-sub">Municipio del D.M. de Quito</div>
       </div>
     </a>
-
-    <div class="nav-links">
-      <a href="#">Attend <i class="fa fa-chevron-down"></i></a>
-      <a href="#learn" class="active">Learn <i class="fa fa-chevron-down"></i></a>
-      <a href="#">Experience <i class="fa fa-chevron-down"></i></a>
-      <a href="#">Sponsor <i class="fa fa-chevron-down"></i></a>
-      <a href="#">FAQs</a>
-    </div>
-
-    <div class="nav-right">
-      <div class="user-avatar">JL</div>
-      <button class="btn-register">Register now</button>
+    <div class="header-search">
+      <input type="text" placeholder="Busqueda..."/>
+      <button><i class="fa fa-search"></i></button>
     </div>
   </div>
 </header>
 
-<!-- ── HERO ── -->
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="active">Inicio</a>
+    <div class="nav-dropdown">
+      <a href="#">Nuestra Institución <i class="fa fa-chevron-down" style="font-size:9px;"></i></a>
+      <div class="dropdown-menu">
+        <a href="#">Alcalde de Quito</a>
+        <a href="#">Filosofía Institucional</a>
+        <a href="#">Gobierno Abierto</a>
+        <a href="#">Concejo Metropolitano</a>
+        <a href="#">Ordenanzas y resoluciones</a>
+      </div>
+    </div>
+    <a href="#">Servicios Municipales</a>
+    <a href="#">Acuerdo Quito</a>
+    <div class="nav-dropdown">
+      <a href="#">PAC <i class="fa fa-chevron-down" style="font-size:9px;"></i></a>
+      <div class="dropdown-menu">
+        <a href="#">2026</a><a href="#">2025</a><a href="#">2024</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <a href="#">Rendición de Cuentas <i class="fa fa-chevron-down" style="font-size:9px;"></i></a>
+      <div class="dropdown-menu">
+        <a href="#">2025</a><a href="#">2024</a><a href="#">2023</a>
+      </div>
+    </div>
+    <div class="nav-dropdown">
+      <a href="#">Transparencia <i class="fa fa-chevron-down" style="font-size:9px;"></i></a>
+      <div class="dropdown-menu">
+        <a href="#">2026</a><a href="#">2025</a><a href="#">2024</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- FRANJA -->
+<div class="franja"></div>
+
+<!-- HERO -->
 <div class="hero">
   <div class="hero-bg"></div>
-  <!-- Palmas decorativas -->
-  <svg class="hero-palms" viewBox="0 0 1440 480" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-    <g fill="#4a8a6a">
-      <!-- Palma izquierda -->
-      <ellipse cx="180" cy="100" rx="90" ry="20" transform="rotate(-30 180 100)"/>
-      <ellipse cx="160" cy="110" rx="80" ry="18" transform="rotate(20 160 110)"/>
-      <ellipse cx="200" cy="90" rx="85" ry="18" transform="rotate(-50 200 90)"/>
-      <ellipse cx="150" cy="120" rx="70" ry="16" transform="rotate(40 150 120)"/>
-      <rect x="175" y="100" width="10" height="380" rx="5"/>
-      <!-- Palma derecha -->
-      <ellipse cx="1280" cy="80" rx="90" ry="20" transform="rotate(30 1280 80)"/>
-      <ellipse cx="1300" cy="100" rx="80" ry="18" transform="rotate(-20 1300 100)"/>
-      <ellipse cx="1260" cy="70" rx="85" ry="18" transform="rotate(50 1260 70)"/>
-      <ellipse cx="1310" cy="110" rx="70" ry="16" transform="rotate(-40 1310 110)"/>
-      <rect x="1275" y="80" width="10" height="400" rx="5"/>
-      <!-- Palma centro-izq -->
-      <ellipse cx="620" cy="40" rx="75" ry="16" transform="rotate(-25 620 40)"/>
-      <ellipse cx="600" cy="55" rx="70" ry="15" transform="rotate(15 600 55)"/>
-      <ellipse cx="640" cy="35" rx="72" ry="15" transform="rotate(-45 640 35)"/>
-      <rect x="617" y="40" width="8" height="440" rx="4"/>
-    </g>
-    <!-- Edificio al fondo -->
-    <rect x="300" y="60" width="200" height="420" fill="#1a2a4a" opacity=".3"/>
-    <rect x="320" y="80" width="20" height="400" fill="#2a3a5a" opacity=".2"/>
-    <rect x="360" y="80" width="20" height="400" fill="#2a3a5a" opacity=".2"/>
-    <rect x="400" y="80" width="20" height="400" fill="#2a3a5a" opacity=".2"/>
-    <rect x="440" y="80" width="20" height="400" fill="#2a3a5a" opacity=".2"/>
-    <rect x="900" y="40" width="250" height="440" fill="#1a2a4a" opacity=".3"/>
-    <rect x="920" y="60" width="20" height="420" fill="#2a3a5a" opacity=".2"/>
-    <rect x="960" y="60" width="20" height="420" fill="#2a3a5a" opacity=".2"/>
-    <rect x="1000" y="60" width="20" height="420" fill="#2a3a5a" opacity=".2"/>
-    <rect x="1040" y="60" width="20" height="420" fill="#2a3a5a" opacity=".2"/>
-    <rect x="1080" y="60" width="20" height="420" fill="#2a3a5a" opacity=".2"/>
-    <rect x="1120" y="60" width="20" height="420" fill="#2a3a5a" opacity=".2"/>
-  </svg>
-
   <div class="hero-content">
-    <h1>Learn</h1>
-    <p class="hero-sub">Cisco Live delivers training on the essential technology skills IT professionals need today.</p>
-    <!-- Pill nav exacta de la imagen -->
-    <div class="hero-pill-nav">
-      <a href="#tracks">Technology Tracks</a>
-      <div class="hero-pill-sep"></div>
-      <a href="#cert">Certification Exam</a>
-      <div class="hero-pill-sep"></div>
-      <a href="#training">Labs and Seminars</a>
-      <div class="hero-pill-sep"></div>
-      <a href="#">IT Leadership Program</a>
-      <div class="hero-pill-sep"></div>
-      <a href="#">Thought Leadership</a>
-      <div class="hero-pill-sep"></div>
-      <a href="#">1:1 Learning</a>
+    <h1>Quito renace</h1>
+    <p>Trabajamos cada día por una ciudad más segura, moderna y conectada para todos los quiteños y quiteñas.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-hero-primary"><i class="fa fa-phone-volume" style="margin-right:8px;"></i>Contáctenos</a>
+      <a href="#" class="btn-hero-secondary">Servicios en línea</a>
     </div>
   </div>
 </div>
 
-<!-- ── TECHNOLOGY TRACKS ── -->
-<div class="content-bg" id="tracks">
-  <div class="tracks-header">
-    <div class="tracks-header-left reveal">
-      <h2>Technology Tracks</h2>
-      <p>Search sessions by Technology Track to learn more about the latest advancements and innovations in Cisco Solutions.</p>
-    </div>
-    <button class="btn-browse reveal d1">Browse all sessions</button>
-  </div>
-
-  <div class="tracks-wrap">
-    <div class="track-accordion reveal">
-      <!-- Track: AI -->
-      <div class="track-item">
-        <div class="track-item-header open" onclick="toggleTrack(this)">
-          <span class="track-item-title">AI</span>
-          <i class="fa fa-chevron-down track-item-arrow"></i>
-        </div>
-        <div class="track-item-body open">
-          <div>
-            <div class="track-body-desc">Learn how Cisco's AI platforms help enterprises operationalize AI — bringing together data, purpose-built models, AI agents, networking, and security across data center, edge, and cloud — to transform operations, safeguard AI systems, and deliver real-world business outcomes at scale.</div>
-            <div class="track-feat-label">View Featured:</div>
-            <div class="track-feat-links">
-              <a href="#" class="track-feat-link">Sessions →</a>
-              <a href="#" class="track-feat-link">Labs →</a>
-              <a href="#" class="track-feat-link">Seminars →</a>
-            </div>
-            <a href="#" class="track-all-link">View all sessions <i class="fa fa-arrow-right"></i></a>
-          </div>
-          <div class="track-visual-box"><i class="fa fa-microchip"></i></div>
-        </div>
-      </div>
-      <!-- Track: Certifications -->
-      <div class="track-item">
-        <div class="track-item-header" onclick="toggleTrack(this)">
-          <span class="track-item-title">Certifications</span>
-          <i class="fa fa-chevron-down track-item-arrow"></i>
-        </div>
-        <div class="track-item-body">
-          <div>
-            <div class="track-body-desc">Advance your career with Cisco Certifications! Let cert experts give you guidance and hints to prep for Associate, Specialist, and Professional/Expert exams across AI, Security, Networking, Automation, and more.</div>
-            <div class="track-feat-label">View Featured:</div>
-            <div class="track-feat-links">
-              <a href="#" class="track-feat-link">Sessions →</a>
-              <a href="#" class="track-feat-link">Labs →</a>
-              <a href="#" class="track-feat-link">Seminars →</a>
-            </div>
-            <a href="#" class="track-all-link">View all sessions <i class="fa fa-arrow-right"></i></a>
-          </div>
-          <div class="track-visual-box"><i class="fa fa-certificate"></i></div>
-        </div>
-      </div>
-      <!-- Track: Collaboration -->
-      <div class="track-item">
-        <div class="track-item-header" onclick="toggleTrack(this)">
-          <span class="track-item-title">Collaboration</span>
-          <i class="fa fa-chevron-down track-item-arrow"></i>
-        </div>
-        <div class="track-item-body">
-          <div>
-            <div class="track-body-desc">Create connected workplaces where people and AI work side by side to elevate every experience. Discover how AI agents and people can collaborate effortlessly, breaking down barriers and unlocking smarter, more connected outcomes.</div>
-            <div class="track-feat-label">View Featured:</div>
-            <div class="track-feat-links">
-              <a href="#" class="track-feat-link">Sessions →</a>
-              <a href="#" class="track-feat-link">Labs →</a>
-              <a href="#" class="track-feat-link">Seminars →</a>
-            </div>
-            <a href="#" class="track-all-link">View all sessions <i class="fa fa-arrow-right"></i></a>
-          </div>
-          <div class="track-visual-box"><i class="fa fa-comments"></i></div>
-        </div>
-      </div>
-      <!-- Track: Data Center -->
-      <div class="track-item">
-        <div class="track-item-header" onclick="toggleTrack(this)">
-          <span class="track-item-title">Data Center</span>
-          <i class="fa fa-chevron-down track-item-arrow"></i>
-        </div>
-        <div class="track-item-body">
-          <div>
-            <div class="track-body-desc">Get the most out of AI. Accelerate your time to value with enhanced and simplified data center networking and full stack compute — in the data center and at the edge.</div>
-            <div class="track-feat-label">View Featured:</div>
-            <div class="track-feat-links">
-              <a href="#" class="track-feat-link">Sessions →</a>
-              <a href="#" class="track-feat-link">Labs →</a>
-              <a href="#" class="track-feat-link">Seminars →</a>
-            </div>
-            <a href="#" class="track-all-link">View all sessions <i class="fa fa-arrow-right"></i></a>
-          </div>
-          <div class="track-visual-box"><i class="fa fa-server"></i></div>
-        </div>
-      </div>
-      <!-- Track: DevNet -->
-      <div class="track-item">
-        <div class="track-item-header" onclick="toggleTrack(this)">
-          <span class="track-item-title">DevNet</span>
-          <i class="fa fa-chevron-down track-item-arrow"></i>
-        </div>
-        <div class="track-item-body">
-          <div>
-            <div class="track-body-desc">Beginner or expert? The Cisco developer track is built to meet you where you're at. Explore technical sessions on programmability, automation, app development, and APIs.</div>
-            <div class="track-feat-label">View Featured:</div>
-            <div class="track-feat-links">
-              <a href="#" class="track-feat-link">Sessions →</a>
-            </div>
-            <a href="#" class="track-all-link">View all sessions <i class="fa fa-arrow-right"></i></a>
-          </div>
-          <div class="track-visual-box"><i class="fa fa-code"></i></div>
-        </div>
-      </div>
-      <!-- Track: Security -->
-      <div class="track-item">
-        <div class="track-item-header" onclick="toggleTrack(this)">
-          <span class="track-item-title">Security</span>
-          <i class="fa fa-chevron-down track-item-arrow"></i>
-        </div>
-        <div class="track-item-body">
-          <div>
-            <div class="track-body-desc">Increase resilience and achieve superior security outcomes. Leverage the power of AI to deliver effective, scalable protection across your whole stack — from networks and cloud, to endpoints and email.</div>
-            <div class="track-feat-label">View Featured:</div>
-            <div class="track-feat-links">
-              <a href="#" class="track-feat-link">Sessions →</a>
-              <a href="#" class="track-feat-link">Labs →</a>
-              <a href="#" class="track-feat-link">Seminars →</a>
-            </div>
-            <a href="#" class="track-all-link">View all sessions <i class="fa fa-arrow-right"></i></a>
-          </div>
-          <div class="track-visual-box"><i class="fa fa-shield-halved"></i></div>
-        </div>
-      </div>
+<!-- SERVICIOS RÁPIDOS -->
+<div class="servicios-rapidos">
+  <div class="inner">
+    <h3>Accesos rápidos</h3>
+    <div class="servicios-grid">
+      <a href="#" class="servicio-item"><i class="fa fa-receipt"></i><span>Portal Tributario</span></a>
+      <a href="#" class="servicio-item"><i class="fa fa-chart-bar"></i><span>Contratación Pública</span></a>
+      <a href="#" class="servicio-item"><i class="fa fa-radio"></i><span>Radios Metropolitanas</span></a>
+      <a href="#" class="servicio-item"><i class="fa fa-calendar-star"></i><span>Agenda Cultural</span></a>
+      <a href="#" class="servicio-item"><i class="fa fa-newspaper"></i><span>El Quiteño</span></a>
+      <a href="#" class="servicio-item"><i class="fa fa-triangle-exclamation" style="color:#c8102e;"></i><span>Denuncia Corrupción</span></a>
     </div>
   </div>
 </div>
 
-<!-- ── IN-DEPTH TRAINING ── -->
-<div class="training-bg" id="training">
-  <div class="training-inner">
-    <div class="section-header">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cisco-blue);margin-bottom:8px;" class="reveal">In-Depth Training</div>
-        <h2 class="section-title reveal">Get in-depth training</h2>
-        <p style="color:#888;font-size:14px;margin-top:8px;" class="reveal">Join Cisco's expert instructors for in-depth training on core technologies. Earn CE credits with Labs and Seminars!</p>
+<!-- MAIN CONTENT -->
+<div class="main-content">
+  <!-- NOTICIAS -->
+  <div>
+    <div class="section-title">Quito Informa</div>
+    <div class="noticias-grid">
+      <div class="noticia-card">
+        <div class="noticia-img"><i class="fa fa-baby"></i></div>
+        <div class="noticia-body">
+          <div class="noticia-tag">Social</div>
+          <div class="noticia-title">Quito cuida a sus wawas: inversión pública y una declaración de amor</div>
+          <div class="noticia-date"><i class="fa fa-calendar" style="margin-right:4px;"></i>02 Jun 2025</div>
+        </div>
+      </div>
+      <div class="noticia-card">
+        <div class="noticia-img rojo"><i class="fa fa-award"></i></div>
+        <div class="noticia-body">
+          <div class="noticia-tag">Innovación</div>
+          <div class="noticia-title">Quito es el primer municipio en América Latina en utilizar la herramienta Wawamor</div>
+          <div class="noticia-date"><i class="fa fa-calendar" style="margin-right:4px;"></i>02 Jun 2025</div>
+        </div>
+      </div>
+      <div class="noticia-card">
+        <div class="noticia-img verde"><i class="fa fa-shield-halved"></i></div>
+        <div class="noticia-body">
+          <div class="noticia-tag">Seguridad</div>
+          <div class="noticia-title">Sube la percepción de seguridad en el Centro Histórico de Quito</div>
+          <div class="noticia-date"><i class="fa fa-calendar" style="margin-right:4px;"></i>02 Jun 2025</div>
+        </div>
+      </div>
+      <div class="noticia-card">
+        <div class="noticia-img morado"><i class="fa fa-coins"></i></div>
+        <div class="noticia-body">
+          <div class="noticia-tag">Tributario</div>
+          <div class="noticia-title">Hasta el 30 de junio puede aprovechar la remisión de intereses municipales</div>
+          <div class="noticia-date"><i class="fa fa-calendar" style="margin-right:4px;"></i>01 Jun 2025</div>
+        </div>
       </div>
     </div>
-    <div class="training-grid">
-      <div class="training-card reveal">
-        <div class="tm">Sunday – Thursday · 4 hours · Included with Full Conference</div>
-        <div class="tt">Instructor-led Labs</div>
-        <div class="td">Labs are hands-on training at its finest! Join Cisco's top instructors in a small group setting as they walk through simulated exercises to gain expertise and a deeper understanding for installing and troubleshooting core Cisco technologies.</div>
-        <a href="#" class="btn-sm"><i class="fa fa-flask"></i> Browse all Labs</a>
+  </div>
+
+  <!-- SIDEBAR -->
+  <div>
+    <div class="section-title">Servicios en línea</div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Trámites Municipales</div>
+      <div class="sidebar-list">
+        <a href="#"><i class="fa fa-arrow-right"></i> Impuesto predial urbano</a>
+        <a href="#"><i class="fa fa-arrow-right"></i> Patente municipal</a>
+        <a href="#"><i class="fa fa-arrow-right"></i> Permiso de construcción</a>
+        <a href="#"><i class="fa fa-arrow-right"></i> Uso de suelo</a>
+        <a href="#"><i class="fa fa-arrow-right"></i> Registro de vehículos</a>
       </div>
-      <div class="training-card reveal d1">
-        <div class="tm">Sunday only · 4 hours · $595 or 6 Learning Credits</div>
-        <div class="tt">Technical Seminars</div>
-        <div class="td">These seminars offer comprehensive, classroom-style training. Each seminar provides an in-depth look at a specific technology, design principle, or best practice — and complement corresponding Breakout sessions.</div>
-        <a href="#" class="btn-sm"><i class="fa fa-chalkboard-teacher"></i> Browse all Seminars</a>
+    </div>
+    <div class="sidebar-card">
+      <div class="sidebar-card-header rojo">Emergencias y Contacto</div>
+      <div class="sidebar-list">
+        <a href="#" class="rojo-icon"><i class="fa fa-phone"></i> ECU 911 — Emergencias</a>
+        <a href="#"><i class="fa fa-headset"></i> 1800 510 510 — Call Center</a>
+        <a href="#"><i class="fa fa-location-dot"></i> Venezuela y Espejo, Quito</a>
+        <a href="#"><i class="fa fa-envelope"></i> Correo institucional</a>
       </div>
+    </div>
+    <!-- BANNER CLICK TO CALL -->
+    <div style="background:linear-gradient(135deg,#003087,#004eb3);border-radius:10px;padding:20px;color:#fff;text-align:center;">
+      <div style="font-size:28px;margin-bottom:10px;">📞</div>
+      <div style="font-size:13px;font-weight:700;margin-bottom:6px;">¿Necesitas ayuda?</div>
+      <div style="font-size:11px;opacity:.85;margin-bottom:14px;line-height:1.5;">Habla con un funcionario municipal ahora mismo desde tu navegador</div>
+      <button onclick="toggleC2C()" style="background:#fff;color:#003087;border:none;padding:10px 20px;border-radius:20px;font-weight:700;font-size:12px;cursor:pointer;width:100%;transition:all .2s;" onmouseover="this.style.background='#f0f4ff'" onmouseout="this.style.background='#fff'">
+        <i class="fa fa-phone" style="margin-right:6px;"></i>Llamar ahora — es gratis
+      </button>
+      <div style="margin-top:10px;font-size:10px;opacity:.6;"><i class="fa fa-lock" style="margin-right:4px;"></i>Powered by Cisco Webex</div>
     </div>
   </div>
 </div>
 
-<!-- ── ACTIVITIES ── -->
-<div class="content-bg">
-  <div class="activities-inner">
-    <div class="section-header">
-      <div>
-        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cisco-blue);margin-bottom:8px;" class="reveal">Get Outside the Classroom</div>
-        <h2 class="section-title reveal">Beyond the sessions</h2>
-      </div>
-    </div>
-    <div class="activities-grid">
-      <div class="activity-card reveal"><span class="ai-icon">👷</span><div class="ai-title">Meet the Engineer</div><div class="ai-desc">Connect 1:1 with Cisco Engineers to discuss your questions and challenges.</div></div>
-      <div class="activity-card reveal d1"><span class="ai-icon">🔬</span><div class="ai-title">Walk-in Labs</div><div class="ai-desc">Experience hands-on learning as you explore Cisco technology at your own pace.</div></div>
-      <div class="activity-card reveal d2"><span class="ai-icon">🚩</span><div class="ai-title">Capture the Flag</div><div class="ai-desc">Put your skills to the test with real lab challenges. Earn CE credits.</div></div>
-      <div class="activity-card reveal d3"><span class="ai-icon">🛠️</span><div class="ai-title">TAC</div><div class="ai-desc">Tackle your challenges with the help of our Technical Assistance Center engineers.</div></div>
-    </div>
-  </div>
-</div>
-
-<!-- ── CERTIFICATION ── -->
-<div class="cert-bg" id="cert">
-  <div class="cert-inner">
-    <div>
-      <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cisco-blue);margin-bottom:10px;" class="reveal">Certification Exam</div>
-      <h2 class="section-title reveal">Boost your skills with a free certification exam</h2>
-      <p style="color:#888;font-size:14px;line-height:1.7;margin:12px 0;" class="reveal">Supercharge your career and conquer the skills gap! Get certified with a free onsite exam at the Certification Testing Center.</p>
-      <p style="font-size:13px;color:#666;" class="reveal"><strong style="color:var(--cisco-blue);">New this year:</strong> Splunk certifications will be available at Cisco Live.</p>
-      <h4 style="font-size:13px;font-weight:700;color:#fff;margin:24px 0 0;letter-spacing:.5px;" class="reveal">Certification Testing Center Hours</h4>
-      <table class="cert-table reveal">
-        <tr><th>Day</th><th>Hours</th></tr>
-        <tr><td>Sunday, May 31</td><td>12:00 – 5:00 PM</td></tr>
-        <tr><td>Monday, June 1</td><td>8:00 AM – 7:00 PM</td></tr>
-        <tr><td>Tuesday, June 2</td><td>8:00 AM – 7:00 PM</td></tr>
-        <tr><td>Wednesday, June 3</td><td>8:00 AM – 6:00 PM</td></tr>
-        <tr><td>Thursday, June 4</td><td>8:00 AM – 3:00 PM</td></tr>
-      </table>
-    </div>
-    <div class="cert-card reveal d2">
-      <i class="fa fa-medal"></i>
-      <h3>Get Certified</h3>
-      <p>Free exams included with Full Conference and IT Leadership packages. Register separately through Pearson by May 30. Seating is limited — first come, first served.</p>
+<!-- ZONAS -->
+<div class="zonas-section">
+  <div class="zonas-inner">
+    <div class="section-title">Administraciones Zonales</div>
+    <p style="color:var(--muted);font-size:13px;margin-bottom:4px;">Conozca qué sucede en cada zona del Distrito Metropolitano de Quito</p>
+    <div class="zonas-grid">
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Calderón</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Chocó Andino</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Eloy Alfaro</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Eugenio Espejo</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>La Delicia</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>La Mariscal</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Los Chillos</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Manuela Sáenz</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Quitumbe</span></a>
+      <a href="#" class="zona-item"><i class="fa fa-map-marker-alt"></i><span>Tumbaco</span></a>
     </div>
   </div>
 </div>
 
-<!-- ── SPONSORS ── -->
-<div class="sponsors-bg">
-  <div class="sponsors-inner">
-    <div class="sp-label">Thank you to our sponsors · Premier</div>
-    <div class="sponsors-row" style="margin-bottom:16px;"><div class="sp-chip">WWT</div></div>
-    <div class="sp-label">Diamond</div>
-    <div class="sponsors-row"><div class="sp-chip">NetApp</div><div class="sp-chip">Equinix</div><div class="sp-chip">CollabMCR</div></div>
-  </div>
-</div>
-
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
-    <div>
-      <div class="footer-left">Cisco Live 2026 <span style="color:var(--cisco-blue);">Las Vegas</span></div>
-      <div class="footer-contact">
-        <strong>Registration Support:</strong> <a href="#">1.866.405.2508</a> &nbsp;|&nbsp;
-        <strong>International:</strong> <a href="#">1.650.416.8768</a><br>
-        <strong>Email:</strong> <a href="#">ciscolive@ciscoevents.com</a>
-      </div>
-      <div class="footer-copy" style="margin-top:8px;">© Cisco Systems Inc. All Rights Reserved.</div>
-    </div>
-    <div style="display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+    <div class="footer-col">
+      <h4>Municipio de Quito</h4>
+      <p>El Gobierno Autónomo Descentralizado del Distrito Metropolitano de Quito trabaja por una ciudad más justa, segura y conectada para todos.</p>
+      <p><i class="fa fa-location-dot" style="margin-right:6px;"></i>Venezuela entre Espejo y Chile, Quito 170101</p>
+      <p><i class="fa fa-phone" style="margin-right:6px;"></i>(593-2) 3952300 · 1800 510 510</p>
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
-      <div class="footer-links">
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy Statement</a>
-        <a href="#">Cookie Policy</a>
-      </div>
-      <div style="font-size:10px;color:#2a2a3a;text-align:right;">Click-to-Call powered by <strong style="color:#3a3a5a;">CollabMCR · Cisco Webex</strong></div>
     </div>
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <a href="#">Portal Tributario</a>
+      <a href="#">Servicios Municipales</a>
+      <a href="#">Contratación Pública</a>
+      <a href="#">Gobierno Abierto</a>
+      <a href="#">Agenda Cultural</a>
+    </div>
+    <div class="footer-col">
+      <h4>Institución</h4>
+      <a href="#">Alcalde de Quito</a>
+      <a href="#">Concejo Metropolitano</a>
+      <a href="#">Ordenanzas</a>
+      <a href="#">Rendición de Cuentas</a>
+      <a href="#">Transparencia</a>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <a href="#">Protección de Datos</a>
+      <a href="#">Política de Cookies</a>
+      <a href="#">Mapa del sitio</a>
+      <a href="#">Accesibilidad</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © Municipio del Distrito Metropolitano de Quito. Todos los derechos reservados. &nbsp;|&nbsp;
+    <strong style="color:#009fe3;">Click-to-Call</strong> powered by <strong style="color:#009fe3;">Cisco Webex</strong>
   </div>
 </footer>
 
-<!-- ════════════════════════
-   CLICK-TO-CALL WIDGET
-════════════════════════ -->
+<!-- ══════════════════════════════════════
+     BOTÓN FLOTANTE CLICK-TO-CALL
+     ══════════════════════════════════════ -->
 <div class="c2c-fab" id="c2cFab">
-  <span class="c2c-tooltip">Cisco Live Support</span>
-  <button class="c2c-btn" onclick="toggleC2C()">
-    <div class="c2c-ring"></div>
+  <span class="c2c-tooltip">Habla con un agente municipal</span>
+  <button class="c2c-btn" onclick="toggleC2C()" title="Click-to-Call">
+    <div class="c2c-pulse"></div>
     <i class="fa fa-headset"></i>
   </button>
 </div>
 
+<!-- PANEL CLICK-TO-CALL -->
 <div class="c2c-panel" id="c2cPanel">
-  <div class="c2c-hdr">
-    <div class="c2c-hdr-l">
-      <div class="c2c-hdr-av"><i class="fa fa-headset"></i></div>
+  <div class="c2c-panel-header">
+    <div class="c2c-panel-header-left">
+      <div class="c2c-avatar"><i class="fa fa-headset"></i></div>
       <div>
-        <div class="c2c-hdr-title">Cisco Live Support</div>
-        <div class="c2c-hdr-sub">Registration & Technical Help · 2026</div>
+        <div class="c2c-panel-title">Soporte Municipal</div>
+        <div class="c2c-panel-sub">Municipio de Quito · En vivo</div>
       </div>
     </div>
     <button class="c2c-close" onclick="toggleC2C()"><i class="fa fa-times"></i></button>
   </div>
-  <div class="c2c-sbar">
-    <span class="c2c-slabel">Agent Status</span>
-    <div class="c2c-spill" id="statusPill"><div class="c2c-sdot"></div><span id="statusText">OFFLINE</span></div>
+  <div class="c2c-status-bar">
+    <span class="c2c-status-label">Estado del agente</span>
+    <div class="c2c-status-pill" id="statusPill">
+      <div class="c2c-dot"></div>
+      <span id="statusText">OFFLINE</span>
+    </div>
   </div>
   <div class="c2c-body">
-    <div class="c2c-agent">
-      <div class="c2c-av"><i class="fa fa-user-tie"></i></div>
-      <div class="c2c-name">Registration Support</div>
-      <div class="c2c-role">Cisco Live 2026 · Las Vegas, NV</div>
-      <div class="c2c-badge"><span></span>Available Now</div>
+    <div class="c2c-agent-info">
+      <div class="c2c-agent-avatar"><i class="fa fa-user-tie"></i></div>
+      <div class="c2c-agent-name">Atención Ciudadana</div>
+      <div class="c2c-agent-dept">Municipio del D.M. de Quito</div>
+      <div class="c2c-agent-status"><span></span>Disponible ahora</div>
     </div>
     <input type="tel" id="dialInput" style="display:none;"/>
-    <button class="c2c-cbtn" id="btnCall" onclick="placeCall()" disabled>
-      <i class="fa fa-phone"></i> Call now — it's free
+    <button class="c2c-call-btn" id="btnCall" onclick="placeCall()" disabled>
+      <i class="fa fa-phone"></i> Llamar ahora — es gratis
     </button>
-    <button class="c2c-mbtn" id="btnMute" onclick="toggleMute()" disabled>
-      <i class="fa fa-microphone" id="muteIcon"></i>
-      <span id="muteText">Mute</span>
+    <button class="c2c-hangup-btn" id="btnHangup" onclick="hangupCall()" disabled>
+      <i class="fa fa-phone-slash"></i> Finalizar llamada
     </button>
-    <button class="c2c-hbtn" id="btnHangup" onclick="hangupCall()" disabled>
-      <i class="fa fa-phone-slash"></i> End call
-    </button>
-    <div class="c2c-log" id="callLog"><p class="l-muted">» Connecting to Cisco Live support...</p></div>
-    <div class="c2c-foot"><i class="fa fa-lock"></i> Secure · Encrypted · Powered by Cisco Webex</div>
-    <div class="c2c-powered">Click-to-Call by <strong>CollabMCR Technology</strong></div>
+    <div class="c2c-log" id="callLog">
+      <p class="l-muted">» Conectando con el sistema municipal...</p>
+    </div>
+    <div class="c2c-footer">
+      <i class="fa fa-lock"></i> Llamada segura y encriptada
+    </div>
+    <div class="c2c-powered">Powered by <strong>Cisco Webex Calling</strong></div>
   </div>
 </div>
 
-<!-- SCRIPTS -->
+<!-- ══════════════════════════════════════
+     WEBEX SDK + APP.JS
+     ══════════════════════════════════════ -->
 <script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/webex.min.js"></script>
 <script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
 <script data-cfasync="false" src="js/app.js"></script>
 <script>
-// SCROLL REVEAL
-const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:.08});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
-
-// TRACK ACCORDION
-function toggleTrack(hdr){
-  const item=hdr.parentElement;
-  const body=item.querySelector('.track-item-body');
-  const isOpen=hdr.classList.contains('open');
-  // Cerrar todos
-  document.querySelectorAll('.track-item-header').forEach(h=>h.classList.remove('open'));
-  document.querySelectorAll('.track-item-body').forEach(b=>b.classList.remove('open'));
-  // Abrir este si estaba cerrado
-  if(!isOpen){hdr.classList.add('open');body.classList.add('open');}
-}
-
-// C2C PANEL
-let panelOpen=false;
+// ── UI del panel ──────────────────────────────────
+let panelOpen = false;
 function toggleC2C(){
-  panelOpen=!panelOpen;
-  document.getElementById('c2cPanel').classList.toggle('open',panelOpen);
-  document.getElementById('c2cFab').style.display=panelOpen?'none':'flex';
+  panelOpen = !panelOpen;
+  document.getElementById('c2cPanel').classList.toggle('open', panelOpen);
+  document.getElementById('c2cFab').style.display = panelOpen ? 'none' : 'flex';
 }
 
-// STATE
-const S={webex:null,calling:null,line:null,call:null};
+// ── Estado ───────────────────────────────────────
+const S = {webex:null,calling:null,line:null,call:null};
 
-function log(msg,t='muted'){
-  const el=document.getElementById('callLog'),p=document.createElement('p');
-  p.className='l-'+t;
-  p.textContent='['+new Date().toLocaleTimeString('en',{hour12:false})+'] '+msg;
-  el.appendChild(p);el.scrollTop=el.scrollHeight;
+function log(msg, t='muted'){
+  const el = document.getElementById('callLog');
+  const p = document.createElement('p');
+  p.className = 'l-'+t;
+  p.textContent = '['+new Date().toLocaleTimeString('es',{hour12:false})+'] '+msg;
+  el.appendChild(p);
+  el.scrollTop = el.scrollHeight;
 }
 
 function setStatus(s){
-  const pill=document.getElementById('statusPill');
-  const txt=document.getElementById('statusText');
-  pill.className='c2c-spill'+(s==='registered'?' online':s==='connecting'?' connecting':'');
-  const map={registered:'ONLINE',connecting:'SYNCING...',offline:'OFFLINE'};
-  txt.textContent=map[s]||s.toUpperCase();
+  const pill = document.getElementById('statusPill');
+  const txt  = document.getElementById('statusText');
+  pill.className = 'c2c-status-pill' + (s==='registered'?' online':s==='connecting'?' connecting':'');
+  const map = {registered:'ONLINE', connecting:'CONECTANDO...', offline:'OFFLINE'};
+  txt.textContent = map[s] || s.toUpperCase();
 }
 
-function setBtns(c,h){
-  document.getElementById('btnCall').disabled=!c;
-  document.getElementById('btnHangup').disabled=!h;
-  document.getElementById('btnMute').disabled=!h;
-  if(!h)setMuteUI(false);
+function setBtns(call, hangup){
+  document.getElementById('btnCall').disabled   = !call;
+  document.getElementById('btnHangup').disabled = !hangup;
 }
 
-let isMuted=false;
-function setMuteUI(muted){
-  isMuted=muted;
-  document.getElementById('muteIcon').className='fa fa-microphone'+(muted?'-slash':'');
-  document.getElementById('muteText').textContent=muted?'Unmute':'Mute';
-  document.getElementById('btnMute').classList.toggle('muted',muted);
-}
-
-function toggleMute(){
-  if(!S.call)return;
-  try{
-    if(isMuted){(S.call.unmute||S.call.unmuteAudio||function(){}).call(S.call);setMuteUI(false);}
-    else{(S.call.mute||S.call.muteAudio||function(){}).call(S.call);setMuteUI(true);}
-  }catch(e){log('Mute error: '+e.message,'err');}
-}
-
+// ── Inicializar Webex ─────────────────────────────
 async function initWebex(){
   setStatus('connecting');
-  log('Connecting to Cisco Live...','info');
+  log('Conectando con Municipio de Quito...','info');
   try{
-    const webexConfig=await getWebexConfig();
-    const callingConfig=await getCallingConfig();
-    log('Tokens OK. Starting SDK...','ok');
-    const calling=await Calling.init({webexConfig,callingConfig});
-    calling.on('ready',()=>{
-      log('SDK ready. Registering...','info');
-      calling.register().then(()=>{
-        const lines=Object.values(calling.callingClient.getLines());
-        if(!lines||lines.length===0){log('No lines found.','err');setStatus('offline');return;}
-        S.line=lines[0];
-        S.line.on('registered',()=>{log('✅ Ready. Click "Call now".','ok');setStatus('registered');setBtns(true,false);});
-        S.line.on('line:incoming_call',call=>{
-          S.call=call;log('📞 Incoming call.','info');setBtns(false,true);
-          call.on('disconnect',onEnd);
-          call.on('remote_media',track=>{let a=document.getElementById('remote-audio');if(!a){a=document.createElement('audio');a.id='remote-audio';a.autoplay=true;document.body.appendChild(a);}a.srcObject=new MediaStream([track]);});
+    const webexConfig   = await getWebexConfig();
+    const callingConfig = await getCallingConfig();
+    log('Sistema listo. Registrando agente...','ok');
+
+    const calling = await Calling.init({ webexConfig, callingConfig });
+    calling.on('ready', () => {
+      calling.register().then(() => {
+        const callingClient = calling.callingClient;
+        const lines = Object.values(callingClient.getLines());
+        if(!lines || lines.length === 0){
+          log('Sin líneas disponibles.','err');
+          setStatus('offline');
+          return;
+        }
+        S.line = lines[0];
+        S.line.on('registered', () => {
+          log('✅ Agente disponible. Puede llamar.','ok');
+          setStatus('registered');
+          setBtns(true, false);
+        });
+        S.line.on('line:incoming_call', (call) => {
+          S.call = call;
+          log('📞 Llamada entrante.','info');
+          setBtns(false, true);
+          call.on('disconnect', onEnd);
+          call.on('remote_media', (track) => {
+            let audio = document.getElementById('remote-audio');
+            if(!audio){ audio=document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
+            audio.srcObject = new MediaStream([track]);
+          });
         });
         S.line.register();
-      }).catch(e=>{log('Register error: '+e.message,'err');setStatus('offline');});
+      }).catch(e => { log('Error: '+e.message,'err'); setStatus('offline'); });
     });
-  }catch(e){log('Init error: '+e.message,'err');setStatus('offline');}
+  }catch(e){
+    log('Error de conexión: '+e.message,'err');
+    setStatus('offline');
+  }
 }
 
 async function placeCall(){
-  if(!S.line){log('Not registered yet.','err');return;}
-  if(S.call){log('Call already active.','err');return;}
-  log('Requesting microphone...','info');
+  if(!S.line){ log('Sin conexión.','err'); return; }
+  if(S.call){ log('Llamada ya activa.','err'); return; }
+  log('Solicitando micrófono...','info');
   try{
-    const localAudioStream=await Calling.createMicrophoneStream({audio:true});
-    log('Mic OK. Calling support...','info');
-    S.call=S.line.makeCall();
-    S.call.on('progress',()=>log('Ringing...','info'));
-    S.call.on('connect',()=>log('✅ Call connected.','ok'));
-    S.call.on('established',()=>log('Media established.','ok'));
-    S.call.on('disconnect',onEnd);
-    S.call.on('remote_media',track=>{let a=document.getElementById('remote-audio');if(!a){a=document.createElement('audio');a.id='remote-audio';a.autoplay=true;document.body.appendChild(a);}a.srcObject=new MediaStream([track]);});
+    const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
+    log('Conectando con atención ciudadana...','info');
+    S.call = S.line.makeCall();
+    S.call.on('progress',    () => log('Llamando...','info'));
+    S.call.on('connect',     () => log('✅ Conectado con agente municipal.','ok'));
+    S.call.on('established', () => log('Audio establecido.','ok'));
+    S.call.on('disconnect',  onEnd);
+    S.call.on('remote_media', (track) => {
+      let audio = document.getElementById('remote-audio');
+      if(!audio){ audio=document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
+      audio.srcObject = new MediaStream([track]);
+    });
     await S.call.dial(localAudioStream);
-    setBtns(false,true);
-    log('Call in progress...','info');
-  }catch(e){log('Call error: '+e.message,'err');S.call=null;}
+    setBtns(false, true);
+    log('Llamada en curso...','info');
+  }
+  catch(e){ log('Error: '+e.message,'err'); S.call=null; }
 }
 
 function hangupCall(){
-  if(!S.call)return;
-  log('Ending call...','muted');
+  if(!S.call){ return; }
+  log('Finalizando llamada...','muted');
   try{
-    if(typeof S.call.end==='function')S.call.end();
-    else if(typeof S.call.disconnect==='function')S.call.disconnect();
+    if(typeof S.call.end === 'function') S.call.end();
+    else if(typeof S.call.disconnect === 'function') S.call.disconnect();
   }catch(e){}
-  setTimeout(()=>{if(S.call){S.call=null;setBtns(true,false);log('Call ended. Thank you!','muted');}},1500);
+  setTimeout(() => { if(S.call){ S.call=null; setBtns(true,false); log('Llamada finalizada. ¡Gracias!','muted'); } }, 1500);
 }
 
-function onEnd(){S.call=null;setBtns(true,false);log('Call ended. Thank you!','muted');}
+function onEnd(){
+  S.call = null;
+  setBtns(true, false);
+  log('Llamada finalizada. ¡Gracias por contactarnos!','muted');
+}
 
-window.addEventListener('DOMContentLoaded',async()=>{ await initWebex(); });
+// Iniciar al cargar
+window.addEventListener('DOMContentLoaded', async () => {
+  await initWebex();
+});
 </script>
 </body>
 </html>
