@@ -219,13 +219,7 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
    CLICK-TO-CHAT WIDGET (IMIconnect)
 ═══════════════════════════════════ */
 /* Wrapper de ambos FABs */
-/* Chat FAB — esquina inferior IZQUIERDA */
-.chat-fab-wrap{position:fixed;bottom:98px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
-.chat-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
-.chat-fab-wrap:hover .chat-tooltip{opacity:1;transform:translateX(0);}
-.chat-btn{width:54px;height:54px;border-radius:50%;background:#00843d;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,61,.45);transition:all .2s;position:relative;}
-.chat-btn:hover{background:#006b32;transform:scale(1.06);}
-.chat-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(0,132,61,.35);animation:ring-pulse 2.5s ease-out infinite;}
+
 </style>
 </head>
 <body>
@@ -497,86 +491,6 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 
 
 
-<!-- BOTONES FLOTANTES: Chat + Call -->
-<!-- CLICK-TO-CHAT — esquina inferior izquierda -->
-<div class="chat-fab-wrap" id="chatFabWrap">
-  <span class="chat-tooltip">Chat con Holcim</span>
-  <button class="chat-btn" id="chatFabBtn" onclick="toggleChat()">
-    <div class="chat-ring"></div>
-    <i class="fa fa-comment-dots"></i>
-  </button>
-</div>
-
-<!-- PANEL CHAT (Webex Connect / IMIconnect SDK) -->
-<div id="chatPanel" style="
-  position:fixed;bottom:170px;right:28px;z-index:9997;
-  width:320px;background:#fff;border:1px solid #e0e0e0;
-  border-radius:8px;box-shadow:0 16px 48px rgba(0,0,0,.18);
-  overflow:hidden;font-family:Inter,sans-serif;
-  transform:scale(.88) translateY(12px);opacity:0;pointer-events:none;
-  transition:all .3s cubic-bezier(.22,.68,0,1.2);transform-origin:bottom left;">
-
-  <!-- Header -->
-  <div style="background:#0d2240;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;">
-    <div style="display:flex;align-items:center;gap:10px;">
-      <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);
-                  display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;">
-        <i class="fa fa-comment-dots"></i>
-      </div>
-      <div>
-        <div style="font-size:13px;font-weight:700;color:#fff;">Chat Holcim Colombia</div>
-        <div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:1px;">Servicio al Cliente</div>
-      </div>
-    </div>
-    <button onclick="toggleChat()"
-      style="background:none;border:none;color:rgba(255,255,255,.6);font-size:14px;cursor:pointer;">
-      <i class="fa fa-times"></i>
-    </button>
-  </div>
-
-  <!-- Status bar -->
-  <div style="background:#f8f9fa;padding:8px 16px;border-bottom:1px solid #e0e0e0;
-              display:flex;align-items:center;justify-content:space-between;">
-    <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;">Estado</span>
-    <div class="c2c-spill" id="chatStatusPill">
-      <div class="c2c-sdot"></div>
-      <span id="chatStatusTxt">OFFLINE</span>
-    </div>
-  </div>
-
-  <!-- Mensajes -->
-  <div id="chatMessages" style="
-    padding:12px;min-height:160px;max-height:220px;
-    overflow-y:auto;background:#fff;display:flex;flex-direction:column;">
-  </div>
-
-  <!-- Log de debug (oculto, visible en consola) -->
-  <div id="chatDevLog" class="c2c-log" style="display:none;max-height:60px;margin:0 12px;"></div>
-
-  <!-- Input -->
-  <div style="padding:10px 12px;border-top:1px solid #e0e0e0;display:flex;gap:8px;">
-    <input id="chatInput" type="text" placeholder="Escribe un mensaje..."
-      style="flex:1;padding:9px 12px;border:1px solid #e0e0e0;border-radius:4px;
-             font-size:12px;outline:none;font-family:inherit;"/>
-    <button onclick="sendChatMsg()"
-      style="background:#0d2240;color:#fff;border:none;padding:9px 14px;
-             border-radius:4px;font-size:13px;cursor:pointer;transition:background .2s;"
-      onmouseover="this.style.background='#1a4fa0'" onmouseout="this.style.background='#0d2240'">
-      <i class="fa fa-paper-plane"></i>
-    </button>
-  </div>
-
-  <!-- Footer -->
-  <div style="padding:8px;text-align:center;font-size:9px;color:#bbb;border-top:1px solid #e0e0e0;">
-    <i class="fa fa-lock" style="color:#00843d;margin-right:3px;"></i>
-    Chat seguro · Powered by Cisco Webex Connect
-  </div>
-</div>
-
-<style>
-#chatPanel.open{transform:scale(1) translateY(0)!important;opacity:1!important;pointer-events:all!important;}
-</style>
-
 <!-- CLICK-TO-CALL — esquina inferior derecha -->
 <div class="c2c-fab" id="c2cFab">
   <span class="c2c-tooltip">Servicio al Cliente Holcim</span>
@@ -630,211 +544,8 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 <script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
 <script data-cfasync="false" src="js/app.js"></script>
 
-<!-- ── Webex Connect JS SDK — Click to Chat ───────────── -->
-<!-- jQuery requerido por el SDK de IMIconnect -->
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<!-- Config del asset (appId, appSecret, clientKey) -->
-<script src="imi-environments.js"></script>
-<!-- SDK: descargar de https://github.com/webex/webexconnect-javascript-sdk/releases
-     y colocar en assets/js/webex-connect-sdk.min.js                               -->
-<script src="assets/js/webex-connect-sdk.min.js"></script>
-
 <!-- SCRIPTS -->
 <script>
-// ── CHAT — Webex Connect JavaScript SDK ──────────────────
-// Estado global del chat
-const CHAT = {
-  initialized: false,
-  connected:   false,
-  thread:      null,
-  messaging:   null,
-  userId:      'holcim_visitor_' + Math.random().toString(36).substr(2, 8),
-};
-
-// Abrir / cerrar el panel de chat
-function toggleChat() {
-  const panel = document.getElementById('chatPanel');
-  const fab   = document.getElementById('chatFabBtn');
-  if (!panel) return;
-
-  const isOpen = panel.classList.contains('open');
-  if (isOpen) {
-    panel.classList.remove('open');
-    fab.innerHTML = '<div class="chat-ring"></div><i class="fa fa-comment-dots"></i>';
-  } else {
-    panel.classList.add('open');
-    fab.innerHTML = '<i class="fa fa-times"></i>';
-    if (!CHAT.initialized) initChat();
-  }
-}
-
-// ── Paso 1: Startup ──────────────────────────────────────
-function initChat() {
-  chatLog('Iniciando Webex Connect SDK...', 'info');
-  try {
-    IMI.IMIconnect.startup();
-    chatLog('SDK iniciado correctamente.', 'ok');
-    checkAndRegister();
-  } catch(e) {
-    chatLog('Error al iniciar SDK: ' + e.message, 'err');
-  }
-}
-
-// ── Paso 2 & 3: Verificar registro y registrar usuario ──
-function checkAndRegister() {
-  try {
-    if (IMI.IMIconnect.isRegistered()) {
-      chatLog('Usuario ya registrado.', 'ok');
-      setupMessaging();
-    } else {
-      registerUser();
-    }
-  } catch(e) {
-    registerUser();
-  }
-}
-
-function registerUser() {
-  chatLog('Registrando usuario...', 'info');
-  const deviceID     = CHAT.userId + '_' + new Date().getTime();
-  const deviceProfile = new IMI.ICDeviceProfile(deviceID, CHAT.userId);
-  // Agregar Client Key al perfil si el SDK lo soporta
-  if (typeof deviceProfile.setClientKey === 'function') {
-    deviceProfile.setClientKey(imiEnvironments.default.asset.clientKey);
-  }
-
-  IMI.IMIconnect.register(deviceProfile, {
-    onSuccess: (msg) => {
-      chatLog('Registro exitoso.', 'ok');
-      CHAT.initialized = true;
-      setupMessaging();
-    },
-    onFailure: (err) => {
-      chatLog('Error de registro: ' + JSON.stringify(err), 'err');
-    }
-  });
-}
-
-// ── Paso 4: Listener de mensajes ────────────────────────
-function setupMessaging() {
-  CHAT.messaging = IMI.ICMessaging.getInstance();
-
-  CHAT.messaging.setICMessagingReceiver({
-    onConnectionStatusChanged: (statusCode) => {
-      const connected = (statusCode === 2); // 2 = CONNECTED
-      CHAT.connected = connected;
-      setChatStatus(connected ? 'online' : 'connecting');
-      chatLog('Estado de conexión: ' + statusCode, 'info');
-      if (connected && !CHAT.thread) createConversationThread();
-    },
-    onMessageReceived: (message) => {
-      const text = message.getMessage ? message.getMessage() : (message.message || JSON.stringify(message));
-      appendChatBubble(text, 'agent');
-    }
-  });
-
-  // ── Paso 5: Conectar ────────────────────────────────
-  if (!CHAT.messaging.isConnected()) {
-    chatLog('Conectando al servidor de mensajería...', 'info');
-    CHAT.messaging.connect();
-  } else {
-    CHAT.connected = true;
-    setChatStatus('online');
-    if (!CHAT.thread) createConversationThread();
-  }
-}
-
-// ── Crear hilo de conversación ──────────────────────────
-function createConversationThread() {
-  const thread = new IMI.ICThread();
-  thread.setTitle('Consulta Holcim Colombia');
-  thread.setStatus(IMI.ICThreadStatus.Active);
-  thread.setType(IMI.ICThreadType.Conversation);
-
-  CHAT.messaging.createThread(thread, {
-    onSuccess: (threadObj) => {
-      CHAT.thread = threadObj;
-      chatLog('Conversación iniciada.', 'ok');
-      // Mensaje de bienvenida del agente
-      appendChatBubble('👋 ¡Hola! Bienvenido a Holcim Colombia. ¿En qué podemos ayudarte hoy?', 'agent');
-    },
-    onFailure: (err) => {
-      chatLog('Error al crear hilo: ' + JSON.stringify(err), 'err');
-    }
-  });
-}
-
-// ── Enviar mensaje ──────────────────────────────────────
-function sendChatMsg() {
-  const inp = document.getElementById('chatInput');
-  if (!inp || !inp.value.trim()) return;
-  const text = inp.value.trim();
-  inp.value = '';
-
-  // Mostrar burbuja del usuario inmediatamente
-  appendChatBubble(text, 'user');
-
-  if (!CHAT.thread || !CHAT.messaging) {
-    chatLog('Sin conexión activa. Reconectando...', 'err');
-    initChat();
-    return;
-  }
-
-  const message = new IMI.ICMessage();
-  message.setMessage(text);
-  message.setThread(CHAT.thread);
-
-  CHAT.messaging.publishMessage(message, {
-    onSuccess: (msg) => { /* mensaje enviado */ },
-    onFailure: (err) => {
-      chatLog('Error al enviar: ' + JSON.stringify(err), 'err');
-    }
-  });
-}
-
-// ── Helpers de UI ───────────────────────────────────────
-function appendChatBubble(text, role) {
-  const box = document.getElementById('chatMessages');
-  if (!box) return;
-  const isUser  = role === 'user';
-  const wrapper = document.createElement('div');
-  wrapper.style.cssText = 'display:flex;justify-content:' + (isUser ? 'flex-end' : 'flex-start') + ';margin-top:8px;';
-  wrapper.innerHTML = '<div style="' +
-    (isUser
-      ? 'background:#0d2240;color:#fff;'
-      : 'background:#f0f4ff;color:#0d2240;') +
-    'padding:8px 12px;border-radius:' +
-    (isUser ? '8px 8px 2px 8px' : '8px 8px 8px 2px') +
-    ';max-width:85%;font-size:13px;line-height:1.5;">' + text + '</div>';
-  box.appendChild(wrapper);
-  box.scrollTop = box.scrollHeight;
-}
-
-function chatLog(msg, type) {
-  const log = document.getElementById('chatDevLog');
-  if (!log) return;
-  const p = document.createElement('p');
-  p.className = 'l-' + (type || 'muted');
-  p.textContent = '[' + new Date().toLocaleTimeString('es', {hour12:false}) + '] ' + msg;
-  log.appendChild(p);
-  log.scrollTop = log.scrollHeight;
-}
-
-function setChatStatus(state) {
-  const pill = document.getElementById('chatStatusPill');
-  const txt  = document.getElementById('chatStatusTxt');
-  if (!pill || !txt) return;
-  pill.className = 'c2c-spill' + (state === 'online' ? ' online' : state === 'connecting' ? ' connecting' : '');
-  const map = { online: 'EN LÍNEA', connecting: 'CONECTANDO...', offline: 'OFFLINE' };
-  txt.textContent = map[state] || state.toUpperCase();
-}
-
-// Enter para enviar
-document.addEventListener('DOMContentLoaded', () => {
-  const inp = document.getElementById('chatInput');
-  if (inp) inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendChatMsg(); });
-});
-
 // ── CALL C2C Panel ─────────────────────────────────────
 
 // C2C Panel
@@ -948,5 +659,9 @@ function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada. ¡Grac
 
 window.addEventListener('DOMContentLoaded',async()=>{ await initWebex(); });
 </script>
+<!-- ── Click to Chat — IMIconnect Widget oficial ─────── -->
+<div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
+<script>var i={t:function(){try{var e=document.getElementById("divicw"),t=document.createElement("script");t.src="https://media.imi.chat/widget/js/imichatinit.js?t="+new Date().toISOString(),e.insertAdjacentElement("afterend",t),t.addEventListener("load",function(){console.log(new Date().toISOString(),"Livechat script loaded successfully!")}),t.addEventListener("error",function(){console.log(new Date().toISOString(),"Error loading Livechat script");i.o(e)})}catch(e){console.error(e)}},o:function(e){e.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow:hidden;height:208px;width:394px;position:fixed;display:block;right:48px;bottom:12px;z-index:99999;display:none;"></iframe>');var t=document.getElementById("tls_al_frm"),n=t.contentWindow,d=n.document;d.open();d.write("<!doctype html><html><head><meta charset='utf-8'><title>Untitled Document</title><style>body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#99a0b0;font-size:14px}.popover__content{background-color:#fbfbfe;padding:1.5rem;border-radius:5px;width:300px;box-shadow:0 2px 5px 0 rgba(0,0,0,0.26);position:relative}.popover__message{font-weight:600;color:#56627c;font-size:16px}.pull-left{float:left}.clearfix{clear:both}.hdr-txt{width:218px;margin-top:3px}.para-txt a{text-decoration:none;color:#005cde}.close-btn{position:absolute;right:15px;top:15px}.close-btn a{text-decoration:none;font-weight:400;color:#56627c;font-size:16px}</style></head><body><div class='popover__content'><div class='close-btn'><a href='#' onclick='closeTLSAlert()'>X</a></div><div class='popover__message'><div class='pull-left hdr-txt'>This browser version is not supported on LiveChat.</div></div><div class='clearfix'></div><p class='para-txt'>Please update your browser to the latest version and re-open the website to access the widget.</p></div><script>function closeTLSAlert(){window.parent.postMessage({key:'close_tls_alert',value:'close_tls_alert',action:'close_tls_alert'},'*');}<\/script></body></html>");d.close();t.style.display='block';window.addEventListener('message',function(e){'close_tls_alert'===e.data.action&&i.s()})},s:function(){var e=document.getElementById('tls_al_frm');e&&e.remove()}};i.t();</script>
+
 </body>
 </html>
