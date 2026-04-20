@@ -143,7 +143,7 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 /* ═══════════════════════════
    CLICK-TO-CALL WIDGET
 ═══════════════════════════ */
-.c2c-fab{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
+.c2c-fab{position:fixed;bottom:100px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
 .c2c-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
 .c2c-fab:hover .c2c-tooltip{opacity:1;transform:translateX(0);}
 .c2c-btn{width:54px;height:54px;border-radius:50%;background:var(--blue);color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(26,79,160,.5);transition:all .2s;position:relative;}
@@ -153,7 +153,7 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 
 /* Panel */
 .c2c-panel{
-  position:fixed;bottom:28px;right:28px;z-index:9998;width:320px;
+  position:fixed;bottom:160px;right:28px;z-index:9998;width:320px;
   background:#fff;border:1px solid var(--border);border-radius:8px;
   box-shadow:0 16px 48px rgba(0,0,0,.18);overflow:hidden;
   transform:scale(.85) translateY(16px);opacity:0;pointer-events:none;
@@ -221,13 +221,6 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 /* Wrapper de ambos FABs */
 
 
-/* ── Botón flotante Click to Chat ─────────────────────── */
-.chat-fab{position:fixed;bottom:98px;right:28px;z-index:99998;pointer-events:none;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
-.chat-fab-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
-.chat-fab:hover .chat-fab-tooltip{opacity:1;transform:translateX(0);}
-.chat-fab-btn{width:54px;height:54px;border-radius:50%;background:#00843d;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,61,.45);transition:all .2s;position:relative;pointer-events:none;}
-.chat-fab-btn:hover{background:#006b32;transform:scale(1.06);}
-.chat-fab-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(0,132,61,.35);animation:ring-pulse 2.5s ease-out infinite;}
 
 </style>
 </head>
@@ -500,15 +493,6 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 
 
 
-<!-- ── Botón flotante Click to Chat ──────────────────── -->
-<div class="chat-fab" id="chatFab">
-  <span class="chat-fab-tooltip">Chat con Holcim</span>
-  <button class="chat-fab-btn" id="chatFabBtn" onclick="openChatWidget()">
-    <div class="chat-fab-ring"></div>
-    <i class="fa fa-comment-dots"></i>
-  </button>
-</div>
-
 <!-- CLICK-TO-CALL — esquina inferior derecha -->
 <div class="c2c-fab" id="c2cFab">
   <span class="c2c-tooltip">Servicio al Cliente Holcim</span>
@@ -679,73 +663,6 @@ window.addEventListener('DOMContentLoaded',async()=>{ await initWebex(); });
 
 
 </script>
-<!-- ── Overlay: iframe nativo invisible encima del botón verde ── -->
-<script>
-(function(){
-  var KNOWN = ['chatFab','chatFabBtn','c2cFab','c2cPanel','divicw'];
-
-  function processNode(node) {
-    if (!node || node.nodeType !== 1) return;
-    var id  = (node.id  || '');
-    var cls = (typeof node.className === 'string' ? node.className : '');
-    var src = (node.getAttribute && node.getAttribute('src') || '');
-    var isKnown = KNOWN.indexOf(node.id) !== -1;
-    if (isKnown) return;
-
-    // ¿Parece el launcher del widget?
-    var isLauncher = /imi|icw|livechat/i.test(id + cls + src) || node.tagName === 'IFRAME';
-    if (!isLauncher) return;
-
-    // Posicionarlo EXACTAMENTE sobre nuestro botón verde
-    // Nuestro botón: bottom:98px right:28px width:54px height:54px
-    node.style.setProperty('position',      'fixed',   'important');
-    node.style.setProperty('bottom',        '98px',    'important');
-    node.style.setProperty('right',         '28px',    'important');
-    node.style.setProperty('width',         '54px',    'important');
-    node.style.setProperty('height',        '54px',    'important');
-    node.style.setProperty('min-width',     '54px',    'important');
-    node.style.setProperty('min-height',    '54px',    'important');
-    node.style.setProperty('border-radius', '50%',     'important');
-    node.style.setProperty('opacity',       '0',       'important');  // invisible
-    node.style.setProperty('pointer-events','all',     'important');  // recibe clicks
-    node.style.setProperty('z-index',       '99999',   'important');  // ENCIMA del verde
-    node.style.setProperty('overflow',      'hidden',  'important');
-    node.style.setProperty('border',        'none',    'important');
-    node.style.setProperty('background',    'transparent','important');
-    node.style.setProperty('padding',       '0',       'important');
-    node.style.setProperty('margin',        '0',       'important');
-
-    console.log('IMIconnect launcher overlaid:', node.tagName, node.id);
-  }
-
-  // Nuestro botón verde es solo decorativo — el click lo recibe el iframe encima
-  document.addEventListener('DOMContentLoaded', function(){
-    var greenBtn = document.getElementById('chatFabBtn');
-    if (greenBtn) {
-      greenBtn.style.setProperty('pointer-events', 'none', 'important');
-      greenBtn.removeAttribute('onclick');
-    }
-    var chatFab = document.getElementById('chatFab');
-    if (chatFab) {
-      chatFab.style.setProperty('pointer-events', 'none', 'important');
-    }
-  });
-
-  var obs = new MutationObserver(function(mutations){
-    mutations.forEach(function(m){
-      m.addedNodes.forEach(function(n){
-        processNode(n);
-        if (n.querySelectorAll){
-          n.querySelectorAll('iframe,[id*="imi"],[id*="icw"]').forEach(processNode);
-        }
-      });
-    });
-  });
-
-  obs.observe(document.body, { childList: true, subtree: true });
-})();
-</script>
-
 <!-- ── Click to Chat — IMIconnect Widget oficial ─────── -->
 <div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
 <script>var i={t:function(){try{var e=document.getElementById("divicw"),t=document.createElement("script");t.src="https://media.imi.chat/widget/js/imichatinit.js?t="+new Date().toISOString(),e.insertAdjacentElement("afterend",t),t.addEventListener("load",function(){console.log(new Date().toISOString(),"Livechat script loaded successfully!")}),t.addEventListener("error",function(){console.log(new Date().toISOString(),"Error loading Livechat script");i.o(e)})}catch(e){console.error(e)}},o:function(e){e.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow:hidden;height:208px;width:394px;position:fixed;display:block;right:48px;bottom:12px;z-index:99999;display:none;"></iframe>');var t=document.getElementById("tls_al_frm"),n=t.contentWindow,d=n.document;d.open();d.write("<!doctype html><html><head><meta charset='utf-8'><title>Untitled Document</title><style>body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#99a0b0;font-size:14px}.popover__content{background-color:#fbfbfe;padding:1.5rem;border-radius:5px;width:300px;box-shadow:0 2px 5px 0 rgba(0,0,0,0.26);position:relative}.popover__message{font-weight:600;color:#56627c;font-size:16px}.pull-left{float:left}.clearfix{clear:both}.hdr-txt{width:218px;margin-top:3px}.para-txt a{text-decoration:none;color:#005cde}.close-btn{position:absolute;right:15px;top:15px}.close-btn a{text-decoration:none;font-weight:400;color:#56627c;font-size:16px}</style></head><body><div class='popover__content'><div class='close-btn'><a href='#' onclick='closeTLSAlert()'>X</a></div><div class='popover__message'><div class='pull-left hdr-txt'>This browser version is not supported on LiveChat.</div></div><div class='clearfix'></div><p class='para-txt'>Please update your browser to the latest version and re-open the website to access the widget.</p></div><script>function closeTLSAlert(){window.parent.postMessage({key:'close_tls_alert',value:'close_tls_alert',action:'close_tls_alert'},'*');}<\/script></body></html>");d.close();t.style.display='block';window.addEventListener('message',function(e){'close_tls_alert'===e.data.action&&i.s()})},s:function(){var e=document.getElementById('tls_al_frm');e&&e.remove()}};i.t();</script>
