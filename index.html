@@ -219,11 +219,9 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
    CLICK-TO-CHAT WIDGET (IMIconnect)
 ═══════════════════════════════════ */
 /* Wrapper de ambos FABs */
-.fab-stack{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
-
-/* Chat FAB */
-.chat-fab-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
-.chat-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
+/* Chat FAB — esquina inferior IZQUIERDA */
+.chat-fab-wrap{position:fixed;bottom:28px;left:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-start;gap:8px;}
+.chat-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(-8px);transition:all .2s;pointer-events:none;}
 .chat-fab-wrap:hover .chat-tooltip{opacity:1;transform:translateX(0);}
 .chat-btn{width:54px;height:54px;border-radius:50%;background:#00843d;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,61,.45);transition:all .2s;position:relative;}
 .chat-btn:hover{background:#006b32;transform:scale(1.06);}
@@ -500,26 +498,92 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 
 
 <!-- BOTONES FLOTANTES: Chat + Call -->
-<div class="fab-stack">
+<!-- CLICK-TO-CHAT — esquina inferior izquierda -->
+<div class="chat-fab-wrap" id="chatFabWrap">
+  <span class="chat-tooltip">Chat con Holcim</span>
+  <button class="chat-btn" id="chatFabBtn" onclick="toggleChat()">
+    <div class="chat-ring"></div>
+    <i class="fa fa-comment-dots"></i>
+  </button>
+</div>
 
-  <!-- CLICK-TO-CHAT (IMIconnect / Webex Connect) -->
-  <div class="chat-fab-wrap" id="chatFabWrap">
-    <span class="chat-tooltip">Chat con Holcim</span>
-    <button class="chat-btn" id="chatFabBtn" onclick="toggleChat()">
-      <div class="chat-ring"></div>
-      <i class="fa fa-comment-dots"></i>
+<!-- PANEL CHAT (Webex Connect / IMIconnect SDK) -->
+<div id="chatPanel" style="
+  position:fixed;bottom:100px;left:28px;z-index:9997;
+  width:320px;background:#fff;border:1px solid #e0e0e0;
+  border-radius:8px;box-shadow:0 16px 48px rgba(0,0,0,.18);
+  overflow:hidden;font-family:Inter,sans-serif;
+  transform:scale(.88) translateY(12px);opacity:0;pointer-events:none;
+  transition:all .3s cubic-bezier(.22,.68,0,1.2);transform-origin:bottom left;">
+
+  <!-- Header -->
+  <div style="background:#0d2240;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.15);
+                  display:flex;align-items:center;justify-content:center;font-size:14px;color:#fff;">
+        <i class="fa fa-comment-dots"></i>
+      </div>
+      <div>
+        <div style="font-size:13px;font-weight:700;color:#fff;">Chat Holcim Colombia</div>
+        <div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:1px;">Servicio al Cliente</div>
+      </div>
+    </div>
+    <button onclick="toggleChat()"
+      style="background:none;border:none;color:rgba(255,255,255,.6);font-size:14px;cursor:pointer;">
+      <i class="fa fa-times"></i>
     </button>
   </div>
 
-  <!-- CLICK-TO-CALL (Webex Calling) -->
-  <div class="c2c-fab" id="c2cFab">
-    <span class="c2c-tooltip">Servicio al Cliente Holcim</span>
-    <button class="c2c-btn" onclick="toggleC2C()">
-      <div class="c2c-ring"></div>
-      <i class="fa fa-headset"></i>
+  <!-- Status bar -->
+  <div style="background:#f8f9fa;padding:8px 16px;border-bottom:1px solid #e0e0e0;
+              display:flex;align-items:center;justify-content:space-between;">
+    <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;">Estado</span>
+    <div class="c2c-spill" id="chatStatusPill">
+      <div class="c2c-sdot"></div>
+      <span id="chatStatusTxt">OFFLINE</span>
+    </div>
+  </div>
+
+  <!-- Mensajes -->
+  <div id="chatMessages" style="
+    padding:12px;min-height:160px;max-height:220px;
+    overflow-y:auto;background:#fff;display:flex;flex-direction:column;">
+  </div>
+
+  <!-- Log de debug (oculto, visible en consola) -->
+  <div id="chatDevLog" class="c2c-log" style="display:none;max-height:60px;margin:0 12px;"></div>
+
+  <!-- Input -->
+  <div style="padding:10px 12px;border-top:1px solid #e0e0e0;display:flex;gap:8px;">
+    <input id="chatInput" type="text" placeholder="Escribe un mensaje..."
+      style="flex:1;padding:9px 12px;border:1px solid #e0e0e0;border-radius:4px;
+             font-size:12px;outline:none;font-family:inherit;"/>
+    <button onclick="sendChatMsg()"
+      style="background:#0d2240;color:#fff;border:none;padding:9px 14px;
+             border-radius:4px;font-size:13px;cursor:pointer;transition:background .2s;"
+      onmouseover="this.style.background='#1a4fa0'" onmouseout="this.style.background='#0d2240'">
+      <i class="fa fa-paper-plane"></i>
     </button>
   </div>
 
+  <!-- Footer -->
+  <div style="padding:8px;text-align:center;font-size:9px;color:#bbb;border-top:1px solid #e0e0e0;">
+    <i class="fa fa-lock" style="color:#00843d;margin-right:3px;"></i>
+    Chat seguro · Powered by Cisco Webex Connect
+  </div>
+</div>
+
+<style>
+#chatPanel.open{transform:scale(1) translateY(0)!important;opacity:1!important;pointer-events:all!important;}
+</style>
+
+<!-- CLICK-TO-CALL — esquina inferior derecha -->
+<div class="c2c-fab" id="c2cFab">
+  <span class="c2c-tooltip">Servicio al Cliente Holcim</span>
+  <button class="c2c-btn" onclick="toggleC2C()">
+    <div class="c2c-ring"></div>
+    <i class="fa fa-headset"></i>
+  </button>
 </div>
 
 <div class="c2c-panel" id="c2cPanel">
@@ -561,135 +625,208 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
   </div>
 </div>
 
-<!-- IMIconnect / Webex Connect — Click to Chat -->
+<!-- IMIconnect JavaScript SDK — Click to Call & Click to Chat -->
 <script src="imi-environments.js"></script>
-<script src="https://cdn.imiconnect.io/webchat/v1/chat.js"></script>
+<script src="https://rtm-us.imiconnect.io/rtmsAPI/javascript/imiclient.min.js"></script>
 
 <!-- SCRIPTS -->
-<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/webex.min.js"></script>
-<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
-<script data-cfasync="false" src="js/app.js"></script>
 <script>
-// ── CHAT IMIconnect ──────────────────────────────────
-let chatOpen = false;
-let chatInitialized = false;
+// ── CHAT — Webex Connect JavaScript SDK ──────────────────
+// Estado global del chat
+const CHAT = {
+  initialized: false,
+  connected:   false,
+  thread:      null,
+  messaging:   null,
+  userId:      'holcim_visitor_' + Math.random().toString(36).substr(2, 8),
+};
 
-function toggleChat(){
-  if(!chatInitialized){
-    // Inicializar IMIconnect la primera vez
-    try{
-      if(typeof IMIconnect !== 'undefined'){
-        IMIconnect.init({
-          appId:     imiEnvironments.default.asset.appId,
-          appSecret: imiEnvironments.default.asset.appSecret,
-          server:    imiEnvironments.default.imiclient.rtmsdomain,
-          authDomain:imiEnvironments.default.imiclient.authdomain,
-        });
-        chatInitialized = true;
-      } else {
-        // Fallback: abrir panel interno si el SDK no cargó
-        openChatFallback();
-        return;
-      }
-    }catch(e){
-      openChatFallback();
-      return;
-    }
-  }
-  // Mostrar/ocultar el widget de IMIconnect
-  chatOpen = !chatOpen;
-  if(typeof IMIconnect !== 'undefined' && typeof IMIconnect.toggle === 'function'){
-    IMIconnect.toggle();
+// Abrir / cerrar el panel de chat
+function toggleChat() {
+  const panel = document.getElementById('chatPanel');
+  const fab   = document.getElementById('chatFabBtn');
+  if (!panel) return;
+
+  const isOpen = panel.classList.contains('open');
+  if (isOpen) {
+    panel.classList.remove('open');
+    fab.innerHTML = '<div class="chat-ring"></div><i class="fa fa-comment-dots"></i>';
   } else {
-    openChatFallback();
-  }
-  // Animar el botón
-  const btn = document.getElementById('chatFabBtn');
-  if(btn){
-    btn.style.background = chatOpen ? '#005a2b' : '#00843d';
-    btn.innerHTML = chatOpen
-      ? '<i class="fa fa-times"></i>'
-      : '<div class="chat-ring"></div><i class="fa fa-comment-dots"></i>';
+    panel.classList.add('open');
+    fab.innerHTML = '<i class="fa fa-times"></i>';
+    if (!CHAT.initialized) initChat();
   }
 }
 
-// Panel de chat de respaldo (si el SDK no está disponible)
-function openChatFallback(){
-  const existing = document.getElementById('chatFallbackPanel');
-  if(existing){ existing.remove(); chatOpen=false; return; }
-  chatOpen = true;
-  const p = document.createElement('div');
-  p.id = 'chatFallbackPanel';
-  p.style.cssText = 'position:fixed;bottom:100px;right:28px;z-index:9997;width:320px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;box-shadow:0 16px 48px rgba(0,0,0,.18);overflow:hidden;font-family:Inter,sans-serif;';
-  p.innerHTML = `
-    <div style="background:#0d2240;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;">
-      <div style="display:flex;align-items:center;gap:10px;">
-        <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;"><i class="fa fa-comment-dots"></i></div>
-        <div>
-          <div style="font-size:13px;font-weight:700;color:#fff;">Chat Holcim Colombia</div>
-          <div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">Servicio al Cliente</div>
-        </div>
-      </div>
-      <button onclick="openChatFallback()" style="background:none;border:none;color:rgba(255,255,255,.6);font-size:14px;cursor:pointer;"><i class="fa fa-times"></i></button>
-    </div>
-    <div style="background:#f8f9fa;padding:10px 18px;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;">
-      <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;">Estado</span>
-      <span style="font-size:9px;font-weight:700;background:#eafaf1;color:#00843d;border:1px solid rgba(0,132,61,.3);padding:3px 9px;border-radius:2px;">EN LÍNEA</span>
-    </div>
-    <div style="padding:20px;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
-      <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#0d2240,#1a4fa0);display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;box-shadow:0 0 0 4px rgba(26,79,160,.08);margin-bottom:4px;">
-        <i class="fa fa-user-tie"></i>
-      </div>
-      <div style="font-size:15px;font-weight:700;color:#0d2240;">Asesoría en Línea</div>
-      <div style="font-size:11px;color:#888;margin-top:2px;">Holcim Colombia · Servicio al Cliente</div>
-      <div style="display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:#00843d;background:rgba(0,132,61,.08);padding:3px 9px;border-radius:2px;margin-top:4px;">
-        <span style="width:5px;height:5px;border-radius:50%;background:#00843d;display:block;"></span>Disponible ahora
-      </div>
-      <div id="chatMessages" style="width:100%;margin-top:16px;min-height:80px;background:#fff;border:1px solid #e0e0e0;border-radius:4px;padding:10px;font-size:12px;color:#666;">
-        <div style="background:#f0f4ff;padding:8px 12px;border-radius:8px 8px 8px 2px;max-width:85%;font-size:12px;color:#0d2240;line-height:1.5;">
-          👋 ¡Hola! Bienvenido a Holcim Colombia. ¿En qué podemos ayudarte hoy?
-        </div>
-      </div>
-      <div style="width:100%;display:flex;gap:8px;margin-top:8px;">
-        <input id="chatInput" type="text" placeholder="Escribe tu mensaje..."
-          style="flex:1;padding:9px 12px;border:1px solid #e0e0e0;border-radius:4px;font-size:12px;outline:none;font-family:inherit;"
-          onkeydown="if(event.key==='Enter')sendChatMsg()"/>
-        <button onclick="sendChatMsg()"
-          style="background:#0d2240;color:#fff;border:none;padding:9px 14px;border-radius:4px;font-size:13px;cursor:pointer;">
-          <i class="fa fa-paper-plane"></i>
-        </button>
-      </div>
-    </div>
-    <div style="text-align:center;padding:10px;font-size:9px;color:#ccc;border-top:1px solid #e0e0e0;">
-      <i class="fa fa-lock" style="color:#00843d;margin-right:3px;"></i>Chat seguro · Powered by Cisco Webex Connect
-    </div>
-  `;
-  document.body.appendChild(p);
+// ── Paso 1: Startup ──────────────────────────────────────
+function initChat() {
+  chatLog('Iniciando Webex Connect SDK...', 'info');
+  try {
+    IMI.IMIconnect.startup();
+    chatLog('SDK iniciado correctamente.', 'ok');
+    checkAndRegister();
+  } catch(e) {
+    chatLog('Error al iniciar SDK: ' + e.message, 'err');
+  }
 }
 
-function sendChatMsg(){
+// ── Paso 2 & 3: Verificar registro y registrar usuario ──
+function checkAndRegister() {
+  try {
+    if (IMI.IMIconnect.isRegistered()) {
+      chatLog('Usuario ya registrado.', 'ok');
+      setupMessaging();
+    } else {
+      registerUser();
+    }
+  } catch(e) {
+    registerUser();
+  }
+}
+
+function registerUser() {
+  chatLog('Registrando usuario...', 'info');
+  const deviceID     = CHAT.userId + '_' + new Date().getTime();
+  const deviceProfile = new IMI.ICDeviceProfile(deviceID, CHAT.userId);
+  // Agregar Client Key al perfil si el SDK lo soporta
+  if (typeof deviceProfile.setClientKey === 'function') {
+    deviceProfile.setClientKey(imiEnvironments.default.asset.clientKey);
+  }
+
+  IMI.IMIconnect.register(deviceProfile, {
+    onSuccess: (msg) => {
+      chatLog('Registro exitoso.', 'ok');
+      CHAT.initialized = true;
+      setupMessaging();
+    },
+    onFailure: (err) => {
+      chatLog('Error de registro: ' + JSON.stringify(err), 'err');
+    }
+  });
+}
+
+// ── Paso 4: Listener de mensajes ────────────────────────
+function setupMessaging() {
+  CHAT.messaging = IMI.ICMessaging.getInstance();
+
+  CHAT.messaging.setICMessagingReceiver({
+    onConnectionStatusChanged: (statusCode) => {
+      const connected = (statusCode === 2); // 2 = CONNECTED
+      CHAT.connected = connected;
+      setChatStatus(connected ? 'online' : 'connecting');
+      chatLog('Estado de conexión: ' + statusCode, 'info');
+      if (connected && !CHAT.thread) createConversationThread();
+    },
+    onMessageReceived: (message) => {
+      const text = message.getMessage ? message.getMessage() : (message.message || JSON.stringify(message));
+      appendChatBubble(text, 'agent');
+    }
+  });
+
+  // ── Paso 5: Conectar ────────────────────────────────
+  if (!CHAT.messaging.isConnected()) {
+    chatLog('Conectando al servidor de mensajería...', 'info');
+    CHAT.messaging.connect();
+  } else {
+    CHAT.connected = true;
+    setChatStatus('online');
+    if (!CHAT.thread) createConversationThread();
+  }
+}
+
+// ── Crear hilo de conversación ──────────────────────────
+function createConversationThread() {
+  const thread = new IMI.ICThread();
+  thread.setTitle('Consulta Holcim Colombia');
+  thread.setStatus(IMI.ICThreadStatus.Active);
+  thread.setType(IMI.ICThreadType.Conversation);
+
+  CHAT.messaging.createThread(thread, {
+    onSuccess: (threadObj) => {
+      CHAT.thread = threadObj;
+      chatLog('Conversación iniciada.', 'ok');
+      // Mensaje de bienvenida del agente
+      appendChatBubble('👋 ¡Hola! Bienvenido a Holcim Colombia. ¿En qué podemos ayudarte hoy?', 'agent');
+    },
+    onFailure: (err) => {
+      chatLog('Error al crear hilo: ' + JSON.stringify(err), 'err');
+    }
+  });
+}
+
+// ── Enviar mensaje ──────────────────────────────────────
+function sendChatMsg() {
   const inp = document.getElementById('chatInput');
-  const box = document.getElementById('chatMessages');
-  if(!inp || !box || !inp.value.trim()) return;
-  const msg = inp.value.trim();
+  if (!inp || !inp.value.trim()) return;
+  const text = inp.value.trim();
   inp.value = '';
-  // Mensaje del usuario
-  const userDiv = document.createElement('div');
-  userDiv.style.cssText='display:flex;justify-content:flex-end;margin-top:8px;';
-  userDiv.innerHTML = `<div style="background:#0d2240;color:#fff;padding:8px 12px;border-radius:8px 8px 2px 8px;max-width:85%;font-size:12px;line-height:1.5;">${msg}</div>`;
-  box.appendChild(userDiv);
-  box.scrollTop = box.scrollHeight;
-  // Respuesta automática
-  setTimeout(()=>{
-    const botDiv = document.createElement('div');
-    botDiv.style.cssText='margin-top:8px;';
-    botDiv.innerHTML = `<div style="background:#f0f4ff;padding:8px 12px;border-radius:8px 8px 8px 2px;max-width:85%;font-size:12px;color:#0d2240;line-height:1.5;">Gracias por tu mensaje. Un asesor de Holcim te atenderá en breve. 🏗️</div>`;
-    box.appendChild(botDiv);
-    box.scrollTop = box.scrollHeight;
-  }, 900);
+
+  // Mostrar burbuja del usuario inmediatamente
+  appendChatBubble(text, 'user');
+
+  if (!CHAT.thread || !CHAT.messaging) {
+    chatLog('Sin conexión activa. Reconectando...', 'err');
+    initChat();
+    return;
+  }
+
+  const message = new IMI.ICMessage();
+  message.setMessage(text);
+  message.setThread(CHAT.thread);
+
+  CHAT.messaging.publishMessage(message, {
+    onSuccess: (msg) => { /* mensaje enviado */ },
+    onFailure: (err) => {
+      chatLog('Error al enviar: ' + JSON.stringify(err), 'err');
+    }
+  });
 }
+
+// ── Helpers de UI ───────────────────────────────────────
+function appendChatBubble(text, role) {
+  const box = document.getElementById('chatMessages');
+  if (!box) return;
+  const isUser  = role === 'user';
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText = 'display:flex;justify-content:' + (isUser ? 'flex-end' : 'flex-start') + ';margin-top:8px;';
+  wrapper.innerHTML = '<div style="' +
+    (isUser
+      ? 'background:#0d2240;color:#fff;'
+      : 'background:#f0f4ff;color:#0d2240;') +
+    'padding:8px 12px;border-radius:' +
+    (isUser ? '8px 8px 2px 8px' : '8px 8px 8px 2px') +
+    ';max-width:85%;font-size:13px;line-height:1.5;">' + text + '</div>';
+  box.appendChild(wrapper);
+  box.scrollTop = box.scrollHeight;
+}
+
+function chatLog(msg, type) {
+  const log = document.getElementById('chatDevLog');
+  if (!log) return;
+  const p = document.createElement('p');
+  p.className = 'l-' + (type || 'muted');
+  p.textContent = '[' + new Date().toLocaleTimeString('es', {hour12:false}) + '] ' + msg;
+  log.appendChild(p);
+  log.scrollTop = log.scrollHeight;
+}
+
+function setChatStatus(state) {
+  const pill = document.getElementById('chatStatusPill');
+  const txt  = document.getElementById('chatStatusTxt');
+  if (!pill || !txt) return;
+  pill.className = 'c2c-spill' + (state === 'online' ? ' online' : state === 'connecting' ? ' connecting' : '');
+  const map = { online: 'EN LÍNEA', connecting: 'CONECTANDO...', offline: 'OFFLINE' };
+  txt.textContent = map[state] || state.toUpperCase();
+}
+
+// Enter para enviar
+document.addEventListener('DOMContentLoaded', () => {
+  const inp = document.getElementById('chatInput');
+  if (inp) inp.addEventListener('keydown', (e) => { if (e.key === 'Enter') sendChatMsg(); });
+});
 
 // ── CALL C2C Panel ─────────────────────────────────────
+
 // C2C Panel
 let panelOpen=false;
 function toggleC2C(){
