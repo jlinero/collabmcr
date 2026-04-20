@@ -625,9 +625,19 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
   </div>
 </div>
 
-<!-- IMIconnect JavaScript SDK — Click to Call & Click to Chat -->
+<!-- ── Webex Calling SDK — Click to Call ──────────────── -->
+<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/webex.min.js"></script>
+<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
+<script data-cfasync="false" src="js/app.js"></script>
+
+<!-- ── Webex Connect JS SDK — Click to Chat ───────────── -->
+<!-- jQuery requerido por el SDK de IMIconnect -->
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- Config del asset (appId, appSecret, clientKey) -->
 <script src="imi-environments.js"></script>
-<script src="https://rtm-us.imiconnect.io/rtmsAPI/javascript/imiclient.min.js"></script>
+<!-- SDK: descargar de https://github.com/webex/webexconnect-javascript-sdk/releases
+     y colocar en assets/js/webex-connect-sdk.min.js                               -->
+<script src="assets/js/webex-connect-sdk.min.js"></script>
 
 <!-- SCRIPTS -->
 <script>
