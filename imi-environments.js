@@ -4,6 +4,7 @@ var imiEnvironments = {
         "asset": {
             "appId": 'WE12231025',
             "appSecret": 'Dl2x0gSN',
+            "clientKey": 'C8LlYq0a',
             "pathConfig": {
                 "assetPath": "/assets/",
                 "root": "/"
@@ -12,7 +13,7 @@ var imiEnvironments = {
         "imiclient": {
             "shouldRequestNotificationPermission": true,
             "config": {
-                
+                "clientKey": 'C8LlYq0a'
             },
             "imipush": {
                 "safariWebPushId": 'web.com.imiconnect.safari.webpush'
