@@ -229,23 +229,6 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 .chat-fab-btn:hover{background:#006b32;transform:scale(1.06);}
 .chat-fab-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(0,132,61,.35);animation:ring-pulse 2.5s ease-out infinite;}
 
-/* Ocultar botón nativo del widget IMIconnect (usamos nuestro botón personalizado) */
-#imi-chat-btn,
-#imichat-btn,
-.imi-chat-launcher,
-.imi-livechat-btn,
-[id*="imichat"]:not(#chatFab):not(#chatFabBtn),
-[class*="imichat-launcher"],
-[class*="imi-launcher"],
-iframe#icw_launch_btn_frame,
-iframe[id*="icw_launch"],
-iframe[src*="imichat"][id*="launch"],
-iframe[src*="imi.chat"][id*="launch"] {
-  display: none !important;
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
 </style>
 </head>
 <body>
@@ -693,51 +676,73 @@ function hangupCall(){
 function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada. ¡Gracias!','muted');}
 
 window.addEventListener('DOMContentLoaded',async()=>{ await initWebex(); });
-// ── Abrir widget IMIconnect desde botón personalizado ──
-function openChatWidget() {
-  var opened = false;
 
-  // Método 1: API global expuesta por IMIconnect
-  if (window.icwid && typeof window.icwid.open === 'function') {
-    window.icwid.open(); opened = true;
-  }
-  if (!opened && window.IMIChat && typeof window.IMIChat.open === 'function') {
-    window.IMIChat.open(); opened = true;
-  }
-  if (!opened && window.imiChat && typeof window.imiChat.open === 'function') {
-    window.imiChat.open(); opened = true;
-  }
-
-  // Método 2: Click en el iframe/botón del widget (aunque esté oculto con CSS)
-  if (!opened) {
-    var selectors = [
-      'iframe[id*="icw"]', 'iframe[id*="imi"]', 'iframe[src*="imi.chat"]',
-      '#imi-chat-btn', '#imichat-btn', '.imi-chat-launcher'
-    ];
-    for (var s = 0; s < selectors.length; s++) {
-      var el = document.querySelector(selectors[s]);
-      if (el) {
-        // Mostrar temporalmente, hacer click, volver a ocultar
-        var prev = el.style.cssText;
-        el.style.cssText = 'display:block!important;visibility:visible!important;opacity:1!important;';
-        el.click();
-        setTimeout(function(p){ el.style.cssText = p; }, 100, prev);
-        opened = true; break;
-      }
-    }
-  }
-
-  // Método 3: postMessage a todos los iframes del widget
-  if (!opened) {
-    document.querySelectorAll('iframe').forEach(function(f) {
-      try {
-        f.contentWindow.postMessage({type:'open',action:'open',key:'open'}, '*');
-      } catch(e) {}
-    });
-  }
-}
 
 </script>
+<!-- ── Integración botón Chat con widget IMIconnect ─────── -->
+<script>
+(function(){
+  var KNOWN = ['chatFab','chatFabBtn','c2cFab','c2cPanel','divicw'];
+
+  // Alinea el botón nativo del widget con nuestro botón verde y lo hace invisible
+  function alignAndHide(node) {
+    if (!node || !node.style) return;
+    var id  = (node.id  || '').toLowerCase();
+    var cls = (node.className && typeof node.className === 'string' ? node.className : '').toLowerCase();
+    var src = (node.getAttribute && node.getAttribute('src') || '').toLowerCase();
+    var isKnown = KNOWN.some(function(k){ return node.id === k; });
+    if (isKnown) return;
+
+    // Detectar si parece el launcher del widget (iframe o elemento con referencia a imi/icw/chat)
+    var isLauncher = /imi|icw|livechat|chat/.test(id + cls + src) || node.tagName === 'IFRAME';
+    if (!isLauncher) return;
+
+    // Moverlo exactamente donde está nuestro botón (bottom:98px right:28px)
+    node.style.setProperty('position','fixed','important');
+    node.style.setProperty('bottom','98px','important');
+    node.style.setProperty('right','28px','important');
+    node.style.setProperty('width','54px','important');
+    node.style.setProperty('height','54px','important');
+    node.style.setProperty('border-radius','50%','important');
+    node.style.setProperty('opacity','0','important');          // invisible
+    node.style.setProperty('pointer-events','all','important'); // pero clickeable
+    node.style.setProperty('z-index','99997','important');      // debajo de nuestro botón (99998)
+    node.style.setProperty('overflow','hidden','important');
+
+    window._imiNativeBtn = node;
+    console.log('IMIconnect launcher found and aligned:', node.id || node.tagName);
+  }
+
+  var obs = new MutationObserver(function(mutations){
+    mutations.forEach(function(m){
+      m.addedNodes.forEach(function(n){
+        if (n.nodeType !== 1) return;
+        alignAndHide(n);
+        if (n.querySelectorAll) {
+          n.querySelectorAll('iframe,button,[id*="imi"],[id*="icw"],[class*="imi"]').forEach(alignAndHide);
+        }
+      });
+    });
+  });
+  obs.observe(document.body, { childList:true, subtree:true });
+
+  // Nuestro botón verde es solo un overlay visual —
+  // el click real lo recibe el botón nativo invisible que está debajo
+  window.openChatWidget = function(){
+    var n = window._imiNativeBtn;
+    if (n) {
+      // Click directo en el nativo
+      n.style.setProperty('pointer-events','all','important');
+      n.click();
+      return;
+    }
+    // Fallback APIs globales
+    if (window.icwid && window.icwid.open)    { window.icwid.open();    return; }
+    if (window.IMIChat && window.IMIChat.open){ window.IMIChat.open();  return; }
+  };
+})();
+</script>
+
 <!-- ── Click to Chat — IMIconnect Widget oficial ─────── -->
 <div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
 <script>var i={t:function(){try{var e=document.getElementById("divicw"),t=document.createElement("script");t.src="https://media.imi.chat/widget/js/imichatinit.js?t="+new Date().toISOString(),e.insertAdjacentElement("afterend",t),t.addEventListener("load",function(){console.log(new Date().toISOString(),"Livechat script loaded successfully!")}),t.addEventListener("error",function(){console.log(new Date().toISOString(),"Error loading Livechat script");i.o(e)})}catch(e){console.error(e)}},o:function(e){e.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow:hidden;height:208px;width:394px;position:fixed;display:block;right:48px;bottom:12px;z-index:99999;display:none;"></iframe>');var t=document.getElementById("tls_al_frm"),n=t.contentWindow,d=n.document;d.open();d.write("<!doctype html><html><head><meta charset='utf-8'><title>Untitled Document</title><style>body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#99a0b0;font-size:14px}.popover__content{background-color:#fbfbfe;padding:1.5rem;border-radius:5px;width:300px;box-shadow:0 2px 5px 0 rgba(0,0,0,0.26);position:relative}.popover__message{font-weight:600;color:#56627c;font-size:16px}.pull-left{float:left}.clearfix{clear:both}.hdr-txt{width:218px;margin-top:3px}.para-txt a{text-decoration:none;color:#005cde}.close-btn{position:absolute;right:15px;top:15px}.close-btn a{text-decoration:none;font-weight:400;color:#56627c;font-size:16px}</style></head><body><div class='popover__content'><div class='close-btn'><a href='#' onclick='closeTLSAlert()'>X</a></div><div class='popover__message'><div class='pull-left hdr-txt'>This browser version is not supported on LiveChat.</div></div><div class='clearfix'></div><p class='para-txt'>Please update your browser to the latest version and re-open the website to access the widget.</p></div><script>function closeTLSAlert(){window.parent.postMessage({key:'close_tls_alert',value:'close_tls_alert',action:'close_tls_alert'},'*');}<\/script></body></html>");d.close();t.style.display='block';window.addEventListener('message',function(e){'close_tls_alert'===e.data.action&&i.s()})},s:function(){var e=document.getElementById('tls_al_frm');e&&e.remove()}};i.t();</script>
