@@ -228,6 +228,24 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 .chat-fab-btn{width:54px;height:54px;border-radius:50%;background:#00843d;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,61,.45);transition:all .2s;position:relative;}
 .chat-fab-btn:hover{background:#006b32;transform:scale(1.06);}
 .chat-fab-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(0,132,61,.35);animation:ring-pulse 2.5s ease-out infinite;}
+
+/* Ocultar botón nativo del widget IMIconnect (usamos nuestro botón personalizado) */
+#imi-chat-btn,
+#imichat-btn,
+.imi-chat-launcher,
+.imi-livechat-btn,
+[id*="imichat"]:not(#chatFab):not(#chatFabBtn),
+[class*="imichat-launcher"],
+[class*="imi-launcher"],
+iframe#icw_launch_btn_frame,
+iframe[id*="icw_launch"],
+iframe[src*="imichat"][id*="launch"],
+iframe[src*="imi.chat"][id*="launch"] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
 </style>
 </head>
 <body>
@@ -677,39 +695,45 @@ function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada. ¡Grac
 window.addEventListener('DOMContentLoaded',async()=>{ await initWebex(); });
 // ── Abrir widget IMIconnect desde botón personalizado ──
 function openChatWidget() {
-  // IMIconnect genera un iframe/botón — intentamos abrirlo por los métodos conocidos
   var opened = false;
 
-  // Método 1: API global del widget (si está disponible)
+  // Método 1: API global expuesta por IMIconnect
   if (window.icwid && typeof window.icwid.open === 'function') {
     window.icwid.open(); opened = true;
   }
-  // Método 2: Botón generado por el widget (buscar por selectores comunes)
+  if (!opened && window.IMIChat && typeof window.IMIChat.open === 'function') {
+    window.IMIChat.open(); opened = true;
+  }
+  if (!opened && window.imiChat && typeof window.imiChat.open === 'function') {
+    window.imiChat.open(); opened = true;
+  }
+
+  // Método 2: Click en el iframe/botón del widget (aunque esté oculto con CSS)
   if (!opened) {
     var selectors = [
-      '#imi-chat-btn', '#imichat-btn', '.imi-chat-launcher',
-      '[id^="imi"]', '[class*="imichat"]', '[class*="livechat"]',
-      'iframe[id*="imi"]'
+      'iframe[id*="icw"]', 'iframe[id*="imi"]', 'iframe[src*="imi.chat"]',
+      '#imi-chat-btn', '#imichat-btn', '.imi-chat-launcher'
     ];
-    for (var i = 0; i < selectors.length; i++) {
-      var el = document.querySelector(selectors[i]);
-      if (el && el !== document.getElementById('chatFab') && el !== document.getElementById('chatFabBtn')) {
-        el.click(); opened = true; break;
+    for (var s = 0; s < selectors.length; s++) {
+      var el = document.querySelector(selectors[s]);
+      if (el) {
+        // Mostrar temporalmente, hacer click, volver a ocultar
+        var prev = el.style.cssText;
+        el.style.cssText = 'display:block!important;visibility:visible!important;opacity:1!important;';
+        el.click();
+        setTimeout(function(p){ el.style.cssText = p; }, 100, prev);
+        opened = true; break;
       }
     }
   }
-  // Método 3: Buscar iframes del widget y enviar postMessage
+
+  // Método 3: postMessage a todos los iframes del widget
   if (!opened) {
-    var frames = document.querySelectorAll('iframe');
-    frames.forEach(function(f) {
-      try { f.contentWindow.postMessage({action:'open'}, '*'); } catch(e) {}
+    document.querySelectorAll('iframe').forEach(function(f) {
+      try {
+        f.contentWindow.postMessage({type:'open',action:'open',key:'open'}, '*');
+      } catch(e) {}
     });
-  }
-  // Feedback visual en el botón
-  var btn = document.getElementById('chatFabBtn');
-  if (btn) {
-    btn.style.background = '#005a2b';
-    setTimeout(function(){ btn.style.background = ''; }, 300);
   }
 }
 
