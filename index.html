@@ -222,10 +222,10 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 
 
 /* ── Botón flotante Click to Chat ─────────────────────── */
-.chat-fab{position:fixed;bottom:98px;right:28px;z-index:99998;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.chat-fab{position:fixed;bottom:98px;right:28px;z-index:99998;pointer-events:none;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
 .chat-fab-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
 .chat-fab:hover .chat-fab-tooltip{opacity:1;transform:translateX(0);}
-.chat-fab-btn{width:54px;height:54px;border-radius:50%;background:#00843d;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,61,.45);transition:all .2s;position:relative;}
+.chat-fab-btn{width:54px;height:54px;border-radius:50%;background:#00843d;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,61,.45);transition:all .2s;position:relative;pointer-events:none;}
 .chat-fab-btn:hover{background:#006b32;transform:scale(1.06);}
 .chat-fab-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(0,132,61,.35);animation:ring-pulse 2.5s ease-out infinite;}
 
@@ -679,67 +679,70 @@ window.addEventListener('DOMContentLoaded',async()=>{ await initWebex(); });
 
 
 </script>
-<!-- ── Integración botón Chat con widget IMIconnect ─────── -->
+<!-- ── Overlay: iframe nativo invisible encima del botón verde ── -->
 <script>
 (function(){
   var KNOWN = ['chatFab','chatFabBtn','c2cFab','c2cPanel','divicw'];
 
-  // Alinea el botón nativo del widget con nuestro botón verde y lo hace invisible
-  function alignAndHide(node) {
-    if (!node || !node.style) return;
-    var id  = (node.id  || '').toLowerCase();
-    var cls = (node.className && typeof node.className === 'string' ? node.className : '').toLowerCase();
-    var src = (node.getAttribute && node.getAttribute('src') || '').toLowerCase();
-    var isKnown = KNOWN.some(function(k){ return node.id === k; });
+  function processNode(node) {
+    if (!node || node.nodeType !== 1) return;
+    var id  = (node.id  || '');
+    var cls = (typeof node.className === 'string' ? node.className : '');
+    var src = (node.getAttribute && node.getAttribute('src') || '');
+    var isKnown = KNOWN.indexOf(node.id) !== -1;
     if (isKnown) return;
 
-    // Detectar si parece el launcher del widget (iframe o elemento con referencia a imi/icw/chat)
-    var isLauncher = /imi|icw|livechat|chat/.test(id + cls + src) || node.tagName === 'IFRAME';
+    // ¿Parece el launcher del widget?
+    var isLauncher = /imi|icw|livechat/i.test(id + cls + src) || node.tagName === 'IFRAME';
     if (!isLauncher) return;
 
-    // Moverlo exactamente donde está nuestro botón (bottom:98px right:28px)
-    node.style.setProperty('position','fixed','important');
-    node.style.setProperty('bottom','98px','important');
-    node.style.setProperty('right','28px','important');
-    node.style.setProperty('width','54px','important');
-    node.style.setProperty('height','54px','important');
-    node.style.setProperty('border-radius','50%','important');
-    node.style.setProperty('opacity','0','important');          // invisible
-    node.style.setProperty('pointer-events','all','important'); // pero clickeable
-    node.style.setProperty('z-index','99997','important');      // debajo de nuestro botón (99998)
-    node.style.setProperty('overflow','hidden','important');
+    // Posicionarlo EXACTAMENTE sobre nuestro botón verde
+    // Nuestro botón: bottom:98px right:28px width:54px height:54px
+    node.style.setProperty('position',      'fixed',   'important');
+    node.style.setProperty('bottom',        '98px',    'important');
+    node.style.setProperty('right',         '28px',    'important');
+    node.style.setProperty('width',         '54px',    'important');
+    node.style.setProperty('height',        '54px',    'important');
+    node.style.setProperty('min-width',     '54px',    'important');
+    node.style.setProperty('min-height',    '54px',    'important');
+    node.style.setProperty('border-radius', '50%',     'important');
+    node.style.setProperty('opacity',       '0',       'important');  // invisible
+    node.style.setProperty('pointer-events','all',     'important');  // recibe clicks
+    node.style.setProperty('z-index',       '99999',   'important');  // ENCIMA del verde
+    node.style.setProperty('overflow',      'hidden',  'important');
+    node.style.setProperty('border',        'none',    'important');
+    node.style.setProperty('background',    'transparent','important');
+    node.style.setProperty('padding',       '0',       'important');
+    node.style.setProperty('margin',        '0',       'important');
 
-    window._imiNativeBtn = node;
-    console.log('IMIconnect launcher found and aligned:', node.id || node.tagName);
+    console.log('IMIconnect launcher overlaid:', node.tagName, node.id);
   }
+
+  // Nuestro botón verde es solo decorativo — el click lo recibe el iframe encima
+  document.addEventListener('DOMContentLoaded', function(){
+    var greenBtn = document.getElementById('chatFabBtn');
+    if (greenBtn) {
+      greenBtn.style.setProperty('pointer-events', 'none', 'important');
+      greenBtn.removeAttribute('onclick');
+    }
+    var chatFab = document.getElementById('chatFab');
+    if (chatFab) {
+      chatFab.style.setProperty('pointer-events', 'none', 'important');
+    }
+  });
 
   var obs = new MutationObserver(function(mutations){
     mutations.forEach(function(m){
       m.addedNodes.forEach(function(n){
-        if (n.nodeType !== 1) return;
-        alignAndHide(n);
-        if (n.querySelectorAll) {
-          n.querySelectorAll('iframe,button,[id*="imi"],[id*="icw"],[class*="imi"]').forEach(alignAndHide);
+        processNode(n);
+        if (n.querySelectorAll){
+          n.querySelectorAll('iframe,[id*="imi"],[id*="icw"]').forEach(processNode);
         }
       });
     });
   });
-  obs.observe(document.body, { childList:true, subtree:true });
 
-  // Nuestro botón verde es solo un overlay visual —
-  // el click real lo recibe el botón nativo invisible que está debajo
-  window.openChatWidget = function(){
-    var n = window._imiNativeBtn;
-    if (n) {
-      // Click directo en el nativo
-      n.style.setProperty('pointer-events','all','important');
-      n.click();
-      return;
-    }
-    // Fallback APIs globales
-    if (window.icwid && window.icwid.open)    { window.icwid.open();    return; }
-    if (window.IMIChat && window.IMIChat.open){ window.IMIChat.open();  return; }
-  };
+  obs.observe(document.body, { childList: true, subtree: true });
 })();
 </script>
 
