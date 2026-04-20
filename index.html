@@ -214,6 +214,20 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 .h-logo-green{fill:#5cb85c}
 .h-logo-blue{fill:#0076bf}
 .h-logo-text{fill:#ffffff;font-weight:900;}
+
+/* ═══════════════════════════════════
+   CLICK-TO-CHAT WIDGET (IMIconnect)
+═══════════════════════════════════ */
+/* Wrapper de ambos FABs */
+.fab-stack{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;}
+
+/* Chat FAB */
+.chat-fab-wrap{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.chat-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
+.chat-fab-wrap:hover .chat-tooltip{opacity:1;transform:translateX(0);}
+.chat-btn{width:54px;height:54px;border-radius:50%;background:#00843d;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,61,.45);transition:all .2s;position:relative;}
+.chat-btn:hover{background:#006b32;transform:scale(1.06);}
+.chat-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(0,132,61,.35);animation:ring-pulse 2.5s ease-out infinite;}
 </style>
 </head>
 <body>
@@ -485,13 +499,27 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 
 
 
-<!-- CLICK-TO-CALL WIDGET (Powered by Cisco Webex) -->
-<div class="c2c-fab" id="c2cFab">
-  <span class="c2c-tooltip">Servicio al Cliente Holcim</span>
-  <button class="c2c-btn" onclick="toggleC2C()">
-    <div class="c2c-ring"></div>
-    <i class="fa fa-headset"></i>
-  </button>
+<!-- BOTONES FLOTANTES: Chat + Call -->
+<div class="fab-stack">
+
+  <!-- CLICK-TO-CHAT (IMIconnect / Webex Connect) -->
+  <div class="chat-fab-wrap" id="chatFabWrap">
+    <span class="chat-tooltip">Chat con Holcim</span>
+    <button class="chat-btn" id="chatFabBtn" onclick="toggleChat()">
+      <div class="chat-ring"></div>
+      <i class="fa fa-comment-dots"></i>
+    </button>
+  </div>
+
+  <!-- CLICK-TO-CALL (Webex Calling) -->
+  <div class="c2c-fab" id="c2cFab">
+    <span class="c2c-tooltip">Servicio al Cliente Holcim</span>
+    <button class="c2c-btn" onclick="toggleC2C()">
+      <div class="c2c-ring"></div>
+      <i class="fa fa-headset"></i>
+    </button>
+  </div>
+
 </div>
 
 <div class="c2c-panel" id="c2cPanel">
@@ -533,11 +561,135 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
   </div>
 </div>
 
+<!-- IMIconnect / Webex Connect — Click to Chat -->
+<script src="imi-environments.js"></script>
+<script src="https://cdn.imiconnect.io/webchat/v1/chat.js"></script>
+
 <!-- SCRIPTS -->
 <script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/webex.min.js"></script>
 <script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
 <script data-cfasync="false" src="js/app.js"></script>
 <script>
+// ── CHAT IMIconnect ──────────────────────────────────
+let chatOpen = false;
+let chatInitialized = false;
+
+function toggleChat(){
+  if(!chatInitialized){
+    // Inicializar IMIconnect la primera vez
+    try{
+      if(typeof IMIconnect !== 'undefined'){
+        IMIconnect.init({
+          appId:     imiEnvironments.default.asset.appId,
+          appSecret: imiEnvironments.default.asset.appSecret,
+          server:    imiEnvironments.default.imiclient.rtmsdomain,
+          authDomain:imiEnvironments.default.imiclient.authdomain,
+        });
+        chatInitialized = true;
+      } else {
+        // Fallback: abrir panel interno si el SDK no cargó
+        openChatFallback();
+        return;
+      }
+    }catch(e){
+      openChatFallback();
+      return;
+    }
+  }
+  // Mostrar/ocultar el widget de IMIconnect
+  chatOpen = !chatOpen;
+  if(typeof IMIconnect !== 'undefined' && typeof IMIconnect.toggle === 'function'){
+    IMIconnect.toggle();
+  } else {
+    openChatFallback();
+  }
+  // Animar el botón
+  const btn = document.getElementById('chatFabBtn');
+  if(btn){
+    btn.style.background = chatOpen ? '#005a2b' : '#00843d';
+    btn.innerHTML = chatOpen
+      ? '<i class="fa fa-times"></i>'
+      : '<div class="chat-ring"></div><i class="fa fa-comment-dots"></i>';
+  }
+}
+
+// Panel de chat de respaldo (si el SDK no está disponible)
+function openChatFallback(){
+  const existing = document.getElementById('chatFallbackPanel');
+  if(existing){ existing.remove(); chatOpen=false; return; }
+  chatOpen = true;
+  const p = document.createElement('div');
+  p.id = 'chatFallbackPanel';
+  p.style.cssText = 'position:fixed;bottom:100px;right:28px;z-index:9997;width:320px;background:#fff;border:1px solid #e0e0e0;border-radius:8px;box-shadow:0 16px 48px rgba(0,0,0,.18);overflow:hidden;font-family:Inter,sans-serif;';
+  p.innerHTML = `
+    <div style="background:#0d2240;padding:16px 18px;display:flex;align-items:center;justify-content:space-between;">
+      <div style="display:flex;align-items:center;gap:10px;">
+        <div style="width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;font-size:15px;color:#fff;"><i class="fa fa-comment-dots"></i></div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#fff;">Chat Holcim Colombia</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.5);margin-top:2px;">Servicio al Cliente</div>
+        </div>
+      </div>
+      <button onclick="openChatFallback()" style="background:none;border:none;color:rgba(255,255,255,.6);font-size:14px;cursor:pointer;"><i class="fa fa-times"></i></button>
+    </div>
+    <div style="background:#f8f9fa;padding:10px 18px;border-bottom:1px solid #e0e0e0;display:flex;align-items:center;justify-content:space-between;">
+      <span style="font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;">Estado</span>
+      <span style="font-size:9px;font-weight:700;background:#eafaf1;color:#00843d;border:1px solid rgba(0,132,61,.3);padding:3px 9px;border-radius:2px;">EN LÍNEA</span>
+    </div>
+    <div style="padding:20px;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;">
+      <div style="width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#0d2240,#1a4fa0);display:flex;align-items:center;justify-content:center;font-size:20px;color:#fff;box-shadow:0 0 0 4px rgba(26,79,160,.08);margin-bottom:4px;">
+        <i class="fa fa-user-tie"></i>
+      </div>
+      <div style="font-size:15px;font-weight:700;color:#0d2240;">Asesoría en Línea</div>
+      <div style="font-size:11px;color:#888;margin-top:2px;">Holcim Colombia · Servicio al Cliente</div>
+      <div style="display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:#00843d;background:rgba(0,132,61,.08);padding:3px 9px;border-radius:2px;margin-top:4px;">
+        <span style="width:5px;height:5px;border-radius:50%;background:#00843d;display:block;"></span>Disponible ahora
+      </div>
+      <div id="chatMessages" style="width:100%;margin-top:16px;min-height:80px;background:#fff;border:1px solid #e0e0e0;border-radius:4px;padding:10px;font-size:12px;color:#666;">
+        <div style="background:#f0f4ff;padding:8px 12px;border-radius:8px 8px 8px 2px;max-width:85%;font-size:12px;color:#0d2240;line-height:1.5;">
+          👋 ¡Hola! Bienvenido a Holcim Colombia. ¿En qué podemos ayudarte hoy?
+        </div>
+      </div>
+      <div style="width:100%;display:flex;gap:8px;margin-top:8px;">
+        <input id="chatInput" type="text" placeholder="Escribe tu mensaje..."
+          style="flex:1;padding:9px 12px;border:1px solid #e0e0e0;border-radius:4px;font-size:12px;outline:none;font-family:inherit;"
+          onkeydown="if(event.key==='Enter')sendChatMsg()"/>
+        <button onclick="sendChatMsg()"
+          style="background:#0d2240;color:#fff;border:none;padding:9px 14px;border-radius:4px;font-size:13px;cursor:pointer;">
+          <i class="fa fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+    <div style="text-align:center;padding:10px;font-size:9px;color:#ccc;border-top:1px solid #e0e0e0;">
+      <i class="fa fa-lock" style="color:#00843d;margin-right:3px;"></i>Chat seguro · Powered by Cisco Webex Connect
+    </div>
+  `;
+  document.body.appendChild(p);
+}
+
+function sendChatMsg(){
+  const inp = document.getElementById('chatInput');
+  const box = document.getElementById('chatMessages');
+  if(!inp || !box || !inp.value.trim()) return;
+  const msg = inp.value.trim();
+  inp.value = '';
+  // Mensaje del usuario
+  const userDiv = document.createElement('div');
+  userDiv.style.cssText='display:flex;justify-content:flex-end;margin-top:8px;';
+  userDiv.innerHTML = `<div style="background:#0d2240;color:#fff;padding:8px 12px;border-radius:8px 8px 2px 8px;max-width:85%;font-size:12px;line-height:1.5;">${msg}</div>`;
+  box.appendChild(userDiv);
+  box.scrollTop = box.scrollHeight;
+  // Respuesta automática
+  setTimeout(()=>{
+    const botDiv = document.createElement('div');
+    botDiv.style.cssText='margin-top:8px;';
+    botDiv.innerHTML = `<div style="background:#f0f4ff;padding:8px 12px;border-radius:8px 8px 8px 2px;max-width:85%;font-size:12px;color:#0d2240;line-height:1.5;">Gracias por tu mensaje. Un asesor de Holcim te atenderá en breve. 🏗️</div>`;
+    box.appendChild(botDiv);
+    box.scrollTop = box.scrollHeight;
+  }, 900);
+}
+
+// ── CALL C2C Panel ─────────────────────────────────────
 // C2C Panel
 let panelOpen=false;
 function toggleC2C(){
