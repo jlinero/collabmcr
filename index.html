@@ -220,6 +220,14 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 ═══════════════════════════════════ */
 /* Wrapper de ambos FABs */
 
+
+/* ── Botón flotante Click to Chat ─────────────────────── */
+.chat-fab{position:fixed;bottom:98px;right:28px;z-index:99998;display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
+.chat-fab-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
+.chat-fab:hover .chat-fab-tooltip{opacity:1;transform:translateX(0);}
+.chat-fab-btn{width:54px;height:54px;border-radius:50%;background:#00843d;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,61,.45);transition:all .2s;position:relative;}
+.chat-fab-btn:hover{background:#006b32;transform:scale(1.06);}
+.chat-fab-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(0,132,61,.35);animation:ring-pulse 2.5s ease-out infinite;}
 </style>
 </head>
 <body>
@@ -491,6 +499,15 @@ footer{background:var(--navy2);color:rgba(255,255,255,.8);}
 
 
 
+<!-- ── Botón flotante Click to Chat ──────────────────── -->
+<div class="chat-fab" id="chatFab">
+  <span class="chat-fab-tooltip">Chat con Holcim</span>
+  <button class="chat-fab-btn" id="chatFabBtn" onclick="openChatWidget()">
+    <div class="chat-fab-ring"></div>
+    <i class="fa fa-comment-dots"></i>
+  </button>
+</div>
+
 <!-- CLICK-TO-CALL — esquina inferior derecha -->
 <div class="c2c-fab" id="c2cFab">
   <span class="c2c-tooltip">Servicio al Cliente Holcim</span>
@@ -658,6 +675,44 @@ function hangupCall(){
 function onEnd(){S.call=null;setBtns(true,false);log('Llamada finalizada. ¡Gracias!','muted');}
 
 window.addEventListener('DOMContentLoaded',async()=>{ await initWebex(); });
+// ── Abrir widget IMIconnect desde botón personalizado ──
+function openChatWidget() {
+  // IMIconnect genera un iframe/botón — intentamos abrirlo por los métodos conocidos
+  var opened = false;
+
+  // Método 1: API global del widget (si está disponible)
+  if (window.icwid && typeof window.icwid.open === 'function') {
+    window.icwid.open(); opened = true;
+  }
+  // Método 2: Botón generado por el widget (buscar por selectores comunes)
+  if (!opened) {
+    var selectors = [
+      '#imi-chat-btn', '#imichat-btn', '.imi-chat-launcher',
+      '[id^="imi"]', '[class*="imichat"]', '[class*="livechat"]',
+      'iframe[id*="imi"]'
+    ];
+    for (var i = 0; i < selectors.length; i++) {
+      var el = document.querySelector(selectors[i]);
+      if (el && el !== document.getElementById('chatFab') && el !== document.getElementById('chatFabBtn')) {
+        el.click(); opened = true; break;
+      }
+    }
+  }
+  // Método 3: Buscar iframes del widget y enviar postMessage
+  if (!opened) {
+    var frames = document.querySelectorAll('iframe');
+    frames.forEach(function(f) {
+      try { f.contentWindow.postMessage({action:'open'}, '*'); } catch(e) {}
+    });
+  }
+  // Feedback visual en el botón
+  var btn = document.getElementById('chatFabBtn');
+  if (btn) {
+    btn.style.background = '#005a2b';
+    setTimeout(function(){ btn.style.background = ''; }, 300);
+  }
+}
+
 </script>
 <!-- ── Click to Chat — IMIconnect Widget oficial ─────── -->
 <div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
