@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CollabMCR CRM — Technology Corporation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<style>
+/* ══════════════════════════════════════════════════════
+   DESIGN TOKENS — copied verbatim from index.html
+══════════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#04080f;--bg2:#070d1a;--surface:#0a1020;--card:#0d1628;--card2:#111e35;
+  --border:#1a2d50;--border2:#223660;
+  --cyan:#00d4ff;--cyan-dim:rgba(0,212,255,.12);
+  --blue:#1a56db;--blue2:#2563eb;
+  --green:#00ffa3;--red:#ff3b6b;--amber:#ffaa00;
+  --text:#dde6f5;--muted:#4a6080;--muted2:#6b84a8;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Outfit',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.65;overflow:hidden;cursor:none;}
+
+/* ── CURSOR — copied verbatim from index.html ── */
+.cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s;mix-blend-mode:screen;}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(0,212,255,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s;}
+
+/* ── TOPBAR — same structure as index.html ── */
+.topbar{position:relative;z-index:200;height:68px;display:flex;align-items:center;background:rgba(4,8,15,.88);backdrop-filter:blur(24px);border-bottom:1px solid rgba(26,45,80,.8);}
+.topbar-inner{width:100%;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-svg-box{position:relative;width:46px;height:46px;flex-shrink:0;}
+.logo-svg-box svg{width:100%;height:100%;}
+.logo-orbit{position:absolute;inset:-7px;border:1px solid rgba(0,212,255,.22);border-radius:50%;animation:spin 9s linear infinite;}
+.logo-orbit::before{content:'';position:absolute;width:6px;height:6px;border-radius:50%;background:var(--cyan);top:-3px;left:50%;transform:translateX(-50%);box-shadow:0 0 10px var(--cyan);}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-name{font-family:var(--font-display);font-size:23px;letter-spacing:2px;color:#fff;}
+.logo-tag{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2.5px;color:var(--cyan);text-transform:uppercase;margin-top:3px;}
+/* nav — same as index.html .nav */
+.nav{display:flex;align-items:center;gap:2px;}
+.nav a{font-size:13px;font-weight:500;color:var(--muted2);text-decoration:none;padding:7px 16px;border-radius:8px;transition:color .2s,background .2s;cursor:none;}
+.nav a:hover,.nav a.active{color:var(--cyan);}
+.topbar-right{display:flex;align-items:center;gap:12px;}
+/* status-pill — same as index.html */
+.status-pill{display:flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-size:10.5px;font-weight:600;font-family:var(--font-mono);letter-spacing:.5px;border:1px solid rgba(0,255,163,.2);background:rgba(0,255,163,.07);color:var(--green);transition:all .4s;}
+.status-pill.offline{border-color:rgba(255,59,107,.2);background:rgba(255,59,107,.07);color:var(--red);}
+.status-pill.connecting{border-color:rgba(255,170,0,.2);background:rgba(255,170,0,.07);color:var(--amber);}
+.status-dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+/* btn-token — same as index.html */
+.btn-token{font-size:11px;font-weight:600;font-family:var(--font-mono);padding:8px 18px;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--muted2);cursor:none;transition:all .2s;letter-spacing:.4px;}
+.btn-token:hover{color:var(--cyan);border-color:var(--cyan);background:var(--cyan-dim);}
+/* btn-glow — same as index.html */
+.btn-glow{display:inline-flex;align-items:center;gap:10px;padding:10px 22px;border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:13px;cursor:none;text-decoration:none;border:none;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;transition:transform .2s,box-shadow .2s;}
+.btn-glow:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,212,255,.4);}
+/* avatar pill */
+.av-pill{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;border:1.5px solid rgba(0,212,255,.3);flex-shrink:0;}
+
+/* ══════════════════════════════════════════════════════
+   APP SHELL
+══════════════════════════════════════════════════════ */
+.app-body{display:flex;height:calc(100vh - 68px);overflow:hidden;}
+
+/* ── SIDEBAR — using .nav + .s-label patterns from index.html ── */
+.sidebar{width:216px;min-width:216px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow-y:auto;overflow-x:hidden;}
+.sidebar::-webkit-scrollbar{width:3px;}
+.sidebar::-webkit-scrollbar-thumb{background:var(--border2);}
+.sidebar-section{padding:18px 10px 8px;}
+/* s-label — same as index.html */
+.s-label-sm{font-family:var(--font-mono);font-size:9.5px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:10px;display:flex;align-items:center;gap:10px;padding:0 8px;}
+.s-label-sm::before{content:'';display:block;width:16px;height:1px;background:var(--cyan);}
+/* nav-item — extends .nav a from index.html */
+.nav-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;cursor:none;color:var(--muted2);font-size:13px;font-weight:500;transition:color .2s,background .2s;text-decoration:none;position:relative;}
+.nav-item:hover{color:var(--cyan);background:rgba(0,212,255,.04);}
+.nav-item.active{color:var(--cyan);background:var(--cyan-dim);border:1px solid rgba(0,212,255,.15);}
+.nav-item i{width:15px;text-align:center;font-size:12px;}
+/* prod-tag reused as badge */
+.nav-badge{margin-left:auto;font-family:var(--font-mono);font-size:9px;letter-spacing:1px;color:currentColor;padding:2px 7px;border-radius:4px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.sidebar-bottom{margin-top:auto;padding:14px 10px;border-top:1px solid var(--border);}
+.sidebar-stat{display:flex;justify-content:space-between;padding:3px 8px;font-size:11px;color:var(--muted2);}
+.sidebar-stat span{font-family:var(--font-mono);color:var(--cyan);font-size:10.5px;}
+
+/* ── LIST PANEL ── */
+.list-panel{width:296px;min-width:296px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;}
+.list-header{padding:16px 16px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
+.list-title{font-family:var(--font-display);font-size:24px;letter-spacing:2px;color:#fff;flex:1;}
+.list-search{padding:8px 10px;border-bottom:1px solid var(--border);}
+/* f-input — same as index.html but smaller */
+.search-input{width:100%;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:9px 14px 9px 34px;color:var(--text);font-family:var(--font-body);font-size:13px;outline:none;transition:border-color .2s,box-shadow .2s;}
+.search-input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,.08);}
+.search-input::placeholder{color:var(--muted);}
+.search-wrap{position:relative;}
+.search-wrap i{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:12px;pointer-events:none;}
+.list-filter{padding:7px 10px;border-bottom:1px solid var(--border);display:flex;gap:5px;flex-wrap:wrap;}
+/* prod-tag reused as filter chip */
+.chip{font-family:var(--font-mono);font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px;border-radius:4px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--muted2);cursor:none;transition:all .2s;}
+.chip:hover,.chip.active{color:var(--cyan);border-color:rgba(0,212,255,.3);background:var(--cyan-dim);}
+.list-items{flex:1;overflow-y:auto;padding:6px;}
+.list-items::-webkit-scrollbar{width:3px;}
+.list-items::-webkit-scrollbar-thumb{background:var(--border2);}
+
+/* contact card — extends .cc from index.html */
+.cc-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px 14px;display:flex;align-items:center;gap:12px;cursor:none;transition:border-color .2s,transform .2s;margin-bottom:5px;position:relative;overflow:hidden;}
+.cc-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,currentColor,transparent);opacity:0;transition:opacity .25s;}
+.cc-card.c1{color:var(--cyan)}.cc-card.c2{color:var(--green)}.cc-card.c3{color:#818cf8}.cc-card.c4{color:var(--amber)}.cc-card.c5{color:var(--red)}
+.cc-card:hover{border-color:currentColor;transform:translateX(3px);}
+.cc-card:hover::before{opacity:1;}
+.cc-card.active{border-color:var(--cyan);background:var(--cyan-dim);color:var(--cyan);}
+.cc-card.active::before{opacity:1;}
+.cc-avatar{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:17px;color:#fff;}
+.cc-info{flex:1;min-width:0;}
+.cc-name{font-weight:600;font-size:13.5px;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cc-sub{font-family:var(--font-mono);font-size:9.5px;color:var(--muted2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:.3px;margin-top:1px;}
+.st-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.st-dot.comprado{background:var(--green);}
+.st-dot.pendiente{background:var(--amber);}
+.st-dot.nuevo{background:var(--cyan);}
+
+/* ── DETAIL PANEL ── */
+.detail-panel{flex:1;display:flex;flex-direction:column;overflow:hidden;background:var(--bg);}
+.detail-empty{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;color:var(--muted);}
+/* prod-icon reused */
+.empty-icon{width:68px;height:68px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:26px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);color:var(--muted);opacity:.5;}
+.empty-label{font-family:var(--font-mono);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;}
+.empty-hint{font-size:12px;color:var(--muted);margin-top:-12px;}
+
+/* detail header */
+.d-header{background:var(--bg2);border-bottom:1px solid var(--border);padding:18px 26px;display:flex;align-items:flex-start;gap:16px;flex-shrink:0;}
+.d-av{width:58px;height:58px;border-radius:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-size:26px;color:#fff;}
+.d-hinfo{flex:1;min-width:0;}
+.d-name{font-family:var(--font-display);font-size:30px;letter-spacing:1.5px;color:#fff;line-height:1;}
+.d-role{font-family:var(--font-mono);font-size:10px;letter-spacing:1px;color:var(--muted2);margin-top:5px;}
+.d-phone{font-family:var(--font-mono);font-size:11px;color:var(--cyan);margin-top:4px;display:flex;align-items:center;gap:7px;}
+.d-actions{display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end;flex-shrink:0;}
+/* status-pill reused as order badge */
+.order-pill{display:inline-flex;align-items:center;gap:7px;padding:5px 14px;border-radius:999px;font-size:10px;font-weight:600;font-family:var(--font-mono);letter-spacing:.5px;border:1px solid;transition:all .4s;}
+.order-pill .status-dot{width:5px;height:5px;}
+.order-pill.comprado{border-color:rgba(0,255,163,.2);background:rgba(0,255,163,.07);color:var(--green);}
+.order-pill.pendiente{border-color:rgba(255,170,0,.2);background:rgba(255,170,0,.07);color:var(--amber);}
+.order-pill.nuevo{border-color:rgba(0,212,255,.2);background:rgba(0,212,255,.07);color:var(--cyan);}
+/* icon button */
+.icon-btn{width:34px;height:34px;border-radius:8px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--muted2);cursor:none;display:flex;align-items:center;justify-content:center;font-size:12px;transition:all .2s;}
+.icon-btn:hover{color:var(--cyan);border-color:rgba(0,212,255,.3);background:var(--cyan-dim);}
+.icon-btn.danger:hover{color:var(--red);border-color:rgba(255,59,107,.3);background:rgba(255,59,107,.07);}
+
+/* TABS — same feel as .nav from index.html */
+.d-tabs{display:flex;border-bottom:1px solid var(--border);background:var(--bg2);padding:0 26px;flex-shrink:0;}
+.d-tab{padding:12px 18px;font-family:var(--font-mono);font-size:9.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);cursor:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;display:flex;align-items:center;gap:7px;}
+.d-tab:hover{color:var(--text);}
+.d-tab.active{color:var(--cyan);border-bottom-color:var(--cyan);}
+.tab-count{font-size:9px;padding:1px 5px;border-radius:3px;background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(0,212,255,.2);}
+
+/* body columns */
+.d-body{flex:1;display:flex;overflow:hidden;}
+.d-main{flex:1;overflow-y:auto;padding:20px 24px;}
+.d-main::-webkit-scrollbar{width:4px;}
+.d-main::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+.d-side{width:258px;min-width:258px;overflow-y:auto;padding:16px 14px;border-left:1px solid var(--border);}
+.d-side::-webkit-scrollbar{width:4px;}
+.d-side::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+
+/* ── CARDS — same structure as .prod-card from index.html ── */
+.info-card{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:16px;margin-bottom:16px;transition:border-color .35s;}
+.info-card:hover{border-color:var(--border2);}
+.card-header{padding:12px 18px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:rgba(255,255,255,.012);}
+/* prod-tag reused */
+.card-label{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);display:flex;align-items:center;gap:8px;}
+.card-label i{color:var(--cyan);}
+/* prod-tag reused as small action */
+.small-btn{font-family:var(--font-mono);font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted2);padding:4px 10px;border-radius:4px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);cursor:none;display:inline-flex;align-items:center;gap:6px;transition:all .2s;}
+.small-btn:hover{color:var(--cyan);border-color:rgba(0,212,255,.3);background:var(--cyan-dim);}
+
+/* info grid */
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);}
+.info-cell{background:var(--card);padding:12px 18px;transition:background .2s;}
+.info-cell:hover{background:var(--card2);}
+/* f-label reused */
+.f-label{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;display:block;}
+.info-val{font-size:13.5px;color:var(--text);font-weight:500;}
+.info-val.cyan{color:var(--cyan);}
+.info-val.green{color:var(--green);}
+.info-val.amber{color:var(--amber);}
+.info-val.red{color:var(--red);}
+
+/* ── ACTIVITY ITEMS — .feature-row pattern from index.html ── */
+.feature-row{display:flex;align-items:flex-start;gap:16px;padding:14px 18px;background:var(--card);border-bottom:1px solid var(--border);transition:background .2s;}
+.feature-row:last-child{border-bottom:none;}
+.feature-row:hover{background:var(--card2);}
+/* feat-icon same as index.html */
+.feat-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.fi-a{background:rgba(0,212,255,.1);color:var(--cyan);}
+.fi-b{background:rgba(0,255,163,.1);color:var(--green);}
+.fi-c{background:rgba(129,140,248,.1);color:#818cf8;}
+.fi-d{background:rgba(255,170,0,.1);color:var(--amber);}
+.fi-e{background:rgba(255,59,107,.1);color:var(--red);}
+.feat-t{font-weight:600;font-size:13.5px;color:#fff;margin-bottom:2px;}
+.feat-d{font-size:12px;color:var(--muted2);}
+.feat-time{font-family:var(--font-mono);font-size:9.5px;color:var(--muted);margin-top:4px;}
+
+/* ── DEAL ITEM ── */
+.deal-row{display:flex;align-items:center;gap:14px;padding:16px 18px;background:var(--card);border-bottom:1px solid var(--border);transition:background .2s;}
+.deal-row:last-child{border-bottom:none;}
+.deal-row:hover{background:var(--card2);}
+.deal-ic{width:38px;height:38px;border-radius:10px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:15px;background:rgba(0,255,163,.07);border:1px solid rgba(0,255,163,.18);color:var(--green);}
+.deal-name{font-weight:600;font-size:13.5px;color:var(--cyan);}
+.deal-meta{font-family:var(--font-mono);font-size:9.5px;color:var(--muted2);margin-top:2px;}
+/* prod-tag reused as stage badge */
+.stage-tag{font-family:var(--font-mono);font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:4px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);color:var(--muted2);display:inline-block;margin-top:5px;}
+.stage-tag.won{color:var(--green);background:rgba(0,255,163,.06);border-color:rgba(0,255,163,.18);}
+.stage-tag.prospect{color:var(--cyan);background:var(--cyan-dim);border-color:rgba(0,212,255,.2);}
+.stage-tag.negot{color:var(--amber);background:rgba(255,170,0,.07);border-color:rgba(255,170,0,.2);}
+
+/* ── SIDE WIDGETS ── */
+/* call-panel pattern from index.html */
+.widget{background:var(--card2);border:1px solid var(--border2);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:border-color .2s;}
+.widget:hover{border-color:var(--cyan);}
+.widget-chrome{background:var(--card);padding:0 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;height:38px;}
+.w-dot{width:8px;height:8px;border-radius:50%;}
+.ptitle{margin:0 auto;font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.widget-body{padding:14px;}
+
+/* cc pattern from index.html — quick action buttons */
+.cc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:11px 14px;display:flex;align-items:center;gap:12px;cursor:none;transition:border-color .2s,transform .2s;margin-bottom:8px;}
+.cc:hover{border-color:var(--cyan);transform:translateX(5px);}
+.cc:last-child{margin-bottom:0;}
+.cc-icon{width:38px;height:38px;border-radius:9px;background:var(--cyan-dim);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;font-size:15px;color:var(--cyan);flex-shrink:0;}
+.cc-title{font-weight:600;color:#fff;font-size:13px;margin-bottom:1px;}
+.cc-val{font-family:var(--font-mono);font-size:9.5px;color:var(--muted2);letter-spacing:.5px;}
+
+/* ticket */
+.ticket-row{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--border);transition:background .2s;}
+.ticket-row:last-child{border-bottom:none;}
+.ticket-row:hover{background:var(--card2);}
+.t-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
+.t-dot.open{background:var(--amber);}
+.t-dot.closed{background:var(--green);}
+.t-name{flex:1;font-size:12px;color:var(--text);}
+.t-age{font-family:var(--font-mono);font-size:9.5px;color:var(--muted);}
+
+/* empty */
+.empty-state{padding:28px;text-align:center;color:var(--muted);}
+.empty-state i{font-size:22px;display:block;margin-bottom:10px;opacity:.3;}
+.empty-state p{font-family:var(--font-mono);font-size:9.5px;letter-spacing:1px;}
+
+/* ══════════════════════════════════════════════════════
+   MODAL — copied verbatim from index.html
+══════════════════════════════════════════════════════ */
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(2,5,12,.9);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;padding:20px;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--card2);border:1px solid var(--border2);border-radius:22px;padding:40px;width:520px;max-width:95vw;max-height:88vh;overflow-y:auto;transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.22,.68,0,1.2);}
+.modal-overlay.open .modal{transform:translateY(0) scale(1);}
+.modal::-webkit-scrollbar{width:3px;}
+.modal::-webkit-scrollbar-thumb{background:var(--border2);}
+.m-eye{font-family:var(--font-mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;}
+.modal h3{font-family:var(--font-display);font-size:30px;letter-spacing:1px;color:#fff;}
+.modal p.modal-p{color:var(--muted2);font-size:13px;margin-top:6px;margin-bottom:20px;}
+/* m-input — same as index.html */
+.m-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--font-mono);font-size:12px;outline:none;margin-bottom:10px;transition:border-color .2s,box-shadow .2s;}
+.m-input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,.08);}
+.m-input::placeholder{color:var(--muted);}
+select.m-input option{background:var(--card2);}
+/* m-sep — same as index.html */
+.m-sep{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:16px 0 14px;display:flex;align-items:center;gap:10px;}
+.m-sep::before,.m-sep::after{content:'';flex:1;height:1px;background:var(--border);}
+/* modal-actions — same as index.html */
+.modal-actions{display:flex;gap:10px;margin-top:18px;}
+.modal-actions button{flex:1;padding:13px;border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:14px;cursor:none;border:none;transition:all .2s;}
+.m-confirm{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;}
+.m-confirm:hover{box-shadow:0 6px 28px rgba(0,212,255,.35);}
+.m-cancel{background:var(--surface);color:var(--muted2);}
+.m-cancel:hover{color:var(--text);}
+/* 2-col form grid */
+.m-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:0;}
+
+/* ── TOAST ── */
+.toast-wrap{position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;flex-direction:column;gap:8px;pointer-events:none;}
+.toast{background:var(--card2);border:1px solid var(--border2);border-radius:10px;padding:12px 18px;font-family:var(--font-mono);font-size:11px;letter-spacing:.3px;color:var(--text);display:flex;align-items:center;gap:10px;min-width:240px;animation:toastIn .25s ease;pointer-events:all;}
+.toast.ok{border-color:rgba(0,255,163,.3);color:var(--green);}
+.toast.err{border-color:rgba(255,59,107,.3);color:var(--red);}
+.toast.info{border-color:rgba(0,212,255,.3);color:var(--cyan);}
+@keyframes toastIn{from{opacity:0;transform:translateX(16px)}to{opacity:1;transform:none}}
+
+/* spinner */
+@keyframes spin2{to{transform:rotate(360deg)}}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid var(--border2);border-top-color:var(--cyan);border-radius:50%;animation:spin2 .6s linear infinite;}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.pulse{animation:pulse 1.4s ease infinite;}
+
+/* scrollbars */
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--bg);}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
+</style>
+</head>
+<body>
+
+<!-- CURSOR — same as index.html -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ══ TOPBAR — same structure as index.html ══ -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <a href="#" class="logo-wrap">
+      <div class="logo-svg-box">
+        <!-- SVG LOGO — copied verbatim from index.html -->
+        <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#1a56db"/>
+            </linearGradient>
+            <filter id="glow1" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <polygon points="23,2.5 41,12.5 41,33.5 23,43.5 5,33.5 5,12.5" fill="url(#lg1)" opacity=".1" stroke="url(#lg1)" stroke-width="1"/>
+          <circle cx="23" cy="23" r="5" fill="url(#lg1)" filter="url(#glow1)"/>
+          <circle cx="23" cy="9"   r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="36" cy="16" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="36" cy="30" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="23" cy="37" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="10" cy="30" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="10" cy="16" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <line x1="23" y1="23" x2="23" y2="9"  stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="36" y2="16" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="36" y2="30" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="23" y2="37" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="10" y2="30" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="10" y2="16" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <polygon points="23,9 36,16 36,30 23,37 10,30 10,16" fill="none" stroke="#00d4ff" stroke-width=".5" opacity=".18"/>
+        </svg>
+        <div class="logo-orbit"></div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CollabMCR</span>
+        <span class="logo-tag">CRM // Technology Corporation</span>
+      </div>
+    </a>
+
+    <!-- .nav — same as index.html -->
+    <nav class="nav">
+      <a href="#" class="active" onclick="return false;">Contactos</a>
+      <a href="#" onclick="return false;">Pipeline</a>
+      <a href="#" onclick="return false;">Reportes</a>
+    </nav>
+
+    <div class="topbar-right">
+      <div class="search-wrap" style="width:220px;">
+        <i class="fa fa-search"></i>
+        <input class="search-input" type="text" id="globalSearch" placeholder="Buscar contacto u orden…" oninput="filterContacts(this.value)"/>
+      </div>
+      <button class="btn-glow" onclick="openModal('new')"><i class="fa fa-plus"></i> Nuevo Contacto</button>
+      <button class="btn-token" id="syncBtn" onclick="syncAll()"><i class="fa fa-sync-alt"></i> Sync</button>
+      <!-- status-pill — same as index.html -->
+      <div class="status-pill offline" id="statusPill"><div class="status-dot"></div><span id="statusText">OFFLINE</span></div>
+      <div class="av-pill">LN</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ APP BODY ══ -->
+<div class="app-body">
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="sidebar">
+    <div class="sidebar-section">
+      <!-- s-label — same as index.html -->
+      <div class="s-label-sm">CRM</div>
+      <a class="nav-item active" id="nav-todos" href="#" onclick="applyFilter('all',this);return false;">
+        <i class="fa fa-users"></i> Contactos
+        <span class="nav-badge" id="b-all">0</span>
+      </a>
+      <a class="nav-item" href="#" onclick="applyFilter('comprado',this);return false;">
+        <i class="fa fa-handshake"></i> Deals
+        <span class="nav-badge" id="b-deals" style="color:var(--green);">0</span>
+      </a>
+      <a class="nav-item" href="#" onclick="applyFilter('pendiente',this);return false;">
+        <i class="fa fa-clock"></i> Pendientes
+        <span class="nav-badge" id="b-pend" style="color:var(--amber);">0</span>
+      </a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="s-label-sm">Pipeline</div>
+      <a class="nav-item" href="#" onclick="applyFilter('nuevo',this);return false;">
+        <i class="fa fa-circle" style="font-size:7px;color:var(--cyan);"></i> Nuevos
+      </a>
+      <a class="nav-item" href="#" onclick="applyFilter('pendiente',this);return false;">
+        <i class="fa fa-circle" style="font-size:7px;color:var(--amber);"></i> Pendientes
+      </a>
+      <a class="nav-item" href="#" onclick="applyFilter('comprado',this);return false;">
+        <i class="fa fa-circle" style="font-size:7px;color:var(--green);"></i> Comprados
+      </a>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="s-label-sm">Productos</div>
+      <a class="nav-item" href="#" onclick="filterByProduct('Webex Calling');return false;">
+        <i class="fa fa-phone-alt"></i> Webex Calling
+      </a>
+      <a class="nav-item" href="#" onclick="filterByProduct('Webex Contact Center');return false;">
+        <i class="fa fa-headset"></i> Contact Center
+      </a>
+      <a class="nav-item" href="#" onclick="filterByProduct('Webex Meetings');return false;">
+        <i class="fa fa-video"></i> Webex Meetings
+      </a>
+      <a class="nav-item" href="#" onclick="filterByProduct('AI Agent');return false;">
+        <i class="fa fa-robot"></i> AI Agent
+      </a>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="sidebar-stat">Total <span id="s-total">0</span></div>
+      <div class="sidebar-stat">Comprados <span id="s-deals" style="color:var(--green)">0</span></div>
+      <div class="sidebar-stat">API <span id="s-api">online</span></div>
+    </div>
+  </aside>
+
+  <!-- ── LIST PANEL ── -->
+  <div class="list-panel">
+    <div class="list-header">
+      <div class="list-title">CONTACTOS</div>
+      <button class="small-btn" onclick="openModal('new')"><i class="fa fa-plus"></i> Nuevo</button>
+    </div>
+    <div class="list-search">
+      <div class="search-wrap">
+        <i class="fa fa-search"></i>
+        <input class="search-input" type="text" id="listSearch" placeholder="Nombre, orden, teléfono…" oninput="filterContacts(this.value)"/>
+      </div>
+    </div>
+    <!-- chips — same as prod-tag from index.html -->
+    <div class="list-filter">
+      <span class="chip active" onclick="applyFilter('all',this)">Todos</span>
+      <span class="chip" onclick="applyFilter('comprado',this)">Comprado</span>
+      <span class="chip" onclick="applyFilter('pendiente',this)">Pendiente</span>
+      <span class="chip" onclick="applyFilter('nuevo',this)">Nuevo</span>
+    </div>
+    <div class="list-items" id="contactList">
+      <div class="empty-state"><i class="fa fa-sync-alt pulse"></i><p>CARGANDO…</p></div>
+    </div>
+  </div>
+
+  <!-- ── DETAIL PANEL ── -->
+  <div class="detail-panel" id="detailPanel">
+    <div class="detail-empty">
+      <div class="empty-icon"><i class="fa fa-user-circle"></i></div>
+      <div class="empty-label">Selecciona un contacto</div>
+      <div class="empty-hint">o crea uno nuevo con + Nuevo Contacto</div>
+    </div>
+  </div>
+
+</div><!-- /app-body -->
+
+<!-- ══ MODAL: NUEVO CONTACTO — same structure as tokenModal in index.html ══ -->
+<div class="modal-overlay" id="modal-new">
+  <div class="modal">
+    <div class="m-eye">// Nuevo Registro CRM</div>
+    <h3>NUEVO CONTACTO</h3>
+    <p class="modal-p">Crea el contacto y la orden de servicio en la API <code style="color:var(--cyan);font-size:11px;">cjpdata.wbx.ninja</code></p>
+
+    <div class="m-sep">Información Personal</div>
+    <div class="m-row">
+      <div><label class="f-label">Nombre *</label><input class="m-input" id="f-nombre" type="text" placeholder="Jose" style="margin-bottom:0;"/></div>
+      <div><label class="f-label">Apellido *</label><input class="m-input" id="f-apellido" type="text" placeholder="Linero" style="margin-bottom:0;"/></div>
+    </div>
+    <div class="m-row" style="margin-top:10px;">
+      <div><label class="f-label">Teléfono *</label><input class="m-input" id="f-telefono" type="text" placeholder="573102634216" style="margin-bottom:0;"/></div>
+      <div><label class="f-label">N° de Orden *</label><input class="m-input" id="f-orden" type="text" placeholder="120874" style="margin-bottom:0;"/></div>
+    </div>
+    <label class="f-label" style="margin-top:12px;">Dirección</label>
+    <input class="m-input" id="f-direccion" type="text" placeholder="Carrera 9 # 115-09 Piso 14"/>
+
+    <div class="m-sep">Orden de Servicio</div>
+    <div class="m-row">
+      <div>
+        <label class="f-label">Producto</label>
+        <select class="m-input" id="f-producto" style="margin-bottom:0;">
+          <option>Webex Calling</option><option>Webex Contact Center</option>
+          <option>Webex Meetings</option><option>AI Agent</option><option>Cisco Networking</option>
+        </select>
+      </div>
+      <div>
+        <label class="f-label">Estado Orden</label>
+        <select class="m-input" id="f-estadoorden" style="margin-bottom:0;">
+          <option>Nuevo</option><option>Pendiente</option><option>Comprado</option>
+        </select>
+      </div>
+    </div>
+    <div class="m-row" style="margin-top:10px;">
+      <div><label class="f-label">Fecha Alt 1</label><input class="m-input" id="f-fechaalt1" type="text" placeholder="Junio 1, 2025" style="margin-bottom:0;"/></div>
+      <div><label class="f-label">Fecha Alt 2</label><input class="m-input" id="f-fechaalt2" type="text" placeholder="Junio 10, 2025" style="margin-bottom:0;"/></div>
+    </div>
+    <div class="m-row" style="margin-top:10px;">
+      <div><label class="f-label">Fecha Instalación</label><input class="m-input" id="f-fechainst" type="text" placeholder="Mayo 15, 2025" style="margin-bottom:0;"/></div>
+      <div>
+        <label class="f-label">Estado Instalación</label>
+        <select class="m-input" id="f-estadoinst" style="margin-bottom:0;">
+          <option>No Instalado</option><option>En Proceso</option><option>Instalado</option>
+        </select>
+      </div>
+    </div>
+    <div class="m-row" style="margin-top:10px;">
+      <div>
+        <label class="f-label">Zona Horaria</label>
+        <select class="m-input" id="f-zona" style="margin-bottom:0;">
+          <option>America/Bogota</option><option>America/Mexico_City</option>
+          <option>America/Lima</option><option>America/Santiago</option><option>America/New_York</option>
+        </select>
+      </div>
+      <div>
+        <label class="f-label">Consentimiento</label>
+        <select class="m-input" id="f-consent" style="margin-bottom:0;">
+          <option>Autorizado</option><option>Pendiente</option><option>No Autorizado</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="m-cancel" onclick="closeModal('new')">Cancelar</button>
+      <button class="m-confirm" onclick="createContact()"><i class="fa fa-bolt" style="margin-right:6px;"></i>Crear Contacto</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL: EDITAR ══ -->
+<div class="modal-overlay" id="modal-edit">
+  <div class="modal">
+    <div class="m-eye">// Editar Registro — PATCH</div>
+    <h3>EDITAR CONTACTO</h3>
+    <p class="modal-p">Los cambios se envían vía PATCH a la API.</p>
+
+    <div class="m-sep">Servicio</div>
+    <div class="m-row">
+      <div>
+        <label class="f-label">Producto</label>
+        <select class="m-input" id="e-producto" style="margin-bottom:0;">
+          <option>Webex Calling</option><option>Webex Contact Center</option>
+          <option>Webex Meetings</option><option>AI Agent</option><option>Cisco Networking</option>
+        </select>
+      </div>
+      <div>
+        <label class="f-label">Estado Orden</label>
+        <select class="m-input" id="e-estadoorden" style="margin-bottom:0;">
+          <option>Nuevo</option><option>Pendiente</option><option>Comprado</option>
+        </select>
+      </div>
+    </div>
+    <div class="m-row" style="margin-top:10px;">
+      <div><label class="f-label">Fecha Alt 1</label><input class="m-input" id="e-fechaalt1" type="text" style="margin-bottom:0;"/></div>
+      <div><label class="f-label">Fecha Alt 2</label><input class="m-input" id="e-fechaalt2" type="text" style="margin-bottom:0;"/></div>
+    </div>
+
+    <div class="m-sep">Instalación</div>
+    <div class="m-row">
+      <div><label class="f-label">Fecha Instalación</label><input class="m-input" id="e-fechainst" type="text" style="margin-bottom:0;"/></div>
+      <div>
+        <label class="f-label">Estado Instalación</label>
+        <select class="m-input" id="e-estadoinst" style="margin-bottom:0;">
+          <option>No Instalado</option><option>En Proceso</option><option>Instalado</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="m-sep">Contacto</div>
+    <div class="m-row">
+      <div><label class="f-label">Teléfono</label><input class="m-input" id="e-telefono" type="text" style="margin-bottom:0;"/></div>
+      <div><label class="f-label">Dirección</label><input class="m-input" id="e-direccion" type="text" style="margin-bottom:0;"/></div>
+    </div>
+
+    <div class="modal-actions">
+      <button class="m-cancel" onclick="closeModal('edit')">Cancelar</button>
+      <button class="m-confirm" onclick="saveEdit()"><i class="fa fa-bolt" style="margin-right:6px;"></i>Guardar Cambios</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL: ACTIVIDAD ══ -->
+<div class="modal-overlay" id="modal-act">
+  <div class="modal" style="width:420px;">
+    <div class="m-eye">// Log de Actividad</div>
+    <h3>NUEVA ACTIVIDAD</h3>
+    <p class="modal-p">Registra una interacción con este contacto.</p>
+    <label class="f-label">Tipo de actividad</label>
+    <select class="m-input" id="act-tipo">
+      <option value="call">📞  Llamada</option>
+      <option value="note">📝  Nota</option>
+      <option value="email">✉️  Email</option>
+    </select>
+    <label class="f-label">Descripción *</label>
+    <input class="m-input" id="act-desc" type="text" placeholder="El cliente llamó con interés en…"/>
+    <div class="modal-actions">
+      <button class="m-cancel" onclick="closeModal('act')">Cancelar</button>
+      <button class="m-confirm" onclick="saveAct()"><i class="fa fa-bolt" style="margin-right:6px;"></i>Registrar</button>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast-wrap" id="toastWrap"></div>
+
+<script>
+// ══════════════════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════════════════
+const API='https://cjpdata.wbx.ninja';
+let contacts=[],active=null,curFilter='all',curSearch='',editOrder=null;
+
+// ══════════════════════════════════════════════════════
+//  CURSOR — copied verbatim from index.html
+// ══════════════════════════════════════════════════════
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function ar(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(ar);})();
+// hover expand — same querySelectorAll targets as index.html + our CRM elements
+function attachCursorHovers(){
+  document.querySelectorAll('a,button,.cc-card,.cc,.prod-card,.icon-btn,.chip,.nav-item').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{cursor.style.width='16px';cursor.style.height='16px';ring.style.width='52px';ring.style.height='52px';});
+    el.addEventListener('mouseleave',()=>{cursor.style.width='10px';cursor.style.height='10px';ring.style.width='36px';ring.style.height='36px';});
+  });
+}
+attachCursorHovers();
+
+// ══════════════════════════════════════════════════════
+//  LOCAL STORAGE
+// ══════════════════════════════════════════════════════
+const LS_O='crm_orders_v4',LS_A='crm_acts_v4';
+const getOrders=()=>{try{return JSON.parse(localStorage.getItem(LS_O)||'[]');}catch{return[];}};
+const saveOrders=o=>localStorage.setItem(LS_O,JSON.stringify(o));
+const addOrder=n=>{const o=getOrders();if(!o.includes(String(n))){o.push(String(n));saveOrders(o);}};
+const rmOrder=n=>saveOrders(getOrders().filter(x=>x!==String(n)));
+const getActs=()=>{try{return JSON.parse(localStorage.getItem(LS_A)||'{}');}catch{return{};}};
+const saveActs=d=>localStorage.setItem(LS_A,JSON.stringify(d));
+const cActs=ord=>getActs()[String(ord)]||[];
+const addAct=(ord,act)=>{const d=getActs();if(!d[ord])d[ord]=[];d[ord].unshift({...act,time:new Date().toISOString()});saveActs(d);};
+
+// ══════════════════════════════════════════════════════
+//  AVATAR
+// ══════════════════════════════════════════════════════
+const AV=['linear-gradient(135deg,#1a56db,#00d4ff)','linear-gradient(135deg,#7c3aed,#818cf8)','linear-gradient(135deg,#059669,#00ffa3)','linear-gradient(135deg,#b45309,#ffaa00)','linear-gradient(135deg,#9f1239,#ff3b6b)'];
+const avC=n=>AV[(n||'?').charCodeAt(0)%AV.length];
+const ini=(a,b)=>((a||'?')[0]+(b||'?')[0]).toUpperCase();
+
+// ══════════════════════════════════════════════════════
+//  TOAST
+// ══════════════════════════════════════════════════════
+function toast(msg,type='info',dur=3000){
+  const w=document.getElementById('toastWrap');
+  const el=document.createElement('div');
+  el.className=`toast ${type==='success'?'ok':type==='error'?'err':'info'}`;
+  const ic={success:'fa-check-circle',error:'fa-exclamation-circle',info:'fa-info-circle'}[type];
+  el.innerHTML=`<i class="fa ${ic}"></i>${msg}`;
+  w.appendChild(el);
+  setTimeout(()=>{el.style.opacity='0';el.style.transform='translateX(16px)';el.style.transition='all .3s';setTimeout(()=>el.remove(),300);},dur);
+}
+
+// ══════════════════════════════════════════════════════
+//  API CALLS
+// ══════════════════════════════════════════════════════
+const $get=n=>fetch(`${API}?number=${n}`).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
+const $post=d=>fetch(`${API}?number=${d.orden}`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
+const $patch=(n,d)=>fetch(`${API}?number=${n}`,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
+const $del=n=>fetch(`${API}?number=${n}`,{method:'DELETE'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
+
+// ══════════════════════════════════════════════════════
+//  STATUS — same signature as index.html setStatus()
+// ══════════════════════════════════════════════════════
+function setStatus(s){
+  const pill=document.getElementById('statusPill'),txt=document.getElementById('statusText');
+  const map={registered:'CRM ONLINE',connecting:'SYNC...',offline:'OFFLINE'};
+  pill.className='status-pill '+(s==='offline'?'offline':s==='connecting'?'connecting':'');
+  txt.textContent=map[s]||s.toUpperCase();
+  document.getElementById('s-api').textContent=s==='registered'?'online':'—';
+  document.getElementById('s-api').style.color=s==='registered'?'var(--green)':'var(--muted2)';
+}
+
+// ══════════════════════════════════════════════════════
+//  NORMALIZE RECORD
+// ══════════════════════════════════════════════════════
+const norm=d=>({
+  orden:String(d.orden||d.number||''),
+  nombre:d.nombre||'',apellido:d.apellido||'',telefono:d.telefono||'',
+  direccion:d.direccion||'',producto:d.producto||'',
+  estadoorden:(d.estadoorden||'nuevo').toLowerCase(),
+  estadoinstalacion:d.estadoinstalacion||'No Instalado',
+  fechainstalacion:d.fechainstalacion||'',fechaalt1:d.fechaalt1||'',
+  fechaalt2:d.fechaalt2||'',zonahoraria:d.zonahoraria||'',
+  consentimiento:d.consentimiento||'',
+});
+
+// ══════════════════════════════════════════════════════
+//  SYNC ALL
+// ══════════════════════════════════════════════════════
+async function syncAll(){
+  const btn=document.getElementById('syncBtn');
+  btn.innerHTML='<span class="spinner"></span>';
+  setStatus('connecting');
+  contacts=[];
+  for(const n of getOrders()){
+    try{const d=await $get(n);if(d&&d.nombre)contacts.push(norm(d));}catch{}
+  }
+  renderList();updateBadges();setStatus('registered');
+  btn.innerHTML='<i class="fa fa-sync-alt"></i> Sync';
+  toast(`${contacts.length} contacto${contacts.length!==1?'s':''} sincronizados`,'success');
+}
+
+// ══════════════════════════════════════════════════════
+//  FILTERS
+// ══════════════════════════════════════════════════════
+function applyFilter(f,el){
+  curFilter=f;
+  document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
+  if(el&&el.classList.contains('chip'))el.classList.add('active');
+  document.querySelectorAll('.sidebar .nav-item').forEach(n=>n.classList.remove('active'));
+  if(el&&el.classList.contains('nav-item'))el.classList.add('active');
+  renderList();
+}
+function filterByProduct(p){curSearch=p.toLowerCase();document.getElementById('listSearch').value=p;renderList();}
+function filterContacts(v){
+  curSearch=v.toLowerCase();
+  document.getElementById('listSearch').value=v;
+  document.getElementById('globalSearch').value=v;
+  renderList();
+}
+const filtered=()=>contacts.filter(c=>{
+  const mf=curFilter==='all'||c.estadoorden===curFilter;
+  const ms=!curSearch||c.nombre.toLowerCase().includes(curSearch)||c.apellido.toLowerCase().includes(curSearch)||c.orden.includes(curSearch)||(c.producto||'').toLowerCase().includes(curSearch)||c.telefono.includes(curSearch);
+  return mf&&ms;
+});
+
+// ══════════════════════════════════════════════════════
+//  RENDER LIST
+// ══════════════════════════════════════════════════════
+// cc-card color cycle — same c1-c5 as prod-card
+const CC_COLORS=['c1','c2','c3','c4','c5'];
+const ccColor=n=>CC_COLORS[(n||'?').charCodeAt(0)%CC_COLORS.length];
+
+function renderList(){
+  const el=document.getElementById('contactList');
+  const list=filtered();
+  if(!list.length){
+    el.innerHTML=`<div class="empty-state"><i class="fa fa-users"></i><p>SIN RESULTADOS</p></div>`;
+    return;
+  }
+  el.innerHTML=list.map(c=>{
+    const bg=avC(c.nombre+c.apellido),init=ini(c.nombre,c.apellido);
+    const isA=active&&active.orden===c.orden;
+    const cc=ccColor(c.nombre);
+    const ps=(c.producto||'').replace('Webex ','').replace('Contact Center','CC');
+    return`<div class="cc-card ${isA?'active':cc}" onclick="selectContact('${c.orden}')">
+      <div class="cc-avatar" style="background:${bg}">${init}</div>
+      <div class="cc-info">
+        <div class="cc-name">${c.nombre} ${c.apellido}</div>
+        <div class="cc-sub">${ps||'Sin producto'} · #${c.orden}</div>
+      </div>
+      <div class="st-dot ${c.estadoorden}"></div>
+    </div>`;
+  }).join('');
+  attachCursorHovers();
+}
+
+// ══════════════════════════════════════════════════════
+//  SELECT CONTACT
+// ══════════════════════════════════════════════════════
+async function selectContact(order){
+  try{
+    const data=await $get(order);
+    active=norm(data);
+    const i=contacts.findIndex(c=>c.orden===String(order));
+    if(i>=0)contacts[i]=active;
+    renderList();renderDetail(active);
+  }catch(e){toast('Error al cargar: '+e.message,'error');}
+}
+
+// ══════════════════════════════════════════════════════
+//  RENDER DETAIL
+// ══════════════════════════════════════════════════════
+function renderDetail(c){
+  const bg=avC(c.nombre+c.apellido),init=ini(c.nombre,c.apellido);
+  const acts=cActs(c.orden);
+  const sc={comprado:'var(--green)',pendiente:'var(--amber)',nuevo:'var(--cyan)'}[c.estadoorden]||'var(--muted2)';
+  const instCls={Instalado:'green','En Proceso':'amber','No Instalado':'red'}[c.estadoinstalacion]||'red';
+  const instDot={Instalado:'comprado','En Proceso':'pendiente','No Instalado':'nuevo'}[c.estadoinstalacion]||'nuevo';
+
+  document.getElementById('detailPanel').innerHTML=`
+  <div style="display:flex;flex-direction:column;height:100%;overflow:hidden;">
+
+    <!-- HEADER -->
+    <div class="d-header">
+      <div class="d-av" style="background:${bg}">${init}</div>
+      <div class="d-hinfo">
+        <div class="d-name">${c.nombre} ${c.apellido}</div>
+        <div class="d-role">Orden #${c.orden} &nbsp;·&nbsp; ${c.producto||'Sin producto'} &nbsp;·&nbsp; ${c.zonahoraria||'—'}</div>
+        <div class="d-phone"><i class="fa fa-phone-alt"></i>${c.telefono||'N/A'}</div>
+      </div>
+      <div class="d-actions">
+        <!-- order-pill — reuses .status-pill pattern -->
+        <div class="order-pill ${c.estadoorden}"><div class="status-dot"></div>${c.estadoorden.toUpperCase()}</div>
+        <button class="icon-btn" title="Editar" onclick="openEditModal('${c.orden}')"><i class="fa fa-pen"></i></button>
+        <button class="icon-btn danger" title="Eliminar" onclick="delContact('${c.orden}')"><i class="fa fa-trash"></i></button>
+      </div>
+    </div>
+
+    <!-- TABS — .nav feel -->
+    <div class="d-tabs">
+      <div class="d-tab active" onclick="switchTab(this,'t-overview')">RESUMEN</div>
+      <div class="d-tab" onclick="switchTab(this,'t-activities')">ACTIVIDADES <span class="tab-count">${acts.length}</span></div>
+      <div class="d-tab" onclick="switchTab(this,'t-deals')">DEALS</div>
+    </div>
+
+    <!-- BODY -->
+    <div class="d-body">
+
+      <!-- MAIN COL -->
+      <div class="d-main">
+
+        <!-- OVERVIEW -->
+        <div id="t-overview">
+          <!-- info-card — .prod-card feel -->
+          <div class="info-card">
+            <div class="card-header">
+              <div class="card-label"><i class="fa fa-id-card"></i>Información Personal</div>
+            </div>
+            <div class="info-grid">
+              <div class="info-cell"><div class="f-label">Nombre Completo</div><div class="info-val">${c.nombre} ${c.apellido}</div></div>
+              <div class="info-cell"><div class="f-label">Teléfono</div><div class="info-val cyan">${c.telefono||'—'}</div></div>
+              <div class="info-cell"><div class="f-label">Dirección</div><div class="info-val">${c.direccion||'—'}</div></div>
+              <div class="info-cell"><div class="f-label">Zona Horaria</div><div class="info-val">${c.zonahoraria||'—'}</div></div>
+              <div class="info-cell"><div class="f-label">Consentimiento</div><div class="info-val ${c.consentimiento==='Autorizado'?'green':'amber'}">${c.consentimiento||'—'}</div></div>
+              <div class="info-cell"><div class="f-label">Número de Orden</div><div class="info-val cyan">#${c.orden}</div></div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="card-header">
+              <div class="card-label"><i class="fa fa-network-wired"></i>Servicio &amp; Instalación</div>
+            </div>
+            <div class="info-grid">
+              <div class="info-cell"><div class="f-label">Producto</div><div class="info-val cyan">${c.producto||'—'}</div></div>
+              <div class="info-cell"><div class="f-label">Estado Orden</div><div class="info-val" style="color:${sc}">${c.estadoorden.toUpperCase()}</div></div>
+              <div class="info-cell"><div class="f-label">Fecha Alt 1</div><div class="info-val">${c.fechaalt1||'—'}</div></div>
+              <div class="info-cell"><div class="f-label">Fecha Alt 2</div><div class="info-val">${c.fechaalt2||'—'}</div></div>
+              <div class="info-cell"><div class="f-label">Fecha Instalación</div><div class="info-val">${c.fechainstalacion||'—'}</div></div>
+              <div class="info-cell"><div class="f-label">Estado Instalación</div><div class="info-val ${instCls}">${c.estadoinstalacion||'—'}</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ACTIVITIES — .feature-row pattern from index.html -->
+        <div id="t-activities" style="display:none;">
+          <div class="info-card">
+            <div class="card-header">
+              <div class="card-label"><i class="fa fa-stream"></i>Historial de Actividades</div>
+              <button class="small-btn" onclick="openModal('act')"><i class="fa fa-plus"></i> Nueva</button>
+            </div>
+            ${acts.length?`<div class="feature-list" style="gap:0;margin-top:0;">`+acts.map(a=>`
+              <div class="feature-row">
+                <div class="feat-icon ${a.tipo==='call'?'fi-a':a.tipo==='email'?'fi-c':'fi-d'}">
+                  <i class="fa ${a.tipo==='call'?'fa-phone-alt':a.tipo==='email'?'fa-envelope':'fa-sticky-note'}"></i>
+                </div>
+                <div>
+                  <div class="feat-t">${a.tipo==='call'?'Llamada registrada':a.tipo==='email'?'Email enviado':'Nota'}</div>
+                  <div class="feat-d">${a.desc}</div>
+                  <div class="feat-time">${fmtT(a.time)}</div>
+                </div>
+              </div>`).join('')+`</div>`
+            :`<div class="empty-state"><i class="fa fa-history"></i><p>SIN ACTIVIDADES AÚN</p></div>`}
+          </div>
+        </div>
+
+        <!-- DEALS -->
+        <div id="t-deals" style="display:none;">
+          <div class="info-card">
+            <div class="card-header">
+              <div class="card-label"><i class="fa fa-handshake"></i>Deal Activo</div>
+            </div>
+            <div class="deal-row">
+              <div class="deal-ic"><i class="fa fa-network-wired"></i></div>
+              <div style="flex:1;min-width:0;">
+                <div class="deal-name">${c.producto||'Sin producto'} — Cisco Systems</div>
+                <div class="deal-meta">Orden #${c.orden} · Cierre: ${c.fechaalt1||'N/D'}</div>
+                <span class="stage-tag ${c.estadoorden==='comprado'?'won':c.estadoorden==='pendiente'?'negot':'prospect'}">${c.estadoorden==='comprado'?'CERRADO GANADO':c.estadoorden==='pendiente'?'EN NEGOCIACIÓN':'PROSPECTO'}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /d-main -->
+
+      <!-- SIDE COL -->
+      <div class="d-side">
+
+        <!-- widget — .call-panel pattern from index.html -->
+        <div class="widget">
+          <div class="widget-chrome">
+            <div class="w-dot" style="background:#ff5f57;"></div>
+            <div class="w-dot" style="background:#febc2e;"></div>
+            <div class="w-dot" style="background:#28c840;"></div>
+            <div class="ptitle">EMPRESA</div>
+          </div>
+          <div class="widget-body">
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:38px;height:38px;border-radius:10px;background:var(--cyan-dim);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;font-size:16px;color:var(--cyan);flex-shrink:0;">
+                <i class="fa fa-building"></i>
+              </div>
+              <div>
+                <div style="font-weight:600;color:#fff;font-size:14px;">Cisco Systems</div>
+                <div style="font-family:var(--font-mono);font-size:9.5px;color:var(--muted2);letter-spacing:.5px;">cisco.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- estado instalación widget -->
+        <div class="widget">
+          <div class="widget-chrome">
+            <div class="w-dot" style="background:#ff5f57;"></div>
+            <div class="w-dot" style="background:#febc2e;"></div>
+            <div class="w-dot" style="background:#28c840;"></div>
+            <div class="ptitle">INSTALACIÓN</div>
+          </div>
+          <div class="widget-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="st-dot ${instDot}" style="flex-shrink:0;"></div>
+              <span style="font-weight:600;font-size:13.5px;">${c.estadoinstalacion}</span>
+            </div>
+            <div class="f-label">Próxima fecha</div>
+            <div style="font-family:var(--font-mono);font-size:12px;color:var(--cyan);margin-top:3px;">${c.fechaalt1||'No definida'}</div>
+          </div>
+        </div>
+
+        <!-- acciones rápidas — .cc pattern from index.html -->
+        <div class="info-card">
+          <div class="card-header"><div class="card-label"><i class="fa fa-bolt"></i>Acciones Rápidas</div></div>
+          <div style="padding:10px;">
+            <div class="cc" onclick="logCall('${c.orden}')">
+              <div class="cc-icon"><i class="fa fa-phone-alt"></i></div>
+              <div><div class="cc-title">Registrar llamada</div><div class="cc-val">Log en actividades</div></div>
+            </div>
+            <div class="cc" onclick="openModal('act')">
+              <div class="cc-icon" style="background:rgba(255,170,0,.1);border-color:rgba(255,170,0,.15);color:var(--amber);"><i class="fa fa-sticky-note"></i></div>
+              <div><div class="cc-title">Agregar nota</div><div class="cc-val">Abre formulario</div></div>
+            </div>
+            <div class="cc" onclick="openEditModal('${c.orden}')">
+              <div class="cc-icon" style="background:rgba(129,140,248,.1);border-color:rgba(129,140,248,.15);color:#818cf8;"><i class="fa fa-edit"></i></div>
+              <div><div class="cc-title">Editar orden</div><div class="cc-val">PATCH a la API</div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- tickets -->
+        <div class="widget">
+          <div class="widget-chrome">
+            <div class="w-dot" style="background:#ff5f57;"></div>
+            <div class="w-dot" style="background:#febc2e;"></div>
+            <div class="w-dot" style="background:#28c840;"></div>
+            <div class="ptitle">TICKETS (${c.estadoinstalacion!=='Instalado'?1:0})</div>
+          </div>
+          ${c.estadoinstalacion!=='Instalado'?`
+          <div class="ticket-row">
+            <div class="t-dot open"></div>
+            <span class="t-name">Registro del nuevo teléfono</span>
+            <span class="t-age">Abierto</span>
+          </div>`:`<div class="empty-state" style="padding:14px;"><p>SIN TICKETS</p></div>`}
+        </div>
+
+      </div><!-- /d-side -->
+    </div><!-- /d-body -->
+  </div>`;
+
+  attachCursorHovers();
+}
+
+// ══════════════════════════════════════════════════════
+//  TABS
+// ══════════════════════════════════════════════════════
+function switchTab(el,id){
+  document.querySelectorAll('.d-tab').forEach(t=>t.classList.remove('active'));
+  el.classList.add('active');
+  ['t-overview','t-activities','t-deals'].forEach(t=>{const e=document.getElementById(t);if(e)e.style.display=t===id?'':'none';});
+}
+const fmtT=iso=>{try{return new Date(iso).toLocaleDateString('es-CO',{day:'numeric',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});}catch{return'—';}};
+
+// ══════════════════════════════════════════════════════
+//  CREATE
+// ══════════════════════════════════════════════════════
+async function createContact(){
+  const orden=v('f-orden'),nombre=v('f-nombre'),apellido=v('f-apellido');
+  if(!orden||!nombre||!apellido){toast('Nombre, apellido y orden son requeridos','error');return;}
+  const payload={
+    consentimiento:v('f-consent'),orden,estadoorden:v('f-estadoorden'),
+    zonahoraria:v('f-zona'),fechaalt1:v('f-fechaalt1'),fechaalt2:v('f-fechaalt2'),
+    producto:v('f-producto'),nombre,apellido,telefono:v('f-telefono'),
+    direccion:v('f-direccion'),fechainstalacion:v('f-fechainst'),
+    estadoinstalacion:v('f-estadoinst'),
+  };
+  try{
+    await $post(payload);
+    addOrder(orden);contacts.push(norm(payload));
+    renderList();updateBadges();closeModal('new');
+    toast(`${nombre} ${apellido} creado`,'success');
+    selectContact(orden);
+  }catch(e){toast('Error: '+e.message,'error');}
+}
+
+// ══════════════════════════════════════════════════════
+//  EDIT
+// ══════════════════════════════════════════════════════
+function openEditModal(order){
+  const c=contacts.find(x=>x.orden===String(order));if(!c)return;
+  editOrder=order;
+  sv('e-producto',c.producto||'Webex Calling');
+  sv('e-estadoorden',c.estadoorden?c.estadoorden.charAt(0).toUpperCase()+c.estadoorden.slice(1):'Nuevo');
+  sv('e-fechaalt1',c.fechaalt1||'');sv('e-fechaalt2',c.fechaalt2||'');
+  sv('e-fechainst',c.fechainstalacion||'');sv('e-estadoinst',c.estadoinstalacion||'No Instalado');
+  sv('e-telefono',c.telefono||'');sv('e-direccion',c.direccion||'');
+  openModal('edit');
+}
+async function saveEdit(){
+  if(!editOrder)return;
+  const payload={
+    producto:v('e-producto'),estadoorden:v('e-estadoorden'),
+    fechaalt1:v('e-fechaalt1'),fechaalt2:v('e-fechaalt2'),
+    fechainstalacion:v('e-fechainst'),estadoinstalacion:v('e-estadoinst'),
+    telefono:v('e-telefono'),direccion:v('e-direccion'),
+  };
+  try{
+    await $patch(editOrder,payload);
+    const i=contacts.findIndex(c=>c.orden===String(editOrder));
+    if(i>=0)contacts[i]={...contacts[i],...norm({...contacts[i],...payload})};
+    closeModal('edit');toast('Cambios guardados','success');selectContact(editOrder);
+  }catch(e){toast('Error: '+e.message,'error');}
+}
+
+// ══════════════════════════════════════════════════════
+//  DELETE
+// ══════════════════════════════════════════════════════
+async function delContact(order){
+  if(!confirm(`¿Eliminar registro #${order}?\nEsta acción no se puede deshacer.`))return;
+  try{
+    await $del(order);rmOrder(order);
+    contacts=contacts.filter(c=>c.orden!==String(order));active=null;
+    document.getElementById('detailPanel').innerHTML=`<div class="detail-empty"><div class="empty-icon"><i class="fa fa-trash"></i></div><div class="empty-label">REGISTRO ELIMINADO</div></div>`;
+    renderList();updateBadges();toast(`Orden #${order} eliminada`,'success');
+  }catch(e){toast('Error: '+e.message,'error');}
+}
+
+// ══════════════════════════════════════════════════════
+//  ACTIVITIES
+// ══════════════════════════════════════════════════════
+function saveAct(){
+  if(!active)return;
+  const tipo=v('act-tipo'),desc=v('act-desc').trim();
+  if(!desc){toast('Escribe una descripción','error');return;}
+  addAct(active.orden,{tipo,desc});
+  sv('act-desc','');closeModal('act');
+  toast('Actividad registrada','success');
+  renderDetail(active);
+  setTimeout(()=>{const t=document.querySelectorAll('.d-tab');if(t[1])switchTab(t[1],'t-activities');},100);
+}
+function logCall(order){
+  if(!active)return;
+  addAct(order,{tipo:'call',desc:'El cliente llamó. Interés en '+(active.producto||'el servicio')+'.'});
+  toast('Llamada registrada','success');renderDetail(active);
+}
+
+// ══════════════════════════════════════════════════════
+//  BADGES
+// ══════════════════════════════════════════════════════
+function updateBadges(){
+  const all=contacts.length,deals=contacts.filter(c=>c.estadoorden==='comprado').length,pend=contacts.filter(c=>c.estadoorden==='pendiente').length;
+  document.getElementById('b-all').textContent=all;
+  document.getElementById('b-deals').textContent=deals;
+  document.getElementById('b-pend').textContent=pend;
+  document.getElementById('s-total').textContent=all;
+  document.getElementById('s-deals').textContent=deals;
+}
+
+// ══════════════════════════════════════════════════════
+//  MODAL HELPERS
+// ══════════════════════════════════════════════════════
+function openModal(id){document.getElementById(`modal-${id}`).classList.add('open');}
+function closeModal(id){document.getElementById(`modal-${id}`).classList.remove('open');}
+document.querySelectorAll('.modal-overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open');}));
+
+// ══════════════════════════════════════════════════════
+//  DOM HELPERS
+// ══════════════════════════════════════════════════════
+const v=id=>document.getElementById(id).value.trim();
+const sv=(id,val)=>{const el=document.getElementById(id);if(el)el.value=val;};
+
+// ══════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════
+window.addEventListener('DOMContentLoaded',async()=>{
+  setStatus('offline');
+  const orders=getOrders();
+  if(!orders.length){
+    document.getElementById('contactList').innerHTML=`
+      <div class="empty-state" style="padding:36px 16px;">
+        <i class="fa fa-user-plus"></i>
+        <p>SIN CONTACTOS</p>
+        <p style="margin-top:8px;font-size:9px;color:var(--muted);">Haz clic en + Nuevo Contacto para empezar</p>
+      </div>`;
+    return;
+  }
+  document.getElementById('contactList').innerHTML=`<div class="empty-state"><i class="fa fa-sync-alt pulse"></i><p>SINCRONIZANDO…</p></div>`;
+  await syncAll();
+});
+</script>
+</body>
+</html>
