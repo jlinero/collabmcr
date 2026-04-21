@@ -533,46 +533,47 @@ function setMuteUI(muted){
 }
 
 function toggleMute(){
-  if(!S.call) return;
-  try{
-    if(isMuted){
-      // UNMUTE — reactivar micrófono
-      // Método 1: setMuted en el LocalMicrophoneStream (API oficial SDK)
-      if(S.localStream && typeof S.localStream.setMuted === 'function'){
-        S.localStream.setMuted(false);
+  if(!S.call){ log('Sin llamada activa.','err'); return; }
+
+  const enable = isMuted; // si estaba muted, ahora queremos enable=true (unmute)
+
+  // ── Método principal: controlar el track de audio directamente ──
+  // Funciona con cualquier versión del SDK porque operamos sobre el
+  // MediaStreamTrack nativo del navegador, no sobre APIs del SDK.
+  let muted_ok = false;
+
+  if(S.localStream){
+    // Caso A: el stream tiene outputStream (LocalMicrophoneStream del SDK)
+    const ms = S.localStream.outputStream || S.localStream.stream || S.localStream;
+    if(ms && typeof ms.getAudioTracks === 'function'){
+      const tracks = ms.getAudioTracks();
+      if(tracks.length > 0){
+        tracks.forEach(t => { t.enabled = enable; });
+        muted_ok = true;
       }
-      // Método 2: habilitar el track de audio directamente
-      else if(S.localStream && S.localStream.outputStream){
-        S.localStream.outputStream.getAudioTracks().forEach(t => t.enabled = true);
-      }
-      else if(S.localStream && S.localStream.stream){
-        S.localStream.stream.getAudioTracks().forEach(t => t.enabled = true);
-      }
-      // Método 3: fallback en el objeto call
-      else if(typeof S.call.unmute === 'function') S.call.unmute();
-      else if(typeof S.call.unmuteAudio === 'function') S.call.unmuteAudio();
-      setMuteUI(false);
-      log('Micrófono activado.','ok');
-    } else {
-      // MUTE — silenciar micrófono
-      // Método 1: setMuted en el LocalMicrophoneStream (API oficial SDK)
-      if(S.localStream && typeof S.localStream.setMuted === 'function'){
-        S.localStream.setMuted(true);
-      }
-      // Método 2: deshabilitar el track de audio directamente
-      else if(S.localStream && S.localStream.outputStream){
-        S.localStream.outputStream.getAudioTracks().forEach(t => t.enabled = false);
-      }
-      else if(S.localStream && S.localStream.stream){
-        S.localStream.stream.getAudioTracks().forEach(t => t.enabled = false);
-      }
-      // Método 3: fallback en el objeto call
-      else if(typeof S.call.mute === 'function') S.call.mute();
-      else if(typeof S.call.muteAudio === 'function') S.call.muteAudio();
-      setMuteUI(true);
-      log('Llamada silenciada.','muted');
     }
-  }catch(e){ log('Error al silenciar: '+e.message,'err'); }
+    // Caso B: setMuted nativo del SDK
+    if(!muted_ok && typeof S.localStream.setMuted === 'function'){
+      S.localStream.setMuted(!enable);
+      muted_ok = true;
+    }
+  }
+
+  // ── Fallback: buscar todos los tracks activos del navegador ──
+  if(!muted_ok){
+    navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
+      stream.getAudioTracks().forEach(t => { t.enabled = enable; });
+    }).catch(()=>{});
+  }
+
+  // Actualizar UI
+  if(enable){
+    setMuteUI(false);
+    log('Micrófono activado.','ok');
+  } else {
+    setMuteUI(true);
+    log('Llamada silenciada.','muted');
+  }
 }
 
 async function doRefresh(){
