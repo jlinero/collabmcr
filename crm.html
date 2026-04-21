@@ -344,8 +344,9 @@ select.m-input option{background:var(--card2);}
       </div>
     </a>
 
-    <!-- .nav — same as index.html -->
+    <!-- nav -->
     <nav class="nav">
+      <a href="index.html"><i class="fa fa-arrow-left" style="margin-right:6px;font-size:10px;"></i>Inicio</a>
       <a href="#" class="active" onclick="return false;">Contactos</a>
       <a href="#" onclick="return false;">Pipeline</a>
       <a href="#" onclick="return false;">Reportes</a>
@@ -358,8 +359,6 @@ select.m-input option{background:var(--card2);}
       </div>
       <button class="btn-glow" onclick="openModal('new')"><i class="fa fa-plus"></i> Nuevo Contacto</button>
       <button class="btn-token" id="syncBtn" onclick="syncAll()"><i class="fa fa-sync-alt"></i> Sync</button>
-      <!-- status-pill — same as index.html -->
-      <div class="status-pill offline" id="statusPill"><div class="status-dot"></div><span id="statusText">OFFLINE</span></div>
       <div class="av-pill">LN</div>
     </div>
   </div>
@@ -670,15 +669,11 @@ const $patch=(n,d)=>fetch(`${API}?number=${n}`,{method:'PATCH',headers:{'Content
 const $del=n=>fetch(`${API}?number=${n}`,{method:'DELETE'}).then(r=>{if(!r.ok)throw new Error('HTTP '+r.status);return r.json();});
 
 // ══════════════════════════════════════════════════════
-//  STATUS — same signature as index.html setStatus()
+//  STATUS — pill removed, keeping stub to avoid errors
 // ══════════════════════════════════════════════════════
 function setStatus(s){
-  const pill=document.getElementById('statusPill'),txt=document.getElementById('statusText');
-  const map={registered:'CRM ONLINE',connecting:'SYNC...',offline:'OFFLINE'};
-  pill.className='status-pill '+(s==='offline'?'offline':s==='connecting'?'connecting':'');
-  txt.textContent=map[s]||s.toUpperCase();
-  document.getElementById('s-api').textContent=s==='registered'?'online':'—';
-  document.getElementById('s-api').style.color=s==='registered'?'var(--green)':'var(--muted2)';
+  const el=document.getElementById('s-api');
+  if(el){ el.textContent=s==='registered'?'online':'—'; el.style.color=s==='registered'?'var(--green)':'var(--muted2)'; }
 }
 
 // ══════════════════════════════════════════════════════
