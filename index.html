@@ -488,7 +488,7 @@ window.addEventListener('scroll',()=>{
 document.getElementById('yr').textContent=new Date().getFullYear();
 
 // STATE
-const S={at:null,rt:null,ci:null,cs:null,expiry:null,timer:null,webex:null,calling:null,line:null,call:null};
+const S={at:null,rt:null,ci:null,cs:null,expiry:null,timer:null,webex:null,calling:null,line:null,call:null,localStream:null};
 
 function log(msg,t='muted'){
   const el=document.getElementById('callLog'),p=document.createElement('p');
@@ -536,12 +536,38 @@ function toggleMute(){
   if(!S.call) return;
   try{
     if(isMuted){
-      if(typeof S.call.unmute === 'function') S.call.unmute();
+      // UNMUTE — reactivar micrófono
+      // Método 1: setMuted en el LocalMicrophoneStream (API oficial SDK)
+      if(S.localStream && typeof S.localStream.setMuted === 'function'){
+        S.localStream.setMuted(false);
+      }
+      // Método 2: habilitar el track de audio directamente
+      else if(S.localStream && S.localStream.outputStream){
+        S.localStream.outputStream.getAudioTracks().forEach(t => t.enabled = true);
+      }
+      else if(S.localStream && S.localStream.stream){
+        S.localStream.stream.getAudioTracks().forEach(t => t.enabled = true);
+      }
+      // Método 3: fallback en el objeto call
+      else if(typeof S.call.unmute === 'function') S.call.unmute();
       else if(typeof S.call.unmuteAudio === 'function') S.call.unmuteAudio();
       setMuteUI(false);
       log('Micrófono activado.','ok');
     } else {
-      if(typeof S.call.mute === 'function') S.call.mute();
+      // MUTE — silenciar micrófono
+      // Método 1: setMuted en el LocalMicrophoneStream (API oficial SDK)
+      if(S.localStream && typeof S.localStream.setMuted === 'function'){
+        S.localStream.setMuted(true);
+      }
+      // Método 2: deshabilitar el track de audio directamente
+      else if(S.localStream && S.localStream.outputStream){
+        S.localStream.outputStream.getAudioTracks().forEach(t => t.enabled = false);
+      }
+      else if(S.localStream && S.localStream.stream){
+        S.localStream.stream.getAudioTracks().forEach(t => t.enabled = false);
+      }
+      // Método 3: fallback en el objeto call
+      else if(typeof S.call.mute === 'function') S.call.mute();
       else if(typeof S.call.muteAudio === 'function') S.call.muteAudio();
       setMuteUI(true);
       log('Llamada silenciada.','muted');
@@ -634,6 +660,7 @@ async function placeCall(){
   log('Solicitando micrófono...','info');
   try{
     const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
+    S.localStream = localAudioStream;
     log('Micrófono OK. Iniciando llamada al 5102...','info');
 
     S.call = S.line.makeCall();
@@ -670,6 +697,7 @@ function hangupCall(){
 
 function onEnd(){
   S.call = null;
+  S.localStream = null;
   setBtns(true, false);
   log('Llamada finalizada.','muted');
 }
