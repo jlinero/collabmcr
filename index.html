@@ -775,22 +775,7 @@ async function applyToken(){
 }
 
 window.addEventListener('DOMContentLoaded', async ()=>{
-  const hasCreds = loadCredentials();
-  if(!hasCreds){
-    log('⚠️ No hay credenciales guardadas. Configura el token OAuth.','err');
-    setStatus('offline');
-    // Mostrar botón de token para que el usuario lo configure
-    document.getElementById('tokenBtn') && (document.getElementById('tokenBtn').style.display='inline-flex');
-    return;
-  }
-  // Credenciales encontradas — verificar si el token expiró
-  if(S.expiry && Date.now() >= S.expiry){
-    log('🔄 Token expirado. Renovando automáticamente...','info');
-    await doRefresh();
-  } else {
-    scheduleR(); // programar próximo auto-refresh
-  }
-  log('🔄 Conectando automáticamente con Service App...','info');
+  log('🔄 Conectando automáticamente...','info');
   await initWebex();
 });
 </script>
