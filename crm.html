@@ -638,11 +638,11 @@ function renderList(){
   if(!v.length){list.innerHTML='<div class="empty"><i class="fa fa-users"></i><p>Sin contactos. Usa <strong>Nuevo Contacto</strong>.</p></div>';return;}
   list.innerHTML=v.map(c=>{
     const bg=aColor((c.nombre||'')+(c.apellido||'')),ini=aInit(c.nombre,c.apellido),isA=activeId===c.id;
-    return '<div class="cc'+(isA?' active':'')+'" onclick="selectC(''+c.id+'')">'
-      +'<div class="cc-av" style="background:'+bg+'">'+ini+'</div>'
-      +'<div class="cc-info"><div class="cc-name">'+(c.nombre||'')+' '+(c.apellido||'')+'</div>'
-      +'<div class="cc-sub">'+(c.empresa||'Sin empresa')+'</div></div>'
-      +'<div class="cc-dot '+(c.etapaVida||'nuevo')+'"></div></div>';
+    return `<div class="cc${isA?' active':''}" onclick="selectC('${c.id}')">`
+      +`<div class="cc-av" style="background:${bg}">${ini}</div>`
+      +`<div class="cc-info"><div class="cc-name">${c.nombre||''} ${c.apellido||''}</div>`
+      +`<div class="cc-sub">${c.empresa||'Sin empresa'}</div></div>`
+      +`<div class="cc-dot ${c.etapaVida||'nuevo'}"></div></div>`;
   }).join('');
 }
 
@@ -659,110 +659,148 @@ function renderDetail(c){
   const acts=c.actividades||[],deals=c.deals||[],tickets=c.tickets||[];
   const sc=c.etapaVida||'nuevo';
   const grouped={};
-  acts.forEach(a=>{const k=a.fecha?new Date(a.fecha).toLocaleDateString('es-CO',{month:'long',year:'numeric'}):'Sin fecha';if(!grouped[k])grouped[k]=[];grouped[k].push(a);});
-  const actHTML=acts.length?Object.entries(grouped).map(([m,items])=>'<div class="act-group-lbl">'+m+'</div>'+items.map(a=>'<div class="act-item"><div class="act-ic '+a.tipo+'"><i class="fa '+iconAct(a.tipo)+'"></i></div><div class="act-body"><div class="act-title-t">'+labelAct(a.tipo)+'</div><div class="act-desc">'+(a.descripcion||'')+'</div><div class="act-time">'+fmtDT(a.fecha)+'</div></div></div>').join('')).join(''):'<div class="empty"><i class="fa fa-history"></i><p>Sin actividades registradas.</p></div>';
-  const rec3=acts.slice(0,3);
-  const recHTML=rec3.length?rec3.map(a=>'<div class="act-item"><div class="act-ic '+a.tipo+'"><i class="fa '+iconAct(a.tipo)+'"></i></div><div class="act-body"><div class="act-title-t">'+labelAct(a.tipo)+'</div><div class="act-desc">'+(a.descripcion||'')+'</div><div class="act-time">'+fmtDT(a.fecha)+'</div></div></div>').join(''):'<div class="empty"><i class="fa fa-history"></i><p>Sin actividades aun.</p></div>';
+  acts.forEach(a=>{
+    const k=a.fecha?new Date(a.fecha).toLocaleDateString('es-CO',{month:'long',year:'numeric'}):'Sin fecha';
+    if(!grouped[k])grouped[k]=[];
+    grouped[k].push(a);
+  });
+  const actItemHTML=a=>`
+    <div class="act-item">
+      <div class="act-ic ${a.tipo}"><i class="fa ${iconAct(a.tipo)}"></i></div>
+      <div class="act-body">
+        <div class="act-title-t">${labelAct(a.tipo)}</div>
+        <div class="act-desc">${a.descripcion||''}</div>
+        <div class="act-time">${fmtDT(a.fecha)}</div>
+      </div>
+    </div>`;
+  const actHTML=acts.length
+    ? Object.entries(grouped).map(([m,items])=>`<div class="act-group-lbl">${m}</div>${items.map(actItemHTML).join('')}`).join('')
+    : '<div class="empty"><i class="fa fa-history"></i><p>Sin actividades registradas.</p></div>';
+  const recHTML=acts.slice(0,3).length
+    ? acts.slice(0,3).map(actItemHTML).join('')
+    : '<div class="empty"><i class="fa fa-history"></i><p>Sin actividades aun.</p></div>';
 
-  document.getElementById('detailPanel').innerHTML=
-  '<div class="d-head">'
-    +'<div class="d-av" style="background:'+bg+'">'+ini+'</div>'
-    +'<div style="flex:1;min-width:0;">'
-      +'<div class="d-nm">'+(c.nombre||'')+' '+(c.apellido||'')+'</div>'
-      +'<div class="d-title">'+(c.cargo||'Sin cargo')+' &middot; '+(c.empresa||'Sin empresa')+'</div>'
-      +'<div class="d-email"><i class="fa fa-envelope"></i>'+(c.email||'&mdash;')+'</div>'
-      +'<div class="d-act-btns">'
-        +'<div class="act-shortcut" onclick="quickAct('nota')"><i class="fa fa-sticky-note"></i>Nota</div>'
-        +'<div class="act-shortcut" onclick="quickAct('email')"><i class="fa fa-envelope"></i>Email</div>'
-        +'<div class="act-shortcut" onclick="quickAct('llamada')"><i class="fa fa-phone"></i>Llamada</div>'
-        +'<div class="act-shortcut" onclick="quickAct('tarea')"><i class="fa fa-check-square"></i>Tarea</div>'
-        +'<div class="act-shortcut" onclick="quickAct('reunion')"><i class="fa fa-calendar"></i>Reunion</div>'
-      +'</div>'
-    +'</div>'
-    +'<div class="d-right">'
-      +'<span class="stage-badge '+sc+'"><span class="sd"></span>'+sc+'</span>'
-      +'<button class="icon-btn" onclick="openEditModal(''+c.id+'')"><i class="fa fa-pen"></i></button>'
-      +'<button class="icon-btn danger" onclick="deleteContact(''+c.id+'')"><i class="fa fa-trash"></i></button>'
-    +'</div>'
-  +'</div>'
-  +'<div class="d-tabs">'
-    +'<div class="d-tab active" onclick="switchTab(this,'t-res')">Resumen</div>'
-    +'<div class="d-tab" onclick="switchTab(this,'t-acts')">Actividades <span style="font-family:var(--font-mono);font-size:9px;background:var(--border2);padding:1px 6px;border-radius:99px;">'+acts.length+'</span></div>'
-    +'<div class="d-tab" onclick="switchTab(this,'t-int')">Inteligencia</div>'
-  +'</div>'
-  +'<div class="d-body">'
-    +'<div class="d-main">'
-      // TAB RESUMEN
-      +'<div id="t-res">'
-        +'<div class="highlights">'
-          +'<div class="hl-cell"><div class="hl-lbl">Fecha de creacion</div><div class="hl-val">'+fmtD(c.creadoEn)+'</div></div>'
-          +'<div class="hl-cell"><div class="hl-lbl">Etapa de vida</div><div class="hl-val '+(sc==='cliente'?'green':sc==='oportunidad'?'purple':sc==='lead'?'cyan':'')+'">'+sc+'</div></div>'
-          +'<div class="hl-cell"><div class="hl-lbl">Ultima actividad</div><div class="hl-val">'+(acts.length?fmtD(acts[0].fecha):'&mdash;')+'</div></div>'
-          +'<div class="hl-cell"><div class="hl-lbl">Estado lead</div><div class="hl-val">'+(c.estadoLead||'&mdash;')+'</div></div>'
-        +'</div>'
-        +'<div class="s-card">'
-          +'<div class="s-card-h"><div class="s-card-title"><i class="fa fa-user"></i>Sobre este contacto</div></div>'
-          +'<div class="i-grid">'
-            +'<div class="i-cell"><div class="i-lbl">Email</div><div class="i-val cyan">'+(c.email||'&mdash;')+'</div></div>'
-            +'<div class="i-cell"><div class="i-lbl">Telefono</div><div class="i-val">'+(c.telefono||'&mdash;')+'</div></div>'
-            +(c.email2?'<div class="i-cell"><div class="i-lbl">Email 2</div><div class="i-val cyan">'+c.email2+'</div></div>':'')
-            +'<div class="i-cell"><div class="i-lbl">Ciudad / Pais</div><div class="i-val">'+(c.ciudad||'&mdash;')+'</div></div>'
-            +'<div class="i-cell"><div class="i-lbl">Zona horaria</div><div class="i-val">'+(c.zonaHoraria||'&mdash;')+'</div></div>'
-            +'<div class="i-cell"><div class="i-lbl">Objetivo marketing</div><div class="i-val">'+(c.objetivoMarketing||'&mdash;')+'</div></div>'
-            +'<div class="i-cell"><div class="i-lbl">Timeline</div><div class="i-val">'+(c.timeline||'&mdash;')+'</div></div>'
-            +'<div class="i-cell"><div class="i-lbl">Presupuesto</div><div class="i-val green">'+(c.presupuesto||'&mdash;')+'</div></div>'
-            +'<div class="i-cell"><div class="i-lbl">Propietario</div><div class="i-val">'+(c.propietarioContacto||'&mdash;')+'</div></div>'
-            +'<div class="i-cell"><div class="i-lbl">Estado lead</div><div class="i-val">'+(c.estadoLead||'&mdash;')+'</div></div>'
-            +(c.notas?'<div class="i-cell full"><div class="i-lbl">Notas</div><div class="i-val muted" style="white-space:pre-line;">'+c.notas+'</div></div>':'')
-          +'</div>'
-        +'</div>'
-        +'<div class="s-card">'
-          +'<div class="s-card-h"><div class="s-card-title"><i class="fa fa-stream"></i>Actividades recientes</div>'
-          +'<button class="add-btn" onclick="openM('act')"><i class="fa fa-plus"></i>Nueva</button></div>'
-          +recHTML
-        +'</div>'
-      +'</div>'
-      // TAB ACTIVIDADES
-      +'<div id="t-acts" style="display:none;">'
-        +'<div class="s-card">'
-          +'<div class="s-card-h"><div class="s-card-title"><i class="fa fa-stream"></i>Todas las actividades ('+acts.length+')</div>'
-          +'<button class="add-btn" onclick="openM('act')"><i class="fa fa-plus"></i>Nueva</button></div>'
-          +actHTML
-        +'</div>'
-      +'</div>'
-      // TAB INTELIGENCIA
-      +'<div id="t-int" style="display:none;">'
-        +'<div class="s-card">'
-          +'<div class="s-card-h"><div class="s-card-title"><i class="fa fa-handshake"></i>Deals ('+deals.length+')</div>'
-          +'<button class="add-btn" onclick="openM('deal')"><i class="fa fa-plus"></i>Nuevo</button></div>'
-          +(deals.length?deals.map(d=>'<div class="deal-item"><div class="deal-ic"><i class="fa fa-network-wired"></i></div><div class="deal-info"><div class="deal-nm">'+d.nombre+'</div><div class="deal-meta">Cierre: '+(d.fechaCierre||'&mdash;')+'</div><div class="deal-sbadge">'+d.etapa+'</div></div><div class="deal-amount">'+(d.monto||'&mdash;')+'</div></div>').join(''):'<div class="empty"><i class="fa fa-handshake"></i><p>Sin deals.</p></div>')
-        +'</div>'
-        +'<div class="s-card">'
-          +'<div class="s-card-h"><div class="s-card-title"><i class="fa fa-ticket-alt"></i>Tickets ('+tickets.length+')</div>'
-          +'<button class="add-btn" onclick="openM('ticket')"><i class="fa fa-plus"></i>Nuevo</button></div>'
-          +(tickets.length?tickets.map(t=>'<div class="ticket-item"><div class="t-dot '+(t.estado==='cerrado'?'cerrado':'abierto')+'"></div><span class="t-nm">'+t.nombre+'</span><span class="t-age">'+fmtD(t.creadoEn)+'</span></div>').join(''):'<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>')
-        +'</div>'
-      +'</div>'
-    +'</div>'
-    +'<div class="d-side">'
-      +'<div class="sc"><div class="sc-h"><span class="sc-title">Empresa</span><span class="sc-cnt">1</span></div>'
-        +'<div style="display:flex;align-items:center;gap:10px;padding:11px 12px;">'
-          +'<div style="width:32px;height:32px;border-radius:8px;background:var(--surface);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--cyan);"><i class="fa fa-building"></i></div>'
-          +'<div><div style="font-size:12px;font-weight:600;color:var(--cyan);">'+(c.empresa||'&mdash;')+'</div>'
-          +'<div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">'+(c.dominioEmpresa||'&mdash;')+'</div>'
-          +'<div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);">'+(c.telEmpresa||'')+'</div></div>'
-        +'</div>'
-      +'</div>'
-      +'<div class="sc"><div class="sc-h"><span class="sc-title">Deals ('+deals.length+')</span>'
-        +'<button class="add-btn" onclick="openM('deal')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button></div>'
-        +(deals.length?deals.map(d=>'<div style="padding:10px 12px;border-bottom:1px solid var(--border);"><div style="font-size:12px;font-weight:600;color:var(--cyan);">'+d.nombre+'</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--green);margin-top:3px;">'+(d.monto||'&mdash;')+'</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">Cierre: '+(d.fechaCierre||'&mdash;')+'</div><div style="margin-top:5px;"><span class="deal-sbadge">'+d.etapa+'</span></div></div>').join(''):'<div class="empty" style="padding:12px;"><p>Sin deals.</p></div>')
-      +'</div>'
-      +'<div class="sc"><div class="sc-h"><span class="sc-title">Tickets ('+tickets.length+')</span>'
-        +'<button class="add-btn" onclick="openM('ticket')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button></div>'
-        +(tickets.length?tickets.map(t=>'<div class="ticket-item"><div class="t-dot '+(t.estado==='cerrado'?'cerrado':'abierto')+'"></div><span class="t-nm">'+t.nombre+'</span><span class="t-age">'+t.estado+'</span></div>').join(''):'<div class="empty" style="padding:12px;"><p>Sin tickets.</p></div>')
-      +'</div>'
-    +'</div>'
-  +'</div>';
+  const hlColor=sc==='cliente'?'green':sc==='oportunidad'?'purple':sc==='lead'?'cyan':'';
+
+  document.getElementById('detailPanel').innerHTML=`
+  <div class="d-head">
+    <div class="d-av" style="background:${bg}">${ini}</div>
+    <div style="flex:1;min-width:0;">
+      <div class="d-nm">${c.nombre||''} ${c.apellido||''}</div>
+      <div class="d-title">${c.cargo||'Sin cargo'} &middot; ${c.empresa||'Sin empresa'}</div>
+      <div class="d-email"><i class="fa fa-envelope"></i>${c.email||'&mdash;'}</div>
+      <div class="d-act-btns">
+        <div class="act-shortcut" onclick="quickAct('nota')"><i class="fa fa-sticky-note"></i>Nota</div>
+        <div class="act-shortcut" onclick="quickAct('email')"><i class="fa fa-envelope"></i>Email</div>
+        <div class="act-shortcut" onclick="quickAct('llamada')"><i class="fa fa-phone"></i>Llamada</div>
+        <div class="act-shortcut" onclick="quickAct('tarea')"><i class="fa fa-check-square"></i>Tarea</div>
+        <div class="act-shortcut" onclick="quickAct('reunion')"><i class="fa fa-calendar"></i>Reunion</div>
+      </div>
+    </div>
+    <div class="d-right">
+      <span class="stage-badge ${sc}"><span class="sd"></span>${sc}</span>
+      <button class="icon-btn" onclick="openEditModal('${c.id}')"><i class="fa fa-pen"></i></button>
+      <button class="icon-btn danger" onclick="deleteContact('${c.id}')"><i class="fa fa-trash"></i></button>
+    </div>
+  </div>
+  <div class="d-tabs">
+    <div class="d-tab active" onclick="switchTab(this,'t-res')">Resumen</div>
+    <div class="d-tab" onclick="switchTab(this,'t-acts')">Actividades <span style="font-family:var(--font-mono);font-size:9px;background:var(--border2);padding:1px 6px;border-radius:99px;">${acts.length}</span></div>
+    <div class="d-tab" onclick="switchTab(this,'t-int')">Inteligencia</div>
+  </div>
+  <div class="d-body">
+    <div class="d-main">
+      <div id="t-res">
+        <div class="highlights">
+          <div class="hl-cell"><div class="hl-lbl">Fecha de creacion</div><div class="hl-val">${fmtD(c.creadoEn)}</div></div>
+          <div class="hl-cell"><div class="hl-lbl">Etapa de vida</div><div class="hl-val ${hlColor}">${sc}</div></div>
+          <div class="hl-cell"><div class="hl-lbl">Ultima actividad</div><div class="hl-val">${acts.length?fmtD(acts[0].fecha):'&mdash;'}</div></div>
+          <div class="hl-cell"><div class="hl-lbl">Estado lead</div><div class="hl-val">${c.estadoLead||'&mdash;'}</div></div>
+        </div>
+        <div class="s-card">
+          <div class="s-card-h"><div class="s-card-title"><i class="fa fa-user"></i>Sobre este contacto</div></div>
+          <div class="i-grid">
+            <div class="i-cell"><div class="i-lbl">Email</div><div class="i-val cyan">${c.email||'&mdash;'}</div></div>
+            <div class="i-cell"><div class="i-lbl">Telefono</div><div class="i-val">${c.telefono||'&mdash;'}</div></div>
+            ${c.email2?`<div class="i-cell"><div class="i-lbl">Email 2</div><div class="i-val cyan">${c.email2}</div></div>`:''}
+            <div class="i-cell"><div class="i-lbl">Ciudad / Pais</div><div class="i-val">${c.ciudad||'&mdash;'}</div></div>
+            <div class="i-cell"><div class="i-lbl">Zona horaria</div><div class="i-val">${c.zonaHoraria||'&mdash;'}</div></div>
+            <div class="i-cell"><div class="i-lbl">Objetivo marketing</div><div class="i-val">${c.objetivoMarketing||'&mdash;'}</div></div>
+            <div class="i-cell"><div class="i-lbl">Timeline</div><div class="i-val">${c.timeline||'&mdash;'}</div></div>
+            <div class="i-cell"><div class="i-lbl">Presupuesto</div><div class="i-val green">${c.presupuesto||'&mdash;'}</div></div>
+            <div class="i-cell"><div class="i-lbl">Propietario</div><div class="i-val">${c.propietarioContacto||'&mdash;'}</div></div>
+            <div class="i-cell"><div class="i-lbl">Estado lead</div><div class="i-val">${c.estadoLead||'&mdash;'}</div></div>
+            ${c.notas?`<div class="i-cell full"><div class="i-lbl">Notas</div><div class="i-val muted" style="white-space:pre-line;">${c.notas}</div></div>`:''}
+          </div>
+        </div>
+        <div class="s-card">
+          <div class="s-card-h">
+            <div class="s-card-title"><i class="fa fa-stream"></i>Actividades recientes</div>
+            <button class="add-btn" onclick="openM('act')"><i class="fa fa-plus"></i>Nueva</button>
+          </div>
+          ${recHTML}
+        </div>
+      </div>
+      <div id="t-acts" style="display:none;">
+        <div class="s-card">
+          <div class="s-card-h">
+            <div class="s-card-title"><i class="fa fa-stream"></i>Todas las actividades (${acts.length})</div>
+            <button class="add-btn" onclick="openM('act')"><i class="fa fa-plus"></i>Nueva</button>
+          </div>
+          ${actHTML}
+        </div>
+      </div>
+      <div id="t-int" style="display:none;">
+        <div class="s-card">
+          <div class="s-card-h">
+            <div class="s-card-title"><i class="fa fa-handshake"></i>Deals (${deals.length})</div>
+            <button class="add-btn" onclick="openM('deal')"><i class="fa fa-plus"></i>Nuevo</button>
+          </div>
+          ${deals.length
+            ? deals.map(d=>`<div class="deal-item"><div class="deal-ic"><i class="fa fa-network-wired"></i></div><div class="deal-info"><div class="deal-nm">${d.nombre}</div><div class="deal-meta">Cierre: ${d.fechaCierre||'&mdash;'}</div><div class="deal-sbadge">${d.etapa}</div></div><div class="deal-amount">${d.monto||'&mdash;'}</div></div>`).join('')
+            : '<div class="empty"><i class="fa fa-handshake"></i><p>Sin deals.</p></div>'}
+        </div>
+        <div class="s-card">
+          <div class="s-card-h">
+            <div class="s-card-title"><i class="fa fa-ticket-alt"></i>Tickets (${tickets.length})</div>
+            <button class="add-btn" onclick="openM('ticket')"><i class="fa fa-plus"></i>Nuevo</button>
+          </div>
+          ${tickets.length
+            ? tickets.map(t=>`<div class="ticket-item"><div class="t-dot ${t.estado==='cerrado'?'cerrado':'abierto'}"></div><span class="t-nm">${t.nombre}</span><span class="t-age">${fmtD(t.creadoEn)}</span></div>`).join('')
+            : '<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>'}
+        </div>
+      </div>
+    </div>
+    <div class="d-side">
+      <div class="sc">
+        <div class="sc-h"><span class="sc-title">Empresa</span><span class="sc-cnt">1</span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:11px 12px;">
+          <div style="width:32px;height:32px;border-radius:8px;background:var(--surface);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--cyan);"><i class="fa fa-building"></i></div>
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--cyan);">${c.empresa||'&mdash;'}</div>
+            <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">${c.dominioEmpresa||'&mdash;'}</div>
+            <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);">${c.telEmpresa||''}</div>
+          </div>
+        </div>
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-title">Deals (${deals.length})</span>
+          <button class="add-btn" onclick="openM('deal')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
+        </div>
+        ${deals.length
+          ? deals.map(d=>`<div style="padding:10px 12px;border-bottom:1px solid var(--border);"><div style="font-size:12px;font-weight:600;color:var(--cyan);">${d.nombre}</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--green);margin-top:3px;">${d.monto||'&mdash;'}</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">Cierre: ${d.fechaCierre||'&mdash;'}</div><div style="margin-top:5px;"><span class="deal-sbadge">${d.etapa}</span></div></div>`).join('')
+          : '<div class="empty" style="padding:12px;"><p>Sin deals.</p></div>'}
+      </div>
+      <div class="sc">
+        <div class="sc-h"><span class="sc-title">Tickets (${tickets.length})</span>
+          <button class="add-btn" onclick="openM('ticket')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
+        </div>
+        ${tickets.length
+          ? tickets.map(t=>`<div class="ticket-item"><div class="t-dot ${t.estado==='cerrado'?'cerrado':'abierto'}"></div><span class="t-nm">${t.nombre}</span><span class="t-age">${t.estado}</span></div>`).join('')
+          : '<div class="empty" style="padding:12px;"><p>Sin tickets.</p></div>'}
+      </div>
+    </div>
+  </div>`;
 }
 
 function switchTab(el,id){
