@@ -330,22 +330,26 @@ function updateAvailability() {
     profileOnline.classList.add('online');
 }
 
-document.querySelector(".dropbtn").addEventListener("click", (event) => {
+const _dropbtn = document.querySelector(".dropbtn");
+if(_dropbtn){
+  _dropbtn.addEventListener("click", (event) => {
     if (profileDropDown.classList.contains("show")) {
         profileDropDown.classList.remove("show");
     } else {
         profileDropDown.classList.add("show");
     }
     event.stopPropagation();
-});
+  });
+}
 
 window.onclick = () => {
-    profileDropDown.classList.remove("show");
+  if(profileDropDown) profileDropDown.classList.remove("show");
 };
 
 document.addEventListener('DOMContentLoaded', function () {
     var tooltipTriggers = document.querySelectorAll('.tooltip-trigger');
     var tooltip = document.querySelector('.tooltip-calling');
+    if(!tooltip || !tooltipTriggers.length) return;
 
     tooltipTriggers.forEach(function (trigger) {
         trigger.addEventListener('mouseover', function () {
