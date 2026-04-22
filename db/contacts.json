@@ -1,1 +1,30 @@
-{ "contacts": [] }
+{
+  "contacts": [
+    {
+      "id": "moafvoj5u49rq4tj4ta",
+      "nombre": "Jose",
+      "apellido": "Linero",
+      "cargo": "",
+      "email": "",
+      "email2": "",
+      "telefono": "",
+      "empresa": "",
+      "dominioEmpresa": "",
+      "telEmpresa": "",
+      "ciudad": "",
+      "etapaVida": "nuevo",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-22T19:22:00.305Z",
+      "actualizadoEn": "2026-04-22T19:22:00.305Z"
+    }
+  ]
+}
