@@ -4,15 +4,15 @@
       "id": "moafvoj5u49rq4tj4ta",
       "nombre": "Jose",
       "apellido": "Linero",
-      "cargo": "",
-      "email": "",
+      "cargo": "Senior Collaboration SE",
+      "email": "jlinero@cisco.com",
       "email2": "",
-      "telefono": "",
-      "empresa": "",
+      "telefono": "+573102634216",
+      "empresa": "Cisco",
       "dominioEmpresa": "",
       "telEmpresa": "",
       "ciudad": "",
-      "etapaVida": "nuevo",
+      "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
       "zonaHoraria": "America/Bogota",
@@ -24,7 +24,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-22T19:22:00.305Z"
+      "actualizadoEn": "2026-04-22T19:23:09.367Z"
     }
   ]
 }
