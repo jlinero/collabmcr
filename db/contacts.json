@@ -20,11 +20,18 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "moaghznb1hhktni091j",
+          "tipo": "llamada",
+          "descripcion": "El cliente esta interesado en la solución de Webex Contact Center",
+          "fecha": "2026-04-22T19:39:21.143Z"
+        }
+      ],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-22T19:23:09.367Z"
+      "actualizadoEn": "2026-04-22T19:39:21.143Z"
     }
   ]
 }
