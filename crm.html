@@ -156,6 +156,13 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .act-ic.whatsapp{background:rgba(37,211,102,.1);color:#25d366;}
 .act-ic.webchat{background:rgba(0,212,255,.08);color:#00b8d9;}
 .act-ic.messenger{background:rgba(0,120,255,.1);color:#0078ff;}
+/* ── POLL PILL ── */
+.poll-pill{display:flex;align-items:center;gap:7px;padding:5px 13px;border-radius:999px;border:1px solid var(--border2);background:var(--card2);font-family:var(--font-mono);font-size:10px;color:var(--muted2);cursor:default;transition:all .3s;}
+.poll-pill.active{border-color:rgba(0,255,163,.3);color:var(--green);background:rgba(0,255,163,.06);}
+.poll-pill.syncing{border-color:rgba(0,212,255,.3);color:var(--cyan);background:rgba(0,212,255,.06);}
+.poll-dot{width:7px;height:7px;border-radius:50%;background:var(--muted);flex-shrink:0;transition:background .3s;}
+.poll-pill.active .poll-dot{background:var(--green);animation:blink 2s infinite;}
+.poll-pill.syncing .poll-dot{background:var(--cyan);animation:spin .6s linear infinite;border-radius:0;clip-path:none;}
 .act-body{flex:1;min-width:0;}
 .act-title-t{font-size:13px;font-weight:600;}
 .act-desc{font-size:12px;color:var(--muted2);margin-top:2px;line-height:1.5;}
@@ -269,6 +276,10 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
   <div class="topbar-right">
     <span class="save-ind" id="saveInd"><span class="spin"></span>&nbsp;Guardando...</span>
     <button class="btn-t" onclick="openM('token')"><i class="fa fa-key"></i>GitHub PAT</button>
+    <div class="poll-pill" id="pollPill" title="Auto-refresh cada 10s">
+      <div class="poll-dot" id="pollDot"></div>
+      <span id="pollTxt">LIVE</span>
+    </div>
     <button class="btn-t primary" onclick="openM('nc')"><i class="fa fa-user-plus"></i>Nuevo Contacto</button>
     <div class="gh-pill"><div class="gh-av">JL</div><span>jlinero/collabmcr</span></div>
   </div>
@@ -621,7 +632,7 @@ function applyPAT(){
   const val=document.getElementById('pat-input').value.trim();
   if(!val){toast('El PAT no puede estar vacio','err');return;}
   PAT=val;try{localStorage.setItem(LS_PAT,PAT);}catch{}
-  closeM('token');toast('PAT configurado. Cargando datos...','info');loadDB();
+  closeM('token');toast('PAT configurado. Cargando datos...','info');loadDB().then(()=>startPolling());
 }
 
 // FILTERS
@@ -959,8 +970,76 @@ function updateStats(){
 // INIT
 window.addEventListener('DOMContentLoaded',()=>{
   try{PAT=localStorage.getItem(LS_PAT)||'';}catch{}
-  if(PAT){document.getElementById('pat-input').value=PAT;loadDB();}
+  if(PAT){document.getElementById('pat-input').value=PAT;loadDB().then(()=>startPolling());}
   else{openM('token');}
+});
+
+// ── AUTO-REFRESH POLLING ──────────────────────────────
+const POLL_INTERVAL = 10000; // 10 segundos
+let pollTimer = null;
+let lastSHA   = '';
+
+function setPollUI(state){
+  const pill = document.getElementById('pollPill');
+  const txt  = document.getElementById('pollTxt');
+  if(!pill) return;
+  pill.className = 'poll-pill ' + state;
+  if(state === 'syncing') txt.textContent = 'SYNC...';
+  else if(state === 'active') txt.textContent = 'LIVE';
+  else txt.textContent = 'PAUSED';
+}
+
+async function pollCheck(){
+  if(!PAT) return;
+  setPollUI('syncing');
+  try{
+    // Solo pide el SHA — muy liviano, no descarga el JSON completo
+    const r = await fetch(GH_API, {
+      headers:{'Authorization':'token '+PAT,'Accept':'application/vnd.github.v3+json'}
+    });
+    if(!r.ok){ setPollUI(''); return; }
+    const data = await r.json();
+    const remoteSHA = data.sha;
+
+    if(lastSHA && remoteSHA !== lastSHA){
+      // Detectó cambio — recargar datos
+      const raw = decodeURIComponent(escape(atob(data.content.replace(/\n/g,''))));
+      const newDB = JSON.parse(raw);
+      db = newDB;
+      sha = remoteSHA;
+      renderList();
+      updateStats();
+      // Refrescar detalle si hay uno abierto
+      if(activeId){
+        const updated = db.contacts.find(c=>c.id===activeId);
+        if(updated) renderDetail(updated);
+      }
+      toast('✦ Datos actualizados automáticamente','info',2500);
+    }
+    lastSHA = remoteSHA;
+    setPollUI('active');
+  }catch(e){
+    setPollUI('');
+  }
+}
+
+function startPolling(){
+  if(pollTimer) clearInterval(pollTimer);
+  // Guardar el SHA actual como referencia
+  lastSHA = sha;
+  setPollUI('active');
+  pollTimer = setInterval(pollCheck, POLL_INTERVAL);
+}
+
+function stopPolling(){
+  if(pollTimer){ clearInterval(pollTimer); pollTimer=null; }
+  setPollUI('');
+}
+
+// Pausar polling cuando la pestaña está oculta para no gastar rate limit
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden) stopPolling();
+  else if(PAT) startPolling();
 });
 </script>
 <div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
