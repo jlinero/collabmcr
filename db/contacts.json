@@ -67,8 +67,8 @@
       "dominioEmpresa": "collab-col.wbx.ai",
       "telEmpresa": "6052",
       "ciudad": "",
-      "etapaVida": "nuevo",
-      "estadoLead": "Nuevo",
+      "etapaVida": "oportunidad",
+      "estadoLead": "En progreso",
       "propietarioContacto": "",
       "zonaHoraria": "America/Bogota",
       "objetivoMarketing": "",
@@ -87,7 +87,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-04-23T22:07:58.529Z"
+      "actualizadoEn": "2026-04-23T22:16:31.507Z"
     }
   ]
 }
