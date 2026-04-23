@@ -91,6 +91,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1776984769024",
+          "tipo": "whatsapp",
+          "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-23T22:52:49.024Z"
+        },
+        {
           "id": "1776982078529",
           "tipo": "llamada",
           "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
@@ -101,7 +108,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-04-23T22:37:45.885Z"
+      "actualizadoEn": "2026-04-23T22:52:49.024Z"
     }
   ]
 }
