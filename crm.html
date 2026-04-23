@@ -178,8 +178,24 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .t-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0;}
 .t-dot.abierto{background:var(--amber);}
 .t-dot.cerrado{background:var(--green);}
-.t-nm{flex:1;font-size:12px;}
+.t-dot.en\ progreso{background:var(--cyan);}
+.t-nm{flex:1;font-size:12px;cursor:none;}
 .t-age{font-family:var(--font-mono);font-size:9px;color:var(--muted);}
+/* ticket clickable */
+.ticket-item{cursor:none;transition:background .15s;}
+.ticket-item:hover{background:rgba(255,255,255,.03);}
+/* ticket updates feed */
+.tkt-update{display:flex;gap:10px;padding:10px 16px;border-bottom:1px solid var(--border);}
+.tkt-update:last-child{border-bottom:none;}
+.tkt-update-dot{width:8px;height:8px;border-radius:50%;background:var(--cyan);flex-shrink:0;margin-top:5px;}
+.tkt-update-body{flex:1;min-width:0;}
+.tkt-update-nota{font-size:13px;color:var(--text);line-height:1.5;}
+.tkt-update-time{font-family:var(--font-mono);font-size:10px;color:var(--muted);margin-top:4px;}
+/* ticket status badge */
+.tkt-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:99px;font-family:var(--font-mono);font-size:10px;font-weight:600;border:1px solid;}
+.tkt-badge.abierto{background:rgba(255,170,0,.07);border-color:rgba(255,170,0,.3);color:var(--amber);}
+.tkt-badge.cerrado{background:rgba(0,255,163,.07);border-color:rgba(0,255,163,.3);color:var(--green);}
+.tkt-badge.en-progreso{background:rgba(0,212,255,.07);border-color:rgba(0,212,255,.3);color:var(--cyan);}
 .sc{background:var(--card2);border:1px solid var(--border);border-radius:12px;margin-bottom:11px;overflow:hidden;}
 .sc-h{padding:9px 12px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--card);}
 .sc-title{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);}
@@ -541,6 +557,59 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
   </div>
 </div>
 
+<!-- MODAL: DETALLE Y ACTUALIZACIONES DE TICKET -->
+<div class="modal-overlay" id="modal-ticket-detail">
+  <div class="modal" style="max-width:580px;">
+    <div class="modal-head">
+      <div class="m-eye">// Soporte · Ticket</div>
+      <h3 id="tkt-detail-nombre">TICKET</h3>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:10px;">
+        <span id="tkt-detail-badge" class="tkt-badge abierto"><span style="width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block;"></span>Abierto</span>
+        <span id="tkt-detail-fecha" style="font-family:var(--font-mono);font-size:10px;color:var(--muted);"></span>
+      </div>
+    </div>
+    <div class="modal-body">
+
+      <!-- Historial de actualizaciones -->
+      <div class="m-sep">Historial</div>
+      <div id="tkt-updates-feed" style="background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:18px;max-height:260px;overflow-y:auto;">
+        <div class="empty" style="padding:20px;"><i class="fa fa-history"></i><p>Sin actualizaciones aún.</p></div>
+      </div>
+
+      <!-- Nueva actualización -->
+      <div class="m-sep">Nueva Actualización</div>
+      <div class="f-row full" style="margin-bottom:12px;">
+        <div class="f-grp">
+          <label class="f-lbl">Nota *</label>
+          <textarea class="f-area" id="tkt-update-nota" rows="3"
+            placeholder="Describe la acción tomada o el progreso del ticket..."
+            style="resize:vertical;min-height:80px;"></textarea>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-grp">
+          <label class="f-lbl">Cambiar Estado</label>
+          <select class="f-sel" id="tkt-update-estado">
+            <option value="">— Sin cambio —</option>
+            <option value="abierto">Abierto</option>
+            <option value="en progreso">En progreso</option>
+            <option value="cerrado">Cerrado</option>
+          </select>
+        </div>
+        <div class="f-grp">
+          <label class="f-lbl">Atendido por</label>
+          <input class="f-inp" id="tkt-update-agente" placeholder="Lando Norris"/>
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button class="m-cancel" onclick="closeM('ticket-detail')">Cerrar</button>
+      <button class="m-ok" onclick="saveTktUpdate()"><i class="fa fa-save" style="margin-right:7px;"></i>Guardar Actualización</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast-wrap" id="toastWrap"></div>
 
 <script>
@@ -786,7 +855,7 @@ function renderDetail(c){
             <button class="add-btn" onclick="openM('ticket')"><i class="fa fa-plus"></i>Nuevo</button>
           </div>
           ${tickets.length
-            ? tickets.map(t=>`<div class="ticket-item"><div class="t-dot ${t.estado==='cerrado'?'cerrado':'abierto'}"></div><span class="t-nm">${t.nombre}</span><span class="t-age">${fmtD(t.creadoEn)}</span></div>`).join('')
+            ? tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><span class="t-nm">${t.nombre}</span><span class="t-age">${fmtD(t.creadoEn)}</span></div>`).join('')
             : '<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>'}
         </div>
       </div>
@@ -816,7 +885,7 @@ function renderDetail(c){
           <button class="add-btn" onclick="openM('ticket')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
         </div>
         ${tickets.length
-          ? tickets.map(t=>`<div class="ticket-item"><div class="t-dot ${t.estado==='cerrado'?'cerrado':'abierto'}"></div><span class="t-nm">${t.nombre}</span><span class="t-age">${t.estado}</span></div>`).join('')
+          ? tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><span class="t-nm">${t.nombre}</span><span class="t-age">${t.estado}</span></div>`).join('')
           : '<div class="empty" style="padding:12px;"><p>Sin tickets.</p></div>'}
       </div>
     </div>
@@ -954,10 +1023,92 @@ async function saveTicket(){
   if(!nombre){toast('El nombre del ticket es requerido','err');return;}
   const idx=(db.contacts||[]).findIndex(c=>c.id===activeId);if(idx<0)return;
   if(!db.contacts[idx].tickets)db.contacts[idx].tickets=[];
-  db.contacts[idx].tickets.push({id:uid(),nombre,estado:document.getElementById('ticket-estado').value,creadoEn:new Date().toISOString()});
+  db.contacts[idx].tickets.push({
+    id:uid(),nombre,
+    estado:document.getElementById('ticket-estado').value,
+    creadoEn:new Date().toISOString(),
+    actualizaciones:[]
+  });
   await saveDB('Nuevo ticket: '+nombre);
   closeM('ticket');document.getElementById('ticket-nombre').value='';
-  toast('Ticket creado','ok');const c=(db.contacts||[]).find(x=>x.id===activeId);if(c)renderDetail(c);
+  toast('Ticket creado','ok');
+  const c=(db.contacts||[]).find(x=>x.id===activeId);if(c)renderDetail(c);
+}
+
+// TICKET DETAIL
+let activeTktId=null;
+
+function openTktDetail(tktId){
+  if(!activeId) return;
+  const c=db.contacts.find(x=>x.id===activeId);
+  if(!c) return;
+  const t=c.tickets.find(x=>x.id===tktId);
+  if(!t) return;
+  activeTktId=tktId;
+
+  // Header
+  document.getElementById('tkt-detail-nombre').textContent=t.nombre.toUpperCase();
+  document.getElementById('tkt-detail-fecha').textContent='Creado: '+fmtD(t.creadoEn);
+
+  // Badge estado
+  const badge=document.getElementById('tkt-detail-badge');
+  const cls=t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en-progreso':'abierto';
+  badge.className='tkt-badge '+cls;
+  badge.innerHTML=`<span style="width:6px;height:6px;border-radius:50%;background:currentColor;display:inline-block;margin-right:5px;"></span>${t.estado}`;
+
+  // Feed de actualizaciones
+  const feed=document.getElementById('tkt-updates-feed');
+  const updates=t.actualizaciones||[];
+  if(updates.length){
+    feed.innerHTML=updates.map(u=>`
+      <div class="tkt-update">
+        <div class="tkt-update-dot"></div>
+        <div class="tkt-update-body">
+          <div class="tkt-update-nota">${u.nota}</div>
+          <div class="tkt-update-time">
+            ${fmtDT(u.fecha)}
+            ${u.agente?' · <strong style="color:var(--text)">'+u.agente+'</strong>':''}
+            ${u.estadoAnterior?' · <span style="color:var(--muted)">'+u.estadoAnterior+'</span> → <span style="color:var(--cyan)">'+u.estadoNuevo+'</span>':''}
+          </div>
+        </div>
+      </div>`).join('');
+  } else {
+    feed.innerHTML='<div class="empty" style="padding:20px;"><i class="fa fa-history"></i><p>Sin actualizaciones aún.</p></div>';
+  }
+
+  // Reset form
+  document.getElementById('tkt-update-nota').value='';
+  document.getElementById('tkt-update-estado').value='';
+  document.getElementById('tkt-update-agente').value='';
+  openM('ticket-detail');
+}
+
+async function saveTktUpdate(){
+  const nota=document.getElementById('tkt-update-nota').value.trim();
+  if(!nota){toast('La nota no puede estar vacía','err');return;}
+  const c=db.contacts.find(x=>x.id===activeId);
+  if(!c) return;
+  const tIdx=c.tickets.findIndex(x=>x.id===activeTktId);
+  if(tIdx<0) return;
+  const t=c.tickets[tIdx];
+  const nuevoEstado=document.getElementById('tkt-update-estado').value;
+  const agente=document.getElementById('tkt-update-agente').value.trim();
+  const update={
+    id:uid(),nota,agente:agente||'',
+    fecha:new Date().toISOString(),
+    estadoAnterior:nuevoEstado?t.estado:'',
+    estadoNuevo:nuevoEstado||''
+  };
+  if(!t.actualizaciones) t.actualizaciones=[];
+  t.actualizaciones.unshift(update);
+  if(nuevoEstado) t.estado=nuevoEstado;
+  t.actualizadoEn=update.fecha;
+  c.actualizadoEn=update.fecha;
+  await saveDB('Actualización ticket: '+t.nombre);
+  // Refrescar el modal con la nueva actualización
+  openTktDetail(activeTktId);
+  renderDetail(c);
+  toast('Actualización guardada en GitHub','ok');
 }
 
 // STATS
