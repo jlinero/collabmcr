@@ -3,506 +3,493 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Nuestra propuesta de valor | Holcim Colombia</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<title>CollabMCR Technology Corporation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#0d2240;
-  --navy2:#0a1c36;
-  --blue:#1a4fa0;
-  --green:#5cb85c;
-  --green2:#00843d;
-  --orange:#f5a623;
-  --text:#1a1a1a;
-  --muted:#666;
-  --border:#e0e0e0;
-  --white:#fff;
-  --bg:#f5f5f5;
-  --font:'Inter',sans-serif;
+  --bg:#04080f;--bg2:#070d1a;--surface:#0a1020;--card:#0d1628;--card2:#111e35;
+  --border:#1a2d50;--border2:#223660;
+  --cyan:#00d4ff;--cyan-dim:rgba(0,212,255,.12);
+  --blue:#1a56db;--blue2:#2563eb;
+  --green:#00ffa3;--red:#ff3b6b;--amber:#ffaa00;
+  --text:#dde6f5;--muted:#4a6080;--muted2:#6b84a8;
+  --font-display:'Bebas Neue',sans-serif;
+  --font-body:'Outfit',sans-serif;
+  --font-mono:'JetBrains Mono',monospace;
 }
-body{background:var(--white);color:var(--text);font-family:var(--font);font-size:15px;line-height:1.6;overflow-x:clip;}
-
-/* ═══════════════════════
-   TOP UTILITY BAR
-═══════════════════════ */
-.util-bar{background:var(--navy2);border-bottom:1px solid rgba(255,255,255,.08);padding:0;}
-.util-inner{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;justify-content:flex-end;align-items:center;height:38px;gap:0;}
-.util-bar a{color:rgba(255,255,255,.75);font-size:12px;font-weight:600;text-decoration:none;padding:0 14px;height:38px;display:flex;align-items:center;letter-spacing:.3px;transition:color .2s;border-left:1px solid rgba(255,255,255,.1);}
-.util-bar a:first-child{border-left:none;}
-.util-bar a:hover{color:#fff;}
-
-/* ═══════════════════════
-   HEADER
-═══════════════════════ */
-.topbar{background:var(--navy);height:64px;display:flex;align-items:center;position:sticky;top:0;z-index:300;box-shadow:0 2px 8px rgba(0,0,0,.2);}
-.topbar-inner{max-width:1280px;margin:0 auto;padding:0 24px;width:100%;display:flex;align-items:center;justify-content:space-between;gap:24px;}
-
-/* Logo Holcim SVG inline */
-.holcim-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
-.holcim-logo-svg{display:flex;align-items:center;}
-.holcim-colombia{font-size:12px;font-weight:600;color:rgba(255,255,255,.6);letter-spacing:2px;text-transform:uppercase;margin-left:14px;padding-left:14px;border-left:1px solid rgba(255,255,255,.25);}
-
-/* Nav */
-.nav{display:flex;align-items:center;gap:0;flex:1;justify-content:flex-end;}
-.nav a{color:rgba(255,255,255,.9);text-decoration:none;font-size:13px;font-weight:700;padding:0 14px;height:64px;display:flex;align-items:center;letter-spacing:.5px;text-transform:uppercase;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;}
-.nav a:hover{color:#fff;border-bottom-color:rgba(255,255,255,.4);}
-.nav a.active{color:#fff;border-bottom-color:var(--orange);}
-.nav-search{color:rgba(255,255,255,.8);font-size:16px;padding:0 8px;cursor:pointer;height:64px;display:flex;align-items:center;transition:color .2s;}
-.nav-search:hover{color:#fff;}
-
-/* ═══════════════════════
-   HERO BANNER
-═══════════════════════ */
-.hero-banner{
-  width:100%;height:300px;overflow:hidden;position:relative;
-  background:#b8d4e8;
-}
-.hero-banner img{width:100%;height:100%;object-fit:cover;object-position:center center;display:block;}
-.hero-banner-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(255,255,255,.05) 0%,rgba(255,255,255,0) 60%);}
-
-/* ═══════════════════════
-   BREADCRUMB
-═══════════════════════ */
-.breadcrumb-wrap{background:#fff;border-bottom:1px solid var(--border);padding:12px 0;}
-.breadcrumb{max-width:1280px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:6px;font-size:13px;color:var(--muted);}
-.breadcrumb a{color:var(--blue);text-decoration:none;}
-.breadcrumb a:hover{text-decoration:underline;}
-.breadcrumb i{font-size:11px;}
-
-/* ═══════════════════════
-   MAIN CONTENT
-═══════════════════════ */
-.main{max-width:1280px;margin:0 auto;padding:40px 24px 60px;}
-
-.page-title{font-size:clamp(28px,4vw,42px);font-weight:900;color:var(--navy);margin-bottom:16px;line-height:1.1;text-transform:uppercase;letter-spacing:-.3px;}
-.page-lead{font-size:16px;color:var(--text);margin-bottom:40px;max-width:700px;}
-
-/* Section headings */
-.section-title{font-size:clamp(20px,2.5vw,28px);font-weight:900;color:var(--navy);margin:48px 0 28px;text-transform:uppercase;letter-spacing:-.2px;}
-
-/* Cards grid */
-.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:8px;}
-@media(max-width:900px){.cards-grid{grid-template-columns:repeat(2,1fr);}}
-@media(max-width:580px){.cards-grid{grid-template-columns:1fr;}}
-
-.service-card{background:#fff;border:1px solid var(--border);border-radius:4px;overflow:hidden;transition:box-shadow .2s,transform .2s;cursor:pointer;}
-.service-card:hover{box-shadow:0 6px 24px rgba(0,0,0,.1);transform:translateY(-3px);}
-.card-img{height:180px;overflow:hidden;position:relative;}
-.card-img-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:48px;}
-.card-img-placeholder.green{background:linear-gradient(135deg,#e8f5e9,#c8e6c9);}
-.card-img-placeholder.blue{background:linear-gradient(135deg,#e3f2fd,#bbdefb);}
-.card-img-placeholder.orange{background:linear-gradient(135deg,#fff8e1,#ffe082);}
-.card-img-placeholder.navy{background:linear-gradient(135deg,#e8eaf6,#c5cae9);}
-.card-body{padding:20px;}
-.card-title{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:8px;}
-.card-desc{font-size:13px;color:var(--muted);line-height:1.65;}
-.card-link{display:inline-flex;align-items:center;gap:6px;color:var(--blue);font-size:13px;font-weight:600;text-decoration:none;margin-top:12px;transition:gap .2s;}
-.card-link:hover{gap:10px;}
-
-/* ═══════════════════════
-   FOOTER
-═══════════════════════ */
-footer{background:var(--navy2);color:rgba(255,255,255,.8);}
-.footer-main{max-width:1280px;margin:0 auto;padding:48px 24px 32px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;}
-@media(max-width:900px){.footer-main{grid-template-columns:1fr 1fr;}}
-.footer-col h4{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:16px;}
-.footer-col p{font-size:12px;line-height:1.7;color:rgba(255,255,255,.6);}
-.footer-col a{color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;display:block;margin-bottom:8px;transition:color .2s;}
-.footer-col a:hover{color:#fff;}
-.footer-cta{display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#fff;padding:10px 20px;border-radius:4px;font-size:13px;font-weight:700;text-decoration:none;margin-top:12px;transition:background .2s;}
-.footer-cta:hover{background:#1557b0;}
-.footer-social{display:flex;gap:10px;margin-top:16px;}
-.footer-social a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.7);font-size:13px;text-decoration:none;transition:all .2s;}
-.footer-social a:hover{background:var(--blue);color:#fff;}
-.footer-bottom{background:#060f1c;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:11px;color:rgba(255,255,255,.4);}
-.footer-bottom a{color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s;}
-.footer-bottom a:hover{color:rgba(255,255,255,.8);}
-.footer-bottom-links{display:flex;gap:16px;}
-
-/* ═══════════════════════
-   COTIZA FLOATING BTN
-═══════════════════════ */
-.cotiza-fab{
-  position:fixed;bottom:100px;right:20px;z-index:9000;
-  background:var(--navy);border-radius:999px;
-  display:flex;align-items:center;gap:10px;
-  padding:10px 20px 10px 12px;
-  box-shadow:0 4px 16px rgba(0,0,0,.3);
-  text-decoration:none;transition:transform .2s;
-  border:2px solid rgba(255,255,255,.15);
-}
-.cotiza-fab:hover{transform:scale(1.04);}
-.cotiza-icon{width:38px;height:38px;border-radius:50%;background:var(--blue);display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;flex-shrink:0;}
-.cotiza-text{display:flex;flex-direction:column;}
-.cotiza-label{font-size:9px;color:rgba(255,255,255,.6);letter-spacing:.5px;}
-.cotiza-cta{font-size:14px;font-weight:700;color:#fff;}
-
-/* ═══════════════════════════
-   CLICK-TO-CALL WIDGET
-═══════════════════════════ */
-.c2c-fab{position:fixed;bottom:100px;right:20px;z-index:9999;display:flex;flex-direction:column;align-items:flex-end;gap:10px;}
-.c2c-tooltip{background:var(--navy);border:1px solid rgba(255,255,255,.15);color:#fff;padding:7px 14px;border-radius:4px;font-size:11px;font-weight:600;white-space:nowrap;opacity:0;transform:translateX(8px);transition:all .2s;pointer-events:none;}
-.c2c-fab:hover .c2c-tooltip{opacity:1;transform:translateX(0);}
-.c2c-btn{width:54px;height:54px;border-radius:50%;background:#0d2240;color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(13,34,64,.5);transition:all .2s;position:relative;}
-.c2c-btn:hover{background:#1a3a6b;transform:scale(1.06);}
-.c2c-ring{position:absolute;inset:-5px;border-radius:50%;border:2px solid rgba(26,79,160,.4);animation:ring-pulse 2s ease-out infinite;}
-@keyframes ring-pulse{0%{transform:scale(1);opacity:1}100%{transform:scale(1.45);opacity:0}}
-
-/* Panel */
-.c2c-panel{
-  position:fixed;bottom:160px;right:20px;z-index:9998;width:320px;
-  background:#fff;border:1px solid var(--border);border-radius:8px;
-  box-shadow:0 16px 48px rgba(0,0,0,.18);overflow:hidden;
-  transform:scale(.85) translateY(16px);opacity:0;pointer-events:none;
-  transition:all .3s cubic-bezier(.22,.68,0,1.2);transform-origin:bottom right;
-}
-.c2c-panel.open{transform:scale(1) translateY(0);opacity:1;pointer-events:all;}
-
-.c2c-hdr{background:var(--navy);padding:16px 18px;display:flex;align-items:center;justify-content:space-between;}
-.c2c-hdr-l{display:flex;align-items:center;gap:12px;}
-.c2c-hdr-av{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;}
-.c2c-hdr-title{font-size:13px;font-weight:700;color:#fff;}
-.c2c-hdr-sub{font-size:10px;color:rgba(255,255,255,.55);margin-top:2px;}
-.c2c-close{background:none;border:none;color:rgba(255,255,255,.6);font-size:14px;cursor:pointer;transition:color .2s;padding:4px;}
-.c2c-close:hover{color:#fff;}
-
-.c2c-sbar{background:#f8f9fa;padding:9px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border);}
-.c2c-slabel{font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#999;}
-.c2c-spill{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:700;letter-spacing:.5px;padding:3px 9px;border-radius:2px;background:#ffeaea;color:#c0392b;border:1px solid rgba(192,57,43,.3);transition:all .4s;}
-.c2c-spill.online{background:#eafaf1;color:var(--green2);border-color:rgba(0,132,61,.3);}
-.c2c-spill.connecting{background:#fffbea;color:#f39c12;border-color:rgba(243,156,18,.3);}
-.c2c-sdot{width:5px;height:5px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:15px;line-height:1.65;overflow-x:hidden;cursor:none;}
+.cursor{position:fixed;width:10px;height:10px;background:var(--cyan);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .2s,height .2s;mix-blend-mode:screen;}
+.cursor-ring{position:fixed;width:36px;height:36px;border:1.5px solid rgba(0,212,255,.4);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s;}
+.topbar{position:fixed;top:0;left:0;right:0;z-index:200;height:68px;display:flex;align-items:center;background:rgba(4,8,15,.88);backdrop-filter:blur(24px);border-bottom:1px solid rgba(26,45,80,.8);}
+.topbar-inner{max-width:1360px;margin:0 auto;width:100%;padding:0 36px;display:flex;align-items:center;justify-content:space-between;}
+.logo-wrap{display:flex;align-items:center;gap:14px;text-decoration:none;}
+.logo-svg-box{position:relative;width:46px;height:46px;flex-shrink:0;}
+.logo-svg-box svg{width:100%;height:100%;}
+.logo-orbit{position:absolute;inset:-7px;border:1px solid rgba(0,212,255,.22);border-radius:50%;animation:spin 9s linear infinite;}
+.logo-orbit::before{content:'';position:absolute;width:6px;height:6px;border-radius:50%;background:var(--cyan);top:-3px;left:50%;transform:translateX(-50%);box-shadow:0 0 10px var(--cyan);}
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.logo-text{display:flex;flex-direction:column;line-height:1;}
+.logo-name{font-family:var(--font-display);font-size:23px;letter-spacing:2px;color:#fff;}
+.logo-tag{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2.5px;color:var(--cyan);text-transform:uppercase;margin-top:3px;}
+.nav{display:flex;align-items:center;gap:2px;}
+.nav a{font-size:13px;font-weight:500;color:var(--muted2);text-decoration:none;padding:7px 16px;border-radius:8px;transition:color .2s,background .2s;}
+.nav a:hover,.nav a.active{color:var(--cyan);}
+.topbar-right{display:flex;align-items:center;gap:12px;}
+.status-pill{display:flex;align-items:center;gap:8px;padding:6px 16px;border-radius:999px;font-size:10.5px;font-weight:600;font-family:var(--font-mono);letter-spacing:.5px;border:1px solid rgba(0,255,163,.2);background:rgba(0,255,163,.07);color:var(--green);transition:all .4s;}
+.status-pill.offline{border-color:rgba(255,59,107,.2);background:rgba(255,59,107,.07);color:var(--red);}
+.status-pill.connecting{border-color:rgba(255,170,0,.2);background:rgba(255,170,0,.07);color:var(--amber);}
+.status-dot{width:6px;height:6px;border-radius:50%;background:currentColor;animation:blink 2s infinite;}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
-
-.c2c-body{padding:20px;}
-.c2c-agent{text-align:center;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid var(--border);}
-.c2c-av{
-  width:60px;height:60px;border-radius:50%;
-  background:linear-gradient(135deg,var(--navy),var(--blue));
-  display:flex;align-items:center;justify-content:center;
-  margin:0 auto 10px;font-size:22px;color:#fff;
-  box-shadow:0 0 0 4px rgba(26,79,160,.08);
-}
-.c2c-name{font-size:15px;font-weight:700;color:var(--navy);}
-.c2c-role{font-size:11px;color:var(--muted);margin-top:2px;}
-.c2c-badge{display:inline-flex;align-items:center;gap:4px;font-size:9px;font-weight:700;color:var(--green2);background:rgba(0,132,61,.08);padding:3px 9px;border-radius:2px;margin-top:8px;letter-spacing:.5px;}
-.c2c-badge span{width:5px;height:5px;border-radius:50%;background:var(--green2);display:block;}
-
-.c2c-cbtn{width:100%;padding:12px;border-radius:4px;border:none;background:var(--navy);color:#fff;font-size:13px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:all .2s;margin-bottom:8px;letter-spacing:.2px;}
-.c2c-cbtn:hover:not(:disabled){background:var(--blue);transform:translateY(-1px);}
-.c2c-cbtn:disabled{opacity:.35;cursor:not-allowed;}
-.c2c-mbtn{width:100%;padding:10px;border-radius:4px;background:#f5f5f5;color:#666;border:1px solid var(--border);font-size:12px;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:all .2s;margin-bottom:8px;}
-.c2c-mbtn:disabled{opacity:.3;cursor:not-allowed;}
-.c2c-mbtn.muted{background:#ffeaea;color:#c0392b;border-color:rgba(192,57,43,.25);}
-.c2c-hbtn{width:100%;padding:10px;border-radius:4px;background:#ffeaea;color:#c0392b;border:1px solid rgba(192,57,43,.25);font-size:12px;font-weight:700;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;transition:all .2s;margin-bottom:14px;}
-.c2c-hbtn:hover:not(:disabled){background:#c0392b;color:#fff;}
-.c2c-hbtn:disabled{opacity:.2;cursor:not-allowed;}
-
-.c2c-log{background:#f8f9fa;border:1px solid var(--border);border-radius:4px;padding:9px;height:72px;overflow-y:auto;font-family:monospace;font-size:10px;margin-bottom:10px;display:none;}
-.c2c-log p{margin-bottom:3px;line-height:1.4;}
-.l-ok{color:var(--green2)}.l-err{color:#c0392b}.l-info{color:var(--blue)}.l-muted{color:#bbb;}
-.c2c-log::-webkit-scrollbar{width:2px;}.c2c-log::-webkit-scrollbar-thumb{background:#ddd;}
-.c2c-foot{text-align:center;font-size:10px;color:#aaa;display:flex;align-items:center;justify-content:center;gap:4px;}
-.c2c-foot i{color:var(--green2);}
-.c2c-powered{text-align:center;margin-top:6px;font-size:10px;color:#ccc;}
-.c2c-powered strong{color:#aaa;}
-
-/* Holcim logo SVG colors */
-.h-logo-green{fill:#5cb85c}
-.h-logo-blue{fill:#0076bf}
-.h-logo-text{fill:#ffffff;font-weight:900;}
-
-/* ═══════════════════════════════════
-   CLICK-TO-CHAT WIDGET (IMIconnect)
-═══════════════════════════════════ */
-/* Wrapper de ambos FABs */
-
-
-
+.btn-token{font-size:11px;font-weight:600;font-family:var(--font-mono);padding:8px 18px;border-radius:8px;border:1px solid var(--border2);background:transparent;color:var(--muted2);cursor:none;transition:all .2s;letter-spacing:.4px;}
+.btn-token:hover{color:var(--cyan);border-color:var(--cyan);background:var(--cyan-dim);}
+/* HERO */
+.hero{position:relative;z-index:2;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:100px 36px 80px;overflow:hidden;}
+#heroCanvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;}
+.hero-blob{position:absolute;width:860px;height:860px;border-radius:50%;background:radial-gradient(circle,rgba(26,86,219,.24) 0%,rgba(0,212,255,.07) 40%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-55%);pointer-events:none;animation:blobP 7s ease-in-out infinite;}
+@keyframes blobP{0%,100%{transform:translate(-50%,-55%) scale(1)}50%{transform:translate(-50%,-55%) scale(1.07)}}
+.hero-content{position:relative;z-index:2;text-align:center;max-width:920px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:36px;padding:7px 22px;border:1px solid rgba(0,212,255,.22);border-radius:999px;background:rgba(0,212,255,.05);}
+.hero-eyebrow::before{content:'//';opacity:.4;margin-right:4px;}
+.hero h1{font-family:var(--font-display);font-size:clamp(54px,10vw,118px);line-height:.93;letter-spacing:3px;color:#fff;margin-bottom:10px;}
+.line2{display:block;background:linear-gradient(90deg,var(--cyan) 0%,var(--blue2) 50%,var(--cyan) 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:shimmer 4s linear infinite;}
+@keyframes shimmer{0%{background-position:0%}100%{background-position:200%}}
+.line3{display:block;font-size:clamp(14px,2vw,26px);font-family:var(--font-body);font-weight:300;color:var(--muted2);letter-spacing:6px;text-transform:uppercase;-webkit-text-fill-color:var(--muted2);margin-top:18px;}
+.hero-desc{color:var(--muted2);font-size:17px;font-weight:300;max-width:520px;margin:28px auto 44px;line-height:1.75;}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-glow{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:14px;cursor:none;text-decoration:none;border:none;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;transition:transform .2s,box-shadow .2s;}
+.btn-glow:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(0,212,255,.4);}
+.btn-outline{display:inline-flex;align-items:center;gap:10px;padding:15px 32px;border-radius:10px;font-family:var(--font-body);font-weight:500;font-size:14px;cursor:none;text-decoration:none;border:1px solid var(--border2);background:transparent;color:var(--text);transition:border-color .2s,color .2s,background .2s;}
+.btn-outline:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim);}
+/* STATS */
+.stats-bar{position:relative;z-index:2;border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:var(--surface);padding:28px 36px;}
+.stats-inner{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
+@media(max-width:700px){.stats-inner{grid-template-columns:repeat(2,1fr);}}
+.stat-item{text-align:center;}
+.stat-num{font-family:var(--font-display);font-size:46px;letter-spacing:2px;color:#fff;display:block;line-height:1;}
+.stat-num span{color:var(--cyan);}
+.stat-label{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-top:6px;}
+/* SECTIONS */
+section{position:relative;z-index:2;}
+.sw{max-width:1360px;margin:0 auto;padding:110px 36px;}
+.s-label{font-family:var(--font-mono);font-size:9.5px;letter-spacing:3px;text-transform:uppercase;color:var(--cyan);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+.s-label::before{content:'';display:block;width:22px;height:1px;background:var(--cyan);}
+.s-title{font-family:var(--font-display);font-size:clamp(34px,5vw,62px);letter-spacing:2px;color:#fff;line-height:1;margin-bottom:18px;}
+.s-sub{color:var(--muted2);font-size:16px;font-weight:300;max-width:480px;margin-bottom:64px;}
+/* PRODUCTS */
+.products-bg{background:var(--bg2);}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;}
+@media(max-width:860px){.products-grid{grid-template-columns:1fr;}}
+.prod-card{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:36px;transition:border-color .35s,transform .35s,box-shadow .35s;cursor:none;}
+.prod-card::before{content:'';position:absolute;top:0;left:36px;right:36px;height:2px;border-radius:0 0 2px 2px;background:linear-gradient(90deg,transparent,currentColor,transparent);opacity:0;transition:opacity .35s;}
+.prod-card.c1{color:var(--cyan)}.prod-card.c2{color:var(--green)}.prod-card.c3{color:#818cf8}.prod-card.c4{color:var(--amber)}
+.prod-card:hover{transform:translateY(-6px);box-shadow:0 24px 64px rgba(0,0,0,.55);border-color:currentColor;}
+.prod-card:hover::before{opacity:1;}
+.prod-num{position:absolute;right:24px;top:12px;font-family:var(--font-display);font-size:90px;color:currentColor;opacity:.04;line-height:1;pointer-events:none;transition:opacity .35s;}
+.prod-card:hover .prod-num{opacity:.1;}
+.prod-icon{width:52px;height:52px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:24px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.07);color:currentColor;}
+.prod-title{font-family:var(--font-display);font-size:28px;letter-spacing:1px;color:#fff;margin-bottom:10px;}
+.prod-desc{color:var(--muted2);font-size:13.5px;line-height:1.7;margin-bottom:22px;}
+.prod-tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px;}
+.prod-tag{font-family:var(--font-mono);font-size:8.5px;letter-spacing:1.5px;text-transform:uppercase;color:currentColor;padding:4px 10px;border-radius:4px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);}
+.prod-link{font-family:var(--font-mono);font-size:10.5px;letter-spacing:2px;text-transform:uppercase;color:currentColor;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:gap .2s;}
+.prod-link:hover{gap:14px;}
+/* CALLING */
+.calling-bg{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.calling-layout{display:grid;grid-template-columns:1fr 400px;gap:80px;align-items:center;}
+@media(max-width:960px){.calling-layout{grid-template-columns:1fr;}}
+.feature-list{display:flex;flex-direction:column;gap:14px;margin-top:36px;}
+.feature-row{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:var(--card);border:1px solid var(--border);border-radius:12px;transition:border-color .2s;}
+.feature-row:hover{border-color:var(--border2);}
+.feat-icon{width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;}
+.fi-a{background:rgba(0,212,255,.1);color:var(--cyan);}
+.fi-b{background:rgba(0,255,163,.1);color:var(--green);}
+.fi-c{background:rgba(129,140,248,.1);color:#818cf8;}
+.feat-t{font-weight:600;font-size:13.5px;color:#fff;margin-bottom:2px;}
+.feat-d{font-size:12px;color:var(--muted2);}
+/* PANEL */
+.call-panel{background:var(--card2);border:1px solid var(--border2);border-radius:20px;overflow:hidden;}
+.panel-chrome{background:var(--card);padding:0 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:8px;height:44px;}
+.chrome-dot{width:10px;height:10px;border-radius:50%;}
+.ptitle{margin:0 auto;font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);}
+.pstatus{display:flex;align-items:center;justify-content:space-between;padding:12px 22px;background:rgba(0,212,255,.03);border-bottom:1px solid var(--border);}
+.pbody{padding:22px;}
+.f-label{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;display:block;}
+.f-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--font-mono);font-size:14px;outline:none;transition:border-color .2s,box-shadow .2s;margin-bottom:16px;}
+.f-input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(0,212,255,.08);}
+.f-input::placeholder{color:var(--muted);}
+.call-btns{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
+.cbtn{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:10px;border:none;font-family:var(--font-body);font-weight:600;font-size:13px;cursor:none;transition:all .2s;}
+.cbtn.go{background:var(--green);color:#012419;}.cbtn.go:hover:not(:disabled){box-shadow:0 0 28px rgba(0,255,163,.35);transform:translateY(-1px);}
+.cbtn.stop{background:rgba(255,59,107,.12);color:var(--red);border:1px solid rgba(255,59,107,.25);}.cbtn.stop:hover:not(:disabled){background:var(--red);color:#fff;}
+.cbtn:disabled{opacity:.3;cursor:not-allowed;}
+.call-log{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:14px 16px;height:130px;overflow-y:auto;font-family:var(--font-mono);font-size:11px;}
+.call-log p{margin-bottom:5px;line-height:1.5;}
+.l-ok{color:var(--green)}.l-err{color:var(--red)}.l-info{color:var(--cyan)}.l-muted{color:var(--muted);}
+.call-log::-webkit-scrollbar{width:3px;}.call-log::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px;}
+/* CONTACT */
+.contact-bg{background:var(--bg);}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}
+@media(max-width:860px){.contact-grid{grid-template-columns:1fr;}}
+.cc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px 28px;display:flex;align-items:center;gap:16px;text-decoration:none;transition:border-color .2s,transform .2s;cursor:none;margin-bottom:14px;}
+.cc:hover{border-color:var(--cyan);transform:translateX(5px);}
+.cc-icon{width:44px;height:44px;border-radius:10px;background:var(--cyan-dim);border:1px solid rgba(0,212,255,.15);display:flex;align-items:center;justify-content:center;font-size:17px;color:var(--cyan);flex-shrink:0;}
+.cc-title{font-weight:600;color:#fff;font-size:14px;margin-bottom:2px;}
+.cc-val{font-family:var(--font-mono);font-size:10px;color:var(--muted2);letter-spacing:.5px;}
+/* FOOTER */
+footer{position:relative;z-index:2;border-top:1px solid var(--border);padding:30px 36px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
+.footer-brand{display:flex;align-items:center;gap:12px;font-family:var(--font-display);font-size:14px;letter-spacing:2px;color:var(--muted);}
+.footer-copy{font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:.5px;}
+/* MODAL */
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(2,5,12,.9);backdrop-filter:blur(14px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s;}
+.modal-overlay.open{opacity:1;pointer-events:all;}
+.modal{background:var(--card2);border:1px solid var(--border2);border-radius:22px;padding:40px;width:500px;max-width:95vw;transform:translateY(28px) scale(.97);transition:transform .35s cubic-bezier(.22,.68,0,1.2);}
+.modal-overlay.open .modal{transform:translateY(0) scale(1);}
+.m-eye{font-family:var(--font-mono);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);margin-bottom:8px;}
+.modal h3{font-family:var(--font-display);font-size:30px;letter-spacing:1px;color:#fff;}
+.modal p{color:var(--muted2);font-size:13px;margin-top:6px;margin-bottom:20px;}
+.m-input{width:100%;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:12px 16px;color:var(--text);font-family:var(--font-mono);font-size:12px;outline:none;margin-bottom:10px;transition:border-color .2s;}
+.m-input:focus{border-color:var(--cyan);}
+.m-input::placeholder{color:var(--muted);}
+.m-sep{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:6px 0 14px;display:flex;align-items:center;gap:10px;}
+.m-sep::before,.m-sep::after{content:'';flex:1;height:1px;background:var(--border);}
+.modal-actions{display:flex;gap:10px;margin-top:18px;}
+.modal-actions button{flex:1;padding:13px;border-radius:10px;font-family:var(--font-body);font-weight:600;font-size:14px;cursor:none;border:none;transition:all .2s;}
+.m-confirm{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;}
+.m-confirm:hover{box-shadow:0 6px 28px rgba(0,212,255,.35);}
+.m-cancel{background:var(--surface);color:var(--muted2);}
+.m-cancel:hover{color:var(--text);}
+.tok-box{background:rgba(0,255,163,.05);border:1px solid rgba(0,255,163,.15);border-radius:10px;padding:12px 16px;margin-bottom:14px;font-family:var(--font-mono);font-size:10.5px;color:var(--green);}
+.tok-box strong{display:block;margin-bottom:3px;}
+.tok-box span{color:var(--muted2);}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:var(--bg);}::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px;}
 </style>
 </head>
 <body>
-
-<!-- UTILITY BAR -->
-<div class="util-bar">
-  <div class="util-inner">
-    <a href="#">HISTORIAS LATAM</a>
-    <a href="#">COTIZAR</a>
-    <a href="#">PROVEEDORES</a>
-    <a href="#">PRENSA</a>
-    <a href="#" onclick="toggleC2C();return false;" style="color:rgba(255,255,255,.9);font-weight:700;">CONTACTO</a>
-  </div>
-</div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
 
 <!-- TOPBAR -->
 <header class="topbar">
   <div class="topbar-inner">
-    <a href="#" class="holcim-logo">
-      <!-- Ícono H de Holcim -->
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVHZQ4XrYn861PIduKME3GsLfm8ycZ0bb5bw&s"
-           alt="Holcim"
-           style="height:44px;width:auto;object-fit:contain;display:block;flex-shrink:0;"
-           onerror="this.style.display='none'"/>
-      <!-- Texto HOLCIM -->
-      <svg width="122" height="34" viewBox="0 0 144 34" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
-        <text x="1" y="27" font-size="30" font-weight="900" fill="white"
-              font-family="'Inter','Arial Black',Arial,sans-serif"
-              letter-spacing="1.5">HOLCIM</text>
-      </svg>
-      <!-- Separador + COLOMBIA -->
-      <span class="holcim-colombia">COLOMBIA</span>
+    <a href="#home" class="logo-wrap">
+      <div class="logo-svg-box">
+        <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="lg1" x1="0" y1="0" x2="46" y2="46" gradientUnits="userSpaceOnUse">
+              <stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#1a56db"/>
+            </linearGradient>
+            <filter id="glow1" x="-60%" y="-60%" width="220%" height="220%">
+              <feGaussianBlur stdDeviation="2.2" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <polygon points="23,2.5 41,12.5 41,33.5 23,43.5 5,33.5 5,12.5" fill="url(#lg1)" opacity=".1" stroke="url(#lg1)" stroke-width="1"/>
+          <circle cx="23" cy="23" r="5" fill="url(#lg1)" filter="url(#glow1)"/>
+          <circle cx="23" cy="9"   r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="36" cy="16" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="36" cy="30" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="23" cy="37" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="10" cy="30" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <circle cx="10" cy="16" r="2.6" fill="#0d1628" stroke="#00d4ff" stroke-width=".9"/>
+          <line x1="23" y1="23" x2="23" y2="9"  stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="36" y2="16" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="36" y2="30" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="23" y2="37" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="10" y2="30" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <line x1="23" y1="23" x2="10" y2="16" stroke="url(#lg1)" stroke-width=".9" opacity=".6"/>
+          <polygon points="23,9 36,16 36,30 23,37 10,30 10,16" fill="none" stroke="#00d4ff" stroke-width=".5" opacity=".18"/>
+        </svg>
+        <div class="logo-orbit"></div>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">CollabMCR</span>
+        <span class="logo-tag">Technology Corporation</span>
+      </div>
     </a>
-
     <nav class="nav">
-      <a href="#">PRODUCTOS</a>
-      <a href="#" class="active">SERVICIOS</a>
-      <a href="#">SOSTENIBILIDAD</a>
-      <a href="#">PLANTAS</a>
-      <a href="#">NOSOTROS</a>
-      <a href="#">CARRERAS</a>
-      <span class="nav-search"><i class="fa fa-magnifying-glass"></i></span>
+      <a href="#home" class="active">Inicio</a>
+      <a href="#products">Productos</a>
+      <a href="#calling">Calling</a>
+      <a href="#contact">Contacto</a>
+      <a href="crm.html" style="color:var(--cyan);border:1px solid rgba(0,212,255,.22);border-radius:8px;background:rgba(0,212,255,.06);"><i class="fa fa-users" style="margin-right:6px;font-size:11px;"></i>CRM</a>
     </nav>
+    <div class="topbar-right">
+      <div class="status-pill offline" id="statusPill"><div class="status-dot"></div><span id="statusText">OFFLINE</span></div>
+      <button class="btn-token" onclick="openModal()" style="display:none;"><i class="fa fa-key" style="margin-right:6px;font-size:10px;"></i>TOKEN OAUTH</button>
+    </div>
   </div>
 </header>
 
-<!-- HERO BANNER -->
-<div class="hero-banner">
-  <img src="https://constructivo.com/imgPosts/6823f5fcc3709.jpg"
-       alt="Holcim Colombia — Propuesta de valor"
-       onerror="this.style.display='none'"/>
-  <div class="hero-banner-overlay"></div>
-</div>
-</div>
+<!-- HERO -->
+<section id="home" class="hero">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-blob"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Plataforma de Colaboración Empresarial</div>
+    <h1>COLLAB<span class="line2">TECHNOLOGY</span><span class="line3">Corporation &nbsp;·&nbsp; Powered by Cisco Webex</span></h1>
+    <p class="hero-desc">Unified Communications &amp; Collaboration — Webex Calling, Contact Center, Meetings e IA generativa integradas en una sola experiencia diseñada para el futuro empresarial.</p>
+    <div class="hero-cta">
+      <a href="#calling" class="btn-glow"><i class="fa fa-phone-volume"></i> Iniciar llamada</a>
+      <a href="#products" class="btn-outline">Ver portafolio <i class="fa fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
 
-<!-- BREADCRUMB -->
-<div class="breadcrumb-wrap">
-  <div class="breadcrumb">
-    <a href="#"><i class="fa fa-house"></i></a>
-    <i class="fa fa-angle-right"></i>
-    <a href="#">Servicios</a>
-    <i class="fa fa-angle-right"></i>
-    <span>Nuestra propuesta de valor</span>
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stats-inner">
+    <div class="stat-item reveal"><span class="stat-num">500<span>+</span></span><div class="stat-label">Clientes activos</div></div>
+    <div class="stat-item reveal d1"><span class="stat-num">99<span>.9%</span></span><div class="stat-label">Uptime garantizado</div></div>
+    <div class="stat-item reveal d2"><span class="stat-num">12<span>ms</span></span><div class="stat-label">Latencia promedio</div></div>
+    <div class="stat-item reveal d3"><span class="stat-num">24<span>/7</span></span><div class="stat-label">Soporte técnico</div></div>
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
-<div class="main">
-
-  <h1 class="page-title">Nuestra propuesta de valor</h1>
-  <p class="page-lead">Cuentas con todos nuestros servicios cuando adquieres productos Holcim.</p>
-
-  <!-- Sección 1 -->
-  <h2 class="section-title">Soluciones y servicio técnico integral</h2>
-  <div class="cards-grid">
-
-    <div class="service-card">
-      <div class="card-img">
-        <div class="card-img-placeholder green">🏗️</div>
+<!-- PRODUCTS -->
+<section id="products" class="products-bg">
+  <div class="sw">
+    <div class="s-label reveal">Portafolio de Soluciones</div>
+    <div class="s-title reveal">NUESTROS<br>PRODUCTOS</div>
+    <p class="s-sub reveal">Tecnología de clase enterprise para empresas que no se conforman con lo ordinario.</p>
+    <div class="products-grid">
+      <div class="prod-card c1 reveal">
+        <div class="prod-num">01</div>
+        <div class="prod-icon"><i class="fa fa-phone-volume"></i></div>
+        <div class="prod-title">WEBEX CALLING</div>
+        <div class="prod-tags"><span class="prod-tag">Click-to-Call</span><span class="prod-tag">HD Audio</span><span class="prod-tag">OAuth SDK</span></div>
+        <div class="prod-desc">Telefonía en la nube de nueva generación. Llama desde cualquier navegador sin instalar nada. Token OAuth con renovación automática para sesiones sin interrupción.</div>
+        <a href="#calling" class="prod-link">Probar ahora <i class="fa fa-arrow-right"></i></a>
       </div>
-      <div class="card-body">
-        <div class="card-title">Portafolio integral</div>
-        <div class="card-desc">En Holcim contamos con un portafolio ajustado a las necesidades de tu proyecto. Creemos en el cuidado del medio ambiente y por eso tenemos soluciones con las emisiones bajas de CO₂ y productos para todas las etapas de la construcción, desde los cimientos hasta los acabados finales.</div>
-        <a href="#" class="card-link">Conócelo ahora <i class="fa fa-arrow-right"></i></a>
+      <div class="prod-card c2 reveal d1">
+        <div class="prod-num">02</div>
+        <div class="prod-icon"><i class="fa fa-headset"></i></div>
+        <div class="prod-title">CONTACT CENTER</div>
+        <div class="prod-tags"><span class="prod-tag">Omnicanal</span><span class="prod-tag">Real-time</span><span class="prod-tag">IVR IA</span></div>
+        <div class="prod-desc">Centro de contacto omnicanal con enrutamiento basado en habilidades, dashboards en tiempo real para supervisores y herramientas de productividad para agentes.</div>
+        <a href="#" class="prod-link">Saber más <i class="fa fa-arrow-right"></i></a>
       </div>
-    </div>
-
-    <div class="service-card">
-      <div class="card-img">
-        <div class="card-img-placeholder blue">💰</div>
+      <div class="prod-card c3 reveal d2">
+        <div class="prod-num">03</div>
+        <div class="prod-icon"><i class="fa fa-video"></i></div>
+        <div class="prod-title">WEBEX MEETINGS</div>
+        <div class="prod-tags"><span class="prod-tag">4K Video</span><span class="prod-tag">1000 part.</span><span class="prod-tag">Whiteboard</span></div>
+        <div class="prod-desc">Reuniones de alta definición con colaboración en documentos, pizarras digitales y salas de descanso para equipos distribuidos globalmente.</div>
+        <a href="#" class="prod-link">Saber más <i class="fa fa-arrow-right"></i></a>
       </div>
-      <div class="card-body">
-        <div class="card-title">Financiamiento</div>
-        <div class="card-desc">Alianzas con entidades financieras para la compra de productos Holcim. Ofrecemos soluciones de crédito para mejorar tu ciclo financiero con plazos de pago adaptados a tu necesidad, disminuyendo la carga operativa de tu equipo de finanzas.</div>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="card-img">
-        <div class="card-img-placeholder navy">🔧</div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">Soporte y servicio técnico</div>
-        <div class="card-desc">Acompañamiento y asesoría durante todas las etapas de tu proyecto. Para el desarrollo de mezclas específicas tendrás disponibilidad de materiales como aditivos, cemento y agregados para desarrollar soluciones que se ajusten a tus necesidades.</div>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="card-img">
-        <div class="card-img-placeholder orange">🔬</div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">Laboratorio móvil</div>
-        <div class="card-desc">Ofrecemos un espacio equipado con las herramientas y equipos necesarios para la demostración, verificación y validación en campo de nuestros productos de cemento, concreto, agregados y soluciones químicas.</div>
-        <a href="#" class="card-link">Conoce más <i class="fa fa-arrow-right"></i></a>
+      <div class="prod-card c4 reveal d3">
+        <div class="prod-num">04</div>
+        <div class="prod-icon"><i class="fa fa-robot"></i></div>
+        <div class="prod-title">AI AGENT</div>
+        <div class="prod-tags"><span class="prod-tag">LLM Nativo</span><span class="prod-tag">Sentiment</span><span class="prod-tag">Auto-Summary</span></div>
+        <div class="prod-desc">Agente de IA generativa integrado en cada canal. Resumen automático de llamadas, análisis de sentimiento y atención al cliente 24/7 sin intervención humana.</div>
+        <a href="#" class="prod-link">Explorar <i class="fa fa-arrow-right"></i></a>
       </div>
     </div>
-
   </div>
+</section>
 
-  <!-- Sección 2 -->
-  <h2 class="section-title">Formación técnica y profesional</h2>
-  <div class="cards-grid">
-
-    <div class="service-card">
-      <div class="card-img">
-        <div class="card-img-placeholder blue">🏅</div>
+<!-- CALLING -->
+<section id="calling" class="calling-bg">
+  <div class="sw">
+    <div class="calling-layout">
+      <div>
+        <div class="s-label reveal">Soporte en Tiempo Real</div>
+        <div class="s-title reveal">CONTÁCTANOS<br><span style="font-size:clamp(22px,3vw,38px);color:var(--cyan);">ESTAMOS AQUÍ PARA AYUDARTE</span></div>
+        <p class="s-sub reveal" style="margin-bottom:32px;">Nuestro equipo de especialistas está disponible para atenderte ahora mismo. Sin esperas, sin formularios — solo haz clic en <strong style="color:var(--text);">Llamar</strong> y un agente te atenderá en segundos.</p>
+        <div class="feature-list">
+          <div class="feature-row reveal d1">
+            <div class="feat-icon fi-a"><i class="fa fa-headset"></i></div>
+            <div>
+              <div class="feat-t">Agentes especializados disponibles</div>
+              <div class="feat-d">Conecta directamente con un experto en soluciones Cisco Webex. Sin bots, sin menús interminables.</div>
+            </div>
+          </div>
+          <div class="feature-row reveal d2">
+            <div class="feat-icon fi-b"><i class="fa fa-bolt"></i></div>
+            <div>
+              <div class="feat-t">Conexión inmediata desde el navegador</div>
+              <div class="feat-d">No necesitas instalar nada. Haz clic en Llamar, acepta el micrófono y estarás hablando con nosotros al instante.</div>
+            </div>
+          </div>
+          <div class="feature-row reveal d3">
+            <div class="feat-icon fi-c"><i class="fa fa-shield-halved"></i></div>
+            <div>
+              <div class="feat-t">Comunicación segura y encriptada</div>
+              <div class="feat-d">Cada llamada viaja cifrada de extremo a extremo sobre la plataforma Webex Calling de Cisco.</div>
+            </div>
+          </div>
+          <div class="feature-row reveal" style="transition-delay:.4s">
+            <div class="feat-icon" style="background:rgba(255,170,0,.1);color:var(--amber);width:36px;height:36px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:14px;"><i class="fa fa-clock"></i></div>
+            <div>
+              <div class="feat-t">Horario de atención</div>
+              <div class="feat-d">Lunes a viernes · 8:00 AM – 6:00 PM (EST) · Soporte de emergencia 24/7 para clientes enterprise.</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card-body">
-        <div class="card-title">Certificaciones</div>
-        <div class="card-desc">Cursos especializados dictados por reconocidas universidades y agremiaciones que ofrecen espacios de actualización, reflexión y construcción para la formación de tus equipos de trabajo.</div>
+      <!-- CALL PANEL -->
+      <div class="call-panel reveal d2">
+        <div class="panel-chrome">
+          <div class="chrome-dot" style="background:#ff5f57;"></div>
+          <div class="chrome-dot" style="background:#febc2e;"></div>
+          <div class="chrome-dot" style="background:#28c840;"></div>
+          <div class="ptitle">SOPORTE EN VIVO</div>
+        </div>
+        <div class="pstatus">
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:1px;">ESTADO DEL AGENTE</div>
+          <div class="status-pill offline" id="callStatusPill" style="font-size:10px;padding:4px 12px;"><div class="status-dot"></div><span id="callStatusText">OFFLINE</span></div>
+        </div>
+        <div class="pbody">
+          <!-- Avatar y mensaje de bienvenida -->
+          <div style="text-align:center;padding:16px 0 20px;">
+            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:28px;color:#fff;box-shadow:0 0 24px rgba(0,212,255,.3);">
+              <i class="fa fa-headset"></i>
+            </div>
+            <div style="font-family:var(--font-display);font-size:18px;color:#fff;letter-spacing:1px;">Equipo CollabMCR</div>
+            <div style="font-family:var(--font-mono);font-size:9px;color:var(--green);letter-spacing:2px;margin-top:4px;" id="agentStatusText">● DISPONIBLE AHORA</div>
+          </div>
+          <label class="f-label" style="display:none;">Número destino</label>
+          <input class="f-input" type="tel" id="dialInput" placeholder="+1 555 000 0000" style="display:none;"/>
+          <div class="call-btns" style="margin-bottom:0;">
+            <button class="cbtn go" id="btnCall" onclick="placeCall()" disabled><i class="fa fa-phone"></i> Llamar ahora</button>
+            <button class="cbtn stop" id="btnHangup" onclick="hangupCall()" disabled><i class="fa fa-phone-slash"></i> Colgar</button>
+          </div>
+          <div style="margin-top:10px;">
+            <button class="cbtn" id="btnMute" onclick="toggleMute()" disabled
+              style="width:100%;background:rgba(255,255,255,.06);color:var(--muted2);border:1px solid var(--border2);">
+              <i class="fa fa-microphone" id="muteIcon"></i>
+              <span id="muteText">Silenciar</span>
+            </button>
+          </div>
+          <div style="text-align:center;margin-top:14px;font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:.5px;">
+            <i class="fa fa-lock" style="margin-right:5px;color:var(--green);"></i>Llamada segura · Powered by Cisco Webex
+          </div>
+          <label class="f-label" style="display:none;margin-top:16px;">Log de eventos</label>
+          <div class="call-log" id="callLog" style="display:none;">
+            <p class="l-info">» Sistema inicializado.</p>
+            <p class="l-muted">» Configura tu token OAuth para registrarte.</p>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="service-card">
-      <div class="card-img">
-        <div class="card-img-placeholder green">📚</div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">Capacitaciones Personalizadas</div>
-        <div class="card-desc">Dota a tus colaboradores, clientes y socios estratégicos con las habilidades y conocimientos esenciales para llevar a cabo pruebas y ensayos de calidad en agregados, concreto y aditivos.</div>
-      </div>
-    </div>
-
-    <div class="service-card">
-      <div class="card-img">
-        <div class="card-img-placeholder navy">🎓</div>
-      </div>
-      <div class="card-body">
-        <div class="card-title">Centro de formación Holcim Total</div>
-        <div class="card-desc">Podrás encontrar cursos y certificaciones que te permitirán mantenerte actualizado frente a las nuevas tendencias, herramientas y técnicas de la construcción, respaldado por instituciones de alta calidad.</div>
-        <a href="#" class="card-link">Regístrate ahora <i class="fa fa-arrow-right"></i></a>
-      </div>
-    </div>
-
   </div>
+</section>
 
-</div><!-- /main -->
+<!-- CONTACT -->
+<section id="contact" class="contact-bg">
+  <div class="sw" style="padding-top:80px;padding-bottom:80px;">
+    <div class="contact-grid">
+      <div>
+        <div class="s-label reveal">Soporte &amp; Contacto</div>
+        <div class="s-title reveal" style="font-size:clamp(30px,4vw,52px);">ESTAMOS<br>CONTIGO</div>
+        <p class="s-sub reveal" style="margin-bottom:0;">Ingenieros certificados en Cisco Webex disponibles para acompañarte en cada etapa de la implementación.</p>
+      </div>
+      <div>
+        <a href="/cdn-cgi/l/email-protection#680b04010d061c0d1b280b070404090a450b0704461f0a10460901" class="cc reveal"><div class="cc-icon"><i class="fa fa-envelope"></i></div><div><div class="cc-title">Email de Soporte</div><div class="cc-val"><span class="__cf_email__" data-cfemail="5a3936333f342e3f291a393536363b3877393536742d3822743b33">[email&#160;protected]</span></div></div></a>
+        <a href="https://developer.webex.com/support" target="_blank" class="cc reveal d1"><div class="cc-icon"><i class="fa fa-life-ring"></i></div><div><div class="cc-title">Webex Developer Support</div><div class="cc-val">developer.webex.com/support</div></div></a>
+        <a href="https://community.cisco.com/t5/webex-for-developers/bd-p/disc-webex-developers" target="_blank" class="cc reveal d2"><div class="cc-icon"><i class="fa fa-comments"></i></div><div><div class="cc-title">Comunidad Cisco Webex</div><div class="cc-val">Developers Community Forum</div></div></a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-main">
-    <div class="footer-col">
-      <!-- Logo blanco footer -->
-      <svg width="120" height="32" viewBox="0 0 160 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom:14px;">
-        <text x="0" y="24" font-size="24" font-weight="900" fill="white" font-family="Inter,Arial,sans-serif" letter-spacing="1">HOLCIM</text>
-      </svg>
-      <p style="margin-bottom:16px;font-weight:700;font-size:13px;color:rgba(255,255,255,.8);">CONSTRUYENDO PROGRESO PARA LAS PERSONAS Y EL PLANETA</p>
-      <a href="#" class="footer-cta"><i class="fa fa-phone"></i> CONTÁCTENOS</a>
-      <div class="footer-social" style="margin-top:16px;">
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-x-twitter"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-      </div>
-    </div>
-    <div class="footer-col">
-      <h4>Productos y Servicios</h4>
-      <a href="#">Cemento</a>
-      <a href="#">Concreto premezclado</a>
-      <a href="#">Agregados</a>
-      <a href="#">Soluciones químicas</a>
-      <a href="#">Nuestra propuesta de valor</a>
-    </div>
-    <div class="footer-col">
-      <h4>Nosotros</h4>
-      <a href="#">Nuestra Visión</a>
-      <a href="#">Nuestro Propósito</a>
-      <a href="#">Gobierno Corporativo</a>
-      <a href="#">Certificaciones</a>
-      <a href="#">Sostenibilidad</a>
-    </div>
-    <div class="footer-col">
-      <h4>Más información</h4>
-      <a href="#">Historias Latam</a>
-      <a href="#">Prensa</a>
-      <a href="#">Carreras</a>
-      <a href="#">Proveedores</a>
-      <a href="#">Plantas</a>
-    </div>
+  <div class="footer-brand">
+    <svg width="20" height="20" viewBox="0 0 46 46" fill="none">
+      <polygon points="23,2.5 41,12.5 41,33.5 23,43.5 5,33.5 5,12.5" fill="none" stroke="#1a56db" stroke-width="1.2"/>
+      <circle cx="23" cy="23" r="4" fill="#00d4ff"/>
+      <line x1="23" y1="23" x2="23" y2="9"  stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+      <line x1="23" y1="23" x2="36" y2="30" stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+      <line x1="23" y1="23" x2="10" y2="30" stroke="#00d4ff" stroke-width=".7" opacity=".5"/>
+    </svg>
+    COLLABMCR TECHNOLOGY CORPORATION
   </div>
-  <div class="footer-bottom">
-    <span>© HOLCIM 2026</span>
-    <div class="footer-bottom-links">
-      <a href="#">Mapa del Sitio</a>
-      <a href="#">Contacto</a>
-      <a href="#">Aviso legal</a>
-      <a href="#">Cookie Policy</a>
-    </div>
-  </div>
+  <span class="footer-copy">© <span id="yr"></span> · Powered by Cisco Webex SDK</span>
 </footer>
 
-
-
-<!-- CLICK-TO-CALL — esquina inferior derecha -->
-<div class="c2c-fab" id="c2cFab">
-  <span class="c2c-tooltip">Servicio al Cliente Holcim</span>
-  <button class="c2c-btn" onclick="toggleC2C()">
-    <div class="c2c-ring"></div>
-    <i class="fa fa-headset"></i>
-  </button>
-</div>
-
-<div class="c2c-panel" id="c2cPanel">
-  <div class="c2c-hdr">
-    <div class="c2c-hdr-l">
-      <div class="c2c-hdr-av"><i class="fa fa-headset"></i></div>
-      <div>
-        <div class="c2c-hdr-title">Servicio al Cliente Holcim</div>
-        <div class="c2c-hdr-sub">Servicio técnico y comercial</div>
-      </div>
+<!-- TOKEN MODAL -->
+<div class="modal-overlay" id="tokenModal">
+  <div class="modal">
+    <div class="m-eye">// OAuth Configuration</div>
+    <h3>TOKEN OAUTH</h3>
+    <p>Ingresa tus credenciales Webex. El sistema renovará el token automáticamente antes de que expire.</p>
+    <div class="tok-box" id="tokenBox" style="display:none;"><strong>● TOKEN ACTIVO</strong><span id="tokenExpText">—</span></div>
+    <label class="f-label">Access Token *</label>
+    <input class="m-input" type="text" id="atInput" placeholder="eyJhbGciOiJSUzI1NiJ9..."/>
+    <div class="m-sep">OAuth Refresh — activa renovación automática</div>
+    <label class="f-label">Refresh Token</label>
+    <input class="m-input" type="text" id="rtInput" placeholder="Refresh token de tu integración Webex"/>
+    <label class="f-label">Client ID</label>
+    <input class="m-input" type="text" id="ciInput" placeholder="Client ID"/>
+    <label class="f-label">Client Secret</label>
+    <input class="m-input" type="password" id="csInput" placeholder="Client Secret"/>
+    <div class="modal-actions">
+      <button class="m-cancel" onclick="closeModal()">Cancelar</button>
+      <button class="m-confirm" onclick="applyToken()"><i class="fa fa-bolt" style="margin-right:6px;"></i>Guardar y Conectar</button>
     </div>
-    <button class="c2c-close" onclick="toggleC2C()"><i class="fa fa-times"></i></button>
-  </div>
-  <div class="c2c-sbar">
-    <span class="c2c-slabel">Estado del agente</span>
-    <div class="c2c-spill" id="statusPill"><div class="c2c-sdot"></div><span id="statusText">OFFLINE</span></div>
-  </div>
-  <div class="c2c-body">
-    <div class="c2c-agent">
-      <div class="c2c-av"><i class="fa fa-user-tie"></i></div>
-      <div class="c2c-name">Asesoría Comercial</div>
-      <div class="c2c-role">Holcim Colombia · Servicio al Cliente</div>
-      <div class="c2c-badge"><span></span>Disponible ahora</div>
+    <div style="margin-top:14px;text-align:center;">
+      <button id="btnClear" onclick="clearCredentials();closeModal();" style="display:none;background:none;border:none;font-family:var(--font-mono);font-size:10px;letter-spacing:1px;color:var(--red);cursor:pointer;text-transform:uppercase;opacity:.7;">
+        <i class="fa fa-trash" style="margin-right:5px;"></i>Borrar credenciales guardadas
+      </button>
     </div>
-    <input type="tel" id="dialInput" style="display:none;"/>
-    <button class="c2c-cbtn" id="btnCall" onclick="placeCall()" disabled>
-      <i class="fa fa-phone"></i> Llamar ahora — es gratis
-    </button>
-    <button class="c2c-mbtn" id="btnMute" onclick="toggleMute()" disabled>
-      <i class="fa fa-microphone" id="muteIcon"></i>
-      <span id="muteText">Silenciar</span>
-    </button>
-    <button class="c2c-hbtn" id="btnHangup" onclick="hangupCall()" disabled>
-      <i class="fa fa-phone-slash"></i> Finalizar llamada
-    </button>
-    <div class="c2c-log" id="callLog"><p class="l-muted">» Conectando con Holcim Colombia...</p></div>
-    <div class="c2c-foot"><i class="fa fa-lock"></i> Llamada segura y encriptada</div>
-    <div class="c2c-powered">Powered by <strong>Cisco Webex Calling</strong></div>
+    <div style="margin-top:10px;padding:10px 14px;background:rgba(0,255,163,.04);border:1px solid rgba(0,255,163,.12);border-radius:8px;font-family:var(--font-mono);font-size:9.5px;color:var(--muted2);text-align:center;letter-spacing:.5px;">
+      🔒 Los datos se guardan solo en este navegador. Nadie más puede verlos.
+    </div>
   </div>
 </div>
 
-<!-- ── Webex Calling SDK — Click to Call ──────────────── -->
-<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/webex.min.js"></script>
-<script data-cfasync="false" src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
-<script data-cfasync="false" src="js/app.js"></script>
-
-<!-- SCRIPTS -->
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://unpkg.com/webex/umd/webex.min.js"></script>
+<script src="https://unpkg.com/webex@3.5.0-next.25/umd/calling.min.js"></script>
+<script src="js/app.js"></script>
 <script>
-// ── CALL C2C Panel ─────────────────────────────────────
+// CURSOR
+const cursor=document.getElementById('cursor'),ring=document.getElementById('cursorRing');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cursor.style.left=mx+'px';cursor.style.top=my+'px';});
+(function ar(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(ar);})();
+document.querySelectorAll('a,button,.prod-card,.cc').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cursor.style.width='16px';cursor.style.height='16px';ring.style.width='52px';ring.style.height='52px';});
+  el.addEventListener('mouseleave',()=>{cursor.style.width='10px';cursor.style.height='10px';ring.style.width='36px';ring.style.height='36px';});
+});
 
-// C2C Panel
-let panelOpen=false;
-function toggleC2C(){
-  panelOpen=!panelOpen;
-  document.getElementById('c2cPanel').classList.toggle('open',panelOpen);
-  document.getElementById('c2cFab').style.display=panelOpen?'none':'flex';
+// PARTICLES
+const cv=document.getElementById('heroCanvas'),cx=cv.getContext('2d');
+let W,H,pts=[];
+function rs(){W=cv.width=cv.offsetWidth;H=cv.height=cv.offsetHeight;}
+rs();window.addEventListener('resize',()=>{rs();ip();});
+function ip(){pts=[];const n=Math.floor(W*H/12000);for(let i=0;i<n;i++)pts.push({x:Math.random()*W,y:Math.random()*H,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,r:Math.random()*1.5+.4,a:Math.random()*.6+.1});}
+ip();
+function dp(){
+  cx.clearRect(0,0,W,H);
+  for(let p of pts){p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;cx.beginPath();cx.arc(p.x,p.y,p.r,0,Math.PI*2);cx.fillStyle=`rgba(0,212,255,${p.a})`;cx.fill();}
+  for(let i=0;i<pts.length;i++)for(let j=i+1;j<pts.length;j++){const dx=pts[i].x-pts[j].x,dy=pts[i].y-pts[j].y,d=Math.sqrt(dx*dx+dy*dy);if(d<110){cx.beginPath();cx.moveTo(pts[i].x,pts[i].y);cx.lineTo(pts[j].x,pts[j].y);cx.strokeStyle=`rgba(0,212,255,${.14*(1-d/110)})`;cx.lineWidth=.6;cx.stroke();}}
+  requestAnimationFrame(dp);
 }
+dp();
+
+// SCROLL REVEAL
+const obs=new IntersectionObserver(e=>e.forEach(i=>{if(i.isIntersecting)i.target.classList.add('visible');}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// NAV ACTIVE
+window.addEventListener('scroll',()=>{
+  let cur='';document.querySelectorAll('section[id]').forEach(s=>{if(window.scrollY>=s.offsetTop-80)cur=s.id;});
+  document.querySelectorAll('.nav a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+cur));
+});
+
+document.getElementById('yr').textContent=new Date().getFullYear();
 
 // STATE
-const S={webex:null,calling:null,line:null,call:null,localStream:null};
+const S={at:null,rt:null,ci:null,cs:null,expiry:null,timer:null,webex:null,calling:null,line:null,call:null,localStream:null};
 
 function log(msg,t='muted'){
   const el=document.getElementById('callLog'),p=document.createElement('p');
@@ -510,120 +497,290 @@ function log(msg,t='muted'){
   p.textContent='['+new Date().toLocaleTimeString('es',{hour12:false})+'] '+msg;
   el.appendChild(p);el.scrollTop=el.scrollHeight;
 }
-
 function setStatus(s){
-  const pill=document.getElementById('statusPill');
-  const txt=document.getElementById('statusText');
-  pill.className='c2c-spill'+(s==='registered'?' online':s==='connecting'?' connecting':'');
-  const map={registered:'ONLINE',connecting:'CONECTANDO...',offline:'OFFLINE'};
-  txt.textContent=map[s]||s.toUpperCase();
+  const pills=[document.getElementById('statusPill'),document.getElementById('callStatusPill')];
+  const texts=[document.getElementById('statusText'),document.getElementById('callStatusText')];
+  const map={registered:'ONLINE',connecting:'SYNC...',offline:'OFFLINE'};
+  pills.forEach(p=>p.className='status-pill '+s);
+  texts.forEach(t=>t.textContent=map[s]||s.toUpperCase());
 }
-
 function setBtns(c,h){
   document.getElementById('btnCall').disabled=!c;
   document.getElementById('btnHangup').disabled=!h;
   document.getElementById('btnMute').disabled=!h;
-  if(!h)setMuteUI(false);
+  // Al colgar, resetear mute
+  if(!h){ setMuteUI(false); }
 }
 
-let isMuted=false;
+let isMuted = false;
 function setMuteUI(muted){
-  isMuted=muted;
-  document.getElementById('muteIcon').className='fa fa-microphone'+(muted?'-slash':'');
-  document.getElementById('muteText').textContent=muted?'Activar mic':'Silenciar';
-  document.getElementById('btnMute').classList.toggle('muted',muted);
+  isMuted = muted;
+  const icon = document.getElementById('muteIcon');
+  const text = document.getElementById('muteText');
+  const btn  = document.getElementById('btnMute');
+  if(muted){
+    icon.className = 'fa fa-microphone-slash';
+    text.textContent = 'Activar mic';
+    btn.style.background = 'rgba(255,59,107,.15)';
+    btn.style.color = 'var(--red)';
+    btn.style.borderColor = 'rgba(255,59,107,.4)';
+  } else {
+    icon.className = 'fa fa-microphone';
+    text.textContent = 'Silenciar';
+    btn.style.background = 'rgba(255,255,255,.06)';
+    btn.style.color = 'var(--muted2)';
+    btn.style.borderColor = 'var(--border2)';
+  }
 }
 
 function toggleMute(){
-  if(!S.call){log('Sin llamada activa.','err');return;}
-  const enable=isMuted; // si estaba muted, enable=true (unmute); si no, enable=false (mute)
-  let ok=false;
+  if(!S.call){ log('Sin llamada activa.','err'); return; }
+
+  const enable = isMuted; // si estaba muted, ahora queremos enable=true (unmute)
+
+  // ── Método principal: controlar el track de audio directamente ──
+  // Funciona con cualquier versión del SDK porque operamos sobre el
+  // MediaStreamTrack nativo del navegador, no sobre APIs del SDK.
+  let muted_ok = false;
+
   if(S.localStream){
-    const ms=S.localStream.outputStream||S.localStream.stream||S.localStream;
-    if(ms&&typeof ms.getAudioTracks==='function'){
-      ms.getAudioTracks().forEach(t=>{t.enabled=enable;});
-      ok=true;
+    // Caso A: el stream tiene outputStream (LocalMicrophoneStream del SDK)
+    const ms = S.localStream.outputStream || S.localStream.stream || S.localStream;
+    if(ms && typeof ms.getAudioTracks === 'function'){
+      const tracks = ms.getAudioTracks();
+      if(tracks.length > 0){
+        tracks.forEach(t => { t.enabled = enable; });
+        muted_ok = true;
+      }
     }
-    if(!ok&&typeof S.localStream.setMuted==='function'){
+    // Caso B: setMuted nativo del SDK
+    if(!muted_ok && typeof S.localStream.setMuted === 'function'){
       S.localStream.setMuted(!enable);
-      ok=true;
+      muted_ok = true;
     }
   }
-  if(!ok){
-    navigator.mediaDevices.getUserMedia({audio:true}).then(stream=>{
-      stream.getAudioTracks().forEach(t=>{t.enabled=enable;});
+
+  // ── Fallback: buscar todos los tracks activos del navegador ──
+  if(!muted_ok){
+    navigator.mediaDevices.getUserMedia({audio:true}).then(stream => {
+      stream.getAudioTracks().forEach(t => { t.enabled = enable; });
     }).catch(()=>{});
   }
-  if(enable){setMuteUI(false);log('Micrófono activado.','ok');}
-  else{setMuteUI(true);log('Llamada silenciada.','muted');}
+
+  // Actualizar UI
+  if(enable){
+    setMuteUI(false);
+    log('Micrófono activado.','ok');
+  } else {
+    setMuteUI(true);
+    log('Llamada silenciada.','muted');
+  }
+}
+
+async function doRefresh(){
+  if(!S.rt||!S.ci||!S.cs){log('Sin credenciales OAuth para auto-renovar.','err');return;}
+  log('Renovando Access Token...','info');
+  try{
+    const r=await fetch('https://webexapis.com/v1/access_token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({grant_type:'refresh_token',refresh_token:S.rt,client_id:S.ci,client_secret:S.cs})});
+    if(!r.ok)throw new Error('HTTP '+r.status);
+    const d=await r.json();
+    S.at=d.access_token;S.rt=d.refresh_token||S.rt;S.expiry=Date.now()+(d.expires_in-120)*1000;
+    if(S.webex)S.webex.credentials.supertoken.value=S.at;
+    log('Token renovado correctamente.','ok');scheduleR();updateTB();
+  }catch(e){log('Error renovando token: '+e.message,'err');}
+}
+function scheduleR(){
+  if(S.timer)clearTimeout(S.timer);
+  if(!S.expiry)return;
+  const ms=S.expiry-Date.now();
+  if(ms<=0){doRefresh();return;}
+  log('Proximo refresh en ~'+Math.round(ms/60000)+' min.','muted');
+  S.timer=setTimeout(doRefresh,ms);
+}
+function updateTB(){
+  const b=document.getElementById('tokenBox'),t=document.getElementById('tokenExpText');
+  if(S.expiry){b.style.display='block';t.textContent='Expira en: ~'+Math.round((S.expiry-Date.now())/60000)+' min';}
 }
 
 async function initWebex(){
   setStatus('connecting');
-  log('Conectando con Holcim Colombia...','info');
+  log('Inicializando con Service App...','info');
   try{
-    const webexConfig=await getWebexConfig();
-    const callingConfig=await getCallingConfig();
-    log('Sistema listo. Registrando...','ok');
-    const calling=await Calling.init({webexConfig,callingConfig});
-    calling.on('ready',()=>{
-      log('SDK listo. Registrando línea...','info');
-      calling.register().then(()=>{
-        const lines=Object.values(calling.callingClient.getLines());
-        if(!lines||lines.length===0){log('Sin líneas disponibles.','err');setStatus('offline');return;}
-        S.line=lines[0];
-        S.line.on('registered',()=>{
-          log('✅ Listo. Haga clic en Llamar.','ok');
-          setStatus('registered');setBtns(true,false);
+    const webexConfig   = await getWebexConfig();
+    const callingConfig = await getCallingConfig();
+    log('Tokens OK. Iniciando SDK...','ok');
+
+    const calling = await Calling.init({ webexConfig, callingConfig });
+
+    calling.on('ready', () => {
+      log('SDK ready. Registrando...','info');
+      calling.register().then(() => {
+        const callingClient = calling.callingClient;
+        const lines = Object.values(callingClient.getLines());
+        if(!lines || lines.length === 0){
+          log('No se encontraron líneas.','err');
+          setStatus('offline');
+          return;
+        }
+        S.line = lines[0];
+
+        S.line.on('registered', () => {
+          log('✅ Línea registrada. Listo para llamar.','ok');
+          setStatus('registered');
+          setBtns(true, false);
         });
-        S.line.on('line:incoming_call',call=>{
-          S.call=call;log('📞 Llamada entrante.','info');setBtns(false,true);
-          call.on('disconnect',onEnd);
-          call.on('remote_media',track=>{let a=document.getElementById('remote-audio');if(!a){a=document.createElement('audio');a.id='remote-audio';a.autoplay=true;document.body.appendChild(a);}a.srcObject=new MediaStream([track]);});
+
+        S.line.on('line:incoming_call', (call) => {
+          S.call = call;
+          log('📞 Llamada entrante.','info');
+          setBtns(false, true);
+          call.on('disconnect', onEnd);
+          call.on('remote_media', (track) => {
+            let audio = document.getElementById('remote-audio');
+            if(!audio){ audio=document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
+            audio.srcObject = new MediaStream([track]);
+          });
         });
+
         S.line.register();
-      }).catch(e=>{log('Error: '+e.message,'err');setStatus('offline');});
+      }).catch(e => {
+        log('Error register: '+e.message,'err');
+        setStatus('offline');
+      });
     });
-  }catch(e){log('Error de conexión: '+e.message,'err');setStatus('offline');}
+
+  }catch(e){
+    log('Error init: '+e.message,'err');
+    setStatus('offline');
+  }
 }
 
 async function placeCall(){
-  if(!S.line){log('Línea no registrada.','err');return;}
-  if(S.call){log('Llamada ya activa.','err');return;}
+  if(!S.line){ log('Línea no registrada aún.','err'); return; }
+  // Evitar llamadas duplicadas
+  if(S.call){ log('Ya hay una llamada activa.','err'); return; }
   log('Solicitando micrófono...','info');
   try{
-    const localAudioStream=await Calling.createMicrophoneStream({audio:true});
-    S.localStream=localAudioStream;
-    log('Micrófono OK. Llamando a soporte...','info');
-    S.call=S.line.makeCall();
-    S.call.on('progress',()=>log('Llamando...','info'));
-    S.call.on('connect',()=>log('✅ Llamada conectada.','ok'));
-    S.call.on('established',()=>log('Audio establecido.','ok'));
-    S.call.on('disconnect',onEnd);
-    S.call.on('remote_media',track=>{let a=document.getElementById('remote-audio');if(!a){a=document.createElement('audio');a.id='remote-audio';a.autoplay=true;document.body.appendChild(a);}a.srcObject=new MediaStream([track]);});
+    const localAudioStream = await Calling.createMicrophoneStream({ audio: true });
+    S.localStream = localAudioStream;
+    log('Micrófono OK. Iniciando llamada al 5102...','info');
+
+    S.call = S.line.makeCall();
+
+    S.call.on('progress',    () => log('Marcando...','info'));
+    S.call.on('connect',     () => log('✅ Llamada conectada.','ok'));
+    S.call.on('established', () => log('Media establecida.','ok'));
+    S.call.on('disconnect',  onEnd);
+    S.call.on('remote_media', (track) => {
+      let audio = document.getElementById('remote-audio');
+      if(!audio){ audio=document.createElement('audio'); audio.id='remote-audio'; audio.autoplay=true; document.body.appendChild(audio); }
+      audio.srcObject = new MediaStream([track]);
+    });
+
     await S.call.dial(localAudioStream);
-    setBtns(false,true);
+    setBtns(false, true);
     log('Llamada en progreso...','info');
-  }catch(e){log('Error: '+e.message,'err');S.call=null;}
+  }
+  catch(e){ log('Error al llamar: '+e.message,'err'); S.call=null; }
 }
 
 function hangupCall(){
-  if(!S.call)return;
-  log('Finalizando llamada...','muted');
+  if(!S.call){ log('No hay llamada activa.','muted'); return; }
+  log('Terminando llamada...','muted');
   try{
-    if(typeof S.call.end==='function')S.call.end();
-    else if(typeof S.call.disconnect==='function')S.call.disconnect();
-  }catch(e){}
-  setTimeout(()=>{if(S.call){S.call=null;setBtns(true,false);log('Llamada finalizada. ¡Gracias!','muted');}},1500);
+    // Intentar end() y disconnect() — el SDK usa uno u otro según versión
+    if(typeof S.call.end === 'function')        S.call.end();
+    else if(typeof S.call.disconnect === 'function') S.call.disconnect();
+    else if(typeof S.call.hangup === 'function')     S.call.hangup();
+  }catch(e){ log('Error al colgar: '+e.message,'err'); }
+  // Forzar limpieza por si el evento disconnect no dispara
+  setTimeout(() => { if(S.call){ S.call=null; setBtns(true,false); log('Llamada finalizada.','muted'); } }, 1500);
 }
 
-function onEnd(){S.call=null;S.localStream=null;setBtns(true,false);log('Llamada finalizada. ¡Gracias!','muted');}
+function onEnd(){
+  S.call = null;
+  S.localStream = null;
+  setBtns(true, false);
+  log('Llamada finalizada.','muted');
+}
 
-window.addEventListener('DOMContentLoaded',async()=>{ await initWebex(); });
+// ═══════════════════════════════════════════════════
+//  LOCAL STORAGE — guardar / cargar / borrar tokens
+// ═══════════════════════════════════════════════════
+const LS = 'collabmcr_v1';
 
+function saveCredentials(){
+  try{
+    localStorage.setItem(LS, JSON.stringify({at:S.at,rt:S.rt,ci:S.ci,cs:S.cs,expiry:S.expiry}));
+    log('💾 Credenciales guardadas en este navegador.','ok');
+  }catch(e){ log('No se pudo guardar en localStorage.','err'); }
+}
 
+function loadCredentials(){
+  try{
+    const raw=localStorage.getItem(LS);
+    if(!raw)return false;
+    const d=JSON.parse(raw);
+    if(!d.at)return false;
+    S.at=d.at; S.rt=d.rt||null; S.ci=d.ci||null; S.cs=d.cs||null; S.expiry=d.expiry||null;
+    // Rellenar campos del modal con los datos guardados
+    document.getElementById('atInput').value=S.at;
+    document.getElementById('rtInput').value=S.rt||'';
+    document.getElementById('ciInput').value=S.ci||'';
+    document.getElementById('csInput').value=S.cs||'';
+    log('📂 Credenciales cargadas automáticamente desde este navegador.','ok');
+    return true;
+  }catch(e){ return false; }
+}
+
+function clearCredentials(){
+  localStorage.removeItem(LS);
+  S.at=null;S.rt=null;S.ci=null;S.cs=null;S.expiry=null;
+  if(S.timer)clearTimeout(S.timer);
+  document.getElementById('atInput').value='';
+  document.getElementById('rtInput').value='';
+  document.getElementById('ciInput').value='';
+  document.getElementById('csInput').value='';
+  setStatus('offline');
+  setBtns(false,false);
+  updateTB();
+  log('🗑️ Credenciales eliminadas del navegador.','muted');
+}
+
+// Actualizar también el botón de borrar en el modal
+function updateModalSavedBadge(){
+  const raw=localStorage.getItem(LS);
+  const btn=document.getElementById('btnClear');
+  if(btn) btn.style.display = raw ? 'block' : 'none';
+}
+
+function openModal(){
+  document.getElementById('tokenModal').classList.add('open');
+  updateTB();
+  updateModalSavedBadge();
+}
+function closeModal(){ document.getElementById('tokenModal').classList.remove('open'); }
+
+async function applyToken(){
+  S.at=document.getElementById('atInput').value.trim();
+  S.rt=document.getElementById('rtInput').value.trim();
+  S.ci=document.getElementById('ciInput').value.trim();
+  S.cs=document.getElementById('csInput').value.trim();
+  if(!S.at){alert('El Access Token es requerido.');return;}
+  S.expiry=Date.now()+50*60*1000;
+  saveCredentials();
+  scheduleR();
+  closeModal();
+  await initWebex();
+}
+
+window.addEventListener('DOMContentLoaded', async ()=>{
+  log('🔄 Conectando automáticamente...','info');
+  await initWebex();
+});
 </script>
-<!-- ── Click to Chat — IMIconnect Widget oficial ─────── -->
+
+<!-- ── Click to Chat — IMIconnect Widget ─────────────────── -->
 <div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
 <script>var i={t:function(){try{var e=document.getElementById("divicw"),t=document.createElement("script");t.src="https://media.imi.chat/widget/js/imichatinit.js?t="+new Date().toISOString(),e.insertAdjacentElement("afterend",t),t.addEventListener("load",function(){console.log(new Date().toISOString(),"Livechat script loaded successfully!")}),t.addEventListener("error",function(){console.log(new Date().toISOString(),"Error loading Livechat script");i.o(e)})}catch(e){console.error(e)}},o:function(e){e.insertAdjacentHTML("afterend",'<iframe id="tls_al_frm" frameborder="0" style="overflow:hidden;height:208px;width:394px;position:fixed;display:block;right:48px;bottom:12px;z-index:99999;display:none;"></iframe>');var t=document.getElementById("tls_al_frm"),n=t.contentWindow,d=n.document;d.open();d.write("<!doctype html><html><head><meta charset='utf-8'><title>Untitled Document</title><style>body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#99a0b0;font-size:14px}.popover__content{background-color:#fbfbfe;padding:1.5rem;border-radius:5px;width:300px;box-shadow:0 2px 5px 0 rgba(0,0,0,0.26);position:relative}.popover__message{font-weight:600;color:#56627c;font-size:16px}.pull-left{float:left}.clearfix{clear:both}.hdr-txt{width:218px;margin-top:3px}.para-txt a{text-decoration:none;color:#005cde}.close-btn{position:absolute;right:15px;top:15px}.close-btn a{text-decoration:none;font-weight:400;color:#56627c;font-size:16px}</style></head><body><div class='popover__content'><div class='close-btn'><a href='#' onclick='closeTLSAlert()'>X</a></div><div class='popover__message'><div class='pull-left hdr-txt'>This browser version is not supported on LiveChat.</div></div><div class='clearfix'></div><p class='para-txt'>Please update your browser to the latest version and re-open the website to access the widget.</p></div><script>function closeTLSAlert(){window.parent.postMessage({key:'close_tls_alert',value:'close_tls_alert',action:'close_tls_alert'},'*');}<\/script></body></html>");d.close();t.style.display='block';window.addEventListener('message',function(e){'close_tls_alert'===e.data.action&&i.s()})},s:function(){var e=document.getElementById('tls_al_frm');e&&e.remove()}};i.t();</script>
 
