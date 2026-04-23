@@ -81,6 +81,13 @@
             }
           ],
           "actualizadoEn": "2026-04-23T23:50:48.932Z"
+        },
+        {
+          "id": "moc53gioyiew8d8r7tj",
+          "nombre": "Desconexión del servicio de Video",
+          "estado": "abierto",
+          "creadoEn": "2026-04-23T23:55:39.744Z",
+          "actualizaciones": []
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
