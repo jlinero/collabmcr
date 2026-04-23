@@ -47,6 +47,32 @@
       "creadoEn": "2026-04-22T19:22:00.305Z",
       "actualizadoEn": "2026-04-22T19:49:12.467Z",
       "updatedAt": "2026-04-22T21:12:52.391Z"
+    },
+    {
+      "id": "mobnzjnv6b8wbvfolwh",
+      "nombre": "Jose",
+      "apellido": "Linero",
+      "cargo": "CEO",
+      "email": "jlinero@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+576023981001",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "6052",
+      "ciudad": "",
+      "etapaVida": "nuevo",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-23T15:56:43.723Z",
+      "actualizadoEn": "2026-04-23T15:56:43.723Z"
     }
   ]
 }
