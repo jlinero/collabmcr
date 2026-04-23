@@ -68,13 +68,23 @@
         {
           "id": "moc4wrtbt2bunw09pki",
           "nombre": "Problemas de QoS en WxC",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-23T23:50:27.791Z",
-          "actualizaciones": []
+          "actualizaciones": [
+            {
+              "id": "moc4x84kp1q4e1zkmgi",
+              "nota": "Se esta revisando el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-23T23:50:48.932Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            }
+          ],
+          "actualizadoEn": "2026-04-23T23:50:48.932Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-23T22:28:02.507Z",
+      "actualizadoEn": "2026-04-23T23:50:48.932Z",
       "updatedAt": "2026-04-23T16:53:07.683Z"
     },
     {
