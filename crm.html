@@ -153,6 +153,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .act-ic.email{background:rgba(129,140,248,.1);color:var(--purple);}
 .act-ic.tarea{background:rgba(0,255,163,.1);color:var(--green);}
 .act-ic.reunion{background:rgba(255,59,107,.1);color:var(--red);}
+.act-ic.whatsapp{background:rgba(37,211,102,.1);color:#25d366;}
+.act-ic.webchat{background:rgba(0,212,255,.08);color:#00b8d9;}
+.act-ic.messenger{background:rgba(0,120,255,.1);color:#0078ff;}
 .act-body{flex:1;min-width:0;}
 .act-title-t{font-size:13px;font-weight:600;}
 .act-desc{font-size:12px;color:var(--muted2);margin-top:2px;line-height:1.5;}
@@ -457,6 +460,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
           <option value="email">Email</option>
           <option value="tarea">Tarea</option>
           <option value="reunion">Reunion</option>
+          <option value="whatsapp">WhatsApp</option>
+          <option value="webchat">WebChat</option>
+          <option value="messenger">Facebook Messenger</option>
         </select>
       </div></div>
       <div class="f-row full"><div class="f-grp"><label class="f-lbl">Descripcion</label>
@@ -650,8 +656,8 @@ function renderList(){
 function selectC(id){activeId=id;const c=(db.contacts||[]).find(x=>x.id===id);if(!c)return;renderList();renderDetail(c);}
 
 // ICONS / LABELS
-function iconAct(t){return{llamada:'fa-phone',nota:'fa-sticky-note',email:'fa-envelope',tarea:'fa-check-square',reunion:'fa-calendar-alt'}[t]||'fa-circle';}
-function labelAct(t){return{llamada:'Llamada registrada',nota:'Nota',email:'Email',tarea:'Tarea',reunion:'Reunion'}[t]||t;}
+function iconAct(t){return{llamada:'fa-phone',nota:'fa-sticky-note',email:'fa-envelope',tarea:'fa-check-square',reunion:'fa-calendar-alt',whatsapp:'fa-whatsapp',webchat:'fa-comments',messenger:'fa-facebook-messenger'}[t]||'fa-circle';}
+function labelAct(t){return{llamada:'Llamada registrada',nota:'Nota',email:'Email',tarea:'Tarea',reunion:'Reunion',whatsapp:'WhatsApp',webchat:'WebChat',messenger:'Facebook Messenger'}[t]||t;}
 
 // RENDER DETAIL
 function renderDetail(c){
@@ -695,6 +701,9 @@ function renderDetail(c){
         <div class="act-shortcut" onclick="quickAct('llamada')"><i class="fa fa-phone"></i>Llamada</div>
         <div class="act-shortcut" onclick="quickAct('tarea')"><i class="fa fa-check-square"></i>Tarea</div>
         <div class="act-shortcut" onclick="quickAct('reunion')"><i class="fa fa-calendar"></i>Reunion</div>
+        <div class="act-shortcut" onclick="quickAct('whatsapp')" style="color:#25d366;"><i class="fab fa-whatsapp"></i>WhatsApp</div>
+        <div class="act-shortcut" onclick="quickAct('webchat')" style="color:#00b8d9;"><i class="fa fa-comments"></i>WebChat</div>
+        <div class="act-shortcut" onclick="quickAct('messenger')" style="color:#0078ff;"><i class="fab fa-facebook-messenger"></i>Messenger</div>
       </div>
     </div>
     <div class="d-right">
