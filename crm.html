@@ -241,6 +241,42 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 ::-webkit-scrollbar{width:4px;height:4px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:4px;}
+/* ── CALENDAR ───────────────────────────────────── */
+#calView{flex:1;display:none;flex-direction:column;overflow:hidden;background:var(--bg);}
+#calView.show{display:flex;}
+.cal-header{display:flex;align-items:center;gap:12px;padding:14px 24px;background:var(--bg2);border-bottom:1px solid var(--border);flex-shrink:0;}
+.cal-title{font-family:var(--font-display);font-size:22px;letter-spacing:1.5px;color:#fff;flex:1;}
+.cal-nav-btn{background:var(--surface);border:1px solid var(--border);border-radius:8px;color:var(--muted2);cursor:none;padding:6px 14px;font-family:var(--font-mono);font-size:11px;transition:all .18s;}
+.cal-nav-btn:hover{border-color:var(--cyan);color:var(--cyan);background:var(--cyan-dim);}
+.cal-today-btn{background:var(--cyan-dim);border:1px solid rgba(0,212,255,.3);color:var(--cyan);border-radius:8px;cursor:none;padding:6px 14px;font-family:var(--font-mono);font-size:11px;}
+.cal-wrap{flex:1;overflow:auto;display:flex;flex-direction:column;}
+.cal-wrap::-webkit-scrollbar{width:4px;height:4px;}.cal-wrap::-webkit-scrollbar-thumb{background:var(--border2);}
+.cal-grid{display:grid;grid-template-columns:56px repeat(7,1fr);min-width:700px;}
+.cal-corner{background:var(--bg2);border-right:1px solid var(--border);border-bottom:1px solid var(--border);position:sticky;top:0;left:0;z-index:3;}
+.cal-day-hdr-cell{background:var(--bg2);border-bottom:1px solid var(--border);border-right:1px solid var(--border);padding:10px 6px;text-align:center;position:sticky;top:0;z-index:2;}
+.cal-day-hdr-cell.today{background:var(--cyan-dim);}
+.cal-day-hdr-cell .day-name{display:block;font-family:var(--font-mono);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted2);}
+.cal-day-hdr-cell .day-num{display:block;font-family:var(--font-display);font-size:20px;color:#fff;margin-top:2px;}
+.cal-day-hdr-cell.today .day-num{color:var(--cyan);}
+.cal-time-lbl{background:var(--bg2);border-right:1px solid var(--border);border-bottom:1px solid rgba(26,45,80,.4);padding:0 6px;font-family:var(--font-mono);font-size:9px;color:var(--muted);text-align:right;display:flex;align-items:flex-start;justify-content:flex-end;padding-top:4px;position:sticky;left:0;z-index:1;min-height:32px;}
+.cal-time-lbl.hour-start{border-bottom:1px solid var(--border);}
+.cal-slot{border-right:1px solid var(--border);border-bottom:1px solid rgba(26,45,80,.3);min-height:32px;cursor:none;transition:background .12s;position:relative;padding:2px;}
+.cal-slot.hour-start{border-bottom:1px solid var(--border);}
+.cal-slot.avail:hover{background:rgba(0,212,255,.06);}
+.cal-slot.past{background:rgba(0,0,0,.15);cursor:default;}
+.cal-slot.today-col{background:rgba(0,212,255,.02);}
+.cal-appt{border-radius:5px;padding:3px 6px;margin-bottom:1px;cursor:none;border-left:3px solid;transition:opacity .15s;}
+.cal-appt:hover{opacity:.85;}
+.cal-appt.confirmada{background:rgba(0,212,255,.15);border-color:var(--cyan);color:var(--cyan);}
+.cal-appt.reprogramada{background:rgba(255,170,0,.15);border-color:var(--amber);color:var(--amber);}
+.cal-appt.cancelada{background:rgba(255,59,107,.1);border-color:var(--red);color:var(--red);text-decoration:line-through;opacity:.6;}
+.cal-appt.pasada{background:rgba(100,100,120,.15);border-color:var(--muted);color:var(--muted);}
+.cal-appt-title{font-size:10px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.cal-appt-time{font-family:var(--font-mono);font-size:8px;opacity:.8;margin-top:1px;}
+/* appt status legend */
+.cal-legend{display:flex;gap:16px;align-items:center;padding:0 24px;}
+.leg-item{display:flex;align-items:center;gap:5px;font-family:var(--font-mono);font-size:9px;color:var(--muted2);}
+.leg-dot{width:8px;height:8px;border-radius:50%;}
 </style>
 </head>
 <body>
@@ -285,8 +321,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
   </a>
   <nav class="tb-nav">
     <a href="index.html"><i class="fa fa-arrow-left" style="font-size:10px;margin-right:4px;"></i>Inicio</a>
-    <a href="#" class="active">Contactos</a>
+    <a href="#" class="active" id="nav-contactos" onclick="setView('contactos');return false;">Contactos</a>
     <a href="#" onclick="return false;">Pipeline</a>
+    <a href="#" id="nav-calendario" onclick="setView('calendario');return false;"><i class="fa fa-calendar-alt" style="margin-right:5px;font-size:11px;"></i>Calendario</a>
     <a href="#" onclick="return false;">Reportes</a>
   </nav>
   <div class="topbar-right">
@@ -333,7 +370,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
     </div>
   </aside>
 
-  <div style="flex:1;display:flex;overflow:hidden;">
+  <div id="contactsView" style="flex:1;display:flex;overflow:hidden;">
     <div class="list-panel">
       <div class="lp-head">
         <h2>CONTACTOS</h2>
@@ -362,7 +399,26 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
       </div>
     </div>
   </div>
-</div>
+
+  <!-- ═══ CALENDAR VIEW ═══ -->
+  <div id="calView">
+    <div class="cal-header">
+      <button class="cal-nav-btn" onclick="calNav(-1)"><i class="fa fa-chevron-left"></i></button>
+      <button class="cal-nav-btn" onclick="calNav(1)"><i class="fa fa-chevron-right"></i></button>
+      <button class="cal-today-btn" onclick="calToday()">HOY</button>
+      <span class="cal-title" id="calTitle"></span>
+      <div class="cal-legend">
+        <div class="leg-item"><div class="leg-dot" style="background:var(--cyan);"></div>Confirmada</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--amber);"></div>Reprogramada</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--red);"></div>Cancelada</div>
+        <div class="leg-item"><div class="leg-dot" style="background:var(--muted);"></div>Pasada</div>
+      </div>
+      <button class="btn-t primary" onclick="openM('new-appt')" style="margin-left:auto;"><i class="fa fa-plus"></i>Nueva Cita</button>
+    </div>
+    <div class="cal-wrap" id="calWrap"></div>
+  </div>
+
+</div><!-- /app-body -->
 
 <!-- MODAL: GitHub PAT -->
 <div class="modal-overlay" id="modal-token">
@@ -652,6 +708,101 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
     <div class="modal-footer">
       <button class="m-cancel" onclick="closeM('ticket-detail')">Cerrar</button>
       <button class="m-ok" onclick="saveTktUpdate()"><i class="fa fa-save" style="margin-right:7px;"></i>Guardar Actualización</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: NUEVA CITA -->
+<div class="modal-overlay" id="modal-new-appt">
+  <div class="modal" style="max-width:540px;">
+    <div class="modal-head">
+      <div class="m-eye">// Agenda</div>
+      <h3>NUEVA CITA</h3>
+      <p>Agenda una cita y asóciala a un contacto.</p>
+    </div>
+    <div class="modal-body">
+      <div class="f-row full"><div class="f-grp">
+        <label class="f-lbl">Título *</label>
+        <input class="f-inp" id="appt-titulo" placeholder="Demo Webex Calling, Reunión de seguimiento..."/>
+      </div></div>
+      <div class="f-row">
+        <div class="f-grp"><label class="f-lbl">Fecha *</label>
+          <input class="f-inp" id="appt-fecha" type="date"/>
+        </div>
+        <div class="f-grp"><label class="f-lbl">Hora Inicio *</label>
+          <select class="f-sel" id="appt-hora-inicio"></select>
+        </div>
+      </div>
+      <div class="f-row">
+        <div class="f-grp"><label class="f-lbl">Duración</label>
+          <select class="f-sel" id="appt-duracion">
+            <option value="30">30 minutos</option>
+            <option value="60">1 hora</option>
+            <option value="90">1.5 horas</option>
+            <option value="120">2 horas</option>
+          </select>
+        </div>
+        <div class="f-grp"><label class="f-lbl">Estado</label>
+          <select class="f-sel" id="appt-estado">
+            <option value="confirmada">Confirmada</option>
+            <option value="reprogramada">Reprogramada</option>
+          </select>
+        </div>
+      </div>
+      <div class="f-row full"><div class="f-grp">
+        <label class="f-lbl">Contacto</label>
+        <select class="f-sel" id="appt-contacto"></select>
+      </div></div>
+      <div class="f-row full"><div class="f-grp">
+        <label class="f-lbl">Agente / Responsable</label>
+        <input class="f-inp" id="appt-agente" placeholder="Lando Norris"/>
+      </div></div>
+      <div class="f-row full"><div class="f-grp">
+        <label class="f-lbl">Notas</label>
+        <textarea class="f-area" id="appt-notas" rows="2" placeholder="Agenda, objetivos de la cita..." style="resize:vertical;"></textarea>
+      </div></div>
+      <div id="appt-conflict-warn" style="display:none;background:rgba(255,59,107,.1);border:1px solid rgba(255,59,107,.3);border-radius:8px;padding:10px 14px;font-family:var(--font-mono);font-size:11px;color:var(--red);margin-top:4px;">
+        ⚠️ Conflicto de horario — ya existe una cita en ese slot.
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="m-cancel" onclick="closeM('new-appt')">Cancelar</button>
+      <button class="m-ok" onclick="saveAppt()"><i class="fa fa-calendar-check" style="margin-right:7px;"></i>Agendar Cita</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL: DETALLE CITA -->
+<div class="modal-overlay" id="modal-appt-detail">
+  <div class="modal" style="max-width:500px;">
+    <div class="modal-head">
+      <div class="m-eye">// Detalle de cita</div>
+      <h3 id="appt-d-titulo">CITA</h3>
+      <div style="display:flex;align-items:center;gap:10px;margin-top:10px;flex-wrap:wrap;">
+        <span id="appt-d-badge" class="order-badge confirmada"><span class="sd"></span>Confirmada</span>
+        <span id="appt-d-fecha-lbl" style="font-family:var(--font-mono);font-size:10px;color:var(--muted);"></span>
+      </div>
+    </div>
+    <div class="modal-body">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:10px;overflow:hidden;margin-bottom:16px;">
+        <div style="background:var(--card2);padding:12px 16px;"><div class="i-lbl">Contacto</div><div id="appt-d-contacto" class="i-val c"></div></div>
+        <div style="background:var(--card2);padding:12px 16px;"><div class="i-lbl">Agente</div><div id="appt-d-agente" class="i-val"></div></div>
+        <div style="background:var(--card2);padding:12px 16px;"><div class="i-lbl">Fecha</div><div id="appt-d-fecha" class="i-val"></div></div>
+        <div style="background:var(--card2);padding:12px 16px;"><div class="i-lbl">Horario</div><div id="appt-d-horario" class="i-val"></div></div>
+        <div style="background:var(--card2);padding:12px 16px;grid-column:1/-1;"><div class="i-lbl">Notas</div><div id="appt-d-notas" class="i-val" style="white-space:pre-line;"></div></div>
+      </div>
+      <div id="appt-reschedule-section">
+        <div class="m-sep">Reprogramar</div>
+        <div class="f-row">
+          <div class="f-grp"><label class="f-lbl">Nueva Fecha</label><input class="f-inp" id="appt-r-fecha" type="date"/></div>
+          <div class="f-grp"><label class="f-lbl">Nueva Hora</label><select class="f-sel" id="appt-r-hora"></select></div>
+        </div>
+        <button class="btn-t" style="width:100%;justify-content:center;margin-bottom:8px;" onclick="rescheduleAppt()"><i class="fa fa-clock"></i>Confirmar Reprogramación</button>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="m-cancel" id="appt-d-cancel-btn" onclick="cancelAppt()" style="background:rgba(255,59,107,.1);color:var(--red);flex:.7;"><i class="fa fa-times" style="margin-right:6px;"></i>Cancelar Cita</button>
+      <button class="m-cancel" onclick="closeM('appt-detail')">Cerrar</button>
     </div>
   </div>
 </div>
@@ -1206,7 +1357,310 @@ function updateStats(){
   document.getElementById('st-tot').textContent=all;document.getElementById('st-op').textContent=op;document.getElementById('st-cl').textContent=cl;
 }
 
-// INIT
+// ══════════════════════════════════════════════════════
+//  VIEWS
+// ══════════════════════════════════════════════════════
+function setView(view){
+  const cv = document.getElementById('contactsView');
+  const cal = document.getElementById('calView');
+  const nc = document.getElementById('nav-contactos');
+  const ncal = document.getElementById('nav-calendario');
+  if(view==='calendario'){
+    cv.style.display='none';
+    cal.classList.add('show');
+    nc.classList.remove('active');
+    ncal.classList.add('active');
+    loadAppts();
+  } else {
+    cv.style.display='flex';
+    cal.classList.remove('show');
+    nc.classList.add('active');
+    ncal.classList.remove('active');
+  }
+}
+
+// ══════════════════════════════════════════════════════
+//  APPOINTMENTS — GitHub API
+// ══════════════════════════════════════════════════════
+const APPT_PATH = 'db/appointments.json';
+const APPT_API  = `https://api.github.com/repos/${REPO}/contents/${APPT_PATH}`;
+let appts = [];
+let apptSHA = '';
+let activeApptId = null;
+let calWeekOffset = 0;
+
+async function apptGet(){
+  const r = await fetch(APPT_API,{headers:{'Authorization':'token '+PAT,'Accept':'application/vnd.github.v3+json'}});
+  if(r.status===404) return null;
+  if(!r.ok) throw new Error('GitHub GET appointments '+r.status);
+  const data = await r.json();
+  apptSHA = data.sha;
+  return JSON.parse(decodeURIComponent(escape(atob(data.content.replace(/\n/g,'')))));
+}
+
+async function apptPut(content, message){
+  const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(content,null,2))));
+  const body = {message, content: encoded};
+  if(apptSHA) body.sha = apptSHA;
+  const r = await fetch(APPT_API,{method:'PUT',headers:{'Authorization':'token '+PAT,'Content-Type':'application/json','Accept':'application/vnd.github.v3+json'},body:JSON.stringify(body)});
+  if(!r.ok){const e=await r.json();throw new Error(e.message||'GitHub PUT appointments '+r.status);}
+  const data = await r.json();
+  apptSHA = data.content.sha;
+}
+
+async function loadAppts(){
+  if(!PAT) return;
+  try{
+    const data = await apptGet();
+    appts = (data||{appointments:[]}).appointments||[];
+    renderCal();
+  }catch(e){ console.warn('Appointments load error:',e.message); appts=[]; renderCal(); }
+}
+
+// ══════════════════════════════════════════════════════
+//  CALENDAR RENDER
+// ══════════════════════════════════════════════════════
+const HOURS_START = 8;
+const HOURS_END   = 19;
+const DAYS_ES     = ['Dom','Lun','Mar','Mié','Jue','Vie','Sáb'];
+const MONTHS_ES   = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+
+function getWeekStart(offset){
+  const today = new Date(); today.setHours(0,0,0,0);
+  const d = new Date(today);
+  d.setDate(today.getDate() - today.getDay() + (offset*7));
+  return d;
+}
+function addDays(date,n){ const d=new Date(date); d.setDate(d.getDate()+n); return d; }
+function dateStr(date){ return date.toISOString().slice(0,10); }
+function fmtSlot(h,m){ return `${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}`; }
+
+function renderCal(){
+  const wrap = document.getElementById('calWrap');
+  if(!wrap) return;
+  const weekStart = getWeekStart(calWeekOffset);
+  const today = new Date(); today.setHours(0,0,0,0);
+
+  const weekEnd = addDays(weekStart,6);
+  const titleEl = document.getElementById('calTitle');
+  if(titleEl){
+    if(weekStart.getMonth()===weekEnd.getMonth())
+      titleEl.textContent=`${MONTHS_ES[weekStart.getMonth()].toUpperCase()} ${weekStart.getFullYear()}`;
+    else
+      titleEl.textContent=`${MONTHS_ES[weekStart.getMonth()].slice(0,3).toUpperCase()} — ${MONTHS_ES[weekEnd.getMonth()].slice(0,3).toUpperCase()} ${weekEnd.getFullYear()}`;
+  }
+
+  const slots=[];
+  for(let h=HOURS_START;h<HOURS_END;h++){ slots.push({h,m:0}); slots.push({h,m:30}); }
+
+  let html='<div class="cal-grid">';
+  html+='<div class="cal-corner"></div>';
+  for(let d=0;d<7;d++){
+    const day=addDays(weekStart,d);
+    const isToday=dateStr(day)===dateStr(today);
+    html+=`<div class="cal-day-hdr-cell${isToday?' today':''}">
+      <span class="day-name">${DAYS_ES[day.getDay()]}</span>
+      <span class="day-num">${day.getDate()}</span>
+    </div>`;
+  }
+
+  slots.forEach(slot=>{
+    const lbl=slot.m===0?`${String(slot.h).padStart(2,'0')}:00`:'';
+    const isHour=slot.m===0;
+    html+=`<div class="cal-time-lbl${isHour?' hour-start':''}">${lbl}</div>`;
+    for(let d=0;d<7;d++){
+      const day=addDays(weekStart,d);
+      const ds=dateStr(day);
+      const nowMin=today.getHours()*60+today.getMinutes();
+      const slotMin=slot.h*60+slot.m;
+      const isPast=day<today||(dateStr(day)===dateStr(today)&&slotMin<nowMin);
+      const isToday=ds===dateStr(today);
+      const slotAppts=appts.filter(a=>{
+        if(a.fecha!==ds) return false;
+        const [ah,am]=a.horaInicio.split(':').map(Number);
+        return ah===slot.h&&am===slot.m;
+      });
+      const cls=['cal-slot',isPast?'past':'',isToday?'today-col':'',!isPast?'avail':'',isHour?'hour-start':''].filter(Boolean).join(' ');
+      const apptHTML=slotAppts.map(a=>{
+        const past=new Date(a.fecha+'T'+a.horaInicio)<new Date()&&a.estado!=='cancelada';
+        const sc=past?'pasada':a.estado;
+        return `<div class="cal-appt ${sc}" onclick="event.stopPropagation();openApptDetail('${a.id}')" title="${a.titulo}">
+          <div class="cal-appt-title">${a.titulo}</div>
+          <div class="cal-appt-time">${a.horaInicio}–${a.horaFin}${a.contactNombre?' · '+a.contactNombre.split(' ')[0]:''}</div>
+        </div>`;
+      }).join('');
+      html+=`<div class="${cls}" onclick="${isPast?'':'onSlotClick(\''+ds+'\',\''+fmtSlot(slot.h,slot.m)+'\')'}">${apptHTML}</div>`;
+    }
+  });
+  html+='</div>';
+  wrap.innerHTML=html;
+}
+
+function calNav(dir){ calWeekOffset+=dir; renderCal(); }
+function calToday(){ calWeekOffset=0; renderCal(); }
+
+// ══════════════════════════════════════════════════════
+//  SLOT CLICK
+// ══════════════════════════════════════════════════════
+function onSlotClick(fecha, hora){
+  const slotDate=new Date(fecha+'T'+hora);
+  if(slotDate<new Date()){ toast('No se pueden agendar citas en el pasado','err'); return; }
+  document.getElementById('appt-fecha').value=fecha;
+  populateHoraSelect('appt-hora-inicio',hora);
+  document.getElementById('appt-conflict-warn').style.display='none';
+  populateApptContactSelect();
+  openM('new-appt');
+}
+
+// ══════════════════════════════════════════════════════
+//  HELPERS
+// ══════════════════════════════════════════════════════
+function populateHoraSelect(elId, selected='08:00'){
+  const sel=document.getElementById(elId); if(!sel) return;
+  sel.innerHTML='';
+  for(let h=HOURS_START;h<HOURS_END;h++){
+    for(let m=0;m<60;m+=30){
+      const val=fmtSlot(h,m);
+      const opt=document.createElement('option');
+      opt.value=val; opt.textContent=val;
+      if(val===selected) opt.selected=true;
+      sel.appendChild(opt);
+    }
+  }
+}
+
+function populateApptContactSelect(){
+  const sel=document.getElementById('appt-contacto'); if(!sel) return;
+  sel.innerHTML='<option value="">— Sin contacto —</option>';
+  (db.contacts||[]).forEach(c=>{
+    const opt=document.createElement('option');
+    opt.value=c.id;
+    opt.textContent=`${c.nombre} ${c.apellido} — ${c.empresa||''}`;
+    sel.appendChild(opt);
+  });
+}
+
+function calcEndTime(horaInicio, durMin){
+  const [h,m]=horaInicio.split(':').map(Number);
+  const total=h*60+m+parseInt(durMin);
+  return fmtSlot(Math.floor(total/60),total%60);
+}
+
+function checkConflict(fecha, horaInicio, horaFin, excludeId=''){
+  const [sh,sm]=horaInicio.split(':').map(Number);
+  const [eh,em]=horaFin.split(':').map(Number);
+  const sMin=sh*60+sm, eMin=eh*60+em;
+  return appts.some(a=>{
+    if(a.id===excludeId||a.fecha!==fecha||a.estado==='cancelada') return false;
+    const [ah,am]=a.horaInicio.split(':').map(Number);
+    const [bh,bm]=a.horaFin.split(':').map(Number);
+    return sMin<bh*60+bm && eMin>ah*60+am;
+  });
+}
+
+// ══════════════════════════════════════════════════════
+//  SAVE NEW APPOINTMENT
+// ══════════════════════════════════════════════════════
+async function saveAppt(){
+  const titulo=document.getElementById('appt-titulo').value.trim();
+  const fecha=document.getElementById('appt-fecha').value;
+  const hIni=document.getElementById('appt-hora-inicio').value;
+  const dur=document.getElementById('appt-duracion').value;
+  const cId=document.getElementById('appt-contacto').value;
+  if(!titulo||!fecha||!hIni){ toast('Título, fecha y hora son requeridos','err'); return; }
+  const hFin=calcEndTime(hIni,dur);
+  if(checkConflict(fecha,hIni,hFin)){
+    document.getElementById('appt-conflict-warn').style.display='block'; return;
+  }
+  document.getElementById('appt-conflict-warn').style.display='none';
+  const contacto=cId?(db.contacts||[]).find(c=>c.id===cId):null;
+  const newAppt={
+    id:uid(), contactId:cId||'',
+    contactNombre:contacto?`${contacto.nombre} ${contacto.apellido}`:'',
+    contactEmpresa:contacto?.empresa||'',
+    titulo, fecha, horaInicio:hIni, horaFin:hFin, duracion:parseInt(dur),
+    estado:document.getElementById('appt-estado').value,
+    agente:document.getElementById('appt-agente').value.trim(),
+    notas:document.getElementById('appt-notas').value.trim(),
+    creadoEn:new Date().toISOString()
+  };
+  appts.push(newAppt);
+  try{
+    await apptPut({appointments:appts},`Nueva cita: ${titulo} — ${fecha} ${hIni}`);
+    closeM('new-appt');
+    ['appt-titulo','appt-agente','appt-notas'].forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+    renderCal();
+    toast('Cita agendada correctamente','ok');
+  }catch(e){ appts.pop(); toast('Error al guardar: '+e.message,'err'); }
+}
+
+// ══════════════════════════════════════════════════════
+//  OPEN APPOINTMENT DETAIL
+// ══════════════════════════════════════════════════════
+function openApptDetail(id){
+  const a=appts.find(x=>x.id===id); if(!a) return;
+  activeApptId=id;
+  const past=new Date(a.fecha+'T'+a.horaInicio)<new Date();
+  const sc=past&&a.estado!=='cancelada'?'pasada':a.estado;
+  const labels={confirmada:'Confirmada',reprogramada:'Reprogramada',cancelada:'Cancelada',pasada:'Pasada'};
+  document.getElementById('appt-d-titulo').textContent=a.titulo.toUpperCase();
+  document.getElementById('appt-d-fecha-lbl').textContent=`${a.fecha} · ${a.horaInicio} – ${a.horaFin}`;
+  document.getElementById('appt-d-badge').className=`order-badge ${sc}`;
+  document.getElementById('appt-d-badge').innerHTML=`<span class="sd"></span>${labels[sc]||a.estado}`;
+  document.getElementById('appt-d-contacto').textContent=a.contactNombre||'—';
+  document.getElementById('appt-d-agente').textContent=a.agente||'—';
+  document.getElementById('appt-d-fecha').textContent=a.fecha;
+  document.getElementById('appt-d-horario').textContent=`${a.horaInicio} – ${a.horaFin} (${a.duracion||30} min)`;
+  document.getElementById('appt-d-notas').textContent=a.notas||'—';
+  document.getElementById('appt-r-fecha').value=a.fecha;
+  populateHoraSelect('appt-r-hora',a.horaInicio);
+  document.getElementById('appt-d-cancel-btn').style.display=a.estado==='cancelada'?'none':'';
+  document.getElementById('appt-reschedule-section').style.display=a.estado==='cancelada'||past?'none':'';
+  openM('appt-detail');
+}
+
+// ══════════════════════════════════════════════════════
+//  RESCHEDULE
+// ══════════════════════════════════════════════════════
+async function rescheduleAppt(){
+  const a=appts.find(x=>x.id===activeApptId); if(!a) return;
+  const nf=document.getElementById('appt-r-fecha').value;
+  const nh=document.getElementById('appt-r-hora').value;
+  if(!nf||!nh){ toast('Selecciona fecha y hora','err'); return; }
+  const nFin=calcEndTime(nh,a.duracion||30);
+  if(checkConflict(nf,nh,nFin,activeApptId)){ toast('Conflicto de horario — ese slot ya tiene una cita','err'); return; }
+  const prev={...a};
+  a.fecha=nf; a.horaInicio=nh; a.horaFin=nFin; a.estado='reprogramada'; a.actualizadoEn=new Date().toISOString();
+  try{
+    await apptPut({appointments:appts},`Reprogramar: ${a.titulo} → ${nf} ${nh}`);
+    closeM('appt-detail'); renderCal(); toast('Cita reprogramada','ok');
+  }catch(e){ Object.assign(a,prev); toast('Error: '+e.message,'err'); }
+}
+
+// ══════════════════════════════════════════════════════
+//  CANCEL
+// ══════════════════════════════════════════════════════
+async function cancelAppt(){
+  if(!confirm('¿Cancelar esta cita? El registro quedará en el historial.')) return;
+  const a=appts.find(x=>x.id===activeApptId); if(!a) return;
+  a.estado='cancelada'; a.actualizadoEn=new Date().toISOString();
+  try{
+    await apptPut({appointments:appts},`Cancelar: ${a.titulo} — ${a.fecha}`);
+    closeM('appt-detail'); renderCal(); toast('Cita cancelada','ok');
+  }catch(e){ a.estado='confirmada'; toast('Error: '+e.message,'err'); }
+}
+
+// Override openM para pre-poblar modales de citas
+const _baseOpenM = openM;
+function openM(id){
+  if(id==='new-appt'){
+    populateApptContactSelect();
+    populateHoraSelect('appt-hora-inicio');
+    if(!document.getElementById('appt-fecha').value)
+      document.getElementById('appt-fecha').value=dateStr(new Date());
+  }
+  _baseOpenM(id);
+}
 window.addEventListener('DOMContentLoaded', async ()=>{
   try{PAT=localStorage.getItem(LS_PAT)||'';}catch{}
   if(PAT){
