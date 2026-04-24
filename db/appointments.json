@@ -10,10 +10,11 @@
       "horaInicio": "08:00",
       "horaFin": "09:00",
       "duracion": 60,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "",
-      "creadoEn": "2026-04-24T02:43:43.405Z"
+      "creadoEn": "2026-04-24T02:43:43.405Z",
+      "actualizadoEn": "2026-04-24T02:43:56.869Z"
     }
   ]
 }
