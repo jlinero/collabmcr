@@ -136,10 +136,27 @@
           "estado": "abierto",
           "creadoEn": "2026-04-24T15:26:53.357Z",
           "actualizaciones": []
+        },
+        {
+          "id": "723503",
+          "numero": "723503",
+          "nombre": "Intermitencia en el canal",
+          "estado": "abierto",
+          "creadoEn": "2026-04-24T19:52:24.784Z",
+          "actualizaciones": [
+            {
+              "id": "1777060344784",
+              "nota": "Se presentan intermitencias en el canal que da el servicio a Webex Contact Center",
+              "agente": "Sistema",
+              "fecha": "2026-04-24T19:52:24.784Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T16:31:10.312Z",
+      "actualizadoEn": "2026-04-24T19:52:24.784Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
