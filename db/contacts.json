@@ -158,9 +158,17 @@
           "id": "699888",
           "numero": "699888",
           "nombre": "Problemas de calidad de servicio en Webex Calling",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-24T21:17:32.533Z",
           "actualizaciones": [
+            {
+              "id": "modg0ksv7wzjk55djrc",
+              "nota": "Caso en revisión por el equipo de soporte",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-24T21:49:07.279Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1777065452533",
               "nota": "El cliente reporta fallas de calidad de servicio en las llamadas de Webex Calling.",
@@ -169,11 +177,12 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-24T21:49:07.279Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T21:17:32.533Z",
+      "actualizadoEn": "2026-04-24T21:49:07.279Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
