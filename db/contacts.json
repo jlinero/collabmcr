@@ -98,9 +98,17 @@
         {
           "id": "473230",
           "nombre": "Problemas de QoS en WxC",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-23T23:50:27.791Z",
           "actualizaciones": [
+            {
+              "id": "mod4nox4a4ftobrc2nb",
+              "nota": "Se cierra el caso, se encontró problemas en la red del cliente",
+              "agente": "",
+              "fecha": "2026-04-24T16:31:10.312Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "moc4x84kp1q4e1zkmgi",
               "nota": "Se esta revisando el caso",
@@ -110,7 +118,7 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-04-23T23:50:48.932Z",
+          "actualizadoEn": "2026-04-24T16:31:10.312Z",
           "numero": "473230"
         },
         {
@@ -131,7 +139,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T15:26:53.357Z",
+      "actualizadoEn": "2026-04-24T16:31:10.312Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
