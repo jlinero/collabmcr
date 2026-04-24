@@ -111,10 +111,27 @@
               "estadoNuevo": ""
             }
           ]
+        },
+        {
+          "id": "410928",
+          "numero": "410928",
+          "nombre": "Problemas de calidad de imagen en equipo de video",
+          "estado": "abierto",
+          "creadoEn": "2026-04-24T22:51:00.901Z",
+          "actualizaciones": [
+            {
+              "id": "1777071060901",
+              "nota": "La imagen del equipo de video se ve borrosa durante las reuniones. El equipo ha revisado la cámara y no detecta problemas físicos, pero los participantes no pueden ver bien.",
+              "agente": "Sistema",
+              "fecha": "2026-04-24T22:51:00.901Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T22:03:32.272Z",
+      "actualizadoEn": "2026-04-24T22:51:00.901Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
