@@ -144,9 +144,9 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .i-val.purple{color:var(--purple);}
 .i-val.muted{color:var(--muted2);}
 .act-group-lbl{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);padding:9px 16px 5px;border-bottom:1px solid var(--border);background:rgba(255,255,255,.01);}
-.act-item{display:flex;gap:11px;align-items:flex-start;padding:11px 16px;border-bottom:1px solid var(--border);transition:background .13s;}
+.act-item{display:flex;gap:11px;align-items:flex-start;padding:11px 16px;border-bottom:1px solid var(--border);transition:background .15s,transform .15s;cursor:none;}
 .act-item:last-child{border-bottom:none;}
-.act-item:hover{background:rgba(255,255,255,.02);}
+.act-item:hover{background:rgba(0,212,255,.04);transform:translateX(3px);}
 .act-ic{width:30px;height:30px;border-radius:8px;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;margin-top:1px;}
 .act-ic.llamada{background:rgba(0,212,255,.1);color:var(--cyan);}
 .act-ic.nota{background:rgba(255,170,0,.1);color:var(--amber);}
@@ -558,6 +558,52 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 </div>
 
 <!-- MODAL: DETALLE Y ACTUALIZACIONES DE TICKET -->
+<!-- MODAL: DETALLE DE ACTIVIDAD -->
+<div class="modal-overlay" id="modal-act-detail">
+  <div class="modal" style="max-width:520px;">
+    <div class="modal-head">
+      <div class="m-eye" id="act-detail-eye">// Actividad</div>
+      <h3 id="act-detail-title">DETALLE</h3>
+      <div style="margin-top:10px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+        <span id="act-detail-badge" style="display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:99px;font-family:var(--font-mono);font-size:10px;font-weight:600;border:1px solid rgba(0,212,255,.3);background:rgba(0,212,255,.07);color:var(--cyan);"></span>
+        <span id="act-detail-fecha" style="font-family:var(--font-mono);font-size:10px;color:var(--muted);"></span>
+      </div>
+    </div>
+    <div class="modal-body" style="padding-top:18px;">
+
+      <!-- Descripción completa -->
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;margin-bottom:18px;">
+        <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:8px;">Descripción</div>
+        <div id="act-detail-desc" style="font-size:13px;color:var(--text);line-height:1.7;"></div>
+      </div>
+
+      <!-- Info grid -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-radius:10px;overflow:hidden;">
+        <div style="background:var(--card2);padding:12px 16px;">
+          <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;">Atendido por</div>
+          <div id="act-detail-agente" style="font-size:13px;font-weight:600;color:var(--text);"></div>
+        </div>
+        <div style="background:var(--card2);padding:12px 16px;">
+          <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;">Canal</div>
+          <div id="act-detail-canal" style="font-size:13px;font-weight:600;color:var(--cyan);"></div>
+        </div>
+        <div style="background:var(--card2);padding:12px 16px;">
+          <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;">Fecha</div>
+          <div id="act-detail-fecha2" style="font-size:13px;color:var(--text);"></div>
+        </div>
+        <div style="background:var(--card2);padding:12px 16px;">
+          <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;">Contacto</div>
+          <div id="act-detail-contacto" style="font-size:13px;color:var(--text);"></div>
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button class="m-cancel" onclick="closeM('act-detail')" style="flex:none;padding:12px 28px;">Cerrar</button>
+    </div>
+  </div>
+</div>
+
 <div class="modal-overlay" id="modal-ticket-detail">
   <div class="modal" style="max-width:580px;">
     <div class="modal-head">
@@ -751,13 +797,14 @@ function renderDetail(c){
     grouped[k].push(a);
   });
   const actItemHTML=a=>`
-    <div class="act-item">
+    <div class="act-item" onclick="openActDetail('${a.id||''}')">
       <div class="act-ic ${a.tipo}"><i class="fa ${iconAct(a.tipo)}"></i></div>
       <div class="act-body">
         <div class="act-title-t">${labelAct(a.tipo)}</div>
         <div class="act-desc">${a.descripcion||''}</div>
-        <div class="act-time">${fmtDT(a.fecha)}</div>
+        <div class="act-time">${fmtDT(a.fecha)}${a.asignadoA?' · <strong style="color:var(--muted2)">'+a.asignadoA+'</strong>':''}</div>
       </div>
+      <i class="fa fa-chevron-right" style="font-size:10px;color:var(--muted);margin-top:4px;flex-shrink:0;"></i>
     </div>`;
   const actHTML=acts.length
     ? Object.entries(grouped).map(([m,items])=>`<div class="act-group-lbl">${m}</div>${items.map(actItemHTML).join('')}`).join('')
@@ -1109,6 +1156,32 @@ async function saveTktUpdate(){
   openTktDetail(activeTktId);
   renderDetail(c);
   toast('Actualización guardada en GitHub','ok');
+}
+
+// ACTIVITY DETAIL
+function openActDetail(actId){
+  if(!activeId||!actId) return;
+  const c=db.contacts.find(x=>x.id===activeId);
+  if(!c) return;
+  const a=(c.actividades||[]).find(x=>x.id===actId);
+  if(!a) return;
+
+  const iconMap={llamada:'fa-phone',nota:'fa-sticky-note',email:'fa-envelope',tarea:'fa-check-square',reunion:'fa-calendar-alt',whatsapp:'fa-whatsapp',webchat:'fa-comments',messenger:'fa-facebook-messenger'};
+  const colorMap={llamada:'var(--cyan)',nota:'var(--amber)',email:'var(--purple)',tarea:'var(--green)',reunion:'var(--red)',whatsapp:'#25d366',webchat:'#00b8d9',messenger:'#0078ff'};
+  const color=colorMap[a.tipo]||'var(--cyan)';
+
+  document.getElementById('act-detail-eye').textContent='// '+labelAct(a.tipo);
+  document.getElementById('act-detail-title').textContent=labelAct(a.tipo).toUpperCase();
+  document.getElementById('act-detail-badge').innerHTML=`<i class="fa ${iconMap[a.tipo]||'fa-circle'}" style="font-size:11px;"></i>${labelAct(a.tipo)}`;
+  document.getElementById('act-detail-badge').style.cssText=`display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:99px;font-family:var(--font-mono);font-size:10px;font-weight:600;border:1px solid;border-color:${color}44;background:${color}11;color:${color};`;
+  document.getElementById('act-detail-fecha').textContent=fmtDT(a.fecha);
+  document.getElementById('act-detail-desc').textContent=a.descripcion||'Sin descripción';
+  document.getElementById('act-detail-agente').textContent=a.asignadoA||'—';
+  document.getElementById('act-detail-canal').textContent=labelAct(a.tipo);
+  document.getElementById('act-detail-fecha2').textContent=fmtDT(a.fecha);
+  document.getElementById('act-detail-contacto').textContent=c.nombre+' '+c.apellido;
+
+  openM('act-detail');
 }
 
 // STATS
