@@ -674,7 +674,7 @@ const LS_PAT='crm_gh_pat_v1';
 const GH_API=`https://api.github.com/repos/${REPO}/contents/${DB_PATH}`;
 
 // STATE
-let PAT='',db={contacts:[]},sha='',activeId=null,filter='all',search='',editingId=null;
+let PAT='',db={contacts:[]},sha='',activeId=null,filter='all',search='',editingId=null,activeTab='t-res';
 
 // UTILS
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2);
@@ -721,6 +721,7 @@ async function loadDB(){
   try{
     const data=await ghGet();
     db=data||{contacts:[]};
+    lastSHA=sha; // guardar SHA inicial para el polling
     document.getElementById('st-gh').textContent='online';
     document.getElementById('st-gh').style.color='var(--green)';
     if(!data) toast('Repositorio nuevo. Crea el primer contacto.','info');
@@ -748,7 +749,8 @@ function applyPAT(){
   const val=document.getElementById('pat-input').value.trim();
   if(!val){toast('El PAT no puede estar vacio','err');return;}
   PAT=val;try{localStorage.setItem(LS_PAT,PAT);}catch{}
-  closeM('token');toast('PAT configurado. Cargando datos...','info');loadDB().then(()=>startPolling());
+  closeM('token');toast('PAT configurado. Cargando datos...','info');
+  loadDB().then(()=>startPolling());
 }
 
 // FILTERS
@@ -938,9 +940,20 @@ function renderDetail(c){
       </div>
     </div>
   </div>`;
+
+  // Restaurar el tab que estaba activo antes del re-render
+  if(activeTab && activeTab !== 't-res'){
+    setTimeout(()=>{
+      const tabMap={'t-res':0,'t-acts':1,'t-int':2};
+      const idx = tabMap[activeTab];
+      const tabs = document.querySelectorAll('.d-tab');
+      if(tabs[idx]) switchTab(tabs[idx], activeTab);
+    }, 0);
+  }
 }
 
 function switchTab(el,id){
+  activeTab=id; // recordar el tab activo
   document.querySelectorAll('.d-tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');
   ['t-res','t-acts','t-int'].forEach(t=>{const e=document.getElementById(t);if(e)e.style.display=t===id?'':'none';});
 }
@@ -1194,10 +1207,15 @@ function updateStats(){
 }
 
 // INIT
-window.addEventListener('DOMContentLoaded',()=>{
+window.addEventListener('DOMContentLoaded', async ()=>{
   try{PAT=localStorage.getItem(LS_PAT)||'';}catch{}
-  if(PAT){document.getElementById('pat-input').value=PAT;loadDB().then(()=>startPolling());}
-  else{openM('token');}
+  if(PAT){
+    document.getElementById('pat-input').value=PAT;
+    await loadDB();
+    startPolling();
+  } else {
+    openM('token');
+  }
 });
 
 // ── AUTO-REFRESH POLLING ──────────────────────────────
@@ -1219,7 +1237,6 @@ async function pollCheck(){
   if(!PAT) return;
   setPollUI('syncing');
   try{
-    // Solo pide el SHA — muy liviano, no descarga el JSON completo
     const r = await fetch(GH_API, {
       headers:{'Authorization':'token '+PAT,'Accept':'application/vnd.github.v3+json'}
     });
@@ -1227,33 +1244,44 @@ async function pollCheck(){
     const data = await r.json();
     const remoteSHA = data.sha;
 
-    if(lastSHA && remoteSHA !== lastSHA){
-      // Detectó cambio — recargar datos
+    // Primera vez — solo guardar el SHA sin notificar
+    if(!lastSHA){
+      lastSHA = remoteSHA;
+      setPollUI('active');
+      return;
+    }
+
+    if(remoteSHA !== lastSHA){
+      // SHA cambió — descargar el JSON completo y actualizar
       const raw = decodeURIComponent(escape(atob(data.content.replace(/\n/g,''))));
       const newDB = JSON.parse(raw);
-      db = newDB;
+      db  = newDB;
       sha = remoteSHA;
+      lastSHA = remoteSHA;
       renderList();
       updateStats();
-      // Refrescar detalle si hay uno abierto
+      // Refrescar panel de detalle si hay uno abierto
       if(activeId){
         const updated = db.contacts.find(c=>c.id===activeId);
         if(updated) renderDetail(updated);
       }
       toast('✦ Datos actualizados automáticamente','info',2500);
     }
+
     lastSHA = remoteSHA;
     setPollUI('active');
   }catch(e){
+    console.warn('Poll error:',e.message);
     setPollUI('');
   }
 }
 
 function startPolling(){
   if(pollTimer) clearInterval(pollTimer);
-  // Guardar el SHA actual como referencia
-  lastSHA = sha;
+  lastSHA = sha; // tomar el SHA actual como punto de referencia
   setPollUI('active');
+  // Primera comprobación inmediata para capturar cambios recientes
+  pollCheck();
   pollTimer = setInterval(pollCheck, POLL_INTERVAL);
 }
 
@@ -1262,10 +1290,14 @@ function stopPolling(){
   setPollUI('');
 }
 
-// Pausar polling cuando la pestaña está oculta para no gastar rate limit
+// Pausar cuando la pestaña está oculta, reanudar al volver
 document.addEventListener('visibilitychange',()=>{
-  if(document.hidden) stopPolling();
-  else if(PAT) startPolling();
+  if(document.hidden){
+    stopPolling();
+  } else if(PAT){
+    // Al volver verificar inmediatamente si hubo cambios
+    startPolling();
+  }
 });
 </script>
 <div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
