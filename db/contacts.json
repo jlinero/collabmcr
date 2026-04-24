@@ -185,6 +185,32 @@
       "tickets": [],
       "creadoEn": "2026-04-24T02:19:09.030Z",
       "actualizadoEn": "2026-04-24T02:19:09.030Z"
+    },
+    {
+      "id": "moca9homcbzjupb4f0n",
+      "nombre": "Genny",
+      "apellido": "Baron",
+      "cargo": "Collaboration AE",
+      "email": "genbaron@cisco.com",
+      "email2": "",
+      "telefono": "+573166904925",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:20:19.270Z",
+      "actualizadoEn": "2026-04-24T02:20:19.270Z"
     }
   ]
 }
