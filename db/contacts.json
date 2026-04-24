@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1776994507908",
+          "tipo": "llamada",
+          "descripcion": "El cliente, que está construyendo un edificio en Medellín, se contactó para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atención se brindó información, se verificó el pedido en el sistema, se reprogramó la entrega para el 27 de abril y también se solicitó adelantarla; además, se envió la confirmación por correo y se acordó enviar más información y conectar al cliente con un asesor humano",
+          "asignadoA": "Lando Norris",
+          "fecha": "2026-04-24T01:35:07.908Z"
+        },
+        {
           "id": "1776983282507",
           "tipo": "whatsapp",
           "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
@@ -100,7 +107,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-23T23:50:48.932Z",
+      "actualizadoEn": "2026-04-24T01:35:07.908Z",
       "updatedAt": "2026-04-23T16:53:07.683Z"
     },
     {
