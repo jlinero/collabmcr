@@ -124,10 +124,20 @@
         {
           "id": "969979",
           "nombre": "Desconexión del servicio de Video",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-04-23T23:55:39.744Z",
-          "actualizaciones": [],
-          "numero": "969979"
+          "actualizaciones": [
+            {
+              "id": "modg2ezrigo5t1b7jd",
+              "nota": "Problemas en la LAN del cliente",
+              "agente": "",
+              "fecha": "2026-04-24T21:50:33.063Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "numero": "969979",
+          "actualizadoEn": "2026-04-24T21:50:33.063Z"
         },
         {
           "id": "620925",
@@ -201,7 +211,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T21:50:13.829Z",
+      "actualizadoEn": "2026-04-24T21:50:33.063Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
