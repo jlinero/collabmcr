@@ -678,6 +678,7 @@ let PAT='',db={contacts:[]},sha='',activeId=null,filter='all',search='',editingI
 
 // UTILS
 const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2);
+const tktNum=()=>String(Math.floor(100000+Math.random()*900000)); // 6 dígitos únicos
 const GRADS=['linear-gradient(135deg,#1a56db,#00d4ff)','linear-gradient(135deg,#7c3aed,#818cf8)','linear-gradient(135deg,#059669,#00ffa3)','linear-gradient(135deg,#b45309,#ffaa00)','linear-gradient(135deg,#be123c,#ff3b6b)'];
 const aColor=s=>GRADS[[...s].reduce((a,c)=>a+c.charCodeAt(0),0)%GRADS.length];
 const aInit=(n,a)=>((n||'?')[0]+(a||'?')[0]).toUpperCase();
@@ -902,7 +903,7 @@ function renderDetail(c){
             <button class="add-btn" onclick="openM('ticket')"><i class="fa fa-plus"></i>Nuevo</button>
           </div>
           ${tickets.length
-            ? tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><span class="t-nm">${t.nombre}</span><span class="t-age">${fmtD(t.creadoEn)}</span></div>`).join('')
+            ? tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><div style="flex:1;min-width:0;"><span class="t-nm">${t.nombre}</span><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:2px;">#${t.numero||t.id} · ${fmtD(t.creadoEn)}</div></div></div>`).join('')
             : '<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>'}
         </div>
       </div>
@@ -932,7 +933,7 @@ function renderDetail(c){
           <button class="add-btn" onclick="openM('ticket')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
         </div>
         ${tickets.length
-          ? tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><span class="t-nm">${t.nombre}</span><span class="t-age">${t.estado}</span></div>`).join('')
+          ? tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><div style="flex:1;min-width:0;"><span class="t-nm">${t.nombre}</span><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:1px;">#${t.numero||t.id}</div></div><span class="t-age">${t.estado}</span></div>`).join('')
           : '<div class="empty" style="padding:12px;"><p>Sin tickets.</p></div>'}
       </div>
     </div>
@@ -1070,15 +1071,16 @@ async function saveTicket(){
   if(!nombre){toast('El nombre del ticket es requerido','err');return;}
   const idx=(db.contacts||[]).findIndex(c=>c.id===activeId);if(idx<0)return;
   if(!db.contacts[idx].tickets)db.contacts[idx].tickets=[];
+  const numero=tktNum();
   db.contacts[idx].tickets.push({
-    id:uid(),nombre,
+    id:numero, numero, nombre,
     estado:document.getElementById('ticket-estado').value,
     creadoEn:new Date().toISOString(),
     actualizaciones:[]
   });
-  await saveDB('Nuevo ticket: '+nombre);
+  await saveDB('Nuevo ticket #'+numero+': '+nombre);
   closeM('ticket');document.getElementById('ticket-nombre').value='';
-  toast('Ticket creado','ok');
+  toast('Ticket #'+numero+' creado','ok');
   const c=(db.contacts||[]).find(x=>x.id===activeId);if(c)renderDetail(c);
 }
 
@@ -1095,7 +1097,7 @@ function openTktDetail(tktId){
 
   // Header
   document.getElementById('tkt-detail-nombre').textContent=t.nombre.toUpperCase();
-  document.getElementById('tkt-detail-fecha').textContent='Creado: '+fmtD(t.creadoEn);
+  document.getElementById('tkt-detail-fecha').textContent='#'+(t.numero||t.id)+' · Creado: '+fmtD(t.creadoEn);
 
   // Badge estado
   const badge=document.getElementById('tkt-detail-badge');
