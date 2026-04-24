@@ -141,9 +141,17 @@
           "id": "723503",
           "numero": "723503",
           "nombre": "Intermitencia en el canal",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-04-24T19:52:24.784Z",
           "actualizaciones": [
+            {
+              "id": "modg195h477wbbgdeke",
+              "nota": "El caso se solucionó, el cliente tenía problemas en su LAN",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-04-24T21:49:38.837Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1777060344784",
               "nota": "Se presentan intermitencias en el canal que da el servicio a Webex Contact Center",
@@ -152,7 +160,8 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-24T21:49:38.837Z"
         },
         {
           "id": "699888",
@@ -182,7 +191,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T21:49:07.279Z",
+      "actualizadoEn": "2026-04-24T21:49:38.837Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
