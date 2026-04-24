@@ -1047,7 +1047,7 @@ function renderDetail(c){
             <button class="add-btn" onclick="openM('deal')"><i class="fa fa-plus"></i>Nuevo</button>
           </div>
           ${deals.length
-            ? deals.map(d=>`<div class="deal-item"><div class="deal-ic"><i class="fa fa-network-wired"></i></div><div class="deal-info"><div class="deal-nm">${d.nombre}</div><div class="deal-meta">Cierre: ${d.fechaCierre||'&mdash;'}</div><div class="deal-sbadge">${d.etapa}</div></div><div class="deal-amount">${d.monto||'&mdash;'}</div></div>`).join('')
+            ? deals.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0)).map(d=>`<div class="deal-item"><div class="deal-ic"><i class="fa fa-network-wired"></i></div><div class="deal-info"><div class="deal-nm">${d.nombre}</div><div class="deal-meta">Cierre: ${d.fechaCierre||'&mdash;'}</div><div class="deal-sbadge">${d.etapa}</div></div><div class="deal-amount">${d.monto||'&mdash;'}</div></div>`).join('')
             : '<div class="empty"><i class="fa fa-handshake"></i><p>Sin deals.</p></div>'}
         </div>
         <div class="s-card">
@@ -1056,7 +1056,7 @@ function renderDetail(c){
             <button class="add-btn" onclick="openM('ticket')"><i class="fa fa-plus"></i>Nuevo</button>
           </div>
           ${tickets.length
-            ? tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><div style="flex:1;min-width:0;"><span class="t-nm">${t.nombre}</span><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:2px;">#${t.numero||t.id} · ${fmtD(t.creadoEn)}</div></div></div>`).join('')
+            ? tickets.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0)).map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><div style="flex:1;min-width:0;"><span class="t-nm">${t.nombre}</span><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:2px;">#${t.numero||t.id} · ${fmtD(t.creadoEn)}</div></div></div>`).join('')
             : '<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>'}
         </div>
       </div>
@@ -1078,7 +1078,7 @@ function renderDetail(c){
           <button class="add-btn" onclick="openM('deal')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
         </div>
         ${deals.length
-          ? deals.map(d=>`<div style="padding:10px 12px;border-bottom:1px solid var(--border);"><div style="font-size:12px;font-weight:600;color:var(--cyan);">${d.nombre}</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--green);margin-top:3px;">${d.monto||'&mdash;'}</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">Cierre: ${d.fechaCierre||'&mdash;'}</div><div style="margin-top:5px;"><span class="deal-sbadge">${d.etapa}</span></div></div>`).join('')
+          ? deals.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0)).map(d=>`<div style="padding:10px 12px;border-bottom:1px solid var(--border);"><div style="font-size:12px;font-weight:600;color:var(--cyan);">${d.nombre}</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--green);margin-top:3px;">${d.monto||'&mdash;'}</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">Cierre: ${d.fechaCierre||'&mdash;'}</div><div style="margin-top:5px;"><span class="deal-sbadge">${d.etapa}</span></div></div>`).join('')
           : '<div class="empty" style="padding:12px;"><p>Sin deals.</p></div>'}
       </div>
       <div class="sc">
@@ -1086,7 +1086,7 @@ function renderDetail(c){
           <button class="add-btn" onclick="openM('ticket')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
         </div>
         ${tickets.length
-          ? tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><div style="flex:1;min-width:0;"><span class="t-nm">${t.nombre}</span><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:1px;">#${t.numero||t.id}</div></div><span class="t-age">${t.estado}</span></div>`).join('')
+          ? tickets.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0)).map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><div style="flex:1;min-width:0;"><span class="t-nm">${t.nombre}</span><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:1px;">#${t.numero||t.id}</div></div><span class="t-age">${t.estado}</span></div>`).join('')
           : '<div class="empty" style="padding:12px;"><p>Sin tickets.</p></div>'}
       </div>
     </div>
