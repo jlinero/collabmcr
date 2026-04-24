@@ -107,7 +107,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .d-body{display:flex;gap:0;}
 .d-main{flex:1;padding:18px 24px;min-width:0;overflow-y:auto;max-height:calc(100vh - 68px - 90px - 44px);}
 .d-main::-webkit-scrollbar{width:3px;}.d-main::-webkit-scrollbar-thumb{background:var(--border2);}
-.d-side{width:320px;min-width:320px;padding:16px 14px;border-left:1px solid var(--border);overflow-y:auto;max-height:calc(100vh - 68px - 90px - 44px);}
+.d-side{width:380px;min-width:380px;padding:16px 14px;border-left:1px solid var(--border);overflow-y:auto;max-height:calc(100vh - 68px - 90px - 44px);}
 .d-side::-webkit-scrollbar{width:3px;}.d-side::-webkit-scrollbar-thumb{background:var(--border2);}
 /* ver todo button */
 .ver-todo-btn{width:100%;padding:8px;font-family:var(--font-mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted2);background:none;border:none;border-top:1px solid var(--border);cursor:none;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px;}
@@ -876,6 +876,8 @@ async function loadDB(){
     document.getElementById('st-gh').style.color='var(--green)';
     if(!data) toast('Repositorio nuevo. Crea el primer contacto.','info');
     renderList();updateStats();
+    // Auto-seleccionar el primer contacto
+    if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
   }catch(e){
     toast('Error GitHub: '+e.message,'err',6000);
     document.getElementById('st-gh').textContent='error';
