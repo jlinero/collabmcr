@@ -871,17 +871,16 @@ async function loadDB(){
   try{
     const data=await ghGet();
     db=data||{contacts:[]};
-    lastSHA=sha; // guardar SHA inicial para el polling
-    document.getElementById('st-gh').textContent='online';
-    document.getElementById('st-gh').style.color='var(--green)';
+    lastSHA=sha;
+    const ghEl=document.getElementById('st-gh');
+    if(ghEl){ghEl.textContent='online';ghEl.style.color='var(--green)';}
     if(!data) toast('Repositorio nuevo. Crea el primer contacto.','info');
     renderList();updateStats();
-    // Auto-seleccionar el primer contacto
     if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
   }catch(e){
     toast('Error GitHub: '+e.message,'err',6000);
-    document.getElementById('st-gh').textContent='error';
-    document.getElementById('st-gh').style.color='var(--red)';
+    const ghElErr=document.getElementById('st-gh');
+    if(ghElErr){ghElErr.textContent='error';ghElErr.style.color='var(--red)';}
     document.getElementById('contactList').innerHTML='<div class="empty"><i class="fa fa-exclamation-triangle"></i><p>'+e.message+'</p></div>';
   }
 }
@@ -1482,8 +1481,12 @@ function openHistorial(tipo){
 // STATS
 function updateStats(){
   const all=(db.contacts||[]).length,op=(db.contacts||[]).filter(c=>c.etapaVida==='oportunidad').length,cl=(db.contacts||[]).filter(c=>c.etapaVida==='cliente').length;
-  document.getElementById('nb-all').textContent=all;document.getElementById('nb-op').textContent=op;document.getElementById('nb-cl').textContent=cl;
-  document.getElementById('st-tot').textContent=all;document.getElementById('st-op').textContent=op;document.getElementById('st-cl').textContent=cl;
+  const nbAll=document.getElementById('nb-all');if(nbAll)nbAll.textContent=all;
+  const nbOp=document.getElementById('nb-op');if(nbOp)nbOp.textContent=op;
+  const nbCl=document.getElementById('nb-cl');if(nbCl)nbCl.textContent=cl;
+  const stTot=document.getElementById('st-tot');if(stTot)stTot.textContent=all;
+  const stOp=document.getElementById('st-op');if(stOp)stOp.textContent=op;
+  const stCl=document.getElementById('st-cl');if(stCl)stCl.textContent=cl;
 }
 
 // ══════════════════════════════════════════════════════
