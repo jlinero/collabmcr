@@ -50,19 +50,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .save-ind{font-family:var(--font-mono);font-size:10px;color:var(--muted);display:flex;align-items:center;gap:6px;opacity:0;transition:opacity .3s;}
 .save-ind.on{opacity:1;}
 .app-body{flex:1;display:flex;overflow:hidden;}
-.sidebar{width:214px;min-width:214px;background:var(--bg2);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow-y:auto;}
-.sidebar::-webkit-scrollbar{width:3px;}.sidebar::-webkit-scrollbar-thumb{background:var(--border2);}
-.sb-sec{padding:16px 10px 6px;}
-.sb-lbl{font-family:var(--font-mono);font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);padding:0 10px;margin-bottom:7px;}
-.nav-item{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:9px;cursor:none;color:var(--muted2);font-size:12.5px;font-weight:500;transition:all .18s;text-decoration:none;user-select:none;}
-.nav-item:hover{background:var(--surface);color:var(--text);}
-.nav-item.active{background:var(--cyan-dim);color:var(--cyan);border:1px solid rgba(0,212,255,.18);}
-.nav-item i{width:15px;text-align:center;font-size:12px;}
 .nb{margin-left:auto;font-family:var(--font-mono);font-size:9px;padding:2px 7px;border-radius:99px;min-width:20px;text-align:center;background:var(--blue2);color:#fff;}
-.sb-div{height:1px;background:var(--border);margin:8px 10px;}
-.sb-bot{margin-top:auto;padding:12px 10px;border-top:1px solid var(--border);}
-.sb-stat{display:flex;justify-content:space-between;align-items:center;padding:3px 8px;font-size:11px;color:var(--muted2);}
-.sb-stat span{font-family:var(--font-mono);color:var(--cyan);font-size:11px;}
 .list-panel{width:292px;min-width:292px;background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;overflow:hidden;}
 .lp-head{padding:13px 14px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:10px;}
 .lp-head h2{font-family:var(--font-display);font-size:22px;letter-spacing:1.5px;flex:1;color:#fff;}
@@ -365,37 +353,6 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 </header>
 
 <div class="app-body">
-  <aside class="sidebar">
-    <div class="sb-sec">
-      <div class="sb-lbl">CRM</div>
-      <a class="nav-item active" href="#" onclick="return false;"><i class="fa fa-users"></i>Contactos<span class="nb" id="nb-all">0</span></a>
-      <a class="nav-item" href="#" onclick="applyFilter('oportunidad',null);return false;"><i class="fa fa-handshake"></i>Oportunidades<span class="nb" id="nb-op" style="background:rgba(129,140,248,.3);color:var(--purple);">0</span></a>
-      <a class="nav-item" href="#" onclick="applyFilter('cliente',null);return false;"><i class="fa fa-star"></i>Clientes<span class="nb" id="nb-cl" style="background:rgba(0,255,163,.2);color:var(--green);">0</span></a>
-    </div>
-    <div class="sb-div"></div>
-    <div class="sb-sec">
-      <div class="sb-lbl">Etapa de Vida</div>
-      <a class="nav-item" href="#" onclick="applyFilter('nuevo',null);return false;"><i class="fa fa-circle" style="color:var(--muted2);font-size:7px;"></i>Nuevo</a>
-      <a class="nav-item" href="#" onclick="applyFilter('lead',null);return false;"><i class="fa fa-circle" style="color:var(--cyan);font-size:7px;"></i>Lead</a>
-      <a class="nav-item" href="#" onclick="applyFilter('oportunidad',null);return false;"><i class="fa fa-circle" style="color:var(--purple);font-size:7px;"></i>Oportunidad</a>
-      <a class="nav-item" href="#" onclick="applyFilter('cliente',null);return false;"><i class="fa fa-circle" style="color:var(--green);font-size:7px;"></i>Cliente</a>
-    </div>
-    <div class="sb-div"></div>
-    <div class="sb-sec">
-      <div class="sb-lbl">Productos</div>
-      <a class="nav-item" href="#" onclick="filterProd('Webex Calling');return false;"><i class="fa fa-phone-alt"></i>Webex Calling</a>
-      <a class="nav-item" href="#" onclick="filterProd('Webex Contact Center');return false;"><i class="fa fa-headset"></i>Contact Center</a>
-      <a class="nav-item" href="#" onclick="filterProd('Webex Meetings');return false;"><i class="fa fa-video"></i>Webex Meetings</a>
-      <a class="nav-item" href="#" onclick="filterProd('AI Agent');return false;"><i class="fa fa-robot"></i>AI Agent</a>
-    </div>
-    <div class="sb-bot">
-      <div class="sb-stat">Total <span id="st-tot">0</span></div>
-      <div class="sb-stat">Oportunidades <span id="st-op" style="color:var(--purple);">0</span></div>
-      <div class="sb-stat">Clientes <span id="st-cl" style="color:var(--green);">0</span></div>
-      <div class="sb-stat">GitHub <span id="st-gh" style="color:var(--muted);">—</span></div>
-    </div>
-  </aside>
-
   <div id="contactsView" style="flex:1;display:flex;overflow:hidden;">
     <div class="list-panel">
       <div class="lp-head">
