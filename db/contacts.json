@@ -99,9 +99,17 @@
           "id": "526284",
           "numero": "526284",
           "nombre": "Agente no puede cambiar de estado en Contact Center",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-24T22:03:32.272Z",
           "actualizaciones": [
+            {
+              "id": "modia9mwrhxazkwawn",
+              "nota": "se esta haciendo una revisión inicial del caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-24T22:52:38.600Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1777068212272",
               "nota": "El usuario reporta que cuando el agente está logueado no puede hacer el cambio de estado, lo que impide recibir llamadas o interacciones digitales.",
@@ -110,7 +118,8 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-24T22:52:38.600Z"
         },
         {
           "id": "410928",
@@ -131,7 +140,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T22:51:00.901Z",
+      "actualizadoEn": "2026-04-24T22:52:38.600Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
