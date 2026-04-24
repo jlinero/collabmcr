@@ -211,6 +211,32 @@
       "tickets": [],
       "creadoEn": "2026-04-24T02:20:19.270Z",
       "actualizadoEn": "2026-04-24T02:20:19.270Z"
+    },
+    {
+      "id": "mocagoenpa1y7kiuko",
+      "nombre": "Daniel",
+      "apellido": "Tobar",
+      "cargo": "Solutions Engineer",
+      "email": "dtobar@cisco.com",
+      "email2": "",
+      "telefono": "+573132488767",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Bogotá, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:25:54.575Z",
+      "actualizadoEn": "2026-04-24T02:25:54.575Z"
     }
   ]
 }
