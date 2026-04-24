@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mod2bgldp1d",
+          "tipo": "email",
+          "descripcion": "El cliente escribió un correo manifestando interes en Webex Calling",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-24T15:25:40.417Z"
+        },
+        {
           "id": "1776996900745",
           "tipo": "whatsapp",
           "descripcion": "El cliente se comunicó para preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estará comunicando cuando se tengan avances",
@@ -117,7 +124,7 @@
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
       "actualizadoEn": "2026-04-24T02:15:00.745Z",
-      "updatedAt": "2026-04-23T16:53:07.683Z"
+      "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
