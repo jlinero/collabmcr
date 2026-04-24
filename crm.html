@@ -119,8 +119,34 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .d-body{display:flex;gap:0;}
 .d-main{flex:1;padding:18px 24px;min-width:0;overflow-y:auto;max-height:calc(100vh - 68px - 90px - 44px);}
 .d-main::-webkit-scrollbar{width:3px;}.d-main::-webkit-scrollbar-thumb{background:var(--border2);}
-.d-side{width:258px;min-width:258px;padding:16px 14px;border-left:1px solid var(--border);overflow-y:auto;max-height:calc(100vh - 68px - 90px - 44px);}
+.d-side{width:320px;min-width:320px;padding:16px 14px;border-left:1px solid var(--border);overflow-y:auto;max-height:calc(100vh - 68px - 90px - 44px);}
 .d-side::-webkit-scrollbar{width:3px;}.d-side::-webkit-scrollbar-thumb{background:var(--border2);}
+/* ver todo button */
+.ver-todo-btn{width:100%;padding:8px;font-family:var(--font-mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted2);background:none;border:none;border-top:1px solid var(--border);cursor:none;transition:all .15s;display:flex;align-items:center;justify-content:center;gap:6px;}
+.ver-todo-btn:hover{color:var(--cyan);background:var(--cyan-dim);}
+/* history modal wide */
+.modal.wide{width:720px;}
+/* history feed */
+.hist-group-lbl{font-family:var(--font-mono);font-size:8.5px;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);padding:8px 16px 4px;background:rgba(255,255,255,.01);border-bottom:1px solid var(--border);}
+/* deal item larger */
+.deal-item{display:flex;align-items:center;gap:14px;padding:14px 16px;border-bottom:1px solid var(--border);}
+.deal-item:last-child{border-bottom:none;}
+.deal-ic{width:38px;height:38px;border-radius:10px;background:rgba(0,255,163,.08);border:1px solid rgba(0,255,163,.15);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:14px;flex-shrink:0;}
+.deal-info{flex:1;min-width:0;}
+.deal-nm{font-size:14px;font-weight:600;color:var(--cyan);}
+.deal-meta{font-family:var(--font-mono);font-size:10px;color:var(--muted2);margin-top:3px;}
+.deal-amount{font-family:var(--font-display);font-size:20px;color:var(--green);flex-shrink:0;}
+.deal-sbadge{font-family:var(--font-mono);font-size:9px;padding:3px 9px;border-radius:99px;background:rgba(37,99,235,.15);color:#60a5fa;border:1px solid rgba(37,99,235,.3);display:inline-block;margin-top:5px;}
+/* ticket item larger */
+.ticket-item{display:flex;align-items:center;gap:12px;padding:12px 16px;border-bottom:1px solid var(--border);cursor:none;transition:background .15s;}
+.ticket-item:hover{background:rgba(255,255,255,.03);}
+.ticket-item:last-child{border-bottom:none;}
+.t-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+.t-dot.abierto{background:var(--amber);}
+.t-dot.cerrado{background:var(--green);}
+.t-dot.en\ progreso{background:var(--cyan);}
+.t-nm{flex:1;font-size:13px;cursor:none;}
+.t-age{font-family:var(--font-mono);font-size:9px;color:var(--muted);}
 .s-card{background:var(--card2);border:1px solid var(--border);border-radius:14px;margin-bottom:14px;overflow:hidden;}
 .s-card-h{padding:10px 16px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--card);}
 .s-card-title{font-family:var(--font-mono);font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--muted2);display:flex;align-items:center;gap:8px;}
@@ -807,6 +833,22 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
   </div>
 </div>
 
+<!-- MODAL: HISTORIAL COMPLETO -->
+<div class="modal-overlay" id="modal-historial">
+  <div class="modal wide">
+    <div class="modal-head">
+      <div class="m-eye" id="hist-eye">// Historial</div>
+      <h3 id="hist-title">HISTORIAL COMPLETO</h3>
+    </div>
+    <div class="modal-body" style="padding:0;">
+      <div id="hist-content" style="max-height:65vh;overflow-y:auto;"></div>
+    </div>
+    <div class="modal-footer">
+      <button class="m-cancel" onclick="closeM('historial')">Cerrar</button>
+    </div>
+  </div>
+</div>
+
 <div class="toast-wrap" id="toastWrap"></div>
 
 <script>
@@ -960,12 +1002,38 @@ function renderDetail(c){
       </div>
       <i class="fa fa-chevron-right" style="font-size:10px;color:var(--muted);margin-top:4px;flex-shrink:0;"></i>
     </div>`;
+
   const actHTML=acts.length
-    ? Object.entries(grouped).map(([m,items])=>`<div class="act-group-lbl">${m}</div>${items.map(actItemHTML).join('')}`).join('')
+    ? Object.entries(grouped).map(([m,items])=>`<div class="hist-group-lbl">${m}</div>${items.map(actItemHTML).join('')}`).join('')
     : '<div class="empty"><i class="fa fa-history"></i><p>Sin actividades registradas.</p></div>';
-  const recHTML=acts.slice(0,3).length
-    ? acts.slice(0,3).map(actItemHTML).join('')
-    : '<div class="empty"><i class="fa fa-history"></i><p>Sin actividades aun.</p></div>';
+
+  // Últimas 4 de cada uno
+  const sortedDeals   = deals.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
+  const sortedTickets = tickets.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
+  const last4Acts     = acts.slice(0,4);
+  const last4Deals    = sortedDeals.slice(0,4);
+  const last4Tickets  = sortedTickets.slice(0,4);
+
+  const dealItemHTML = d=>`
+    <div class="deal-item">
+      <div class="deal-ic"><i class="fa fa-network-wired"></i></div>
+      <div class="deal-info">
+        <div class="deal-nm">${d.nombre}</div>
+        <div class="deal-meta">Cierre: ${d.fechaCierre||'&mdash;'}</div>
+        <div class="deal-sbadge">${d.etapa}</div>
+      </div>
+      <div class="deal-amount">${d.monto||'&mdash;'}</div>
+    </div>`;
+
+  const tktItemHTML = t=>`
+    <div class="ticket-item" onclick="openTktDetail('${t.id}')">
+      <div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div>
+      <div style="flex:1;min-width:0;">
+        <div class="t-nm">${t.nombre}</div>
+        <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:2px;">#${t.numero||t.id} · ${fmtD(t.creadoEn)}</div>
+      </div>
+      <span class="t-age">${t.estado}</span>
+    </div>`;
 
   const hlColor=sc==='cliente'?'green':sc==='oportunidad'?'purple':sc==='lead'?'cyan':'';
 
@@ -1025,10 +1093,11 @@ function renderDetail(c){
         </div>
         <div class="s-card">
           <div class="s-card-h">
-            <div class="s-card-title"><i class="fa fa-stream"></i>Actividades recientes</div>
+            <div class="s-card-title"><i class="fa fa-stream"></i>Últimas actividades</div>
             <button class="add-btn" onclick="openM('act')"><i class="fa fa-plus"></i>Nueva</button>
           </div>
-          ${recHTML}
+          ${last4Acts.length ? last4Acts.map(actItemHTML).join('') : '<div class="empty"><i class="fa fa-history"></i><p>Sin actividades aún.</p></div>'}
+          ${acts.length>4?`<button class="ver-todo-btn" onclick="openHistorial('acts')"><i class="fa fa-list"></i>Ver todas las actividades (${acts.length})</button>`:''}
         </div>
       </div>
       <div id="t-acts" style="display:none;">
@@ -1046,18 +1115,16 @@ function renderDetail(c){
             <div class="s-card-title"><i class="fa fa-handshake"></i>Deals (${deals.length})</div>
             <button class="add-btn" onclick="openM('deal')"><i class="fa fa-plus"></i>Nuevo</button>
           </div>
-          ${deals.length
-            ? deals.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0)).map(d=>`<div class="deal-item"><div class="deal-ic"><i class="fa fa-network-wired"></i></div><div class="deal-info"><div class="deal-nm">${d.nombre}</div><div class="deal-meta">Cierre: ${d.fechaCierre||'&mdash;'}</div><div class="deal-sbadge">${d.etapa}</div></div><div class="deal-amount">${d.monto||'&mdash;'}</div></div>`).join('')
-            : '<div class="empty"><i class="fa fa-handshake"></i><p>Sin deals.</p></div>'}
+          ${last4Deals.length ? last4Deals.map(dealItemHTML).join('') : '<div class="empty"><i class="fa fa-handshake"></i><p>Sin deals.</p></div>'}
+          ${deals.length>4?`<button class="ver-todo-btn" onclick="openHistorial('deals')"><i class="fa fa-list"></i>Ver todos los deals (${deals.length})</button>`:''}
         </div>
         <div class="s-card">
           <div class="s-card-h">
             <div class="s-card-title"><i class="fa fa-ticket-alt"></i>Tickets (${tickets.length})</div>
             <button class="add-btn" onclick="openM('ticket')"><i class="fa fa-plus"></i>Nuevo</button>
           </div>
-          ${tickets.length
-            ? tickets.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0)).map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><div style="flex:1;min-width:0;"><span class="t-nm">${t.nombre}</span><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:2px;">#${t.numero||t.id} · ${fmtD(t.creadoEn)}</div></div></div>`).join('')
-            : '<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>'}
+          ${last4Tickets.length ? last4Tickets.map(tktItemHTML).join('') : '<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>'}
+          ${tickets.length>4?`<button class="ver-todo-btn" onclick="openHistorial('tickets')"><i class="fa fa-list"></i>Ver todos los tickets (${tickets.length})</button>`:''}
         </div>
       </div>
     </div>
@@ -1065,34 +1132,49 @@ function renderDetail(c){
       <div class="sc">
         <div class="sc-h"><span class="sc-title">Empresa</span><span class="sc-cnt">1</span></div>
         <div style="display:flex;align-items:center;gap:10px;padding:11px 12px;">
-          <div style="width:32px;height:32px;border-radius:8px;background:var(--surface);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:10px;color:var(--cyan);"><i class="fa fa-building"></i></div>
+          <div style="width:36px;height:36px;border-radius:8px;background:var(--surface);border:1px solid var(--border2);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--cyan);"><i class="fa fa-building"></i></div>
           <div>
-            <div style="font-size:12px;font-weight:600;color:var(--cyan);">${c.empresa||'&mdash;'}</div>
+            <div style="font-size:13px;font-weight:600;color:var(--cyan);">${c.empresa||'&mdash;'}</div>
             <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">${c.dominioEmpresa||'&mdash;'}</div>
             <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);">${c.telEmpresa||''}</div>
           </div>
         </div>
       </div>
       <div class="sc">
-        <div class="sc-h"><span class="sc-title">Deals (${deals.length})</span>
+        <div class="sc-h">
+          <span class="sc-title">Deals (${deals.length})</span>
           <button class="add-btn" onclick="openM('deal')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
         </div>
-        ${deals.length
-          ? deals.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0)).map(d=>`<div style="padding:10px 12px;border-bottom:1px solid var(--border);"><div style="font-size:12px;font-weight:600;color:var(--cyan);">${d.nombre}</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--green);margin-top:3px;">${d.monto||'&mdash;'}</div><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">Cierre: ${d.fechaCierre||'&mdash;'}</div><div style="margin-top:5px;"><span class="deal-sbadge">${d.etapa}</span></div></div>`).join('')
-          : '<div class="empty" style="padding:12px;"><p>Sin deals.</p></div>'}
+        ${last4Deals.length
+          ? last4Deals.map(d=>`<div style="padding:12px 14px;border-bottom:1px solid var(--border);">
+              <div style="font-size:13px;font-weight:600;color:var(--cyan);">${d.nombre}</div>
+              <div style="font-family:var(--font-mono);font-size:10px;color:var(--green);margin-top:3px;">${d.monto||'&mdash;'}</div>
+              <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">Cierre: ${d.fechaCierre||'&mdash;'}</div>
+              <div style="margin-top:5px;"><span class="deal-sbadge">${d.etapa}</span></div>
+            </div>`).join('')
+          : '<div class="empty" style="padding:14px;"><p>Sin deals.</p></div>'}
+        ${deals.length>4?`<button class="ver-todo-btn" onclick="openHistorial('deals')"><i class="fa fa-list"></i>Ver todos (${deals.length})</button>`:''}
       </div>
       <div class="sc">
-        <div class="sc-h"><span class="sc-title">Tickets (${tickets.length})</span>
+        <div class="sc-h">
+          <span class="sc-title">Tickets (${tickets.length})</span>
           <button class="add-btn" onclick="openM('ticket')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
         </div>
-        ${tickets.length
-          ? tickets.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0)).map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')"><div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div><div style="flex:1;min-width:0;"><span class="t-nm">${t.nombre}</span><div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:1px;">#${t.numero||t.id}</div></div><span class="t-age">${t.estado}</span></div>`).join('')
-          : '<div class="empty" style="padding:12px;"><p>Sin tickets.</p></div>'}
+        ${last4Tickets.length
+          ? last4Tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')">
+              <div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div>
+              <div style="flex:1;min-width:0;">
+                <div class="t-nm">${t.nombre}</div>
+                <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:1px;">#${t.numero||t.id}</div>
+              </div>
+              <span class="t-age">${t.estado}</span>
+            </div>`).join('')
+          : '<div class="empty" style="padding:14px;"><p>Sin tickets.</p></div>'}
+        ${tickets.length>4?`<button class="ver-todo-btn" onclick="openHistorial('tickets')"><i class="fa fa-list"></i>Ver todos (${tickets.length})</button>`:''}
       </div>
     </div>
   </div>`;
 
-  // Restaurar el tab que estaba activo antes del re-render
   if(activeTab && activeTab !== 't-res'){
     setTimeout(()=>{
       const tabMap={'t-res':0,'t-acts':1,'t-int':2};
@@ -1358,6 +1440,84 @@ function openActDetail(actId){
   document.getElementById('act-detail-contacto').textContent=c.nombre+' '+c.apellido;
 
   openM('act-detail');
+}
+
+// HISTORIAL COMPLETO
+function openHistorial(tipo){
+  const c=db.contacts.find(x=>x.id===activeId);
+  if(!c) return;
+  const acts    = c.actividades||[];
+  const deals   = (c.deals||[]).slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
+  const tickets = (c.tickets||[]).slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
+
+  let title='', eye='', html='';
+
+  if(tipo==='acts'){
+    title=`ACTIVIDADES (${acts.length})`;
+    eye='// Historial de actividades';
+    const grouped={};
+    acts.forEach(a=>{
+      const k=a.fecha?new Date(a.fecha).toLocaleDateString('es-CO',{month:'long',year:'numeric'}):'Sin fecha';
+      if(!grouped[k])grouped[k]=[];
+      grouped[k].push(a);
+    });
+    html=acts.length
+      ? Object.entries(grouped).map(([m,items])=>`
+          <div class="hist-group-lbl">${m}</div>
+          ${items.map(a=>`
+            <div class="act-item" onclick="closeM('historial');openActDetail('${a.id||''}')">
+              <div class="act-ic ${a.tipo}"><i class="fa ${iconAct(a.tipo)}"></i></div>
+              <div class="act-body">
+                <div class="act-title-t">${labelAct(a.tipo)}</div>
+                <div class="act-desc">${a.descripcion||''}</div>
+                <div class="act-time">${fmtDT(a.fecha)}${a.asignadoA?' · <strong style="color:var(--muted2)">'+a.asignadoA+'</strong>':''}</div>
+              </div>
+              <i class="fa fa-chevron-right" style="font-size:10px;color:var(--muted);flex-shrink:0;"></i>
+            </div>`).join('')}`).join('')
+      : '<div class="empty" style="padding:32px;"><i class="fa fa-history"></i><p>Sin actividades.</p></div>';
+  }
+
+  if(tipo==='deals'){
+    title=`DEALS (${deals.length})`;
+    eye='// Historial de deals';
+    html=deals.length
+      ? deals.map(d=>`
+          <div class="deal-item">
+            <div class="deal-ic"><i class="fa fa-network-wired"></i></div>
+            <div class="deal-info">
+              <div class="deal-nm">${d.nombre}</div>
+              <div class="deal-meta">Creado: ${fmtD(d.creadoEn)} · Cierre: ${d.fechaCierre||'&mdash;'}</div>
+              <div class="deal-sbadge">${d.etapa}</div>
+            </div>
+            <div class="deal-amount">${d.monto||'&mdash;'}</div>
+          </div>`).join('')
+      : '<div class="empty" style="padding:32px;"><i class="fa fa-handshake"></i><p>Sin deals.</p></div>';
+  }
+
+  if(tipo==='tickets'){
+    title=`TICKETS (${tickets.length})`;
+    eye='// Historial de tickets';
+    html=tickets.length
+      ? tickets.map(t=>`
+          <div class="ticket-item" onclick="closeM('historial');openTktDetail('${t.id}')">
+            <div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div>
+            <div style="flex:1;min-width:0;">
+              <div class="t-nm">${t.nombre}</div>
+              <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:2px;">#${t.numero||t.id} · ${fmtD(t.creadoEn)}</div>
+            </div>
+            <div style="text-align:right;">
+              <span class="t-age" style="display:block;">${t.estado}</span>
+              <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">${t.actualizaciones?.length||0} actualizaciones</span>
+            </div>
+            <i class="fa fa-chevron-right" style="font-size:10px;color:var(--muted);flex-shrink:0;margin-left:8px;"></i>
+          </div>`).join('')
+      : '<div class="empty" style="padding:32px;"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>';
+  }
+
+  document.getElementById('hist-eye').textContent=eye;
+  document.getElementById('hist-title').textContent=title;
+  document.getElementById('hist-content').innerHTML=html;
+  openM('historial');
 }
 
 // STATS
@@ -1672,7 +1832,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
 });
 
 // ── AUTO-REFRESH POLLING ──────────────────────────────
-const POLL_INTERVAL = 10000; // 10 segundos
+const POLL_INTERVAL = 20000; // 20 segundos
 let pollTimer = null;
 let lastSHA   = '';
 
