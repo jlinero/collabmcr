@@ -133,9 +133,19 @@
           "id": "620925",
           "numero": "620925",
           "nombre": "Error en configuración de Webex Calling",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-04-24T15:26:53.357Z",
-          "actualizaciones": []
+          "actualizaciones": [
+            {
+              "id": "modg205ht2bg7olflqr",
+              "nota": "Caso cerrado, el cliente no responde",
+              "agente": "",
+              "fecha": "2026-04-24T21:50:13.829Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-04-24T21:50:13.829Z"
         },
         {
           "id": "723503",
@@ -191,7 +201,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T21:49:38.837Z",
+      "actualizadoEn": "2026-04-24T21:50:13.829Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
