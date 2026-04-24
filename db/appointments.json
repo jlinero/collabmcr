@@ -1,1 +1,19 @@
-{ "appointments": [] }
+{
+  "appointments": [
+    {
+      "id": "mocb3l4dn4ji58csfg",
+      "contactId": "moafvoj5u49rq4tj4ta",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "titulo": "Instalación Webex Calling",
+      "fecha": "2026-04-24",
+      "horaInicio": "08:00",
+      "horaFin": "09:00",
+      "duracion": 60,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-04-24T02:43:43.405Z"
+    }
+  ]
+}
