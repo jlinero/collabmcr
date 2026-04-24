@@ -15,6 +15,21 @@
       "notas": "",
       "creadoEn": "2026-04-24T02:43:43.405Z",
       "actualizadoEn": "2026-04-24T02:43:56.869Z"
+    },
+    {
+      "id": "mocb4r0h4yoouih06s3",
+      "contactId": "mobnzjnv6b8wbvfolwh",
+      "contactNombre": "Jose Linero CollabMCR",
+      "contactEmpresa": "CollabMCR Technology Corporation",
+      "titulo": "Instalación Servicio Webex Calling",
+      "fecha": "2026-04-24",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-04-24T02:44:37.697Z"
     }
   ]
 }
