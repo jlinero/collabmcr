@@ -146,10 +146,27 @@
             }
           ],
           "actualizadoEn": "2026-04-24T22:53:18.263Z"
+        },
+        {
+          "id": "445291",
+          "numero": "445291",
+          "nombre": "Llamadas no se conectan en Webex Collins",
+          "estado": "abierto",
+          "creadoEn": "2026-04-24T22:56:58.285Z",
+          "actualizaciones": [
+            {
+              "id": "1777071418285",
+              "nota": "Varios usuarios reportan que al intentar hacer una llamada no se conecta y suena ocupado. No se identifica la causa del problema.",
+              "agente": "Sistema",
+              "fecha": "2026-04-24T22:56:58.285Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-24T22:53:18.263Z",
+      "actualizadoEn": "2026-04-24T22:56:58.285Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
