@@ -82,7 +82,7 @@
       ],
       "tickets": [
         {
-          "id": "moc4wrtbt2bunw09pki",
+          "id": "473230",
           "nombre": "Problemas de QoS en WxC",
           "estado": "en progreso",
           "creadoEn": "2026-04-23T23:50:27.791Z",
@@ -96,14 +96,16 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-04-23T23:50:48.932Z"
+          "actualizadoEn": "2026-04-23T23:50:48.932Z",
+          "numero": "473230"
         },
         {
-          "id": "moc53gioyiew8d8r7tj",
+          "id": "969979",
           "nombre": "Desconexión del servicio de Video",
           "estado": "abierto",
           "creadoEn": "2026-04-23T23:55:39.744Z",
-          "actualizaciones": []
+          "actualizaciones": [],
+          "numero": "969979"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
