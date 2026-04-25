@@ -103,6 +103,14 @@
           "creadoEn": "2026-04-24T22:56:58.285Z",
           "actualizaciones": [
             {
+              "id": "modmwh4yo7ixro5t24",
+              "nota": "No se ven problemas en la solución de Webex Calling, se realizarán pruebas con Thousand Eyes para ver si es un problema en las premisas de cliente o en la red nuestra como proveedor de servicio",
+              "agente": "",
+              "fecha": "2026-04-25T01:01:53.218Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "modm4s1z7v4z6dc8q5w",
               "nota": "Se esta haciendo la revisión inicial del caso.",
               "agente": "",
@@ -119,7 +127,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-25T00:40:20.999Z"
+          "actualizadoEn": "2026-04-25T01:01:53.218Z"
         },
         {
           "id": "469035",
@@ -149,7 +157,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-25T01:00:30.323Z",
+      "actualizadoEn": "2026-04-25T01:01:53.218Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
