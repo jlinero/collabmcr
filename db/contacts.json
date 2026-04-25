@@ -96,58 +96,6 @@
       ],
       "tickets": [
         {
-          "id": "526284",
-          "numero": "526284",
-          "nombre": "Agente no puede cambiar de estado en Contact Center",
-          "estado": "en progreso",
-          "creadoEn": "2026-04-24T22:03:32.272Z",
-          "actualizaciones": [
-            {
-              "id": "modia9mwrhxazkwawn",
-              "nota": "se esta haciendo una revisión inicial del caso",
-              "agente": "Lando Norris",
-              "fecha": "2026-04-24T22:52:38.600Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1777068212272",
-              "nota": "El usuario reporta que cuando el agente está logueado no puede hacer el cambio de estado, lo que impide recibir llamadas o interacciones digitales.",
-              "agente": "Sistema",
-              "fecha": "2026-04-24T22:03:32.272Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-04-24T22:52:38.600Z"
-        },
-        {
-          "id": "410928",
-          "numero": "410928",
-          "nombre": "Problemas de calidad de imagen en equipo de video",
-          "estado": "en progreso",
-          "creadoEn": "2026-04-24T22:51:00.901Z",
-          "actualizaciones": [
-            {
-              "id": "modib48nlq4v8i6052b",
-              "nota": "Se recibe el caso se solicitará a cliente mas información",
-              "agente": "",
-              "fecha": "2026-04-24T22:53:18.263Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1777071060901",
-              "nota": "La imagen del equipo de video se ve borrosa durante las reuniones. El equipo ha revisado la cámara y no detecta problemas físicos, pero los participantes no pueden ver bien.",
-              "agente": "Sistema",
-              "fecha": "2026-04-24T22:51:00.901Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-04-24T22:53:18.263Z"
-        },
-        {
           "id": "445291",
           "numero": "445291",
           "nombre": "Llamadas no se conectan en Webex Collins",
