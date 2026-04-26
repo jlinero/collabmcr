@@ -1817,8 +1817,9 @@ window.addEventListener('DOMContentLoaded', async ()=>{
 // ── AUTO-REFRESH POLLING ──────────────────────────────
 const POLL_INTERVAL = 15000; // 15 segundos
 
-let pollTimer = null;
-let lastSHA   = '';
+let pollTimer  = null;
+let lastSHA    = '';
+let pollActive = false;
 
 function setPollUI(state){
   const pill = document.getElementById('pollPill');
@@ -1831,50 +1832,56 @@ function setPollUI(state){
 }
 
 async function pollCheck(){
-  if(!PAT) return;
+  if(!PAT || pollActive) return;
+  pollActive = true;
   setPollUI('syncing');
   try{
-    // Siempre hace un ghGet completo — así garantiza datos frescos cada 15s
     const newDB = await ghGet();
-    if(!newDB){ setPollUI(''); return; }
+    if(!newDB){ setPollUI('active'); pollActive=false; return; }
 
-    const changed = sha !== lastSHA;
+    const prevSHA = lastSHA;
     lastSHA = sha;
-
-    // Siempre actualiza la base de datos local
     db = newDB;
+
     renderList();
     updateStats();
 
-    // Siempre refresca el detalle si hay un contacto abierto
     if(activeId){
       const updated = db.contacts.find(c=>c.id===activeId);
       if(updated) renderDetail(updated);
     }
 
-    // Solo muestra toast si hubo un cambio externo real
-    if(changed) toast('✦ Datos actualizados automáticamente','info',2500);
+    if(prevSHA && sha !== prevSHA){
+      toast('✦ Datos actualizados automáticamente','info',2500);
+    }
 
     setPollUI('active');
+    console.log('[POLL] Refreshed at', new Date().toLocaleTimeString(), '| SHA:', sha.slice(0,8));
   }catch(e){
-    console.warn('Poll error:',e.message);
+    console.warn('[POLL] Error:', e.message);
     setPollUI('');
   }
+  pollActive = false;
 }
 
 function startPolling(){
-  if(pollTimer) clearInterval(pollTimer);
+  // Limpiar timer anterior si existe
+  if(pollTimer){ clearInterval(pollTimer); pollTimer=null; }
   lastSHA = sha;
   setPollUI('active');
+  // Llamada inmediata + cada 15 segundos
+  pollCheck();
   pollTimer = setInterval(pollCheck, POLL_INTERVAL);
+  console.log('[POLL] Started — interval:', POLL_INTERVAL/1000, 's');
 }
 
 function stopPolling(){
   if(pollTimer){ clearInterval(pollTimer); pollTimer=null; }
   setPollUI('');
+  console.log('[POLL] Stopped');
 }
 
-// Pausar cuando la pestaña está oculta
+// Pausar cuando pestaña oculta, reanudar sin resetear el timer
 document.addEventListener('visibilitychange',()=>{
   if(document.hidden){
     stopPolling();
