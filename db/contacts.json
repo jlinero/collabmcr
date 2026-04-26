@@ -99,9 +99,17 @@
           "id": "445291",
           "numero": "445291",
           "nombre": "Llamadas no se conectan en Webex Collins",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-24T22:56:58.285Z",
           "actualizaciones": [
+            {
+              "id": "mog00lf18jabq7omj1a",
+              "nota": "El problema estaba en la LAN del cliente, se corrige y el caso puede ser cerrado",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-26T16:44:32.749Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "modmwh4yo7ixro5t24",
               "nota": "No se ven problemas en la solución de Webex Calling, se realizarán pruebas con Thousand Eyes para ver si es un problema en las premisas de cliente o en la red nuestra como proveedor de servicio",
@@ -127,7 +135,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-25T01:01:53.218Z"
+          "actualizadoEn": "2026-04-26T16:44:32.749Z"
         },
         {
           "id": "469035",
@@ -191,7 +199,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T15:54:50.787Z",
+      "actualizadoEn": "2026-04-26T16:44:32.749Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
