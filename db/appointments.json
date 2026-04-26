@@ -61,6 +61,21 @@
       "notas": "Instalación de dispositivos de cliente en premisas de cliente",
       "creadoEn": "2026-04-26T20:44:19.376Z",
       "actualizadoEn": "2026-04-26T20:44:42.917Z"
+    },
+    {
+      "id": "mogb0rtha17dw053wmw",
+      "contactId": "moca7zhiaemq37wxhsp",
+      "contactNombre": "Fernando Alonso",
+      "contactEmpresa": "CollabMCR Technology Corporation",
+      "titulo": "Entrega de headsets 950",
+      "fecha": "2026-04-29",
+      "horaInicio": "13:30",
+      "horaFin": "15:30",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "Oscar Piastro",
+      "notas": "Se entregan los headsets que pidió el cliente",
+      "creadoEn": "2026-04-26T21:52:36.821Z"
     }
   ]
 }
