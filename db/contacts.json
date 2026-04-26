@@ -104,6 +104,14 @@
           "creadoEn": "2026-04-26T18:07:12.492Z",
           "actualizaciones": [
             {
+              "id": "1777226980576",
+              "nota": "El cliente solicita una solución lo antes posible para el problema de que los agentes no pueden cambiar de estado ni atender llamadas en Webex Contact Center. Se requiere atención urgente.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T18:09:40.576Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mog30cf9m9gbu537thn",
               "nota": "se recibe el caso, se da prioridad uno, vamos a revisar que esta pasando",
               "agente": "Lando Norris",
@@ -120,11 +128,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T18:08:19.941Z"
+          "actualizadoEn": "2026-04-26T18:09:40.576Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T18:08:19.941Z",
+      "actualizadoEn": "2026-04-26T18:09:40.576Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
