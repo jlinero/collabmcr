@@ -251,9 +251,17 @@
           "id": "713092",
           "numero": "713092",
           "nombre": "Desconexión de llamadas en Webex Calling",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-26T17:21:01.572Z",
           "actualizaciones": [
+            {
+              "id": "mog2e8u583hdc9nw9rr",
+              "nota": "Se cierra el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-26T17:51:08.861Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1777224819654",
               "nota": "El cliente solicita que se le dé mayor prioridad al caso, ya que aún no se ha solucionado y los usuarios siguen afectados.",
@@ -287,11 +295,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T17:33:39.654Z"
+          "actualizadoEn": "2026-04-26T17:51:08.861Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T17:33:39.654Z",
+      "actualizadoEn": "2026-04-26T17:51:08.861Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
