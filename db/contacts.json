@@ -246,10 +246,27 @@
             }
           ],
           "actualizadoEn": "2026-04-26T17:18:49.002Z"
+        },
+        {
+          "id": "713092",
+          "numero": "713092",
+          "nombre": "Desconexión de llamadas en Webex Calling",
+          "estado": "abierto",
+          "creadoEn": "2026-04-26T17:21:01.572Z",
+          "actualizaciones": [
+            {
+              "id": "1777224061572",
+              "nota": "Los usuarios reportan que las llamadas se desconectan en la mitad de la conversación. Se requiere revisión urgente del servicio.",
+              "agente": "Sistema",
+              "fecha": "2026-04-26T17:21:01.572Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T17:18:49.002Z",
+      "actualizadoEn": "2026-04-26T17:21:01.572Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
