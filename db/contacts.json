@@ -167,9 +167,17 @@
           "id": "255342",
           "numero": "255342",
           "nombre": "Falla de login en interfaz de agente Webex Contact Center",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-26T15:53:05.683Z",
           "actualizaciones": [
+            {
+              "id": "1777222302598",
+              "nota": "El cliente solicita el cierre del caso porque considera que ya no requiere más soporte.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T16:51:42.598Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mofy8oirs3rrxs5kv9k",
               "nota": "Se encontró un problema en la paltaforma de Webex que esta siendo solucionada, el tiempo estimado de resolución es 30 minutos",
@@ -195,11 +203,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T15:54:50.787Z"
+          "actualizadoEn": "2026-04-26T16:51:42.598Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T16:44:32.749Z",
+      "actualizadoEn": "2026-04-26T16:51:42.598Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
