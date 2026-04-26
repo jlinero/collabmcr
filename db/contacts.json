@@ -150,9 +150,17 @@
           "id": "778133",
           "numero": "778133",
           "nombre": "Falla en Customer Assist de Webex Calling",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-26T18:47:55.512Z",
           "actualizaciones": [
+            {
+              "id": "mog4gqoilb7wtj6d8m",
+              "nota": "se encontró el problema en la plataforma de Webex, ya esta solucionado, informar al cliente",
+              "agente": "",
+              "fecha": "2026-04-26T18:49:04.530Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "mog4gbc8gw2lr508hwi",
               "nota": "Revisando el problema con Customer Assist",
@@ -170,11 +178,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T18:48:44.648Z"
+          "actualizadoEn": "2026-04-26T18:49:04.530Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T18:48:44.648Z",
+      "actualizadoEn": "2026-04-26T18:49:04.530Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
