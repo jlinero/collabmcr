@@ -233,9 +233,17 @@
           "id": "319501",
           "numero": "319501",
           "nombre": "Asesoría en configuración de flujo de Contact Center",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-04-26T23:53:45.079Z",
           "actualizaciones": [
+            {
+              "id": "1777247968758",
+              "nota": "El cliente solicita cerrar el caso porque ya encontró la solución a la configuración.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T23:59:28.758Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1777247625079",
               "nota": "El cliente solicita apoyo para la configuración de un flujo en Webex Contact Center. Requiere asesoría sobre cómo diseñar y ajustar el flujo para su operación.",
@@ -244,11 +252,12 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-26T23:59:28.758Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T23:53:45.079Z",
+      "actualizadoEn": "2026-04-26T23:59:28.758Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
