@@ -159,9 +159,17 @@
           "id": "255342",
           "numero": "255342",
           "nombre": "Falla de login en interfaz de agente Webex Contact Center",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-26T15:53:05.683Z",
           "actualizaciones": [
+            {
+              "id": "mofy7uhcbd2odw1xuvg",
+              "nota": "El caso esta en revisión",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-26T15:54:11.856Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1777218785683",
               "nota": "Los agentes reportan que no pueden hacer login en la interfaz de agente de Webex Contact Center. El problema afecta a varios usuarios y requiere revisión de configuración de extensiones, DN y layout.",
@@ -170,11 +178,12 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-26T15:54:11.856Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T15:53:05.683Z",
+      "actualizadoEn": "2026-04-26T15:54:11.856Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
