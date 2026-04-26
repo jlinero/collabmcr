@@ -163,6 +163,14 @@
           "creadoEn": "2026-04-26T15:53:05.683Z",
           "actualizaciones": [
             {
+              "id": "mofy8oirs3rrxs5kv9k",
+              "nota": "Se encontró un problema en la paltaforma de Webex que esta siendo solucionada, el tiempo estimado de resolución es 30 minutos",
+              "agente": "",
+              "fecha": "2026-04-26T15:54:50.787Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
               "id": "mofy7uhcbd2odw1xuvg",
               "nota": "El caso esta en revisión",
               "agente": "Lando Norris",
@@ -179,11 +187,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T15:54:11.856Z"
+          "actualizadoEn": "2026-04-26T15:54:50.787Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T15:54:11.856Z",
+      "actualizadoEn": "2026-04-26T15:54:50.787Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
