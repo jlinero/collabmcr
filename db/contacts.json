@@ -145,10 +145,27 @@
             }
           ],
           "actualizadoEn": "2026-04-26T18:40:59.640Z"
+        },
+        {
+          "id": "778133",
+          "numero": "778133",
+          "nombre": "Falla en Customer Assist de Webex Calling",
+          "estado": "abierto",
+          "creadoEn": "2026-04-26T18:47:55.512Z",
+          "actualizaciones": [
+            {
+              "id": "1777229275512",
+              "nota": "El cliente reporta que la característica Customer Assist de su servicio Webex Calling no está funcionando correctamente.",
+              "agente": "Sistema",
+              "fecha": "2026-04-26T18:47:55.512Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T18:40:59.640Z",
+      "actualizadoEn": "2026-04-26T18:47:55.512Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
