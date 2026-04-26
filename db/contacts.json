@@ -217,9 +217,17 @@
           "id": "157051",
           "numero": "157051",
           "nombre": "Problemas de calidad de servicio en Webex Calling",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-26T17:11:51.687Z",
           "actualizaciones": [
+            {
+              "id": "mog130s27m0101i6cj",
+              "nota": "Se esta haciendo una revisión de las ultimas llamadas, aunque se ven problemas en las llamadas en el Control Hub, aún no se logra identificar cual puede ser la causa. Se va a usar la solución de Thousand Eyes que se tiene en este cliente para poder tener claro en donde se presenta el problema",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-26T17:14:25.586Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1777223511687",
               "nota": "Varios usuarios reportan problemas de calidad de servicio en Webex Calling.",
@@ -228,11 +236,12 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-26T17:14:25.586Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T17:11:51.687Z",
+      "actualizadoEn": "2026-04-26T17:14:25.586Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
