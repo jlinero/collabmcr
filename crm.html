@@ -1815,7 +1815,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
 });
 
 // ── AUTO-REFRESH POLLING ──────────────────────────────
-const POLL_INTERVAL = 10000; // 10 segundos
+const POLL_INTERVAL = 15000; // 15 segundos
 
 let pollTimer = null;
 let lastSHA   = '';
@@ -1834,59 +1834,27 @@ async function pollCheck(){
   if(!PAT) return;
   setPollUI('syncing');
   try{
-    // Pedir sin caché para siempre obtener el SHA más reciente
-    const r = await fetch(GH_API+'?t='+Date.now(), {
-      headers:{
-        'Authorization':'token '+PAT,
-        'Accept':'application/vnd.github.v3+json',
-        'Cache-Control':'no-cache'
-      }
-    });
-    if(!r.ok){ setPollUI(''); return; }
-    const data = await r.json();
-    const remoteSHA = data.sha;
+    // Siempre hace un ghGet completo — así garantiza datos frescos cada 15s
+    const newDB = await ghGet();
+    if(!newDB){ setPollUI(''); return; }
 
-    // Primera vez — guardar SHA sin notificar
-    if(!lastSHA){
-      lastSHA = remoteSHA;
-      setPollUI('active');
-      return;
+    const changed = sha !== lastSHA;
+    lastSHA = sha;
+
+    // Siempre actualiza la base de datos local
+    db = newDB;
+    renderList();
+    updateStats();
+
+    // Siempre refresca el detalle si hay un contacto abierto
+    if(activeId){
+      const updated = db.contacts.find(c=>c.id===activeId);
+      if(updated) renderDetail(updated);
     }
 
-    if(remoteSHA !== lastSHA){
-      // SHA cambió — decodificar el content que ya viene en la respuesta
-      try{
-        const raw   = decodeURIComponent(escape(atob(data.content.replace(/\n/g,''))));
-        const newDB = JSON.parse(raw);
-        db      = newDB;
-        sha     = remoteSHA;
-        lastSHA = remoteSHA;
-        renderList();
-        updateStats();
-        // Refrescar detalle si hay contacto abierto
-        if(activeId){
-          const updated = db.contacts.find(c=>c.id===activeId);
-          if(updated) renderDetail(updated);
-        }
-        toast('✦ Datos actualizados automáticamente','info',2500);
-      }catch(decodeErr){
-        console.warn('Poll decode error:',decodeErr.message);
-        // Si falla el decode, hacer un ghGet completo
-        const newDB = await ghGet();
-        if(newDB){
-          db      = newDB;
-          lastSHA = sha;
-          renderList();
-          updateStats();
-          if(activeId){
-            const updated = db.contacts.find(c=>c.id===activeId);
-            if(updated) renderDetail(updated);
-          }
-        }
-      }
-    }
+    // Solo muestra toast si hubo un cambio externo real
+    if(changed) toast('✦ Datos actualizados automáticamente','info',2500);
 
-    lastSHA = remoteSHA;
     setPollUI('active');
   }catch(e){
     console.warn('Poll error:',e.message);
@@ -1898,7 +1866,6 @@ function startPolling(){
   if(pollTimer) clearInterval(pollTimer);
   lastSHA = sha;
   setPollUI('active');
-  pollCheck(); // verificación inmediata al arrancar
   pollTimer = setInterval(pollCheck, POLL_INTERVAL);
 }
 
