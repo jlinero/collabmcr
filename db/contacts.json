@@ -154,6 +154,14 @@
           "creadoEn": "2026-04-26T18:47:55.512Z",
           "actualizaciones": [
             {
+              "id": "mog4gbc8gw2lr508hwi",
+              "nota": "Revisando el problema con Customer Assist",
+              "agente": "",
+              "fecha": "2026-04-26T18:48:44.648Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
               "id": "1777229275512",
               "nota": "El cliente reporta que la característica Customer Assist de su servicio Webex Calling no está funcionando correctamente.",
               "agente": "Sistema",
@@ -161,11 +169,12 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-26T18:48:44.648Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T18:47:55.512Z",
+      "actualizadoEn": "2026-04-26T18:48:44.648Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
