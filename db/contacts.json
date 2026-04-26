@@ -186,10 +186,27 @@
             }
           ],
           "actualizadoEn": "2026-04-26T18:50:41.646Z"
+        },
+        {
+          "id": "145636",
+          "numero": "145636",
+          "nombre": "Falla en Screen Pop de CRM en Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-04-26T19:02:57.906Z",
+          "actualizaciones": [
+            {
+              "id": "1777230177906",
+              "nota": "Cuando el agente recibe una interacción, no aparece el popup del CRM en la interfaz de agente. El usuario revisó y no identifica el problema.",
+              "agente": "Sistema",
+              "fecha": "2026-04-26T19:02:57.906Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T18:50:41.646Z",
+      "actualizadoEn": "2026-04-26T19:02:57.906Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
