@@ -95,11 +95,27 @@
         }
       ],
       "tickets": [
+        {},
         {
-      }
+          "id": "917100",
+          "numero": "917100",
+          "nombre": "Agentes no pueden cambiar de estado ni atender llamadas en Webex Contact Center (urgente)",
+          "estado": "abierto",
+          "creadoEn": "2026-04-26T18:07:12.492Z",
+          "actualizaciones": [
+            {
+              "id": "1777226832492",
+              "nota": "Los agentes en el servicio de Webex Contact Center no pueden cambiar de estado ni estar disponibles para llamadas o mensajes de clientes. Esto impide la atención de clientes y requiere resolución urgente.",
+              "agente": "Sistema",
+              "fecha": "2026-04-26T18:07:12.492Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
+        }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T17:51:08.861Z",
+      "actualizadoEn": "2026-04-26T18:07:12.492Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
