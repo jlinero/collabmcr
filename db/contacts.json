@@ -100,9 +100,17 @@
           "id": "917100",
           "numero": "917100",
           "nombre": "Agentes no pueden cambiar de estado ni atender llamadas en Webex Contact Center (urgente)",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-26T18:07:12.492Z",
           "actualizaciones": [
+            {
+              "id": "1777228859640",
+              "nota": "El cliente encontró el problema en el firewall de su red y solicita el cierre del caso.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T18:40:59.640Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mog44rt462s8fdvlptj",
               "nota": "Se encuentra el problema en la red del cliente, se debe pedir solucionarlo",
@@ -136,11 +144,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T18:39:46.120Z"
+          "actualizadoEn": "2026-04-26T18:40:59.640Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T18:39:46.120Z",
+      "actualizadoEn": "2026-04-26T18:40:59.640Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
