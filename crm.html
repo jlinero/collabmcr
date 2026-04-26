@@ -1523,12 +1523,13 @@ function setView(view){
     cal.classList.add('show');
     nc.classList.remove('active');
     ncal.classList.add('active');
-    loadAppts();
+    loadAppts().then(()=>startCalPolling());
   } else {
     cv.style.display='flex';
     cal.classList.remove('show');
     nc.classList.add('active');
     ncal.classList.remove('active');
+    stopCalPolling();
   }
 }
 
@@ -1568,6 +1569,47 @@ async function loadAppts(){
     appts = (data||{appointments:[]}).appointments||[];
     renderCal();
   }catch(e){ console.warn('Appointments load error:',e.message); appts=[]; renderCal(); }
+}
+
+// ── CALENDAR POLLING ─────────────────────────────────
+const CAL_POLL_INTERVAL = 15000; // 15 segundos
+let calPollTimer  = null;
+let lastApptSHA   = '';
+let calPollActive = false;
+
+async function calPollCheck(){
+  if(!PAT || calPollActive) return;
+  // Solo correr si el calendario está visible
+  const calView = document.getElementById('calView');
+  if(!calView || !calView.classList.contains('show')) return;
+
+  calPollActive = true;
+  try{
+    const data = await apptGet();
+    if(!data){ calPollActive=false; return; }
+    const newSHA = apptSHA;
+    if(lastApptSHA && newSHA !== lastApptSHA){
+      appts = (data||{appointments:[]}).appointments||[];
+      renderCal();
+      console.log('[CAL POLL] Calendario actualizado | SHA:', newSHA.slice(0,8));
+    }
+    lastApptSHA = newSHA;
+  }catch(e){
+    console.warn('[CAL POLL] Error:', e.message);
+  }
+  calPollActive = false;
+}
+
+function startCalPolling(){
+  if(calPollTimer){ clearInterval(calPollTimer); calPollTimer=null; }
+  lastApptSHA = apptSHA;
+  calPollCheck();
+  calPollTimer = setInterval(calPollCheck, CAL_POLL_INTERVAL);
+  console.log('[CAL POLL] Started — interval:', CAL_POLL_INTERVAL/1000, 's');
+}
+
+function stopCalPolling(){
+  if(calPollTimer){ clearInterval(calPollTimer); calPollTimer=null; }
 }
 
 // ══════════════════════════════════════════════════════
@@ -1885,8 +1927,12 @@ function stopPolling(){
 document.addEventListener('visibilitychange',()=>{
   if(document.hidden){
     stopPolling();
+    stopCalPolling();
   } else if(PAT){
     startPolling();
+    // Reanudar cal polling solo si el calendario está visible
+    const calView = document.getElementById('calView');
+    if(calView && calView.classList.contains('show')) startCalPolling();
   }
 });
 </script>
