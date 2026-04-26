@@ -255,6 +255,14 @@
           "creadoEn": "2026-04-26T17:21:01.572Z",
           "actualizaciones": [
             {
+              "id": "mog1ou4s7tnc2y1zqo9",
+              "nota": "Se esta trabajando para verificar la falla",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-26T17:31:23.404Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "1777224221333",
               "nota": "El cliente solicita una resolución urgente porque tiene varios reportes de usuarios afectados. Se requiere priorizar la atención y avanzar en la solución del caso.",
               "agente": "cliente",
@@ -271,11 +279,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T17:23:41.333Z"
+          "actualizadoEn": "2026-04-26T17:31:23.404Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T17:23:41.333Z",
+      "actualizadoEn": "2026-04-26T17:31:23.404Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
