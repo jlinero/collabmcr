@@ -191,9 +191,17 @@
           "id": "145636",
           "numero": "145636",
           "nombre": "Falla en Screen Pop de CRM en Webex Contact Center",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-26T19:02:57.906Z",
           "actualizaciones": [
+            {
+              "id": "1777241742971",
+              "nota": "El cliente confirma que el problema fue corregido, ya no existe la falla. Se corrigió el JSON de la interfaz de agente.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T22:15:42.971Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1777230348113",
               "nota": "El cliente informa que compartió la información solicitada por correo electrónico.",
@@ -219,11 +227,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T19:05:48.113Z"
+          "actualizadoEn": "2026-04-26T22:15:42.971Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T19:05:48.113Z",
+      "actualizadoEn": "2026-04-26T22:15:42.971Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
