@@ -45,6 +45,21 @@
       "agente": "Lando Norris",
       "notas": "Agendamiento de mantenimiento",
       "creadoEn": "2026-04-26T20:41:09.255Z"
+    },
+    {
+      "id": "mog8ky7km985bf6sp2j",
+      "contactId": "mocagoenpa1y7kiuko",
+      "contactNombre": "Daniel Tobar",
+      "contactEmpresa": "Cisco",
+      "titulo": "Instalación Dispositivos de Video",
+      "fecha": "2026-04-28",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "Oscar Piastri",
+      "notas": "Instalación de dispositivos de cliente en premisas de cliente",
+      "creadoEn": "2026-04-26T20:44:19.376Z"
     }
   ]
 }
