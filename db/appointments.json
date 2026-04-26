@@ -30,6 +30,21 @@
       "agente": "",
       "notas": "",
       "creadoEn": "2026-04-24T02:44:37.697Z"
+    },
+    {
+      "id": "mog8gvifuz11x4u60ur",
+      "contactId": "moca9homcbzjupb4f0n",
+      "contactNombre": "Genny Baron",
+      "contactEmpresa": "Cisco",
+      "titulo": "Mantenimiento del servicio de Webex Calling",
+      "fecha": "2026-04-27",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "Lando Norris",
+      "notas": "Agendamiento de mantenimiento",
+      "creadoEn": "2026-04-26T20:41:09.255Z"
     }
   ]
 }
