@@ -255,6 +255,14 @@
           "creadoEn": "2026-04-26T17:21:01.572Z",
           "actualizaciones": [
             {
+              "id": "1777224819654",
+              "nota": "El cliente solicita que se le dé mayor prioridad al caso, ya que aún no se ha solucionado y los usuarios siguen afectados.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T17:33:39.654Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mog1ou4s7tnc2y1zqo9",
               "nota": "Se esta trabajando para verificar la falla",
               "agente": "Lando Norris",
@@ -279,11 +287,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T17:31:23.404Z"
+          "actualizadoEn": "2026-04-26T17:33:39.654Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T17:31:23.404Z",
+      "actualizadoEn": "2026-04-26T17:33:39.654Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
