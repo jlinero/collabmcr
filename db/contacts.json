@@ -217,9 +217,17 @@
           "id": "157051",
           "numero": "157051",
           "nombre": "Problemas de calidad de servicio en Webex Calling",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-26T17:11:51.687Z",
           "actualizaciones": [
+            {
+              "id": "1777223929002",
+              "nota": "Haciendo una revisión interna se identificó que el problema estaba en el firewall. El cliente solicita el cierre del caso.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T17:18:49.002Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mog130s27m0101i6cj",
               "nota": "Se esta haciendo una revisión de las ultimas llamadas, aunque se ven problemas en las llamadas en el Control Hub, aún no se logra identificar cual puede ser la causa. Se va a usar la solución de Thousand Eyes que se tiene en este cliente para poder tener claro en donde se presenta el problema",
@@ -237,11 +245,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T17:14:25.586Z"
+          "actualizadoEn": "2026-04-26T17:18:49.002Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T17:14:25.586Z",
+      "actualizadoEn": "2026-04-26T17:18:49.002Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
