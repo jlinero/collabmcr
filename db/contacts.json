@@ -141,9 +141,17 @@
           "id": "469035",
           "numero": "469035",
           "nombre": "Inestabilidad de internet afecta reunión Webex",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-25T00:38:22.476Z",
           "actualizaciones": [
+            {
+              "id": "1777222504881",
+              "nota": "El cliente solicita el cierre del caso porque encontró un problema en uno de sus switches que estaba afectando el servicio.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T16:55:04.881Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "modmup6bnewrd9ty42",
               "nota": "Se revisa el canal de internet del usuario y efectivamente se ven perdidas, se esta escalando con el area de plataforma",
@@ -161,7 +169,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-25T01:00:30.323Z"
+          "actualizadoEn": "2026-04-26T16:55:04.881Z"
         },
         {
           "id": "255342",
@@ -207,7 +215,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T16:51:42.598Z",
+      "actualizadoEn": "2026-04-26T16:55:04.881Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
