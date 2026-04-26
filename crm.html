@@ -966,11 +966,12 @@ function renderDetail(c){
     : '<div class="empty"><i class="fa fa-history"></i><p>Sin actividades registradas.</p></div>';
 
   // Últimas 4 de cada uno
-  const sortedDeals   = deals.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
-  const sortedTickets = tickets.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
-  const last4Acts     = acts.slice(0,4);
-  const last4Deals    = sortedDeals.slice(0,4);
-  const last4Tickets  = sortedTickets.slice(0,4);
+  const sortedDeals    = deals.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
+  const sortedTickets  = tickets.slice().sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
+  const activeTickets  = sortedTickets.filter(t=>t.estado==='abierto'||t.estado==='en progreso');
+  const last4Acts      = acts.slice(0,4);
+  const last4Deals     = sortedDeals.slice(0,4);
+  const last4Tickets   = activeTickets.slice(0,4);
 
   const dealItemHTML = d=>`
     <div class="deal-item">
@@ -1078,11 +1079,11 @@ function renderDetail(c){
         </div>
         <div class="s-card">
           <div class="s-card-h">
-            <div class="s-card-title"><i class="fa fa-ticket-alt"></i>Tickets (${tickets.length})</div>
+            <div class="s-card-title"><i class="fa fa-ticket-alt"></i>Tickets activos (${activeTickets.length})</div>
             <button class="add-btn" onclick="openM('ticket')"><i class="fa fa-plus"></i>Nuevo</button>
           </div>
-          ${last4Tickets.length ? last4Tickets.map(tktItemHTML).join('') : '<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>'}
-          ${tickets.length>4?`<button class="ver-todo-btn" onclick="openHistorial('tickets')"><i class="fa fa-list"></i>Ver todos los tickets (${tickets.length})</button>`:''}
+          ${last4Tickets.length ? last4Tickets.map(tktItemHTML).join('') : '<div class="empty"><i class="fa fa-ticket-alt"></i><p>Sin tickets abiertos o en progreso.</p></div>'}
+          ${tickets.length>0?`<button class="ver-todo-btn" onclick="openHistorial('tickets')"><i class="fa fa-list"></i>Ver historial completo (${tickets.length} total)</button>`:''}
         </div>
       </div>
     </div>
@@ -1115,20 +1116,20 @@ function renderDetail(c){
       </div>
       <div class="sc">
         <div class="sc-h">
-          <span class="sc-title">Tickets (${tickets.length})</span>
+          <span class="sc-title">Tickets activos (${activeTickets.length})</span>
           <button class="add-btn" onclick="openM('ticket')" style="padding:2px 7px;"><i class="fa fa-plus"></i></button>
         </div>
         ${last4Tickets.length
           ? last4Tickets.map(t=>`<div class="ticket-item" onclick="openTktDetail('${t.id}')">
-              <div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div>
+              <div class="t-dot ${t.estado==='en progreso'?'en progreso':'abierto'}"></div>
               <div style="flex:1;min-width:0;">
                 <div class="t-nm">${t.nombre}</div>
                 <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:1px;">#${t.numero||t.id}</div>
               </div>
               <span class="t-age">${t.estado}</span>
             </div>`).join('')
-          : '<div class="empty" style="padding:14px;"><p>Sin tickets.</p></div>'}
-        ${tickets.length>4?`<button class="ver-todo-btn" onclick="openHistorial('tickets')"><i class="fa fa-list"></i>Ver todos (${tickets.length})</button>`:''}
+          : '<div class="empty" style="padding:14px;"><p>Sin tickets activos.</p></div>'}
+        ${tickets.length>0?`<button class="ver-todo-btn" onclick="openHistorial('tickets')"><i class="fa fa-list"></i>Ver historial (${tickets.length} total)</button>`:''}
       </div>
     </div>
   </div>`;
@@ -1453,23 +1454,43 @@ function openHistorial(tipo){
   }
 
   if(tipo==='tickets'){
-    title=`TICKETS (${tickets.length})`;
-    eye='// Historial de tickets';
-    html=tickets.length
-      ? tickets.map(t=>`
-          <div class="ticket-item" onclick="closeM('historial');openTktDetail('${t.id}')">
-            <div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div>
-            <div style="flex:1;min-width:0;">
-              <div class="t-nm">${t.nombre}</div>
-              <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:2px;">#${t.numero||t.id} · ${fmtD(t.creadoEn)}</div>
-            </div>
-            <div style="text-align:right;">
-              <span class="t-age" style="display:block;">${t.estado}</span>
-              <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">${t.actualizaciones?.length||0} actualizaciones</span>
-            </div>
-            <i class="fa fa-chevron-right" style="font-size:10px;color:var(--muted);flex-shrink:0;margin-left:8px;"></i>
-          </div>`).join('')
-      : '<div class="empty" style="padding:32px;"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>';
+    const activos  = tickets.filter(t=>t.estado==='abierto'||t.estado==='en progreso')
+                            .sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
+    const cerrados = tickets.filter(t=>t.estado==='cerrado')
+                            .sort((a,b)=>new Date(b.creadoEn||0)-new Date(a.creadoEn||0));
+    title=`HISTORIAL DE TICKETS (${tickets.length})`;
+    eye='// Tickets — activos y cerrados';
+
+    const tktRow = t=>`
+      <div class="ticket-item" onclick="closeM('historial');openTktDetail('${t.id}')">
+        <div class="t-dot ${t.estado==='cerrado'?'cerrado':t.estado==='en progreso'?'en progreso':'abierto'}"></div>
+        <div style="flex:1;min-width:0;">
+          <div class="t-nm">${t.nombre}</div>
+          <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);margin-top:2px;">#${t.numero||t.id} · ${fmtD(t.creadoEn)}</div>
+        </div>
+        <div style="text-align:right;">
+          <span class="t-age" style="display:block;">${t.estado}</span>
+          <span style="font-family:var(--font-mono);font-size:9px;color:var(--muted2);">${t.actualizaciones?.length||0} notas</span>
+        </div>
+        <i class="fa fa-chevron-right" style="font-size:10px;color:var(--muted);flex-shrink:0;margin-left:8px;"></i>
+      </div>`;
+
+    html = tickets.length === 0
+      ? '<div class="empty" style="padding:32px;"><i class="fa fa-ticket-alt"></i><p>Sin tickets.</p></div>'
+      : `${activos.length>0
+            ? `<div class="hist-group-lbl" style="color:var(--cyan);">
+                 <i class="fa fa-circle" style="font-size:7px;margin-right:6px;"></i>
+                 ACTIVOS (${activos.length})
+               </div>
+               ${activos.map(tktRow).join('')}`
+            : '<div class="hist-group-lbl" style="color:var(--muted);">Sin tickets activos</div>'}
+         ${cerrados.length>0
+            ? `<div class="hist-group-lbl" style="color:var(--green);margin-top:4px;">
+                 <i class="fa fa-check-circle" style="font-size:9px;margin-right:6px;"></i>
+                 CERRADOS (${cerrados.length})
+               </div>
+               ${cerrados.map(tktRow).join('')}`
+            : ''}`;
   }
 
   document.getElementById('hist-eye').textContent=eye;
