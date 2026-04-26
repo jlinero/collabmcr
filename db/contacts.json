@@ -195,6 +195,14 @@
           "creadoEn": "2026-04-26T19:02:57.906Z",
           "actualizaciones": [
             {
+              "id": "1777230348113",
+              "nota": "El cliente informa que compartió la información solicitada por correo electrónico.",
+              "agente": "cliente",
+              "fecha": "2026-04-26T19:05:48.113Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mog509dx6usw8k1zaeq",
               "nota": "Caso recibido, se procede a revisar, es necesario solicitar al cliente que envíe el JSON del Desktop del agente para poder revisar porque no funciona",
               "agente": "Oscar Piastri",
@@ -211,11 +219,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-26T19:04:15.237Z"
+          "actualizadoEn": "2026-04-26T19:05:48.113Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T19:04:15.237Z",
+      "actualizadoEn": "2026-04-26T19:05:48.113Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
