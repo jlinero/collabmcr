@@ -76,6 +76,23 @@
       "agente": "Oscar Piastro",
       "notas": "Se entregan los headsets que pidió el cliente",
       "creadoEn": "2026-04-26T21:52:36.821Z"
+    },
+    {
+      "id": "17773047118242926",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Instalación Webex Contact Center",
+      "proposito": "Instalación de Webex Contact Center",
+      "fecha": "2026-04-30",
+      "horaInicio": "10:00",
+      "horaFin": "10:30",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Instalación del servicio de Webex Contact Center solicitada por el cliente para el jueves 30 de abril de 2026 a las 10:00 a. m.",
+      "creadoEn": "2026-04-27T15:45:11.824Z"
     }
   ]
 }
