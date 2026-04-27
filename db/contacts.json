@@ -254,10 +254,27 @@
             }
           ],
           "actualizadoEn": "2026-04-26T23:59:28.758Z"
+        },
+        {
+          "id": "426856",
+          "numero": "426856",
+          "nombre": "Problemas de calidad de servicio en Webex Calling",
+          "estado": "abierto",
+          "creadoEn": "2026-04-27T15:37:05.616Z",
+          "actualizaciones": [
+            {
+              "id": "1777304225616",
+              "nota": "Los usuarios reportan problemas de calidad de servicio en la mayoría de las llamadas de Webex Calling. Se requiere análisis de red, dispositivos y configuración. Se recomienda revisar métricas de Control Hub como pérdida de paquetes, jitter y latencia.",
+              "agente": "Sistema",
+              "fecha": "2026-04-27T15:37:05.616Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-26T23:59:28.758Z",
+      "actualizadoEn": "2026-04-27T15:37:05.616Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
