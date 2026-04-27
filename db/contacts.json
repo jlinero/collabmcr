@@ -141,9 +141,17 @@
           "id": "192153",
           "numero": "192153",
           "nombre": "Problemas de login en Contact Center",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-27T19:15:32.271Z",
           "actualizaciones": [
+            {
+              "id": "1777317936319",
+              "nota": "Solicito que el caso sea puesto en progreso y escalado internamente con prioridad, ya que todo el servicio de Atenci√≥nal Cliente est· ca√≠d.",
+              "agente": "cliente",
+              "fecha": "2026-04-27T19:25:36.319Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1777317332271",
               "nota": "Los agentes no pueden iniciar sesiÛn en el servicio de Contact Center, han intentado desde varios navegadores y no funciona.",
@@ -152,11 +160,12 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-27T19:25:36.319Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-27T19:15:32.271Z",
+      "actualizadoEn": "2026-04-27T19:25:36.319Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
@@ -183,14 +192,14 @@
         {
           "id": "1776984769024",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene inter√É©en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter√¬í©n el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:52:49.024Z"
         },
         {
           "id": "1776982078529",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene inter√É©en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter√¬í©n el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:07:58.529Z"
         }
@@ -211,7 +220,7 @@
       "empresa": "CollabMCR Technology Corporation",
       "dominioEmpresa": "collab-col.wbx.ai",
       "telEmpresa": "5957",
-      "ciudad": "Bogot√√Ç°olombia",
+      "ciudad": "Bogot√√°olombia",
       "etapaVida": "cliente",
       "estadoLead": "Conectado",
       "propietarioContacto": "",
@@ -263,7 +272,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogot·, Colombia",
+      "ciudad": "Bogot√°,Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -289,7 +298,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogot·, Colombia",
+      "ciudad": "Bogot√°,Colombia",
       "etapaVida": "nuevo",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
