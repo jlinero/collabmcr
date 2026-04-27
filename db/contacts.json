@@ -99,9 +99,17 @@
           "id": "120904",
           "numero": "120904",
           "nombre": "Problemas en el establecimiento de llamadas en Webex Calling",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-27T17:46:54.285Z",
           "actualizaciones": [
+            {
+              "id": "mohhtgkfxnk1d5tzr9",
+              "nota": "Se va a revisar los detalles de la llamada",
+              "agente": "",
+              "fecha": "2026-04-27T17:50:39.135Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "mohhsy4fkyy7rvx9k3p",
               "nota": "se esta revisando el caso",
@@ -119,11 +127,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-27T17:50:15.231Z"
+          "actualizadoEn": "2026-04-27T17:50:39.135Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-27T17:50:15.231Z",
+      "actualizadoEn": "2026-04-27T17:50:39.135Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
