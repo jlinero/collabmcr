@@ -127,6 +127,23 @@
       "agente": "",
       "notas": "Instalación de Room Bar solicitada por el cliente para el 28 de abril de 2026 a las 12:08 p. m.",
       "creadoEn": "2026-04-27T18:25:37.074Z"
+    },
+    {
+      "id": "1777316676428854",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Mantenimiento Webex Calling",
+      "proposito": "Mantenimiento de Webex Calling",
+      "fecha": "2026-04-27",
+      "horaInicio": "14:12",
+      "horaFin": "14:42",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Mantenimiento programado para Webex Calling según acuerdo con el cliente.",
+      "creadoEn": "2026-04-27T19:04:36.428Z"
     }
   ]
 }
