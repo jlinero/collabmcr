@@ -76,6 +76,23 @@
       "agente": "Oscar Piastro",
       "notas": "Se entregan los headsets que pidió el cliente",
       "creadoEn": "2026-04-26T21:52:36.821Z"
+    },
+    {
+      "id": "17773010009201430",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Instalación Webex Calling",
+      "proposito": "Instalación de Webex Calling",
+      "fecha": "2026-04-27",
+      "horaInicio": "09:50",
+      "horaFin": "10:20",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Instalación del servicio de Webex Calling solicitada por el cliente para hoy a las 9:50 a. m.",
+      "creadoEn": "2026-04-27T14:43:20.920Z"
     }
   ]
 }
