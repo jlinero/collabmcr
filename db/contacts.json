@@ -31,14 +31,14 @@
         {
           "id": "1776996900745",
           "tipo": "whatsapp",
-          "descripcion": "El cliente se comunic√É≥ara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estar· comunicando cuando se tengan avances",
+          "descripcion": "El cliente se comunic√Éíara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estar· comunicando cuando se tengan avances",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T02:15:00.745Z"
         },
         {
           "id": "1776994507908",
           "tipo": "llamada",
-          "descripcion": "El cliente, que est√É°onstruyendo un edificio en Medell√É≠ se contactÛ para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenciÛn se brind√É≥nformaciÛn, se verificÛ el pedido en el sistema, se reprogramÛ la entrega para el 27 de abril y tambiÈn se solicit√É≥delantarla; adem·s, se envi√É≥a confirmaci√É≥por correo y se acord√É≥nviar m·s informaciÛn y conectar al cliente con un asesor humano",
+          "descripcion": "El cliente, que est√Éíonstruyendo un edificio en Medell√Éí se contactÛ para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenciÛn se brind√ÉínformaciÛn, se verificÛ el pedido en el sistema, se reprogramÛ la entrega para el 27 de abril y tambiÈn se solicit√Éídelantarla; adem·s, se envi√Éía confirmaci√Éípor correo y se acord√Éínviar m·s informaciÛn y conectar al cliente con un asesor humano",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T01:35:07.908Z"
         },
@@ -59,14 +59,14 @@
         {
           "id": "mobq02qroql",
           "tipo": "email",
-          "descripcion": "El cliente escribi√É≥n correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi√Éín correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T16:53:07.683Z"
         },
         {
           "id": "moaju9bbrk4",
           "tipo": "email",
-          "descripcion": "El cliente escribi√É≥n correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi√Éín correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-22T21:12:52.391Z"
         },
@@ -136,10 +136,27 @@
             }
           ],
           "actualizadoEn": "2026-04-27T17:58:42.349Z"
+        },
+        {
+          "id": "192153",
+          "numero": "192153",
+          "nombre": "Problemas de login en Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-04-27T19:15:32.271Z",
+          "actualizaciones": [
+            {
+              "id": "1777317332271",
+              "nota": "Los agentes no pueden iniciar sesiÛn en el servicio de Contact Center, han intentado desde varios navegadores y no funciona.",
+              "agente": "Sistema",
+              "fecha": "2026-04-27T19:15:32.271Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-27T17:58:42.349Z",
+      "actualizadoEn": "2026-04-27T19:15:32.271Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
@@ -166,14 +183,14 @@
         {
           "id": "1776984769024",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene inter√©sen el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter√É©en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:52:49.024Z"
         },
         {
           "id": "1776982078529",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene inter√©sen el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter√É©en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:07:58.529Z"
         }
@@ -194,7 +211,7 @@
       "empresa": "CollabMCR Technology Corporation",
       "dominioEmpresa": "collab-col.wbx.ai",
       "telEmpresa": "5957",
-      "ciudad": "Bogot√¬°,olombia",
+      "ciudad": "Bogot√√Ç°olombia",
       "etapaVida": "cliente",
       "estadoLead": "Conectado",
       "propietarioContacto": "",
