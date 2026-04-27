@@ -11,7 +11,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "",
       "telEmpresa": "+576013256052",
-      "ciudad": "Bogot√°, Colombia",
+      "ciudad": "Bogot·, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -24,63 +24,63 @@
         {
           "id": "mod2bgldp1d",
           "tipo": "email",
-          "descripcion": "El cliente escribi√≥ un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribiÛ un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-24T15:25:40.417Z"
         },
         {
           "id": "1776996900745",
           "tipo": "whatsapp",
-          "descripcion": "El cliente se comunic√É¬≥ ara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estar√° comunicando cuando se tengan avances",
+          "descripcion": "El cliente se comunic√É≥ara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estar· comunicando cuando se tengan avances",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T02:15:00.745Z"
         },
         {
           "id": "1776994507908",
           "tipo": "llamada",
-          "descripcion": "El cliente, que est√É¬° onstruyendo un edificio en Medell√É¬≠n se contact√≥ para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenci√≥n se brind√É¬≥ nformaci√≥n, se verific√≥ el pedido en el sistema, se reprogram√≥ la entrega para el 27 de abril y tambi√©n se solicit√É¬≥ delantarla; adem√°s, se envi√É¬≥ a confirmaci√É¬≥npor correo y se acord√É¬≥ nviar m√°s informaci√≥n y conectar al cliente con un asesor humano",
+          "descripcion": "El cliente, que est√É°onstruyendo un edificio en Medell√É≠ se contactÛ para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenciÛn se brind√É≥nformaciÛn, se verificÛ el pedido en el sistema, se reprogramÛ la entrega para el 27 de abril y tambiÈn se solicit√É≥delantarla; adem·s, se envi√É≥a confirmaci√É≥por correo y se acord√É≥nviar m·s informaciÛn y conectar al cliente con un asesor humano",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T01:35:07.908Z"
         },
         {
           "id": "1776983282507",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene inter√©s en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene interÈs en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:28:02.507Z"
         },
         {
           "id": "1776982642399",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene inter√©s en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene interÈs en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:17:22.399Z"
         },
         {
           "id": "mobq02qroql",
           "tipo": "email",
-          "descripcion": "El cliente escribi√É¬≥ n correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi√É≥n correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T16:53:07.683Z"
         },
         {
           "id": "moaju9bbrk4",
           "tipo": "email",
-          "descripcion": "El cliente escribi√É¬≥ n correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi√É≥n correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-22T21:12:52.391Z"
         },
         {
           "id": "moajoa9yp0v",
           "tipo": "llamada",
-          "descripcion": "El cliente llam√≥ con inter√©s en Webex Contact Center",
+          "descripcion": "El cliente llamÛ con interÈs en Webex Contact Center",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-22T21:08:13.702Z"
         },
         {
           "id": "moaghznb1hhktni091j",
           "tipo": "llamada",
-          "descripcion": "El cliente esta interesado en la soluci√≥n de Webex Contact Center",
+          "descripcion": "El cliente esta interesado en la soluciÛn de Webex Contact Center",
           "fecha": "2026-04-22T19:39:21.143Z"
         }
       ],
@@ -99,9 +99,17 @@
           "id": "120904",
           "numero": "120904",
           "nombre": "Problemas en el establecimiento de llamadas en Webex Calling",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-27T17:46:54.285Z",
           "actualizaciones": [
+            {
+              "id": "1777312722349",
+              "nota": "El cliente solicita cerrar el caso porque ya encontraron el problema.",
+              "agente": "cliente",
+              "fecha": "2026-04-27T17:58:42.349Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mohhtgkfxnk1d5tzr9",
               "nota": "Se va a revisar los detalles de la llamada",
@@ -127,11 +135,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-27T17:50:39.135Z"
+          "actualizadoEn": "2026-04-27T17:58:42.349Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-27T17:50:39.135Z",
+      "actualizadoEn": "2026-04-27T17:58:42.349Z",
       "updatedAt": "2026-04-24T15:25:40.417Z"
     },
     {
@@ -158,14 +166,14 @@
         {
           "id": "1776984769024",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene inter√©s en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter√©sen el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:52:49.024Z"
         },
         {
           "id": "1776982078529",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene inter√©s en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter√©sen el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:07:58.529Z"
         }
@@ -186,7 +194,7 @@
       "empresa": "CollabMCR Technology Corporation",
       "dominioEmpresa": "collab-col.wbx.ai",
       "telEmpresa": "5957",
-      "ciudad": "Bogot√É¬°,Colombia",
+      "ciudad": "Bogot√¬°,olombia",
       "etapaVida": "cliente",
       "estadoLead": "Conectado",
       "propietarioContacto": "",
@@ -238,7 +246,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogot√°, Colombia",
+      "ciudad": "Bogot·, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -264,7 +272,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogot√°, Colombia",
+      "ciudad": "Bogot·, Colombia",
       "etapaVida": "nuevo",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
