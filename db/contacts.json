@@ -145,6 +145,14 @@
           "creadoEn": "2026-04-27T19:15:32.271Z",
           "actualizaciones": [
             {
+              "id": "moi36fuava56zftdvxe",
+              "nota": "Se esta haciendo una revisión del caso, parece que son problemas de red, pero necesitamos confirmarlo",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-04-28T03:48:36.658Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
               "id": "1777317936319",
               "nota": "Solicito que el caso sea puesto en progreso y escalado internamente con prioridad, ya que todo el servicio de Atención al Cliente está caído.",
               "agente": "cliente",
@@ -161,11 +169,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-27T19:25:36.319Z"
+          "actualizadoEn": "2026-04-28T03:48:36.658Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-27T19:25:36.319Z"
+      "actualizadoEn": "2026-04-28T03:48:36.658Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
