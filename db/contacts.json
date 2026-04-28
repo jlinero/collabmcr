@@ -11,7 +11,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "",
       "telEmpresa": "+576013256052",
-      "ciudad": "Bogotá, Colombia",
+      "ciudad": "Bogot�, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -24,63 +24,63 @@
         {
           "id": "mod2bgldp1d",
           "tipo": "email",
-          "descripcion": "El cliente escribió un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-24T15:25:40.417Z"
         },
         {
           "id": "1776996900745",
           "tipo": "whatsapp",
-          "descripcion": "El cliente se comunicó para preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estará comunicando cuando se tengan avances",
+          "descripcion": "El cliente se comunicó ara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estar� comunicando cuando se tengan avances",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T02:15:00.745Z"
         },
         {
           "id": "1776994507908",
           "tipo": "llamada",
-          "descripcion": "El cliente, que está construyendo un edificio en Medellín se contactó para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atención se brindó información, se verificó el pedido en el sistema, se reprogramó la entrega para el 27 de abril y también se solicitó adelantarla; además, se envió la confirmación por correo y se acordó enviar más información y conectar al cliente con un asesor humano",
+          "descripcion": "El cliente, que está onstruyendo un edificio en Medellínse contact� para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenciónse brind� informaci�n, se verificó l pedido en el sistema, se reprogramó a entrega para el 27 de abril y tambi�n se solicit� adelantarla; además se envi� la confirmaci�n por correo y se acord� enviar másinformacióny conectar al cliente con un asesor humano",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T01:35:07.908Z"
         },
         {
           "id": "1776983282507",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter�s en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:28:02.507Z"
         },
         {
           "id": "1776982642399",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter�s en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:17:22.399Z"
         },
         {
           "id": "mobq02qroql",
           "tipo": "email",
-          "descripcion": "El cliente escribió un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T16:53:07.683Z"
         },
         {
           "id": "moaju9bbrk4",
           "tipo": "email",
-          "descripcion": "El cliente escribió un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-22T21:12:52.391Z"
         },
         {
           "id": "moajoa9yp0v",
           "tipo": "llamada",
-          "descripcion": "El cliente llamó con interés en Webex Contact Center",
+          "descripcion": "El cliente llam� con interésen Webex Contact Center",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-22T21:08:13.702Z"
         },
         {
           "id": "moaghznb1hhktni091j",
           "tipo": "llamada",
-          "descripcion": "El cliente esta interesado en la solución de Webex Contact Center",
+          "descripcion": "El cliente esta interesado en la soluci�n de Webex Contact Center",
           "fecha": "2026-04-22T19:39:21.143Z"
         }
       ],
@@ -146,7 +146,7 @@
           "actualizaciones": [
             {
               "id": "moi36fuava56zftdvxe",
-              "nota": "Se esta haciendo una revisión del caso, parece que son problemas de red, pero necesitamos confirmarlo",
+              "nota": "Se esta haciendo una revisióndel caso, parece que son problemas de red, pero necesitamos confirmarlo",
               "agente": "Oscar Piastri",
               "fecha": "2026-04-28T03:48:36.658Z",
               "estadoAnterior": "",
@@ -154,7 +154,7 @@
             },
             {
               "id": "1777317936319",
-              "nota": "Solicito que el caso sea puesto en progreso y escalado internamente con prioridad, ya que todo el servicio de Atención al Cliente está caído.",
+              "nota": "Solicito que el caso sea puesto en progreso y escalado internamente con prioridad, ya que todo el servicio de Atenci�n al Cliente está a�do.",
               "agente": "cliente",
               "fecha": "2026-04-27T19:25:36.319Z",
               "estadoAnterior": "abierto",
@@ -162,7 +162,7 @@
             },
             {
               "id": "1777317332271",
-              "nota": "Los agentes no pueden iniciar sesión en el servicio de Contact Center, han intentado desde varios navegadores y no funciona.",
+              "nota": "Los agentes no pueden iniciar sesiónen el servicio de Contact Center, han intentado desde varios navegadores y no funciona.",
               "agente": "Sistema",
               "fecha": "2026-04-27T19:15:32.271Z",
               "estadoAnterior": "",
@@ -170,10 +170,27 @@
             }
           ],
           "actualizadoEn": "2026-04-28T03:48:36.658Z"
+        },
+        {
+          "id": "126041",
+          "numero": "126041",
+          "nombre": "Ca�das en llamadas de Webex Calling",
+          "estado": "abierto",
+          "creadoEn": "2026-04-28T12:16:15.221Z",
+          "actualizaciones": [
+            {
+              "id": "1777378575221",
+              "nota": "Los usuarios reportan que las llamadas se caen en el servicio de Webex Calling.",
+              "agente": "Sistema",
+              "fecha": "2026-04-28T12:16:15.221Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-28T03:48:36.658Z"
+      "actualizadoEn": "2026-04-28T12:16:15.221Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
@@ -199,14 +216,14 @@
         {
           "id": "1776984769024",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene interésen el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:52:49.024Z"
         },
         {
           "id": "1776982078529",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene interésen el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:07:58.529Z"
         }
@@ -227,7 +244,7 @@
       "empresa": "CollabMCR Technology Corporation",
       "dominioEmpresa": "collab-col.wbx.ai",
       "telEmpresa": "5957",
-      "ciudad": "Bogotá, Colombia",
+      "ciudad": "Bogot�, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Conectado",
       "propietarioContacto": "",
@@ -279,7 +296,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogotá, Colombia",
+      "ciudad": "Bogotá,Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -305,7 +322,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogotá, Colombia",
+      "ciudad": "Bogotá,Colombia",
       "etapaVida": "nuevo",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
