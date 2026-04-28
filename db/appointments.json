@@ -144,6 +144,23 @@
       "agente": "",
       "notas": "Mantenimiento programado para Webex Calling según acuerdo con el cliente.",
       "creadoEn": "2026-04-27T19:04:36.428Z"
+    },
+    {
+      "id": "17773795811134489",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Instalación servicio de colaboración Webex Contact Center",
+      "proposito": "Instalación servicio de colaboración Webex Contact Center",
+      "fecha": "2026-04-30",
+      "horaInicio": "11:00",
+      "horaFin": "11:30",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Instalación del servicio de colaboración Webex Contact Center solicitada por el cliente para jueves treinta de abril a las once de la mañana.",
+      "creadoEn": "2026-04-28T12:33:01.113Z"
     }
   ]
 }
