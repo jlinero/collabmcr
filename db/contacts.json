@@ -217,6 +217,14 @@
           "creadoEn": "2026-04-29T16:32:00.435Z",
           "actualizaciones": [
             {
+              "id": "mokab1lnzwgwkshcnj",
+              "nota": "se encontró en el caso, que se debe hacer un agendamiento de un mantenimientp",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-04-29T16:43:41.147Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "1777480741617",
               "nota": "El servicio está caído",
               "agente": "cliente",
@@ -241,11 +249,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-29T16:39:01.617Z"
+          "actualizadoEn": "2026-04-29T16:43:41.147Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T16:39:01.617Z"
+      "actualizadoEn": "2026-04-29T16:43:41.147Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
