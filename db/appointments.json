@@ -72,10 +72,11 @@
       "horaInicio": "13:30",
       "horaFin": "15:30",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "Oscar Piastro",
       "notas": "Se entregan los headsets que pidió el cliente",
-      "creadoEn": "2026-04-26T21:52:36.821Z"
+      "creadoEn": "2026-04-26T21:52:36.821Z",
+      "actualizadoEn": "2026-04-29T14:24:54.900Z"
     },
     {
       "id": "17773135324034527",
