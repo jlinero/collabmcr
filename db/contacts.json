@@ -11,7 +11,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "",
       "telEmpresa": "+576013256052",
-      "ciudad": "Bogotá, Colombia",
+      "ciudad": "Bogot�, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -24,63 +24,63 @@
         {
           "id": "mod2bgldp1d",
           "tipo": "email",
-          "descripcion": "El cliente escribió un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-24T15:25:40.417Z"
         },
         {
           "id": "1776996900745",
           "tipo": "whatsapp",
-          "descripcion": "El cliente se comunicÃƒ’ara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estará comunicando cuando se tengan avances",
+          "descripcion": "El cliente se comunicÃ�ara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estar� comunicando cuando se tengan avances",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T02:15:00.745Z"
         },
         {
           "id": "1776994507908",
           "tipo": "llamada",
-          "descripcion": "El cliente, que estÃƒ’onstruyendo un edificio en MedellÃƒ’se contactó para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenciÃƒ’se brindó información, se verificÃƒ’l pedido en el sistema, se reprogramÃƒ’a entrega para el 27 de abril y también se solicitó adelantarla; ademÃƒ’ se envió la confirmación por correo y se acordó enviar mÃƒ’informaciÃƒ’y conectar al cliente con un asesor humano",
+          "descripcion": "El cliente, que estÃ�onstruyendo un edificio en MedellÃ�se contact� para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenciÃ�se brind� informaci�n, se verificÃ�l pedido en el sistema, se reprogramÃ�a entrega para el 27 de abril y tambi�n se solicit� adelantarla; ademÃ� se envi� la confirmaci�n por correo y se acord� enviar mÃ�informaciÃ�y conectar al cliente con un asesor humano",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T01:35:07.908Z"
         },
         {
           "id": "1776983282507",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter�s en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:28:02.507Z"
         },
         {
           "id": "1776982642399",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene interés en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter�s en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:17:22.399Z"
         },
         {
           "id": "mobq02qroql",
           "tipo": "email",
-          "descripcion": "El cliente escribió un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T16:53:07.683Z"
         },
         {
           "id": "moaju9bbrk4",
           "tipo": "email",
-          "descripcion": "El cliente escribió un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-22T21:12:52.391Z"
         },
         {
           "id": "moajoa9yp0v",
           "tipo": "llamada",
-          "descripcion": "El cliente llamó con interÃƒ’en Webex Contact Center",
+          "descripcion": "El cliente llam� con interÃ�en Webex Contact Center",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-22T21:08:13.702Z"
         },
         {
           "id": "moaghznb1hhktni091j",
           "tipo": "llamada",
-          "descripcion": "El cliente esta interesado en la solución de Webex Contact Center",
+          "descripcion": "El cliente esta interesado en la soluci�n de Webex Contact Center",
           "fecha": "2026-04-22T19:39:21.143Z"
         }
       ],
@@ -154,7 +154,7 @@
             },
             {
               "id": "moi36fuava56zftdvxe",
-              "nota": "Se esta haciendo una revisiÃƒ’del caso, parece que son problemas de red, pero necesitamos confirmarlo",
+              "nota": "Se esta haciendo una revisi�el caso, parece que son problemas de red, pero necesitamos confirmarlo",
               "agente": "Oscar Piastri",
               "fecha": "2026-04-28T03:48:36.658Z",
               "estadoAnterior": "",
@@ -162,7 +162,7 @@
             },
             {
               "id": "1777317936319",
-              "nota": "Solicito que el caso sea puesto en progreso y escalado internamente con prioridad, ya que todo el servicio de Atención al Cliente estÃƒ’aído.",
+              "nota": "Solicito que el caso sea puesto en progreso y escalado internamente con prioridad, ya que todo el servicio de Atenciónal Cliente est�íd.",
               "agente": "cliente",
               "fecha": "2026-04-27T19:25:36.319Z",
               "estadoAnterior": "abierto",
@@ -170,7 +170,7 @@
             },
             {
               "id": "1777317332271",
-              "nota": "Los agentes no pueden iniciar sesiÃƒ’en el servicio de Contact Center, han intentado desde varios navegadores y no funciona.",
+              "nota": "Los agentes no pueden iniciar sesi�n el servicio de Contact Center, han intentado desde varios navegadores y no funciona.",
               "agente": "Sistema",
               "fecha": "2026-04-27T19:15:32.271Z",
               "estadoAnterior": "",
@@ -182,7 +182,7 @@
         {
           "id": "126041",
           "numero": "126041",
-          "nombre": "Caídas en llamadas de Webex Calling",
+          "nombre": "Ca�das en llamadas de Webex Calling",
           "estado": "cerrado",
           "creadoEn": "2026-04-28T12:16:15.221Z",
           "actualizaciones": [
@@ -196,7 +196,7 @@
             },
             {
               "id": "moilcdriwn1lyktk3sa",
-              "nota": "Se recibe el caso, se esta procediendo a la revisión del mismo",
+              "nota": "Se recibe el caso, se esta procediendo a la revisi�n del mismo",
               "agente": "Lando Norris",
               "fecha": "2026-04-28T12:17:06.990Z",
               "estadoAnterior": "abierto",
@@ -217,12 +217,20 @@
           "id": "879218",
           "numero": "879218",
           "nombre": "Problemas de calidad de video en reuniones de videoconferencia",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-29T12:22:07.694Z",
           "actualizaciones": [
             {
+              "id": "1777466919642",
+              "nota": "El problema fue resuelto tras la instalacióndel agente de Thousand Eyes. Solicito el cierre del caso.",
+              "agente": "cliente",
+              "fecha": "2026-04-29T12:48:39.642Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
               "id": "mok198r0vgm5tgzmpo",
-              "nota": "Se revisó los datos de las ultimas reuniones y se encontró efectivamente problemas de calidad en la mayoría de los participantes de video, es necesario para solucionar el problema habilitar un agente de Thousand Eyes para que podamos ver en donde esta el problema",
+              "nota": "Se revis� los datos de las ultimas reuniones y se encontr� efectivamente problemas de calidad en la mayor�a de los participantes de video, es necesario para solucionar el problema habilitar un agente de Thousand Eyes para que podamos ver en donde esta el problema",
               "agente": "Lando Norris",
               "fecha": "2026-04-29T12:30:20.556Z",
               "estadoAnterior": "abierto",
@@ -237,11 +245,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-29T12:30:20.556Z"
+          "actualizadoEn": "2026-04-29T12:48:39.642Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T12:41:18.936Z"
+      "actualizadoEn": "2026-04-29T12:48:39.642Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
@@ -267,14 +275,14 @@
         {
           "id": "1776984769024",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene interÃ’Â©e el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter�Â� el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:52:49.024Z"
         },
         {
           "id": "1776982078529",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene interÃ’Â©e el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene inter�Â� el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:07:58.529Z"
         }
@@ -295,7 +303,7 @@
       "empresa": "CollabMCR Technology Corporation",
       "dominioEmpresa": "collab-col.wbx.ai",
       "telEmpresa": "5957",
-      "ciudad": "Bogotá, Colombia",
+      "ciudad": "Bogot�, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Conectado",
       "propietarioContacto": "",
@@ -347,7 +355,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "BogotÃ’Â¡Clombia",
+      "ciudad": "Bogot�Â�lombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -373,7 +381,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "BogotÃ’Â¡Clombia",
+      "ciudad": "Bogot�Â�lombia",
       "etapaVida": "nuevo",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
