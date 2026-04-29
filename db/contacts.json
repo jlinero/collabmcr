@@ -167,6 +167,14 @@
           "creadoEn": "2026-04-29T14:11:51.580Z",
           "actualizaciones": [
             {
+              "id": "mok559xedpmf281m0qm",
+              "nota": "Es necesario hacer manteimiento, generar cita con el cliente en sitio",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-29T14:19:13.922Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "1777472247631",
               "nota": "El cliente solicita que se agilice la atención porque no puede tener el problema sin resolver, y pide escalar a máxima prioridad.",
               "agente": "cliente",
@@ -191,11 +199,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-29T14:17:27.631Z"
+          "actualizadoEn": "2026-04-29T14:19:13.922Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T14:17:27.631Z"
+      "actualizadoEn": "2026-04-29T14:19:13.922Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
