@@ -71,22 +71,31 @@
           "id": "147388",
           "numero": "147388",
           "nombre": "Problemas de calidad de llamada en Weatherbug",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-29T13:05:15.622Z",
           "actualizaciones": [
             {
+              "id": "1777468249266",
+              "nota": "Solicita escalar el caso y aumentar la prioridad debido a que no hay avances en la calidad de llamadas. Las llamadas se entrecortan en casi todos los usuarios, afectando la comunicaci√≥n",
+              "agente": "cliente",
+              "fecha": "2026-04-29T13:10:49.266Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "1777467915622",
-              "nota": "Las llamadas se entrecortan en casi todos los usuarios, afectando la calidad de comunicaciÛn.",
+              "nota": "Las llamadas se entrecortan en casi todos los usuarios, afectando la calidad de comunicaci√≥n",
               "agente": "Sistema",
               "fecha": "2026-04-29T13:05:15.622Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-29T13:10:49.266Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T13:05:15.622Z"
+      "actualizadoEn": "2026-04-29T13:10:49.266Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
@@ -177,7 +186,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogot·, Colombia",
+      "ciudad": "Bogot√°,Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -203,7 +212,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogot·, Colombia",
+      "ciudad": "Bogot√°,Colombia",
       "etapaVida": "nuevo",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
