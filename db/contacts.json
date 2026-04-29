@@ -31,14 +31,14 @@
         {
           "id": "1776996900745",
           "tipo": "whatsapp",
-          "descripcion": "El cliente se comunicÃƒ³ara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estará comunicando cuando se tengan avances",
+          "descripcion": "El cliente se comunicÃƒ’ara preguntar por el estado de sus casos abiertos, no se ha tenido avance en ninguno, se le estará comunicando cuando se tengan avances",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T02:15:00.745Z"
         },
         {
           "id": "1776994507908",
           "tipo": "llamada",
-          "descripcion": "El cliente, que estÃƒ¡onstruyendo un edificio en MedellÃƒ­se contactó para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenciÃƒ³se brindó información, se verificÃƒ³l pedido en el sistema, se reprogramÃƒ³a entrega para el 27 de abril y también se solicitó adelantarla; ademÃƒ¡ se envió la confirmación por correo y se acordó enviar mÃƒ¡informaciÃƒ³y conectar al cliente con un asesor humano",
+          "descripcion": "El cliente, que estÃƒ’onstruyendo un edificio en MedellÃƒ’se contactó para conocer los productos y tipos de cemento disponibles (incluyendo opciones sostenibles) y confirmar detalles de un pedido de 1000 bultos. Durante la atenciÃƒ’se brindó información, se verificÃƒ’l pedido en el sistema, se reprogramÃƒ’a entrega para el 27 de abril y también se solicitó adelantarla; ademÃƒ’ se envió la confirmación por correo y se acordó enviar mÃƒ’informaciÃƒ’y conectar al cliente con un asesor humano",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-24T01:35:07.908Z"
         },
@@ -73,7 +73,7 @@
         {
           "id": "moajoa9yp0v",
           "tipo": "llamada",
-          "descripcion": "El cliente llamó con interÃƒ©en Webex Contact Center",
+          "descripcion": "El cliente llamó con interÃƒ’en Webex Contact Center",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-22T21:08:13.702Z"
         },
@@ -146,7 +146,7 @@
           "actualizaciones": [
             {
               "id": "moi36fuava56zftdvxe",
-              "nota": "Se esta haciendo una revisiÃƒ³del caso, parece que son problemas de red, pero necesitamos confirmarlo",
+              "nota": "Se esta haciendo una revisiÃƒ’del caso, parece que son problemas de red, pero necesitamos confirmarlo",
               "agente": "Oscar Piastri",
               "fecha": "2026-04-28T03:48:36.658Z",
               "estadoAnterior": "",
@@ -154,7 +154,7 @@
             },
             {
               "id": "1777317936319",
-              "nota": "Solicito que el caso sea puesto en progreso y escalado internamente con prioridad, ya que todo el servicio de Atención al Cliente estÃƒ¡aído.",
+              "nota": "Solicito que el caso sea puesto en progreso y escalado internamente con prioridad, ya que todo el servicio de Atención al Cliente estÃƒ’aído.",
               "agente": "cliente",
               "fecha": "2026-04-27T19:25:36.319Z",
               "estadoAnterior": "abierto",
@@ -162,7 +162,7 @@
             },
             {
               "id": "1777317332271",
-              "nota": "Los agentes no pueden iniciar sesiÃƒ³en el servicio de Contact Center, han intentado desde varios navegadores y no funciona.",
+              "nota": "Los agentes no pueden iniciar sesiÃƒ’en el servicio de Contact Center, han intentado desde varios navegadores y no funciona.",
               "agente": "Sistema",
               "fecha": "2026-04-27T19:15:32.271Z",
               "estadoAnterior": "",
@@ -204,10 +204,27 @@
             }
           ],
           "actualizadoEn": "2026-04-28T12:47:38.710Z"
+        },
+        {
+          "id": "879218",
+          "numero": "879218",
+          "nombre": "Problemas de calidad de video en reuniones de videoconferencia",
+          "estado": "abierto",
+          "creadoEn": "2026-04-29T12:22:07.694Z",
+          "actualizaciones": [
+            {
+              "id": "1777465327694",
+              "nota": "El cliente reporta que en varias reuniones el video se pixela y se ve mal, afectando la experiencia de videoconferencia.",
+              "agente": "Sistema",
+              "fecha": "2026-04-29T12:22:07.694Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ]
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-28T12:47:38.710Z"
+      "actualizadoEn": "2026-04-29T12:22:07.694Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
@@ -233,14 +250,14 @@
         {
           "id": "1776984769024",
           "tipo": "whatsapp",
-          "descripcion": "El cliente tiene interÃƒ©en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene interÃ’Â©e el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:52:49.024Z"
         },
         {
           "id": "1776982078529",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene interÃƒ©en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene interÃ’Â©e el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:07:58.529Z"
         }
@@ -313,7 +330,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "BogotÃƒ¡Colombia",
+      "ciudad": "BogotÃ’Â¡Clombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -339,7 +356,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "BogotÃƒ¡Colombia",
+      "ciudad": "BogotÃ’Â¡Clombia",
       "etapaVida": "nuevo",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
