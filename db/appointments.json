@@ -176,10 +176,11 @@
       "horaInicio": "10:00",
       "horaFin": "10:30",
       "duracion": 30,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "Instalación del agente Thousand Eyes para diagnóstico de calidad de video en reuniones.",
-      "creadoEn": "2026-04-29T12:45:41.533Z"
+      "creadoEn": "2026-04-29T12:45:41.533Z",
+      "actualizadoEn": "2026-04-29T12:52:32.295Z"
     }
   ]
 }
