@@ -127,6 +127,23 @@
       "agente": "",
       "notas": "Mantenimiento programado para Webex Calling según acuerdo con el cliente.",
       "creadoEn": "2026-04-27T19:04:36.428Z"
+    },
+    {
+      "id": "17774693234129123",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Mantenimiento de servicio Webex",
+      "proposito": "Mantenimiento de servicio de colaboración Webex",
+      "fecha": "2026-05-01",
+      "horaInicio": "10:00",
+      "horaFin": "10:30",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Cita de mantenimiento solicitada por el cliente para el caso abierto.",
+      "creadoEn": "2026-04-29T13:28:43.412Z"
     }
   ]
 }
