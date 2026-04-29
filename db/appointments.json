@@ -163,6 +163,23 @@
       "notas": "Instalación del servicio de colaboración Webex Contact Center solicitada por el cliente para jueves treinta de abril a las once de la mañana.",
       "creadoEn": "2026-04-28T12:33:01.113Z",
       "actualizadoEn": "2026-04-29T12:39:55.486Z"
+    },
+    {
+      "id": "17774667415331821",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Cita para instalación de agente Thousand Eyes",
+      "proposito": "Instalación de agente Thousand Eyes",
+      "fecha": "2026-05-01",
+      "horaInicio": "10:00",
+      "horaFin": "10:30",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Instalación del agente Thousand Eyes para diagnóstico de calidad de video en reuniones.",
+      "creadoEn": "2026-04-29T12:45:41.533Z"
     }
   ]
 }
