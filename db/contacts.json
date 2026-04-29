@@ -163,9 +163,17 @@
           "id": "434456",
           "numero": "434456",
           "nombre": "Problemas de calidad de servicio en Webex Calling",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-29T14:11:51.580Z",
           "actualizaciones": [
+            {
+              "id": "1777472581487",
+              "nota": "Ya se realizó el mantenimiento y el problema fue solucionado.",
+              "agente": "cliente",
+              "fecha": "2026-04-29T14:23:01.487Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mok559xedpmf281m0qm",
               "nota": "Es necesario hacer manteimiento, generar cita con el cliente en sitio",
@@ -199,11 +207,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-29T14:19:13.922Z"
+          "actualizadoEn": "2026-04-29T14:23:01.487Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T14:19:13.922Z"
+      "actualizadoEn": "2026-04-29T14:23:01.487Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
