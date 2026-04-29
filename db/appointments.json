@@ -158,10 +158,11 @@
       "horaInicio": "11:00",
       "horaFin": "11:30",
       "duracion": 30,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "Instalación del servicio de colaboración Webex Contact Center solicitada por el cliente para jueves treinta de abril a las once de la mañana.",
-      "creadoEn": "2026-04-28T12:33:01.113Z"
+      "creadoEn": "2026-04-28T12:33:01.113Z",
+      "actualizadoEn": "2026-04-29T12:39:55.486Z"
     }
   ]
 }
