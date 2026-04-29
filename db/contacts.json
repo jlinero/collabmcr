@@ -263,9 +263,17 @@
           "id": "664551",
           "numero": "664551",
           "nombre": "Problemas de calidad de llamadas en Webex Calling",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-29T23:14:59.042Z",
           "actualizaciones": [
+            {
+              "id": "1777506182259",
+              "nota": "El cliente confirmó que el problema ya se solucionó, por lo que solicita cerrar el caso.",
+              "agente": "cliente",
+              "fecha": "2026-04-29T23:43:02.259Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mokobrcl3ytqefnepnp",
               "nota": "se esta revisando, necesitamos hacer una visita al cliente",
@@ -283,11 +291,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-29T23:16:09.141Z"
+          "actualizadoEn": "2026-04-29T23:43:02.259Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T23:16:09.141Z"
+      "actualizadoEn": "2026-04-29T23:43:02.259Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
