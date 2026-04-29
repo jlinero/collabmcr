@@ -22,44 +22,37 @@
       "notas": "",
       "actividades": [
         {
-          "id": "mod2bgldp1d",
-          "tipo": "email",
-          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
-          "asignadoA": "Oscar Piastri",
-          "fecha": "2026-04-24T15:25:40.417Z"
-        },
-        {
           "id": "1776982642399",
           "tipo": "llamada",
-          "descripcion": "El cliente tiene inter�s en el servicio de Webex Contact Center",
+          "descripcion": "El cliente tiene interes en el servicio de Webex Contact Center",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T22:17:22.399Z"
         },
         {
           "id": "mobq02qroql",
           "tipo": "email",
-          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribio un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-23T16:53:07.683Z"
         },
         {
           "id": "moaju9bbrk4",
           "tipo": "email",
-          "descripcion": "El cliente escribi� un correo manifestando interes en Webex Calling",
+          "descripcion": "El cliente escribio un correo manifestando interes en Webex Calling",
           "asignadoA": "Oscar Piastri",
           "fecha": "2026-04-22T21:12:52.391Z"
         },
         {
           "id": "moajoa9yp0v",
           "tipo": "llamada",
-          "descripcion": "El cliente llam� con interÃ�en Webex Contact Center",
+          "descripcion": "El cliente llamo con interes en Webex Contact Center",
           "asignadoA": "Lando Norris",
           "fecha": "2026-04-22T21:08:13.702Z"
         },
         {
           "id": "moaghznb1hhktni091j",
           "tipo": "llamada",
-          "descripcion": "El cliente esta interesado en la soluci�n de Webex Contact Center",
+          "descripcion": "El cliente esta interesado en la solucion de Webex Contact Center",
           "fecha": "2026-04-22T19:39:21.143Z"
         }
       ],
@@ -99,20 +92,6 @@
       "timeline": "",
       "notas": "",
       "actividades": [
-        {
-          "id": "1776984769024",
-          "tipo": "whatsapp",
-          "descripcion": "El cliente tiene inter�Â� el servicio de Webex Contact Center",
-          "asignadoA": "Oscar Piastri",
-          "fecha": "2026-04-23T22:52:49.024Z"
-        },
-        {
-          "id": "1776982078529",
-          "tipo": "llamada",
-          "descripcion": "El cliente tiene inter�Â� el servicio de Webex Contact Center",
-          "asignadoA": "Oscar Piastri",
-          "fecha": "2026-04-23T22:07:58.529Z"
-        }
       ],
       "deals": [],
       "tickets": [],
