@@ -217,6 +217,14 @@
           "creadoEn": "2026-04-29T16:32:00.435Z",
           "actualizaciones": [
             {
+              "id": "1777480741617",
+              "nota": "El servicio está caído",
+              "agente": "cliente",
+              "fecha": "2026-04-29T16:39:01.617Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mok9y9quie347vweeq",
               "nota": "Se esta revisando el caso",
               "agente": "Lando Norris",
@@ -233,11 +241,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-29T16:33:45.174Z"
+          "actualizadoEn": "2026-04-29T16:39:01.617Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T16:33:45.174Z"
+      "actualizadoEn": "2026-04-29T16:39:01.617Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
