@@ -11,7 +11,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "",
       "telEmpresa": "+576013256052",
-      "ciudad": "Bogot·, Colombia",
+      "ciudad": "Bogot√°, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -76,7 +76,7 @@
           "actualizaciones": [
             {
               "id": "1777469526693",
-              "nota": "El problema se solucionÛ porque el mantenimiento fue exitoso.",
+              "nota": "El problema se solucion√≥ porque el mantenimiento fue exitoso.",
               "agente": "cliente",
               "fecha": "2026-04-29T13:32:06.693Z",
               "estadoAnterior": "en progreso",
@@ -92,7 +92,7 @@
             },
             {
               "id": "1777468249266",
-              "nota": "Solicita escalar el caso y aumentar la prioridad debido a que no hay avances en la calidad de llamadas. Las llamadas se entrecortan en casi todos los usuarios, afectando la comunicaciÛn.",
+              "nota": "Solicita escalar el caso y aumentar la prioridad debido a que no hay avances en la calidad de llamadas. Las llamadas se entrecortan en casi todos los usuarios, afectando la comunicaci√≥n.",
               "agente": "cliente",
               "fecha": "2026-04-29T13:10:49.266Z",
               "estadoAnterior": "abierto",
@@ -100,7 +100,7 @@
             },
             {
               "id": "1777467915622",
-              "nota": "Las llamadas se entrecortan en casi todos los usuarios, afectando la calidad de comunicaciÛn.",
+              "nota": "Las llamadas se entrecortan en casi todos los usuarios, afectando la calidad de comunicaci√≥n.",
               "agente": "Sistema",
               "fecha": "2026-04-29T13:05:15.622Z",
               "estadoAnterior": "",
@@ -113,9 +113,17 @@
           "id": "359314",
           "numero": "359314",
           "nombre": "Problema de calidad de audio en Room Bar",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-29T13:47:19.679Z",
           "actualizaciones": [
+            {
+              "id": "mok426lz1h5b4k3j34s",
+              "nota": "Caso en revisi√≥n",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-29T13:48:50.039Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1777470439679",
               "nota": "El cliente reporta que el sonido en reuniones usando la Room Bar no es bueno.",
@@ -124,11 +132,12 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-29T13:48:50.039Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T13:47:19.679Z"
+      "actualizadoEn": "2026-04-29T13:48:50.039Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
@@ -167,7 +176,7 @@
       "empresa": "CollabMCR Technology Corporation",
       "dominioEmpresa": "collab-col.wbx.ai",
       "telEmpresa": "5957",
-      "ciudad": "Bogot·, Colombia",
+      "ciudad": "Bogot√°, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Conectado",
       "propietarioContacto": "",
@@ -219,7 +228,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogot·, Colombia",
+      "ciudad": "Bogot√°, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -245,7 +254,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogot·, Colombia",
+      "ciudad": "Bogot√°, Colombia",
       "etapaVida": "nuevo",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
