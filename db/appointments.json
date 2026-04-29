@@ -127,23 +127,6 @@
       "agente": "",
       "notas": "Mantenimiento programado para Webex Calling según acuerdo con el cliente.",
       "creadoEn": "2026-04-27T19:04:36.428Z"
-    },
-    {
-      "id": "17774709480123586",
-      "contactId": "123456",
-      "contactNombre": "Jose Linero",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+573102634216",
-      "titulo": "Mantenimiento Room Bar - Audio",
-      "proposito": "Mantenimiento para cambio de equipo Room Bar",
-      "fecha": "2026-04-29",
-      "horaInicio": "15:00",
-      "horaFin": "15:30",
-      "duracion": 30,
-      "estado": "confirmada",
-      "agente": "",
-      "notas": "Agendar mantenimiento solicitado por el cliente para hoy a las 3 pm debido a problemas de calidad de audio en la Room Bar. Caso crítico, requiere atención prioritaria.",
-      "creadoEn": "2026-04-29T13:55:48.012Z"
     }
   ]
 }
