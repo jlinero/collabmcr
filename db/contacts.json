@@ -141,9 +141,17 @@
           "id": "192153",
           "numero": "192153",
           "nombre": "Problemas de login en Contact Center",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-27T19:15:32.271Z",
           "actualizaciones": [
+            {
+              "id": "mok1ncrcwpz0st7ggg",
+              "nota": "Se cierra el caso porque el cliente no responde",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-29T12:41:18.936Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "moi36fuava56zftdvxe",
               "nota": "Se esta haciendo una revisiÃƒ’del caso, parece que son problemas de red, pero necesitamos confirmarlo",
@@ -169,7 +177,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-28T03:48:36.658Z"
+          "actualizadoEn": "2026-04-29T12:41:18.936Z"
         },
         {
           "id": "126041",
@@ -233,7 +241,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T12:30:20.556Z"
+      "actualizadoEn": "2026-04-29T12:41:18.936Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
