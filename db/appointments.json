@@ -89,10 +89,11 @@
       "horaInicio": "10:00",
       "horaFin": "10:30",
       "duracion": 30,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "Instalación del servicio de Webex Contact Center solicitada por el cliente para el jueves 30 de abril de 2026 a las 10:00 a. m.",
-      "creadoEn": "2026-04-27T15:45:11.824Z"
+      "creadoEn": "2026-04-27T15:45:11.824Z",
+      "actualizadoEn": "2026-04-29T12:39:34.558Z"
     },
     {
       "id": "17773135324034527",
