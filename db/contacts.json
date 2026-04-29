@@ -167,6 +167,14 @@
           "creadoEn": "2026-04-29T14:11:51.580Z",
           "actualizaciones": [
             {
+              "id": "1777472247631",
+              "nota": "El cliente solicita que se agilice la atención porque no puede tener el problema sin resolver, y pide escalar a máxima prioridad.",
+              "agente": "cliente",
+              "fecha": "2026-04-29T14:17:27.631Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mok4xm91kgpbf1189jk",
               "nota": "Ticket en revisión",
               "agente": "Lando Norris",
@@ -183,11 +191,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-29T14:13:16.645Z"
+          "actualizadoEn": "2026-04-29T14:17:27.631Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-29T14:13:16.645Z"
+      "actualizadoEn": "2026-04-29T14:17:27.631Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
