@@ -128,6 +128,21 @@
       "agente": "",
       "notas": "Mantenimiento programado para Webex Calling según acuerdo con el cliente.",
       "creadoEn": "2026-04-27T19:04:36.428Z"
+    },
+    {
+      "id": "mok5d7xz8bya4ltbydf",
+      "contactId": "123123",
+      "contactNombre": "Edgar Arana",
+      "contactEmpresa": "Cisco",
+      "titulo": "Instalación Webex Contact Center",
+      "fecha": "2026-04-29",
+      "horaInicio": "14:30",
+      "horaFin": "15:00",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-04-29T14:25:24.599Z"
     }
   ]
 }
