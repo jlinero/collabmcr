@@ -11,7 +11,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "",
       "telEmpresa": "+576013256052",
-      "ciudad": "Bogot�, Colombia",
+      "ciudad": "Bogotá, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -76,7 +76,7 @@
           "actualizaciones": [
             {
               "id": "1777469526693",
-              "nota": "El problema se solucion� porque el mantenimiento fue exitoso.",
+              "nota": "El problema se solucionó porque el mantenimiento fue exitoso.",
               "agente": "cliente",
               "fecha": "2026-04-29T13:32:06.693Z",
               "estadoAnterior": "en progreso",
@@ -92,7 +92,7 @@
             },
             {
               "id": "1777468249266",
-              "nota": "Solicita escalar el caso y aumentar la prioridad debido a que no hay avances en la calidad de llamadas. Las llamadas se entrecortan en casi todos los usuarios, afectando la comunicaci�n.",
+              "nota": "Solicita escalar el caso y aumentar la prioridad debido a que no hay avances en la calidad de llamadas. Las llamadas se entrecortan en casi todos los usuarios, afectando la comunicación.",
               "agente": "cliente",
               "fecha": "2026-04-29T13:10:49.266Z",
               "estadoAnterior": "abierto",
@@ -100,7 +100,7 @@
             },
             {
               "id": "1777467915622",
-              "nota": "Las llamadas se entrecortan en casi todos los usuarios, afectando la calidad de comunicaci�n.",
+              "nota": "Las llamadas se entrecortan en casi todos los usuarios, afectando la calidad de comunicación.",
               "agente": "Sistema",
               "fecha": "2026-04-29T13:05:15.622Z",
               "estadoAnterior": "",
@@ -118,7 +118,7 @@
           "actualizaciones": [
             {
               "id": "1777471306788",
-              "nota": "El cliente confirma que ya se realizÃ�l cambio de la Room Bar y solicita el cierre del caso.",
+              "nota": "El cliente confirma que ya se realizÃƒ’l cambio de la Room Bar y solicita el cierre del caso.",
               "agente": "cliente",
               "fecha": "2026-04-29T14:01:46.788Z",
               "estadoAnterior": "en progreso",
@@ -134,7 +134,7 @@
             },
             {
               "id": "1777470777975",
-              "nota": "El cliente reporta que no puede usar el equipo en reuniones, solicita subir la prioridad del caso por ser crÃ�co.",
+              "nota": "El cliente reporta que no puede usar el equipo en reuniones, solicita subir la prioridad del caso por ser crÃƒ’co.",
               "agente": "cliente",
               "fecha": "2026-04-29T13:52:57.975Z",
               "estadoAnterior": "en progreso",
@@ -142,7 +142,7 @@
             },
             {
               "id": "mok426lz1h5b4k3j34s",
-              "nota": "Caso en revisiÃ�",
+              "nota": "Caso en revisiÃƒ’",
               "agente": "Lando Norris",
               "fecha": "2026-04-29T13:48:50.039Z",
               "estadoAnterior": "abierto",
@@ -168,7 +168,7 @@
           "actualizaciones": [
             {
               "id": "1777472581487",
-              "nota": "Ya se realiz� el mantenimiento y el problema fue solucionado.",
+              "nota": "Ya se realizó el mantenimiento y el problema fue solucionado.",
               "agente": "cliente",
               "fecha": "2026-04-29T14:23:01.487Z",
               "estadoAnterior": "en progreso",
@@ -184,7 +184,7 @@
             },
             {
               "id": "1777472247631",
-              "nota": "El cliente solicita que se agilice la atenci�n porque no puede tener el problema sin resolver, y pide escalar a m�xima prioridad.",
+              "nota": "El cliente solicita que se agilice la atención porque no puede tener el problema sin resolver, y pide escalar a máxima prioridad.",
               "agente": "cliente",
               "fecha": "2026-04-29T14:17:27.631Z",
               "estadoAnterior": "en progreso",
@@ -192,7 +192,7 @@
             },
             {
               "id": "mok4xm91kgpbf1189jk",
-              "nota": "Ticket en revisi�n",
+              "nota": "Ticket en revisión",
               "agente": "Lando Norris",
               "fecha": "2026-04-29T14:13:16.645Z",
               "estadoAnterior": "abierto",
@@ -212,13 +212,13 @@
         {
           "id": "560075",
           "numero": "560075",
-          "nombre": "Problemas de calidad de servicio en telefon�a",
+          "nombre": "Problemas de calidad de servicio en telefonía",
           "estado": "cerrado",
           "creadoEn": "2026-04-29T16:32:00.435Z",
           "actualizaciones": [
             {
               "id": "1777484237839",
-              "nota": "El cliente solicitÃ�errar el caso.",
+              "nota": "El cliente solicitÃƒ³errar el caso.",
               "agente": "cliente",
               "fecha": "2026-04-29T17:37:17.839Z",
               "estadoAnterior": "en progreso",
@@ -226,7 +226,7 @@
             },
             {
               "id": "mokab1lnzwgwkshcnj",
-              "nota": "se encontr� en el caso, que se debe hacer un agendamiento de un mantenimientp",
+              "nota": "se encontró en el caso, que se debe hacer un agendamiento de un mantenimientp",
               "agente": "Oscar Piastri",
               "fecha": "2026-04-29T16:43:41.147Z",
               "estadoAnterior": "en progreso",
@@ -234,7 +234,7 @@
             },
             {
               "id": "1777480741617",
-              "nota": "El servicio est� ca�do",
+              "nota": "El servicio está caído",
               "agente": "cliente",
               "fecha": "2026-04-29T16:39:01.617Z",
               "estadoAnterior": "en progreso",
@@ -250,7 +250,7 @@
             },
             {
               "id": "1777480320435",
-              "nota": "Los usuarios reportan que la voz se est�Â�trecortando durante las llamadas, lo que afecta la calidad del servicio.",
+              "nota": "Los usuarios reportan que la voz se estÃÃ‚¡trecortando durante las llamadas, lo que afecta la calidad del servicio.",
               "agente": "Sistema",
               "fecha": "2026-04-29T16:32:00.435Z",
               "estadoAnterior": "",
@@ -268,7 +268,7 @@
           "actualizaciones": [
             {
               "id": "1777506182259",
-              "nota": "El cliente confirm� que el problema ya se solucionó,por lo que solicita cerrar el caso.",
+              "nota": "El cliente confirmó que el problema ya se solucionÃ³,por lo que solicita cerrar el caso.",
               "agente": "cliente",
               "fecha": "2026-04-29T23:43:02.259Z",
               "estadoAnterior": "en progreso",
@@ -284,7 +284,7 @@
             },
             {
               "id": "1777504499042",
-              "nota": "Los usuarios reportan que durante las llamadas el audio se entrecorta. Se requiere revisiónde calidad de servicio en llamadas.",
+              "nota": "Los usuarios reportan que durante las llamadas el audio se entrecorta. Se requiere revisiÃ³nde calidad de servicio en llamadas.",
               "agente": "Sistema",
               "fecha": "2026-04-29T23:14:59.042Z",
               "estadoAnterior": "",
@@ -297,22 +297,31 @@
           "id": "822152",
           "numero": "822152",
           "nombre": "Interrupciones en llamadas Webex Calling",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-04-30T12:19:33.100Z",
           "actualizaciones": [
             {
+              "id": "1777551737570",
+              "nota": "El cliente solicita que el caso sea tratado como prioritario y se escale internamente para obtener una solución lo antes posible.",
+              "agente": "cliente",
+              "fecha": "2026-04-30T12:22:17.570Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "1777551573100",
-              "nota": "El cliente reporta que durante una llamada reciente a trav�s de Webex Calling se presentaron varios cortes e interrupciones.",
+              "nota": "El cliente reporta que durante una llamada reciente a través de Webex Calling se presentaron varios cortes e interrupciones.",
               "agente": "Sistema",
               "fecha": "2026-04-30T12:19:33.100Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-04-30T12:22:17.570Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-30T12:19:33.100Z"
+      "actualizadoEn": "2026-04-30T12:22:17.570Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
@@ -351,7 +360,7 @@
       "empresa": "CollabMCR Technology Corporation",
       "dominioEmpresa": "collab-col.wbx.ai",
       "telEmpresa": "5957",
-      "ciudad": "Bogot�, Colombia",
+      "ciudad": "Bogotá, Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Conectado",
       "propietarioContacto": "",
@@ -403,7 +412,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogotá,Colombia",
+      "ciudad": "BogotÃ¡,Colombia",
       "etapaVida": "cliente",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
@@ -429,7 +438,7 @@
       "empresa": "Cisco",
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
-      "ciudad": "Bogotá,Colombia",
+      "ciudad": "BogotÃ¡,Colombia",
       "etapaVida": "nuevo",
       "estadoLead": "Nuevo",
       "propietarioContacto": "",
