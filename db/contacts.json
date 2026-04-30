@@ -297,9 +297,17 @@
           "id": "822152",
           "numero": "822152",
           "nombre": "Interrupciones en llamadas Webex Calling",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-04-30T12:19:33.100Z",
           "actualizaciones": [
+            {
+              "id": "1777552479037",
+              "nota": "Servicio probado y funcionando correctamente, sin más interrupciones.",
+              "agente": "cliente",
+              "fecha": "2026-04-30T12:34:39.037Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "molgjngjxekzw5govq",
               "nota": "Se realiza la revisión del caso, se verifico la llamada y no se encuentran inconvenientes, llamada con buena calidad.",
@@ -325,11 +333,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-30T12:26:06.595Z"
+          "actualizadoEn": "2026-04-30T12:34:39.037Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-30T12:26:06.595Z"
+      "actualizadoEn": "2026-04-30T12:34:39.037Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
