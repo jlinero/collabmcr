@@ -301,6 +301,14 @@
           "creadoEn": "2026-04-30T12:19:33.100Z",
           "actualizaciones": [
             {
+              "id": "molgjngjxekzw5govq",
+              "nota": "Se realiza la revisión del caso, se verifico la llamada y no se encuentran inconvenientes, llamada con buena calidad.",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-04-30T12:26:06.595Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "1777551737570",
               "nota": "El cliente solicita que el caso sea tratado como prioritario y se escale internamente para obtener una solución lo antes posible.",
               "agente": "cliente",
@@ -317,11 +325,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-04-30T12:22:17.570Z"
+          "actualizadoEn": "2026-04-30T12:26:06.595Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-04-30T12:22:17.570Z"
+      "actualizadoEn": "2026-04-30T12:26:06.595Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
