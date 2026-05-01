@@ -204,10 +204,11 @@
       "horaInicio": "08:00",
       "horaFin": "10:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "",
-      "creadoEn": "2026-05-01T00:40:29.298Z"
+      "creadoEn": "2026-05-01T00:40:29.298Z",
+      "actualizadoEn": "2026-05-01T01:21:03.424Z"
     },
     {
       "id": "mom777r0nah46nudvlo",
