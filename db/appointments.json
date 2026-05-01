@@ -208,6 +208,21 @@
       "agente": "",
       "notas": "",
       "creadoEn": "2026-05-01T00:40:29.298Z"
+    },
+    {
+      "id": "mom777r0nah46nudvlo",
+      "contactId": "mocai7bz315gaiwk2lj",
+      "contactNombre": "Javier Cuadros",
+      "contactEmpresa": "Cisco",
+      "titulo": "Reunión de Segumiento",
+      "fecha": "2026-05-04",
+      "horaInicio": "10:00",
+      "horaFin": "10:30",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-01T00:52:15.996Z"
     }
   ]
 }
