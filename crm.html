@@ -279,7 +279,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .cal-slot.avail:hover{background:rgba(0,212,255,.06);}
 .cal-slot.past{background:rgba(0,0,0,.15);cursor:default;}
 .cal-slot.today-col{background:rgba(0,212,255,.02);}
-.cal-appt{border-radius:5px;padding:3px 6px;margin-bottom:1px;cursor:none;border-left:3px solid;transition:opacity .15s;}
+.cal-appt{border-radius:5px;padding:3px 6px;cursor:pointer;border-left:3px solid;transition:opacity .15s;position:absolute;left:2px;right:2px;top:2px;z-index:2;overflow:hidden;}
 .cal-appt:hover{opacity:.85;}
 .cal-appt.confirmada{background:rgba(0,212,255,.15);border-color:var(--cyan);color:var(--cyan);}
 .cal-appt.reprogramada{background:rgba(255,170,0,.15);border-color:var(--amber);color:var(--amber);}
@@ -1678,10 +1678,14 @@ function renderCal(){
         return apptMin >= slotMin2 && apptMin < slotMin2+30;
       });
       const cls=['cal-slot',isPast?'past':'',isToday?'today-col':'',!isPast?'avail':'',isHour?'hour-start':''].filter(Boolean).join(' ');
+      const SLOT_PX = 32; // min-height de cada slot en px
       const apptHTML=slotAppts.map(a=>{
         const past=new Date(a.fecha+'T'+a.horaInicio)<new Date()&&a.estado!=='cancelada';
         const sc=past?'pasada':a.estado;
-        return `<div class="cal-appt ${sc}" onclick="event.stopPropagation();openApptDetail('${a.id}')" title="${a.titulo}">
+        const dur=a.duracion||30;
+        // Altura = (duración en minutos / 30) * altura de slot - 4px de margen
+        const h = Math.round((dur/30)*SLOT_PX) - 4;
+        return `<div class="cal-appt ${sc}" style="height:${h}px;" onclick="event.stopPropagation();openApptDetail('${a.id}')" title="${a.titulo}">
           <div class="cal-appt-title">${a.titulo}</div>
           <div class="cal-appt-time">${a.horaInicio}–${a.horaFin}${a.contactNombre?' · '+a.contactNombre.split(' ')[0]:''}</div>
         </div>`;
