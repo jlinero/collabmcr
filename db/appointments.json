@@ -171,10 +171,11 @@
       "horaInicio": "11:30",
       "horaFin": "12:00",
       "duracion": 30,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "Cita de mantenimiento por problemas de calidad de servicio en telefonía, voz entrecortada y servicio caído.",
-      "creadoEn": "2026-04-29T16:45:53.484Z"
+      "creadoEn": "2026-04-29T16:45:53.484Z",
+      "actualizadoEn": "2026-05-01T00:39:53.516Z"
     },
     {
       "id": "17775516681545639",
