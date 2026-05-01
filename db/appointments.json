@@ -303,11 +303,11 @@
       "horaInicio": "13:30",
       "horaFin": "15:30",
       "duracion": 120,
-      "estado": "reprogramada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "Cita para la Prueba de Concepto (PoC) de soluciones de colaboración Webex, solicitada por el cliente tras conversación con el vendedor.",
       "creadoEn": "2026-05-01T01:19:14.599Z",
-      "actualizadoEn": "2026-05-01T01:20:27.813Z"
+      "actualizadoEn": "2026-05-01T01:20:39.058Z"
     }
   ]
 }
