@@ -273,6 +273,23 @@
       "agente": "",
       "notas": "Sesión de seguimiento solicitada por el cliente.",
       "creadoEn": "2026-05-01T01:14:21.416Z"
+    },
+    {
+      "id": "17775981961446070",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Demostración de producto Webex",
+      "proposito": "Demostración del producto de colaboración Webex",
+      "fecha": "2026-05-05",
+      "horaInicio": "14:00",
+      "horaFin": "16:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Reunión para conocer el producto de colaboración Webex solicitada por el cliente.",
+      "creadoEn": "2026-05-01T01:16:36.144Z"
     }
   ]
 }
