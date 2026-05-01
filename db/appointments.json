@@ -256,6 +256,23 @@
       "agente": "",
       "notas": "Instalación del servicio de Webex Calling, duración aproximada de dos horas.",
       "creadoEn": "2026-05-01T00:55:18.450Z"
+    },
+    {
+      "id": "17775980614162104",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de seguimiento",
+      "proposito": "Sesión de seguimiento",
+      "fecha": "2026-05-05",
+      "horaInicio": "12:00",
+      "horaFin": "14:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Sesión de seguimiento solicitada por el cliente.",
+      "creadoEn": "2026-05-01T01:14:21.416Z"
     }
   ]
 }
