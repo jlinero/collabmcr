@@ -224,6 +224,21 @@
       "notas": "",
       "creadoEn": "2026-05-01T00:52:15.996Z",
       "actualizadoEn": "2026-05-01T00:52:32.015Z"
+    },
+    {
+      "id": "mom78khzxxoir3vdry",
+      "contactId": "moca9homcbzjupb4f0n",
+      "contactNombre": "Genny Baron",
+      "contactEmpresa": "Cisco",
+      "titulo": "Reunión de Segumiento",
+      "fecha": "2026-05-04",
+      "horaInicio": "10:30",
+      "horaFin": "12:30",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-01T00:53:19.175Z"
     }
   ]
 }
