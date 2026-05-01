@@ -193,6 +193,21 @@
       "agente": "",
       "notas": "Instalación del servicio de Contact Center solicitada por el cliente para hoy a las diez de la mañana.",
       "creadoEn": "2026-04-30T12:21:08.154Z"
+    },
+    {
+      "id": "mom6s2gizsnjv7m0twf",
+      "contactId": "mocagoenpa1y7kiuko",
+      "contactNombre": "Daniel Tobar",
+      "contactEmpresa": "Cisco",
+      "titulo": "Demo Webex Calling",
+      "fecha": "2026-05-04",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-01T00:40:29.298Z"
     }
   ]
 }
