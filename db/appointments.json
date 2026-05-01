@@ -309,6 +309,23 @@
       "notas": "Cita para la Prueba de Concepto (PoC) de soluciones de colaboración Webex, solicitada por el cliente tras conversación con el vendedor.",
       "creadoEn": "2026-05-01T01:19:14.599Z",
       "actualizadoEn": "2026-05-01T01:20:39.058Z"
+    },
+    {
+      "id": "177759884371328",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Mantenimiento dispositivo de video",
+      "proposito": "Mantenimiento de dispositivo de video",
+      "fecha": "2026-05-05",
+      "horaInicio": "16:30",
+      "horaFin": "18:30",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Cita de mantenimiento para dispositivo de video solicitada por el cliente para el martes 5 de mayo a las 16:30.",
+      "creadoEn": "2026-05-01T01:27:23.713Z"
     }
   ]
 }
