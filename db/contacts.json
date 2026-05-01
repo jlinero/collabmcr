@@ -339,9 +339,17 @@
           "id": "120068",
           "numero": "120068",
           "nombre": "Desconexin total de telfonos en Webex Calling",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-05-01T02:22:07.588Z",
           "actualizaciones": [
+            {
+              "id": "1777634452165",
+              "nota": "El cliente solicita el cierre del caso.",
+              "agente": "cliente",
+              "fecha": "2026-05-01T11:20:52.165Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1777602127588",
               "nota": "Todos los telfonos de la oficina estn desconectados y parece que el servicio en la nube no est alcanzando los dispositivos. El usuario reporta que no hay conexin en Webex Calling.",
@@ -350,11 +358,12 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-05-01T11:20:52.165Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-01T02:22:07.588Z"
+      "actualizadoEn": "2026-05-01T11:20:52.165Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
