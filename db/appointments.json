@@ -290,6 +290,23 @@
       "agente": "",
       "notas": "Reunión para conocer el producto de colaboración Webex solicitada por el cliente.",
       "creadoEn": "2026-05-01T01:16:36.144Z"
+    },
+    {
+      "id": "17775983545991273",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "PoC Webex colaboración",
+      "proposito": "Agendar PoC de colaboración Webex",
+      "fecha": "2026-05-04",
+      "horaInicio": "11:00",
+      "horaFin": "13:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Cita para la Prueba de Concepto (PoC) de soluciones de colaboración Webex, solicitada por el cliente tras conversación con el vendedor.",
+      "creadoEn": "2026-05-01T01:19:14.599Z"
     }
   ]
 }
