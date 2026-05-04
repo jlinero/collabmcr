@@ -876,7 +876,30 @@ async function loadDB(){
     if(ghEl){ghEl.textContent='online';ghEl.style.color='var(--green)';}
     if(!data) toast('Repositorio nuevo. Crea el primer contacto.','info');
     renderList();updateStats();
-    if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
+    // ── Screen Pop: auto-seleccionar contacto por número de teléfono ──
+    const urlParams  = new URLSearchParams(window.location.search);
+    const queryParam = urlParams.get('query');
+    if(queryParam){
+      // Normalizar número — quitar espacios y guiones
+      const telBuscado = queryParam.replace(/[\s\-\(\)]/g,'');
+      const contactoEncontrado = (db.contacts||[]).find(c => {
+        const tel1 = (c.telefono||'').replace(/[\s\-\(\)]/g,'');
+        const tel2 = (c.telEmpresa||'').replace(/[\s\-\(\)]/g,'');
+        return tel1 === telBuscado || tel2 === telBuscado ||
+               tel1.endsWith(telBuscado) || telBuscado.endsWith(tel1);
+      });
+      if(contactoEncontrado){
+        selectC(contactoEncontrado.id);
+        toast('📞 Contacto identificado: '+contactoEncontrado.nombre+' '+contactoEncontrado.apellido,'ok',4000);
+        console.log('[SCREEN POP] Contacto encontrado:', contactoEncontrado.nombre, contactoEncontrado.telefono);
+      } else {
+        if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
+        toast('📞 Número no encontrado en CRM: '+queryParam,'info',4000);
+        console.log('[SCREEN POP] Número no encontrado:', queryParam);
+      }
+    } else {
+      if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
+    }
   }catch(e){
     toast('Error GitHub: '+e.message,'err',6000);
     const ghElErr=document.getElementById('st-gh');
