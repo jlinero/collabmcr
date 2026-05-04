@@ -577,6 +577,14 @@
           "creadoEn": "2026-05-04T17:46:16.993Z",
           "actualizaciones": [
             {
+              "id": "mork8j18cy7utekh6bo",
+              "nota": "Ya se ayudó el cliente con la configuración",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-04T18:56:03.164Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "morhsnbxp37ljruai7",
               "nota": "Se recibe el caso, se espera agendar sesión con el cliente para ayudarlo en la configuración",
               "agente": "Lando Norris",
@@ -593,11 +601,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-04T17:47:43.005Z"
+          "actualizadoEn": "2026-05-04T18:56:03.164Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-04T17:47:43.005Z"
+      "actualizadoEn": "2026-05-04T18:56:03.164Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
