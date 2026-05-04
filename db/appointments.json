@@ -376,10 +376,11 @@
       "horaInicio": "08:00",
       "horaFin": "10:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "Visita técnica para revisión del problema de calidad de audio y video en reuniones.",
-      "creadoEn": "2026-05-03T20:26:38.237Z"
+      "creadoEn": "2026-05-03T20:26:38.237Z",
+      "actualizadoEn": "2026-05-04T13:47:46.843Z"
     },
     {
       "id": "17778534290195394",
