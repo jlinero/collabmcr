@@ -279,7 +279,7 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
 .cal-slot.avail:hover{background:rgba(0,212,255,.06);}
 .cal-slot.past{background:rgba(0,0,0,.15);cursor:default;}
 .cal-slot.today-col{background:rgba(0,212,255,.02);}
-.cal-appt{border-radius:5px;padding:3px 6px;cursor:pointer;border-left:3px solid;transition:opacity .15s;position:absolute;left:2px;right:2px;top:2px;z-index:2;overflow:hidden;}
+.cal-appt{border-radius:5px;padding:3px 6px;margin-bottom:1px;cursor:none;border-left:3px solid;transition:opacity .15s;}
 .cal-appt:hover{opacity:.85;}
 .cal-appt.confirmada{background:rgba(0,212,255,.15);border-color:var(--cyan);color:var(--cyan);}
 .cal-appt.reprogramada{background:rgba(255,170,0,.15);border-color:var(--amber);color:var(--amber);}
@@ -1673,19 +1673,13 @@ function renderCal(){
       const slotAppts=appts.filter(a=>{
         if(a.fecha!==ds) return false;
         const [ah,am]=a.horaInicio.split(':').map(Number);
-        const apptMin  = ah*60+am;
-        const slotMin2 = slot.h*60+slot.m;
-        return apptMin >= slotMin2 && apptMin < slotMin2+30;
+        return ah===slot.h&&am===slot.m;
       });
       const cls=['cal-slot',isPast?'past':'',isToday?'today-col':'',!isPast?'avail':'',isHour?'hour-start':''].filter(Boolean).join(' ');
-      const SLOT_PX = 32; // min-height de cada slot en px
       const apptHTML=slotAppts.map(a=>{
         const past=new Date(a.fecha+'T'+a.horaInicio)<new Date()&&a.estado!=='cancelada';
         const sc=past?'pasada':a.estado;
-        const dur=a.duracion||30;
-        // Altura = (duración en minutos / 30) * altura de slot - 4px de margen
-        const h = Math.round((dur/30)*SLOT_PX) - 4;
-        return `<div class="cal-appt ${sc}" style="height:${h}px;" onclick="event.stopPropagation();openApptDetail('${a.id}')" title="${a.titulo}">
+        return `<div class="cal-appt ${sc}" onclick="event.stopPropagation();openApptDetail('${a.id}')" title="${a.titulo}">
           <div class="cal-appt-title">${a.titulo}</div>
           <div class="cal-appt-time">${a.horaInicio}–${a.horaFin}${a.contactNombre?' · '+a.contactNombre.split(' ')[0]:''}</div>
         </div>`;
@@ -1857,6 +1851,7 @@ window.addEventListener('DOMContentLoaded', async ()=>{
     document.getElementById('pat-input').value=PAT;
     await loadDB();
     startPolling();
+    startReminderPolling();
   } else {
     openM('token');
   }
@@ -1934,13 +1929,68 @@ document.addEventListener('visibilitychange',()=>{
   if(document.hidden){
     stopPolling();
     stopCalPolling();
+    stopReminderPolling();
   } else if(PAT){
     startPolling();
-    // Reanudar cal polling solo si el calendario está visible
     const calView = document.getElementById('calView');
     if(calView && calView.classList.contains('show')) startCalPolling();
+    startReminderPolling();
   }
 });
+
+// ── REMINDER POLLING — notifica webhook 2 min antes de la cita ──
+const REMINDER_WEBHOOK   = 'https://hooks.us.webexconnect.io/events/2YWOVG6IYB';
+const REMINDER_INTERVAL  = 60000; // cada 60 segundos
+const REMINDER_WINDOW_MS = 2 * 60 * 1000; // 2 minutos en ms
+let reminderTimer = null;
+const notifiedIds = {}; // evita notificar dos veces la misma cita
+
+async function reminderCheck(){
+  if(!appts || appts.length === 0) return;
+  const ahora = Date.now();
+  for(let i=0; i<appts.length; i++){
+    const a = appts[i];
+    if(a.estado === 'cancelada') continue;
+    if(notifiedIds[a.id]) continue;
+    // Calcular timestamp de inicio de la cita
+    const citaMs = new Date(a.fecha + 'T' + a.horaInicio + ':00').getTime();
+    const diff   = citaMs - ahora;
+    // Si faltan entre 0 y 2 minutos
+    if(diff >= 0 && diff <= REMINDER_WINDOW_MS){
+      notifiedIds[a.id] = true;
+      console.log('[REMINDER] Notificando cita:', a.titulo, a.horaInicio);
+      try{
+        await fetch(REMINDER_WEBHOOK, {
+          method:  'POST',
+          headers: {'Content-Type':'application/json'},
+          body: JSON.stringify({
+            evento:        'recordatorio_cita',
+            titulo:        a.titulo        || '',
+            fecha:         a.fecha         || '',
+            horaInicio:    a.horaInicio    || '',
+            horaFin:       a.horaFin       || '',
+            contactNombre: a.contactNombre || '',
+            contactTel:    a.contactTel    || ''
+          })
+        });
+        toast('🔔 Recordatorio enviado: ' + a.titulo, 'info', 4000);
+      } catch(e){
+        console.warn('[REMINDER] Error webhook:', e.message);
+      }
+    }
+  }
+}
+
+function startReminderPolling(){
+  if(reminderTimer) clearInterval(reminderTimer);
+  reminderCheck();
+  reminderTimer = setInterval(reminderCheck, REMINDER_INTERVAL);
+  console.log('[REMINDER] Started — interval: 60s, ventana: 2 min');
+}
+
+function stopReminderPolling(){
+  if(reminderTimer){ clearInterval(reminderTimer); reminderTimer=null; }
+}
 </script>
 <div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
 <script>var i={t:function(){try{var e=document.getElementById("divicw"),t=document.createElement("script");t.src="https://media.imi.chat/widget/js/imichatinit.js?t="+new Date().toISOString(),e.insertAdjacentElement("afterend",t)}catch(e){console.error(e)}}};i.t();</script>
