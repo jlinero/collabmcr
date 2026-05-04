@@ -254,10 +254,11 @@
       "horaInicio": "09:30",
       "horaFin": "11:30",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "Instalación del servicio de Webex Calling, duración aproximada de dos horas.",
-      "creadoEn": "2026-05-01T00:55:18.450Z"
+      "creadoEn": "2026-05-01T00:55:18.450Z",
+      "actualizadoEn": "2026-05-04T00:38:25.057Z"
     },
     {
       "id": "17775980614162104",
