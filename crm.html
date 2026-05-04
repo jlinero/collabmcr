@@ -1568,7 +1568,65 @@ async function loadAppts(){
     const data = await apptGet();
     appts = (data||{appointments:[]}).appointments||[];
     renderCal();
+    // Ejecutar limpieza automática al cargar
+    await autoCleanup();
   }catch(e){ console.warn('Appointments load error:',e.message); appts=[]; renderCal(); }
+}
+
+// ── AUTO LIMPIEZA ─────────────────────────────────────
+// 1. Borra citas anteriores a la semana actual (domingo)
+// 2. Por contacto: conserva solo los 5 tickets cerrados más recientes
+async function autoCleanup(){
+  if(!PAT) return;
+  let apptsDirty    = false;
+  let contactsDirty = false;
+
+  // ── 1. Limpiar citas antiguas ──
+  const hoy     = new Date();
+  const dow     = hoy.getDay(); // 0=dom
+  const domingo = new Date(hoy);
+  domingo.setDate(hoy.getDate() - dow);
+  domingo.setHours(0,0,0,0);
+  const domingoStr = domingo.getFullYear() + '-'
+    + String(domingo.getMonth()+1).padStart(2,'0') + '-'
+    + String(domingo.getDate()).padStart(2,'0');
+
+  const apptsBefore = appts.length;
+  appts = appts.filter(a => a.fecha >= domingoStr);
+  if(appts.length !== apptsBefore){
+    apptsDirty = true;
+    console.log(`[CLEANUP] Citas eliminadas: ${apptsBefore - appts.length} (anteriores a ${domingoStr})`);
+  }
+
+  // ── 2. Limpiar tickets cerrados por contacto (máx 5) ──
+  const MAX_CLOSED = 5;
+  (db.contacts||[]).forEach(contacto => {
+    if(!contacto.tickets || contacto.tickets.length === 0) return;
+    const cerrados = contacto.tickets
+      .filter(t => t.estado === 'cerrado')
+      .sort((a,b) => new Date(b.actualizadoEn||b.creadoEn) - new Date(a.actualizadoEn||a.creadoEn));
+    const abiertos = contacto.tickets.filter(t => t.estado !== 'cerrado');
+    if(cerrados.length > MAX_CLOSED){
+      contacto.tickets = [...abiertos, ...cerrados.slice(0, MAX_CLOSED)];
+      contactsDirty = true;
+      console.log(`[CLEANUP] ${contacto.nombre}: tickets cerrados reducidos a ${MAX_CLOSED}`);
+    }
+  });
+
+  // ── Guardar en GitHub solo si hubo cambios ──
+  try{
+    if(apptsDirty){
+      await apptPut({appointments: appts}, 'auto-cleanup: citas antiguas');
+      renderCal();
+      toast('🧹 Citas antiguas eliminadas automáticamente','info',3000);
+    }
+    if(contactsDirty){
+      await ghPut(db, 'auto-cleanup: tickets cerrados');
+      toast('🧹 Tickets cerrados limpiados automáticamente','info',3000);
+    }
+  }catch(e){
+    console.warn('[CLEANUP] Error al guardar:', e.message);
+  }
 }
 
 // ── CALENDAR POLLING ─────────────────────────────────
