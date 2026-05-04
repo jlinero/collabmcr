@@ -1960,8 +1960,12 @@ async function reminderCheck(){
     // Calcular timestamp de inicio de la cita
     const citaMs = new Date(a.fecha + 'T' + a.horaInicio + ':00').getTime();
     const diff   = citaMs - ahora;
-    // Si faltan entre 0 y 2 minutos
-    if(diff >= 0 && diff <= REMINDER_WINDOW_MS){
+    // Notifica si:
+    // - Faltan entre 0 y 2 minutos (antes de empezar)
+    // - O acaba de empezar hace menos de 10 minutos (por si la página se abrió tarde)
+    const antesDeEmpezar = diff >= 0 && diff <= REMINDER_WINDOW_MS;
+    const recienEmpezada = diff < 0 && diff >= -(10 * 60 * 1000);
+    if(antesDeEmpezar || recienEmpezada){
       notifiedIds[a.id] = true;
       console.log('[REMINDER] Notificando cita:', a.titulo, a.horaInicio);
       try{
