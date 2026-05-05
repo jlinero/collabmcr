@@ -1591,8 +1591,6 @@ async function loadAppts(){
     const data = await apptGet();
     appts = (data||{appointments:[]}).appointments||[];
     renderCal();
-    // Ejecutar limpieza automática al cargar
-    await autoCleanup();
   }catch(e){ console.warn('Appointments load error:',e.message); appts=[]; renderCal(); }
 }
 
@@ -1943,6 +1941,8 @@ window.addEventListener('DOMContentLoaded', async ()=>{
   if(PAT){
     document.getElementById('pat-input').value=PAT;
     await loadDB();
+    await loadAppts();   // carga citas antes de limpiar
+    await autoCleanup(); // limpia tickets cerrados + citas antiguas
     startPolling();
     startReminderPolling();
   } else {
