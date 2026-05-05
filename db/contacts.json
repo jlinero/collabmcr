@@ -317,6 +317,14 @@
           "creadoEn": "2026-05-05T17:15:17.399Z",
           "actualizaciones": [
             {
+              "id": "moswf2tyt2irucb3q7f",
+              "nota": "Se hizo la sesión con el cliente, ya se dejó todo configurado",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-05T17:24:50.326Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mosw66yjj5n4hfrozcq",
               "nota": "Caso recibido, para apoyar al cliente se debe agendar una sesión en donde lo podamos acompañar en esta configuración para el agente de IA y el asistente de IA",
               "agente": "Lando Norris",
@@ -333,11 +341,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-05T17:17:55.771Z"
+          "actualizadoEn": "2026-05-05T17:24:50.326Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-05T17:17:55.771Z"
+      "actualizadoEn": "2026-05-05T17:24:50.326Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
