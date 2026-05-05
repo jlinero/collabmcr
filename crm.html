@@ -1645,6 +1645,13 @@ async function autoCleanup(){
     }
     if(contactsDirty){
       await ghPut(db, 'auto-cleanup: tickets cerrados');
+      // Re-renderizar UI con datos limpios
+      renderList();
+      updateStats();
+      if(activeId){
+        const c = (db.contacts||[]).find(x=>x.id===activeId);
+        if(c) renderDetail(c);
+      }
       toast('🧹 Tickets cerrados limpiados automáticamente','info',3000);
     }
   }catch(e){
