@@ -2035,8 +2035,9 @@ document.addEventListener('visibilitychange',()=>{
 const REMINDER_WEBHOOK   = 'https://hooks.us.webexconnect.io/events/2YWOVG6IYB';
 const REMINDER_INTERVAL  = 60000; // cada 60 segundos
 const REMINDER_WINDOW_MS = 2 * 60 * 1000; // 2 minutos en ms
-let reminderTimer = null;
-const notifiedIds = {}; // evita notificar dos veces la misma cita
+let reminderTimer   = null;
+let reminderStarted = false; // evita doble arranque
+const notifiedIds   = {}; // evita notificar dos veces la misma cita
 
 async function reminderCheck(){
   if(!appts || appts.length === 0) return;
@@ -2045,15 +2046,12 @@ async function reminderCheck(){
     const a = appts[i];
     if(a.estado === 'cancelada') continue;
     if(notifiedIds[a.id]) continue;
-    // Calcular timestamp de inicio de la cita
     const citaMs = new Date(a.fecha + 'T' + a.horaInicio + ':00').getTime();
     const diff   = citaMs - ahora;
-    // Notifica si:
-    // - Faltan entre 0 y 2 minutos (antes de empezar)
-    // - O acaba de empezar hace menos de 10 minutos (por si la página se abrió tarde)
     const antesDeEmpezar = diff >= 0 && diff <= REMINDER_WINDOW_MS;
     const recienEmpezada = diff < 0 && diff >= -(10 * 60 * 1000);
     if(antesDeEmpezar || recienEmpezada){
+      // Marcar ANTES del await para evitar doble envío en llamadas concurrentes
       notifiedIds[a.id] = true;
       console.log('[REMINDER] Notificando cita:', a.titulo, a.horaInicio);
       try{
@@ -2073,12 +2071,16 @@ async function reminderCheck(){
         toast('🔔 Recordatorio enviado: ' + a.titulo, 'info', 4000);
       } catch(e){
         console.warn('[REMINDER] Error webhook:', e.message);
+        // Si falla el fetch, quitar de notifiedIds para reintentar
+        delete notifiedIds[a.id];
       }
     }
   }
 }
 
 function startReminderPolling(){
+  if(reminderStarted) return; // ← evita doble arranque
+  reminderStarted = true;
   if(reminderTimer) clearInterval(reminderTimer);
   reminderCheck();
   reminderTimer = setInterval(reminderCheck, REMINDER_INTERVAL);
@@ -2087,6 +2089,7 @@ function startReminderPolling(){
 
 function stopReminderPolling(){
   if(reminderTimer){ clearInterval(reminderTimer); reminderTimer=null; }
+  reminderStarted = false; // permite reiniciar al volver a la página
 }
 </script>
 <div id="divicw" data-bind="ADF4BED4-978E-4E6C-B815-CC671E6A7DF2" data-org="" data-guid="04d39d03-5058-48b9-9ac4-61cd227139c9"></div>
