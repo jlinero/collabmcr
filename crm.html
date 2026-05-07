@@ -2034,7 +2034,7 @@ document.addEventListener('visibilitychange',()=>{
 // ── REMINDER POLLING — notifica webhook 2 min antes de la cita ──
 const REMINDER_WEBHOOK   = 'https://hooks.us.webexconnect.io/events/2YWOVG6IYB';
 const REMINDER_INTERVAL  = 60000; // cada 60 segundos
-const REMINDER_WINDOW_MS = 2 * 60 * 1000; // 2 minutos en ms
+const REMINDER_WINDOW_MS = 5 * 60 * 1000; // 5 minutos — ventana de notificación
 let reminderTimer   = null;
 let reminderStarted = false; // evita doble arranque
 const notifiedIds   = {}; // evita notificar dos veces la misma cita
@@ -2048,9 +2048,8 @@ async function reminderCheck(){
     if(notifiedIds[a.id]) continue;
     const citaMs = new Date(a.fecha + 'T' + a.horaInicio + ':00').getTime();
     const diff   = citaMs - ahora;
-    const antesDeEmpezar = diff >= 0 && diff <= REMINDER_WINDOW_MS;
-    const recienEmpezada = diff < 0 && diff >= -(10 * 60 * 1000);
-    if(antesDeEmpezar || recienEmpezada){
+    // Solo notifica si faltan entre 0 y 5 minutos para que empiece
+    if(diff >= 0 && diff <= REMINDER_WINDOW_MS){
       // Marcar ANTES del await para evitar doble envío en llamadas concurrentes
       notifiedIds[a.id] = true;
       console.log('[REMINDER] Notificando cita:', a.titulo, a.horaInicio);
