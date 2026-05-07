@@ -1,1 +1,1 @@
-{"appointments":[]}
+{"appointments":[{"id":"17781664730476074","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Cita para PoC de colaboración","proposito":"Prueba de Concepto (PoC) de colaboración","fecha":"2026-05-07","horaInicio":"10:12","horaFin":"12:12","duracion":120,"estado":"confirmada","agente":"","notas":"Agendar PoC de colaboración para el cliente en la primera opción disponible.","creadoEn":"2026-05-07T15:07:53.047Z"}]}
