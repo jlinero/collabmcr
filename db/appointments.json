@@ -488,10 +488,11 @@
       "horaInicio": "16:50",
       "horaFin": "18:50",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "",
-      "creadoEn": "2026-05-08T21:00:00.000Z"
+      "creadoEn": "2026-05-08T21:00:00.000Z",
+      "actualizadoEn": "2026-05-08T21:53:28.387Z"
     }
   ]
 }
