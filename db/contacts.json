@@ -297,9 +297,17 @@
           "id": "668788",
           "numero": "668788",
           "nombre": "Asesoría en configuración de agente de IA en Webex Contact Center",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-11T16:49:01.150Z",
           "actualizaciones": [
+            {
+              "id": "mp1fx0cumnn0zwcgd2",
+              "nota": "Esperando el agendamiento de la sesión con el cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-11T16:52:49.038Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "mp1ftudd1n93oba6jy4",
               "nota": "Es necesario agendar una sesión con el cliente para poder asesorarlo con la configuración del agente de inteligencia artificial",
@@ -317,11 +325,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-11T16:50:21.313Z"
+          "actualizadoEn": "2026-05-11T16:52:49.038Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-11T16:50:21.313Z"
+      "actualizadoEn": "2026-05-11T16:52:49.038Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
