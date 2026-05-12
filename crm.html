@@ -909,13 +909,12 @@ async function loadDB(){
           const idx=(db.contacts||[]).findIndex(c=>c.id===contactoEncontrado.id);
           if(idx<0)return;
           if(!db.contacts[idx].actividades)db.contacts[idx].actividades=[];
-          const partes=['Dirección: Entrante','Estado: En curso','ANI: '+queryParam];
-          if(queueParam) partes.push('Cola: '+queueParam);
-          if(agentParam) partes.push('Agente: '+agentParam);
-          if(interactId) partes.push('ID: '+interactId);
+          const agenteTxt=agentParam||'un agente';
+          const colaTxt=queueParam?' desde la cola '+queueParam:'';
+          const desc='Llamada entrante recibida por '+agenteTxt+colaTxt+'.';
           db.contacts[idx].actividades.unshift({
             id:uid(), tipo:'llamada',
-            descripcion:partes.join(' · '),
+            descripcion:desc,
             fecha:new Date().toISOString(),
             asignadoA:agentParam||'—',
             cola:queueParam||'—',
