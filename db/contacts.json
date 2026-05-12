@@ -309,11 +309,18 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "mp2wnw0fw7yvdgr07qt",
+          "tipo": "llamada",
+          "descripcion": "el cliente llama por interes en el servicio de Webex Calling",
+          "fecha": "2026-05-12T17:29:23.151Z"
+        }
+      ],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-04-23T22:52:49.024Z"
+      "actualizadoEn": "2026-05-12T17:29:23.151Z"
     },
     {
       "id": "moca7zhiaemq37wxhsp",
