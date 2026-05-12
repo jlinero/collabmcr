@@ -75,10 +75,11 @@
       "horaInicio": "10:00",
       "horaFin": "10:30",
       "duracion": 30,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "Lando Norris",
       "notas": "",
-      "creadoEn": "2026-05-12T13:29:39.103Z"
+      "creadoEn": "2026-05-12T13:29:39.103Z",
+      "actualizadoEn": "2026-05-12T13:29:47.904Z"
     }
   ]
 }
