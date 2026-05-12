@@ -49,6 +49,21 @@
       "agente": "Lando Norris",
       "notas": "",
       "creadoEn": "2026-05-12T10:36:25.327Z"
+    },
+    {
+      "id": "mp2hxhbeqv2zonzpl2",
+      "contactId": "123123",
+      "contactNombre": "Edgar Arana",
+      "contactEmpresa": "Cisco",
+      "titulo": "Instalación dispositivos de video",
+      "fecha": "2026-05-13",
+      "horaInicio": "14:30",
+      "horaFin": "15:30",
+      "duracion": 60,
+      "estado": "confirmada",
+      "agente": "Oscar Piastri",
+      "notas": "",
+      "creadoEn": "2026-05-12T10:36:56.426Z"
     }
   ]
 }
