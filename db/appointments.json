@@ -1,1 +1,84 @@
-{"appointments":[{"id":"17785819972908069","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Instalación Webex Calling","proposito":"Instalación de servicio Webex Calling","fecha":"2026-05-14","horaInicio":"14:00","horaFin":"16:00","duracion":120,"estado":"confirmada","agente":"","notas":"Instalación de Webex Calling para el cliente 123456. Fecha seleccionada: jueves, 14 de mayo de 2026 de 14:00 a 16:00.","creadoEn":"2026-05-12T10:33:17.290Z"},{"id":"mp2hwtbjthiwhwejg1i","contactId":"mocagoenpa1y7kiuko","contactNombre":"Daniel Tobar","contactEmpresa":"Cisco","titulo":"Sesión de venta de Webex Contact Center","fecha":"2026-05-13","horaInicio":"09:00","horaFin":"10:30","duracion":90,"estado":"confirmada","agente":"Lando Norris","notas":"","creadoEn":"2026-05-12T10:36:25.327Z"},{"id":"mp2hxhbeqv2zonzpl2","contactId":"123123","contactNombre":"Edgar Arana","contactEmpresa":"Cisco","titulo":"Instalación dispositivos de video","fecha":"2026-05-13","horaInicio":"14:30","horaFin":"15:30","duracion":60,"estado":"confirmada","agente":"Oscar Piastri","notas":"","creadoEn":"2026-05-12T10:36:56.426Z"},{"id":"17785923191009197","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Sesión de configuración de Webex IA para notificaciones de impuestos","proposito":"Configuración de agente de IA para notificaciones de impuestos","fecha":"2026-05-13","horaInicio":"08:00","horaFin":"10:00","duracion":120,"estado":"reprogramada","agente":"","notas":"Sesión para configurar el agente de inteligencia artificial de Webex para notificaciones de impuestos, según el caso abierto.","creadoEn":"2026-05-12T13:25:19.100Z","actualizadoEn":"2026-05-12T13:28:11.717Z"}]}
+{
+  "appointments": [
+    {
+      "id": "17785819972908069",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Instalación Webex Calling",
+      "proposito": "Instalación de servicio Webex Calling",
+      "fecha": "2026-05-14",
+      "horaInicio": "14:00",
+      "horaFin": "16:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Instalación de Webex Calling para el cliente 123456. Fecha seleccionada: jueves, 14 de mayo de 2026 de 14:00 a 16:00.",
+      "creadoEn": "2026-05-12T10:33:17.290Z"
+    },
+    {
+      "id": "mp2hwtbjthiwhwejg1i",
+      "contactId": "mocagoenpa1y7kiuko",
+      "contactNombre": "Daniel Tobar",
+      "contactEmpresa": "Cisco",
+      "titulo": "Sesión de venta de Webex Contact Center",
+      "fecha": "2026-05-13",
+      "horaInicio": "09:00",
+      "horaFin": "10:30",
+      "duracion": 90,
+      "estado": "confirmada",
+      "agente": "Lando Norris",
+      "notas": "",
+      "creadoEn": "2026-05-12T10:36:25.327Z"
+    },
+    {
+      "id": "mp2hxhbeqv2zonzpl2",
+      "contactId": "123123",
+      "contactNombre": "Edgar Arana",
+      "contactEmpresa": "Cisco",
+      "titulo": "Instalación dispositivos de video",
+      "fecha": "2026-05-13",
+      "horaInicio": "14:30",
+      "horaFin": "15:30",
+      "duracion": 60,
+      "estado": "confirmada",
+      "agente": "Oscar Piastri",
+      "notas": "",
+      "creadoEn": "2026-05-12T10:36:56.426Z"
+    },
+    {
+      "id": "17785923191009197",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de configuración de Webex IA para notificaciones de impuestos",
+      "proposito": "Configuración de agente de IA para notificaciones de impuestos",
+      "fecha": "2026-05-13",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "reprogramada",
+      "agente": "",
+      "notas": "Sesión para configurar el agente de inteligencia artificial de Webex para notificaciones de impuestos, según el caso abierto.",
+      "creadoEn": "2026-05-12T13:25:19.100Z",
+      "actualizadoEn": "2026-05-12T13:28:11.717Z"
+    },
+    {
+      "id": "mp2o3l7jy0diksy0web",
+      "contactId": "mocai7bz315gaiwk2lj",
+      "contactNombre": "Javier Cuadros",
+      "contactEmpresa": "Cisco",
+      "titulo": "Demo Webex Contact Center",
+      "fecha": "2026-05-15",
+      "horaInicio": "10:00",
+      "horaFin": "10:30",
+      "duracion": 30,
+      "estado": "confirmada",
+      "agente": "Lando Norris",
+      "notas": "",
+      "creadoEn": "2026-05-12T13:29:39.103Z"
+    }
+  ]
+}
