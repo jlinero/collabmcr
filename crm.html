@@ -892,6 +892,8 @@ async function loadDB(){
         selectC(contactoEncontrado.id);
         toast('📞 Contacto identificado: '+contactoEncontrado.nombre+' '+contactoEncontrado.apellido,'ok',4000);
         console.log('[SCREEN POP] Contacto encontrado:', contactoEncontrado.nombre, contactoEncontrado.telefono);
+        setTimeout(()=>quickAct('llamada'),800);
+        history.replaceState(null,'',window.location.pathname);
       } else {
         if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
         toast('📞 Número no encontrado en CRM: '+queryParam,'info',4000);
