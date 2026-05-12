@@ -634,11 +634,20 @@ body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-si
           <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;">Contacto</div>
           <div id="act-detail-contacto" style="font-size:13px;color:var(--text);"></div>
         </div>
+        <div style="background:var(--card2);padding:12px 16px;">
+          <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;">Cola</div>
+          <div id="act-detail-cola" style="font-size:13px;color:var(--text);"></div>
+        </div>
+        <div style="background:var(--card2);padding:12px 16px;">
+          <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px;">Dirección · Estado</div>
+          <div id="act-detail-estado" style="font-size:13px;color:var(--text);"></div>
+        </div>
       </div>
 
     </div>
     <div class="modal-footer">
       <button class="m-cancel" onclick="closeM('act-detail')" style="flex:none;padding:12px 28px;">Cerrar</button>
+      <button class="m-ok" onclick="editAct(activeActDetailId)" style="flex:none;padding:12px 28px;"><i class="fa fa-pencil" style="margin-right:7px;"></i>Editar</button>
     </div>
   </div>
 </div>
@@ -877,8 +886,11 @@ async function loadDB(){
     if(!data) toast('Repositorio nuevo. Crea el primer contacto.','info');
     renderList();updateStats();
     // ── Screen Pop: auto-seleccionar contacto por número de teléfono ──
-    const urlParams  = new URLSearchParams(window.location.search);
-    const queryParam = urlParams.get('query');
+    const urlParams   = new URLSearchParams(window.location.search);
+    const queryParam  = urlParams.get('query');
+    const agentParam  = urlParams.get('agentName')     || '';
+    const queueParam  = urlParams.get('queueName')     || '';
+    const interactId  = urlParams.get('interactionId') || '';
     if(queryParam){
       // Normalizar número — quitar espacios y guiones
       const telBuscado = queryParam.replace(/[\s\-\(\)]/g,'');
@@ -892,7 +904,32 @@ async function loadDB(){
         selectC(contactoEncontrado.id);
         toast('📞 Contacto identificado: '+contactoEncontrado.nombre+' '+contactoEncontrado.apellido,'ok',4000);
         console.log('[SCREEN POP] Contacto encontrado:', contactoEncontrado.nombre, contactoEncontrado.telefono);
-        setTimeout(()=>quickAct('llamada'),800);
+        // ── Screen Pop: crear actividad automáticamente con datos de Webex ──
+        setTimeout(async()=>{
+          const idx=(db.contacts||[]).findIndex(c=>c.id===contactoEncontrado.id);
+          if(idx<0)return;
+          if(!db.contacts[idx].actividades)db.contacts[idx].actividades=[];
+          const partes=['Dirección: Entrante','Estado: En curso','ANI: '+queryParam];
+          if(queueParam) partes.push('Cola: '+queueParam);
+          if(agentParam) partes.push('Agente: '+agentParam);
+          if(interactId) partes.push('ID: '+interactId);
+          db.contacts[idx].actividades.unshift({
+            id:uid(), tipo:'llamada',
+            descripcion:partes.join(' · '),
+            fecha:new Date().toISOString(),
+            asignadoA:agentParam||'—',
+            cola:queueParam||'—',
+            direccion:'entrante',
+            estado:'en curso',
+            ani:queryParam,
+            interactionId:interactId
+          });
+          db.contacts[idx].actualizadoEn=new Date().toISOString();
+          await saveDB('Screen Pop: llamada entrante');
+          const c=(db.contacts||[]).find(x=>x.id===contactoEncontrado.id);
+          if(c){renderDetail(c);setTimeout(()=>{const tabs=document.querySelectorAll('.d-tab');if(tabs[1])switchTab(tabs[1],'t-acts');},80);}
+          toast('📋 Actividad registrada automáticamente','ok',4000);
+        },800);
         history.replaceState(null,'',window.location.pathname);
       } else {
         if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
@@ -1275,22 +1312,6 @@ async function deleteContact(id){
 
 // ACTIVITIES
 function quickAct(tipo){document.getElementById('act-tipo').value=tipo;document.getElementById('act-desc').value='';openM('act');}
-async function saveAct(){
-  if(!activeId){toast('Selecciona un contacto primero','err');return;}
-  const desc=document.getElementById('act-desc').value.trim();
-  if(!desc){toast('Escribe una descripcion','err');return;}
-  const tipo=document.getElementById('act-tipo').value;
-  const idx=(db.contacts||[]).findIndex(c=>c.id===activeId);if(idx<0)return;
-  if(!db.contacts[idx].actividades)db.contacts[idx].actividades=[];
-  db.contacts[idx].actividades.unshift({id:uid(),tipo,descripcion:desc,fecha:new Date().toISOString()});
-  db.contacts[idx].actualizadoEn=new Date().toISOString();
-  await saveDB('Actividad: '+labelAct(tipo));
-  closeM('act');document.getElementById('act-desc').value='';
-  toast('Actividad registrada','ok');
-  const c=(db.contacts||[]).find(x=>x.id===activeId);
-  if(c){renderDetail(c);setTimeout(()=>{const tabs=document.querySelectorAll('.d-tab');if(tabs[1])switchTab(tabs[1],'t-acts');},80);}
-}
-
 // DEALS
 async function saveDeal(){
   if(!activeId){toast('Selecciona un contacto primero','err');return;}
@@ -1422,8 +1443,49 @@ function openActDetail(actId){
   document.getElementById('act-detail-canal').textContent=labelAct(a.tipo);
   document.getElementById('act-detail-fecha2').textContent=fmtDT(a.fecha);
   document.getElementById('act-detail-contacto').textContent=c.nombre+' '+c.apellido;
+  document.getElementById('act-detail-cola').textContent=a.cola||'—';
+  document.getElementById('act-detail-estado').textContent=[(a.direccion||'').charAt(0).toUpperCase()+(a.direccion||'').slice(1), a.estado||'—'].filter(x=>x&&x!=='—').join(' · ')||'—';
+  activeActDetailId=actId;
 
   openM('act-detail');
+}
+
+// EDIT ACTIVITY
+let activeActDetailId=null;
+function editAct(actId){
+  if(!activeId||!actId) return;
+  const c=db.contacts.find(x=>x.id===activeId);
+  if(!c) return;
+  const a=(c.actividades||[]).find(x=>x.id===actId);
+  if(!a) return;
+  closeM('act-detail');
+  document.getElementById('act-tipo').value=a.tipo||'llamada';
+  document.getElementById('act-desc').value=a.descripcion||'';
+  // Reusar modal nueva actividad en modo edición — guardar id a editar
+  window._editActId=actId;
+  openM('act');
+}
+async function saveAct(){
+  if(!activeId){toast('Selecciona un contacto primero','err');return;}
+  const desc=document.getElementById('act-desc').value.trim();
+  if(!desc){toast('Escribe una descripcion','err');return;}
+  const tipo=document.getElementById('act-tipo').value;
+  const idx=(db.contacts||[]).findIndex(c=>c.id===activeId);if(idx<0)return;
+  if(!db.contacts[idx].actividades)db.contacts[idx].actividades=[];
+  if(window._editActId){
+    // Modo edición — actualizar actividad existente
+    const ai=db.contacts[idx].actividades.findIndex(x=>x.id===window._editActId);
+    if(ai>=0){db.contacts[idx].actividades[ai].tipo=tipo;db.contacts[idx].actividades[ai].descripcion=desc;}
+    window._editActId=null;
+  } else {
+    db.contacts[idx].actividades.unshift({id:uid(),tipo,descripcion:desc,fecha:new Date().toISOString()});
+  }
+  db.contacts[idx].actualizadoEn=new Date().toISOString();
+  await saveDB('Actividad: '+labelAct(tipo));
+  closeM('act');document.getElementById('act-desc').value='';
+  toast('Actividad registrada','ok');
+  const c=(db.contacts||[]).find(x=>x.id===activeId);
+  if(c){renderDetail(c);setTimeout(()=>{const tabs=document.querySelectorAll('.d-tab');if(tabs[1])switchTab(tabs[1],'t-acts');},80);}
 }
 
 // HISTORIAL COMPLETO
