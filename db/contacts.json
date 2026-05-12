@@ -293,6 +293,14 @@
           "creadoEn": "2026-05-12T13:21:19.899Z",
           "actualizaciones": [
             {
+              "id": "mp2odaxbykzqn3mlet",
+              "nota": "se puede cerrar el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-12T13:37:12.335Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mp2ociutwitz5u9no7",
               "nota": "Ya se realizó la visita, se dejó el agente de IA configurado para el caso de uso del cliente",
               "agente": "Oscar Piastri",
@@ -317,11 +325,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-12T13:36:35.957Z"
+          "actualizadoEn": "2026-05-12T13:37:12.335Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-12T13:36:35.957Z"
+      "actualizadoEn": "2026-05-12T13:37:12.335Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
