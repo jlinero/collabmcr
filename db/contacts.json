@@ -293,6 +293,14 @@
           "creadoEn": "2026-05-12T13:21:19.899Z",
           "actualizaciones": [
             {
+              "id": "mp2ociutwitz5u9no7",
+              "nota": "Ya se realizó la visita, se dejó el agente de IA configurado para el caso de uso del cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-12T13:36:35.957Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mp2nv6t0c601axmrs7",
               "nota": "Se puede sin problema trabajar el caso de uso de notificación de pago de impuestos, necesitamos acordar con el usuario una fecha para realizar la sesión",
               "agente": "Lando Norris",
@@ -309,11 +317,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-12T13:23:07.188Z"
+          "actualizadoEn": "2026-05-12T13:36:35.957Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-12T13:23:07.188Z"
+      "actualizadoEn": "2026-05-12T13:36:35.957Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
