@@ -311,6 +311,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mp33ptnxrx9jmfronoi",
+          "tipo": "llamada",
+          "descripcion": "El cliente llamo por temas de soporte sobre la plataforma",
+          "fecha": "2026-05-12T20:46:50.733Z"
+        },
+        {
           "id": "mp2wnw0fw7yvdgr07qt",
           "tipo": "llamada",
           "descripcion": "el cliente llama por interes en el servicio de Webex Calling",
@@ -320,7 +326,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-05-12T17:29:23.151Z"
+      "actualizadoEn": "2026-05-12T20:46:50.733Z"
     },
     {
       "id": "moca7zhiaemq37wxhsp",
