@@ -1,1 +1,39 @@
-{"appointments":[{"id":"17785185229253734","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Sesión de asesoría para configuración de IA en Webex Contact Center","proposito":"Asesoría en configuración de agente de IA en Webex Contact Center","fecha":"2026-05-12","horaInicio":"08:00","horaFin":"10:00","duracion":120,"estado":"reprogramada","agente":"","notas":"Sesión para soporte en la configuración del asistente de inteligencia artificial, incluyendo activación de resúmenes automáticos, bienestar del agente y CSAT automático.","creadoEn":"2026-05-11T16:55:22.925Z","actualizadoEn":"2026-05-11T16:56:26.728Z"},{"id":"17785819972908069","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Instalación Webex Calling","proposito":"Instalación de servicio Webex Calling","fecha":"2026-05-14","horaInicio":"14:00","horaFin":"16:00","duracion":120,"estado":"confirmada","agente":"","notas":"Instalación de Webex Calling para el cliente 123456. Fecha seleccionada: jueves, 14 de mayo de 2026 de 14:00 a 16:00.","creadoEn":"2026-05-12T10:33:17.290Z"}]}
+{
+  "appointments": [
+    {
+      "id": "17785185229253734",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de asesoría para configuración de IA en Webex Contact Center",
+      "proposito": "Asesoría en configuración de agente de IA en Webex Contact Center",
+      "fecha": "2026-05-12",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "cancelada",
+      "agente": "",
+      "notas": "Sesión para soporte en la configuración del asistente de inteligencia artificial, incluyendo activación de resúmenes automáticos, bienestar del agente y CSAT automático.",
+      "creadoEn": "2026-05-11T16:55:22.925Z",
+      "actualizadoEn": "2026-05-12T10:35:51.452Z"
+    },
+    {
+      "id": "17785819972908069",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Instalación Webex Calling",
+      "proposito": "Instalación de servicio Webex Calling",
+      "fecha": "2026-05-14",
+      "horaInicio": "14:00",
+      "horaFin": "16:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "Instalación de Webex Calling para el cliente 123456. Fecha seleccionada: jueves, 14 de mayo de 2026 de 14:00 a 16:00.",
+      "creadoEn": "2026-05-12T10:33:17.290Z"
+    }
+  ]
+}
