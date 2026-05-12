@@ -22,6 +22,18 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mp353pg147clwreie0l",
+          "tipo": "llamada",
+          "descripcion": "Dirección: Entrante · Estado: En curso · ANI: +573102634216 · Cola: Gaia Support · Agente: Lando Norris · ID: b889ef40-d835-4cf3-8173-3f3d6e0af5b4",
+          "fecha": "2026-05-12T21:25:38.065Z",
+          "asignadoA": "Lando Norris",
+          "cola": "Gaia Support",
+          "direccion": "entrante",
+          "estado": "en curso",
+          "ani": "+573102634216",
+          "interactionId": "b889ef40-d835-4cf3-8173-3f3d6e0af5b4"
+        },
+        {
           "id": "1776982642399",
           "tipo": "llamada",
           "descripcion": "El cliente tiene interes en el servicio de Webex Contact Center",
@@ -287,7 +299,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-12T14:36:05.827Z"
+      "actualizadoEn": "2026-05-12T21:25:38.065Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
