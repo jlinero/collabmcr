@@ -22,6 +22,18 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mp3aqqqc83lizf60fy6",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante recibida por Lando Norris desde la cola Gaia Support.",
+          "fecha": "2026-05-13T00:03:30.900Z",
+          "asignadoA": "Lando Norris",
+          "cola": "Gaia Support",
+          "direccion": "entrante",
+          "estado": "en curso",
+          "ani": "+573102634216",
+          "interactionId": "de39e494-8e4d-4a85-89fb-e8c88fdbbb32"
+        },
+        {
           "id": "mp353pg147clwreie0l",
           "tipo": "llamada",
           "descripcion": "El cliente esta interesado en Customer Assist de Webex Calling",
@@ -299,7 +311,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-12T21:28:29.650Z"
+      "actualizadoEn": "2026-05-13T00:03:30.900Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
