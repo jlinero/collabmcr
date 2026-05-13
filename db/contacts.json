@@ -519,11 +519,24 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "mp4jbq1zpui9x0ml6g",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante recibida por Lando Norris desde la cola Gaia Support.",
+          "fecha": "2026-05-13T20:51:32.903Z",
+          "asignadoA": "Lando Norris",
+          "cola": "Gaia Support",
+          "direccion": "entrante",
+          "estado": "en curso",
+          "ani": "8001",
+          "interactionId": "0160ce76-2a89-413b-8ad3-dfeb990313ce"
+        }
+      ],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-05-13T20:48:43.218Z",
-      "actualizadoEn": "2026-05-13T20:48:43.218Z"
+      "actualizadoEn": "2026-05-13T20:51:32.903Z"
     }
   ]
 }
