@@ -1,8 +1,9 @@
 /**
- * crm-activity-btn.js  — v2 (Tab Panel Edition)
+ * crm-activity-btn.js  — v3 (Persistent Widget Edition)
  * ─────────────────────────────────────────────────────────────────────────────
  * Web Component para Webex Contact Center Agent Desktop.
- * Se monta como TAB en el panel auxiliar de la interacción activa.
+ * Modo Persistent Widget: invisible cuando no hay interacción activa,
+ * visible y funcional automáticamente al aceptar cualquier interacción.
  * Registra actividades en CollabMCR CRM (GitHub API).
  */
 
@@ -32,11 +33,16 @@ const CHANNEL_MAP = {
 };
 
 const STYLES = `
+/* ── Invisible por defecto, aparece solo con interacción activa ── */
 :host {
-  display: block; height: 100%;
+  display: none;           /* oculto sin interacción */
+  height: 100%;
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   background: #04080f; color: #dde6f5;
   overflow-y: auto;
+}
+:host(.active) {
+  display: block;          /* visible al tener tarea activa */
 }
 :host::-webkit-scrollbar { width: 3px; }
 :host::-webkit-scrollbar-thumb { background: #1a2d50; }
@@ -237,6 +243,8 @@ class CrmActivityBtn extends HTMLElement {
     let task = null;
     try { task = typeof val==='string' ? JSON.parse(val) : val; } catch(_) {}
     if (task && task.interactionId) {
+      // ── Hay interacción activa → mostrar widget ──
+      this.classList.add('active');
       const newAni = task.ani || (task.callAssociatedData||{}).ani || '';
       this._channel = task.channelType || task.mediaType || '';
       if (newAni !== this._ani) {
@@ -249,6 +257,8 @@ class CrmActivityBtn extends HTMLElement {
         (this._channel||'').toLowerCase().includes(k));
       if (cKey) this._selectTipo(CHANNEL_MAP[cKey]);
     } else {
+      // ── Sin interacción → ocultar widget completamente ──
+      this.classList.remove('active');
       this._ani = null; this._contact = null; this._channel = null;
       this._renderContent();
     }
@@ -256,7 +266,8 @@ class CrmActivityBtn extends HTMLElement {
 
   _renderContent() {
     if (!this._pat) { this._wrap.innerHTML = this._tplNoPat(); this._bindPat(); return; }
-    if (!this._ani) { this._wrap.innerHTML = this._tplEmpty(); return; }
+    // Sin ANI: el host ya está oculto (display:none via CSS), no hace falta renderizar
+    if (!this._ani) { this._wrap.innerHTML = ''; return; }
 
     const recentActs = this._contact ? (this._contact.actividades||[]).slice(0,3) : [];
     const chColor = this._channelColor();
