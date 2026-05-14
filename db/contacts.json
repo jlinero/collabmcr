@@ -22,6 +22,18 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mp5v6pfb08fdbiwl22v",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante recibida por un agente.",
+          "fecha": "2026-05-14T19:11:20.375Z",
+          "asignadoA": "—",
+          "cola": "—",
+          "direccion": "entrante",
+          "estado": "en curso",
+          "ani": "+573102634216",
+          "interactionId": ""
+        },
+        {
           "id": "mp5uubyb2jl3nwdel0d",
           "tipo": "whatsapp",
           "descripcion": "el cliente quiere conocer mas de la solución de Webex Contact Center",
@@ -357,7 +369,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-14T19:01:43.043Z"
+      "actualizadoEn": "2026-05-14T19:11:20.375Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
