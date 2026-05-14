@@ -36,7 +36,7 @@
         {
           "id": "mp5ugyodjlatkbzhy6",
           "tipo": "llamada",
-          "descripcion": "Consulta sobre características y costos de Webex Contact Center.\nTransferencia a asesor de ventas para cotización personalizada.\nEl cliente busca una solución para 10 agentes y un supervisor. Mencionó un manejo del 50% de interacciones.",
+          "descripcion": "Consulta sobre características y costos de Webex Contact Center.\nTransferencia a asesor de ventas para cotización personalizada.\nEl cliente busca una solución para 10 agentes y un supervisor. Mencionó un manejo del 50% de interacciones.\n\nSummary of your conversation\nContact reason:\nEl cliente quiere información sobre características de inteligencia artificial en Webex Contact Center y costos relacionados con una solución para 10 agentes.\nActions taken:\nEl agente proporcionó información sobre las capacidades de inteligencia artificial de Webex Contact Center.\nEl agente recomendó contactar directamente al área de ventas para obtener una cotización personalizada.\nEl agente inició la transferencia del cliente a un asesor de ventas.\nNext steps:\nEl cliente será transferido a un asesor de ventas para discutir la cotización y opciones específicas.",
           "asignadoA": "Lando Norris",
           "fecha": "2026-05-14T18:51:19.309Z"
         },
@@ -338,7 +338,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-14T18:52:27.909Z"
+      "actualizadoEn": "2026-05-14T18:53:12.011Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
