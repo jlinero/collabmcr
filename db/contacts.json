@@ -22,6 +22,18 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mp5txb586fxx7b80bva",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante recibida por un agente.",
+          "fecha": "2026-05-14T18:36:02.348Z",
+          "asignadoA": "—",
+          "cola": "—",
+          "direccion": "entrante",
+          "estado": "en curso",
+          "ani": "+573102634216",
+          "interactionId": ""
+        },
+        {
           "id": "mp3aqqqc83lizf60fy6",
           "tipo": "llamada",
           "descripcion": "Llamada entrante recibida por Lando Norris desde la cola Gaia Support.",
@@ -295,7 +307,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-14T17:07:07.072Z"
+      "actualizadoEn": "2026-05-14T18:36:02.348Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
