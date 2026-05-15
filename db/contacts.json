@@ -412,6 +412,18 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mp70p2x4vf8i9mg2rgp",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante recibida por Lando Norris desde la cola CL-Sales.",
+          "fecha": "2026-05-15T14:33:21.928Z",
+          "asignadoA": "Lando Norris",
+          "cola": "CL-Sales",
+          "direccion": "entrante",
+          "estado": "en curso",
+          "ani": "6052",
+          "interactionId": "e665071b-a34c-4a5b-9d71-bb6ccdfa775a"
+        },
+        {
           "id": "mp33ptnxrx9jmfronoi",
           "tipo": "llamada",
           "descripcion": "El cliente llamo por temas de soporte sobre la plataforma",
@@ -427,7 +439,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-05-12T20:46:50.733Z"
+      "actualizadoEn": "2026-05-15T14:33:21.928Z"
     },
     {
       "id": "moca7zhiaemq37wxhsp",
