@@ -886,11 +886,8 @@ async function loadDB(){
     if(!data) toast('Repositorio nuevo. Crea el primer contacto.','info');
     renderList();updateStats();
     // ── Screen Pop: auto-seleccionar contacto por número de teléfono ──
-    const urlParams   = new URLSearchParams(window.location.search);
-    const queryParam  = urlParams.get('query');
-    const agentParam  = urlParams.get('agentName')     || '';
-    const queueParam  = urlParams.get('queueName')     || '';
-    const interactId  = urlParams.get('interactionId') || '';
+    const urlParams  = new URLSearchParams(window.location.search);
+    const queryParam = urlParams.get('query');
     if(queryParam){
       // Normalizar número — quitar espacios y guiones
       const telBuscado = queryParam.replace(/[\s\-\(\)]/g,'');
@@ -904,24 +901,16 @@ async function loadDB(){
         selectC(contactoEncontrado.id);
         toast('📞 Contacto identificado: '+contactoEncontrado.nombre+' '+contactoEncontrado.apellido,'ok',4000);
         console.log('[SCREEN POP] Contacto encontrado:', contactoEncontrado.nombre, contactoEncontrado.telefono);
-        // ── Screen Pop: crear actividad automáticamente con datos de Webex ──
+        // ── Screen Pop: crear actividad automáticamente ──
         setTimeout(async()=>{
           const idx=(db.contacts||[]).findIndex(c=>c.id===contactoEncontrado.id);
           if(idx<0)return;
           if(!db.contacts[idx].actividades)db.contacts[idx].actividades=[];
-          const agenteTxt=agentParam||'un agente';
-          const colaTxt=queueParam?' desde la cola '+queueParam:'';
-          const desc='Llamada entrante recibida por '+agenteTxt+colaTxt+'.';
+          const desc='Llamada entrante desde '+queryParam+' · Estado: en curso';
           db.contacts[idx].actividades.unshift({
             id:uid(), tipo:'llamada',
             descripcion:desc,
-            fecha:new Date().toISOString(),
-            asignadoA:agentParam||'—',
-            cola:queueParam||'—',
-            direccion:'entrante',
-            estado:'en curso',
-            ani:queryParam,
-            interactionId:interactId
+            fecha:new Date().toISOString()
           });
           db.contacts[idx].actualizadoEn=new Date().toISOString();
           await saveDB('Screen Pop: llamada entrante');
