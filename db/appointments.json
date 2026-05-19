@@ -1,1 +1,40 @@
-{"appointments":[{"id":"17792066447475337","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Sesión de configuración Webex AI","proposito":"Apoyo en configuración de agente de inteligencia artificial de Webex","fecha":"2026-05-20","horaInicio":"08:00","horaFin":"10:00","duracion":120,"estado":"reprogramada","agente":"","notas":"Sesión de apoyo paso a paso para la configuración del agente de inteligencia artificial de Webex, según el caso setecientos diecinueve mil setecientos noventa y seis.","creadoEn":"2026-05-19T16:04:04.747Z","actualizadoEn":"2026-05-19T16:05:12.027Z"},{"id":"17792083704365854","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Sesión de integración Webex Contact Center","proposito":"Acompañamiento en integración de Webex Contact Center","fecha":"2026-05-19","horaInicio":"11:36","horaFin":"13:36","duracion":120,"estado":"cancelada","agente":"","notas":"Sesión de acompañamiento para integración de Webex Contact Center con CRM, sistema hospitalario y Excel de Microsoft. Confirmada por el cliente para hoy.","creadoEn":"2026-05-19T16:32:50.436Z","actualizadoEn":"2026-05-19T16:34:05.636Z"}]}
+{
+  "appointments": [
+    {
+      "id": "17792066447475337",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de configuración Webex AI",
+      "proposito": "Apoyo en configuración de agente de inteligencia artificial de Webex",
+      "fecha": "2026-05-20",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "cancelada",
+      "agente": "",
+      "notas": "Sesión de apoyo paso a paso para la configuración del agente de inteligencia artificial de Webex, según el caso setecientos diecinueve mil setecientos noventa y seis.",
+      "creadoEn": "2026-05-19T16:04:04.747Z",
+      "actualizadoEn": "2026-05-19T16:34:26.496Z"
+    },
+    {
+      "id": "17792083704365854",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de integración Webex Contact Center",
+      "proposito": "Acompañamiento en integración de Webex Contact Center",
+      "fecha": "2026-05-19",
+      "horaInicio": "11:36",
+      "horaFin": "13:36",
+      "duracion": 120,
+      "estado": "cancelada",
+      "agente": "",
+      "notas": "Sesión de acompañamiento para integración de Webex Contact Center con CRM, sistema hospitalario y Excel de Microsoft. Confirmada por el cliente para hoy.",
+      "creadoEn": "2026-05-19T16:32:50.436Z",
+      "actualizadoEn": "2026-05-19T16:34:05.636Z"
+    }
+  ]
+}
