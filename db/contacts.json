@@ -1,1 +1,409 @@
-{"contacts":[{"id":"123456","nombre":"Jose","apellido":"Linero","cargo":"Senior Collaboration SE","email":"jlinero@cisco.com","email2":"","telefono":"+573102634216","empresa":"Cisco","dominioEmpresa":"","telEmpresa":"+576013256052","ciudad":"Bogot, Colombia","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[{"id":"1776982642399","tipo":"llamada","descripcion":"El cliente tiene interes en el servicio de Webex Contact Center","asignadoA":"Oscar Piastri","fecha":"2026-04-23T22:17:22.399Z"},{"id":"mobq02qroql","tipo":"email","descripcion":"El cliente escribio un correo manifestando interes en Webex Calling","asignadoA":"Oscar Piastri","fecha":"2026-04-23T16:53:07.683Z"},{"id":"moaju9bbrk4","tipo":"email","descripcion":"El cliente escribio un correo manifestando interes en Webex Calling","asignadoA":"Oscar Piastri","fecha":"2026-04-22T21:12:52.391Z"},{"id":"moajoa9yp0v","tipo":"llamada","descripcion":"El cliente llamo con interes en Webex Contact Center","asignadoA":"Lando Norris","fecha":"2026-04-22T21:08:13.702Z"},{"id":"moaghznb1hhktni091j","tipo":"llamada","descripcion":"El cliente esta interesado en la solucion de Webex Contact Center","fecha":"2026-04-22T19:39:21.143Z"}],"deals":[{"id":"moc59bb1py0jkgv9x8","nombre":"Webex Calling","monto":"$20,000","fechaCierre":"Julio 30, 2026","etapa":"Calificado","creadoEn":"2026-04-24T00:00:12.925Z"}],"tickets":[{"id":"764296","numero":"764296","nombre":"Solicitud de acompaÒamiento para integraciÛn de Webex Contact Center","estado":"cerrado","creadoEn":"2026-05-19T16:27:48.683Z","actualizaciones":[{"id":"1779208636413","nota":"CancelaciÛn de cita para configuraciÛn, cliente encontrÛ forma de configurar por sÌ mismo con agente de IA, caso cerrado a solicitud del cliente.","agente":"cliente","fecha":"2026-05-19T16:37:16.413Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"1779208372140","nota":"SesiÛn de acompaÒamiento para integraciÛn de Webex Contact Center agendada para hoy, martes diecinueve de mayo de once treinta y seis a una treinta y seis. Confirmada por el cliente.","agente":"cliente","fecha":"2026-05-19T16:32:52.140Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"mpcum84rlzpn2022orh","nota":"Es necesario agendar la sesiÛn con el cliente, por favor coordinarla","agente":"Oscar Piastri","fecha":"2026-05-19T16:29:48.075Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779208068683","nota":"El cliente solicita que se le asigne una persona para ayudarle con el paso a paso de la configuraciÛn e integraciÛn de Webex Contact Center con su sistema actual, incluyendo CRM, sistema hospitalario y Excel de Microsoft.","agente":"Sistema","fecha":"2026-05-19T16:27:48.683Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-19T16:37:16.413Z"},{"id":"719796","numero":"719796","nombre":"Solicitud de apoyo paso a paso en configuraciÛn de agente de inteligencia artificial","estado":"cerrado","creadoEn":"2026-05-19T15:59:02.765Z","actualizaciones":[{"id":"1779207282331","nota":"El cliente confirma que el caso fue resuelto, ya le ayudaron con toda la configuraciÛn y el agente est· funcionando sin problema.","agente":"cliente","fecha":"2026-05-19T16:14:42.331Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mpctl2ogrzyjnatn7c","nota":"Se puede ayudar al cliente sin problema en la configuraciÛn paso a paso, es necesario agendar la sesiÛn que solicita","agente":"Lando Norris","fecha":"2026-05-19T16:00:54.736Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779206342765","nota":"El cliente solicita abrir un caso para recibir apoyo detallado en la configuraciÛn del agente de inteligencia artificial de Webex. Requiere orientaciÛn paso a paso para completar la configuraciÛn correctamente.","agente":"Sistema","fecha":"2026-05-19T15:59:02.765Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-19T16:14:42.331Z"},{"id":"120068","numero":"120068","nombre":"Desconexin total de telfonos en Webex Calling","estado":"cerrado","creadoEn":"2026-05-01T02:22:07.588Z","actualizaciones":[{"id":"mpctgtw7s42cb40tai","nota":"Se cierra el caso por falta de acualizaciÛn","agente":"Lando Norris","fecha":"2026-05-19T15:57:36.727Z","estadoAnterior":"abierto","estadoNuevo":"cerrado"},{"id":"1777602127588","nota":"Todos los telfonos de la oficina estn desconectados y parece que el servicio en la nube no est alcanzando los dispositivos. El usuario reporta que no hay conexin en Webex Calling.","agente":"Sistema","fecha":"2026-05-01T02:22:07.588Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-19T15:57:36.727Z"},{"id":"822152","numero":"822152","nombre":"Interrupciones en llamadas Webex Calling","estado":"cerrado","creadoEn":"2026-04-30T12:19:33.100Z","actualizaciones":[{"id":"1777552479037","nota":"Servicio probado y funcionando correctamente, sin ms interrupciones.","agente":"cliente","fecha":"2026-04-30T12:34:39.037Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"molgjngjxekzw5govq","nota":"Se realiza la revisin del caso, se verifico la llamada y no se encuentran inconvenientes, llamada con buena calidad.","agente":"Oscar Piastri","fecha":"2026-04-30T12:26:06.595Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"1777551737570","nota":"El cliente solicita que el caso sea tratado como prioritario y se escale internamente para obtener una solucin lo antes posible.","agente":"cliente","fecha":"2026-04-30T12:22:17.570Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1777551573100","nota":"El cliente reporta que durante una llamada reciente a travs de Webex Calling se presentaron varios cortes e interrupciones.","agente":"Sistema","fecha":"2026-04-30T12:19:33.100Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-04-30T12:34:39.037Z"},{"id":"664551","numero":"664551","nombre":"Problemas de calidad de llamadas en Webex Calling","estado":"cerrado","creadoEn":"2026-04-29T23:14:59.042Z","actualizaciones":[{"id":"1777506182259","nota":"El cliente confirm que el problema ya se solucion√por lo que solicita cerrar el caso.","agente":"cliente","fecha":"2026-04-29T23:43:02.259Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mokobrcl3ytqefnepnp","nota":"se esta revisando, necesitamos hacer una visita al cliente","agente":"Lando Norris","fecha":"2026-04-29T23:16:09.141Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1777504499042","nota":"Los usuarios reportan que durante las llamadas el audio se entrecorta. Se requiere revisiÛnde calidad de servicio en llamadas.","agente":"Sistema","fecha":"2026-04-29T23:14:59.042Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-04-29T23:43:02.259Z"},{"id":"560075","numero":"560075","nombre":"Problemas de calidad de servicio en telefona","estado":"cerrado","creadoEn":"2026-04-29T16:32:00.435Z","actualizaciones":[{"id":"1777484237839","nota":"El cliente solicit√errar el caso.","agente":"cliente","fecha":"2026-04-29T17:37:17.839Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mokab1lnzwgwkshcnj","nota":"se encontr en el caso, que se debe hacer un agendamiento de un mantenimientp","agente":"Oscar Piastri","fecha":"2026-04-29T16:43:41.147Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"1777480741617","nota":"El servicio est cado","agente":"cliente","fecha":"2026-04-29T16:39:01.617Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"mok9y9quie347vweeq","nota":"Se esta revisando el caso","agente":"Lando Norris","fecha":"2026-04-29T16:33:45.174Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1777480320435","nota":"Los usuarios reportan que la voz se est√ trecortando durante las llamadas, lo que afecta la calidad del servicio.","agente":"Sistema","fecha":"2026-04-29T16:32:00.435Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-04-29T17:37:17.839Z"}],"creadoEn":"2026-04-22T19:22:00.305Z","actualizadoEn":"2026-05-19T16:37:16.413Z"},{"id":"mobnzjnv6b8wbvfolwh","nombre":"Jose","apellido":"Linero CollabMCR","cargo":"CEO","email":"jlinero@collab-col.wbx.ai","email2":"","telefono":"+576023981001","empresa":"CollabMCR Technology Corporation","dominioEmpresa":"collab-col.wbx.ai","telEmpresa":"6052","ciudad":"","etapaVida":"cliente","estadoLead":"En progreso","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-23T15:56:43.723Z","actualizadoEn":"2026-04-23T22:52:49.024Z"},{"id":"moca7zhiaemq37wxhsp","nombre":"Fernando","apellido":"Alonso","cargo":"Aston Martin F1 Driver","email":"falonso@collab-col.wbx.ai","email2":"","telefono":"+14087215957","empresa":"CollabMCR Technology Corporation","dominioEmpresa":"collab-col.wbx.ai","telEmpresa":"5957","ciudad":"Bogot, Colombia","etapaVida":"cliente","estadoLead":"Conectado","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:19:09.030Z","actualizadoEn":"2026-04-24T02:19:09.030Z"},{"id":"moca9homcbzjupb4f0n","nombre":"Genny","apellido":"Baron","cargo":"Collaboration AE","email":"genbaron@cisco.com","email2":"","telefono":"+573166904925","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:20:19.270Z","actualizadoEn":"2026-04-24T02:20:19.270Z"},{"id":"mocagoenpa1y7kiuko","nombre":"Daniel","apellido":"Tobar","cargo":"Solutions Engineer","email":"dtobar@cisco.com","email2":"","telefono":"+573132488767","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Bogot√Colombia","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:25:54.575Z","actualizadoEn":"2026-04-24T02:25:54.575Z"},{"id":"mocai7bz315gaiwk2lj","nombre":"Javier","apellido":"Cuadros","cargo":"Solutions Engineer","email":"jcuadros@cisco.com","email2":"","telefono":"+573107741094","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Bogot√Colombia","etapaVida":"nuevo","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:27:05.759Z","actualizadoEn":"2026-04-24T02:27:05.759Z"},{"id":"123123","nombre":"Edgar","apellido":"Arana","cargo":"Collaboration AE","email":"earana@cisco.com","email2":"","telefono":"+51997516433","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Lima, Peru","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-28T03:52:17.354Z","actualizadoEn":"2026-04-28T03:52:17.354Z"}]}
+{
+  "contacts": [
+    {
+      "id": "123456",
+      "nombre": "Jose",
+      "apellido": "Linero",
+      "cargo": "Senior Collaboration SE",
+      "email": "jlinero@cisco.com",
+      "email2": "",
+      "telefono": "+573102634216",
+      "empresa": "Cisco",
+      "dominioEmpresa": "",
+      "telEmpresa": "+576013256052",
+      "ciudad": "Bogot, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [
+        {
+          "id": "1776982642399",
+          "tipo": "llamada",
+          "descripcion": "El cliente tiene interes en el servicio de Webex Contact Center",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-23T22:17:22.399Z"
+        },
+        {
+          "id": "mobq02qroql",
+          "tipo": "email",
+          "descripcion": "El cliente escribio un correo manifestando interes en Webex Calling",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-23T16:53:07.683Z"
+        },
+        {
+          "id": "moaju9bbrk4",
+          "tipo": "email",
+          "descripcion": "El cliente escribio un correo manifestando interes en Webex Calling",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-22T21:12:52.391Z"
+        },
+        {
+          "id": "moajoa9yp0v",
+          "tipo": "llamada",
+          "descripcion": "El cliente llamo con interes en Webex Contact Center",
+          "asignadoA": "Lando Norris",
+          "fecha": "2026-04-22T21:08:13.702Z"
+        },
+        {
+          "id": "moaghznb1hhktni091j",
+          "tipo": "llamada",
+          "descripcion": "El cliente esta interesado en la solucion de Webex Contact Center",
+          "fecha": "2026-04-22T19:39:21.143Z"
+        }
+      ],
+      "deals": [
+        {
+          "id": "moc59bb1py0jkgv9x8",
+          "nombre": "Webex Calling",
+          "monto": "$20,000",
+          "fechaCierre": "Julio 30, 2026",
+          "etapa": "Calificado",
+          "creadoEn": "2026-04-24T00:00:12.925Z"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "764296",
+          "numero": "764296",
+          "nombre": "Solicitud de acompa√±amiento para integraci√≥n de Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-19T16:27:48.683Z",
+          "actualizaciones": [
+            {
+              "id": "1779208636413",
+              "nota": "Cancelaci√≥n de cita para configuraci√≥n, cliente encontr√≥ forma de configurar por s√≠ mismo con agente de IA, caso cerrado a solicitud del cliente.",
+              "agente": "cliente",
+              "fecha": "2026-05-19T16:37:16.413Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1779208372140",
+              "nota": "Sesi√≥n de acompa√±amiento para integraci√≥n de Webex Contact Center agendada para hoy, martes diecinueve de mayo de once treinta y seis a una treinta y seis. Confirmada por el cliente.",
+              "agente": "cliente",
+              "fecha": "2026-05-19T16:32:52.140Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "mpcum84rlzpn2022orh",
+              "nota": "Es necesario agendar la sesi√≥n con el cliente, por favor coordinarla",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-19T16:29:48.075Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779208068683",
+              "nota": "El cliente solicita que se le asigne una persona para ayudarle con el paso a paso de la configuraci√≥n e integraci√≥n de Webex Contact Center con su sistema actual, incluyendo CRM, sistema hospitalario y Excel de Microsoft.",
+              "agente": "Sistema",
+              "fecha": "2026-05-19T16:27:48.683Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-19T16:37:16.413Z"
+        },
+        {
+          "id": "719796",
+          "numero": "719796",
+          "nombre": "Solicitud de apoyo paso a paso en configuraci√≥n de agente de inteligencia artificial",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-19T15:59:02.765Z",
+          "actualizaciones": [
+            {
+              "id": "1779207282331",
+              "nota": "El cliente confirma que el caso fue resuelto, ya le ayudaron con toda la configuraci√≥n y el agente est√° funcionando sin problema.",
+              "agente": "cliente",
+              "fecha": "2026-05-19T16:14:42.331Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mpctl2ogrzyjnatn7c",
+              "nota": "Se puede ayudar al cliente sin problema en la configuraci√≥n paso a paso, es necesario agendar la sesi√≥n que solicita",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-19T16:00:54.736Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779206342765",
+              "nota": "El cliente solicita abrir un caso para recibir apoyo detallado en la configuraci√≥n del agente de inteligencia artificial de Webex. Requiere orientaci√≥n paso a paso para completar la configuraci√≥n correctamente.",
+              "agente": "Sistema",
+              "fecha": "2026-05-19T15:59:02.765Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-19T16:14:42.331Z"
+        },
+        {
+          "id": "120068",
+          "numero": "120068",
+          "nombre": "Desconexin total de telfonos en Webex Calling",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-01T02:22:07.588Z",
+          "actualizaciones": [
+            {
+              "id": "mpctgtw7s42cb40tai",
+              "nota": "Se cierra el caso por falta de acualizaci√≥n",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-19T15:57:36.727Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1777602127588",
+              "nota": "Todos los telfonos de la oficina estn desconectados y parece que el servicio en la nube no est alcanzando los dispositivos. El usuario reporta que no hay conexin en Webex Calling.",
+              "agente": "Sistema",
+              "fecha": "2026-05-01T02:22:07.588Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-19T15:57:36.727Z"
+        },
+        {
+          "id": "822152",
+          "numero": "822152",
+          "nombre": "Interrupciones en llamadas Webex Calling",
+          "estado": "cerrado",
+          "creadoEn": "2026-04-30T12:19:33.100Z",
+          "actualizaciones": [
+            {
+              "id": "1777552479037",
+              "nota": "Servicio probado y funcionando correctamente, sin ms interrupciones.",
+              "agente": "cliente",
+              "fecha": "2026-04-30T12:34:39.037Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "molgjngjxekzw5govq",
+              "nota": "Se realiza la revisin del caso, se verifico la llamada y no se encuentran inconvenientes, llamada con buena calidad.",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-04-30T12:26:06.595Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1777551737570",
+              "nota": "El cliente solicita que el caso sea tratado como prioritario y se escale internamente para obtener una solucin lo antes posible.",
+              "agente": "cliente",
+              "fecha": "2026-04-30T12:22:17.570Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1777551573100",
+              "nota": "El cliente reporta que durante una llamada reciente a travs de Webex Calling se presentaron varios cortes e interrupciones.",
+              "agente": "Sistema",
+              "fecha": "2026-04-30T12:19:33.100Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-04-30T12:34:39.037Z"
+        },
+        {
+          "id": "664551",
+          "numero": "664551",
+          "nombre": "Problemas de calidad de llamadas en Webex Calling",
+          "estado": "cerrado",
+          "creadoEn": "2026-04-29T23:14:59.042Z",
+          "actualizaciones": [
+            {
+              "id": "1777506182259",
+              "nota": "El cliente confirm que el problema ya se solucion√Épor lo que solicita cerrar el caso.",
+              "agente": "cliente",
+              "fecha": "2026-04-29T23:43:02.259Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mokobrcl3ytqefnepnp",
+              "nota": "se esta revisando, necesitamos hacer una visita al cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-04-29T23:16:09.141Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1777504499042",
+              "nota": "Los usuarios reportan que durante las llamadas el audio se entrecorta. Se requiere revisi√≥nde calidad de servicio en llamadas.",
+              "agente": "Sistema",
+              "fecha": "2026-04-29T23:14:59.042Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-04-29T23:43:02.259Z"
+        }
+      ],
+      "creadoEn": "2026-04-22T19:22:00.305Z",
+      "actualizadoEn": "2026-05-19T16:37:16.413Z"
+    },
+    {
+      "id": "mobnzjnv6b8wbvfolwh",
+      "nombre": "Jose",
+      "apellido": "Linero CollabMCR",
+      "cargo": "CEO",
+      "email": "jlinero@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+576023981001",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "6052",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "En progreso",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-23T15:56:43.723Z",
+      "actualizadoEn": "2026-04-23T22:52:49.024Z"
+    },
+    {
+      "id": "moca7zhiaemq37wxhsp",
+      "nombre": "Fernando",
+      "apellido": "Alonso",
+      "cargo": "Aston Martin F1 Driver",
+      "email": "falonso@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+14087215957",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "5957",
+      "ciudad": "Bogot, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Conectado",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:19:09.030Z",
+      "actualizadoEn": "2026-04-24T02:19:09.030Z"
+    },
+    {
+      "id": "moca9homcbzjupb4f0n",
+      "nombre": "Genny",
+      "apellido": "Baron",
+      "cargo": "Collaboration AE",
+      "email": "genbaron@cisco.com",
+      "email2": "",
+      "telefono": "+573166904925",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:20:19.270Z",
+      "actualizadoEn": "2026-04-24T02:20:19.270Z"
+    },
+    {
+      "id": "mocagoenpa1y7kiuko",
+      "nombre": "Daniel",
+      "apellido": "Tobar",
+      "cargo": "Solutions Engineer",
+      "email": "dtobar@cisco.com",
+      "email2": "",
+      "telefono": "+573132488767",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Bogot√ÉColombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:25:54.575Z",
+      "actualizadoEn": "2026-04-24T02:25:54.575Z"
+    },
+    {
+      "id": "mocai7bz315gaiwk2lj",
+      "nombre": "Javier",
+      "apellido": "Cuadros",
+      "cargo": "Solutions Engineer",
+      "email": "jcuadros@cisco.com",
+      "email2": "",
+      "telefono": "+573107741094",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Bogot√ÉColombia",
+      "etapaVida": "nuevo",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:27:05.759Z",
+      "actualizadoEn": "2026-04-24T02:27:05.759Z"
+    },
+    {
+      "id": "123123",
+      "nombre": "Edgar",
+      "apellido": "Arana",
+      "cargo": "Collaboration AE",
+      "email": "earana@cisco.com",
+      "email2": "",
+      "telefono": "+51997516433",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Lima, Peru",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-28T03:52:17.354Z",
+      "actualizadoEn": "2026-04-28T03:52:17.354Z"
+    }
+  ]
+}
