@@ -261,6 +261,14 @@
           "creadoEn": "2026-05-20T15:11:54.896Z",
           "actualizaciones": [
             {
+              "id": "mpe7qay1eeiii8xf73",
+              "nota": "Ya se apoyo al cliente en la configuración",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-20T15:24:39.529Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mpe7dprwpw46w30a5g",
               "nota": "Se recibe el caso, esa integración se puede hacere sin problema, por favor agendar la sesión que el cliente solicita",
               "agente": "Lando Norris",
@@ -277,11 +285,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-20T15:14:52.220Z"
+          "actualizadoEn": "2026-05-20T15:24:39.529Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-20T15:14:52.220Z"
+      "actualizadoEn": "2026-05-20T15:24:39.529Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
