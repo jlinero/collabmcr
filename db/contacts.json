@@ -71,9 +71,17 @@
           "id": "277450",
           "numero": "277450",
           "nombre": "Documentación de visita comercial Webex Contact Center",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-05-21T15:01:55.303Z",
           "actualizaciones": [
+            {
+              "id": "mpfn26u6p7fs59yp2j",
+              "nota": "Ya se hizo la visita",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-21T15:21:34.494Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1779375715303",
               "nota": "Se agenda visita comercial para sesión informativa sobre beneficios y costos de Webex Contact Center el jueves veintiuno de mayo de dos mil veintiséis a las diez cero cinco de la mañana.",
@@ -82,7 +90,8 @@
               "estadoAnterior": "",
               "estadoNuevo": ""
             }
-          ]
+          ],
+          "actualizadoEn": "2026-05-21T15:21:34.494Z"
         },
         {
           "id": "119231",
@@ -288,7 +297,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-21T15:01:55.303Z"
+      "actualizadoEn": "2026-05-21T15:21:34.494Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
