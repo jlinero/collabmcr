@@ -260,40 +260,6 @@
             }
           ],
           "actualizadoEn": "2026-05-19T16:37:16.413Z"
-        },
-        {
-          "id": "719796",
-          "numero": "719796",
-          "nombre": "Solicitud de apoyo paso a paso en configuración de agente de inteligencia artificial",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-19T15:59:02.765Z",
-          "actualizaciones": [
-            {
-              "id": "1779207282331",
-              "nota": "El cliente confirma que el caso fue resuelto, ya le ayudaron con toda la configuración y el agente está funcionando sin problema.",
-              "agente": "cliente",
-              "fecha": "2026-05-19T16:14:42.331Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpctl2ogrzyjnatn7c",
-              "nota": "Se puede ayudar al cliente sin problema en la configuración paso a paso, es necesario agendar la sesión que solicita",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-19T16:00:54.736Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779206342765",
-              "nota": "El cliente solicita abrir un caso para recibir apoyo detallado en la configuración del agente de inteligencia artificial de Webex. Requiere orientación paso a paso para completar la configuración correctamente.",
-              "agente": "Sistema",
-              "fecha": "2026-05-19T15:59:02.765Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-19T16:14:42.331Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
