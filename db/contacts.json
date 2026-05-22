@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779484429781",
+          "tipo": "llamada",
+          "descripcion": "El cliente consultó el estado de su caso activo, agendó una sesión de configuración para el lunes veinticinco de mayo de una a tres de la tarde y solicitó actualizar el caso con esa información.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T21:13:49.781Z"
+        },
+        {
           "id": "1779484196986",
           "tipo": "llamada",
           "descripcion": "Se abrió el caso siete seis ocho siete cuatro cinco para soporte en configuración paso a paso de Webex Contact Center según solicitud del cliente.",
@@ -468,7 +475,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T21:13:26.930Z"
+      "actualizadoEn": "2026-05-22T21:13:49.781Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
