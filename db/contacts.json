@@ -306,9 +306,17 @@
           "id": "394082",
           "numero": "394082",
           "nombre": "Consulta sobre límite de acciones MCP para AI Agent",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-22T18:13:54.153Z",
           "actualizaciones": [
+            {
+              "id": "mph8qx8a2924uv5nsqi",
+              "nota": "no se puede tener mas de 10 acciones por AI Agent, para esto se tiene el concepto de transfer y pronto consulta para tener agentes mas especializados",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T18:16:26.554Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1779473634153",
               "nota": "El cliente desea saber si es posible tener más de 10 acciones de MCP para su caso de uso de AI Agent.",
@@ -318,11 +326,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-22T18:13:54.153Z"
+          "actualizadoEn": "2026-05-22T18:16:26.554Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T18:14:13.035Z"
+      "actualizadoEn": "2026-05-22T18:16:26.554Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
