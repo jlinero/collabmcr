@@ -104,6 +104,23 @@
       "agente": "",
       "notas": "",
       "creadoEn": "2026-05-22T02:03:19.302Z"
+    },
+    {
+      "id": "1779416278042",
+      "contactId": "moca9homcbzjupb4f0n",
+      "contactNombre": "Genny Baron",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573166904925",
+      "titulo": "Sesión con asesor comercial",
+      "proposito": "Sesión de asesoría comercial",
+      "fecha": "2026-05-21",
+      "horaInicio": "21:22",
+      "horaFin": "22:22",
+      "duracion": 60,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-22T02:17:58.042Z"
     }
   ]
 }
