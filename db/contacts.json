@@ -294,10 +294,28 @@
             }
           ],
           "actualizadoEn": "2026-05-22T14:20:19.172Z"
+        },
+        {
+          "id": "394082",
+          "numero": "394082",
+          "nombre": "Consulta sobre límite de acciones MCP para AI Agent",
+          "estado": "abierto",
+          "creadoEn": "2026-05-22T18:13:54.153Z",
+          "actualizaciones": [
+            {
+              "id": "1779473634153",
+              "nota": "El cliente desea saber si es posible tener más de 10 acciones de MCP para su caso de uso de AI Agent.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T18:13:54.153Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T18:13:54.153Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T14:26:53.849Z"
+      "actualizadoEn": "2026-05-22T18:13:54.153Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
