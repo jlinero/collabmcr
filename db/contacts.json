@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779460013849",
+          "tipo": "llamada",
+          "descripcion": "Se agendó una sesión informativa sobre Webex Contact Center para el 22 de mayo de 2026 de 9:31 a 11:31, a solicitud del cliente, para conocer detalles y costos de la solución.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T14:26:53.849Z"
+        },
+        {
           "id": "1779459659489",
           "tipo": "llamada",
           "descripcion": "El cliente consultó el estado de su caso activo, solicitó el cierre por configuración finalizada y pidió un resumen de los casos cerrados recientes.",
@@ -290,7 +297,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T14:20:59.489Z"
+      "actualizadoEn": "2026-05-22T14:26:53.849Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
