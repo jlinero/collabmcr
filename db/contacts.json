@@ -1,1 +1,469 @@
-{"contacts":[{"id":"123456","nombre":"Jose","apellido":"Linero","cargo":"Senior Collaboration SE","email":"jlinero@cisco.com","email2":"","telefono":"+573102634216","empresa":"Cisco","dominioEmpresa":"","telEmpresa":"+576013256052","ciudad":"Bogot, Colombia","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[{"id":"1776982642399","tipo":"llamada","descripcion":"El cliente tiene interes en el servicio de Webex Contact Center","asignadoA":"Oscar Piastri","fecha":"2026-04-23T22:17:22.399Z"},{"id":"mobq02qroql","tipo":"email","descripcion":"El cliente escribio un correo manifestando interes en Webex Calling","asignadoA":"Oscar Piastri","fecha":"2026-04-23T16:53:07.683Z"},{"id":"moaju9bbrk4","tipo":"email","descripcion":"El cliente escribio un correo manifestando interes en Webex Calling","asignadoA":"Oscar Piastri","fecha":"2026-04-22T21:12:52.391Z"},{"id":"moajoa9yp0v","tipo":"llamada","descripcion":"El cliente llamo con interes en Webex Contact Center","asignadoA":"Lando Norris","fecha":"2026-04-22T21:08:13.702Z"},{"id":"moaghznb1hhktni091j","tipo":"llamada","descripcion":"El cliente esta interesado en la solucion de Webex Contact Center","fecha":"2026-04-22T19:39:21.143Z"}],"deals":[{"id":"moc59bb1py0jkgv9x8","nombre":"Webex Calling","monto":"$20,000","fechaCierre":"Julio 30, 2026","etapa":"Calificado","creadoEn":"2026-04-24T00:00:12.925Z"}],"tickets":[{"id":"277450","numero":"277450","nombre":"DocumentaciÛn de visita comercial Webex Contact Center","estado":"cerrado","creadoEn":"2026-05-21T15:01:55.303Z","actualizaciones":[{"id":"mpfn26u6p7fs59yp2j","nota":"Ya se hizo la visita","agente":"Lando Norris","fecha":"2026-05-21T15:21:34.494Z","estadoAnterior":"abierto","estadoNuevo":"cerrado"},{"id":"1779375715303","nota":"Se agenda visita comercial para sesiÛn informativa sobre beneficios y costos de Webex Contact Center el jueves veintiuno de mayo de dos mil veintisÈis a las diez cero cinco de la maÒana.","agente":"Sistema","fecha":"2026-05-21T15:01:55.303Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-21T15:21:34.494Z"},{"id":"119231","numero":"119231","nombre":"IntegraciÛn de Webex Contact Center con archivos Excel en SharePoint","estado":"cerrado","creadoEn":"2026-05-20T15:11:54.896Z","actualizaciones":[{"id":"1779290868455","nota":"La integraciÛn quedÛ lista tras la visita, por lo que se procede a cerrar el caso.","agente":"cliente","fecha":"2026-05-20T15:27:48.455Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mpe7qay1eeiii8xf73","nota":"Ya se apoyo al cliente en la configuraciÛn","agente":"Oscar Piastri","fecha":"2026-05-20T15:24:39.529Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"mpe7dprwpw46w30a5g","nota":"Se recibe el caso, esa integraciÛn se puede hacere sin problema, por favor agendar la sesiÛn que el cliente solicita","agente":"Lando Norris","fecha":"2026-05-20T15:14:52.220Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779289914896","nota":"El cliente solicita ayuda paso a paso para integrar Webex Contact Center con archivos Excel ubicados en SharePoint. Requiere orientaciÛn detallada sobre la configuraciÛn y el proceso de integraciÛn.","agente":"Sistema","fecha":"2026-05-20T15:11:54.896Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-20T15:27:48.455Z"},{"id":"845609","numero":"845609","nombre":"Solicitud de integraciÛn de agenda personalizada con Webex Contact Center","estado":"cerrado","creadoEn":"2026-05-19T20:18:28.031Z","actualizaciones":[{"id":"1779222776466","nota":"El cliente indica que ya fue ayudado con la configuraciÛn y que todo est· funcionando correctamente, por lo que solicita cerrar el caso.","agente":"cliente","fecha":"2026-05-19T20:32:56.466Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mpd2uudorhwvakme6r","nota":"Esto se puede hacer sin problema, necesitamos agendar la sesiÛn con el cliente","agente":"Oscar Piastri","fecha":"2026-05-19T20:20:27.084Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779221908031","nota":"El cliente solicita ayuda paso a paso para configurar e integrar su sistema de agenda personalizada de citas mÈdicas con Webex Contact Center y el agente de inteligencia artificial.","agente":"Sistema","fecha":"2026-05-19T20:18:28.031Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-19T20:32:56.466Z"},{"id":"704571","numero":"704571","nombre":"RevisiÛn de integraciÛn tÈcnica Webex Contact Center con sistema hospitalario y Excel","estado":"cerrado","creadoEn":"2026-05-19T17:08:32.789Z","actualizaciones":[{"id":"1779211083693","nota":"El cliente indica que la visita ya se realizÛ y todo est· configurado, por lo que solicita cerrar el caso.","agente":"cliente","fecha":"2026-05-19T17:18:03.693Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mpcw8ji3qnezl7701p","nota":"Ya se hizo la sesiÛn, se ayudÛ al cliente a configurar su agente de IA con la integraciÛn","agente":"Oscar Piastri","fecha":"2026-05-19T17:15:08.859Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"1779210758774","nota":"SesiÛn de integraciÛn tÈcnica agendada para hoy, martes, diecinueve de mayo, a las doce diecisÈis. Se realizar· acompaÒamiento paso a paso en la integraciÛn de Webex Contact Center con sistema hospitalario y Excel.","agente":"cliente","fecha":"2026-05-19T17:12:38.774Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"mpcw21q6o5xqjjerv","nota":"Se puede hacer la integraciÛn que necesita el cliente sin problema, por favor agendar la sesiÛn para hacer esta configuraciÛn","agente":"Oscar Piastri","fecha":"2026-05-19T17:10:05.886Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779210512789","nota":"Solicita acompaÒamiento paso a paso para la integraciÛn de Webex Contact Center con su sistema hospitalario y Microsoft Excel, incluyendo configuraciÛn tÈcnica y automatizaciÛn de agendamiento de citas.","agente":"Sistema","fecha":"2026-05-19T17:08:32.789Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-19T17:18:03.693Z"},{"id":"764296","numero":"764296","nombre":"Solicitud de acompaÒamiento para integraciÛn de Webex Contact Center","estado":"cerrado","creadoEn":"2026-05-19T16:27:48.683Z","actualizaciones":[{"id":"1779208636413","nota":"CancelaciÛn de cita para configuraciÛn, cliente encontrÛ forma de configurar por sÌ mismo con agente de IA, caso cerrado a solicitud del cliente.","agente":"cliente","fecha":"2026-05-19T16:37:16.413Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"1779208372140","nota":"SesiÛn de acompaÒamiento para integraciÛn de Webex Contact Center agendada para hoy, martes diecinueve de mayo de once treinta y seis a una treinta y seis. Confirmada por el cliente.","agente":"cliente","fecha":"2026-05-19T16:32:52.140Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"mpcum84rlzpn2022orh","nota":"Es necesario agendar la sesiÛn con el cliente, por favor coordinarla","agente":"Oscar Piastri","fecha":"2026-05-19T16:29:48.075Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779208068683","nota":"El cliente solicita que se le asigne una persona para ayudarle con el paso a paso de la configuraciÛn e integraciÛn de Webex Contact Center con su sistema actual, incluyendo CRM, sistema hospitalario y Excel de Microsoft.","agente":"Sistema","fecha":"2026-05-19T16:27:48.683Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-19T16:37:16.413Z"},{"id":"234166","numero":"234166","nombre":"Problema en configuraciÛn de MCP server","estado":"cerrado","creadoEn":"2026-05-22T00:49:13.601Z","actualizaciones":[{"id":"1779411022415","nota":"El cliente encontrÛ el problema en la configuraciÛn del MCP server y ya no necesita asistencia.","agente":"cliente","fecha":"2026-05-22T00:50:22.415Z","estadoAnterior":"abierto","estadoNuevo":"cerrado"},{"id":"1779410953601","nota":"El cliente reporta que est· configurando un servidor MCP y no funciona. Solicita asistencia para la configuraciÛn y soluciÛn del problema.","agente":"Sistema","fecha":"2026-05-22T00:49:13.601Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-22T00:50:22.415Z"}],"creadoEn":"2026-04-22T19:22:00.305Z","actualizadoEn":"2026-05-22T00:50:22.415Z"},{"id":"mobnzjnv6b8wbvfolwh","nombre":"Jose","apellido":"Linero CollabMCR","cargo":"CEO","email":"jlinero@collab-col.wbx.ai","email2":"","telefono":"+576023981001","empresa":"CollabMCR Technology Corporation","dominioEmpresa":"collab-col.wbx.ai","telEmpresa":"6052","ciudad":"","etapaVida":"cliente","estadoLead":"En progreso","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-23T15:56:43.723Z","actualizadoEn":"2026-04-23T22:52:49.024Z"},{"id":"moca7zhiaemq37wxhsp","nombre":"Fernando","apellido":"Alonso","cargo":"Aston Martin F1 Driver","email":"falonso@collab-col.wbx.ai","email2":"","telefono":"+14087215957","empresa":"CollabMCR Technology Corporation","dominioEmpresa":"collab-col.wbx.ai","telEmpresa":"5957","ciudad":"Bogot, Colombia","etapaVida":"cliente","estadoLead":"Conectado","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:19:09.030Z","actualizadoEn":"2026-04-24T02:19:09.030Z"},{"id":"moca9homcbzjupb4f0n","nombre":"Genny","apellido":"Baron","cargo":"Collaboration AE","email":"genbaron@cisco.com","email2":"","telefono":"+573166904925","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:20:19.270Z","actualizadoEn":"2026-04-24T02:20:19.270Z"},{"id":"mocagoenpa1y7kiuko","nombre":"Daniel","apellido":"Tobar","cargo":"Solutions Engineer","email":"dtobar@cisco.com","email2":"","telefono":"+573132488767","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Bogot√Colombia","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:25:54.575Z","actualizadoEn":"2026-04-24T02:25:54.575Z"},{"id":"mocai7bz315gaiwk2lj","nombre":"Javier","apellido":"Cuadros","cargo":"Solutions Engineer","email":"jcuadros@cisco.com","email2":"","telefono":"+573107741094","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Bogot√Colombia","etapaVida":"nuevo","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:27:05.759Z","actualizadoEn":"2026-04-24T02:27:05.759Z"},{"id":"123123","nombre":"Edgar","apellido":"Arana","cargo":"Collaboration AE","email":"earana@cisco.com","email2":"","telefono":"+51997516433","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Lima, Peru","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-28T03:52:17.354Z","actualizadoEn":"2026-04-28T03:52:17.354Z"}]}
+{
+  "contacts": [
+    {
+      "id": "123456",
+      "nombre": "Jose",
+      "apellido": "Linero",
+      "cargo": "Senior Collaboration SE",
+      "email": "jlinero@cisco.com",
+      "email2": "",
+      "telefono": "+573102634216",
+      "empresa": "Cisco",
+      "dominioEmpresa": "",
+      "telEmpresa": "+576013256052",
+      "ciudad": "Bogot, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [
+        {
+          "id": "1776982642399",
+          "tipo": "llamada",
+          "descripcion": "El cliente tiene interes en el servicio de Webex Contact Center",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-23T22:17:22.399Z"
+        },
+        {
+          "id": "mobq02qroql",
+          "tipo": "email",
+          "descripcion": "El cliente escribio un correo manifestando interes en Webex Calling",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-23T16:53:07.683Z"
+        },
+        {
+          "id": "moaju9bbrk4",
+          "tipo": "email",
+          "descripcion": "El cliente escribio un correo manifestando interes en Webex Calling",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-22T21:12:52.391Z"
+        },
+        {
+          "id": "moajoa9yp0v",
+          "tipo": "llamada",
+          "descripcion": "El cliente llamo con interes en Webex Contact Center",
+          "asignadoA": "Lando Norris",
+          "fecha": "2026-04-22T21:08:13.702Z"
+        },
+        {
+          "id": "moaghznb1hhktni091j",
+          "tipo": "llamada",
+          "descripcion": "El cliente esta interesado en la solucion de Webex Contact Center",
+          "fecha": "2026-04-22T19:39:21.143Z"
+        }
+      ],
+      "deals": [
+        {
+          "id": "moc59bb1py0jkgv9x8",
+          "nombre": "Webex Calling",
+          "monto": "$20,000",
+          "fechaCierre": "Julio 30, 2026",
+          "etapa": "Calificado",
+          "creadoEn": "2026-04-24T00:00:12.925Z"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "277450",
+          "numero": "277450",
+          "nombre": "Documentaci√≥n de visita comercial Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-21T15:01:55.303Z",
+          "actualizaciones": [
+            {
+              "id": "mpfn26u6p7fs59yp2j",
+              "nota": "Ya se hizo la visita",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-21T15:21:34.494Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1779375715303",
+              "nota": "Se agenda visita comercial para sesi√≥n informativa sobre beneficios y costos de Webex Contact Center el jueves veintiuno de mayo de dos mil veintis√©is a las diez cero cinco de la ma√±ana.",
+              "agente": "Sistema",
+              "fecha": "2026-05-21T15:01:55.303Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-21T15:21:34.494Z"
+        },
+        {
+          "id": "119231",
+          "numero": "119231",
+          "nombre": "Integraci√≥n de Webex Contact Center con archivos Excel en SharePoint",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-20T15:11:54.896Z",
+          "actualizaciones": [
+            {
+              "id": "1779290868455",
+              "nota": "La integraci√≥n qued√≥ lista tras la visita, por lo que se procede a cerrar el caso.",
+              "agente": "cliente",
+              "fecha": "2026-05-20T15:27:48.455Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mpe7qay1eeiii8xf73",
+              "nota": "Ya se apoyo al cliente en la configuraci√≥n",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-20T15:24:39.529Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "mpe7dprwpw46w30a5g",
+              "nota": "Se recibe el caso, esa integraci√≥n se puede hacere sin problema, por favor agendar la sesi√≥n que el cliente solicita",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-20T15:14:52.220Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779289914896",
+              "nota": "El cliente solicita ayuda paso a paso para integrar Webex Contact Center con archivos Excel ubicados en SharePoint. Requiere orientaci√≥n detallada sobre la configuraci√≥n y el proceso de integraci√≥n.",
+              "agente": "Sistema",
+              "fecha": "2026-05-20T15:11:54.896Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-20T15:27:48.455Z"
+        },
+        {
+          "id": "845609",
+          "numero": "845609",
+          "nombre": "Solicitud de integraci√≥n de agenda personalizada con Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-19T20:18:28.031Z",
+          "actualizaciones": [
+            {
+              "id": "1779222776466",
+              "nota": "El cliente indica que ya fue ayudado con la configuraci√≥n y que todo est√° funcionando correctamente, por lo que solicita cerrar el caso.",
+              "agente": "cliente",
+              "fecha": "2026-05-19T20:32:56.466Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mpd2uudorhwvakme6r",
+              "nota": "Esto se puede hacer sin problema, necesitamos agendar la sesi√≥n con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-19T20:20:27.084Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779221908031",
+              "nota": "El cliente solicita ayuda paso a paso para configurar e integrar su sistema de agenda personalizada de citas m√©dicas con Webex Contact Center y el agente de inteligencia artificial.",
+              "agente": "Sistema",
+              "fecha": "2026-05-19T20:18:28.031Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-19T20:32:56.466Z"
+        },
+        {
+          "id": "704571",
+          "numero": "704571",
+          "nombre": "Revisi√≥n de integraci√≥n t√©cnica Webex Contact Center con sistema hospitalario y Excel",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-19T17:08:32.789Z",
+          "actualizaciones": [
+            {
+              "id": "1779211083693",
+              "nota": "El cliente indica que la visita ya se realiz√≥ y todo est√° configurado, por lo que solicita cerrar el caso.",
+              "agente": "cliente",
+              "fecha": "2026-05-19T17:18:03.693Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mpcw8ji3qnezl7701p",
+              "nota": "Ya se hizo la sesi√≥n, se ayud√≥ al cliente a configurar su agente de IA con la integraci√≥n",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-19T17:15:08.859Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779210758774",
+              "nota": "Sesi√≥n de integraci√≥n t√©cnica agendada para hoy, martes, diecinueve de mayo, a las doce diecis√©is. Se realizar√° acompa√±amiento paso a paso en la integraci√≥n de Webex Contact Center con sistema hospitalario y Excel.",
+              "agente": "cliente",
+              "fecha": "2026-05-19T17:12:38.774Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "mpcw21q6o5xqjjerv",
+              "nota": "Se puede hacer la integraci√≥n que necesita el cliente sin problema, por favor agendar la sesi√≥n para hacer esta configuraci√≥n",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-19T17:10:05.886Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779210512789",
+              "nota": "Solicita acompa√±amiento paso a paso para la integraci√≥n de Webex Contact Center con su sistema hospitalario y Microsoft Excel, incluyendo configuraci√≥n t√©cnica y automatizaci√≥n de agendamiento de citas.",
+              "agente": "Sistema",
+              "fecha": "2026-05-19T17:08:32.789Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-19T17:18:03.693Z"
+        },
+        {
+          "id": "764296",
+          "numero": "764296",
+          "nombre": "Solicitud de acompa√±amiento para integraci√≥n de Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-19T16:27:48.683Z",
+          "actualizaciones": [
+            {
+              "id": "1779208636413",
+              "nota": "Cancelaci√≥n de cita para configuraci√≥n, cliente encontr√≥ forma de configurar por s√≠ mismo con agente de IA, caso cerrado a solicitud del cliente.",
+              "agente": "cliente",
+              "fecha": "2026-05-19T16:37:16.413Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1779208372140",
+              "nota": "Sesi√≥n de acompa√±amiento para integraci√≥n de Webex Contact Center agendada para hoy, martes diecinueve de mayo de once treinta y seis a una treinta y seis. Confirmada por el cliente.",
+              "agente": "cliente",
+              "fecha": "2026-05-19T16:32:52.140Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "mpcum84rlzpn2022orh",
+              "nota": "Es necesario agendar la sesi√≥n con el cliente, por favor coordinarla",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-19T16:29:48.075Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779208068683",
+              "nota": "El cliente solicita que se le asigne una persona para ayudarle con el paso a paso de la configuraci√≥n e integraci√≥n de Webex Contact Center con su sistema actual, incluyendo CRM, sistema hospitalario y Excel de Microsoft.",
+              "agente": "Sistema",
+              "fecha": "2026-05-19T16:27:48.683Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-19T16:37:16.413Z"
+        },
+        {
+          "id": "234166",
+          "numero": "234166",
+          "nombre": "Problema en configuraci√≥n de MCP server",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-22T00:49:13.601Z",
+          "actualizaciones": [
+            {
+              "id": "1779411022415",
+              "nota": "El cliente encontr√≥ el problema en la configuraci√≥n del MCP server y ya no necesita asistencia.",
+              "agente": "cliente",
+              "fecha": "2026-05-22T00:50:22.415Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1779410953601",
+              "nota": "El cliente reporta que est√° configurando un servidor MCP y no funciona. Solicita asistencia para la configuraci√≥n y soluci√≥n del problema.",
+              "agente": "Sistema",
+              "fecha": "2026-05-22T00:49:13.601Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T00:50:22.415Z"
+        },
+        {
+          "id": "639309",
+          "numero": "639309",
+          "nombre": "Problema de integraci√≥n y configuraci√≥n de MCP server",
+          "estado": "abierto",
+          "creadoEn": "2026-05-22T01:20:09.196Z",
+          "actualizaciones": [
+            {
+              "id": "1779412809196",
+              "nota": "El cliente solicita ayuda para solucionar un problema de integraci√≥n y configuraci√≥n de un MCP server. Requiere asistencia t√©cnica para la configuraci√≥n.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T01:20:09.196Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T01:20:09.196Z"
+        }
+      ],
+      "creadoEn": "2026-04-22T19:22:00.305Z",
+      "actualizadoEn": "2026-05-22T01:20:09.196Z"
+    },
+    {
+      "id": "mobnzjnv6b8wbvfolwh",
+      "nombre": "Jose",
+      "apellido": "Linero CollabMCR",
+      "cargo": "CEO",
+      "email": "jlinero@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+576023981001",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "6052",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "En progreso",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-23T15:56:43.723Z",
+      "actualizadoEn": "2026-04-23T22:52:49.024Z"
+    },
+    {
+      "id": "moca7zhiaemq37wxhsp",
+      "nombre": "Fernando",
+      "apellido": "Alonso",
+      "cargo": "Aston Martin F1 Driver",
+      "email": "falonso@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+14087215957",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "5957",
+      "ciudad": "Bogot, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Conectado",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:19:09.030Z",
+      "actualizadoEn": "2026-04-24T02:19:09.030Z"
+    },
+    {
+      "id": "moca9homcbzjupb4f0n",
+      "nombre": "Genny",
+      "apellido": "Baron",
+      "cargo": "Collaboration AE",
+      "email": "genbaron@cisco.com",
+      "email2": "",
+      "telefono": "+573166904925",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:20:19.270Z",
+      "actualizadoEn": "2026-04-24T02:20:19.270Z"
+    },
+    {
+      "id": "mocagoenpa1y7kiuko",
+      "nombre": "Daniel",
+      "apellido": "Tobar",
+      "cargo": "Solutions Engineer",
+      "email": "dtobar@cisco.com",
+      "email2": "",
+      "telefono": "+573132488767",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Bogot√ÉColombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:25:54.575Z",
+      "actualizadoEn": "2026-04-24T02:25:54.575Z"
+    },
+    {
+      "id": "mocai7bz315gaiwk2lj",
+      "nombre": "Javier",
+      "apellido": "Cuadros",
+      "cargo": "Solutions Engineer",
+      "email": "jcuadros@cisco.com",
+      "email2": "",
+      "telefono": "+573107741094",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Bogot√ÉColombia",
+      "etapaVida": "nuevo",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:27:05.759Z",
+      "actualizadoEn": "2026-04-24T02:27:05.759Z"
+    },
+    {
+      "id": "123123",
+      "nombre": "Edgar",
+      "apellido": "Arana",
+      "cargo": "Collaboration AE",
+      "email": "earana@cisco.com",
+      "email2": "",
+      "telefono": "+51997516433",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Lima, Peru",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-28T03:52:17.354Z",
+      "actualizadoEn": "2026-04-28T03:52:17.354Z"
+    }
+  ]
+}
