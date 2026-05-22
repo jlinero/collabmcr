@@ -343,9 +343,17 @@
           "id": "418362",
           "numero": "418362",
           "nombre": "Problema de calidad de servicio en llamadas Webex",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-22T19:08:37.247Z",
           "actualizaciones": [
+            {
+              "id": "mphapbjyh5kvyfqub3o",
+              "nota": "Se realiza una revisión inicial del caso, se ve algunos usuarios que efectivamente tienen problemas de calidad de servicio, no se ven problemas en la nube de Webex, es necesario agendar una sesión con el cliente para que revisemos en conjunto lo que esta pasando",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T19:11:11.038Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1779476917247",
               "nota": "Los usuarios reportan que durante algunas llamadas se entrecorta el audio y no escuchan bien a la otra persona. Se realizó revisión de red y no se encontraron problemas.",
@@ -355,11 +363,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-22T19:08:37.247Z"
+          "actualizadoEn": "2026-05-22T19:11:11.038Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T19:08:40.925Z"
+      "actualizadoEn": "2026-05-22T19:11:11.038Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
