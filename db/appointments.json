@@ -30,10 +30,11 @@
       "horaInicio": "13:00",
       "horaFin": "15:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-05-22T21:12:59.289Z"
+      "notas": "Cancelada: El cliente no puede asistir el lunes",
+      "creadoEn": "2026-05-22T21:12:59.289Z",
+      "actualizadoEn": "2026-05-22T21:15:32.359Z"
     }
   ]
 }
