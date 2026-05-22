@@ -415,9 +415,28 @@
       "notas": "",
       "actividades": [],
       "deals": [],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "452320",
+          "numero": "452320",
+          "nombre": "Acompañamiento configuración AI Agent",
+          "estado": "abierto",
+          "creadoEn": "2026-05-22T01:58:29.311Z",
+          "actualizaciones": [
+            {
+              "id": "1779415109311",
+              "nota": "Solicitud de acompañamiento en la configuración del AI Agent.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T01:58:29.311Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T01:58:29.311Z"
+        }
+      ],
       "creadoEn": "2026-04-24T02:20:19.270Z",
-      "actualizadoEn": "2026-04-24T02:20:19.270Z"
+      "actualizadoEn": "2026-05-22T01:58:29.311Z"
     },
     {
       "id": "mocagoenpa1y7kiuko",
