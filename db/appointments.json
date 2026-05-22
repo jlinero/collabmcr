@@ -1,1 +1,21 @@
-{"appointments":[]}
+{
+  "appointments": [
+    {
+      "id": "1779416830501",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión informativa sobre costos de Webex Contact Center",
+      "proposito": "Presentación de costos y beneficios de Webex Contact Center",
+      "fecha": "2026-05-23",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-22T02:27:10.501Z"
+    }
+  ]
+}
