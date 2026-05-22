@@ -454,13 +454,21 @@
               "fecha": "2026-05-22T21:09:26.843Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1779484406930",
+              "nota": "Sesión de configuración paso a paso de Webex Contact Center agendada para el lunes veinticinco de mayo de una a tres de la tarde.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T21:13:26.930Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-22T21:10:51.157Z"
+          "actualizadoEn": "2026-05-22T21:13:26.930Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T21:10:51.157Z"
+      "actualizadoEn": "2026-05-22T21:13:26.930Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
