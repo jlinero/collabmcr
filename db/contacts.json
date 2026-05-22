@@ -82,6 +82,32 @@
       ],
       "tickets": [
         {
+          "id": "892920",
+          "numero": "892920",
+          "nombre": "Configuración de MCP server con AI agent",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-22T01:43:52.922Z",
+          "actualizaciones": [
+            {
+              "id": "mpg9dbnums0s0ps9cy",
+              "nota": "Se cierra el caos",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-22T01:46:05.514Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1779414232922",
+              "nota": "El cliente solicita ayuda para configurar un MCP server junto con el agente de inteligencia artificial.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T01:43:52.922Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T01:46:05.514Z"
+        },
+        {
           "id": "639309",
           "numero": "639309",
           "nombre": "Problema de integración y configuración de MCP server",
@@ -184,158 +210,6 @@
             }
           ],
           "actualizadoEn": "2026-05-21T15:21:34.494Z"
-        },
-        {
-          "id": "119231",
-          "numero": "119231",
-          "nombre": "Integración de Webex Contact Center con archivos Excel en SharePoint",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-20T15:11:54.896Z",
-          "actualizaciones": [
-            {
-              "id": "1779290868455",
-              "nota": "La integración quedó lista tras la visita, por lo que se procede a cerrar el caso.",
-              "agente": "cliente",
-              "fecha": "2026-05-20T15:27:48.455Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpe7qay1eeiii8xf73",
-              "nota": "Ya se apoyo al cliente en la configuración",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-20T15:24:39.529Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "mpe7dprwpw46w30a5g",
-              "nota": "Se recibe el caso, esa integración se puede hacere sin problema, por favor agendar la sesión que el cliente solicita",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-20T15:14:52.220Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779289914896",
-              "nota": "El cliente solicita ayuda paso a paso para integrar Webex Contact Center con archivos Excel ubicados en SharePoint. Requiere orientación detallada sobre la configuración y el proceso de integración.",
-              "agente": "Sistema",
-              "fecha": "2026-05-20T15:11:54.896Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-20T15:27:48.455Z"
-        },
-        {
-          "id": "845609",
-          "numero": "845609",
-          "nombre": "Solicitud de integración de agenda personalizada con Webex Contact Center",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-19T20:18:28.031Z",
-          "actualizaciones": [
-            {
-              "id": "1779222776466",
-              "nota": "El cliente indica que ya fue ayudado con la configuración y que todo está funcionando correctamente, por lo que solicita cerrar el caso.",
-              "agente": "cliente",
-              "fecha": "2026-05-19T20:32:56.466Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpd2uudorhwvakme6r",
-              "nota": "Esto se puede hacer sin problema, necesitamos agendar la sesión con el cliente",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-19T20:20:27.084Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779221908031",
-              "nota": "El cliente solicita ayuda paso a paso para configurar e integrar su sistema de agenda personalizada de citas médicas con Webex Contact Center y el agente de inteligencia artificial.",
-              "agente": "Sistema",
-              "fecha": "2026-05-19T20:18:28.031Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-19T20:32:56.466Z"
-        },
-        {
-          "id": "704571",
-          "numero": "704571",
-          "nombre": "Revisión de integración técnica Webex Contact Center con sistema hospitalario y Excel",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-19T17:08:32.789Z",
-          "actualizaciones": [
-            {
-              "id": "1779211083693",
-              "nota": "El cliente indica que la visita ya se realizó y todo está configurado, por lo que solicita cerrar el caso.",
-              "agente": "cliente",
-              "fecha": "2026-05-19T17:18:03.693Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpcw8ji3qnezl7701p",
-              "nota": "Ya se hizo la sesión, se ayudó al cliente a configurar su agente de IA con la integración",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-19T17:15:08.859Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779210758774",
-              "nota": "Sesión de integración técnica agendada para hoy, martes, diecinueve de mayo, a las doce dieciséis. Se realizará acompañamiento paso a paso en la integración de Webex Contact Center con sistema hospitalario y Excel.",
-              "agente": "cliente",
-              "fecha": "2026-05-19T17:12:38.774Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "mpcw21q6o5xqjjerv",
-              "nota": "Se puede hacer la integración que necesita el cliente sin problema, por favor agendar la sesión para hacer esta configuración",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-19T17:10:05.886Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779210512789",
-              "nota": "Solicita acompañamiento paso a paso para la integración de Webex Contact Center con su sistema hospitalario y Microsoft Excel, incluyendo configuración técnica y automatización de agendamiento de citas.",
-              "agente": "Sistema",
-              "fecha": "2026-05-19T17:08:32.789Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-19T17:18:03.693Z"
-        },
-        {
-          "id": "892920",
-          "numero": "892920",
-          "nombre": "Configuración de MCP server con AI agent",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-22T01:43:52.922Z",
-          "actualizaciones": [
-            {
-              "id": "mpg9dbnums0s0ps9cy",
-              "nota": "Se cierra el caos",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-22T01:46:05.514Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1779414232922",
-              "nota": "El cliente solicita ayuda para configurar un MCP server junto con el agente de inteligencia artificial.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T01:43:52.922Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-22T01:46:05.514Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
