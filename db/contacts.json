@@ -436,9 +436,17 @@
           "id": "768745",
           "numero": "768745",
           "nombre": "Solicitud de configuración paso a paso de Webex Contact Center",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-22T21:09:26.843Z",
           "actualizaciones": [
+            {
+              "id": "mphez7rp1zxc62edh95",
+              "nota": "Si, se puede soportar al cliente sin problema en esa configuración, se debe generar sesión con este cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T21:10:51.157Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1779484166843",
               "nota": "El cliente solicita ayuda para configurar Webex Contact Center desde cero, incluyendo instrucciones detalladas para cada paso.",
@@ -448,11 +456,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-22T21:09:26.843Z"
+          "actualizadoEn": "2026-05-22T21:10:51.157Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T21:09:56.986Z"
+      "actualizadoEn": "2026-05-22T21:10:51.157Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
