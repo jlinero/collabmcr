@@ -413,7 +413,15 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1779415124991",
+          "tipo": "llamada",
+          "descripcion": "Se abrió el ticket #452320 para acompañamiento en la configuración del AI Agent. El cliente no requiere más asistencia en este momento.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T01:58:44.991Z"
+        }
+      ],
       "deals": [],
       "tickets": [
         {
@@ -436,7 +444,7 @@
         }
       ],
       "creadoEn": "2026-04-24T02:20:19.270Z",
-      "actualizadoEn": "2026-05-22T01:58:29.311Z"
+      "actualizadoEn": "2026-05-22T01:58:44.991Z"
     },
     {
       "id": "mocagoenpa1y7kiuko",
