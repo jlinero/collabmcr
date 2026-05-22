@@ -8,14 +8,15 @@
       "contactTel": "+573102634216",
       "titulo": "Revisión conjunta de calidad de servicio en llamadas Webex",
       "proposito": "Diagnóstico de entrecortes y mala calidad de audio en llamadas Webex",
-      "fecha": "2026-05-22",
-      "horaInicio": "14:18",
-      "horaFin": "16:18",
+      "fecha": "2026-05-23",
+      "horaInicio": "14:00",
+      "horaFin": "16:00",
       "duracion": 120,
       "estado": "confirmada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-05-22T19:14:12.309Z"
+      "notas": "Reprogramada desde 2026-05-22 14:18. Motivo: Solicitud del cliente, no podrá asistir el día original.",
+      "creadoEn": "2026-05-22T19:14:12.309Z",
+      "actualizadoEn": "2026-05-22T19:18:30.095Z"
     }
   ]
 }
