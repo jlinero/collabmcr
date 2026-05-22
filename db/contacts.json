@@ -424,10 +424,28 @@
             }
           ],
           "actualizadoEn": "2026-05-22T19:35:11.109Z"
+        },
+        {
+          "id": "768745",
+          "numero": "768745",
+          "nombre": "Solicitud de configuración paso a paso de Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-22T21:09:26.843Z",
+          "actualizaciones": [
+            {
+              "id": "1779484166843",
+              "nota": "El cliente solicita ayuda para configurar Webex Contact Center desde cero, incluyendo instrucciones detalladas para cada paso.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T21:09:26.843Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T21:09:26.843Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T19:35:29.702Z"
+      "actualizadoEn": "2026-05-22T21:09:26.843Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
