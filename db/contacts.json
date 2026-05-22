@@ -152,9 +152,17 @@
               "fecha": "2026-05-22T18:13:54.153Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1779473947931",
+              "nota": "El cliente solicita una sesión de soporte para revisar el límite de acciones MCP para AI Agent y recibir orientación especializada.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T18:19:07.931Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-22T18:16:26.554Z"
+          "actualizadoEn": "2026-05-22T18:19:07.931Z"
         },
         {
           "id": "714176",
@@ -304,7 +312,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T18:16:26.554Z"
+      "actualizadoEn": "2026-05-22T18:19:07.931Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
