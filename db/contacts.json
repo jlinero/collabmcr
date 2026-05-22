@@ -364,7 +364,7 @@
           "id": "418362",
           "numero": "418362",
           "nombre": "Problema de calidad de servicio en llamadas Webex",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-22T19:08:37.247Z",
           "actualizaciones": [
             {
@@ -406,13 +406,21 @@
               "fecha": "2026-05-22T19:18:58.959Z",
               "estadoAnterior": "en progreso",
               "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779478511109",
+              "nota": "Cierre solicitado por el cliente tras reprogramar la sesión de revisión conjunta para hoy.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:35:11.109Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
             }
           ],
-          "actualizadoEn": "2026-05-22T19:23:07.578Z"
+          "actualizadoEn": "2026-05-22T19:35:11.109Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T19:23:07.578Z"
+      "actualizadoEn": "2026-05-22T19:35:11.109Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
