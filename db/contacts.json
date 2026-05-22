@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779413893213",
+          "tipo": "llamada",
+          "descripcion": "Se abrió el ticket #266190 para acompañamiento en la configuración del AI Agent utilizando MCP. El cliente no requiere asistencia adicional.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T01:38:13.213Z"
+        },
+        {
           "id": "1776982642399",
           "tipo": "llamada",
           "descripcion": "El cliente tiene interes en el servicio de Webex Contact Center",
@@ -325,7 +332,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T01:37:45.411Z"
+      "actualizadoEn": "2026-05-22T01:38:13.213Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
