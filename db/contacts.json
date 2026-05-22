@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779476920925",
+          "tipo": "llamada",
+          "descripcion": "Se abrió el caso 418362 para Jose Linero por problema de calidad de servicio en llamadas Webex. El cliente reportó entrecortes y mala calidad de audio, revisión de red sin hallazgos. Se informó que el equipo de soporte lo contactará pronto.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T19:08:40.925Z"
+        },
+        {
           "id": "1779474642509",
           "tipo": "llamada",
           "descripcion": "El cliente consultó el estado de su caso activo, confirmó la sesión informativa para mañana, solicitó el cierre del caso y la cancelación de la cita. Se informó que puede abrir un nuevo caso si requiere ayuda futura.",
@@ -352,7 +359,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T19:08:37.247Z"
+      "actualizadoEn": "2026-05-22T19:08:40.925Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
