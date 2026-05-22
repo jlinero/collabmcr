@@ -103,9 +103,17 @@
           "id": "266190",
           "numero": "266190",
           "nombre": "Solicitud de ayuda en configuración de AI Agent con MCP",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-05-22T01:37:45.411Z",
           "actualizaciones": [
+            {
+              "id": "mpg9cd0akgf9dbp4ef",
+              "nota": "Se cierra el caos",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T01:45:20.602Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1779413865411",
               "nota": "El cliente solicita acompañamiento y soporte para la configuración del AI Agent utilizando MCP. No se trata de un problema, sino de una solicitud de asistencia técnica para asegurar una correcta implementación.",
@@ -115,7 +123,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-22T01:37:45.411Z"
+          "actualizadoEn": "2026-05-22T01:45:20.602Z"
         },
         {
           "id": "234166",
@@ -315,7 +323,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T01:44:27.985Z"
+      "actualizadoEn": "2026-05-22T01:45:20.602Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
