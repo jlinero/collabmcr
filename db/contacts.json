@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779484196986",
+          "tipo": "llamada",
+          "descripcion": "Se abrió el caso siete seis ocho siete cuatro cinco para soporte en configuración paso a paso de Webex Contact Center según solicitud del cliente.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T21:09:56.986Z"
+        },
+        {
           "id": "1779478529702",
           "tipo": "llamada",
           "descripcion": "El cliente reprogramó su sesión de revisión conjunta de calidad de servicio en llamadas Webex para hoy de 4:00 p. m. a 6:00 p. m. y solicitó el cierre del caso de soporte activo. Se confirmó el cierre exitoso del ticket.",
@@ -445,7 +452,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T21:09:26.843Z"
+      "actualizadoEn": "2026-05-22T21:09:56.986Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
