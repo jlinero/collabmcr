@@ -141,7 +141,7 @@
           "id": "394082",
           "numero": "394082",
           "nombre": "Consulta sobre límite de acciones MCP para AI Agent",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-22T18:13:54.153Z",
           "actualizaciones": [
             {
@@ -167,9 +167,17 @@
               "fecha": "2026-05-22T18:19:07.931Z",
               "estadoAnterior": "en progreso",
               "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779474567200",
+              "nota": "El cliente solicita el cierre del caso y confirma que la sesión de soporte se mantenga para mañana.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T18:29:27.200Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
             }
           ],
-          "actualizadoEn": "2026-05-22T18:19:07.931Z"
+          "actualizadoEn": "2026-05-22T18:29:27.200Z"
         },
         {
           "id": "714176",
@@ -319,7 +327,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T18:20:51.862Z"
+      "actualizadoEn": "2026-05-22T18:29:27.200Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
