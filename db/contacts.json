@@ -224,10 +224,28 @@
             }
           ],
           "actualizadoEn": "2026-05-21T15:21:34.494Z"
+        },
+        {
+          "id": "714176",
+          "numero": "714176",
+          "nombre": "Configuración de AI Agent en Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-22T12:26:49.724Z",
+          "actualizaciones": [
+            {
+              "id": "1779452809724",
+              "nota": "Solicita ayuda con la configuración del agente de inteligencia artificial en Webex Contact Center.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T12:26:49.724Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T12:26:49.724Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T02:27:23.609Z"
+      "actualizadoEn": "2026-05-22T12:26:49.724Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
