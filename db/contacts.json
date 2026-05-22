@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779453264225",
+          "tipo": "llamada",
+          "descripcion": "El cliente consultó el estado de su caso, agendó una sesión de acompañamiento técnico para configuración de AI Agent en Webex Contact Center y solicitó actualizar el ticket con esta información.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T12:34:24.225Z"
+        },
+        {
           "id": "1779452870261",
           "tipo": "llamada",
           "descripcion": "Se abrió el caso #714176 para ayudar con la configuración del agente de inteligencia artificial en Webex Contact Center. El cliente no requirió más asistencia.",
@@ -268,7 +275,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T12:34:03.392Z"
+      "actualizadoEn": "2026-05-22T12:34:24.225Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
