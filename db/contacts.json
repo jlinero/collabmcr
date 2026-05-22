@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779415449907",
+          "tipo": "llamada",
+          "descripcion": "El cliente consultó el estado de sus casos, confirmó que no tenía casos abiertos y solicitó agendar una cita para conocer los costos de Webex Contact Center. La cita fue agendada para el viernes, 22 de mayo de 2026, de 12:00 p. m. a 12:30 p. m. El cliente indicó que no necesita más ayuda.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T02:04:09.907Z"
+        },
+        {
           "id": "1779414267985",
           "tipo": "llamada",
           "descripcion": "Se abrió un caso para ayudar al cliente con la configuración de MCP server junto con el agente de inteligencia artificial. El cliente confirmó que no necesita más asistencia.",
@@ -213,7 +220,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T01:46:05.514Z"
+      "actualizadoEn": "2026-05-22T02:04:09.907Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
