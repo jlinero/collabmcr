@@ -85,9 +85,17 @@
           "id": "639309",
           "numero": "639309",
           "nombre": "Problema de integración y configuración de MCP server",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-05-22T01:20:09.196Z",
           "actualizaciones": [
+            {
+              "id": "mpg9d0i4clj3aqp7ev4",
+              "nota": "Se cierra el caos",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T01:45:51.052Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1779412809196",
               "nota": "El cliente solicita ayuda para solucionar un problema de integración y configuración de un MCP server. Requiere asistencia técnica para la configuración.",
@@ -97,7 +105,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-22T01:20:09.196Z"
+          "actualizadoEn": "2026-05-22T01:45:51.052Z"
         },
         {
           "id": "266190",
@@ -323,7 +331,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T01:45:20.602Z"
+      "actualizadoEn": "2026-05-22T01:45:51.052Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
