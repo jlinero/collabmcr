@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779473653035",
+          "tipo": "llamada",
+          "descripcion": "Se abrió un caso de soporte para consultar si es posible tener más de 10 acciones de MCP para AI Agent. El cliente no requiere más ayuda por ahora.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T18:14:13.035Z"
+        },
+        {
           "id": "1779460013849",
           "tipo": "llamada",
           "descripcion": "Se agendó una sesión informativa sobre Webex Contact Center para el 22 de mayo de 2026 de 9:31 a 11:31, a solicitud del cliente, para conocer detalles y costos de la solución.",
@@ -315,7 +322,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T18:13:54.153Z"
+      "actualizadoEn": "2026-05-22T18:14:13.035Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
