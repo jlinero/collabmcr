@@ -383,13 +383,21 @@
               "fecha": "2026-05-22T19:14:49.665Z",
               "estadoAnterior": "en progreso",
               "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779477538959",
+              "nota": "La sesión de revisión conjunta ha sido reprogramada para el sábado veintitrés de mayo de dos mil veintiséis de dos a cuatro de la tarde, según solicitud del cliente.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:18:58.959Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-22T19:14:49.665Z"
+          "actualizadoEn": "2026-05-22T19:18:58.959Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T19:15:18.504Z"
+      "actualizadoEn": "2026-05-22T19:18:58.959Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
