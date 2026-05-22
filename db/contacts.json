@@ -428,9 +428,17 @@
           "id": "452320",
           "numero": "452320",
           "nombre": "Acompañamiento configuración AI Agent",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-22T01:58:29.311Z",
           "actualizaciones": [
+            {
+              "id": "mpg9ujj1xfxxbeq1w1e",
+              "nota": "Por favor agendar cita con el cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T01:59:28.861Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1779415109311",
               "nota": "Solicitud de acompañamiento en la configuración del AI Agent.",
@@ -440,11 +448,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-22T01:58:29.311Z"
+          "actualizadoEn": "2026-05-22T01:59:28.861Z"
         }
       ],
       "creadoEn": "2026-04-24T02:20:19.270Z",
-      "actualizadoEn": "2026-05-22T01:58:44.991Z"
+      "actualizadoEn": "2026-05-22T01:59:28.861Z"
     },
     {
       "id": "mocagoenpa1y7kiuko",
