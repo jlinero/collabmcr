@@ -287,10 +287,28 @@
             }
           ],
           "actualizadoEn": "2026-05-19T17:18:03.693Z"
+        },
+        {
+          "id": "892920",
+          "numero": "892920",
+          "nombre": "Configuración de MCP server con AI agent",
+          "estado": "abierto",
+          "creadoEn": "2026-05-22T01:43:52.922Z",
+          "actualizaciones": [
+            {
+              "id": "1779414232922",
+              "nota": "El cliente solicita ayuda para configurar un MCP server junto con el agente de inteligencia artificial.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T01:43:52.922Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T01:43:52.922Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T01:38:13.213Z"
+      "actualizadoEn": "2026-05-22T01:43:52.922Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
