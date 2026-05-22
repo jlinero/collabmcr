@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779459659489",
+          "tipo": "llamada",
+          "descripcion": "El cliente consultó el estado de su caso activo, solicitó el cierre por configuración finalizada y pidió un resumen de los casos cerrados recientes.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T14:20:59.489Z"
+        },
+        {
           "id": "1779453264225",
           "tipo": "llamada",
           "descripcion": "El cliente consultó el estado de su caso, agendó una sesión de acompañamiento técnico para configuración de AI Agent en Webex Contact Center y solicitó actualizar el ticket con esta información.",
@@ -283,7 +290,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T14:20:19.172Z"
+      "actualizadoEn": "2026-05-22T14:20:59.489Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
