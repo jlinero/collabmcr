@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779478529702",
+          "tipo": "llamada",
+          "descripcion": "El cliente reprogramó su sesión de revisión conjunta de calidad de servicio en llamadas Webex para hoy de 4:00 p. m. a 6:00 p. m. y solicitó el cierre del caso de soporte activo. Se confirmó el cierre exitoso del ticket.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-05-22T19:35:29.702Z"
+        },
+        {
           "id": "1779477566937",
           "tipo": "llamada",
           "descripcion": "El cliente solicitó reprogramar su cita de revisión conjunta de calidad de servicio en llamadas Webex para el sábado veintitrés de mayo de dos mil veintiséis de dos a cuatro de la tarde. Se actualizó el caso de soporte activo con el nuevo horario. El cliente confirmó que no necesita más ayuda.",
@@ -420,7 +427,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T19:35:11.109Z"
+      "actualizadoEn": "2026-05-22T19:35:29.702Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
