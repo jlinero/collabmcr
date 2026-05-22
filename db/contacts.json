@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779452870261",
+          "tipo": "llamada",
+          "descripcion": "Se abrió el caso #714176 para ayudar con la configuración del agente de inteligencia artificial en Webex Contact Center. El cliente no requirió más asistencia.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T12:27:50.261Z"
+        },
+        {
           "id": "1779416843609",
           "tipo": "llamada",
           "descripcion": "El cliente agendó una sesión informativa sobre costos de Webex Contact Center para el sábado 23 de mayo de 2026 de 9:00 a 11:00 a.m. No requirió más asistencia.",
@@ -245,7 +252,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T12:26:49.724Z"
+      "actualizadoEn": "2026-05-22T12:27:50.261Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
