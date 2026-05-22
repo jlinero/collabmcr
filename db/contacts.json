@@ -368,6 +368,14 @@
           "creadoEn": "2026-05-22T19:08:37.247Z",
           "actualizaciones": [
             {
+              "id": "mphb4ofufjwbfdwxhl",
+              "nota": "Se realizó la sesión con el cliente, se tenían problemas en su red wireless por una mala marcación de paquetes, el problema ya fue solucionado",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-22T19:23:07.578Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mphapbjyh5kvyfqub3o",
               "nota": "Se realiza una revisión inicial del caso, se ve algunos usuarios que efectivamente tienen problemas de calidad de servicio, no se ven problemas en la nube de Webex, es necesario agendar una sesión con el cliente para que revisemos en conjunto lo que esta pasando",
               "agente": "Lando Norris",
@@ -400,11 +408,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-22T19:18:58.959Z"
+          "actualizadoEn": "2026-05-22T19:23:07.578Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T19:19:26.937Z"
+      "actualizadoEn": "2026-05-22T19:23:07.578Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
