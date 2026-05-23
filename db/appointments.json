@@ -45,13 +45,14 @@
       "titulo": "Sesión comercial Webex Contact Center",
       "proposito": "Cotización y licenciamiento para 5 agentes, 1 supervisor y canales digitales",
       "fecha": "2026-05-26",
-      "horaInicio": "08:00",
-      "horaFin": "10:00",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-05-23T01:27:45.675Z"
+      "notas": "Reprogramada desde 2026-05-26 08:00. Motivo: El cliente solicita mover la sesión dos horas más tarde.",
+      "creadoEn": "2026-05-23T01:27:45.675Z",
+      "actualizadoEn": "2026-05-23T01:32:08.998Z"
     }
   ]
 }
