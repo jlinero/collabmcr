@@ -204,7 +204,7 @@
           "id": "768745",
           "numero": "768745",
           "nombre": "Solicitud de configuración paso a paso de Webex Contact Center",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-22T21:09:26.843Z",
           "actualizaciones": [
             {
@@ -230,9 +230,17 @@
               "fecha": "2026-05-22T21:13:26.930Z",
               "estadoAnterior": "en progreso",
               "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779499336396",
+              "nota": "Cierre solicitado por el cliente. También solicita cancelar la sesión agendada.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-23T01:22:16.396Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
             }
           ],
-          "actualizadoEn": "2026-05-22T21:13:26.930Z"
+          "actualizadoEn": "2026-05-23T01:22:16.396Z"
         },
         {
           "id": "418362",
@@ -430,7 +438,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-22T21:15:54.468Z"
+      "actualizadoEn": "2026-05-23T01:22:16.396Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
