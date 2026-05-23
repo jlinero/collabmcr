@@ -53,6 +53,23 @@
       "notas": "Reprogramada desde 2026-05-26 08:00. Motivo: El cliente solicita mover la sesión dos horas más tarde.",
       "creadoEn": "2026-05-23T01:27:45.675Z",
       "actualizadoEn": "2026-05-23T01:32:08.998Z"
+    },
+    {
+      "id": "1779501305576",
+      "contactId": "123123",
+      "contactNombre": "Edgar Arana",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+51997516433",
+      "titulo": "Sesión comercial Webex",
+      "proposito": "Presentación de soluciones y costos de Webex",
+      "fecha": "2026-05-29",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-23T01:55:05.576Z"
     }
   ]
 }
