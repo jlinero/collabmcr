@@ -35,6 +35,23 @@
       "notas": "Cancelada: El cliente no puede asistir el lunes",
       "creadoEn": "2026-05-22T21:12:59.289Z",
       "actualizadoEn": "2026-05-22T21:15:32.359Z"
+    },
+    {
+      "id": "1779499665675",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión comercial Webex Contact Center",
+      "proposito": "Cotización y licenciamiento para 5 agentes, 1 supervisor y canales digitales",
+      "fecha": "2026-05-26",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-23T01:27:45.675Z"
     }
   ]
 }
