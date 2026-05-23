@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779499722209",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento positivo. Se resolvió consulta sobre MCP, QM AI y análisis de sentimientos en Webex Contact Center. Se cerró ticket activo y se agendó sesión comercial para cotización de licenciamiento.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-23T01:28:42.209Z"
+        },
+        {
           "id": "1779484554468",
           "tipo": "llamada",
           "descripcion": "El cliente solicitó cancelar la sesión de configuración paso a paso de Webex Contact Center para el lunes veinticinco de mayo de veinte veintiséis a la una de la tarde. La cita fue cancelada exitosamente.",
@@ -438,7 +445,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-23T01:22:16.396Z"
+      "actualizadoEn": "2026-05-23T01:28:42.209Z"
     },
     {
       "id": "mobnzjnv6b8wbvfolwh",
