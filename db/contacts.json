@@ -201,6 +201,98 @@
       ],
       "tickets": [
         {
+          "id": "768745",
+          "numero": "768745",
+          "nombre": "Solicitud de configuración paso a paso de Webex Contact Center",
+          "estado": "en progreso",
+          "creadoEn": "2026-05-22T21:09:26.843Z",
+          "actualizaciones": [
+            {
+              "id": "mphez7rp1zxc62edh95",
+              "nota": "Si, se puede soportar al cliente sin problema en esa configuración, se debe generar sesión con este cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T21:10:51.157Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779484166843",
+              "nota": "El cliente solicita ayuda para configurar Webex Contact Center desde cero, incluyendo instrucciones detalladas para cada paso.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T21:09:26.843Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1779484406930",
+              "nota": "Sesión de configuración paso a paso de Webex Contact Center agendada para el lunes veinticinco de mayo de una a tres de la tarde.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T21:13:26.930Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            }
+          ],
+          "actualizadoEn": "2026-05-22T21:13:26.930Z"
+        },
+        {
+          "id": "418362",
+          "numero": "418362",
+          "nombre": "Problema de calidad de servicio en llamadas Webex",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-22T19:08:37.247Z",
+          "actualizaciones": [
+            {
+              "id": "mphb4ofufjwbfdwxhl",
+              "nota": "Se realizó la sesión con el cliente, se tenían problemas en su red wireless por una mala marcación de paquetes, el problema ya fue solucionado",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-22T19:23:07.578Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "mphapbjyh5kvyfqub3o",
+              "nota": "Se realiza una revisión inicial del caso, se ve algunos usuarios que efectivamente tienen problemas de calidad de servicio, no se ven problemas en la nube de Webex, es necesario agendar una sesión con el cliente para que revisemos en conjunto lo que esta pasando",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T19:11:11.038Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779476917247",
+              "nota": "Los usuarios reportan que durante algunas llamadas se entrecorta el audio y no escuchan bien a la otra persona. Se realizó revisión de red y no se encontraron problemas.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:08:37.247Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1779477289665",
+              "nota": "Se agenda sesión de revisión conjunta para el viernes 22 de mayo de 2026 de 14:18 a 16:18 para diagnóstico de entrecortes y mala calidad de audio en llamadas Webex.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:14:49.665Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779477538959",
+              "nota": "La sesión de revisión conjunta ha sido reprogramada para el sábado veintitrés de mayo de dos mil veintiséis de dos a cuatro de la tarde, según solicitud del cliente.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:18:58.959Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779478511109",
+              "nota": "Cierre solicitado por el cliente tras reprogramar la sesión de revisión conjunta para hoy.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:35:11.109Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-05-22T19:35:11.109Z"
+        },
+        {
           "id": "394082",
           "numero": "394082",
           "nombre": "Consulta sobre límite de acciones MCP para AI Agent",
@@ -335,150 +427,6 @@
             }
           ],
           "actualizadoEn": "2026-05-22T01:45:51.052Z"
-        },
-        {
-          "id": "266190",
-          "numero": "266190",
-          "nombre": "Solicitud de ayuda en configuración de AI Agent con MCP",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-22T01:37:45.411Z",
-          "actualizaciones": [
-            {
-              "id": "mpg9cd0akgf9dbp4ef",
-              "nota": "Se cierra el caos",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-22T01:45:20.602Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1779413865411",
-              "nota": "El cliente solicita acompañamiento y soporte para la configuración del AI Agent utilizando MCP. No se trata de un problema, sino de una solicitud de asistencia técnica para asegurar una correcta implementación.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T01:37:45.411Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-22T01:45:20.602Z"
-        },
-        {
-          "id": "234166",
-          "numero": "234166",
-          "nombre": "Problema en configuración de MCP server",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-22T00:49:13.601Z",
-          "actualizaciones": [
-            {
-              "id": "1779411022415",
-              "nota": "El cliente encontró el problema en la configuración del MCP server y ya no necesita asistencia.",
-              "agente": "cliente",
-              "fecha": "2026-05-22T00:50:22.415Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1779410953601",
-              "nota": "El cliente reporta que está configurando un servidor MCP y no funciona. Solicita asistencia para la configuración y solución del problema.",
-              "agente": "Sistema",
-              "fecha": "2026-05-22T00:49:13.601Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-22T00:50:22.415Z"
-        },
-        {
-          "id": "418362",
-          "numero": "418362",
-          "nombre": "Problema de calidad de servicio en llamadas Webex",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-22T19:08:37.247Z",
-          "actualizaciones": [
-            {
-              "id": "mphb4ofufjwbfdwxhl",
-              "nota": "Se realizó la sesión con el cliente, se tenían problemas en su red wireless por una mala marcación de paquetes, el problema ya fue solucionado",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-22T19:23:07.578Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "mphapbjyh5kvyfqub3o",
-              "nota": "Se realiza una revisión inicial del caso, se ve algunos usuarios que efectivamente tienen problemas de calidad de servicio, no se ven problemas en la nube de Webex, es necesario agendar una sesión con el cliente para que revisemos en conjunto lo que esta pasando",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-22T19:11:11.038Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779476917247",
-              "nota": "Los usuarios reportan que durante algunas llamadas se entrecorta el audio y no escuchan bien a la otra persona. Se realizó revisión de red y no se encontraron problemas.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T19:08:37.247Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1779477289665",
-              "nota": "Se agenda sesión de revisión conjunta para el viernes 22 de mayo de 2026 de 14:18 a 16:18 para diagnóstico de entrecortes y mala calidad de audio en llamadas Webex.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T19:14:49.665Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779477538959",
-              "nota": "La sesión de revisión conjunta ha sido reprogramada para el sábado veintitrés de mayo de dos mil veintiséis de dos a cuatro de la tarde, según solicitud del cliente.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T19:18:58.959Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779478511109",
-              "nota": "Cierre solicitado por el cliente tras reprogramar la sesión de revisión conjunta para hoy.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T19:35:11.109Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-05-22T19:35:11.109Z"
-        },
-        {
-          "id": "768745",
-          "numero": "768745",
-          "nombre": "Solicitud de configuración paso a paso de Webex Contact Center",
-          "estado": "en progreso",
-          "creadoEn": "2026-05-22T21:09:26.843Z",
-          "actualizaciones": [
-            {
-              "id": "mphez7rp1zxc62edh95",
-              "nota": "Si, se puede soportar al cliente sin problema en esa configuración, se debe generar sesión con este cliente",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-22T21:10:51.157Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779484166843",
-              "nota": "El cliente solicita ayuda para configurar Webex Contact Center desde cero, incluyendo instrucciones detalladas para cada paso.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T21:09:26.843Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1779484406930",
-              "nota": "Sesión de configuración paso a paso de Webex Contact Center agendada para el lunes veinticinco de mayo de una a tres de la tarde.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T21:13:26.930Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            }
-          ],
-          "actualizadoEn": "2026-05-22T21:13:26.930Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
