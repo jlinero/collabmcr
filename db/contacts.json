@@ -620,11 +620,19 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1779501322484",
+          "tipo": "llamada",
+          "descripcion": "Se agendó sesión comercial de Webex para el viernes 29 de mayo de 13:00 a 15:00. Se brindó información sobre IA, medición automática de satisfacción y beneficios operativos.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-23T01:55:22.484Z"
+        }
+      ],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-28T03:52:17.354Z",
-      "actualizadoEn": "2026-04-28T03:52:17.354Z"
+      "actualizadoEn": "2026-05-23T01:55:22.484Z"
     }
   ]
 }
