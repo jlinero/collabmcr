@@ -1,24 +1,6 @@
 {
   "appointments": [
     {
-      "id": "1779477252309",
-      "contactId": "123456",
-      "contactNombre": "Jose Linero",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+573102634216",
-      "titulo": "Revisión conjunta de calidad de servicio en llamadas Webex",
-      "proposito": "Diagnóstico de entrecortes y mala calidad de audio en llamadas Webex",
-      "fecha": "2026-05-22",
-      "horaInicio": "16:00",
-      "horaFin": "18:00",
-      "duracion": 120,
-      "estado": "reprogramada",
-      "agente": "",
-      "notas": "Reprogramada desde 2026-05-23 14:00. Motivo: El cliente solicita adelantar la sesión para hoy a las 4:00 p. m.",
-      "creadoEn": "2026-05-22T19:14:12.309Z",
-      "actualizadoEn": "2026-05-22T19:34:44.096Z"
-    },
-    {
       "id": "1779484379289",
       "contactId": "123456",
       "contactNombre": "Jose Linero",
