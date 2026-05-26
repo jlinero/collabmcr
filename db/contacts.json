@@ -428,13 +428,23 @@
           "id": "841932",
           "numero": "841932",
           "nombre": "Error en configuración de Webex Calling",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-05-26T19:39:51.186Z",
-          "actualizaciones": []
+          "actualizaciones": [
+            {
+              "id": "mpn8e8izgb87maaoc4c",
+              "nota": "Ticket cerrado",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-26T22:53:11.723Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-05-26T22:53:11.723Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-26T19:39:51.186Z"
+      "actualizadoEn": "2026-05-26T22:53:11.723Z"
     },
     {
       "id": "120874",
