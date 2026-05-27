@@ -1329,6 +1329,35 @@ async function saveTicket(){
   });
   await saveDB('Nuevo ticket #'+numero+': '+nombre);
   closeM('ticket');document.getElementById('ticket-nombre').value='';
+
+  // ── WEBHOOK: notificar creación de ticket ──
+  const TICKET_WEBHOOK = 'https://hooks.us.webexconnect.io/events/S8K5E0FLXH';
+  try {
+    const contacto = (db.contacts||[]).find(x=>x.id===activeId);
+    await fetch(TICKET_WEBHOOK, {
+      method:  'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        evento:         'creacion_ticket',
+        ticketNumero:   numero,
+        ticketNombre:   nombre,
+        estadoAnterior: '',
+        estadoNuevo:    document.getElementById('ticket-estado').value,
+        nota:           'Ticket creado',
+        agente:         '',
+        fecha:          new Date().toISOString(),
+        contactId:      activeId,
+        contactNombre:  contacto ? `${contacto.nombre} ${contacto.apellido}` : '',
+        contactTel:     contacto ? (contacto.telefono || '') : '',
+        contactEmail:   contacto ? (contacto.email || '') : '',
+        requiereAccion: false
+      })
+    });
+    console.log('[TICKET WEBHOOK] Notificación creación enviada:', numero);
+  } catch(e) {
+    console.warn('[TICKET WEBHOOK] Error creación:', e.message);
+  }
+
   toast('Ticket #'+numero+' creado','ok');
   const c=(db.contacts||[]).find(x=>x.id===activeId);if(c)renderDetail(c);
 }
@@ -1406,6 +1435,39 @@ async function saveTktUpdate(){
   // Refrescar el modal con la nueva actualización
   openTktDetail(activeTktId);
   renderDetail(c);
+
+  // ── WEBHOOK: notificar actualización de ticket ──
+  const TICKET_WEBHOOK = 'https://hooks.us.webexconnect.io/events/S8K5E0FLXH';
+  try {
+    const contacto = db.contacts.find(x => x.id === activeId);
+    await fetch(TICKET_WEBHOOK, {
+      method:  'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        evento:         'actualizacion_ticket',
+        ticketNumero:   t.numero || t.id,
+        ticketNombre:   t.nombre,
+        estadoAnterior: update.estadoAnterior || '',
+        estadoNuevo:    update.estadoNuevo || t.estado,
+        nota:           update.nota,
+        agente:         update.agente || 'Agente',
+        fecha:          update.fecha,
+        contactId:      activeId,
+        contactNombre:  contacto ? `${contacto.nombre} ${contacto.apellido}` : '',
+        contactTel:     contacto ? (contacto.telefono || '') : '',
+        contactEmail:   contacto ? (contacto.email || '') : '',
+        requiereAccion: update.nota.toLowerCase().includes('agendar') ||
+                        update.nota.toLowerCase().includes('sesion') ||
+                        update.nota.toLowerCase().includes('sesión') ||
+                        update.nota.toLowerCase().includes('llamar') ||
+                        update.nota.toLowerCase().includes('contactar')
+      })
+    });
+    console.log('[TICKET WEBHOOK] Notificación enviada:', t.numero);
+  } catch(e) {
+    console.warn('[TICKET WEBHOOK] Error:', e.message);
+  }
+
   toast('Actualización guardada en GitHub','ok');
 }
 
