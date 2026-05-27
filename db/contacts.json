@@ -536,10 +536,28 @@
             }
           ],
           "actualizadoEn": "2026-05-27T21:15:38.524Z"
+        },
+        {
+          "id": "796553",
+          "numero": "796553",
+          "nombre": "Asesoría configuración agente de inteligencia artificial",
+          "estado": "abierto",
+          "creadoEn": "2026-05-27T21:15:48.756Z",
+          "actualizaciones": [
+            {
+              "id": "1779916548756",
+              "nota": "El cliente reporta que la configuración realizada previamente para su agente de inteligencia artificial en Webex Contact Center no ha funcionado y requiere que funcione correctamente. Solicita asesoría para resolver el problema.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-27T21:15:48.756Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-27T21:15:48.756Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T21:15:38.524Z"
+      "actualizadoEn": "2026-05-27T21:15:48.756Z"
     },
     {
       "id": "120874",
