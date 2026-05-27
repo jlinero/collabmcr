@@ -497,13 +497,23 @@
           "id": "233853",
           "numero": "233853",
           "nombre": "Caso de prueba",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-27T20:42:24.743Z",
-          "actualizaciones": []
+          "actualizaciones": [
+            {
+              "id": "mpoj9xt87novw73ql6",
+              "nota": "Se revisa el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T20:45:33.164Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            }
+          ],
+          "actualizadoEn": "2026-05-27T20:45:33.164Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T20:18:17.358Z"
+      "actualizadoEn": "2026-05-27T20:45:33.164Z"
     },
     {
       "id": "120874",
