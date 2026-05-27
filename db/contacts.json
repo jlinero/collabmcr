@@ -1,1 +1,629 @@
-{"contacts":[{"id":"123456","nombre":"Jose","apellido":"Linero","cargo":"Senior Collaboration SE","email":"jlinero@cisco.com","email2":"","telefono":"+573102634216","empresa":"Cisco","dominioEmpresa":"","telEmpresa":"+576013256052","ciudad":"Bogot, Colombia","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[{"id":"1779904201469","tipo":"llamada","descripcion":"Sentimiento neutral. Se consultÛ el estado del caso activo para configuraciÛn de agente de inteligencia artificial en Webex Contact Center y se agendÛ una sesiÛn para hoy de doce cincuenta y cuatro a dos cincuenta y cuatro de la tarde.","asignadoA":"AI Agent","fecha":"2026-05-27T17:50:01.469Z"},{"id":"1779500824043","tipo":"llamada","descripcion":"El cliente solicitÛ informaciÛn sobre beneficios operativos y KPIs de Webex Contact Center, con Ènfasis en mÈtricas de AHT y visualizaciÛn en Analyzer. Se resolvieron todas las dudas y no se requiriÛ gestiÛn de tickets ni citas.","asignadoA":"AI Agent","fecha":"2026-05-23T01:47:04.043Z"},{"id":"1779499722209","tipo":"llamada","descripcion":"Sentimiento positivo. Se resolviÛ consulta sobre MCP, QM AI y an·lisis de sentimientos en Webex Contact Center. Se cerrÛ ticket activo y se agendÛ sesiÛn comercial para cotizaciÛn de licenciamiento.","asignadoA":"AI Agent","fecha":"2026-05-23T01:28:42.209Z"},{"id":"1779484554468","tipo":"llamada","descripcion":"El cliente solicitÛ cancelar la sesiÛn de configuraciÛn paso a paso de Webex Contact Center para el lunes veinticinco de mayo de veinte veintisÈis a la una de la tarde. La cita fue cancelada exitosamente.","asignadoA":"AI Agent","fecha":"2026-05-22T21:15:54.468Z"},{"id":"1779484429781","tipo":"llamada","descripcion":"El cliente consultÛ el estado de su caso activo, agendÛ una sesiÛn de configuraciÛn para el lunes veinticinco de mayo de una a tres de la tarde y solicitÛ actualizar el caso con esa informaciÛn.","asignadoA":"AI Agent","fecha":"2026-05-22T21:13:49.781Z"},{"id":"1779484196986","tipo":"llamada","descripcion":"Se abriÛ el caso siete seis ocho siete cuatro cinco para soporte en configuraciÛn paso a paso de Webex Contact Center seg˙n solicitud del cliente.","asignadoA":"AI Agent","fecha":"2026-05-22T21:09:56.986Z"},{"id":"1779478529702","tipo":"llamada","descripcion":"El cliente reprogramÛ su sesiÛn de revisiÛn conjunta de calidad de servicio en llamadas Webex para hoy de 4:00 p. m. a 6:00 p. m. y solicitÛ el cierre del caso de soporte activo. Se confirmÛ el cierre exitoso del ticket.","asignadoA":"Asistente virtual","fecha":"2026-05-22T19:35:29.702Z"},{"id":"1779477566937","tipo":"llamada","descripcion":"El cliente solicitÛ reprogramar su cita de revisiÛn conjunta de calidad de servicio en llamadas Webex para el s·bado veintitrÈs de mayo de dos mil veintisÈis de dos a cuatro de la tarde. Se actualizÛ el caso de soporte activo con el nuevo horario. El cliente confirmÛ que no necesita m·s ayuda.","asignadoA":"AI Agent","fecha":"2026-05-22T19:19:26.937Z"},{"id":"1779477318504","tipo":"llamada","descripcion":"Se actualizÛ el caso activo con la informaciÛn de la sesiÛn agendada para hoy. El cliente confirmÛ que no necesita m·s ayuda por ahora.","asignadoA":"AI Agent","fecha":"2026-05-22T19:15:18.504Z"},{"id":"1779477254849","tipo":"llamada","descripcion":"Se agenda sesiÛn para revisiÛn conjunta de calidad de servicio en llamadas Webex el viernes 22 de mayo de 2026 de 14:18 a 16:18 para el caso activo del cliente.","asignadoA":"AI Agent","fecha":"2026-05-22T19:14:14.849Z"},{"id":"1779476920925","tipo":"llamada","descripcion":"Se abriÛ el caso 418362 para Jose Linero por problema de calidad de servicio en llamadas Webex. El cliente reportÛ entrecortes y mala calidad de audio, revisiÛn de red sin hallazgos. Se informÛ que el equipo de soporte lo contactar· pronto.","asignadoA":"AI Agent","fecha":"2026-05-22T19:08:40.925Z"},{"id":"1779474642509","tipo":"llamada","descripcion":"El cliente consultÛ el estado de su caso activo, confirmÛ la sesiÛn informativa para maÒana, solicitÛ el cierre del caso y la cancelaciÛn de la cita. Se informÛ que puede abrir un nuevo caso si requiere ayuda futura.","asignadoA":"AI Agent","fecha":"2026-05-22T18:30:42.509Z"},{"id":"1779474051862","tipo":"llamada","descripcion":"Se consultÛ el estado del caso activo, se actualizÛ solicitando una sesiÛn de soporte y se reprogramÛ la cita informativa de Webex Contact Center para hoy de 1:24 p.m. a 3:24 p.m. El cliente no requiere m·s ayuda.","asignadoA":"AI Agent","fecha":"2026-05-22T18:20:51.862Z"},{"id":"1779473653035","tipo":"llamada","descripcion":"Se abriÛ un caso de soporte para consultar si es posible tener m·s de 10 acciones de MCP para AI Agent. El cliente no requiere m·s ayuda por ahora.","asignadoA":"AI Agent","fecha":"2026-05-22T18:14:13.035Z"},{"id":"1779460013849","tipo":"llamada","descripcion":"Se agendÛ una sesiÛn informativa sobre Webex Contact Center para el 22 de mayo de 2026 de 9:31 a 11:31, a solicitud del cliente, para conocer detalles y costos de la soluciÛn.","asignadoA":"AI Agent","fecha":"2026-05-22T14:26:53.849Z"},{"id":"1779459659489","tipo":"llamada","descripcion":"El cliente consultÛ el estado de su caso activo, solicitÛ el cierre por configuraciÛn finalizada y pidiÛ un resumen de los casos cerrados recientes.","asignadoA":"AI Agent","fecha":"2026-05-22T14:20:59.489Z"},{"id":"1779453264225","tipo":"llamada","descripcion":"El cliente consultÛ el estado de su caso, agendÛ una sesiÛn de acompaÒamiento tÈcnico para configuraciÛn de AI Agent en Webex Contact Center y solicitÛ actualizar el ticket con esta informaciÛn.","asignadoA":"AI Agent","fecha":"2026-05-22T12:34:24.225Z"},{"id":"1779452870261","tipo":"llamada","descripcion":"Se abriÛ el caso #714176 para ayudar con la configuraciÛn del agente de inteligencia artificial en Webex Contact Center. El cliente no requiriÛ m·s asistencia.","asignadoA":"AI Agent","fecha":"2026-05-22T12:27:50.261Z"},{"id":"1779416843609","tipo":"llamada","descripcion":"El cliente agendÛ una sesiÛn informativa sobre costos de Webex Contact Center para el s·bado 23 de mayo de 2026 de 9:00 a 11:00 a.m. No requiriÛ m·s asistencia.","asignadoA":"AI Agent","fecha":"2026-05-22T02:27:23.609Z"},{"id":"1779415449907","tipo":"llamada","descripcion":"El cliente consultÛ el estado de sus casos, confirmÛ que no tenÌa casos abiertos y solicitÛ agendar una cita para conocer los costos de Webex Contact Center. La cita fue agendada para el viernes, 22 de mayo de 2026, de 12:00 p. m. a 12:30 p. m. El cliente indicÛ que no necesita m·s ayuda.","asignadoA":"AI Agent","fecha":"2026-05-22T02:04:09.907Z"},{"id":"1779414267985","tipo":"llamada","descripcion":"Se abriÛ un caso para ayudar al cliente con la configuraciÛn de MCP server junto con el agente de inteligencia artificial. El cliente confirmÛ que no necesita m·s asistencia.","asignadoA":"AI Agent","fecha":"2026-05-22T01:44:27.985Z"},{"id":"1779413893213","tipo":"llamada","descripcion":"Se abriÛ el ticket #266190 para acompaÒamiento en la configuraciÛn del AI Agent utilizando MCP. El cliente no requiere asistencia adicional.","asignadoA":"AI Agent","fecha":"2026-05-22T01:38:13.213Z"},{"id":"1776982642399","tipo":"llamada","descripcion":"El cliente tiene interes en el servicio de Webex Contact Center","asignadoA":"Oscar Piastri","fecha":"2026-04-23T22:17:22.399Z"},{"id":"mobq02qroql","tipo":"email","descripcion":"El cliente escribio un correo manifestando interes en Webex Calling","asignadoA":"Oscar Piastri","fecha":"2026-04-23T16:53:07.683Z"},{"id":"moaju9bbrk4","tipo":"email","descripcion":"El cliente escribio un correo manifestando interes en Webex Calling","asignadoA":"Oscar Piastri","fecha":"2026-04-22T21:12:52.391Z"},{"id":"moajoa9yp0v","tipo":"llamada","descripcion":"El cliente llamo con interes en Webex Contact Center","asignadoA":"Lando Norris","fecha":"2026-04-22T21:08:13.702Z"},{"id":"moaghznb1hhktni091j","tipo":"llamada","descripcion":"El cliente esta interesado en la solucion de Webex Contact Center","fecha":"2026-04-22T19:39:21.143Z"}],"deals":[{"id":"moc59bb1py0jkgv9x8","nombre":"Webex Calling","monto":"$20,000","fechaCierre":"Julio 30, 2026","etapa":"Calificado","creadoEn":"2026-04-24T00:00:12.925Z"}],"tickets":[{"id":"841932","numero":"841932","nombre":"Error en configuraciÛn de Webex Calling","estado":"cerrado","creadoEn":"2026-05-26T19:39:51.186Z","actualizaciones":[{"id":"mpn8e8izgb87maaoc4c","nota":"Ticket cerrado","agente":"Lando Norris","fecha":"2026-05-26T22:53:11.723Z","estadoAnterior":"abierto","estadoNuevo":"cerrado"}],"actualizadoEn":"2026-05-26T22:53:11.723Z"},{"id":"768745","numero":"768745","nombre":"Solicitud de configuraciÛn paso a paso de Webex Contact Center","estado":"cerrado","creadoEn":"2026-05-22T21:09:26.843Z","actualizaciones":[{"id":"mphez7rp1zxc62edh95","nota":"Si, se puede soportar al cliente sin problema en esa configuraciÛn, se debe generar sesiÛn con este cliente","agente":"Lando Norris","fecha":"2026-05-22T21:10:51.157Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779484166843","nota":"El cliente solicita ayuda para configurar Webex Contact Center desde cero, incluyendo instrucciones detalladas para cada paso.","agente":"AI Agent","fecha":"2026-05-22T21:09:26.843Z","estadoAnterior":"","estadoNuevo":""},{"id":"1779484406930","nota":"SesiÛn de configuraciÛn paso a paso de Webex Contact Center agendada para el lunes veinticinco de mayo de una a tres de la tarde.","agente":"AI Agent","fecha":"2026-05-22T21:13:26.930Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"1779499336396","nota":"Cierre solicitado por el cliente. TambiÈn solicita cancelar la sesiÛn agendada.","agente":"AI Agent","fecha":"2026-05-23T01:22:16.396Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"}],"actualizadoEn":"2026-05-23T01:22:16.396Z"},{"id":"418362","numero":"418362","nombre":"Problema de calidad de servicio en llamadas Webex","estado":"cerrado","creadoEn":"2026-05-22T19:08:37.247Z","actualizaciones":[{"id":"mphb4ofufjwbfdwxhl","nota":"Se realizÛ la sesiÛn con el cliente, se tenÌan problemas en su red wireless por una mala marcaciÛn de paquetes, el problema ya fue solucionado","agente":"Oscar Piastri","fecha":"2026-05-22T19:23:07.578Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"mphapbjyh5kvyfqub3o","nota":"Se realiza una revisiÛn inicial del caso, se ve algunos usuarios que efectivamente tienen problemas de calidad de servicio, no se ven problemas en la nube de Webex, es necesario agendar una sesiÛn con el cliente para que revisemos en conjunto lo que esta pasando","agente":"Lando Norris","fecha":"2026-05-22T19:11:11.038Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779476917247","nota":"Los usuarios reportan que durante algunas llamadas se entrecorta el audio y no escuchan bien a la otra persona. Se realizÛ revisiÛn de red y no se encontraron problemas.","agente":"AI Agent","fecha":"2026-05-22T19:08:37.247Z","estadoAnterior":"","estadoNuevo":""},{"id":"1779477289665","nota":"Se agenda sesiÛn de revisiÛn conjunta para el viernes 22 de mayo de 2026 de 14:18 a 16:18 para diagnÛstico de entrecortes y mala calidad de audio en llamadas Webex.","agente":"AI Agent","fecha":"2026-05-22T19:14:49.665Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"1779477538959","nota":"La sesiÛn de revisiÛn conjunta ha sido reprogramada para el s·bado veintitrÈs de mayo de dos mil veintisÈis de dos a cuatro de la tarde, seg˙n solicitud del cliente.","agente":"AI Agent","fecha":"2026-05-22T19:18:58.959Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"1779478511109","nota":"Cierre solicitado por el cliente tras reprogramar la sesiÛn de revisiÛn conjunta para hoy.","agente":"AI Agent","fecha":"2026-05-22T19:35:11.109Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"}],"actualizadoEn":"2026-05-22T19:35:11.109Z"},{"id":"394082","numero":"394082","nombre":"Consulta sobre lÌmite de acciones MCP para AI Agent","estado":"cerrado","creadoEn":"2026-05-22T18:13:54.153Z","actualizaciones":[{"id":"mph8qx8a2924uv5nsqi","nota":"no se puede tener mas de 10 acciones por AI Agent, para esto se tiene el concepto de transfer y pronto consulta para tener agentes mas especializados","agente":"Lando Norris","fecha":"2026-05-22T18:16:26.554Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779473634153","nota":"El cliente desea saber si es posible tener m·s de 10 acciones de MCP para su caso de uso de AI Agent.","agente":"AI Agent","fecha":"2026-05-22T18:13:54.153Z","estadoAnterior":"","estadoNuevo":""},{"id":"1779473947931","nota":"El cliente solicita una sesiÛn de soporte para revisar el lÌmite de acciones MCP para AI Agent y recibir orientaciÛn especializada.","agente":"AI Agent","fecha":"2026-05-22T18:19:07.931Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"1779474567200","nota":"El cliente solicita el cierre del caso y confirma que la sesiÛn de soporte se mantenga para maÒana.","agente":"AI Agent","fecha":"2026-05-22T18:29:27.200Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"}],"actualizadoEn":"2026-05-22T18:29:27.200Z"},{"id":"714176","numero":"714176","nombre":"ConfiguraciÛn de AI Agent en Webex Contact Center","estado":"cerrado","creadoEn":"2026-05-22T12:26:49.724Z","actualizaciones":[{"id":"mpgwcqx0lbvn3ttnvu9","nota":"Pueden pedir mas detalles de la configuraciÛn al cliente y agendar una sesiÛn para ayudarlo con el paso a paso?","agente":"Oscar Piastri","fecha":"2026-05-22T12:29:29.796Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779452809724","nota":"Solicita ayuda con la configuraciÛn del agente de inteligencia artificial en Webex Contact Center.","agente":"AI Agent","fecha":"2026-05-22T12:26:49.724Z","estadoAnterior":"","estadoNuevo":""},{"id":"1779453243392","nota":"SesiÛn de acompaÒamiento tÈcnico para configuraciÛn de AI Agent en Webex Contact Center agendada hoy, jueves veintidÛs de mayo de dos mil veintisÈis, de ocho a diez de la maÒana.","agente":"AI Agent","fecha":"2026-05-22T12:34:03.392Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"1779459619172","nota":"Ya la configuraciÛn est· lista, ya se puede cerrar.","agente":"AI Agent","fecha":"2026-05-22T14:20:19.172Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"}],"actualizadoEn":"2026-05-22T14:20:19.172Z"},{"id":"122742","numero":"122742","nombre":"Ayuda en configuraciÛn de agente de inteligencia artificial en Webex Contact Center","estado":"cerrado","creadoEn":"2026-05-27T17:45:45.045Z","actualizaciones":[{"id":"1779904768972","nota":"El cliente solicitÛ cerrar el caso.","agente":"cliente","fecha":"2026-05-27T17:59:28.972Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mpocwxnqeo4dllk0hlh","nota":"Por favor agendar una sesiÛn con el cliente para que podamos ayudarlo con el paso a paso de esta configuraciÛn","agente":"Lando Norris","fecha":"2026-05-27T17:47:28.742Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779903945045","nota":"El cliente solicita asesorÌa y ayuda en la configuraciÛn del agente de inteligencia artificial en Webex Contact Center, incluyendo orientaciÛn sobre funcionalidades, KPIs y casos de uso para optimizar la atenciÛn y experiencia de clientes.","agente":"AI Agent","fecha":"2026-05-27T17:45:45.045Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-27T17:59:28.972Z"}],"creadoEn":"2026-04-22T19:22:00.305Z","actualizadoEn":"2026-05-27T17:59:28.972Z"},{"id":"120874","nombre":"Jose","apellido":"Linero CollabMCR","cargo":"CEO","email":"jlinero@collab-col.wbx.ai","email2":"","telefono":"+576023981001","empresa":"CollabMCR Technology Corporation","dominioEmpresa":"collab-col.wbx.ai","telEmpresa":"6052","ciudad":"","etapaVida":"cliente","estadoLead":"En progreso","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-23T15:56:43.723Z","actualizadoEn":"2026-04-23T22:52:49.024Z"},{"id":"141414","nombre":"Fernando","apellido":"Alonso","cargo":"Aston Martin F1 Driver","email":"falonso@collab-col.wbx.ai","email2":"","telefono":"+14087215957","empresa":"CollabMCR Technology Corporation","dominioEmpresa":"collab-col.wbx.ai","telEmpresa":"5957","ciudad":"Bogot, Colombia","etapaVida":"cliente","estadoLead":"Conectado","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:19:09.030Z","actualizadoEn":"2026-04-24T02:19:09.030Z"},{"id":"251226","nombre":"Genny","apellido":"Baron","cargo":"Collaboration AE","email":"genbaron@cisco.com","email2":"","telefono":"+573166904925","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[{"id":"1779416287164","tipo":"llamada","descripcion":"El cliente agendÛ una sesiÛn con su asesor comercial para hoy de 9:22 p.m. a 10:22 p.m. No requiriÛ asistencia adicional.","asignadoA":"AI Agent","fecha":"2026-05-22T02:18:07.164Z"},{"id":"1779415124991","tipo":"llamada","descripcion":"Se abriÛ el ticket #452320 para acompaÒamiento en la configuraciÛn del AI Agent. El cliente no requiere m·s asistencia en este momento.","asignadoA":"AI Agent","fecha":"2026-05-22T01:58:44.991Z"}],"deals":[],"tickets":[{"id":"452320","numero":"452320","nombre":"AcompaÒamiento configuraciÛn AI Agent","estado":"en progreso","creadoEn":"2026-05-22T01:58:29.311Z","actualizaciones":[{"id":"mpg9ujj1xfxxbeq1w1e","nota":"Por favor agendar cita con el cliente","agente":"Lando Norris","fecha":"2026-05-22T01:59:28.861Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1779415109311","nota":"Solicitud de acompaÒamiento en la configuraciÛn del AI Agent.","agente":"AI Agent","fecha":"2026-05-22T01:58:29.311Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-05-22T01:59:28.861Z"}],"creadoEn":"2026-04-24T02:20:19.270Z","actualizadoEn":"2026-05-22T02:18:07.164Z"},{"id":"010101","nombre":"Daniel","apellido":"Tobar","cargo":"Solutions Engineer","email":"dtobar@cisco.com","email2":"","telefono":"+573132488767","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Bogot√Colombia","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:25:54.575Z","actualizadoEn":"2026-04-24T02:25:54.575Z"},{"id":"101010","nombre":"Javier","apellido":"Cuadros","cargo":"Solutions Engineer","email":"jcuadros@cisco.com","email2":"","telefono":"+573107741094","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Bogot√Colombia","etapaVida":"nuevo","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:27:05.759Z","actualizadoEn":"2026-04-24T02:27:05.759Z"},{"id":"123123","nombre":"Edgar","apellido":"Arana","cargo":"Collaboration AE","email":"earana@cisco.com","email2":"","telefono":"+51997516433","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"Lima, Peru","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[{"id":"1779501322484","tipo":"llamada","descripcion":"Se agendÛ sesiÛn comercial de Webex para el viernes 29 de mayo de 13:00 a 15:00. Se brindÛ informaciÛn sobre IA, mediciÛn autom·tica de satisfacciÛn y beneficios operativos.","asignadoA":"AI Agent","fecha":"2026-05-23T01:55:22.484Z"}],"deals":[],"tickets":[],"creadoEn":"2026-04-28T03:52:17.354Z","actualizadoEn":"2026-05-23T01:55:22.484Z"}]}
+{
+  "contacts": [
+    {
+      "id": "123456",
+      "nombre": "Jose",
+      "apellido": "Linero",
+      "cargo": "Senior Collaboration SE",
+      "email": "jlinero@cisco.com",
+      "email2": "",
+      "telefono": "+573102634216",
+      "empresa": "Cisco",
+      "dominioEmpresa": "",
+      "telEmpresa": "+576013256052",
+      "ciudad": "Bogot, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [
+        {
+          "id": "1779904201469",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se consult√≥ el estado del caso activo para configuraci√≥n de agente de inteligencia artificial en Webex Contact Center y se agend√≥ una sesi√≥n para hoy de doce cincuenta y cuatro a dos cincuenta y cuatro de la tarde.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-27T17:50:01.469Z"
+        },
+        {
+          "id": "1779500824043",
+          "tipo": "llamada",
+          "descripcion": "El cliente solicit√≥ informaci√≥n sobre beneficios operativos y KPIs de Webex Contact Center, con √©nfasis en m√©tricas de AHT y visualizaci√≥n en Analyzer. Se resolvieron todas las dudas y no se requiri√≥ gesti√≥n de tickets ni citas.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-23T01:47:04.043Z"
+        },
+        {
+          "id": "1779499722209",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento positivo. Se resolvi√≥ consulta sobre MCP, QM AI y an√°lisis de sentimientos en Webex Contact Center. Se cerr√≥ ticket activo y se agend√≥ sesi√≥n comercial para cotizaci√≥n de licenciamiento.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-23T01:28:42.209Z"
+        },
+        {
+          "id": "1779484554468",
+          "tipo": "llamada",
+          "descripcion": "El cliente solicit√≥ cancelar la sesi√≥n de configuraci√≥n paso a paso de Webex Contact Center para el lunes veinticinco de mayo de veinte veintis√©is a la una de la tarde. La cita fue cancelada exitosamente.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T21:15:54.468Z"
+        },
+        {
+          "id": "1779484429781",
+          "tipo": "llamada",
+          "descripcion": "El cliente consult√≥ el estado de su caso activo, agend√≥ una sesi√≥n de configuraci√≥n para el lunes veinticinco de mayo de una a tres de la tarde y solicit√≥ actualizar el caso con esa informaci√≥n.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T21:13:49.781Z"
+        },
+        {
+          "id": "1779484196986",
+          "tipo": "llamada",
+          "descripcion": "Se abri√≥ el caso siete seis ocho siete cuatro cinco para soporte en configuraci√≥n paso a paso de Webex Contact Center seg√∫n solicitud del cliente.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T21:09:56.986Z"
+        },
+        {
+          "id": "1779478529702",
+          "tipo": "llamada",
+          "descripcion": "El cliente reprogram√≥ su sesi√≥n de revisi√≥n conjunta de calidad de servicio en llamadas Webex para hoy de 4:00 p. m. a 6:00 p. m. y solicit√≥ el cierre del caso de soporte activo. Se confirm√≥ el cierre exitoso del ticket.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-05-22T19:35:29.702Z"
+        },
+        {
+          "id": "1779477566937",
+          "tipo": "llamada",
+          "descripcion": "El cliente solicit√≥ reprogramar su cita de revisi√≥n conjunta de calidad de servicio en llamadas Webex para el s√°bado veintitr√©s de mayo de dos mil veintis√©is de dos a cuatro de la tarde. Se actualiz√≥ el caso de soporte activo con el nuevo horario. El cliente confirm√≥ que no necesita m√°s ayuda.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T19:19:26.937Z"
+        },
+        {
+          "id": "1779477318504",
+          "tipo": "llamada",
+          "descripcion": "Se actualiz√≥ el caso activo con la informaci√≥n de la sesi√≥n agendada para hoy. El cliente confirm√≥ que no necesita m√°s ayuda por ahora.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T19:15:18.504Z"
+        },
+        {
+          "id": "1779477254849",
+          "tipo": "llamada",
+          "descripcion": "Se agenda sesi√≥n para revisi√≥n conjunta de calidad de servicio en llamadas Webex el viernes 22 de mayo de 2026 de 14:18 a 16:18 para el caso activo del cliente.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T19:14:14.849Z"
+        },
+        {
+          "id": "1779476920925",
+          "tipo": "llamada",
+          "descripcion": "Se abri√≥ el caso 418362 para Jose Linero por problema de calidad de servicio en llamadas Webex. El cliente report√≥ entrecortes y mala calidad de audio, revisi√≥n de red sin hallazgos. Se inform√≥ que el equipo de soporte lo contactar√° pronto.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T19:08:40.925Z"
+        },
+        {
+          "id": "1779474642509",
+          "tipo": "llamada",
+          "descripcion": "El cliente consult√≥ el estado de su caso activo, confirm√≥ la sesi√≥n informativa para ma√±ana, solicit√≥ el cierre del caso y la cancelaci√≥n de la cita. Se inform√≥ que puede abrir un nuevo caso si requiere ayuda futura.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T18:30:42.509Z"
+        },
+        {
+          "id": "1779474051862",
+          "tipo": "llamada",
+          "descripcion": "Se consult√≥ el estado del caso activo, se actualiz√≥ solicitando una sesi√≥n de soporte y se reprogram√≥ la cita informativa de Webex Contact Center para hoy de 1:24 p.m. a 3:24 p.m. El cliente no requiere m√°s ayuda.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T18:20:51.862Z"
+        },
+        {
+          "id": "1779473653035",
+          "tipo": "llamada",
+          "descripcion": "Se abri√≥ un caso de soporte para consultar si es posible tener m√°s de 10 acciones de MCP para AI Agent. El cliente no requiere m√°s ayuda por ahora.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T18:14:13.035Z"
+        },
+        {
+          "id": "1779460013849",
+          "tipo": "llamada",
+          "descripcion": "Se agend√≥ una sesi√≥n informativa sobre Webex Contact Center para el 22 de mayo de 2026 de 9:31 a 11:31, a solicitud del cliente, para conocer detalles y costos de la soluci√≥n.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T14:26:53.849Z"
+        },
+        {
+          "id": "1779459659489",
+          "tipo": "llamada",
+          "descripcion": "El cliente consult√≥ el estado de su caso activo, solicit√≥ el cierre por configuraci√≥n finalizada y pidi√≥ un resumen de los casos cerrados recientes.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T14:20:59.489Z"
+        },
+        {
+          "id": "1779453264225",
+          "tipo": "llamada",
+          "descripcion": "El cliente consult√≥ el estado de su caso, agend√≥ una sesi√≥n de acompa√±amiento t√©cnico para configuraci√≥n de AI Agent en Webex Contact Center y solicit√≥ actualizar el ticket con esta informaci√≥n.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T12:34:24.225Z"
+        },
+        {
+          "id": "1779452870261",
+          "tipo": "llamada",
+          "descripcion": "Se abri√≥ el caso #714176 para ayudar con la configuraci√≥n del agente de inteligencia artificial en Webex Contact Center. El cliente no requiri√≥ m√°s asistencia.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T12:27:50.261Z"
+        },
+        {
+          "id": "1779416843609",
+          "tipo": "llamada",
+          "descripcion": "El cliente agend√≥ una sesi√≥n informativa sobre costos de Webex Contact Center para el s√°bado 23 de mayo de 2026 de 9:00 a 11:00 a.m. No requiri√≥ m√°s asistencia.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T02:27:23.609Z"
+        },
+        {
+          "id": "1779415449907",
+          "tipo": "llamada",
+          "descripcion": "El cliente consult√≥ el estado de sus casos, confirm√≥ que no ten√≠a casos abiertos y solicit√≥ agendar una cita para conocer los costos de Webex Contact Center. La cita fue agendada para el viernes, 22 de mayo de 2026, de 12:00 p. m. a 12:30 p. m. El cliente indic√≥ que no necesita m√°s ayuda.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T02:04:09.907Z"
+        },
+        {
+          "id": "1779414267985",
+          "tipo": "llamada",
+          "descripcion": "Se abri√≥ un caso para ayudar al cliente con la configuraci√≥n de MCP server junto con el agente de inteligencia artificial. El cliente confirm√≥ que no necesita m√°s asistencia.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T01:44:27.985Z"
+        },
+        {
+          "id": "1779413893213",
+          "tipo": "llamada",
+          "descripcion": "Se abri√≥ el ticket #266190 para acompa√±amiento en la configuraci√≥n del AI Agent utilizando MCP. El cliente no requiere asistencia adicional.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T01:38:13.213Z"
+        },
+        {
+          "id": "1776982642399",
+          "tipo": "llamada",
+          "descripcion": "El cliente tiene interes en el servicio de Webex Contact Center",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-23T22:17:22.399Z"
+        },
+        {
+          "id": "mobq02qroql",
+          "tipo": "email",
+          "descripcion": "El cliente escribio un correo manifestando interes en Webex Calling",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-23T16:53:07.683Z"
+        },
+        {
+          "id": "moaju9bbrk4",
+          "tipo": "email",
+          "descripcion": "El cliente escribio un correo manifestando interes en Webex Calling",
+          "asignadoA": "Oscar Piastri",
+          "fecha": "2026-04-22T21:12:52.391Z"
+        },
+        {
+          "id": "moajoa9yp0v",
+          "tipo": "llamada",
+          "descripcion": "El cliente llamo con interes en Webex Contact Center",
+          "asignadoA": "Lando Norris",
+          "fecha": "2026-04-22T21:08:13.702Z"
+        },
+        {
+          "id": "moaghznb1hhktni091j",
+          "tipo": "llamada",
+          "descripcion": "El cliente esta interesado en la solucion de Webex Contact Center",
+          "fecha": "2026-04-22T19:39:21.143Z"
+        }
+      ],
+      "deals": [
+        {
+          "id": "moc59bb1py0jkgv9x8",
+          "nombre": "Webex Calling",
+          "monto": "$20,000",
+          "fechaCierre": "Julio 30, 2026",
+          "etapa": "Calificado",
+          "creadoEn": "2026-04-24T00:00:12.925Z"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "122742",
+          "numero": "122742",
+          "nombre": "Ayuda en configuraci√≥n de agente de inteligencia artificial en Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-27T17:45:45.045Z",
+          "actualizaciones": [
+            {
+              "id": "1779904768972",
+              "nota": "El cliente solicit√≥ cerrar el caso.",
+              "agente": "cliente",
+              "fecha": "2026-05-27T17:59:28.972Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mpocwxnqeo4dllk0hlh",
+              "nota": "Por favor agendar una sesi√≥n con el cliente para que podamos ayudarlo con el paso a paso de esta configuraci√≥n",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T17:47:28.742Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779903945045",
+              "nota": "El cliente solicita asesor√≠a y ayuda en la configuraci√≥n del agente de inteligencia artificial en Webex Contact Center, incluyendo orientaci√≥n sobre funcionalidades, KPIs y casos de uso para optimizar la atenci√≥n y experiencia de clientes.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-27T17:45:45.045Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-27T17:59:28.972Z"
+        },
+        {
+          "id": "841932",
+          "numero": "841932",
+          "nombre": "Error en configuraci√≥n de Webex Calling",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-26T19:39:51.186Z",
+          "actualizaciones": [
+            {
+              "id": "mpn8e8izgb87maaoc4c",
+              "nota": "Ticket cerrado",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-26T22:53:11.723Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-05-26T22:53:11.723Z"
+        },
+        {
+          "id": "768745",
+          "numero": "768745",
+          "nombre": "Solicitud de configuraci√≥n paso a paso de Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-22T21:09:26.843Z",
+          "actualizaciones": [
+            {
+              "id": "mphez7rp1zxc62edh95",
+              "nota": "Si, se puede soportar al cliente sin problema en esa configuraci√≥n, se debe generar sesi√≥n con este cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T21:10:51.157Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779484166843",
+              "nota": "El cliente solicita ayuda para configurar Webex Contact Center desde cero, incluyendo instrucciones detalladas para cada paso.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T21:09:26.843Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1779484406930",
+              "nota": "Sesi√≥n de configuraci√≥n paso a paso de Webex Contact Center agendada para el lunes veinticinco de mayo de una a tres de la tarde.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T21:13:26.930Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779499336396",
+              "nota": "Cierre solicitado por el cliente. Tambi√©n solicita cancelar la sesi√≥n agendada.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-23T01:22:16.396Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-05-23T01:22:16.396Z"
+        },
+        {
+          "id": "418362",
+          "numero": "418362",
+          "nombre": "Problema de calidad de servicio en llamadas Webex",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-22T19:08:37.247Z",
+          "actualizaciones": [
+            {
+              "id": "mphb4ofufjwbfdwxhl",
+              "nota": "Se realiz√≥ la sesi√≥n con el cliente, se ten√≠an problemas en su red wireless por una mala marcaci√≥n de paquetes, el problema ya fue solucionado",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-22T19:23:07.578Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "mphapbjyh5kvyfqub3o",
+              "nota": "Se realiza una revisi√≥n inicial del caso, se ve algunos usuarios que efectivamente tienen problemas de calidad de servicio, no se ven problemas en la nube de Webex, es necesario agendar una sesi√≥n con el cliente para que revisemos en conjunto lo que esta pasando",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T19:11:11.038Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779476917247",
+              "nota": "Los usuarios reportan que durante algunas llamadas se entrecorta el audio y no escuchan bien a la otra persona. Se realiz√≥ revisi√≥n de red y no se encontraron problemas.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:08:37.247Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1779477289665",
+              "nota": "Se agenda sesi√≥n de revisi√≥n conjunta para el viernes 22 de mayo de 2026 de 14:18 a 16:18 para diagn√≥stico de entrecortes y mala calidad de audio en llamadas Webex.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:14:49.665Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779477538959",
+              "nota": "La sesi√≥n de revisi√≥n conjunta ha sido reprogramada para el s√°bado veintitr√©s de mayo de dos mil veintis√©is de dos a cuatro de la tarde, seg√∫n solicitud del cliente.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:18:58.959Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779478511109",
+              "nota": "Cierre solicitado por el cliente tras reprogramar la sesi√≥n de revisi√≥n conjunta para hoy.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T19:35:11.109Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-05-22T19:35:11.109Z"
+        },
+        {
+          "id": "394082",
+          "numero": "394082",
+          "nombre": "Consulta sobre l√≠mite de acciones MCP para AI Agent",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-22T18:13:54.153Z",
+          "actualizaciones": [
+            {
+              "id": "mph8qx8a2924uv5nsqi",
+              "nota": "no se puede tener mas de 10 acciones por AI Agent, para esto se tiene el concepto de transfer y pronto consulta para tener agentes mas especializados",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T18:16:26.554Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779473634153",
+              "nota": "El cliente desea saber si es posible tener m√°s de 10 acciones de MCP para su caso de uso de AI Agent.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T18:13:54.153Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1779473947931",
+              "nota": "El cliente solicita una sesi√≥n de soporte para revisar el l√≠mite de acciones MCP para AI Agent y recibir orientaci√≥n especializada.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T18:19:07.931Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779474567200",
+              "nota": "El cliente solicita el cierre del caso y confirma que la sesi√≥n de soporte se mantenga para ma√±ana.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T18:29:27.200Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-05-22T18:29:27.200Z"
+        }
+      ],
+      "creadoEn": "2026-04-22T19:22:00.305Z",
+      "actualizadoEn": "2026-05-27T17:59:28.972Z"
+    },
+    {
+      "id": "120874",
+      "nombre": "Jose",
+      "apellido": "Linero CollabMCR",
+      "cargo": "CEO",
+      "email": "jlinero@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+576023981001",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "6052",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "En progreso",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-23T15:56:43.723Z",
+      "actualizadoEn": "2026-04-23T22:52:49.024Z"
+    },
+    {
+      "id": "141414",
+      "nombre": "Fernando",
+      "apellido": "Alonso",
+      "cargo": "Aston Martin F1 Driver",
+      "email": "falonso@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+14087215957",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "5957",
+      "ciudad": "Bogot, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Conectado",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:19:09.030Z",
+      "actualizadoEn": "2026-04-24T02:19:09.030Z"
+    },
+    {
+      "id": "251226",
+      "nombre": "Genny",
+      "apellido": "Baron",
+      "cargo": "Collaboration AE",
+      "email": "genbaron@cisco.com",
+      "email2": "",
+      "telefono": "+573166904925",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [
+        {
+          "id": "1779416287164",
+          "tipo": "llamada",
+          "descripcion": "El cliente agend√≥ una sesi√≥n con su asesor comercial para hoy de 9:22 p.m. a 10:22 p.m. No requiri√≥ asistencia adicional.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T02:18:07.164Z"
+        },
+        {
+          "id": "1779415124991",
+          "tipo": "llamada",
+          "descripcion": "Se abri√≥ el ticket #452320 para acompa√±amiento en la configuraci√≥n del AI Agent. El cliente no requiere m√°s asistencia en este momento.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-22T01:58:44.991Z"
+        }
+      ],
+      "deals": [],
+      "tickets": [
+        {
+          "id": "452320",
+          "numero": "452320",
+          "nombre": "Acompa√±amiento configuraci√≥n AI Agent",
+          "estado": "en progreso",
+          "creadoEn": "2026-05-22T01:58:29.311Z",
+          "actualizaciones": [
+            {
+              "id": "mpg9ujj1xfxxbeq1w1e",
+              "nota": "Por favor agendar cita con el cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-22T01:59:28.861Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779415109311",
+              "nota": "Solicitud de acompa√±amiento en la configuraci√≥n del AI Agent.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-22T01:58:29.311Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-22T01:59:28.861Z"
+        }
+      ],
+      "creadoEn": "2026-04-24T02:20:19.270Z",
+      "actualizadoEn": "2026-05-22T02:18:07.164Z"
+    },
+    {
+      "id": "010101",
+      "nombre": "Daniel",
+      "apellido": "Tobar",
+      "cargo": "Solutions Engineer",
+      "email": "dtobar@cisco.com",
+      "email2": "",
+      "telefono": "+573132488767",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Bogot√ÉColombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:25:54.575Z",
+      "actualizadoEn": "2026-04-24T02:25:54.575Z"
+    },
+    {
+      "id": "101010",
+      "nombre": "Javier",
+      "apellido": "Cuadros",
+      "cargo": "Solutions Engineer",
+      "email": "jcuadros@cisco.com",
+      "email2": "",
+      "telefono": "+573107741094",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Bogot√ÉColombia",
+      "etapaVida": "nuevo",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:27:05.759Z",
+      "actualizadoEn": "2026-04-24T02:27:05.759Z"
+    },
+    {
+      "id": "123123",
+      "nombre": "Edgar",
+      "apellido": "Arana",
+      "cargo": "Collaboration AE",
+      "email": "earana@cisco.com",
+      "email2": "",
+      "telefono": "+51997516433",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "Lima, Peru",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [
+        {
+          "id": "1779501322484",
+          "tipo": "llamada",
+          "descripcion": "Se agend√≥ sesi√≥n comercial de Webex para el viernes 29 de mayo de 13:00 a 15:00. Se brind√≥ informaci√≥n sobre IA, medici√≥n autom√°tica de satisfacci√≥n y beneficios operativos.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-23T01:55:22.484Z"
+        }
+      ],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-28T03:52:17.354Z",
+      "actualizadoEn": "2026-05-23T01:55:22.484Z"
+    }
+  ]
+}
