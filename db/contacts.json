@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779904201469",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se consultó el estado del caso activo para configuración de agente de inteligencia artificial en Webex Contact Center y se agendó una sesión para hoy de doce cincuenta y cuatro a dos cincuenta y cuatro de la tarde.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-27T17:50:01.469Z"
+        },
+        {
           "id": "1779500824043",
           "tipo": "llamada",
           "descripcion": "El cliente solicitó información sobre beneficios operativos y KPIs de Webex Contact Center, con énfasis en métricas de AHT y visualización en Analyzer. Se resolvieron todas las dudas y no se requirió gestión de tickets ni citas.",
@@ -444,7 +451,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T17:47:28.742Z"
+      "actualizadoEn": "2026-05-27T17:50:01.469Z"
     },
     {
       "id": "120874",
