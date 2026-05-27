@@ -467,6 +467,14 @@
           "creadoEn": "2026-05-27T20:16:52.038Z",
           "actualizaciones": [
             {
+              "id": "mpoia7l4vjsha03mnzm",
+              "nota": "Se debe agendar sesión con el cliente para continuar con el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T20:17:46.216Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mpoi9ibart3so6z1l1s",
               "nota": "Se revisa el caso",
               "agente": "Lando Norris",
@@ -475,11 +483,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-27T20:17:13.462Z"
+          "actualizadoEn": "2026-05-27T20:17:46.216Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T20:17:13.462Z"
+      "actualizadoEn": "2026-05-27T20:17:46.216Z"
     },
     {
       "id": "120874",
