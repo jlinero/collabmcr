@@ -440,6 +440,14 @@
             }
           ],
           "actualizadoEn": "2026-05-27T19:13:09.425Z"
+        },
+        {
+          "id": "174748",
+          "numero": "174748",
+          "nombre": "Ticket Prueba",
+          "estado": "abierto",
+          "creadoEn": "2026-05-27T20:10:35.128Z",
+          "actualizaciones": []
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
