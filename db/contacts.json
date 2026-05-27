@@ -597,9 +597,17 @@
           "id": "362861",
           "numero": "362861",
           "nombre": "Webex Contact Center no funciona",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-27T21:23:12.742Z",
           "actualizaciones": [
+            {
+              "id": "mpokr7om015ex5i77ndra",
+              "nota": "Se necesita agendar una sesión con el cliente lo antes posible",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-27T21:26:58.726Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1779916992742",
               "nota": "El cliente reporta que la solución de Webex Contact Center no está funcionando. Solicita atención prioritaria debido a su molestia.",
@@ -609,11 +617,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-27T21:23:12.742Z"
+          "actualizadoEn": "2026-05-27T21:26:58.726Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T21:24:26.333Z"
+      "actualizadoEn": "2026-05-27T21:26:58.726Z"
     },
     {
       "id": "120874",
