@@ -497,9 +497,17 @@
           "id": "233853",
           "numero": "233853",
           "nombre": "Caso de prueba",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-27T20:42:24.743Z",
           "actualizaciones": [
+            {
+              "id": "mpojblnbpnslnrf5xp",
+              "nota": "Se cierra el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T20:46:50.711Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mpoj9xt87novw73ql6",
               "nota": "Se revisa el caso",
@@ -509,11 +517,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-27T20:45:33.164Z"
+          "actualizadoEn": "2026-05-27T20:46:50.711Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T20:45:33.164Z"
+      "actualizadoEn": "2026-05-27T20:46:50.711Z"
     },
     {
       "id": "120874",
