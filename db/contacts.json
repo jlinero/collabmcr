@@ -419,9 +419,17 @@
           "id": "197338",
           "numero": "197338",
           "nombre": "Caso de prueba notificaciones",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-27T19:10:49.979Z",
           "actualizaciones": [
+            {
+              "id": "mpofz48hl8eo3xsyfc8",
+              "nota": "Caso cerrado",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T19:13:09.425Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mpofx74bee6him989e",
               "nota": "El caso ha sido actualizado",
@@ -431,11 +439,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-27T19:11:39.851Z"
+          "actualizadoEn": "2026-05-27T19:13:09.425Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T19:11:39.851Z"
+      "actualizadoEn": "2026-05-27T19:13:09.425Z"
     },
     {
       "id": "120874",
