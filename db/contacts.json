@@ -556,9 +556,17 @@
           "id": "796553",
           "numero": "796553",
           "nombre": "Asesoría configuración agente de inteligencia artificial",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-27T21:15:48.756Z",
           "actualizaciones": [
+            {
+              "id": "mpokjnebd7jsgrhvu3",
+              "nota": "Se cierra el caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-27T21:21:05.843Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mpokfka6hoz8xqhmvjs",
               "nota": "A este cliente le ayudamos y había quedado todo listo, necesitamos agendar una sesión para poder revisar de nuevo",
@@ -576,11 +584,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-27T21:17:55.182Z"
+          "actualizadoEn": "2026-05-27T21:21:05.843Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T21:20:42.264Z"
+      "actualizadoEn": "2026-05-27T21:21:05.843Z"
     },
     {
       "id": "120874",
