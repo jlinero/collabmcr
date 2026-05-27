@@ -243,328 +243,38 @@
       ],
       "tickets": [
         {
-          "id": "122742",
-          "numero": "122742",
-          "nombre": "Ayuda en configuración de agente de inteligencia artificial en Webex Contact Center",
+          "id": "362861",
+          "numero": "362861",
+          "nombre": "Webex Contact Center no funciona",
           "estado": "cerrado",
-          "creadoEn": "2026-05-27T17:45:45.045Z",
+          "creadoEn": "2026-05-27T21:23:12.742Z",
           "actualizaciones": [
             {
-              "id": "1779904768972",
-              "nota": "El cliente solicitó cerrar el caso.",
-              "agente": "cliente",
-              "fecha": "2026-05-27T17:59:28.972Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpocwxnqeo4dllk0hlh",
-              "nota": "Por favor agendar una sesión con el cliente para que podamos ayudarlo con el paso a paso de esta configuración",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T17:47:28.742Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779903945045",
-              "nota": "El cliente solicita asesoría y ayuda en la configuración del agente de inteligencia artificial en Webex Contact Center, incluyendo orientación sobre funcionalidades, KPIs y casos de uso para optimizar la atención y experiencia de clientes.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-27T17:45:45.045Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-27T17:59:28.972Z"
-        },
-        {
-          "id": "841932",
-          "numero": "841932",
-          "nombre": "Error en configuración de Webex Calling",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-26T19:39:51.186Z",
-          "actualizaciones": [
-            {
-              "id": "mpn8e8izgb87maaoc4c",
-              "nota": "Ticket cerrado",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-26T22:53:11.723Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-05-26T22:53:11.723Z"
-        },
-        {
-          "id": "768745",
-          "numero": "768745",
-          "nombre": "Solicitud de configuración paso a paso de Webex Contact Center",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-22T21:09:26.843Z",
-          "actualizaciones": [
-            {
-              "id": "mphez7rp1zxc62edh95",
-              "nota": "Si, se puede soportar al cliente sin problema en esa configuración, se debe generar sesión con este cliente",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-22T21:10:51.157Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779484166843",
-              "nota": "El cliente solicita ayuda para configurar Webex Contact Center desde cero, incluyendo instrucciones detalladas para cada paso.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T21:09:26.843Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1779484406930",
-              "nota": "Sesión de configuración paso a paso de Webex Contact Center agendada para el lunes veinticinco de mayo de una a tres de la tarde.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T21:13:26.930Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779499336396",
-              "nota": "Cierre solicitado por el cliente. También solicita cancelar la sesión agendada.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-23T01:22:16.396Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-05-23T01:22:16.396Z"
-        },
-        {
-          "id": "418362",
-          "numero": "418362",
-          "nombre": "Problema de calidad de servicio en llamadas Webex",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-22T19:08:37.247Z",
-          "actualizaciones": [
-            {
-              "id": "mphb4ofufjwbfdwxhl",
-              "nota": "Se realizó la sesión con el cliente, se tenían problemas en su red wireless por una mala marcación de paquetes, el problema ya fue solucionado",
+              "id": "mpokr7om015ex5i77ndra",
+              "nota": "Se necesita agendar una sesión con el cliente lo antes posible",
               "agente": "Oscar Piastri",
-              "fecha": "2026-05-22T19:23:07.578Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "mphapbjyh5kvyfqub3o",
-              "nota": "Se realiza una revisión inicial del caso, se ve algunos usuarios que efectivamente tienen problemas de calidad de servicio, no se ven problemas en la nube de Webex, es necesario agendar una sesión con el cliente para que revisemos en conjunto lo que esta pasando",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-22T19:11:11.038Z",
+              "fecha": "2026-05-27T21:26:58.726Z",
               "estadoAnterior": "abierto",
               "estadoNuevo": "en progreso"
             },
             {
-              "id": "1779476917247",
-              "nota": "Los usuarios reportan que durante algunas llamadas se entrecorta el audio y no escuchan bien a la otra persona. Se realizó revisión de red y no se encontraron problemas.",
+              "id": "1779916992742",
+              "nota": "El cliente reporta que la solución de Webex Contact Center no está funcionando. Solicita atención prioritaria debido a su molestia.",
               "agente": "AI Agent",
-              "fecha": "2026-05-22T19:08:37.247Z",
+              "fecha": "2026-05-27T21:23:12.742Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
             },
             {
-              "id": "1779477289665",
-              "nota": "Se agenda sesión de revisión conjunta para el viernes 22 de mayo de 2026 de 14:18 a 16:18 para diagnóstico de entrecortes y mala calidad de audio en llamadas Webex.",
+              "id": "1779917427288",
+              "nota": "El cliente indica que ya se solucionó todo y encontró que el problema estaba en su red.",
               "agente": "AI Agent",
-              "fecha": "2026-05-22T19:14:49.665Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779477538959",
-              "nota": "La sesión de revisión conjunta ha sido reprogramada para el sábado veintitrés de mayo de dos mil veintiséis de dos a cuatro de la tarde, según solicitud del cliente.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T19:18:58.959Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779478511109",
-              "nota": "Cierre solicitado por el cliente tras reprogramar la sesión de revisión conjunta para hoy.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T19:35:11.109Z",
+              "fecha": "2026-05-27T21:30:27.288Z",
               "estadoAnterior": "en progreso",
               "estadoNuevo": "cerrado"
             }
           ],
-          "actualizadoEn": "2026-05-22T19:35:11.109Z"
-        },
-        {
-          "id": "394082",
-          "numero": "394082",
-          "nombre": "Consulta sobre límite de acciones MCP para AI Agent",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-22T18:13:54.153Z",
-          "actualizaciones": [
-            {
-              "id": "mph8qx8a2924uv5nsqi",
-              "nota": "no se puede tener mas de 10 acciones por AI Agent, para esto se tiene el concepto de transfer y pronto consulta para tener agentes mas especializados",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-22T18:16:26.554Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779473634153",
-              "nota": "El cliente desea saber si es posible tener más de 10 acciones de MCP para su caso de uso de AI Agent.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T18:13:54.153Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1779473947931",
-              "nota": "El cliente solicita una sesión de soporte para revisar el límite de acciones MCP para AI Agent y recibir orientación especializada.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T18:19:07.931Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779474567200",
-              "nota": "El cliente solicita el cierre del caso y confirma que la sesión de soporte se mantenga para mañana.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-22T18:29:27.200Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-05-22T18:29:27.200Z"
-        },
-        {
-          "id": "197338",
-          "numero": "197338",
-          "nombre": "Caso de prueba notificaciones",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T19:10:49.979Z",
-          "actualizaciones": [
-            {
-              "id": "mpofz48hl8eo3xsyfc8",
-              "nota": "Caso cerrado",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T19:13:09.425Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpofx74bee6him989e",
-              "nota": "El caso ha sido actualizado",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T19:11:39.851Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            }
-          ],
-          "actualizadoEn": "2026-05-27T19:13:09.425Z"
-        },
-        {
-          "id": "174748",
-          "numero": "174748",
-          "nombre": "Ticket Prueba",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T20:10:35.128Z",
-          "actualizaciones": [
-            {
-              "id": "mpoi3bwb9t6pioupfgl",
-              "nota": "Se cierra el ticket de prueba",
-              "agente": "",
-              "fecha": "2026-05-27T20:12:25.211Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-05-27T20:12:25.211Z"
-        },
-        {
-          "id": "722054",
-          "numero": "722054",
-          "nombre": "Ticket de prueba notificaciones",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T20:16:52.038Z",
-          "actualizaciones": [
-            {
-              "id": "mpoiavm6gylelppa4cs",
-              "nota": "se cierra el caso",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-27T20:18:17.358Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpoia7l4vjsha03mnzm",
-              "nota": "Se debe agendar sesión con el cliente para continuar con el caso",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T20:17:46.216Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "mpoi9ibart3so6z1l1s",
-              "nota": "Se revisa el caso",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T20:17:13.462Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            }
-          ],
-          "actualizadoEn": "2026-05-27T20:18:17.358Z"
-        },
-        {
-          "id": "233853",
-          "numero": "233853",
-          "nombre": "Caso de prueba",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T20:42:24.743Z",
-          "actualizaciones": [
-            {
-              "id": "mpojblnbpnslnrf5xp",
-              "nota": "Se cierra el caso",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T20:46:50.711Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpoj9xt87novw73ql6",
-              "nota": "Se revisa el caso",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T20:45:33.164Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            }
-          ],
-          "actualizadoEn": "2026-05-27T20:46:50.711Z"
-        },
-        {
-          "id": "152500",
-          "numero": "152500",
-          "nombre": "Asesoría configuración agente de inteligencia artificial Webex",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T21:15:38.524Z",
-          "actualizaciones": [
-            {
-              "id": "mpokj57ck9kcvbq14mc",
-              "nota": "Se cierra el caos",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T21:20:42.264Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1779916538524",
-              "nota": "El cliente solicita asesoría para verificar si la configuración de su agente de inteligencia artificial en Webex Contact Center está correcta. Requiere orientación técnica para validar y ajustar la configuración según sea necesario.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-27T21:15:38.524Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-27T21:20:42.264Z"
+          "actualizadoEn": "2026-05-27T21:30:27.288Z"
         },
         {
           "id": "796553",
@@ -601,38 +311,90 @@
           "actualizadoEn": "2026-05-27T21:21:05.843Z"
         },
         {
-          "id": "362861",
-          "numero": "362861",
-          "nombre": "Webex Contact Center no funciona",
+          "id": "152500",
+          "numero": "152500",
+          "nombre": "Asesoría configuración agente de inteligencia artificial Webex",
           "estado": "cerrado",
-          "creadoEn": "2026-05-27T21:23:12.742Z",
+          "creadoEn": "2026-05-27T21:15:38.524Z",
           "actualizaciones": [
             {
-              "id": "mpokr7om015ex5i77ndra",
-              "nota": "Se necesita agendar una sesión con el cliente lo antes posible",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-27T21:26:58.726Z",
+              "id": "mpokj57ck9kcvbq14mc",
+              "nota": "Se cierra el caos",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T21:20:42.264Z",
               "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1779916538524",
+              "nota": "El cliente solicita asesoría para verificar si la configuración de su agente de inteligencia artificial en Webex Contact Center está correcta. Requiere orientación técnica para validar y ajustar la configuración según sea necesario.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-27T21:15:38.524Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-27T21:20:42.264Z"
+        },
+        {
+          "id": "233853",
+          "numero": "233853",
+          "nombre": "Caso de prueba",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-27T20:42:24.743Z",
+          "actualizaciones": [
+            {
+              "id": "mpojblnbpnslnrf5xp",
+              "nota": "Se cierra el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T20:46:50.711Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mpoj9xt87novw73ql6",
+              "nota": "Se revisa el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T20:45:33.164Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            }
+          ],
+          "actualizadoEn": "2026-05-27T20:46:50.711Z"
+        },
+        {
+          "id": "722054",
+          "numero": "722054",
+          "nombre": "Ticket de prueba notificaciones",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-27T20:16:52.038Z",
+          "actualizaciones": [
+            {
+              "id": "mpoiavm6gylelppa4cs",
+              "nota": "se cierra el caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-27T20:18:17.358Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mpoia7l4vjsha03mnzm",
+              "nota": "Se debe agendar sesión con el cliente para continuar con el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T20:17:46.216Z",
+              "estadoAnterior": "en progreso",
               "estadoNuevo": "en progreso"
             },
             {
-              "id": "1779916992742",
-              "nota": "El cliente reporta que la solución de Webex Contact Center no está funcionando. Solicita atención prioritaria debido a su molestia.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-27T21:23:12.742Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1779917427288",
-              "nota": "El cliente indica que ya se solucionó todo y encontró que el problema estaba en su red.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-27T21:30:27.288Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
+              "id": "mpoi9ibart3so6z1l1s",
+              "nota": "Se revisa el caso",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T20:17:13.462Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-27T21:30:27.288Z"
+          "actualizadoEn": "2026-05-27T20:18:17.358Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
