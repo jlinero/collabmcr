@@ -415,10 +415,28 @@
             }
           ],
           "actualizadoEn": "2026-05-22T14:20:19.172Z"
+        },
+        {
+          "id": "122742",
+          "numero": "122742",
+          "nombre": "Ayuda en configuración de agente de inteligencia artificial en Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-27T17:45:45.045Z",
+          "actualizaciones": [
+            {
+              "id": "1779903945045",
+              "nota": "El cliente solicita asesoría y ayuda en la configuración del agente de inteligencia artificial en Webex Contact Center, incluyendo orientación sobre funcionalidades, KPIs y casos de uso para optimizar la atención y experiencia de clientes.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-27T17:45:45.045Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-27T17:45:45.045Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-26T22:53:11.723Z"
+      "actualizadoEn": "2026-05-27T17:45:45.045Z"
     },
     {
       "id": "120874",
