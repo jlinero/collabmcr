@@ -548,9 +548,17 @@
           "id": "796553",
           "numero": "796553",
           "nombre": "Asesoría configuración agente de inteligencia artificial",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-27T21:15:48.756Z",
           "actualizaciones": [
+            {
+              "id": "mpokfka6hoz8xqhmvjs",
+              "nota": "A este cliente le ayudamos y había quedado todo listo, necesitamos agendar una sesión para poder revisar de nuevo",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T21:17:55.182Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1779916548756",
               "nota": "El cliente reporta que la configuración realizada previamente para su agente de inteligencia artificial en Webex Contact Center no ha funcionado y requiere que funcione correctamente. Solicita asesoría para resolver el problema.",
@@ -560,11 +568,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-27T21:15:48.756Z"
+          "actualizadoEn": "2026-05-27T21:17:55.182Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T21:16:23.302Z"
+      "actualizadoEn": "2026-05-27T21:17:55.182Z"
     },
     {
       "id": "120874",
