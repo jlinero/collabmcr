@@ -445,13 +445,23 @@
           "id": "174748",
           "numero": "174748",
           "nombre": "Ticket Prueba",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-05-27T20:10:35.128Z",
-          "actualizaciones": []
+          "actualizaciones": [
+            {
+              "id": "mpoi3bwb9t6pioupfgl",
+              "nota": "Se cierra el ticket de prueba",
+              "agente": "",
+              "fecha": "2026-05-27T20:12:25.211Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-05-27T20:12:25.211Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T19:13:09.425Z"
+      "actualizadoEn": "2026-05-27T20:12:25.211Z"
     },
     {
       "id": "120874",
