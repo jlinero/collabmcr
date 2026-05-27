@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779917066333",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento negativo. Se abrió caso prioritario por falla en Webex Contact Center según lo solicitado por el cliente.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-27T21:24:26.333Z"
+        },
+        {
           "id": "1779916583302",
           "tipo": "llamada",
           "descripcion": "Sentimiento neutral. Se abrió el caso de soporte para asesoría en la configuración del agente de inteligencia artificial en Webex Contact Center según lo solicitado por el cliente.",
@@ -606,7 +613,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T21:23:12.742Z"
+      "actualizadoEn": "2026-05-27T21:24:26.333Z"
     },
     {
       "id": "120874",
