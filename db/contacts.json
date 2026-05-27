@@ -530,9 +530,17 @@
           "id": "152500",
           "numero": "152500",
           "nombre": "Asesoría configuración agente de inteligencia artificial Webex",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-05-27T21:15:38.524Z",
           "actualizaciones": [
+            {
+              "id": "mpokj57ck9kcvbq14mc",
+              "nota": "Se cierra el caos",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-27T21:20:42.264Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1779916538524",
               "nota": "El cliente solicita asesoría para verificar si la configuración de su agente de inteligencia artificial en Webex Contact Center está correcta. Requiere orientación técnica para validar y ajustar la configuración según sea necesario.",
@@ -542,7 +550,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-27T21:15:38.524Z"
+          "actualizadoEn": "2026-05-27T21:20:42.264Z"
         },
         {
           "id": "796553",
@@ -572,7 +580,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T21:17:55.182Z"
+      "actualizadoEn": "2026-05-27T21:20:42.264Z"
     },
     {
       "id": "120874",
