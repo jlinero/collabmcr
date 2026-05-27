@@ -463,9 +463,17 @@
           "id": "722054",
           "numero": "722054",
           "nombre": "Ticket de prueba notificaciones",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-27T20:16:52.038Z",
           "actualizaciones": [
+            {
+              "id": "mpoiavm6gylelppa4cs",
+              "nota": "se cierra el caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-27T20:18:17.358Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mpoia7l4vjsha03mnzm",
               "nota": "Se debe agendar sesión con el cliente para continuar con el caso",
@@ -483,11 +491,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-27T20:17:46.216Z"
+          "actualizadoEn": "2026-05-27T20:18:17.358Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T20:17:46.216Z"
+      "actualizadoEn": "2026-05-27T20:18:17.358Z"
     },
     {
       "id": "120874",
