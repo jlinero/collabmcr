@@ -36,9 +36,17 @@
           "id": "261348",
           "numero": "261348",
           "nombre": "Integración Webex Contact Center con sistema de salud",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-28T19:54:53.737Z",
           "actualizaciones": [
+            {
+              "id": "mppwzyizesytn1knthu",
+              "nota": "Se puede hacer esa integraci´ñon, por favor agendar una sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T19:57:28.331Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1779998093737",
               "nota": "El cliente solicita apoyo para integrar Webex Contact Center con su sistema de salud y automatizar el agendamiento de citas.",
@@ -48,11 +56,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-28T19:54:53.737Z"
+          "actualizadoEn": "2026-05-28T19:57:28.331Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T19:54:53.737Z"
+      "actualizadoEn": "2026-05-28T19:57:28.331Z"
     },
     {
       "id": "120874",
