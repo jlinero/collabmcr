@@ -79,14 +79,15 @@
       "contactTel": "+573102634216",
       "titulo": "Sesión de caso de prueba",
       "proposito": "Agendar sesión para avanzar en el caso de prueba",
-      "fecha": "2026-05-29",
-      "horaInicio": "09:00",
-      "horaFin": "11:00",
+      "fecha": "2026-05-30",
+      "horaInicio": "10:00",
+      "horaFin": "12:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-05-28T00:51:43.500Z"
+      "notas": "Reprogramada desde 2026-05-29 09:00. Motivo: Cliente solicita mover la sesión para el sábado en la mañana a las diez",
+      "creadoEn": "2026-05-28T00:51:43.500Z",
+      "actualizadoEn": "2026-05-28T00:59:14.282Z"
     }
   ]
 }
