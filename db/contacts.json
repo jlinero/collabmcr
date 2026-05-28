@@ -520,10 +520,28 @@
             }
           ],
           "actualizadoEn": "2026-05-28T15:40:42.740Z"
+        },
+        {
+          "id": "554127",
+          "numero": "554127",
+          "nombre": "Falla de login en interfaz de agente Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T15:41:35.778Z",
+          "actualizaciones": [
+            {
+              "id": "1779982895778",
+              "nota": "Los agentes no pueden iniciar sesión en la interfaz de Webex Contact Center. Se requiere soporte técnico para revisar el acceso y restaurar la funcionalidad.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T15:41:35.778Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:41:35.778Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T15:40:42.740Z"
+      "actualizadoEn": "2026-05-28T15:41:35.778Z"
     },
     {
       "id": "120874",
