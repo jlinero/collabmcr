@@ -320,6 +320,14 @@
           "creadoEn": "2026-05-28T15:54:43.005Z",
           "actualizaciones": [
             {
+              "id": "mppp5c3ukherzlp81iq",
+              "nota": "ya se realizó la  sesión con el cliente y se aclaró que se puede hacer la integración",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T16:17:42.282Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mppoexcg6c49650ky4v",
               "nota": "La integración con el CRM de cliente se puuede realizar sin problema, es necesario agendar una sesión para entender los detalles del CRM, las APIs que tiene disponibles para realizar esa integración.",
               "agente": "Oscar Piastri",
@@ -336,7 +344,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-28T15:57:10.096Z"
+          "actualizadoEn": "2026-05-28T16:17:42.282Z"
         },
         {
           "id": "848518",
@@ -502,7 +510,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T16:11:05.028Z"
+      "actualizadoEn": "2026-05-28T16:17:42.282Z"
     },
     {
       "id": "120874",
