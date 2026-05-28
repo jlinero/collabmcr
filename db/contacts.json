@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779927257328",
+          "tipo": "llamada",
+          "descripcion": "Cliente con sentimiento neutral, consulta sobre estado de tickets. Se confirma que no hay casos activos y se agradece la interacción.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-28T00:14:17.328Z"
+        },
+        {
           "id": "1779923578622",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral, consulta sobre estado de tickets. Se confirma que no hay casos activos y se informa sobre la última actividad.",
@@ -405,7 +412,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T23:12:58.622Z"
+      "actualizadoEn": "2026-05-28T00:14:17.328Z"
     },
     {
       "id": "120874",
