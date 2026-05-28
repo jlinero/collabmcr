@@ -31,9 +31,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "586204",
+          "numero": "586204",
+          "nombre": "Solicitud de integración Webex AI Agent con sistemas hospitalarios y Excel",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T16:48:17.351Z",
+          "actualizaciones": [
+            {
+              "id": "1779986897351",
+              "nota": "El cliente desea conocer cómo realizar la integración de Webex AI Agent para automatizar procesos de citas, incluyendo conexión con sistemas hospitalarios y Excel. Requiere detalles sobre el proceso y opciones disponibles.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T16:48:17.351Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T16:48:17.351Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T16:36:54.372Z"
+      "actualizadoEn": "2026-05-28T16:48:17.351Z"
     },
     {
       "id": "120874",
