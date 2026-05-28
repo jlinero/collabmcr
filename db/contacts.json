@@ -299,32 +299,6 @@
       ],
       "tickets": [
         {
-          "id": "942338",
-          "numero": "942338",
-          "nombre": "Problema de login de agentes en Webex Contact Center",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-28T15:40:42.740Z",
-          "actualizaciones": [
-            {
-              "id": "mppnxax2iv0uug9nidg",
-              "nota": "Se cierra esta caso por duplicado",
-              "agente": "",
-              "fecha": "2026-05-28T15:43:27.878Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1779982842740",
-              "nota": "Los agentes no pueden iniciar sesión en la interfaz de agente de Webex Contact Center. Se requiere revisión técnica para restaurar el acceso.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-28T15:40:42.740Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-28T15:43:27.878Z"
-        },
-        {
           "id": "554127",
           "numero": "554127",
           "nombre": "Falla de login en interfaz de agente Webex Contact Center",
@@ -349,6 +323,32 @@
             }
           ],
           "actualizadoEn": "2026-05-28T15:43:55.511Z"
+        },
+        {
+          "id": "942338",
+          "numero": "942338",
+          "nombre": "Problema de login de agentes en Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-28T15:40:42.740Z",
+          "actualizaciones": [
+            {
+              "id": "mppnxax2iv0uug9nidg",
+              "nota": "Se cierra esta caso por duplicado",
+              "agente": "",
+              "fecha": "2026-05-28T15:43:27.878Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1779982842740",
+              "nota": "Los agentes no pueden iniciar sesión en la interfaz de agente de Webex Contact Center. Se requiere revisión técnica para restaurar el acceso.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T15:40:42.740Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:43:27.878Z"
         },
         {
           "id": "809480",
@@ -467,74 +467,6 @@
             }
           ],
           "actualizadoEn": "2026-05-28T00:53:54.823Z"
-        },
-        {
-          "id": "362861",
-          "numero": "362861",
-          "nombre": "Webex Contact Center no funciona",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T21:23:12.742Z",
-          "actualizaciones": [
-            {
-              "id": "mpokr7om015ex5i77ndra",
-              "nota": "Se necesita agendar una sesión con el cliente lo antes posible",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-27T21:26:58.726Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779916992742",
-              "nota": "El cliente reporta que la solución de Webex Contact Center no está funcionando. Solicita atención prioritaria debido a su molestia.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-27T21:23:12.742Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1779917427288",
-              "nota": "El cliente indica que ya se solucionó todo y encontró que el problema estaba en su red.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-27T21:30:27.288Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-05-27T21:30:27.288Z"
-        },
-        {
-          "id": "796553",
-          "numero": "796553",
-          "nombre": "Asesoría configuración agente de inteligencia artificial",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T21:15:48.756Z",
-          "actualizaciones": [
-            {
-              "id": "mpokjnebd7jsgrhvu3",
-              "nota": "Se cierra el caso",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-27T21:21:05.843Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpokfka6hoz8xqhmvjs",
-              "nota": "A este cliente le ayudamos y había quedado todo listo, necesitamos agendar una sesión para poder revisar de nuevo",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T21:17:55.182Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779916548756",
-              "nota": "El cliente reporta que la configuración realizada previamente para su agente de inteligencia artificial en Webex Contact Center no ha funcionado y requiere que funcione correctamente. Solicita asesoría para resolver el problema.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-27T21:15:48.756Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-27T21:21:05.843Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
