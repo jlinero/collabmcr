@@ -502,10 +502,28 @@
             }
           ],
           "actualizadoEn": "2026-05-27T21:20:42.264Z"
+        },
+        {
+          "id": "942338",
+          "numero": "942338",
+          "nombre": "Problema de login de agentes en Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T15:40:42.740Z",
+          "actualizaciones": [
+            {
+              "id": "1779982842740",
+              "nota": "Los agentes no pueden iniciar sesión en la interfaz de agente de Webex Contact Center. Se requiere revisión técnica para restaurar el acceso.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T15:40:42.740Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:40:42.740Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T15:31:38.606Z"
+      "actualizadoEn": "2026-05-28T15:40:42.740Z"
     },
     {
       "id": "120874",
