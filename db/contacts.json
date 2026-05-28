@@ -295,9 +295,17 @@
           "id": "809480",
           "numero": "809480",
           "nombre": "Soporte paso a paso configuración agente IA Webex Contact Center",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-28T15:27:11.903Z",
           "actualizaciones": [
+            {
+              "id": "mppnho6yu20btepylu",
+              "nota": "Se cierra el caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T15:31:18.586Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mppnfrl9pq0xkrevhvg",
               "nota": "Por favor agendar con el cliente una sesión para poder ayudarlo con esa configuración paso a paso",
@@ -315,7 +323,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-28T15:29:49.677Z"
+          "actualizadoEn": "2026-05-28T15:31:18.586Z"
         },
         {
           "id": "116947",
@@ -489,7 +497,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T15:29:49.677Z"
+      "actualizadoEn": "2026-05-28T15:31:18.586Z"
     },
     {
       "id": "120874",
