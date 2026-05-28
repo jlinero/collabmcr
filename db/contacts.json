@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779929976763",
+          "tipo": "llamada",
+          "descripcion": "Cliente con sentimiento neutral, reprograma sesión del viernes primero de junio para el sábado treinta de mayo de diez a doce del mediodía.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-28T00:59:36.763Z"
+        },
+        {
           "id": "1779929553899",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral, solicita actualización de caso y agenda sesión para el viernes primero de junio de nueve a once de la mañana. Se actualiza el caso y se confirma la cita.",
@@ -460,7 +467,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T00:53:54.823Z"
+      "actualizadoEn": "2026-05-28T00:59:36.763Z"
     },
     {
       "id": "120874",
