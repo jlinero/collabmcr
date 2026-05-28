@@ -1,1 +1,21 @@
-{"appointments":[]}
+{
+  "appointments": [
+    {
+      "id": "1779987285384",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Integración Webex AI Agent con sistema hospitalario",
+      "proposito": "Sesión de instalación y configuración para integración con sistema hospitalario",
+      "fecha": "2026-05-28",
+      "horaInicio": "11:59",
+      "horaFin": "13:59",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-28T16:54:45.384Z"
+    }
+  ]
+}
