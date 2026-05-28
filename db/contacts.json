@@ -299,6 +299,14 @@
           "creadoEn": "2026-05-28T15:27:11.903Z",
           "actualizaciones": [
             {
+              "id": "mppni3n141x6annx8kt",
+              "nota": "Se cierra el caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T15:31:38.606Z",
+              "estadoAnterior": "cerrado",
+              "estadoNuevo": "cerrado"
+            },
+            {
               "id": "mppnho6yu20btepylu",
               "nota": "Se cierra el caso",
               "agente": "Oscar Piastri",
@@ -323,7 +331,7 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-28T15:31:18.586Z"
+          "actualizadoEn": "2026-05-28T15:31:38.606Z"
         },
         {
           "id": "116947",
@@ -497,7 +505,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T15:31:18.586Z"
+      "actualizadoEn": "2026-05-28T15:31:38.606Z"
     },
     {
       "id": "120874",
