@@ -88,6 +88,23 @@
       "notas": "Reprogramada desde 2026-05-29 09:00. Motivo: Cliente solicita mover la sesión para el sábado en la mañana a las diez",
       "creadoEn": "2026-05-28T00:51:43.500Z",
       "actualizadoEn": "2026-05-28T00:59:14.282Z"
+    },
+    {
+      "id": "1779933491436",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de soporte caso ciento dieciséis mil novecientos cuarenta y siete",
+      "proposito": "Agendamiento solicitado para soporte del caso",
+      "fecha": "2026-05-30",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-28T01:58:11.436Z"
     }
   ]
 }
