@@ -70,6 +70,23 @@
       "notas": "Cancelada: El cliente solicita cancelar la sesión de configuración de agente de inteligencia artificial en Webex Contact Center.",
       "creadoEn": "2026-05-27T17:49:31.853Z",
       "actualizadoEn": "2026-05-28T00:18:28.416Z"
+    },
+    {
+      "id": "1779929503500",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de caso de prueba",
+      "proposito": "Agendar sesión para avanzar en el caso de prueba",
+      "fecha": "2026-05-29",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-05-28T00:51:43.500Z"
     }
   ]
 }
