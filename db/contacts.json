@@ -431,13 +431,21 @@
               "fecha": "2026-05-28T00:48:12.807Z",
               "estadoAnterior": "abierto",
               "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779929528216",
+              "nota": "Sesión agendada para el viernes primero de junio de nueve a once de la mañana para avanzar en el caso de prueba.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T00:52:08.216Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-28T00:48:12.807Z"
+          "actualizadoEn": "2026-05-28T00:52:08.216Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T00:48:12.807Z"
+      "actualizadoEn": "2026-05-28T00:52:08.216Z"
     },
     {
       "id": "120874",
