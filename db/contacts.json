@@ -493,10 +493,28 @@
             }
           ],
           "actualizadoEn": "2026-05-28T15:51:31.246Z"
+        },
+        {
+          "id": "150221",
+          "numero": "150221",
+          "nombre": "Solicitud de integración Webex Contact Center con sistema CRM personalizado",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T15:54:43.005Z",
+          "actualizaciones": [
+            {
+              "id": "1779983683005",
+              "nota": "El cliente solicita información y apoyo para integrar Webex Contact Center con su sistema CRM personalizado desarrollado internamente. Requiere orientación técnica sobre APIs, conectores y mejores prácticas para la integración.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T15:54:43.005Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:54:43.005Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T15:51:31.246Z"
+      "actualizadoEn": "2026-05-28T15:54:43.005Z"
     },
     {
       "id": "120874",
