@@ -20,7 +20,15 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1779987313723",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se agendó sesión de integración Webex AI Agent con sistema hospitalario para el veintiocho de mayo de dos mil veintiséis a las once cincuenta y nueve de la mañana. No se requirió soporte adicional.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-28T16:55:13.723Z"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -60,7 +68,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T16:50:30.593Z"
+      "actualizadoEn": "2026-05-28T16:55:13.723Z"
     },
     {
       "id": "120874",
