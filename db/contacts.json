@@ -472,9 +472,17 @@
           "id": "848518",
           "numero": "848518",
           "nombre": "Solicitud de integración Webex Contact Center con CDMS Penus CDM",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-05-28T15:50:01.593Z",
           "actualizaciones": [
+            {
+              "id": "mppo7nvy5ajh1dr6yu8",
+              "nota": "Se cierra el caso porque se equivocó en la razón de abrir el caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T15:51:31.246Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1779983401593",
               "nota": "El cliente Jose Linero solicita apoyo para la configuración de integración entre Webex Contact Center y su sistema CDMS Penus CDM. Requiere orientación técnica para conectar ambas plataformas y automatizar flujos de información.",
@@ -484,11 +492,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-28T15:50:01.593Z"
+          "actualizadoEn": "2026-05-28T15:51:31.246Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T15:50:01.593Z"
+      "actualizadoEn": "2026-05-28T15:51:31.246Z"
     },
     {
       "id": "120874",
