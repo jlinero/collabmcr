@@ -428,9 +428,17 @@
           "id": "896344",
           "numero": "896344",
           "nombre": "Caso de prueba",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-05-28T00:47:44.583Z",
           "actualizaciones": [
+            {
+              "id": "mpos5c07ajf2701wybo",
+              "nota": "Se cierra el caso después de realizar la visita",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T00:53:54.823Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mpory03rd7pwxqwrk1g",
               "nota": "Es necesario agendar una sesión con el cliente",
@@ -448,11 +456,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-05-28T00:52:08.216Z"
+          "actualizadoEn": "2026-05-28T00:53:54.823Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T00:52:33.899Z"
+      "actualizadoEn": "2026-05-28T00:53:54.823Z"
     },
     {
       "id": "120874",
