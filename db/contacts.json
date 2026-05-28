@@ -627,8 +627,8 @@
       "dominioEmpresa": "cisco.com",
       "telEmpresa": "",
       "ciudad": "BogotÃColombia",
-      "etapaVida": "nuevo",
-      "estadoLead": "Nuevo",
+      "etapaVida": "cliente",
+      "estadoLead": "Conectado",
       "propietarioContacto": "",
       "zonaHoraria": "America/Bogota",
       "objetivoMarketing": "",
@@ -639,7 +639,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-24T02:27:05.759Z",
-      "actualizadoEn": "2026-04-24T02:27:05.759Z"
+      "actualizadoEn": "2026-05-28T01:01:51.054Z"
     },
     {
       "id": "123123",
