@@ -292,6 +292,66 @@
       ],
       "tickets": [
         {
+          "id": "809480",
+          "numero": "809480",
+          "nombre": "Soporte paso a paso configuración agente IA Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T15:27:11.903Z",
+          "actualizaciones": [
+            {
+              "id": "1779982031903",
+              "nota": "Cliente solicita ayuda detallada para configurar el agente de inteligencia artificial en Webex Contact Center.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T15:27:11.903Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:27:11.903Z"
+        },
+        {
+          "id": "116947",
+          "numero": "116947",
+          "nombre": "Soporte paso a paso para configuración de inteligencia artificial en Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-05-28T01:47:33.582Z",
+          "actualizaciones": [
+            {
+              "id": "mppnaawnc7dmly68bs5",
+              "nota": "Se cierra el caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T15:25:34.775Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mpou4m3k0dh01l9vt09q",
+              "nota": "Se puede ayudar al cliente sin problema en este caso, por favor agendar una sesión con el",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-28T01:49:20.480Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1779932853582",
+              "nota": "El cliente solicita ayuda detallada y paso a paso para la configuración de las funciones de inteligencia artificial en Webex Contact Center. Requiere acompañamiento especializado en la configuración para su equipo.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T01:47:33.582Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1779932890075",
+              "nota": "El cliente solicita apoyo urgente para la configuración de inteligencia artificial en Webex Contact Center, requiere que el sistema esté funcionando lo antes posible.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T01:48:10.075Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "abierto"
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:25:34.775Z"
+        },
+        {
           "id": "896344",
           "numero": "896344",
           "nombre": "Caso de prueba",
@@ -418,92 +478,6 @@
             }
           ],
           "actualizadoEn": "2026-05-27T21:20:42.264Z"
-        },
-        {
-          "id": "233853",
-          "numero": "233853",
-          "nombre": "Caso de prueba",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T20:42:24.743Z",
-          "actualizaciones": [
-            {
-              "id": "mpojblnbpnslnrf5xp",
-              "nota": "Se cierra el caso",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T20:46:50.711Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpoj9xt87novw73ql6",
-              "nota": "Se revisa el caso",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T20:45:33.164Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            }
-          ],
-          "actualizadoEn": "2026-05-27T20:46:50.711Z"
-        },
-        {
-          "id": "116947",
-          "numero": "116947",
-          "nombre": "Soporte paso a paso para configuración de inteligencia artificial en Webex Contact Center",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-28T01:47:33.582Z",
-          "actualizaciones": [
-            {
-              "id": "mppnaawnc7dmly68bs5",
-              "nota": "Se cierra el caso",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-05-28T15:25:34.775Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "mpou4m3k0dh01l9vt09q",
-              "nota": "Se puede ayudar al cliente sin problema en este caso, por favor agendar una sesión con el",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-28T01:49:20.480Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1779932853582",
-              "nota": "El cliente solicita ayuda detallada y paso a paso para la configuración de las funciones de inteligencia artificial en Webex Contact Center. Requiere acompañamiento especializado en la configuración para su equipo.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-28T01:47:33.582Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1779932890075",
-              "nota": "El cliente solicita apoyo urgente para la configuración de inteligencia artificial en Webex Contact Center, requiere que el sistema esté funcionando lo antes posible.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-28T01:48:10.075Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "abierto"
-            }
-          ],
-          "actualizadoEn": "2026-05-28T15:25:34.775Z"
-        },
-        {
-          "id": "809480",
-          "numero": "809480",
-          "nombre": "Soporte paso a paso configuración agente IA Webex Contact Center",
-          "estado": "abierto",
-          "creadoEn": "2026-05-28T15:27:11.903Z",
-          "actualizaciones": [
-            {
-              "id": "1779982031903",
-              "nota": "Cliente solicita ayuda detallada para configurar el agente de inteligencia artificial en Webex Contact Center.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-28T15:27:11.903Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-28T15:27:11.903Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
