@@ -479,10 +479,28 @@
             }
           ],
           "actualizadoEn": "2026-05-28T15:25:34.775Z"
+        },
+        {
+          "id": "809480",
+          "numero": "809480",
+          "nombre": "Soporte paso a paso configuración agente IA Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T15:27:11.903Z",
+          "actualizaciones": [
+            {
+              "id": "1779982031903",
+              "nota": "Cliente solicita ayuda detallada para configurar el agente de inteligencia artificial en Webex Contact Center.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T15:27:11.903Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:27:11.903Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T15:25:34.775Z"
+      "actualizadoEn": "2026-05-28T15:27:11.903Z"
     },
     {
       "id": "120874",
