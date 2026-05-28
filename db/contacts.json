@@ -421,13 +421,23 @@
           "id": "896344",
           "numero": "896344",
           "nombre": "Caso de prueba",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-28T00:47:44.583Z",
-          "actualizaciones": []
+          "actualizaciones": [
+            {
+              "id": "mpory03rd7pwxqwrk1g",
+              "nota": "Es necesario agendar una sesión con el cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-05-28T00:48:12.807Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            }
+          ],
+          "actualizadoEn": "2026-05-28T00:48:12.807Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T00:18:56.709Z"
+      "actualizadoEn": "2026-05-28T00:48:12.807Z"
     },
     {
       "id": "120874",
