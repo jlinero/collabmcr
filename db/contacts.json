@@ -48,6 +48,14 @@
           "creadoEn": "2026-05-28T17:17:25.269Z",
           "actualizaciones": [
             {
+              "id": "mpprkxxp03fh3qu968p4",
+              "nota": "Ya se aclaró con el cliente la integración.",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T17:25:49.645Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mpprcgpqar8yn1qs43m",
               "nota": "Se puede revisar esta integración, por favor agendar una sesión con el cliente.",
               "agente": "Oscar Piastri",
@@ -64,11 +72,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-28T17:19:14.078Z"
+          "actualizadoEn": "2026-05-28T17:25:49.645Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T17:23:12.521Z"
+      "actualizadoEn": "2026-05-28T17:25:49.645Z"
     },
     {
       "id": "120874",
