@@ -430,10 +430,28 @@
             }
           ],
           "actualizadoEn": "2026-05-27T20:46:50.711Z"
+        },
+        {
+          "id": "116947",
+          "numero": "116947",
+          "nombre": "Soporte paso a paso para configuración de inteligencia artificial en Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T01:47:33.582Z",
+          "actualizaciones": [
+            {
+              "id": "1779932853582",
+              "nota": "El cliente solicita ayuda detallada y paso a paso para la configuración de las funciones de inteligencia artificial en Webex Contact Center. Requiere acompañamiento especializado en la configuración para su equipo.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T01:47:33.582Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T01:47:33.582Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T00:59:36.763Z"
+      "actualizadoEn": "2026-05-28T01:47:33.582Z"
     },
     {
       "id": "120874",
