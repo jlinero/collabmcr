@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779983710587",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se abrió un caso de integración de Webex Contact Center con sistema CRM personalizado y se brindó información sobre beneficios e integración.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-28T15:55:10.587Z"
+        },
+        {
           "id": "1779982929864",
           "tipo": "llamada",
           "descripcion": "Sentimiento neutral. Se abrió un caso de soporte por falla de login en la interfaz de agente de Webex Contact Center.",
@@ -514,7 +521,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T15:54:43.005Z"
+      "actualizadoEn": "2026-05-28T15:55:10.587Z"
     },
     {
       "id": "120874",
