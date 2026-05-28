@@ -527,9 +527,17 @@
           "id": "273628",
           "numero": "273628",
           "nombre": "Solicitud de integración Webex Contact Center con sistema hospitalario y Excel",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-05-28T16:29:44.480Z",
           "actualizaciones": [
+            {
+              "id": "mpppn8asolyos7l8aid",
+              "nota": "Por favor agendar una sesión con el cliente para entender los detalles de lo que tiene hoy en día y asesorarlo con lo que debe tener en cuenta para la integración",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T16:31:37.156Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1779985784480",
               "nota": "El cliente solicita revisar en detalle la integración de Webex Contact Center con su sistema hospitalario y Excel para automatizar el proceso de agendamiento y gestión de citas usando IA.",
@@ -539,11 +547,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-28T16:29:44.480Z"
+          "actualizadoEn": "2026-05-28T16:31:37.156Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T16:30:17.543Z"
+      "actualizadoEn": "2026-05-28T16:31:37.156Z"
     },
     {
       "id": "120874",
