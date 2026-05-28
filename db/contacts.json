@@ -299,6 +299,42 @@
       ],
       "tickets": [
         {
+          "id": "942338",
+          "numero": "942338",
+          "nombre": "Problema de login de agentes en Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T15:40:42.740Z",
+          "actualizaciones": [
+            {
+              "id": "1779982842740",
+              "nota": "Los agentes no pueden iniciar sesión en la interfaz de agente de Webex Contact Center. Se requiere revisión técnica para restaurar el acceso.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T15:40:42.740Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:40:42.740Z"
+        },
+        {
+          "id": "554127",
+          "numero": "554127",
+          "nombre": "Falla de login en interfaz de agente Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T15:41:35.778Z",
+          "actualizaciones": [
+            {
+              "id": "1779982895778",
+              "nota": "Los agentes no pueden iniciar sesión en la interfaz de Webex Contact Center. Se requiere soporte técnico para revisar el acceso y restaurar la funcionalidad.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T15:41:35.778Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T15:41:35.778Z"
+        },
+        {
           "id": "809480",
           "numero": "809480",
           "nombre": "Soporte paso a paso configuración agente IA Webex Contact Center",
@@ -483,68 +519,6 @@
             }
           ],
           "actualizadoEn": "2026-05-27T21:21:05.843Z"
-        },
-        {
-          "id": "152500",
-          "numero": "152500",
-          "nombre": "Asesoría configuración agente de inteligencia artificial Webex",
-          "estado": "cerrado",
-          "creadoEn": "2026-05-27T21:15:38.524Z",
-          "actualizaciones": [
-            {
-              "id": "mpokj57ck9kcvbq14mc",
-              "nota": "Se cierra el caos",
-              "agente": "Lando Norris",
-              "fecha": "2026-05-27T21:20:42.264Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1779916538524",
-              "nota": "El cliente solicita asesoría para verificar si la configuración de su agente de inteligencia artificial en Webex Contact Center está correcta. Requiere orientación técnica para validar y ajustar la configuración según sea necesario.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-27T21:15:38.524Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-27T21:20:42.264Z"
-        },
-        {
-          "id": "942338",
-          "numero": "942338",
-          "nombre": "Problema de login de agentes en Webex Contact Center",
-          "estado": "abierto",
-          "creadoEn": "2026-05-28T15:40:42.740Z",
-          "actualizaciones": [
-            {
-              "id": "1779982842740",
-              "nota": "Los agentes no pueden iniciar sesión en la interfaz de agente de Webex Contact Center. Se requiere revisión técnica para restaurar el acceso.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-28T15:40:42.740Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-28T15:40:42.740Z"
-        },
-        {
-          "id": "554127",
-          "numero": "554127",
-          "nombre": "Falla de login en interfaz de agente Webex Contact Center",
-          "estado": "abierto",
-          "creadoEn": "2026-05-28T15:41:35.778Z",
-          "actualizaciones": [
-            {
-              "id": "1779982895778",
-              "nota": "Los agentes no pueden iniciar sesión en la interfaz de Webex Contact Center. Se requiere soporte técnico para revisar el acceso y restaurar la funcionalidad.",
-              "agente": "AI Agent",
-              "fecha": "2026-05-28T15:41:35.778Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-05-28T15:41:35.778Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
