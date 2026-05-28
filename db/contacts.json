@@ -31,9 +31,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "139408",
+          "numero": "139408",
+          "nombre": "Solicitud de explicación sobre integración de sistema hospitalario de agendamiento con Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T17:17:25.269Z",
+          "actualizaciones": [
+            {
+              "id": "1779988645269",
+              "nota": "El cliente solicita una guía paso a paso para integrar su sistema hospitalario de agendamiento con Webex Contact Center usando inteligencia artificial. Requiere detalles técnicos sobre APIs, conectores y configuración de flujos simplificados. Atención prioritaria por tratarse de una empresa de salud.",
+              "agente": "AI Agent",
+              "fecha": "2026-05-28T17:17:25.269Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-05-28T17:17:25.269Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T16:36:54.372Z"
+      "actualizadoEn": "2026-05-28T17:17:25.269Z"
     },
     {
       "id": "120874",
