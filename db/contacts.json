@@ -20,7 +20,15 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1779988992521",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se agendó sesión de integración hospitalaria con Webex Contact Center para el cliente Jose Linero el veintiocho de mayo de doce veintisiete a dos veintisiete de la tarde.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-28T17:23:12.521Z"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -60,7 +68,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T17:19:14.078Z"
+      "actualizadoEn": "2026-05-28T17:23:12.521Z"
     },
     {
       "id": "120874",
