@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1779933514747",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se agendó una sesión de soporte para el caso ciento dieciséis mil novecientos cuarenta y siete el sábado treinta de mayo de una a tres de la tarde.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-05-28T01:58:34.747Z"
+        },
+        {
           "id": "1779929976763",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral, reprograma sesión del viernes primero de junio para el sábado treinta de mayo de diez a doce del mediodía.",
@@ -467,7 +474,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T01:49:20.480Z"
+      "actualizadoEn": "2026-05-28T01:58:34.747Z"
     },
     {
       "id": "120874",
