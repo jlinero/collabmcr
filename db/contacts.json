@@ -48,6 +48,14 @@
           "creadoEn": "2026-05-28T16:48:17.351Z",
           "actualizaciones": [
             {
+              "id": "mppqkm3rk3x4os7oa29",
+              "nota": "Ya se aclararon las dudas con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-05-28T16:57:34.695Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mppqbiv5bbsu8ff5v67",
               "nota": "Ya tenemos casos de integraciones con sistemas hospitalarios y con Microsoft 365, en específico con Excel, por favor agendar una sesión con el cliente para revisar los detalles",
               "agente": "Oscar Piastri",
@@ -64,11 +72,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-05-28T16:50:30.593Z"
+          "actualizadoEn": "2026-05-28T16:57:34.695Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-28T16:55:13.723Z"
+      "actualizadoEn": "2026-05-28T16:57:34.695Z"
     },
     {
       "id": "120874",
