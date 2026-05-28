@@ -83,11 +83,11 @@
       "horaInicio": "10:00",
       "horaFin": "12:00",
       "duracion": 120,
-      "estado": "reprogramada",
+      "estado": "cancelada",
       "agente": "",
       "notas": "Reprogramada desde 2026-05-29 09:00. Motivo: Cliente solicita mover la sesión para el sábado en la mañana a las diez",
       "creadoEn": "2026-05-28T00:51:43.500Z",
-      "actualizadoEn": "2026-05-28T00:59:14.282Z"
+      "actualizadoEn": "2026-05-28T15:32:47.501Z"
     },
     {
       "id": "1779933491436",
