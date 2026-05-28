@@ -416,6 +416,14 @@
             }
           ],
           "actualizadoEn": "2026-05-27T20:18:17.358Z"
+        },
+        {
+          "id": "896344",
+          "numero": "896344",
+          "nombre": "Caso de prueba",
+          "estado": "abierto",
+          "creadoEn": "2026-05-28T00:47:44.583Z",
+          "actualizaciones": []
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
