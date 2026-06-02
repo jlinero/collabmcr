@@ -20,7 +20,15 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1780442349908",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento negativo. Se abrió y actualizó un caso por llamadas entrecortadas en Webex Collins solicitando prioridad máxima.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-06-02T23:19:09.908Z"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -60,7 +68,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-02T23:18:44.160Z"
+      "actualizadoEn": "2026-06-02T23:19:09.908Z"
     },
     {
       "id": "120874",
