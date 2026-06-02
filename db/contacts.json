@@ -36,7 +36,7 @@
           "id": "976930",
           "numero": "976930",
           "nombre": "Llamadas entrecortadas en Webex Collins",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-06-02T23:18:10.352Z",
           "actualizaciones": [
             {
@@ -46,13 +46,21 @@
               "fecha": "2026-06-02T23:18:10.352Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1780442324160",
+              "nota": "Solicito que el caso tenga la prioridad más alta posible para resolver el problema de llamadas entrecortadas en Webex Collins.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-02T23:18:44.160Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-06-02T23:18:10.352Z"
+          "actualizadoEn": "2026-06-02T23:18:44.160Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-02T23:18:10.352Z"
+      "actualizadoEn": "2026-06-02T23:18:44.160Z"
     },
     {
       "id": "120874",
