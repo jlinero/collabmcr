@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mq9p3cdaoewrzqbpjw",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 · Estado: en curso",
+          "fecha": "2026-06-11T16:11:32.830Z"
+        },
+        {
           "id": "1780442349908",
           "tipo": "llamada",
           "descripcion": "Sentimiento negativo. Se abrió y actualizó un caso por llamadas entrecortadas en Webex Collins solicitando prioridad máxima.",
@@ -68,7 +74,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-02T23:19:09.908Z"
+      "actualizadoEn": "2026-06-11T16:11:32.830Z"
     },
     {
       "id": "120874",
