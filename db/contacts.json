@@ -116,6 +116,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mqb015okrxbuf8ys4xq",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +576023981001 · Estado: en curso",
+          "fecha": "2026-06-12T14:05:32.804Z"
+        },
+        {
           "id": "mqazruy1mi116jeyh68",
           "tipo": "llamada",
           "descripcion": "Llamada entrante desde +576023981001 · Estado: en curso",
@@ -125,7 +131,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-06-12T13:58:18.986Z"
+      "actualizadoEn": "2026-06-12T14:05:32.804Z"
     },
     {
       "id": "141414",
