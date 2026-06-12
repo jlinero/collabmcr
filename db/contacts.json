@@ -114,11 +114,18 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "mqazruy1mi116jeyh68",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +576023981001 · Estado: en curso",
+          "fecha": "2026-06-12T13:58:18.986Z"
+        }
+      ],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-04-23T22:52:49.024Z"
+      "actualizadoEn": "2026-06-12T13:58:18.986Z"
     },
     {
       "id": "141414",
