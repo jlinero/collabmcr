@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mqb2fa8qpgk6yxftcw",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 · Estado: en curso",
+          "fecha": "2026-06-12T15:12:31.132Z"
+        },
+        {
           "id": "mqatf4lcf9xnhtrohb7",
           "tipo": "llamada",
           "descripcion": "Llamada entrante desde +573102634216 · Estado: en curso",
@@ -92,7 +98,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-12T11:00:27.264Z"
+      "actualizadoEn": "2026-06-12T15:12:31.133Z"
     },
     {
       "id": "120874",
