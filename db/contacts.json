@@ -129,10 +129,28 @@
             }
           ],
           "actualizadoEn": "2026-06-18T18:36:54.245Z"
+        },
+        {
+          "id": "799562",
+          "numero": "799562",
+          "nombre": "Ayuda con configuración de Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-06-18T19:08:27.059Z",
+          "actualizaciones": [
+            {
+              "id": "1781809707059",
+              "nota": "Cliente solicita ayuda en la configuración de Webex Contact Center (WxCC). Requiere asistencia para configuración.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-18T19:08:27.059Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-06-18T19:08:27.059Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-18T18:36:54.245Z"
+      "actualizadoEn": "2026-06-18T19:08:27.059Z"
     },
     {
       "id": "120874",
