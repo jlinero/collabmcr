@@ -141,9 +141,17 @@
           "id": "799562",
           "numero": "799562",
           "nombre": "Ayuda con configuración de Webex Contact Center",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-06-18T19:08:27.059Z",
           "actualizaciones": [
+            {
+              "id": "mqjwdogej28a1w7e2el",
+              "nota": "Se cierra el caso, problema solucionado",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-18T19:33:14.126Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mqjw55uasf37johgl0k",
               "nota": "Agendar sesión con el cliente",
@@ -177,11 +185,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-06-18T19:26:36.754Z"
+          "actualizadoEn": "2026-06-18T19:33:14.126Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-18T19:26:36.754Z"
+      "actualizadoEn": "2026-06-18T19:33:14.126Z"
     },
     {
       "id": "120874",
