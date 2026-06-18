@@ -145,6 +145,14 @@
           "creadoEn": "2026-06-18T19:08:27.059Z",
           "actualizaciones": [
             {
+              "id": "mqjw55uasf37johgl0k",
+              "nota": "Agendar sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-18T19:26:36.754Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "mqjvj5q50ggnzxhn9o1g",
               "nota": "Por favor confirmar que ayuda necesita el cliente, si es necesario agendar una cita con el cliente",
               "agente": "Lando Norris",
@@ -169,11 +177,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-06-18T19:23:43.726Z"
+          "actualizadoEn": "2026-06-18T19:26:36.754Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-18T19:24:10.104Z"
+      "actualizadoEn": "2026-06-18T19:26:36.754Z"
     },
     {
       "id": "120874",
