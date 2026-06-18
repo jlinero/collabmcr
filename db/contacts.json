@@ -103,10 +103,28 @@
             }
           ],
           "actualizadoEn": "2026-06-18T17:28:43.505Z"
+        },
+        {
+          "id": "278816",
+          "numero": "278816",
+          "nombre": "Problemas de audio en Webex Calling",
+          "estado": "abierto",
+          "creadoEn": "2026-06-18T18:33:32.617Z",
+          "actualizaciones": [
+            {
+              "id": "1781807612617",
+              "nota": "El cliente reporta que las llamadas no se escuchan bien en Webex Calling.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-18T18:33:32.617Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-06-18T18:33:32.617Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-18T17:28:43.505Z"
+      "actualizadoEn": "2026-06-18T18:33:32.617Z"
     },
     {
       "id": "120874",
