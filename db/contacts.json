@@ -108,7 +108,7 @@
           "id": "278816",
           "numero": "278816",
           "nombre": "Problemas de audio en Webex Calling",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-06-18T18:33:32.617Z",
           "actualizaciones": [
             {
@@ -118,13 +118,21 @@
               "fecha": "2026-06-18T18:33:32.617Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1781807814245",
+              "nota": "Ya se solucionó el problema.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-18T18:36:54.245Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
             }
           ],
-          "actualizadoEn": "2026-06-18T18:33:32.617Z"
+          "actualizadoEn": "2026-06-18T18:36:54.245Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-18T18:33:32.617Z"
+      "actualizadoEn": "2026-06-18T18:36:54.245Z"
     },
     {
       "id": "120874",
