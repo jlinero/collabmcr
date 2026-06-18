@@ -74,9 +74,17 @@
           "id": "976930",
           "numero": "976930",
           "nombre": "Llamadas entrecortadas en Webex Collins",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-06-02T23:18:10.352Z",
           "actualizaciones": [
+            {
+              "id": "mqjrxk35l0w56c8ypve",
+              "nota": "Se cierra esta caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-18T17:28:43.505Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1780442290352",
               "nota": "El cliente reporta que las llamadas se escuchan entrecortadas en el servicio de Webex Collins. Solicita atención prioritaria para resolver el problema.",
@@ -94,11 +102,11 @@
               "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-06-02T23:18:44.160Z"
+          "actualizadoEn": "2026-06-18T17:28:43.505Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-12T15:12:31.133Z"
+      "actualizadoEn": "2026-06-18T17:28:43.505Z"
     },
     {
       "id": "120874",
