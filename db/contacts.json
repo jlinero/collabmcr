@@ -152,13 +152,21 @@
               "fecha": "2026-06-18T19:08:27.059Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1781810623726",
+              "nota": "El cliente reporta problemas con el inicio de sesión de los agentes en la interfaz de agente de Webex Contact Center.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-18T19:23:43.726Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-06-18T19:09:30.173Z"
+          "actualizadoEn": "2026-06-18T19:23:43.726Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-18T19:09:30.173Z"
+      "actualizadoEn": "2026-06-18T19:23:43.726Z"
     },
     {
       "id": "120874",
