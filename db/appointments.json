@@ -1,1 +1,39 @@
-{"appointments":[{"id":"1782482424396","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Sesión de instalación y configuración","proposito":"Sesión relacionada con el caso 962230","fecha":"2026-06-27","horaInicio":"08:00","horaFin":"10:00","duracion":120,"estado":"reprogramada","agente":"","notas":"","creadoEn":"2026-06-26T14:00:24.396Z","actualizadoEn":"2026-06-26T14:01:21.155Z"}]}
+{
+  "appointments": [
+    {
+      "id": "1782482424396",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de instalación y configuración",
+      "proposito": "Sesión relacionada con el caso 962230",
+      "fecha": "2026-06-27",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "reprogramada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-06-26T14:00:24.396Z",
+      "actualizadoEn": "2026-06-26T14:01:21.155Z"
+    },
+    {
+      "id": "1782488756651",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de instalación y configuración para caso 962230",
+      "proposito": "Seguimiento del caso 962230",
+      "fecha": "2026-06-26",
+      "horaInicio": "10:50",
+      "horaFin": "12:50",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-06-26T15:45:56.651Z"
+    }
+  ]
+}
