@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mqv4dzt3narczg6stn",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
+          "fecha": "2026-06-26T16:02:53.703Z"
+        },
+        {
           "id": "mqv3wl8nedzdazge15n",
           "tipo": "llamada",
           "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
@@ -163,7 +169,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T15:49:21.671Z"
+      "actualizadoEn": "2026-06-26T16:02:53.703Z"
     },
     {
       "id": "120874",
