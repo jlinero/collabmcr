@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1782474714163",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se identificó al cliente José Linero. Se agendó una sesión para el viernes veintiséis de junio de dos mil veintiséis de ocho de la mañana a diez de la mañana para atender el caso abierto.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-06-26T11:51:54.163Z"
+        },
+        {
           "id": "1782474281190",
           "tipo": "llamada",
           "descripcion": "Sentimiento neutral. Se identificó al cliente José Linero. Se explicó un resumen de beneficios de inteligencia artificial para el sector financiero en Webex Contact Center. Se abrió el caso 181080 para asesoría sobre agente de inteligencia artificial aplicado a consultas de estado de crédito y autoservicio.",
@@ -222,7 +229,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T11:45:56.956Z"
+      "actualizadoEn": "2026-06-26T11:51:54.163Z"
     },
     {
       "id": "120874",
