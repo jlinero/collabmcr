@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1782481096331",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento del cliente: positivo. Acciones tomadas: se brindó información sobre beneficios y casos de uso de WxCC para sector financiero, se resumió la información solicitada y se agendó la sesión 'Asesoría comercial para adquirir WxCC' para 2026-06-26 de 08:41 a 10:41.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-06-26T13:38:16.331Z"
+        },
+        {
           "id": "mquyrfy2vjhhem83r77",
           "tipo": "llamada",
           "descripcion": "Llamada entrante desde +573102634216 · Estado: en curso",
@@ -40,7 +47,7 @@
       ],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T13:25:23.450Z"
+      "actualizadoEn": "2026-06-26T13:38:16.331Z"
     },
     {
       "id": "120874",
