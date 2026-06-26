@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1782482197028",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento: Neutral. Se identificó al cliente Jose Linero. Se creó un caso de soporte para asesoría sobre beneficios de Webex Contact Center para entidad financiera. Ticket creado: 962230.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-06-26T13:56:37.028Z"
+        },
+        {
           "id": "mquzi69m2pixw3fap12",
           "tipo": "llamada",
           "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
@@ -122,7 +129,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T13:56:09.663Z"
+      "actualizadoEn": "2026-06-26T13:56:37.028Z"
     },
     {
       "id": "120874",
