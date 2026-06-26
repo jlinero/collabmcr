@@ -1,1 +1,21 @@
-{"appointments":[]}
+{
+  "appointments": [
+    {
+      "id": "1782474687037",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión para caso abierto de soporte",
+      "proposito": "Atención del caso abierto",
+      "fecha": "2026-06-26",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-06-26T11:51:27.037Z"
+    }
+  ]
+}
