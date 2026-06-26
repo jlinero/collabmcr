@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mqv039k5j3rf7mcpwj",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
+          "fecha": "2026-06-26T14:02:34.661Z"
+        },
+        {
           "id": "1782482453286",
           "tipo": "llamada",
           "descripcion": "Sentimiento del cliente: neutral. Acciones tomadas: se identificó al cliente Jose Linero, se consultó disponibilidad y se agendó una sesión de instalación y configuración para el 2026-06-26 de 09:04 a 11:04, relacionada con el caso 962230.",
@@ -136,7 +142,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T14:00:53.286Z"
+      "actualizadoEn": "2026-06-26T14:02:34.661Z"
     },
     {
       "id": "120874",
