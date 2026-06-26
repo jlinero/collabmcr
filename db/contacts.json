@@ -1,1 +1,393 @@
-{"contacts":[{"id":"123456","nombre":"Jose","apellido":"Linero","cargo":"Senior Collaboration SE","email":"jlinero@cisco.com","email2":"","telefono":"+573102634216","empresa":"Cisco","dominioEmpresa":"","telEmpresa":"+576013256052","ciudad":"Bogot, Colombia","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[{"id":"1782474714163","tipo":"llamada","descripcion":"Sentimiento neutral. Se identificó al cliente José Linero. Se agendó una sesión para el viernes veintiséis de junio de dos mil veintiséis de ocho de la mañana a diez de la mañana para atender el caso abierto.","asignadoA":"Asistente virtual","fecha":"2026-06-26T11:51:54.163Z"},{"id":"1782474281190","tipo":"llamada","descripcion":"Sentimiento neutral. Se identificó al cliente José Linero. Se explicó un resumen de beneficios de inteligencia artificial para el sector financiero en Webex Contact Center. Se abrió el caso 181080 para asesoría sobre agente de inteligencia artificial aplicado a consultas de estado de crédito y autoservicio.","asignadoA":"Asistente virtual","fecha":"2026-06-26T11:44:41.190Z"},{"id":"1781810650104","tipo":"llamada","descripcion":"Sentimiento neutral. Se identificó al cliente José Linero. Se revisó que tenía un ticket activo en progreso sobre Webex Contact Center y se actualizó el caso 799562 con una nota indicando problemas con el inicio de sesión de los agentes en la interfaz de agente.","asignadoA":"Asistente virtual","fecha":"2026-06-18T19:24:10.104Z"},{"id":"mqb2fa8qpgk6yxftcw","tipo":"llamada","descripcion":"Llamada entrante desde +573102634216 · Estado: en curso","fecha":"2026-06-12T15:12:31.132Z"},{"id":"mqatf4lcf9xnhtrohb7","tipo":"llamada","descripcion":"Llamada entrante desde +573102634216 · Estado: en curso","fecha":"2026-06-12T11:00:27.264Z"},{"id":"mq9rr24k22ybfs46a5y","tipo":"llamada","descripcion":"Llamada entrante desde +573102634216 · Estado: en curso","fecha":"2026-06-11T17:25:58.532Z"},{"id":"mq9pchymy5j8xvqeii","tipo":"llamada","descripcion":"Llamada entrante desde +573102634216 · Estado: en curso","fecha":"2026-06-11T16:18:39.982Z"},{"id":"mq9p3cdaoewrzqbpjw","tipo":"llamada","descripcion":"Llamada entrante desde +573102634216 · Estado: en curso","fecha":"2026-06-11T16:11:32.830Z"},{"id":"1780442349908","tipo":"llamada","descripcion":"Sentimiento negativo. Se abrió y actualizó un caso por llamadas entrecortadas en Webex Collins solicitando prioridad máxima.","asignadoA":"AI Agent","fecha":"2026-06-02T23:19:09.908Z"}],"deals":[{"id":"moc59bb1py0jkgv9x8","nombre":"Webex Calling","monto":"$20,000","fechaCierre":"Julio 30, 2026","etapa":"Calificado","creadoEn":"2026-04-24T00:00:12.925Z"}],"tickets":[{"id":"976930","numero":"976930","nombre":"Llamadas entrecortadas en Webex Collins","estado":"cerrado","creadoEn":"2026-06-02T23:18:10.352Z","actualizaciones":[{"id":"mqjrxk35l0w56c8ypve","nota":"Se cierra esta caso","agente":"Oscar Piastri","fecha":"2026-06-18T17:28:43.505Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"1780442290352","nota":"El cliente reporta que las llamadas se escuchan entrecortadas en el servicio de Webex Collins. Solicita atención prioritaria para resolver el problema.","agente":"AI Agent","fecha":"2026-06-02T23:18:10.352Z","estadoAnterior":"","estadoNuevo":""},{"id":"1780442324160","nota":"Solicito que el caso tenga la prioridad más alta posible para resolver el problema de llamadas entrecortadas en Webex Collins.","agente":"AI Agent","fecha":"2026-06-02T23:18:44.160Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"}],"actualizadoEn":"2026-06-18T17:28:43.505Z"},{"id":"278816","numero":"278816","nombre":"Problemas de audio en Webex Calling","estado":"cerrado","creadoEn":"2026-06-18T18:33:32.617Z","actualizaciones":[{"id":"1781807612617","nota":"El cliente reporta que las llamadas no se escuchan bien en Webex Calling.","agente":"AI Agent","fecha":"2026-06-18T18:33:32.617Z","estadoAnterior":"","estadoNuevo":""},{"id":"1781807814245","nota":"Ya se solucionó el problema.","agente":"AI Agent","fecha":"2026-06-18T18:36:54.245Z","estadoAnterior":"abierto","estadoNuevo":"cerrado"}],"actualizadoEn":"2026-06-18T18:36:54.245Z"},{"id":"799562","numero":"799562","nombre":"Ayuda con configuración de Webex Contact Center","estado":"cerrado","creadoEn":"2026-06-18T19:08:27.059Z","actualizaciones":[{"id":"mqjwdogej28a1w7e2el","nota":"Se cierra el caso, problema solucionado","agente":"Oscar Piastri","fecha":"2026-06-18T19:33:14.126Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mqjw55uasf37johgl0k","nota":"Agendar sesión con el cliente","agente":"Oscar Piastri","fecha":"2026-06-18T19:26:36.754Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"},{"id":"mqjvj5q50ggnzxhn9o1g","nota":"Por favor confirmar que ayuda necesita el cliente, si es necesario agendar una cita con el cliente","agente":"Lando Norris","fecha":"2026-06-18T19:09:30.173Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1781809707059","nota":"Cliente solicita ayuda en la configuración de Webex Contact Center (WxCC). Requiere asistencia para configuración.","agente":"AI Agent","fecha":"2026-06-18T19:08:27.059Z","estadoAnterior":"","estadoNuevo":""},{"id":"1781810623726","nota":"El cliente reporta problemas con el inicio de sesión de los agentes en la interfaz de agente de Webex Contact Center.","agente":"AI Agent","fecha":"2026-06-18T19:23:43.726Z","estadoAnterior":"en progreso","estadoNuevo":"en progreso"}],"actualizadoEn":"2026-06-18T19:33:14.126Z"},{"id":"181080","numero":"181080","nombre":"Asesoría sobre agente de inteligencia artificial para consultas de estado de crédito","estado":"cerrado","creadoEn":"2026-06-26T11:44:10.594Z","actualizaciones":[{"id":"1782474976534","nota":"El cliente indica que ya recibió la asesoría y solicita cerrar el caso.","agente":"cliente","fecha":"2026-06-26T11:56:16.534Z","estadoAnterior":"en progreso","estadoNuevo":"cerrado"},{"id":"mquv7k64gu5vtlnrn3d","nota":"Por favor agendar con el cliente una sesión para explicar cuales son los beneficios para el sector financiero de la solución de Webex Contact Center.","agente":"Oscar Piastri","fecha":"2026-06-26T11:45:56.956Z","estadoAnterior":"abierto","estadoNuevo":"en progreso"},{"id":"1782474250594","nota":"El cliente solicita asesoría sobre cómo el agente de inteligencia artificial puede optimizar procesos en el sector financiero, incluyendo consultas de estado de crédito y autoservicio.","agente":"AI Agent","fecha":"2026-06-26T11:44:10.594Z","estadoAnterior":"","estadoNuevo":""}],"actualizadoEn":"2026-06-26T11:56:16.534Z"}],"creadoEn":"2026-04-22T19:22:00.305Z","actualizadoEn":"2026-06-26T11:56:16.534Z"},{"id":"120874","nombre":"Jose","apellido":"Linero CollabMCR","cargo":"CEO","email":"jlinero@collab-col.wbx.ai","email2":"","telefono":"+576023981001","empresa":"CollabMCR Technology Corporation","dominioEmpresa":"collab-col.wbx.ai","telEmpresa":"6052","ciudad":"","etapaVida":"cliente","estadoLead":"En progreso","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[{"id":"mqb015okrxbuf8ys4xq","tipo":"llamada","descripcion":"Llamada entrante desde +576023981001 · Estado: en curso","fecha":"2026-06-12T14:05:32.804Z"},{"id":"mqazruy1mi116jeyh68","tipo":"llamada","descripcion":"Llamada entrante desde +576023981001 · Estado: en curso","fecha":"2026-06-12T13:58:18.986Z"}],"deals":[],"tickets":[],"creadoEn":"2026-04-23T15:56:43.723Z","actualizadoEn":"2026-06-12T14:05:32.804Z"},{"id":"141414","nombre":"Fernando","apellido":"Alonso","cargo":"Aston Martin F1 Driver","email":"falonso@collab-col.wbx.ai","email2":"","telefono":"+14087215957","empresa":"CollabMCR Technology Corporation","dominioEmpresa":"collab-col.wbx.ai","telEmpresa":"5957","ciudad":"Bogot, Colombia","etapaVida":"cliente","estadoLead":"Conectado","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:19:09.030Z","actualizadoEn":"2026-04-24T02:19:09.030Z"},{"id":"251226","nombre":"Genny","apellido":"Baron","cargo":"Collaboration AE","email":"genbaron@cisco.com","email2":"","telefono":"+573166904925","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:20:19.270Z","actualizadoEn":"2026-05-22T02:18:07.164Z"},{"id":"010101","nombre":"Daniel","apellido":"Tobar","cargo":"Solutions Engineer","email":"dtobar@cisco.com","email2":"","telefono":"+573132488767","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"BogotÃColombia","etapaVida":"cliente","estadoLead":"Nuevo","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:25:54.575Z","actualizadoEn":"2026-04-24T02:25:54.575Z"},{"id":"101010","nombre":"Javier","apellido":"Cuadros","cargo":"Solutions Engineer","email":"jcuadros@cisco.com","email2":"","telefono":"+573107741094","empresa":"Cisco","dominioEmpresa":"cisco.com","telEmpresa":"","ciudad":"BogotÃColombia","etapaVida":"cliente","estadoLead":"Conectado","propietarioContacto":"","zonaHoraria":"America/Bogota","objetivoMarketing":"","presupuesto":"","timeline":"","notas":"","actividades":[],"deals":[],"tickets":[],"creadoEn":"2026-04-24T02:27:05.759Z","actualizadoEn":"2026-05-28T01:01:51.054Z"}]}
+{
+  "contacts": [
+    {
+      "id": "123456",
+      "nombre": "Jose",
+      "apellido": "Linero",
+      "cargo": "Senior Collaboration SE",
+      "email": "jlinero@cisco.com",
+      "email2": "",
+      "telefono": "+573102634216",
+      "empresa": "Cisco",
+      "dominioEmpresa": "",
+      "telEmpresa": "+576013256052",
+      "ciudad": "Bogot, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [
+        {
+          "id": "1782475176594",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se cancelÃ³ la cita del 2026-06-26 de 08:00 a 10:00 por problema personal. No se requirieron acciones adicionales.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-06-26T11:59:36.594Z"
+        },
+        {
+          "id": "1782474714163",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se identificÃ³ al cliente JosÃ© Linero. Se agendÃ³ una sesiÃ³n para el viernes veintisÃ©is de junio de dos mil veintisÃ©is de ocho de la maÃ±ana a diez de la maÃ±ana para atender el caso abierto.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-06-26T11:51:54.163Z"
+        },
+        {
+          "id": "1782474281190",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se identificÃ³ al cliente JosÃ© Linero. Se explicÃ³ un resumen de beneficios de inteligencia artificial para el sector financiero en Webex Contact Center. Se abriÃ³ el caso 181080 para asesorÃ­a sobre agente de inteligencia artificial aplicado a consultas de estado de crÃ©dito y autoservicio.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-06-26T11:44:41.190Z"
+        },
+        {
+          "id": "1781810650104",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se identificÃ³ al cliente JosÃ© Linero. Se revisÃ³ que tenÃ­a un ticket activo en progreso sobre Webex Contact Center y se actualizÃ³ el caso 799562 con una nota indicando problemas con el inicio de sesiÃ³n de los agentes en la interfaz de agente.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-06-18T19:24:10.104Z"
+        },
+        {
+          "id": "mqb2fa8qpgk6yxftcw",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 Â· Estado: en curso",
+          "fecha": "2026-06-12T15:12:31.132Z"
+        },
+        {
+          "id": "mqatf4lcf9xnhtrohb7",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 Â· Estado: en curso",
+          "fecha": "2026-06-12T11:00:27.264Z"
+        },
+        {
+          "id": "mq9rr24k22ybfs46a5y",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 Â· Estado: en curso",
+          "fecha": "2026-06-11T17:25:58.532Z"
+        },
+        {
+          "id": "mq9pchymy5j8xvqeii",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 Â· Estado: en curso",
+          "fecha": "2026-06-11T16:18:39.982Z"
+        },
+        {
+          "id": "mq9p3cdaoewrzqbpjw",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 Â· Estado: en curso",
+          "fecha": "2026-06-11T16:11:32.830Z"
+        },
+        {
+          "id": "1780442349908",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento negativo. Se abriÃ³ y actualizÃ³ un caso por llamadas entrecortadas en Webex Collins solicitando prioridad mÃ¡xima.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-06-02T23:19:09.908Z"
+        }
+      ],
+      "deals": [
+        {
+          "id": "moc59bb1py0jkgv9x8",
+          "nombre": "Webex Calling",
+          "monto": "$20,000",
+          "fechaCierre": "Julio 30, 2026",
+          "etapa": "Calificado",
+          "creadoEn": "2026-04-24T00:00:12.925Z"
+        }
+      ],
+      "tickets": [
+        {
+          "id": "976930",
+          "numero": "976930",
+          "nombre": "Llamadas entrecortadas en Webex Collins",
+          "estado": "cerrado",
+          "creadoEn": "2026-06-02T23:18:10.352Z",
+          "actualizaciones": [
+            {
+              "id": "mqjrxk35l0w56c8ypve",
+              "nota": "Se cierra esta caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-18T17:28:43.505Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "1780442290352",
+              "nota": "El cliente reporta que las llamadas se escuchan entrecortadas en el servicio de Webex Collins. Solicita atenciÃ³n prioritaria para resolver el problema.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-02T23:18:10.352Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1780442324160",
+              "nota": "Solicito que el caso tenga la prioridad mÃ¡s alta posible para resolver el problema de llamadas entrecortadas en Webex Collins.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-02T23:18:44.160Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            }
+          ],
+          "actualizadoEn": "2026-06-18T17:28:43.505Z"
+        },
+        {
+          "id": "278816",
+          "numero": "278816",
+          "nombre": "Problemas de audio en Webex Calling",
+          "estado": "cerrado",
+          "creadoEn": "2026-06-18T18:33:32.617Z",
+          "actualizaciones": [
+            {
+              "id": "1781807612617",
+              "nota": "El cliente reporta que las llamadas no se escuchan bien en Webex Calling.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-18T18:33:32.617Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1781807814245",
+              "nota": "Ya se solucionÃ³ el problema.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-18T18:36:54.245Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            }
+          ],
+          "actualizadoEn": "2026-06-18T18:36:54.245Z"
+        },
+        {
+          "id": "799562",
+          "numero": "799562",
+          "nombre": "Ayuda con configuraciÃ³n de Webex Contact Center",
+          "estado": "cerrado",
+          "creadoEn": "2026-06-18T19:08:27.059Z",
+          "actualizaciones": [
+            {
+              "id": "mqjwdogej28a1w7e2el",
+              "nota": "Se cierra el caso, problema solucionado",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-18T19:33:14.126Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mqjw55uasf37johgl0k",
+              "nota": "Agendar sesiÃ³n con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-18T19:26:36.754Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "mqjvj5q50ggnzxhn9o1g",
+              "nota": "Por favor confirmar que ayuda necesita el cliente, si es necesario agendar una cita con el cliente",
+              "agente": "Lando Norris",
+              "fecha": "2026-06-18T19:09:30.173Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1781809707059",
+              "nota": "Cliente solicita ayuda en la configuraciÃ³n de Webex Contact Center (WxCC). Requiere asistencia para configuraciÃ³n.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-18T19:08:27.059Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            },
+            {
+              "id": "1781810623726",
+              "nota": "El cliente reporta problemas con el inicio de sesiÃ³n de los agentes en la interfaz de agente de Webex Contact Center.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-18T19:23:43.726Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            }
+          ],
+          "actualizadoEn": "2026-06-18T19:33:14.126Z"
+        },
+        {
+          "id": "181080",
+          "numero": "181080",
+          "nombre": "AsesorÃ­a sobre agente de inteligencia artificial para consultas de estado de crÃ©dito",
+          "estado": "cerrado",
+          "creadoEn": "2026-06-26T11:44:10.594Z",
+          "actualizaciones": [
+            {
+              "id": "1782474976534",
+              "nota": "El cliente indica que ya recibiÃ³ la asesorÃ­a y solicita cerrar el caso.",
+              "agente": "cliente",
+              "fecha": "2026-06-26T11:56:16.534Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
+            {
+              "id": "mquv7k64gu5vtlnrn3d",
+              "nota": "Por favor agendar con el cliente una sesiÃ³n para explicar cuales son los beneficios para el sector financiero de la soluciÃ³n de Webex Contact Center.",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-26T11:45:56.956Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1782474250594",
+              "nota": "El cliente solicita asesorÃ­a sobre cÃ³mo el agente de inteligencia artificial puede optimizar procesos en el sector financiero, incluyendo consultas de estado de crÃ©dito y autoservicio.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-26T11:44:10.594Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-06-26T11:56:16.534Z"
+        }
+      ],
+      "creadoEn": "2026-04-22T19:22:00.305Z",
+      "actualizadoEn": "2026-06-26T11:59:36.594Z"
+    },
+    {
+      "id": "120874",
+      "nombre": "Jose",
+      "apellido": "Linero CollabMCR",
+      "cargo": "CEO",
+      "email": "jlinero@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+576023981001",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "6052",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "En progreso",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [
+        {
+          "id": "mqb015okrxbuf8ys4xq",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +576023981001 Â· Estado: en curso",
+          "fecha": "2026-06-12T14:05:32.804Z"
+        },
+        {
+          "id": "mqazruy1mi116jeyh68",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +576023981001 Â· Estado: en curso",
+          "fecha": "2026-06-12T13:58:18.986Z"
+        }
+      ],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-23T15:56:43.723Z",
+      "actualizadoEn": "2026-06-12T14:05:32.804Z"
+    },
+    {
+      "id": "141414",
+      "nombre": "Fernando",
+      "apellido": "Alonso",
+      "cargo": "Aston Martin F1 Driver",
+      "email": "falonso@collab-col.wbx.ai",
+      "email2": "",
+      "telefono": "+14087215957",
+      "empresa": "CollabMCR Technology Corporation",
+      "dominioEmpresa": "collab-col.wbx.ai",
+      "telEmpresa": "5957",
+      "ciudad": "Bogot, Colombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Conectado",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:19:09.030Z",
+      "actualizadoEn": "2026-04-24T02:19:09.030Z"
+    },
+    {
+      "id": "251226",
+      "nombre": "Genny",
+      "apellido": "Baron",
+      "cargo": "Collaboration AE",
+      "email": "genbaron@cisco.com",
+      "email2": "",
+      "telefono": "+573166904925",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:20:19.270Z",
+      "actualizadoEn": "2026-05-22T02:18:07.164Z"
+    },
+    {
+      "id": "010101",
+      "nombre": "Daniel",
+      "apellido": "Tobar",
+      "cargo": "Solutions Engineer",
+      "email": "dtobar@cisco.com",
+      "email2": "",
+      "telefono": "+573132488767",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "BogotÃƒColombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Nuevo",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:25:54.575Z",
+      "actualizadoEn": "2026-04-24T02:25:54.575Z"
+    },
+    {
+      "id": "101010",
+      "nombre": "Javier",
+      "apellido": "Cuadros",
+      "cargo": "Solutions Engineer",
+      "email": "jcuadros@cisco.com",
+      "email2": "",
+      "telefono": "+573107741094",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "BogotÃƒColombia",
+      "etapaVida": "cliente",
+      "estadoLead": "Conectado",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/Bogota",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-04-24T02:27:05.759Z",
+      "actualizadoEn": "2026-05-28T01:01:51.054Z"
+    }
+  ]
+}
