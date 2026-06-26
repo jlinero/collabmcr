@@ -56,9 +56,17 @@
           "id": "177203",
           "numero": "177203",
           "nombre": "Asesoría para optimización de procesos en entidad financiera con WxCC e IA",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-06-26T13:45:03.942Z",
           "actualizaciones": [
+            {
+              "id": "mquzr7uf7zscgom0cms",
+              "nota": "Se hizo la asesoria, se cierra el caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-26T13:53:12.567Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mquznd9iplhmfdgcmki",
               "nota": "Se debe agendar una sesión con el cliente",
@@ -92,11 +100,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-06-26T13:50:12.966Z"
+          "actualizadoEn": "2026-06-26T13:53:12.567Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T13:50:12.966Z"
+      "actualizadoEn": "2026-06-26T13:53:12.567Z"
     },
     {
       "id": "120874",
