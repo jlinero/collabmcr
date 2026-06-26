@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1782488784398",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento: neutral. Acciones tomadas: se consultó el perfil del cliente, se revisó disponibilidad para hoy en la mañana y se agendó una sesión de instalación y configuración para el 2026-06-26 de 10:50 a 12:50 para seguimiento del caso 962230.",
+          "asignadoA": "Asistente virtual CollabMCR",
+          "fecha": "2026-06-26T15:46:24.398Z"
+        },
+        {
           "id": "mqv039k5j3rf7mcpwj",
           "tipo": "llamada",
           "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
@@ -150,7 +157,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T15:41:51.968Z"
+      "actualizadoEn": "2026-06-26T15:46:24.398Z"
     },
     {
       "id": "120874",
