@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mquvvvrkbe667s0ix6q",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 · Estado: en curso",
+          "fecha": "2026-06-26T12:04:51.728Z"
+        },
+        {
           "id": "1782475176594",
           "tipo": "llamada",
           "descripcion": "Sentimiento neutral. Se canceló la cita del 2026-06-26 de 08:00 a 10:00 por problema personal. No se requirieron acciones adicionales.",
@@ -244,7 +250,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T11:59:36.594Z"
+      "actualizadoEn": "2026-06-26T12:04:51.728Z"
     },
     {
       "id": "120874",
