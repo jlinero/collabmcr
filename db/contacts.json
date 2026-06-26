@@ -45,9 +45,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "177203",
+          "numero": "177203",
+          "nombre": "Asesoría para optimización de procesos en entidad financiera con WxCC e IA",
+          "estado": "abierto",
+          "creadoEn": "2026-06-26T13:45:03.942Z",
+          "actualizaciones": [
+            {
+              "id": "1782481503942",
+              "nota": "Solicitud de asesoría sobre cómo mejorar y optimizar procesos de una entidad financiera con la solución de WxCC usando, en lo posible, IA.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-26T13:45:03.942Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-06-26T13:45:03.942Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T13:38:16.331Z"
+      "actualizadoEn": "2026-06-26T13:45:03.942Z"
     },
     {
       "id": "120874",
