@@ -126,9 +126,17 @@
           "id": "962230",
           "numero": "962230",
           "nombre": "Asesoría sobre beneficios de Webex Contact Center para entidad financiera",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-06-26T13:56:09.663Z",
           "actualizaciones": [
+            {
+              "id": "mqv3my8wzqh7qwa774g",
+              "nota": "Se necesita agendar sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-06-26T15:41:51.968Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1782482169663",
               "nota": "Cliente solicita asesoría como entidad financiera para entender los beneficios de la solución de WxCC y cómo esta solución puede ayudarle.",
@@ -138,11 +146,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-06-26T13:56:09.663Z"
+          "actualizadoEn": "2026-06-26T15:41:51.968Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T14:02:34.661Z"
+      "actualizadoEn": "2026-06-26T15:41:51.968Z"
     },
     {
       "id": "120874",
