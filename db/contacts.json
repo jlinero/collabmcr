@@ -186,10 +186,28 @@
             }
           ],
           "actualizadoEn": "2026-06-18T19:33:14.126Z"
+        },
+        {
+          "id": "181080",
+          "numero": "181080",
+          "nombre": "Asesoría sobre agente de inteligencia artificial para consultas de estado de crédito",
+          "estado": "abierto",
+          "creadoEn": "2026-06-26T11:44:10.594Z",
+          "actualizaciones": [
+            {
+              "id": "1782474250594",
+              "nota": "El cliente solicita asesoría sobre cómo el agente de inteligencia artificial puede optimizar procesos en el sector financiero, incluyendo consultas de estado de crédito y autoservicio.",
+              "agente": "AI Agent",
+              "fecha": "2026-06-26T11:44:10.594Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-06-26T11:44:10.594Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-18T19:33:14.126Z"
+      "actualizadoEn": "2026-06-26T11:44:10.594Z"
     },
     {
       "id": "120874",
