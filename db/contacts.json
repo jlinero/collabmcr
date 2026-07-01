@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1782870327384",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se brindó información sobre beneficios de Webex Contact Center con inteligencia artificial y se abrió el caso 788807 para asesoría sobre implementación y mejora de atención al cliente.",
+          "asignadoA": "Asistente virtual CollabMCR",
+          "fecha": "2026-07-01T01:45:27.384Z"
+        },
+        {
           "id": "mqv4dzt3narczg6stn",
           "tipo": "llamada",
           "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
@@ -195,7 +202,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T01:44:57.241Z"
+      "actualizadoEn": "2026-07-01T01:45:27.384Z"
     },
     {
       "id": "120874",
