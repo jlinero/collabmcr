@@ -36,9 +36,17 @@
           "id": "389760",
           "numero": "389760",
           "nombre": "Asesoría para automatizar gestión de citas con agente de inteligencia artificial",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-07-01T15:18:29.902Z",
           "actualizaciones": [
+            {
+              "id": "mr282bsjn0b25wd9qii",
+              "nota": "Se debe programar sesión con el cliente para asesorarlo",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-01T15:20:11.059Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1782919109902",
               "nota": "Solicitud de asesoría para configurar el agente de inteligencia artificial y automatizar todo el proceso de creación de citas, reprogramación de citas y cancelación de citas.",
@@ -48,11 +56,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-01T15:18:29.902Z"
+          "actualizadoEn": "2026-07-01T15:20:11.059Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T15:18:29.902Z"
+      "actualizadoEn": "2026-07-01T15:20:11.059Z"
     },
     {
       "id": "120874",
