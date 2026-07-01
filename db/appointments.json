@@ -1,21 +1,3 @@
 {
-  "appointments": [
-    {
-      "id": "1782916175576",
-      "contactId": "123456",
-      "contactNombre": "Jose Linero",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+573102634216",
-      "titulo": "Sesión de instalación y configuración",
-      "proposito": "Asesoría para configuración de automatización de citas con agente de inteligencia artificial",
-      "fecha": "2026-07-01",
-      "horaInicio": "09:33",
-      "horaFin": "11:33",
-      "duracion": 120,
-      "estado": "confirmada",
-      "agente": "",
-      "notas": "",
-      "creadoEn": "2026-07-01T14:29:35.576Z"
-    }
-  ]
+  "appointments": []
 }
