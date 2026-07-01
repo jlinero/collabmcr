@@ -31,9 +31,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "389760",
+          "numero": "389760",
+          "nombre": "Asesoría para automatizar gestión de citas con agente de inteligencia artificial",
+          "estado": "abierto",
+          "creadoEn": "2026-07-01T15:18:29.902Z",
+          "actualizaciones": [
+            {
+              "id": "1782919109902",
+              "nota": "Solicitud de asesoría para configurar el agente de inteligencia artificial y automatizar todo el proceso de creación de citas, reprogramación de citas y cancelación de citas.",
+              "agente": "AI Agent",
+              "fecha": "2026-07-01T15:18:29.902Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-07-01T15:18:29.902Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T17:59:28.972Z"
+      "actualizadoEn": "2026-07-01T15:18:29.902Z"
     },
     {
       "id": "120874",
