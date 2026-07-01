@@ -222,10 +222,28 @@
             }
           ],
           "actualizadoEn": "2026-07-01T01:56:58.944Z"
+        },
+        {
+          "id": "608348",
+          "numero": "608348",
+          "nombre": "Asesoría sobre configuración del agente de inteligencia artificial",
+          "estado": "abierto",
+          "creadoEn": "2026-07-01T13:38:16.906Z",
+          "actualizaciones": [
+            {
+              "id": "1782913096906",
+              "nota": "El cliente solicita una asesoría sobre cómo configurar el agente de inteligencia artificial para optimizar procesos de atención al cliente.",
+              "agente": "AI Agent",
+              "fecha": "2026-07-01T13:38:16.906Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-07-01T13:38:16.906Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T01:56:58.944Z"
+      "actualizadoEn": "2026-07-01T13:38:16.906Z"
     },
     {
       "id": "120874",
