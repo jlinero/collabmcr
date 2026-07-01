@@ -20,22 +20,7 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "1782916206665",
-          "tipo": "llamada",
-          "descripcion": "Sentimiento neutral. Se consultó el perfil del cliente José Linero, se revisó el caso activo 465848 y se agendó una sesión de instalación y configuración para el 2026-07-01 de 09:33 a 11:33 relacionada con la automatización de citas con agente de inteligencia artificial en Webex Contact Center.",
-          "asignadoA": "Asistente virtual",
-          "fecha": "2026-07-01T14:30:06.665Z"
-        },
-        {
-          "id": "1782915876202",
-          "tipo": "llamada",
-          "descripcion": "Sentimiento neutral. Se identificó al cliente José Linero y se creó un caso de asesoría para configuración de automatización de citas con agente de inteligencia artificial en Webex Contact Center. Ticket creado: 465848.",
-          "asignadoA": "Asistente virtual",
-          "fecha": "2026-07-01T14:24:36.202Z"
-        }
-      ],
+      "actividades": [],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -46,36 +31,9 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "465848",
-          "numero": "465848",
-          "nombre": "Asesoría para configuración de automatización de citas con agente de inteligencia artificial",
-          "estado": "en progreso",
-          "creadoEn": "2026-07-01T14:24:08.238Z",
-          "actualizaciones": [
-            {
-              "id": "mr263oi7f1pdrakai56",
-              "nota": "Necesitamos agendar sesión con el cliente para hacer esta asesoria",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-07-01T14:25:14.959Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1782915848238",
-              "nota": "El cliente solicita asesoría sobre la configuración necesaria para agilizar y automatizar los procesos de citas con el agente de inteligencia artificial en Webex Contact Center.",
-              "agente": "AI Agent",
-              "fecha": "2026-07-01T14:24:08.238Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-07-01T14:25:14.959Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T14:30:06.665Z"
+      "actualizadoEn": "2026-05-27T17:59:28.972Z"
     },
     {
       "id": "120874",
