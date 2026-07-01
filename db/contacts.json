@@ -186,9 +186,17 @@
           "id": "788807",
           "numero": "788807",
           "nombre": "Asesoría sobre mejora de atención al cliente con Webex Contact Center",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-07-01T01:44:57.241Z",
           "actualizaciones": [
+            {
+              "id": "mr1f3x8s05ewi9ubva0o",
+              "nota": "Por favor agendar una sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-01T01:49:36.652Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1782870297241",
               "nota": "Cliente solicita una asesoría como empresa de tecnología para revisar cómo mejorar la atención a sus clientes con la solución de Webex Contact Center y conocer beneficios de implementación.",
@@ -198,11 +206,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-01T01:44:57.241Z"
+          "actualizadoEn": "2026-07-01T01:49:36.652Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T01:45:27.384Z"
+      "actualizadoEn": "2026-07-01T01:49:36.652Z"
     },
     {
       "id": "120874",
