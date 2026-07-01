@@ -36,9 +36,17 @@
           "id": "802956",
           "numero": "802956",
           "nombre": "Asesoría para configurar asistente de inteligencia artificial",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-07-01T14:40:50.393Z",
           "actualizaciones": [
+            {
+              "id": "mr26q3vuyk6we3tcd4r",
+              "nota": "Se necesita agendar sesión con el cliente para asesorarlo",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-01T14:42:41.322Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1782916850393",
               "nota": "Solicitud de asesoría para configurar el asistente de inteligencia artificial con el fin de optimizar los procesos de agendamiento, reprogramación y cancelación de citas.",
@@ -48,11 +56,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-01T14:40:50.393Z"
+          "actualizadoEn": "2026-07-01T14:42:41.322Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T14:40:50.393Z"
+      "actualizadoEn": "2026-07-01T14:42:41.322Z"
     },
     {
       "id": "120874",
