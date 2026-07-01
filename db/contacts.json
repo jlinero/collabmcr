@@ -193,9 +193,17 @@
           "id": "788807",
           "numero": "788807",
           "nombre": "Asesoría sobre mejora de atención al cliente con Webex Contact Center",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-07-01T01:44:57.241Z",
           "actualizaciones": [
+            {
+              "id": "mr1fdeioag48y0ippam",
+              "nota": "Se cierra este caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-01T01:56:58.944Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mr1f3x8s05ewi9ubva0o",
               "nota": "Por favor agendar una sesión con el cliente",
@@ -213,11 +221,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-01T01:49:36.652Z"
+          "actualizadoEn": "2026-07-01T01:56:58.944Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T01:55:09.930Z"
+      "actualizadoEn": "2026-07-01T01:56:58.944Z"
     },
     {
       "id": "120874",
