@@ -31,9 +31,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "465848",
+          "numero": "465848",
+          "nombre": "Asesoría para configuración de automatización de citas con agente de inteligencia artificial",
+          "estado": "abierto",
+          "creadoEn": "2026-07-01T14:24:08.238Z",
+          "actualizaciones": [
+            {
+              "id": "1782915848238",
+              "nota": "El cliente solicita asesoría sobre la configuración necesaria para agilizar y automatizar los procesos de citas con el agente de inteligencia artificial en Webex Contact Center.",
+              "agente": "AI Agent",
+              "fecha": "2026-07-01T14:24:08.238Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-07-01T14:24:08.238Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T17:59:28.972Z"
+      "actualizadoEn": "2026-07-01T14:24:08.238Z"
     },
     {
       "id": "120874",
