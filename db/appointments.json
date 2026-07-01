@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1782870883239",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de seguimiento de caso abierto",
+      "proposito": "Seguimiento de caso abierto",
+      "fecha": "2026-07-03",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-07-01T01:54:43.239Z"
+    }
+  ]
 }
