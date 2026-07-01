@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1782917179195",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión sobre caso abierto de configuración del asistente de inteligencia artificial",
+      "proposito": "Asesoría para configurar el asistente de inteligencia artificial",
+      "fecha": "2026-07-01",
+      "horaInicio": "09:50",
+      "horaFin": "11:50",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-07-01T14:46:19.195Z"
+    }
+  ]
 }
