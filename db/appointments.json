@@ -12,11 +12,11 @@
       "horaInicio": "08:49",
       "horaFin": "10:49",
       "duracion": 120,
-      "estado": "reprogramada",
+      "estado": "cancelada",
       "agente": "",
-      "notas": "Reprogramada desde 2026-07-03 13:00. Motivo: Reprogramación solicitada por el cliente para hoy a las 08:49.",
+      "notas": "Cancelada: Ya no necesita la asesoría.",
       "creadoEn": "2026-07-01T01:54:43.239Z",
-      "actualizadoEn": "2026-07-01T13:44:35.543Z"
+      "actualizadoEn": "2026-07-01T13:45:24.278Z"
     }
   ]
 }
