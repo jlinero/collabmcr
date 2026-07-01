@@ -174,10 +174,28 @@
             }
           ],
           "actualizadoEn": "2026-07-01T01:38:38.698Z"
+        },
+        {
+          "id": "788807",
+          "numero": "788807",
+          "nombre": "Asesoría sobre mejora de atención al cliente con Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-07-01T01:44:57.241Z",
+          "actualizaciones": [
+            {
+              "id": "1782870297241",
+              "nota": "Cliente solicita una asesoría como empresa de tecnología para revisar cómo mejorar la atención a sus clientes con la solución de Webex Contact Center y conocer beneficios de implementación.",
+              "agente": "AI Agent",
+              "fecha": "2026-07-01T01:44:57.241Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-07-01T01:44:57.241Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T01:38:38.698Z"
+      "actualizadoEn": "2026-07-01T01:44:57.241Z"
     },
     {
       "id": "120874",
