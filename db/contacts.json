@@ -252,13 +252,21 @@
               "fecha": "2026-07-01T13:38:16.906Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1782913525503",
+              "nota": "El cliente indica que ya no necesita la asesoría y solicita cancelar la cita.",
+              "agente": "AI Agent",
+              "fecha": "2026-07-01T13:45:25.503Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-07-01T13:40:02.460Z"
+          "actualizadoEn": "2026-07-01T13:45:25.503Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T13:40:02.460Z"
+      "actualizadoEn": "2026-07-01T13:45:25.503Z"
     },
     {
       "id": "120874",
