@@ -234,9 +234,17 @@
           "id": "608348",
           "numero": "608348",
           "nombre": "Asesoría sobre configuración del agente de inteligencia artificial",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-07-01T13:38:16.906Z",
           "actualizaciones": [
+            {
+              "id": "mr24hjj0vqpxn3b9bo",
+              "nota": "Se debe agendar una sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-01T13:40:02.460Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1782913096906",
               "nota": "El cliente solicita una asesoría sobre cómo configurar el agente de inteligencia artificial para optimizar procesos de atención al cliente.",
@@ -246,11 +254,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-01T13:38:16.906Z"
+          "actualizadoEn": "2026-07-01T13:40:02.460Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-01T13:38:46.953Z"
+      "actualizadoEn": "2026-07-01T13:40:02.460Z"
     },
     {
       "id": "120874",
