@@ -145,9 +145,17 @@
           "id": "962230",
           "numero": "962230",
           "nombre": "Asesoría sobre beneficios de Webex Contact Center para entidad financiera",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-06-26T13:56:09.663Z",
           "actualizaciones": [
+            {
+              "id": "mr1eptkab3wzsw9av36",
+              "nota": "Se cierra esta caso",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-01T01:38:38.698Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "mqv3my8wzqh7qwa774g",
               "nota": "Se necesita agendar sesión con el cliente",
@@ -165,11 +173,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-06-26T15:41:51.968Z"
+          "actualizadoEn": "2026-07-01T01:38:38.698Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-06-26T16:02:53.703Z"
+      "actualizadoEn": "2026-07-01T01:38:38.698Z"
     },
     {
       "id": "120874",
