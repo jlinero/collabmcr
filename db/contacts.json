@@ -44,9 +44,17 @@
           "id": "758928",
           "numero": "758928",
           "nombre": "Asesoría de configuración del agente de inteligencia artificial",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-07-02T10:53:43.833Z",
           "actualizaciones": [
+            {
+              "id": "mr3ebmqflx76uh2j6ea",
+              "nota": "se necesita agendar una sesión con el cliente para la asesoria",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-02T11:03:09.015Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1782989623833",
               "nota": "El cliente solicita una asesoría de configuración del agente de inteligencia artificial.",
@@ -56,11 +64,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-02T10:53:43.833Z"
+          "actualizadoEn": "2026-07-02T11:03:09.015Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-02T10:54:12.316Z"
+      "actualizadoEn": "2026-07-02T11:03:09.015Z"
     },
     {
       "id": "120874",
