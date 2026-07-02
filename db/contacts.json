@@ -44,9 +44,17 @@
           "id": "502696",
           "numero": "502696",
           "nombre": "Asesoría en la configuración del agente de inteligencia artificial",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-07-02T13:13:23.603Z",
           "actualizaciones": [
+            {
+              "id": "mr3j0uyswd10w49mkna",
+              "nota": "Necesitamos agendar una sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-02T13:14:44.548Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1782998003603",
               "nota": "Solicitud de asesoría sobre la configuración del agente de inteligencia artificial.",
@@ -56,11 +64,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-02T13:13:23.603Z"
+          "actualizadoEn": "2026-07-02T13:14:44.548Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-02T13:13:48.864Z"
+      "actualizadoEn": "2026-07-02T13:14:44.548Z"
     },
     {
       "id": "120874",
