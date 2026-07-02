@@ -8,14 +8,15 @@
       "contactTel": "+573102634216",
       "titulo": "Sesión de instalación y configuración",
       "proposito": "Soporte para caso abierto",
-      "fecha": "2026-07-02",
-      "horaInicio": "08:00",
-      "horaFin": "10:00",
+      "fecha": "2026-07-03",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-07-02T11:06:21.991Z"
+      "notas": "Reprogramada desde 2026-07-02 08:00. Motivo: Reprogramación solicitada por el cliente",
+      "creadoEn": "2026-07-02T11:06:21.991Z",
+      "actualizadoEn": "2026-07-02T11:09:03.537Z"
     }
   ]
 }
