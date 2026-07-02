@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1782990559242",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se reprogramó la cita del cliente del 2026-07-02 08:00-10:00 al 2026-07-03 09:00-11:00. El cliente indicó que no necesita más ayuda.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-07-02T11:09:19.242Z"
+        },
+        {
           "id": "1782989652316",
           "tipo": "llamada",
           "descripcion": "Sentimiento neutral. Se identificó al cliente Jose Linero y se creó un caso de soporte para asesoría de configuración del agente de inteligencia artificial con el ticket 758928. El cliente indicó que no necesita más ayuda.",
@@ -68,7 +75,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-02T11:03:09.015Z"
+      "actualizadoEn": "2026-07-02T11:09:19.242Z"
     },
     {
       "id": "120874",
