@@ -31,9 +31,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "758928",
+          "numero": "758928",
+          "nombre": "Asesoría de configuración del agente de inteligencia artificial",
+          "estado": "abierto",
+          "creadoEn": "2026-07-02T10:53:43.833Z",
+          "actualizaciones": [
+            {
+              "id": "1782989623833",
+              "nota": "El cliente solicita una asesoría de configuración del agente de inteligencia artificial.",
+              "agente": "AI Agent",
+              "fecha": "2026-07-02T10:53:43.833Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-07-02T10:53:43.833Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T17:59:28.972Z"
+      "actualizadoEn": "2026-07-02T10:53:43.833Z"
     },
     {
       "id": "120874",
