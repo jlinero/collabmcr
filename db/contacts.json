@@ -20,7 +20,15 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1782989652316",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se identificó al cliente Jose Linero y se creó un caso de soporte para asesoría de configuración del agente de inteligencia artificial con el ticket 758928. El cliente indicó que no necesita más ayuda.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-07-02T10:54:12.316Z"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -52,7 +60,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-02T10:53:43.833Z"
+      "actualizadoEn": "2026-07-02T10:54:12.316Z"
     },
     {
       "id": "120874",
