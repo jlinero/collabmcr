@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1783538364006",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de asesoría para configuración de agente de inteligencia artificial para atención al cliente",
+      "proposito": "Asesoría para configuración de agente de inteligencia artificial para atención al cliente",
+      "fecha": "2026-07-08",
+      "horaInicio": "14:22",
+      "horaFin": "16:22",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-07-08T19:19:24.006Z"
+    }
+  ]
 }
