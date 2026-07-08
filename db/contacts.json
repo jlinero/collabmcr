@@ -20,15 +20,7 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "1783538397446",
-          "tipo": "llamada",
-          "descripcion": "Sentimiento neutral. Se consultó el perfil del cliente y se agendó una sesión de asesoría para configuración de agente de inteligencia artificial para atención al cliente para el ocho de julio de dos mil veintiséis de dos y veintidós de la tarde a cuatro y veintidós de la tarde.",
-          "asignadoA": "Asistente virtual de CollabMCR",
-          "fecha": "2026-07-08T19:19:57.446Z"
-        }
-      ],
+      "actividades": [],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -39,36 +31,9 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "935290",
-          "numero": "935290",
-          "nombre": "Asesoría para configuración de agente de inteligencia artificial para atención al cliente",
-          "estado": "en progreso",
-          "creadoEn": "2026-07-08T19:12:39.335Z",
-          "actualizaciones": [
-            {
-              "id": "mrcgi4vtoyso381ciqj",
-              "nota": "Por favor agendar la sesión con el cliente para apoyarlo en la asesoria",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-07-08T19:14:07.289Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1783537959335",
-              "nota": "El cliente solicita asesoría para la configuración de un agente de inteligencia artificial. Su objetivo es implementar un agente para apoyar la atención al cliente de Alpina.",
-              "agente": "AI Agent",
-              "fecha": "2026-07-08T19:12:39.335Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-07-08T19:14:07.289Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-08T19:19:57.446Z"
+      "actualizadoEn": "2026-05-27T17:59:28.972Z"
     },
     {
       "id": "120874",
