@@ -36,9 +36,17 @@
           "id": "935290",
           "numero": "935290",
           "nombre": "Asesoría para configuración de agente de inteligencia artificial para atención al cliente",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-07-08T19:12:39.335Z",
           "actualizaciones": [
+            {
+              "id": "mrcgi4vtoyso381ciqj",
+              "nota": "Por favor agendar la sesión con el cliente para apoyarlo en la asesoria",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-08T19:14:07.289Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1783537959335",
               "nota": "El cliente solicita asesoría para la configuración de un agente de inteligencia artificial. Su objetivo es implementar un agente para apoyar la atención al cliente de Alpina.",
@@ -48,11 +56,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-08T19:12:39.335Z"
+          "actualizadoEn": "2026-07-08T19:14:07.289Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-08T19:12:39.335Z"
+      "actualizadoEn": "2026-07-08T19:14:07.289Z"
     },
     {
       "id": "120874",
