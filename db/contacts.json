@@ -31,36 +31,9 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "164335",
-          "numero": "164335",
-          "nombre": "Asesoría para configuración de agente de inteligencia artificial en retail",
-          "estado": "en progreso",
-          "creadoEn": "2026-07-08T18:59:06.746Z",
-          "actualizaciones": [
-            {
-              "id": "mrcg26vwjay8aaylf8b",
-              "nota": "Por favor agendar la sesión con el cliente para esta asesoria",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-07-08T19:01:43.388Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1783537146746",
-              "nota": "Cliente solicita asesoría para configurar el agente de inteligencia artificial de Webex Contact Center con el objetivo de optimizar procesos de atención al cliente en una empresa de retail como Alpina.",
-              "agente": "AI Agent",
-              "fecha": "2026-07-08T18:59:06.746Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-07-08T19:01:43.388Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-08T19:01:43.388Z"
+      "actualizadoEn": "2026-05-27T17:59:28.972Z"
     },
     {
       "id": "120874",
