@@ -44,9 +44,17 @@
           "id": "797659",
           "numero": "797659",
           "nombre": "Asesoría sobre optimización de procesos de retail con agente de inteligencia artificial",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-07-08T11:04:03.788Z",
           "actualizaciones": [
+            {
+              "id": "mrbz9cj75utirxsgsa",
+              "nota": "Se debe agendar una sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-07-08T11:11:23.827Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1783508643788",
               "nota": "Asesoría para optimizar procesos de retail usando agente de inteligencia artificial en Webex Contact Center.",
@@ -56,11 +64,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-07-08T11:04:03.788Z"
+          "actualizadoEn": "2026-07-08T11:11:23.827Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-08T11:04:31.106Z"
+      "actualizadoEn": "2026-07-08T11:11:23.827Z"
     },
     {
       "id": "120874",
