@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1783509438298",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se agendó una sesión de instalación y configuración para el 2026-07-08 de 10:00 a 12:00 y se actualizó el ticket 797659 con el agendamiento de la sesión.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-07-08T11:17:18.298Z"
+        },
+        {
           "id": "1783508671106",
           "tipo": "llamada",
           "descripcion": "Sentimiento positivo. Se brindó información sobre cómo el agente de inteligencia artificial de Webex Contact Center puede apoyar a una empresa de retail y su impacto en indicadores operativos. Se abrió un caso de asesoría sobre optimización de procesos de retail con agente de inteligencia artificial. Ticket creado: 797659.",
@@ -76,7 +83,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-08T11:16:52.898Z"
+      "actualizadoEn": "2026-07-08T11:17:18.298Z"
     },
     {
       "id": "120874",
