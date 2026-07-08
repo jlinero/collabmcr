@@ -20,7 +20,15 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1783538397446",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se consultó el perfil del cliente y se agendó una sesión de asesoría para configuración de agente de inteligencia artificial para atención al cliente para el ocho de julio de dos mil veintiséis de dos y veintidós de la tarde a cuatro y veintidós de la tarde.",
+          "asignadoA": "Asistente virtual de CollabMCR",
+          "fecha": "2026-07-08T19:19:57.446Z"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -60,7 +68,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-08T19:14:07.289Z"
+      "actualizadoEn": "2026-07-08T19:19:57.446Z"
     },
     {
       "id": "120874",
