@@ -20,7 +20,14 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "mrl0crg8bbvetfwawu7",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde +573102634216 · Estado: en curso",
+          "fecha": "2026-07-14T18:51:58.328Z"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -33,7 +40,7 @@
       ],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T17:59:28.972Z"
+      "actualizadoEn": "2026-07-14T18:51:58.328Z"
     },
     {
       "id": "120874",
