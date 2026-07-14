@@ -31,9 +31,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "531287",
+          "numero": "531287",
+          "nombre": "Asesoría de configuración de análisis de sentimientos en Webex Contact Center",
+          "estado": "abierto",
+          "creadoEn": "2026-07-14T18:35:01.804Z",
+          "actualizaciones": [
+            {
+              "id": "1784054101804",
+              "nota": "El cliente solicita asesoría para la configuración del análisis de sentimientos en la solución de Webex Contact Center.",
+              "agente": "AI Agent",
+              "fecha": "2026-07-14T18:35:01.804Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-07-14T18:35:01.804Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T17:59:28.972Z"
+      "actualizadoEn": "2026-07-14T18:35:01.804Z"
     },
     {
       "id": "120874",
