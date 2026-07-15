@@ -1,1 +1,3 @@
-{"appointments":[{"id":"1784132253353","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Sesión de Webex Contact Center","proposito":"Entender cómo la solución de Webex Contact Center puede ayudar con reservas automatizadas para hoteles del Círculo de Suboficiales","fecha":"2026-07-17","horaInicio":"10:00","horaFin":"12:00","duracion":120,"estado":"reprogramada","agente":"","notas":"","creadoEn":"2026-07-15T16:17:33.353Z","actualizadoEn":"2026-07-15T16:18:16.890Z"}]}
+{
+  "appointments": []
+}
