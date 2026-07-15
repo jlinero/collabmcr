@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1784121017185",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de instalación y configuración",
+      "proposito": "Asesoría sobre cómo el agente de IA puede ayudar al Círculo de Suboficiales a automatizar el proceso de agendamiento de hoteles",
+      "fecha": "2026-07-15",
+      "horaInicio": "08:14",
+      "horaFin": "10:14",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-07-15T13:10:17.185Z"
+    }
+  ]
 }
