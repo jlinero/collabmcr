@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1784137762507",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión informativa sobre Webex Contact Center con IA",
+      "proposito": "Conocer más sobre las ventajas de inteligencia artificial en Webex Contact Center",
+      "fecha": "2026-07-15",
+      "horaInicio": "12:53",
+      "horaFin": "14:53",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-07-15T17:49:22.507Z"
+    }
+  ]
 }
