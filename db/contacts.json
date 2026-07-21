@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1784645014996",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento neutral. Se identificó al cliente José Linero. Se agendó una sesión de asesoría sobre configuración del agente de inteligencia artificial para el martes veintiuno de julio de dos mil veintiséis, de nueve cuarenta y siete a once cuarenta y siete de la mañana.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-07-21T14:43:34.996Z"
+        },
+        {
           "id": "mrl0crg8bbvetfwawu7",
           "tipo": "llamada",
           "descripcion": "Llamada entrante desde +573102634216 · Estado: en curso",
@@ -40,7 +47,7 @@
       ],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-14T18:51:58.328Z"
+      "actualizadoEn": "2026-07-21T14:43:34.996Z"
     },
     {
       "id": "120874",
