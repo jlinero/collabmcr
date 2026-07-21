@@ -31,9 +31,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "977388",
+          "numero": "977388",
+          "nombre": "Asesoría para configuración de agente de inteligencia artificial",
+          "estado": "abierto",
+          "creadoEn": "2026-07-21T15:55:31.484Z",
+          "actualizaciones": [
+            {
+              "id": "1784649331484",
+              "nota": "El cliente solicita asesoría para configurar un agente de inteligencia artificial con el fin de optimizar procesos de atención al cliente.",
+              "agente": "AI Agent",
+              "fecha": "2026-07-21T15:55:31.484Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-07-21T15:55:31.484Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T17:59:28.972Z"
+      "actualizadoEn": "2026-07-21T15:55:31.484Z"
     },
     {
       "id": "120874",
