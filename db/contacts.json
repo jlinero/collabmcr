@@ -20,7 +20,15 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1784839941128",
+          "tipo": "llamada",
+          "descripcion": "Sentimiento: neutral. Acciones tomadas: cierre del ticket 977388 por motivo indicado por el cliente: Ya me hicieron la asesoría.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-07-23T20:52:21.128Z"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -60,7 +68,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-23T20:52:04.545Z"
+      "actualizadoEn": "2026-07-23T20:52:21.128Z"
     },
     {
       "id": "120874",
