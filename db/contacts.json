@@ -36,7 +36,7 @@
           "id": "977388",
           "numero": "977388",
           "nombre": "Asesoría para configuración de agente de inteligencia artificial",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-07-21T15:55:31.484Z",
           "actualizaciones": [
             {
@@ -46,13 +46,21 @@
               "fecha": "2026-07-21T15:55:31.484Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1784839924545",
+              "nota": "Ya me hicieron la asesoría",
+              "agente": "AI Agent",
+              "fecha": "2026-07-23T20:52:04.545Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
             }
           ],
-          "actualizadoEn": "2026-07-21T15:55:31.484Z"
+          "actualizadoEn": "2026-07-23T20:52:04.545Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-07-21T15:55:31.484Z"
+      "actualizadoEn": "2026-07-23T20:52:04.545Z"
     },
     {
       "id": "120874",
