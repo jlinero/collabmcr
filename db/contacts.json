@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1787058983523",
+          "tipo": "llamada",
+          "descripcion": "Cliente con sentimiento neutral. Se validó el contacto y se agendó una sesión de instalación y configuración para el 2026-08-18 de 08:20 a 10:20, solicitada por mensaje de WhatsApp.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-08-18T13:16:23.523Z"
+        },
+        {
           "id": "1787058206282",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral. Se validó el contacto 123456 y se abrió un caso de soporte para asesoría sobre la configuración de un agente de inteligencia artificial para automatización de tickets. Ticket creado: 470944.",
@@ -76,7 +83,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-08-18T13:12:11.780Z"
+      "actualizadoEn": "2026-08-18T13:16:23.523Z"
     },
     {
       "id": "120874",
