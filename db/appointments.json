@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1787058958809",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión de instalación y configuración",
+      "proposito": "Agendar una sesión solicitada por mensaje de WhatsApp",
+      "fecha": "2026-08-18",
+      "horaInicio": "08:20",
+      "horaFin": "10:20",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-08-18T13:15:58.809Z"
+    }
+  ]
 }
