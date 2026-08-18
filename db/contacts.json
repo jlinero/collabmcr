@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "msyp1s7fpe7g2qcsyn",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
+          "fecha": "2026-08-18T13:23:59.115Z"
+        },
+        {
           "id": "1787058983523",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral. Se validó el contacto y se agendó una sesión de instalación y configuración para el 2026-08-18 de 08:20 a 10:20, solicitada por mensaje de WhatsApp.",
@@ -83,7 +89,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-08-18T13:16:23.523Z"
+      "actualizadoEn": "2026-08-18T13:23:59.115Z"
     },
     {
       "id": "120874",
