@@ -48,6 +48,14 @@
           "creadoEn": "2026-08-18T13:02:53.161Z",
           "actualizaciones": [
             {
+              "id": "msyommf8ags2ocvxndt",
+              "nota": "Por favor agendar la sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-08-18T13:12:11.780Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "en progreso"
+            },
+            {
               "id": "msyof9fpioyaeanhq1o",
               "nota": "Se debe agendar una sesión con el cliente",
               "agente": "Oscar Piastri",
@@ -64,11 +72,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-08-18T13:06:28.357Z"
+          "actualizadoEn": "2026-08-18T13:12:11.780Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-08-18T13:06:28.357Z"
+      "actualizadoEn": "2026-08-18T13:12:11.780Z"
     },
     {
       "id": "120874",
