@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "msysrfyz0rb2hn1wba7p",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
+          "fecha": "2026-08-18T15:07:55.163Z"
+        },
+        {
           "id": "1787065460138",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral. Se validó el contacto 123456, se consultaron citas activas y se agendó una nueva sesión de instalación y configuración para el 2026-08-18 de 10:08 a 12:08.",
@@ -68,7 +74,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-08-18T15:04:20.138Z"
+      "actualizadoEn": "2026-08-18T15:07:55.163Z"
     },
     {
       "id": "120874",
