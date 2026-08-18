@@ -44,9 +44,17 @@
           "id": "470944",
           "numero": "470944",
           "nombre": "Asesoría para configuración de agente de inteligencia artificial para automatización de tickets",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-08-18T13:02:53.161Z",
           "actualizaciones": [
+            {
+              "id": "msyof9fpioyaeanhq1o",
+              "nota": "Se debe agendar una sesión con el cliente",
+              "agente": "Oscar Piastri",
+              "fecha": "2026-08-18T13:06:28.357Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
+            },
             {
               "id": "1787058173162",
               "nota": "El cliente tiene un caso de uso donde necesita automatizar un proceso de creación de tickets con un agente de inteligencia artificial y solicita asesoría con la configuración.",
@@ -56,11 +64,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-08-18T13:02:53.161Z"
+          "actualizadoEn": "2026-08-18T13:06:28.357Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-08-18T13:03:26.282Z"
+      "actualizadoEn": "2026-08-18T13:06:28.357Z"
     },
     {
       "id": "120874",
