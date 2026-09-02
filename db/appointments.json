@@ -1,1 +1,3 @@
-{"appointments":[{"id":"1788360219124","contactId":"123456","contactNombre":"Jose Linero","contactEmpresa":"Cisco","contactTel":"+573102634216","titulo":"Sesión comercial sobre costos e implementación","proposito":"Entender detalles de costos y cómo sería la implementación","fecha":"2026-09-04","horaInicio":"10:00","horaFin":"12:00","duracion":120,"estado":"reprogramada","agente":"","notas":"","creadoEn":"2026-09-02T14:43:39.124Z","actualizadoEn":"2026-09-02T14:45:18.349Z"}]}
+{
+  "appointments": []
+}
