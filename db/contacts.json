@@ -20,21 +20,7 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "msysrfyz0rb2hn1wba7p",
-          "tipo": "llamada",
-          "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
-          "fecha": "2026-08-18T15:07:55.163Z"
-        },
-        {
-          "id": "1787065460138",
-          "tipo": "llamada",
-          "descripcion": "Cliente con sentimiento neutral. Se validó el contacto 123456, se consultaron citas activas y se agendó una nueva sesión de instalación y configuración para el 2026-08-18 de 10:08 a 12:08.",
-          "asignadoA": "Asistente virtual",
-          "fecha": "2026-08-18T15:04:20.138Z"
-        }
-      ],
+      "actividades": [],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -45,36 +31,9 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "600648",
-          "numero": "600648",
-          "nombre": "Asesoría para automatización con agente de inteligencia artificial",
-          "estado": "en progreso",
-          "creadoEn": "2026-08-18T14:56:20.282Z",
-          "actualizaciones": [
-            {
-              "id": "msysftcrmzem524r0x",
-              "nota": "Se necesita agendar una sesión con el cliente",
-              "agente": "Oscar Piastri",
-              "fecha": "2026-08-18T14:58:52.635Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1787064980282",
-              "nota": "El cliente solicita asesoría sobre la configuración de un agente de inteligencia artificial para automatizar procesos como agendamiento de citas y creación de casos.",
-              "agente": "AI Agent",
-              "fecha": "2026-08-18T14:56:20.282Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-08-18T14:58:52.635Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-08-18T15:07:55.163Z"
+      "actualizadoEn": "2026-05-27T17:59:28.972Z"
     },
     {
       "id": "120874",
