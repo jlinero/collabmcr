@@ -54,13 +54,21 @@
               "fecha": "2026-09-04T11:38:36.014Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1788522159922",
+              "nota": "El cliente solicita prioridad para este caso.",
+              "agente": "AI Agent",
+              "fecha": "2026-09-04T11:42:39.922Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "abierto"
             }
           ],
-          "actualizadoEn": "2026-09-04T11:38:36.014Z"
+          "actualizadoEn": "2026-09-04T11:42:39.922Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-04T11:39:02.401Z"
+      "actualizadoEn": "2026-09-04T11:42:39.922Z"
     },
     {
       "id": "120874",
