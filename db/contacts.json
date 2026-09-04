@@ -31,9 +31,28 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "466891",
+          "numero": "466891",
+          "nombre": "Ayuda en la configuración para automatizar el proceso de citas",
+          "estado": "abierto",
+          "creadoEn": "2026-09-04T11:38:36.014Z",
+          "actualizaciones": [
+            {
+              "id": "1788521916014",
+              "nota": "Solicitud de apoyo en la configuración del agente de inteligencia artificial para automatizar el proceso de generación de citas.",
+              "agente": "AI Agent",
+              "fecha": "2026-09-04T11:38:36.014Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-09-04T11:38:36.014Z"
+        }
+      ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-05-27T17:59:28.972Z"
+      "actualizadoEn": "2026-09-04T11:38:36.014Z"
     },
     {
       "id": "120874",
