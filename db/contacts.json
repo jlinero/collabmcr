@@ -20,7 +20,15 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "1788521942401",
+          "tipo": "llamada",
+          "descripcion": "Cliente con sentimiento neutral. Se brindó información sobre beneficios de inteligencia artificial en soluciones de experiencia al cliente. Se validó el contacto y se creó un caso para apoyo en la configuración del agente de inteligencia artificial para automatizar el proceso de generación de citas. Ticket creado: 466891.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-09-04T11:39:02.401Z"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -52,7 +60,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-04T11:38:36.014Z"
+      "actualizadoEn": "2026-09-04T11:39:02.401Z"
     },
     {
       "id": "120874",
