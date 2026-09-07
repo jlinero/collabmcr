@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1788790368343",
+          "tipo": "llamada",
+          "descripcion": "Cliente con sentimiento neutral. Se consultó el estado del caso activo 466891 y luego se cerró por solicitud del cliente con el motivo: Ya no necesito esa ayuda de configuracion.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-09-07T14:12:48.343Z"
+        },
+        {
           "id": "1788521942401",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral. Se brindó información sobre beneficios de inteligencia artificial en soluciones de experiencia al cliente. Se validó el contacto y se creó un caso para apoyo en la configuración del agente de inteligencia artificial para automatizar el proceso de generación de citas. Ticket creado: 466891.",
@@ -76,7 +83,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-07T14:12:22.960Z"
+      "actualizadoEn": "2026-09-07T14:12:48.343Z"
     },
     {
       "id": "120874",
