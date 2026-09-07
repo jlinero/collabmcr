@@ -44,7 +44,7 @@
           "id": "466891",
           "numero": "466891",
           "nombre": "Ayuda en la configuración para automatizar el proceso de citas",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-09-04T11:38:36.014Z",
           "actualizaciones": [
             {
@@ -62,13 +62,21 @@
               "fecha": "2026-09-04T11:42:39.922Z",
               "estadoAnterior": "abierto",
               "estadoNuevo": "abierto"
+            },
+            {
+              "id": "1788790342960",
+              "nota": "Ya no necesito esa ayuda de configuracion",
+              "agente": "AI Agent",
+              "fecha": "2026-09-07T14:12:22.960Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
             }
           ],
-          "actualizadoEn": "2026-09-04T11:42:39.922Z"
+          "actualizadoEn": "2026-09-07T14:12:22.960Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-04T11:42:39.922Z"
+      "actualizadoEn": "2026-09-07T14:12:22.960Z"
     },
     {
       "id": "120874",
