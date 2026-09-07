@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1788794457614",
+          "tipo": "llamada",
+          "descripcion": "Cliente con sentimiento neutral. Se consultó si tenía casos abiertos. Se confirmó que no tiene casos activos. La llamada finalizó sin acciones adicionales.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-09-07T15:20:57.617Z"
+        },
+        {
           "id": "1788790368343",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral. Se consultó el estado del caso activo 466891 y luego se cerró por solicitud del cliente con el motivo: Ya no necesito esa ayuda de configuracion.",
@@ -83,7 +90,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-07T14:12:48.343Z"
+      "actualizadoEn": "2026-09-07T15:20:57.617Z"
     },
     {
       "id": "120874",
