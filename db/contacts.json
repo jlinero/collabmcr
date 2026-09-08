@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mtsrzrwq0jrnuv035oh8",
+          "tipo": "llamada",
+          "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
+          "fecha": "2026-09-08T14:39:29.546Z"
+        },
+        {
           "id": "1788794689439",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral. Se agendó una sesión de configuración del agente de IA para el 2026-09-07 de 10:29 a 12:29.",
@@ -97,7 +103,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-07T15:24:49.439Z"
+      "actualizadoEn": "2026-09-08T14:39:29.546Z"
     },
     {
       "id": "120874",
