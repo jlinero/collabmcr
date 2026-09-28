@@ -164,6 +164,32 @@
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
       "actualizadoEn": "2026-04-23T22:52:49.024Z"
+    },
+    {
+      "id": "mulr82l40xh1pvuglrr",
+      "nombre": "Vladimiro",
+      "apellido": "Lerena",
+      "cargo": "Collaboration SE",
+      "email": "vllerena@cisco.com",
+      "email2": "",
+      "telefono": "+56950924649",
+      "empresa": "Cisco",
+      "dominioEmpresa": "cisco.com",
+      "telEmpresa": "",
+      "ciudad": "",
+      "etapaVida": "cliente",
+      "estadoLead": "Conectado",
+      "propietarioContacto": "",
+      "zonaHoraria": "America/New_York",
+      "objetivoMarketing": "",
+      "presupuesto": "",
+      "timeline": "",
+      "notas": "",
+      "actividades": [],
+      "deals": [],
+      "tickets": [],
+      "creadoEn": "2026-09-28T21:23:16.120Z",
+      "actualizadoEn": "2026-09-28T21:23:16.120Z"
     }
   ]
 }
