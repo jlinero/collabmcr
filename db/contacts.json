@@ -66,76 +66,7 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "466891",
-          "numero": "466891",
-          "nombre": "Ayuda en la configuración para automatizar el proceso de citas",
-          "estado": "cerrado",
-          "creadoEn": "2026-09-04T11:38:36.014Z",
-          "actualizaciones": [
-            {
-              "id": "1788521916014",
-              "nota": "Solicitud de apoyo en la configuración del agente de inteligencia artificial para automatizar el proceso de generación de citas.",
-              "agente": "AI Agent",
-              "fecha": "2026-09-04T11:38:36.014Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1788522159922",
-              "nota": "El cliente solicita prioridad para este caso.",
-              "agente": "AI Agent",
-              "fecha": "2026-09-04T11:42:39.922Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "abierto"
-            },
-            {
-              "id": "1788790342960",
-              "nota": "Ya no necesito esa ayuda de configuracion",
-              "agente": "AI Agent",
-              "fecha": "2026-09-07T14:12:22.960Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-09-07T14:12:22.960Z"
-        },
-        {
-          "id": "613649",
-          "numero": "613649",
-          "nombre": "Configuration steps for AI receptionist",
-          "estado": "cerrado",
-          "creadoEn": "2026-09-28T19:25:23.044Z",
-          "actualizaciones": [
-            {
-              "id": "1790623523044",
-              "nota": "Customer requests configuration steps for AI receptionist setup.",
-              "agente": "AI Agent",
-              "fecha": "2026-09-28T19:25:23.044Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1790623705319",
-              "nota": "Customer requests priority processing for configuration steps for AI receptionist setup.",
-              "agente": "AI Agent",
-              "fecha": "2026-09-28T19:28:25.319Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "en progreso"
-            },
-            {
-              "id": "1790624047886",
-              "nota": "Cliente solicita cierre de caso.",
-              "agente": "AI Agent",
-              "fecha": "2026-09-28T19:34:07.886Z",
-              "estadoAnterior": "en progreso",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-09-28T19:34:07.886Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
       "actualizadoEn": "2026-09-28T19:34:07.886Z"
     },
