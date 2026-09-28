@@ -105,7 +105,7 @@
           "id": "613649",
           "numero": "613649",
           "nombre": "Configuration steps for AI receptionist",
-          "estado": "en progreso",
+          "estado": "cerrado",
           "creadoEn": "2026-09-28T19:25:23.044Z",
           "actualizaciones": [
             {
@@ -123,13 +123,21 @@
               "fecha": "2026-09-28T19:28:25.319Z",
               "estadoAnterior": "abierto",
               "estadoNuevo": "en progreso"
+            },
+            {
+              "id": "1790624047886",
+              "nota": "Cliente solicita cierre de caso.",
+              "agente": "AI Agent",
+              "fecha": "2026-09-28T19:34:07.886Z",
+              "estadoAnterior": "en progreso",
+              "estadoNuevo": "cerrado"
             }
           ],
-          "actualizadoEn": "2026-09-28T19:28:25.319Z"
+          "actualizadoEn": "2026-09-28T19:34:07.886Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-28T19:28:25.319Z"
+      "actualizadoEn": "2026-09-28T19:34:07.886Z"
     },
     {
       "id": "120874",
