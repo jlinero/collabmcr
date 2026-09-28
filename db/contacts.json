@@ -20,42 +20,7 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "mtsrzrwq0jrnuv035oh8",
-          "tipo": "llamada",
-          "descripcion": "Llamada entrante desde 573102634216 · Estado: en curso",
-          "fecha": "2026-09-08T14:39:29.546Z"
-        },
-        {
-          "id": "1788794689439",
-          "tipo": "llamada",
-          "descripcion": "Cliente con sentimiento neutral. Se agendó una sesión de configuración del agente de IA para el 2026-09-07 de 10:29 a 12:29.",
-          "asignadoA": "Asistente virtual",
-          "fecha": "2026-09-07T15:24:49.439Z"
-        },
-        {
-          "id": "1788794457614",
-          "tipo": "llamada",
-          "descripcion": "Cliente con sentimiento neutral. Se consultó si tenía casos abiertos. Se confirmó que no tiene casos activos. La llamada finalizó sin acciones adicionales.",
-          "asignadoA": "Asistente virtual",
-          "fecha": "2026-09-07T15:20:57.617Z"
-        },
-        {
-          "id": "1788790368343",
-          "tipo": "llamada",
-          "descripcion": "Cliente con sentimiento neutral. Se consultó el estado del caso activo 466891 y luego se cerró por solicitud del cliente con el motivo: Ya no necesito esa ayuda de configuracion.",
-          "asignadoA": "AI Agent",
-          "fecha": "2026-09-07T14:12:48.343Z"
-        },
-        {
-          "id": "1788521942401",
-          "tipo": "llamada",
-          "descripcion": "Cliente con sentimiento neutral. Se brindó información sobre beneficios de inteligencia artificial en soluciones de experiencia al cliente. Se validó el contacto y se creó un caso para apoyo en la configuración del agente de inteligencia artificial para automatizar el proceso de generación de citas. Ticket creado: 466891.",
-          "asignadoA": "Asistente virtual",
-          "fecha": "2026-09-04T11:39:02.401Z"
-        }
-      ],
+      "actividades": [],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -66,28 +31,9 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "911340",
-          "numero": "911340",
-          "nombre": "Configuration steps for AI Receptionist",
-          "estado": "abierto",
-          "creadoEn": "2026-09-28T21:41:28.394Z",
-          "actualizaciones": [
-            {
-              "id": "1790631688394",
-              "nota": "User requests step-by-step instructions for configuring the AI Receptionist feature.",
-              "agente": "AI Agent",
-              "fecha": "2026-09-28T21:41:28.394Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-09-28T21:41:28.394Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-28T21:41:28.394Z"
+      "actualizadoEn": "2026-09-28T19:34:07.886Z"
     },
     {
       "id": "120874",
