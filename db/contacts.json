@@ -164,32 +164,6 @@
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
       "actualizadoEn": "2026-04-23T22:52:49.024Z"
-    },
-    {
-      "id": "101010",
-      "nombre": "Javier",
-      "apellido": "Cuadros",
-      "cargo": "Solutions Engineer",
-      "email": "jcuadros@cisco.com",
-      "email2": "",
-      "telefono": "+573107741094",
-      "empresa": "Cisco",
-      "dominioEmpresa": "cisco.com",
-      "telEmpresa": "",
-      "ciudad": "BogotÃColombia",
-      "etapaVida": "nuevo",
-      "estadoLead": "Nuevo",
-      "propietarioContacto": "",
-      "zonaHoraria": "America/Bogota",
-      "objetivoMarketing": "",
-      "presupuesto": "",
-      "timeline": "",
-      "notas": "",
-      "actividades": [],
-      "deals": [],
-      "tickets": [],
-      "creadoEn": "2026-04-24T02:27:05.759Z",
-      "actualizadoEn": "2026-04-24T02:27:05.759Z"
     }
   ]
 }
