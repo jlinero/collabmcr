@@ -1,21 +1,3 @@
 {
-  "appointments": [
-    {
-      "id": "1790625948717",
-      "contactId": "123456",
-      "contactNombre": "Jose Linero",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+573102634216",
-      "titulo": "Technical session about AI receptionist",
-      "proposito": "Discuss technical features of AI receptionist",
-      "fecha": "2026-09-28",
-      "horaInicio": "15:10",
-      "horaFin": "17:10",
-      "duracion": 120,
-      "estado": "confirmada",
-      "agente": "",
-      "notas": "",
-      "creadoEn": "2026-09-28T20:05:48.717Z"
-    }
-  ]
+  "appointments": []
 }
