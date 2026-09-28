@@ -105,7 +105,7 @@
           "id": "613649",
           "numero": "613649",
           "nombre": "Configuration steps for AI receptionist",
-          "estado": "abierto",
+          "estado": "en progreso",
           "creadoEn": "2026-09-28T19:25:23.044Z",
           "actualizaciones": [
             {
@@ -115,13 +115,21 @@
               "fecha": "2026-09-28T19:25:23.044Z",
               "estadoAnterior": "",
               "estadoNuevo": ""
+            },
+            {
+              "id": "1790623705319",
+              "nota": "Customer requests priority processing for configuration steps for AI receptionist setup.",
+              "agente": "AI Agent",
+              "fecha": "2026-09-28T19:28:25.319Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "en progreso"
             }
           ],
-          "actualizadoEn": "2026-09-28T19:25:23.044Z"
+          "actualizadoEn": "2026-09-28T19:28:25.319Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-28T19:25:23.044Z"
+      "actualizadoEn": "2026-09-28T19:28:25.319Z"
     },
     {
       "id": "120874",
