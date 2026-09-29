@@ -20,7 +20,20 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "muna2tw0eqi7xf4vry",
+          "tipo": "llamada",
+          "descripcion": "Call received from +573102634216 in the Gaia Support queue and answered by Lando Norris on September 29, 2026 at 05:58 PM.",
+          "fecha": "2026-09-29T22:58:50.445Z",
+          "direccion": "inbound",
+          "estado": "answered",
+          "canal": "Webex Calling Customer Assist",
+          "asignadoA": "Lando Norris",
+          "cola": "Gaia Support",
+          "interactionId": "1d615730-3f2a-46f1-bfee-371f19557467"
+        }
+      ],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -60,7 +73,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-29T17:29:54.886Z"
+      "actualizadoEn": "2026-09-29T22:58:50.445Z"
     },
     {
       "id": "120874",
