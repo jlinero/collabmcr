@@ -67,6 +67,23 @@
       "agente": "",
       "notas": "",
       "creadoEn": "2026-09-29T22:56:34.851Z"
+    },
+    {
+      "id": "1790722652934",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión informativa con comercial Webex",
+      "proposito": "Reunión para conocer soluciones Webex",
+      "fecha": "2026-09-30",
+      "horaInicio": "10:00",
+      "horaFin": "12:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-09-29T22:57:32.934Z"
     }
   ]
 }
