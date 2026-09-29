@@ -953,6 +953,73 @@ async function loadDB(){
     if(ghEl){ghEl.textContent='online';ghEl.style.color='var(--green)';}
     if(!data) toast('New repository. Create the first contact.','info');
     renderList();updateStats();
+    // ── SCREEN POP ──
+    // Webex Calling Customer Assist sends agentName / queueName / interactionId in addition to query (ANI).
+    // Customer Assist URL: crm.html?interactionId={{NewPhoneContact.InteractionID}}&queueName={{AgentAnswered.QueueName}}
+    //                               &query={{NewPhoneContact.ANI}}&agentName={{AgentAnswered.AgentName}}
+    // Any other screen pop (WxCC, only ?query=) keeps the original logic unchanged.
+    const spParams = new URLSearchParams(window.location.search);
+    const isCustomerAssist = !!spParams.get('query') && (spParams.has('agentName')||spParams.has('queueName')||spParams.has('interactionId'));
+    if(isCustomerAssist){
+      // ── Customer Assist branch ──
+      const urlParams  = spParams;
+      const queryParam = urlParams.get('query');
+      const agentParam = (urlParams.get('agentName')||'').trim();
+      const queueParam = (urlParams.get('queueName')||'').trim();
+      const interactId = (urlParams.get('interactionId')||'').trim();
+      // Normalize to digits only ("+" in the URL may arrive as a space)
+      const digits = v => String(v||'').replace(/\D/g,'');
+      const ani    = digits(queryParam);
+      const aniTxt = (/^[\s+]/.test(queryParam) && ani.length>10) ? '+'+ani : ani;
+      const telMatch = t => { const d=digits(t); if(d.length<7||ani.length<7) return false;
+        return d===ani || d.endsWith(ani) || ani.endsWith(d); };
+      const contactoEncontrado = ani ? (db.contacts||[]).find(c => telMatch(c.telefono) || telMatch(c.telEmpresa)) : null;
+      if(contactoEncontrado){
+        selectC(contactoEncontrado.id);
+        toast('📞 Contact identified: '+contactoEncontrado.nombre+' '+contactoEncontrado.apellido,'ok',4000);
+        console.log('[SCREEN POP] Contact found:', contactoEncontrado.nombre, contactoEncontrado.telefono, '| interaction:', interactId||'n/a');
+        // ── Screen Pop: log the activity automatically ──
+        setTimeout(async()=>{
+          const idx=(db.contacts||[]).findIndex(c=>c.id===contactoEncontrado.id);
+          if(idx<0)return;
+          if(!db.contacts[idx].actividades)db.contacts[idx].actividades=[];
+          // Avoid duplicates if the same interaction is opened again
+          if(interactId && db.contacts[idx].actividades.some(a=>a.interactionId===interactId)){
+            console.log('[SCREEN POP] Interaction already logged:', interactId);
+            return;
+          }
+          const now=new Date();
+          const ts=now.toLocaleString('en-US',{month:'long',day:'numeric',year:'numeric',hour:'2-digit',minute:'2-digit',hour12:true});
+          const desc='Call received from '+(aniTxt||'unknown number')
+            +(queueParam?' in the '+queueParam+' queue':'')
+            +(agentParam?' and answered by '+agentParam:'')
+            +' on '+ts+'.';
+          const act={
+            id:uid(), tipo:'llamada',
+            descripcion:desc,
+            fecha:now.toISOString(),
+            direccion:'inbound',
+            estado:'answered',
+            canal:'Webex Calling Customer Assist'
+          };
+          if(agentParam) act.asignadoA=agentParam;
+          if(queueParam) act.cola=queueParam;
+          if(interactId) act.interactionId=interactId;
+          db.contacts[idx].actividades.unshift(act);
+          db.contacts[idx].actualizadoEn=now.toISOString();
+          await saveDB('Screen Pop: incoming call'+(interactId?' '+interactId:''));
+          const c=(db.contacts||[]).find(x=>x.id===contactoEncontrado.id);
+          if(c){renderDetail(c);setTimeout(()=>{const tabs=document.querySelectorAll('.d-tab');if(tabs[1])switchTab(tabs[1],'t-acts');},80);}
+          toast('📋 Activity logged automatically','ok',4000);
+        },800);
+        history.replaceState(null,'',window.location.pathname);
+      } else {
+        if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
+        toast('📞 Number not found in CRM: '+(aniTxt||queryParam),'info',4000);
+        console.log('[SCREEN POP] Number not found:', queryParam);
+      }
+    } else {
+    // ── WxCC / original branch (unchanged) ──
     // ── Screen Pop: auto-seleccionar contacto por número de teléfono ──
     const urlParams  = new URLSearchParams(window.location.search);
     const queryParam = urlParams.get('query');
@@ -994,6 +1061,7 @@ async function loadDB(){
       }
     } else {
       if((db.contacts||[]).length>0) selectC(db.contacts[0].id);
+    }
     }
   }catch(e){
     toast('Error GitHub: '+e.message,'err',6000);
