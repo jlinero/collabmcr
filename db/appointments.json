@@ -16,6 +16,23 @@
       "agente": "",
       "notas": "",
       "creadoEn": "2026-09-29T13:44:45.623Z"
+    },
+    {
+      "id": "1790689529961",
+      "contactId": "678",
+      "contactNombre": "",
+      "contactEmpresa": "",
+      "contactTel": "",
+      "titulo": "Tomografía óptica de seguimiento posterior mácula modalidad ambulatoria",
+      "proposito": "Examen de la vista",
+      "fecha": "2026-10-07",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-09-29T13:45:29.961Z"
     }
   ]
 }
