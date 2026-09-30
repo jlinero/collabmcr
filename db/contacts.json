@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "muoa1pe3lthl1vy3rx",
+          "tipo": "llamada",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
+          "fecha": "2026-09-30T15:45:44.139Z"
+        },
+        {
           "id": "muna2tw0eqi7xf4vry",
           "tipo": "llamada",
           "descripcion": "Call received from +573102634216 in the Gaia Support queue and answered by Lando Norris on September 29, 2026 at 05:58 PM.",
@@ -73,7 +79,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-29T22:58:50.445Z"
+      "actualizadoEn": "2026-09-30T15:45:44.139Z"
     },
     {
       "id": "120874",
