@@ -9,14 +9,14 @@
       "titulo": "instalación de webex calling",
       "proposito": "instalación del servicio de webex calling catchill",
       "fecha": "2026-10-02",
-      "horaInicio": "15:00",
-      "horaFin": "17:00",
+      "horaInicio": "10:00",
+      "horaFin": "12:00",
       "duracion": 120,
       "estado": "reprogramada",
       "agente": "",
-      "notas": "Reprogramada desde 2026-10-02 09:00. Motivo: Cambio solicitado por el cliente para la tarde",
+      "notas": "Reprogramada desde 2026-10-02 15:00. Motivo: Cambio solicitado por el cliente para la mañana",
       "creadoEn": "2026-09-30T22:38:27.568Z",
-      "actualizadoEn": "2026-09-30T23:10:41.137Z"
+      "actualizadoEn": "2026-09-30T23:38:53.926Z"
     }
   ]
 }
