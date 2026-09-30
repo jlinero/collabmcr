@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1790809684794",
+          "tipo": "llamada",
+          "descripcion": "Cliente con sentimiento neutral. Se validó la sesión de instalación de Webex Calling y se confirmó cita futura para el 2026-10-02 de 09:00 a 11:00.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-09-30T23:08:04.794Z"
+        },
+        {
           "id": "muootrcabn5gl900kl5",
           "tipo": "llamada",
           "descripcion": "Incoming call from +573102634216 · Status: in progress",
@@ -139,7 +146,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-09-30T22:39:27.658Z"
+      "actualizadoEn": "2026-09-30T23:08:04.795Z"
     },
     {
       "id": "120874",
