@@ -24,80 +24,80 @@
         {
           "id": "mupjthpxjujzz83e33i",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-10-01T13:07:03.285Z"
         },
         {
           "id": "1790809684794",
           "tipo": "llamada",
-          "descripcion": "Cliente con sentimiento neutral. Se valid\u00f3 la sesi\u00f3n de instalaci\u00f3n de Webex Calling y se confirm\u00f3 cita futura para el 2026-10-02 de 09:00 a 11:00.",
+          "descripcion": "Cliente con sentimiento neutral. Se validó la sesión de instalación de Webex Calling y se confirmó cita futura para el 2026-10-02 de 09:00 a 11:00.",
           "asignadoA": "Asistente virtual",
           "fecha": "2026-09-30T23:08:04.794Z"
         },
         {
           "id": "muootrcabn5gl900kl5",
           "tipo": "llamada",
-          "descripcion": "Incoming call from +573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from +573102634216 · Status: in progress",
           "fecha": "2026-09-30T22:39:27.658Z"
         },
         {
           "id": "muonurk8k0x5p6vafch",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T22:12:14.984Z"
         },
         {
           "id": "muonpwekplvg4c26ix",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T22:08:27.980Z"
         },
         {
           "id": "muokhskzxn7v1byz8zf",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T20:38:10.931Z"
         },
         {
           "id": "muoit2loyg20ydr677m",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T19:50:57.900Z"
         },
         {
           "id": "muoi346ix56gw3oah1",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T19:30:46.890Z"
         },
         {
           "id": "muoclniql2m7uj25slj",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T16:57:14.066Z"
         },
         {
           "id": "muoaslrhn8jjmcknqws",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T16:06:39.149Z"
         },
         {
           "id": "muoaot6rm4jy3y45luj",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T16:03:42.147Z"
         },
         {
           "id": "muoakwr6coql8ul1dmp",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T16:00:40.146Z"
         },
         {
           "id": "muoa1pe3lthl1vy3rx",
           "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 \u00b7 Status: in progress",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
           "fecha": "2026-09-30T15:45:44.139Z"
         },
         {
@@ -256,11 +256,19 @@
           "id": "596965",
           "numero": "596965",
           "nombre": "Trunk Down: LGW Trunk Status Changed from online to offline",
-          "estado": "abierto",
+          "estado": "cerrado",
           "severidad": "HIGH",
           "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8wMWI1MDc3YS0xYTUzLTQ2MGMtODVmNC04NmZjMjQ1YTY4NTY",
           "creadoEn": "2026-10-04T19:10:30.074Z",
           "actualizaciones": [
+            {
+              "id": "muu7624v13gk07t6r8x9",
+              "nota": "Case closed",
+              "agente": "Lando Norris",
+              "fecha": "2026-10-04T19:11:45.487Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1791141030074",
               "nota": "Automatic ticket created from Webex Control Hub alert. Severity: HIGH. LGW Trunk Status Changed from online to offline",
@@ -270,11 +278,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-10-04T19:10:30.074Z"
+          "actualizadoEn": "2026-10-04T19:11:45.487Z"
         }
       ],
       "creadoEn": "2026-09-28T21:23:16.120Z",
-      "actualizadoEn": "2026-10-04T19:10:30.074Z"
+      "actualizadoEn": "2026-10-04T19:11:45.487Z"
     }
   ]
 }
