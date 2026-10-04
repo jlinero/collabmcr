@@ -1,22 +1,3 @@
 {
-  "appointments": [
-    {
-      "id": "1790807907568",
-      "contactId": "123456",
-      "contactNombre": "Jose Linero",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+573102634216",
-      "titulo": "instalación de webex calling",
-      "proposito": "instalación del servicio de webex calling catchill",
-      "fecha": "2026-10-02",
-      "horaInicio": "10:00",
-      "horaFin": "12:00",
-      "duracion": 120,
-      "estado": "reprogramada",
-      "agente": "",
-      "notas": "Reprogramada desde 2026-10-02 15:00. Motivo: Cambio solicitado por el cliente para la mañana",
-      "creadoEn": "2026-09-30T22:38:27.568Z",
-      "actualizadoEn": "2026-09-30T23:38:53.926Z"
-    }
-  ]
+  "appointments": []
 }
