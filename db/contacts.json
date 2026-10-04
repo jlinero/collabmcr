@@ -20,99 +20,7 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "mupjthpxjujzz83e33i",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-01T13:07:03.285Z"
-        },
-        {
-          "id": "1790809684794",
-          "tipo": "llamada",
-          "descripcion": "Cliente con sentimiento neutral. Se validó la sesión de instalación de Webex Calling y se confirmó cita futura para el 2026-10-02 de 09:00 a 11:00.",
-          "asignadoA": "Asistente virtual",
-          "fecha": "2026-09-30T23:08:04.794Z"
-        },
-        {
-          "id": "muootrcabn5gl900kl5",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from +573102634216 · Status: in progress",
-          "fecha": "2026-09-30T22:39:27.658Z"
-        },
-        {
-          "id": "muonurk8k0x5p6vafch",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T22:12:14.984Z"
-        },
-        {
-          "id": "muonpwekplvg4c26ix",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T22:08:27.980Z"
-        },
-        {
-          "id": "muokhskzxn7v1byz8zf",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T20:38:10.931Z"
-        },
-        {
-          "id": "muoit2loyg20ydr677m",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T19:50:57.900Z"
-        },
-        {
-          "id": "muoi346ix56gw3oah1",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T19:30:46.890Z"
-        },
-        {
-          "id": "muoclniql2m7uj25slj",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T16:57:14.066Z"
-        },
-        {
-          "id": "muoaslrhn8jjmcknqws",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T16:06:39.149Z"
-        },
-        {
-          "id": "muoaot6rm4jy3y45luj",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T16:03:42.147Z"
-        },
-        {
-          "id": "muoakwr6coql8ul1dmp",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T16:00:40.146Z"
-        },
-        {
-          "id": "muoa1pe3lthl1vy3rx",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-09-30T15:45:44.139Z"
-        },
-        {
-          "id": "muna2tw0eqi7xf4vry",
-          "tipo": "llamada",
-          "descripcion": "Call received from +573102634216 in the Gaia Support queue and answered by Lando Norris on September 29, 2026 at 05:58 PM.",
-          "fecha": "2026-09-29T22:58:50.445Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "Gaia Support",
-          "interactionId": "1d615730-3f2a-46f1-bfee-371f19557467"
-        }
-      ],
+      "actividades": [],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -123,34 +31,7 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "572424",
-          "numero": "572424",
-          "nombre": "AI Receptionist configuration issue",
-          "estado": "cerrado",
-          "creadoEn": "2026-09-29T17:10:23.099Z",
-          "actualizaciones": [
-            {
-              "id": "1790701823099",
-              "nota": "User has a problem with the AI receptionist configuration and needs support.",
-              "agente": "AI Agent",
-              "fecha": "2026-09-29T17:10:23.099Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            },
-            {
-              "id": "1790702994886",
-              "nota": "Cierre solicitado por el cliente.",
-              "agente": "AI Agent",
-              "fecha": "2026-09-29T17:29:54.886Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            }
-          ],
-          "actualizadoEn": "2026-09-29T17:29:54.886Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
       "actualizadoEn": "2026-10-01T13:07:03.285Z"
     },
@@ -174,56 +55,7 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "mupw0idhd6wgqc2ei6k",
-          "tipo": "llamada",
-          "descripcion": "Call received from +576023981001 in the WebexOne-Sales queue and answered by Lando Norris on October 1, 2026 at 01:48 PM.",
-          "fecha": "2026-10-01T18:48:26.116Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "WebexOne-Sales",
-          "interactionId": "a3cbce8f-07d4-4bf0-a0ed-13c42eb1a5d1"
-        },
-        {
-          "id": "muna769fwa82dwwfhza",
-          "tipo": "llamada",
-          "descripcion": "Call received from +576023981001 in the WebexOne-Sales queue and answered by Lando Norris on September 29, 2026 at 06:02 PM.",
-          "fecha": "2026-09-29T23:02:13.105Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "WebexOne-Sales",
-          "interactionId": "9f3d844c-bff2-4cb3-ab73-64a8282920bc"
-        },
-        {
-          "id": "mumtp7kh991q3gemgj",
-          "tipo": "llamada",
-          "descripcion": "Call received from +576023981001 in the WebexOne-Sales queue and answered by Lando Norris on September 29, 2026 at 10:20 AM.",
-          "fecha": "2026-09-29T15:20:21.136Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "WebexOne-Sales",
-          "interactionId": "9f46dd9c-adfc-4983-b50c-772e992a6ed7"
-        },
-        {
-          "id": "mumthybbvawi0pa0s3",
-          "tipo": "llamada",
-          "descripcion": "Call received from +576023981001 in the WebexOne-Sales queue and answered by Lando Norris on September 29, 2026 at 10:14 AM.",
-          "fecha": "2026-09-29T15:14:42.548Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "WebexOne-Sales",
-          "interactionId": "3bab4f76-333a-456f-8bf3-844e1ae492f4"
-        }
-      ],
+      "actividades": [],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
@@ -251,36 +83,7 @@
       "notas": "",
       "actividades": [],
       "deals": [],
-      "tickets": [
-        {
-          "id": "596965",
-          "numero": "596965",
-          "nombre": "Trunk Down: LGW Trunk Status Changed from online to offline",
-          "estado": "cerrado",
-          "severidad": "HIGH",
-          "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8wMWI1MDc3YS0xYTUzLTQ2MGMtODVmNC04NmZjMjQ1YTY4NTY",
-          "creadoEn": "2026-10-04T19:10:30.074Z",
-          "actualizaciones": [
-            {
-              "id": "muu7624v13gk07t6r8x9",
-              "nota": "Case closed",
-              "agente": "Lando Norris",
-              "fecha": "2026-10-04T19:11:45.487Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1791141030074",
-              "nota": "Automatic ticket created from Webex Control Hub alert. Severity: HIGH. LGW Trunk Status Changed from online to offline",
-              "agente": "Webex Connect",
-              "fecha": "2026-10-04T19:10:30.074Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-10-04T19:11:45.487Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-09-28T21:23:16.120Z",
       "actualizadoEn": "2026-10-04T19:11:45.487Z"
     }
