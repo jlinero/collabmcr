@@ -83,9 +83,30 @@
       "notas": "",
       "actividades": [],
       "deals": [],
-      "tickets": [],
+      "tickets": [
+        {
+          "id": "195110",
+          "numero": "195110",
+          "nombre": "Trunk Down: LGW Trunk Status Changed from online to offline",
+          "estado": "abierto",
+          "severidad": "HIGH",
+          "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8wMWI1MDc3YS0xYTUzLTQ2MGMtODVmNC04NmZjMjQ1YTY4NTY",
+          "creadoEn": "2026-10-04T19:30:52.352Z",
+          "actualizaciones": [
+            {
+              "id": "1791142252352",
+              "nota": "Automatic ticket created from Webex Control Hub alert. Severity: HIGH. LGW Trunk Status Changed from online to offline",
+              "agente": "Webex Connect",
+              "fecha": "2026-10-04T19:30:52.352Z",
+              "estadoAnterior": "",
+              "estadoNuevo": ""
+            }
+          ],
+          "actualizadoEn": "2026-10-04T19:30:52.352Z"
+        }
+      ],
       "creadoEn": "2026-09-28T21:23:16.120Z",
-      "actualizadoEn": "2026-10-04T19:11:45.487Z"
+      "actualizadoEn": "2026-10-04T19:30:52.352Z"
     }
   ]
 }
