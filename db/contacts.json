@@ -55,24 +55,11 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "muu8xry17w2etvyaqdj",
-          "tipo": "llamada",
-          "descripcion": "Call received from +576023981001 in the WebexOne-Sales queue and answered by Lando Norris on October 4, 2026 at 03:01 PM.",
-          "fecha": "2026-10-04T20:01:18.264Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "WebexOne-Sales",
-          "interactionId": "bb789ceb-9793-4e83-8632-2569a9a34a6c"
-        }
-      ],
+      "actividades": [],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-10-04T20:01:18.264Z"
+      "actualizadoEn": "2026-10-01T18:48:26.116Z"
     },
     {
       "id": "061026",
@@ -96,30 +83,9 @@
       "notas": "",
       "actividades": [],
       "deals": [],
-      "tickets": [
-        {
-          "id": "462409",
-          "numero": "462409",
-          "nombre": "Trunk Down: LGW Trunk Status Changed from online to offline",
-          "estado": "abierto",
-          "severidad": "HIGH",
-          "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8wMWI1MDc3YS0xYTUzLTQ2MGMtODVmNC04NmZjMjQ1YTY4NTY",
-          "creadoEn": "2026-10-04T20:11:21.723Z",
-          "actualizaciones": [
-            {
-              "id": "1791144681723",
-              "nota": "Automatic ticket created from Webex Control Hub alert. Severity: HIGH. LGW Trunk Status Changed from online to offline",
-              "agente": "Webex Connect",
-              "fecha": "2026-10-04T20:11:21.723Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-10-04T20:11:21.723Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-09-28T21:23:16.120Z",
-      "actualizadoEn": "2026-10-04T20:11:21.723Z"
+      "actualizadoEn": "2026-10-04T19:11:45.487Z"
     }
   ]
 }
