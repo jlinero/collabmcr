@@ -55,11 +55,24 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "muu8xry17w2etvyaqdj",
+          "tipo": "llamada",
+          "descripcion": "Call received from +576023981001 in the WebexOne-Sales queue and answered by Lando Norris on October 4, 2026 at 03:01 PM.",
+          "fecha": "2026-10-04T20:01:18.264Z",
+          "direccion": "inbound",
+          "estado": "answered",
+          "canal": "Webex Calling Customer Assist",
+          "asignadoA": "Lando Norris",
+          "cola": "WebexOne-Sales",
+          "interactionId": "bb789ceb-9793-4e83-8632-2569a9a34a6c"
+        }
+      ],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-10-01T18:48:26.116Z"
+      "actualizadoEn": "2026-10-04T20:01:18.264Z"
     },
     {
       "id": "061026",
