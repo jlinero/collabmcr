@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1791141776875",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Session with Sales Representative",
+      "proposito": "Learn about Webex Calling AI features",
+      "fecha": "2026-10-05",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-04T19:22:56.875Z"
+    }
+  ]
 }
