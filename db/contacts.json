@@ -31,28 +31,9 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "711289",
-          "numero": "711289",
-          "nombre": "AI Receptionist failure",
-          "estado": "abierto",
-          "creadoEn": "2026-10-05T02:04:46.601Z",
-          "actualizaciones": [
-            {
-              "id": "1791165886601",
-              "nota": "The AI Receptionist in Webex Calling is experiencing a failure and needs troubleshooting.",
-              "agente": "AI Agent",
-              "fecha": "2026-10-05T02:04:46.601Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-10-05T02:04:46.601Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-10-05T02:04:46.601Z"
+      "actualizadoEn": "2026-10-01T13:07:03.285Z"
     },
     {
       "id": "120874",
