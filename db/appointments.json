@@ -16,6 +16,23 @@
       "agente": "",
       "notas": "",
       "creadoEn": "2026-10-06T15:46:33.397Z"
+    },
+    {
+      "id": "1791374811203",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Instalación de Webex Calling",
+      "proposito": "Instalación de Webex Calling",
+      "fecha": "2026-10-08",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-07T12:06:51.203Z"
     }
   ]
 }
