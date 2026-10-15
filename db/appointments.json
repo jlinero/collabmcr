@@ -1,22 +1,3 @@
 {
-  "appointments": [
-    {
-      "id": "1792096490738",
-      "contactId": "123456",
-      "contactNombre": "Jose Linero",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+573102634216",
-      "titulo": "Sesión informativa Webex Contact Center",
-      "proposito": "Conocer más sobre Webex Contact Center",
-      "fecha": "2026-10-16",
-      "horaInicio": "08:00",
-      "horaFin": "10:00",
-      "duracion": 120,
-      "estado": "reprogramada",
-      "agente": "",
-      "notas": "Reprogramada desde 2026-10-16 09:00. Motivo: Cambio de horario solicitado por el cliente",
-      "creadoEn": "2026-10-15T20:34:50.746Z",
-      "actualizadoEn": "2026-10-15T20:35:39.050Z"
-    }
-  ]
+  "appointments": []
 }
