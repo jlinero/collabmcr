@@ -9,13 +9,14 @@
       "titulo": "Cita informativa sobre Webex Calling y características de inteligencia artificial",
       "proposito": "Conocer funcionalidades e inteligencia artificial en Webex Calling",
       "fecha": "2026-10-19",
-      "horaInicio": "09:00",
-      "horaFin": "11:00",
+      "horaInicio": "10:00",
+      "horaFin": "12:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-15T19:46:59.757Z"
+      "notas": "Reprogramada desde 2026-10-19 09:00. Motivo: Cambio de horario solicitado por el cliente",
+      "creadoEn": "2026-10-15T19:46:59.757Z",
+      "actualizadoEn": "2026-10-15T19:47:28.225Z"
     }
   ]
 }
