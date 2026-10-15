@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1792090254642",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Cita informativa de Webex Calling con ventas",
+      "proposito": "Sesión para explicar Webex Calling y resolver dudas",
+      "fecha": "2026-10-16",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-15T18:50:54.642Z"
+    }
+  ]
 }
