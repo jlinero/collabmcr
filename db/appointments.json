@@ -1,22 +1,3 @@
 {
-  "appointments": [
-    {
-      "id": "1792093619757",
-      "contactId": "123456",
-      "contactNombre": "Jose Linero",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+573102634216",
-      "titulo": "Cita informativa sobre Webex Calling y características de inteligencia artificial",
-      "proposito": "Conocer funcionalidades e inteligencia artificial en Webex Calling",
-      "fecha": "2026-10-19",
-      "horaInicio": "10:00",
-      "horaFin": "12:00",
-      "duracion": 120,
-      "estado": "reprogramada",
-      "agente": "",
-      "notas": "Reprogramada desde 2026-10-19 09:00. Motivo: Cambio de horario solicitado por el cliente",
-      "creadoEn": "2026-10-15T19:46:59.757Z",
-      "actualizadoEn": "2026-10-15T19:47:28.225Z"
-    }
-  ]
+  "appointments": []
 }
