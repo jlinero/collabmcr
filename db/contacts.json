@@ -63,11 +63,24 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "mv9wb7pfgb9ikt4eigl",
+          "tipo": "llamada",
+          "descripcion": "Call received from +576023981001 in the Gaia WxC Sales queue and answered by Lando Norris on October 15, 2026 at 01:52 PM.",
+          "fecha": "2026-10-15T18:52:09.026Z",
+          "direccion": "inbound",
+          "estado": "answered",
+          "canal": "Webex Calling Customer Assist",
+          "asignadoA": "Lando Norris",
+          "cola": "Gaia WxC Sales",
+          "interactionId": "2ab96af7-9982-48bf-b1ca-47dcd6b464b6"
+        }
+      ],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-10-01T18:48:26.116Z"
+      "actualizadoEn": "2026-10-15T18:52:09.026Z"
     },
     {
       "id": "061026",
