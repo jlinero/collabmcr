@@ -9,13 +9,14 @@
       "titulo": "Sesión sobre características de inteligencia artificial Webex",
       "proposito": "Explicación personalizada de funciones AI",
       "fecha": "2026-10-16",
-      "horaInicio": "12:20",
-      "horaFin": "14:20",
+      "horaInicio": "14:00",
+      "horaFin": "16:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-16T17:15:59.573Z"
+      "notas": "Reprogramada desde 2026-10-16 12:20. Motivo: Cambio por preferencia de horario",
+      "creadoEn": "2026-10-16T17:15:59.573Z",
+      "actualizadoEn": "2026-10-16T17:16:59.390Z"
     }
   ]
 }
