@@ -44,9 +44,17 @@
           "id": "346603",
           "numero": "346603",
           "nombre": "Guía paso a paso para configurar el recepcionista de inteligencia artificial en Webex Calling",
-          "estado": "abierto",
+          "estado": "cerrado",
           "creadoEn": "2026-10-16T17:26:50.778Z",
           "actualizaciones": [
+            {
+              "id": "mvb8wc44anglhy7h4x",
+              "nota": "Cerrando para demo",
+              "agente": "Lando Norris",
+              "fecha": "2026-10-16T17:32:16.084Z",
+              "estadoAnterior": "abierto",
+              "estadoNuevo": "cerrado"
+            },
             {
               "id": "1792171610778",
               "nota": "Solicito instrucciones detalladas sobre la configuración de la función recepcionista de inteligencia artificial en Webex Calling: requisitos, pasos principales, recomendaciones de uso.",
@@ -56,11 +64,11 @@
               "estadoNuevo": ""
             }
           ],
-          "actualizadoEn": "2026-10-16T17:26:50.778Z"
+          "actualizadoEn": "2026-10-16T17:32:16.084Z"
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-10-16T17:26:50.778Z"
+      "actualizadoEn": "2026-10-16T17:32:16.084Z"
     },
     {
       "id": "120874",
