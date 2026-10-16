@@ -12,11 +12,11 @@
       "horaInicio": "16:00",
       "horaFin": "18:00",
       "duracion": 120,
-      "estado": "reprogramada",
+      "estado": "cancelada",
       "agente": "",
-      "notas": "Reprogramada desde 2026-10-16 12:30. Motivo: Cambio de horario solicitado por el cliente",
+      "notas": "Cancelada: Cancelación solicitada por el cliente",
       "creadoEn": "2026-10-16T17:25:35.161Z",
-      "actualizadoEn": "2026-10-16T17:26:24.676Z"
+      "actualizadoEn": "2026-10-16T17:27:16.492Z"
     }
   ]
 }
