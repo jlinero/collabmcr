@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1792170653422",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Cita para conocer Webex Calling y AI Receptionist",
+      "proposito": "Sesión informativa sobre Webex Calling y AI Receptionist",
+      "fecha": "2026-10-21",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-16T17:10:53.422Z"
+    }
+  ]
 }
