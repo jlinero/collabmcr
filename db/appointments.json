@@ -9,13 +9,14 @@
       "titulo": "Configuración de EI a recepcionista en Webex Calling",
       "proposito": "Sesión para conocer y configurar el recepcionista de inteligencia artificial Webex.",
       "fecha": "2026-10-16",
-      "horaInicio": "14:29",
-      "horaFin": "16:29",
+      "horaInicio": "16:00",
+      "horaFin": "18:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-16T19:24:32.627Z"
+      "notas": "Reprogramada desde 2026-10-16 14:29. Motivo: Cambio de hora solicitado por el cliente",
+      "creadoEn": "2026-10-16T19:24:32.627Z",
+      "actualizadoEn": "2026-10-16T19:24:59.217Z"
     }
   ]
 }
