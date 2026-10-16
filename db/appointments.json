@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1792178672627",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Configuración de EI a recepcionista en Webex Calling",
+      "proposito": "Sesión para conocer y configurar el recepcionista de inteligencia artificial Webex.",
+      "fecha": "2026-10-16",
+      "horaInicio": "14:29",
+      "horaFin": "16:29",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-16T19:24:32.627Z"
+    }
+  ]
 }
