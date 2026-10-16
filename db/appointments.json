@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1792170959573",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión sobre características de inteligencia artificial Webex",
+      "proposito": "Explicación personalizada de funciones AI",
+      "fecha": "2026-10-16",
+      "horaInicio": "12:20",
+      "horaFin": "14:20",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-16T17:15:59.573Z"
+    }
+  ]
 }
