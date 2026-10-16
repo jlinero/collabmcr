@@ -9,13 +9,14 @@
       "titulo": "Sesión informativa de Webex AI Receptionist",
       "proposito": "Conocer la solución de recepcionista de inteligencia artificial en Webex",
       "fecha": "2026-10-16",
-      "horaInicio": "12:30",
-      "horaFin": "14:30",
+      "horaInicio": "16:00",
+      "horaFin": "18:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-16T17:25:35.161Z"
+      "notas": "Reprogramada desde 2026-10-16 12:30. Motivo: Cambio de horario solicitado por el cliente",
+      "creadoEn": "2026-10-16T17:25:35.161Z",
+      "actualizadoEn": "2026-10-16T17:26:24.676Z"
     }
   ]
 }
