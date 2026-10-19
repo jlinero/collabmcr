@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mvfkvm7j6h0ws0ky137",
+          "tipo": "llamada",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
+          "fecha": "2026-10-19T18:18:42.607Z"
+        },
+        {
           "id": "1791374840273",
           "tipo": "llamada",
           "descripcion": "Cliente con sentimiento neutral. Se identificó al contacto y se agendó una sesión de instalación de Webex Calling para el 2026-10-08 de 08:00 a 10:00.",
@@ -68,7 +74,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-10-16T17:32:16.084Z"
+      "actualizadoEn": "2026-10-19T18:18:42.607Z"
     },
     {
       "id": "120874",
