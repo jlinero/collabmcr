@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mviabvi681x2iozsk18",
+          "tipo": "llamada",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
+          "fecha": "2026-10-21T15:46:43.902Z"
+        },
+        {
           "id": "mvh825l9pz9i6hzjso",
           "tipo": "llamada",
           "descripcion": "Incoming call from 573102634216 · Status: in progress",
@@ -218,7 +224,7 @@
         }
       ],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-10-20T21:55:25.005Z"
+      "actualizadoEn": "2026-10-21T15:46:43.902Z"
     },
     {
       "id": "120874",
