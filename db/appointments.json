@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1792616391917",
+      "contactId": "061026",
+      "contactNombre": "Vladimiro Lerena",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+56950924649",
+      "titulo": "Orthopedics",
+      "proposito": "",
+      "fecha": "2026-10-22",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-21T20:59:51.917Z"
+    }
+  ]
 }
