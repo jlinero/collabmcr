@@ -48,10 +48,11 @@
       "horaInicio": "16:15",
       "horaFin": "18:15",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-21T21:10:58.854Z"
+      "notas": "Cancelada: patient requested cancellation",
+      "creadoEn": "2026-10-21T21:10:58.854Z",
+      "actualizadoEn": "2026-10-21T21:28:39.755Z"
     }
   ]
 }
