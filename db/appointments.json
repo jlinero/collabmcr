@@ -30,10 +30,11 @@
       "horaInicio": "11:00",
       "horaFin": "13:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-21T21:06:49.983Z"
+      "notas": "Cancelada: patient request",
+      "creadoEn": "2026-10-21T21:06:49.983Z",
+      "actualizadoEn": "2026-10-21T21:26:11.933Z"
     },
     {
       "id": "1792617058854",
