@@ -20,171 +20,7 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "mviabvi681x2iozsk18",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-21T15:46:43.902Z"
-        },
-        {
-          "id": "mvh825l9pz9i6hzjso",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-20T21:55:25.005Z"
-        },
-        {
-          "id": "mvh5cugynlzdyb2bacs",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-20T20:39:44.962Z"
-        },
-        {
-          "id": "mvh3yev6lir2pxifja",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-20T20:00:31.938Z"
-        },
-        {
-          "id": "mvfw4e43h0c7x8cbc9",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T23:33:27.795Z"
-        },
-        {
-          "id": "mvfvj9b02arzy4zmjju",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T23:17:01.788Z"
-        },
-        {
-          "id": "mvfv8tj2euuwkv9xupg",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T23:08:54.782Z"
-        },
-        {
-          "id": "mvfuxi476yhebwcgkxf",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T23:00:06.775Z"
-        },
-        {
-          "id": "mvfuej8mjopef1aurt",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T22:45:21.766Z"
-        },
-        {
-          "id": "mvfucryu541ulcqslj4",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T22:43:59.766Z"
-        },
-        {
-          "id": "mvftso6yxufbn9b8dlo",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T22:28:21.754Z"
-        },
-        {
-          "id": "mvfqrlge0iq18d4u9xd9",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T21:03:32.702Z"
-        },
-        {
-          "id": "mvfqrfa6v5rqzsi0kv",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T21:03:24.702Z"
-        },
-        {
-          "id": "mvfqqivisf3o4o4qbt9",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T21:02:42.702Z"
-        },
-        {
-          "id": "mvfq5eu3ph9gq80mp8e",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T20:46:17.691Z"
-        },
-        {
-          "id": "mvfq4zekizwvzz109dc",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T20:45:57.692Z"
-        },
-        {
-          "id": "mvfq3b7u9n2hfntirfe",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T20:44:39.690Z"
-        },
-        {
-          "id": "mvfpnq98p7ikt6zcv3e",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T20:32:32.684Z"
-        },
-        {
-          "id": "mvfpm22kjzpjrifb90j",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T20:31:14.684Z"
-        },
-        {
-          "id": "mvfp8ym6ouvfokbzdj",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T20:21:03.678Z"
-        },
-        {
-          "id": "mvfp7m070dk3nv7tkgsi",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T20:20:00.679Z"
-        },
-        {
-          "id": "mvfp77ce8d775rb0k45",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T20:19:41.678Z"
-        },
-        {
-          "id": "mvfn1lc0egt9ui9klem",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T19:19:20.640Z"
-        },
-        {
-          "id": "mvfl9go55xjqvy6rhe5",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T18:29:28.613Z"
-        },
-        {
-          "id": "mvfl7wcc1mxe8h8t516",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T18:28:15.612Z"
-        },
-        {
-          "id": "mvfkvm7j6h0ws0ky137",
-          "tipo": "llamada",
-          "descripcion": "Incoming call from 573102634216 · Status: in progress",
-          "fecha": "2026-10-19T18:18:42.607Z"
-        },
-        {
-          "id": "1791374840273",
-          "tipo": "llamada",
-          "descripcion": "Cliente con sentimiento neutral. Se identificó al contacto y se agendó una sesión de instalación de Webex Calling para el 2026-10-08 de 08:00 a 10:00.",
-          "asignadoA": "Asistente virtual",
-          "fecha": "2026-10-07T12:07:20.273Z"
-        }
-      ],
+      "actividades": [],
       "deals": [
         {
           "id": "moc59bb1py0jkgv9x8",
@@ -195,36 +31,9 @@
           "creadoEn": "2026-04-24T00:00:12.925Z"
         }
       ],
-      "tickets": [
-        {
-          "id": "346603",
-          "numero": "346603",
-          "nombre": "Guía paso a paso para configurar el recepcionista de inteligencia artificial en Webex Calling",
-          "estado": "cerrado",
-          "creadoEn": "2026-10-16T17:26:50.778Z",
-          "actualizaciones": [
-            {
-              "id": "mvb8wc44anglhy7h4x",
-              "nota": "Cerrando para demo",
-              "agente": "Lando Norris",
-              "fecha": "2026-10-16T17:32:16.084Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1792171610778",
-              "nota": "Solicito instrucciones detalladas sobre la configuración de la función recepcionista de inteligencia artificial en Webex Calling: requisitos, pasos principales, recomendaciones de uso.",
-              "agente": "AI Agent",
-              "fecha": "2026-10-16T17:26:50.778Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-10-16T17:32:16.084Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-10-21T15:46:43.902Z"
+      "actualizadoEn": "2026-10-01T13:07:03.285Z"
     },
     {
       "id": "120874",
@@ -246,51 +55,14 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [
-        {
-          "id": "mvb8sv7uizl8wunehjo",
-          "tipo": "llamada",
-          "descripcion": "Call received from +576023981001 in the Gaia WxC Sales queue and answered by Lando Norris on October 16, 2026 at 12:29 PM.",
-          "fecha": "2026-10-16T17:29:34.217Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "Gaia WxC Sales",
-          "interactionId": "544f9392-167d-4125-a9d9-9b493de3265e"
-        },
-        {
-          "id": "mvb8efth0w73hwx9k2b",
-          "tipo": "llamada",
-          "descripcion": "Call received from +576023981001 in the Gaia Support queue and answered by Lando Norris on October 16, 2026 at 12:18 PM.",
-          "fecha": "2026-10-16T17:18:21.066Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "Gaia Support",
-          "interactionId": "2375a378-712b-4cc0-9fda-a9e0e537891b"
-        },
-        {
-          "id": "mv9wb7pfgb9ikt4eigl",
-          "tipo": "llamada",
-          "descripcion": "Call received from +576023981001 in the Gaia WxC Sales queue and answered by Lando Norris on October 15, 2026 at 01:52 PM.",
-          "fecha": "2026-10-15T18:52:09.026Z",
-          "direccion": "inbound",
-          "estado": "answered",
-          "canal": "Webex Calling Customer Assist",
-          "asignadoA": "Lando Norris",
-          "cola": "Gaia WxC Sales",
-          "interactionId": "2ab96af7-9982-48bf-b1ca-47dcd6b464b6"
-        }
-      ],
+      "actividades": [],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-10-16T17:29:34.217Z"
+      "actualizadoEn": "2026-10-01T18:48:26.116Z"
     },
     {
-      "id": "211026",
+      "id": "061026",
       "nombre": "Vladimiro",
       "apellido": "Lerena",
       "cargo": "Collaboration SE",
@@ -311,38 +83,9 @@
       "notas": "",
       "actividades": [],
       "deals": [],
-      "tickets": [
-        {
-          "id": "190523",
-          "numero": "190523",
-          "nombre": "Trunk Down: LGW Trunk Status Changed from online to offline",
-          "estado": "cerrado",
-          "severidad": "HIGH",
-          "orgId": "Y2lzY29zcGFyazovL3VzL09SR0FOSVpBVElPTi8wMWI1MDc3YS0xYTUzLTQ2MGMtODVmNC04NmZjMjQ1YTY4NTY",
-          "creadoEn": "2026-10-06T16:31:24.758Z",
-          "actualizaciones": [
-            {
-              "id": "mvik6ojven3fgvzmljs",
-              "nota": "Closing this case",
-              "agente": "",
-              "fecha": "2026-10-21T20:22:37.771Z",
-              "estadoAnterior": "abierto",
-              "estadoNuevo": "cerrado"
-            },
-            {
-              "id": "1791304284758",
-              "nota": "Automatic ticket created from Webex Control Hub alert. Severity: HIGH. LGW Trunk Status Changed from online to offline",
-              "agente": "Webex Connect",
-              "fecha": "2026-10-06T16:31:24.758Z",
-              "estadoAnterior": "",
-              "estadoNuevo": ""
-            }
-          ],
-          "actualizadoEn": "2026-10-21T20:22:37.771Z"
-        }
-      ],
+      "tickets": [],
       "creadoEn": "2026-09-28T21:23:16.120Z",
-      "actualizadoEn": "2026-10-21T20:22:37.771Z"
+      "actualizadoEn": "2026-10-04T19:11:45.487Z"
     }
   ]
 }
