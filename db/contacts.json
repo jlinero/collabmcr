@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1793292838963",
+          "tipo": "llamada",
+          "descripcion": "El paciente Jose Linero llamó para confirmar su cita de Cardiología para el miércoles cuatro de noviembre.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-10-29T16:53:58.963Z"
+        },
+        {
           "id": "1793292692827",
           "tipo": "llamada",
           "descripcion": "El paciente reprogramó su cita de Cardiología para el miércoles cuatro de noviembre de una a tres de la tarde.",
@@ -73,7 +80,7 @@
       ],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-10-29T16:51:32.827Z"
+      "actualizadoEn": "2026-10-29T16:53:58.963Z"
     },
     {
       "id": "120874",
