@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1793292692827",
+          "tipo": "llamada",
+          "descripcion": "El paciente reprogramó su cita de Cardiología para el miércoles cuatro de noviembre de una a tres de la tarde.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-10-29T16:51:32.827Z"
+        },
+        {
           "id": "1793292536482",
           "tipo": "llamada",
           "descripcion": "El paciente reprogramó y luego canceló una cita de Medicina General. Posteriormente, agendó una nueva cita de Cardiología para el martes tres de noviembre de una a tres de la tarde.",
@@ -66,7 +73,7 @@
       ],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-10-29T16:48:56.482Z"
+      "actualizadoEn": "2026-10-29T16:51:32.827Z"
     },
     {
       "id": "120874",
