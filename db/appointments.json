@@ -35,6 +35,23 @@
       "notas": "Reprogramada desde 2026-11-03 13:00. Motivo: El paciente solicitó cambiar la fecha al miércoles por la tarde.",
       "creadoEn": "2026-10-29T16:48:31.594Z",
       "actualizadoEn": "2026-10-29T16:51:09.543Z"
+    },
+    {
+      "id": "1793293309664",
+      "contactId": "061026",
+      "contactNombre": "Vladimiro Lerena",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+56950924649",
+      "titulo": "Cita de Ortopedia - Dr. James Whitaker - Community Hospital North",
+      "proposito": "Cita de Ortopedia",
+      "fecha": "2026-10-30",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-29T17:01:49.665Z"
     }
   ]
 }
