@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1793290537560",
+          "tipo": "llamada",
+          "descripcion": "El paciente agendó una cita de Medicina General para el martes tres de noviembre a las nueve de la mañana. Inicialmente se asignó en Community Hospital North, pero el paciente solicitó el cambio a Community Hospital East con la doctora Laura Gómez.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-10-29T16:15:37.560Z"
+        },
+        {
           "id": "mvjpkx15gy4ucagymqc",
           "tipo": "llamada",
           "descripcion": "Incoming call from 573102634216 · Status: in progress",
@@ -52,7 +59,7 @@
       ],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-10-22T15:41:26.201Z"
+      "actualizadoEn": "2026-10-29T16:15:37.560Z"
     },
     {
       "id": "120874",
