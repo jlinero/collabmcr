@@ -26,14 +26,15 @@
       "contactTel": "+573102634216",
       "titulo": "Cita de Cardiología con Dr. Andrés Restrepo en Community Hospital South, 1402 East County Line Road, Indianapolis",
       "proposito": "Consulta de Cardiología",
-      "fecha": "2026-11-03",
+      "fecha": "2026-11-04",
       "horaInicio": "13:00",
       "horaFin": "15:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-29T16:48:31.594Z"
+      "notas": "Reprogramada desde 2026-11-03 13:00. Motivo: El paciente solicitó cambiar la fecha al miércoles por la tarde.",
+      "creadoEn": "2026-10-29T16:48:31.594Z",
+      "actualizadoEn": "2026-10-29T16:51:09.543Z"
     }
   ]
 }
