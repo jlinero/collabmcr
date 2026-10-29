@@ -9,13 +9,14 @@
       "titulo": "Cita de Ortopedia - Dr. James Whitaker, Community Hospital North, 7150 Clearvista Drive, Indianapolis",
       "proposito": "",
       "fecha": "2026-10-30",
-      "horaInicio": "09:00",
-      "horaFin": "11:00",
+      "horaInicio": "11:00",
+      "horaFin": "13:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-29T17:23:14.495Z"
+      "notas": "Reprogramada desde 2026-10-30 09:00. Motivo: Cambio de horario solicitado por el paciente",
+      "creadoEn": "2026-10-29T17:23:14.495Z",
+      "actualizadoEn": "2026-10-29T17:25:39.690Z"
     }
   ]
 }
