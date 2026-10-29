@@ -50,6 +50,23 @@
       "agente": "",
       "notas": "",
       "creadoEn": "2026-10-29T16:00:37.943Z"
+    },
+    {
+      "id": "1793290443954",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Medicina General - Dr. Michael Carter - Community Hospital North",
+      "proposito": "",
+      "fecha": "2026-11-03",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-29T16:14:03.954Z"
     }
   ]
 }
