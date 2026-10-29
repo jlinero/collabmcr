@@ -17,6 +17,23 @@
       "notas": "Cancelada: El paciente solicitó la cancelación por un imprevisto.",
       "creadoEn": "2026-10-29T16:44:32.669Z",
       "actualizadoEn": "2026-10-29T16:47:34.178Z"
+    },
+    {
+      "id": "1793292511593",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Cita de Cardiología con Dr. Andrés Restrepo en Community Hospital South, 1402 East County Line Road, Indianapolis",
+      "proposito": "Consulta de Cardiología",
+      "fecha": "2026-11-03",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-29T16:48:31.594Z"
     }
   ]
 }
