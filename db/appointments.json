@@ -53,6 +53,23 @@
       "notas": "Reprogramada desde 2026-10-30 13:00. Motivo: Cambio de fecha y horario solicitado por el paciente",
       "creadoEn": "2026-10-29T17:01:49.665Z",
       "actualizadoEn": "2026-10-29T17:03:14.592Z"
+    },
+    {
+      "id": "1793293597177",
+      "contactId": "061026",
+      "contactNombre": "Vladimiro Lerena",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+56950924649",
+      "titulo": "Cita de Medicina General - Dr. Michael Carter",
+      "proposito": "Consulta de Medicina General",
+      "fecha": "2026-10-29",
+      "horaInicio": "14:00",
+      "horaFin": "16:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-29T17:06:37.181Z"
     }
   ]
 }
