@@ -130,6 +130,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1793293798389",
+          "tipo": "llamada",
+          "descripcion": "El paciente Vladimiro Lerena canceló sus citas de Medicina General y Ortopedia debido a un viaje.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-10-29T17:09:58.389Z"
+        },
+        {
           "id": "1793293637735",
           "tipo": "llamada",
           "descripcion": "El paciente agendó una cita de medicina general para hoy jueves veintinueve de octubre de dos a cuatro de la tarde con el doctor Michael Carter.",
@@ -147,7 +154,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-09-28T21:23:16.120Z",
-      "actualizadoEn": "2026-10-29T17:07:17.735Z"
+      "actualizadoEn": "2026-10-29T17:09:58.389Z"
     }
   ]
 }
