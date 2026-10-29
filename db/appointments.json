@@ -48,11 +48,11 @@
       "horaInicio": "09:00",
       "horaFin": "11:00",
       "duracion": 120,
-      "estado": "reprogramada",
+      "estado": "cancelada",
       "agente": "",
-      "notas": "Reprogramada desde 2026-10-30 13:00. Motivo: Cambio de fecha y horario solicitado por el paciente",
+      "notas": "Cancelada: El paciente debe viajar y no puede asistir.",
       "creadoEn": "2026-10-29T17:01:49.665Z",
-      "actualizadoEn": "2026-10-29T17:03:14.592Z"
+      "actualizadoEn": "2026-10-29T17:09:46.398Z"
     },
     {
       "id": "1793293597177",
