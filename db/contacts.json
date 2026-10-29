@@ -130,6 +130,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1793295068024",
+          "tipo": "llamada",
+          "descripcion": "El paciente Vladimiro Lerena canceló su cita de Ortopedia debido a un viaje.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-10-29T17:31:08.024Z"
+        },
+        {
           "id": "1793294780285",
           "tipo": "llamada",
           "descripcion": "El paciente Vladimiro Lerena reprogramó su cita de Ortopedia para el viernes treinta de octubre a las once de la mañana.",
@@ -168,7 +175,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-09-28T21:23:16.120Z",
-      "actualizadoEn": "2026-10-29T17:26:20.285Z"
+      "actualizadoEn": "2026-10-29T17:31:08.024Z"
     }
   ]
 }
