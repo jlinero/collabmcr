@@ -1,40 +1,6 @@
 {
   "appointments": [
     {
-      "id": "1792684759914",
-      "contactId": "123456",
-      "contactNombre": "Jose Linero",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+573102634216",
-      "titulo": "Sesión informativa sobre servicios Webex",
-      "proposito": "Conocer los servicios de Webex Collins",
-      "fecha": "2026-10-23",
-      "horaInicio": "09:00",
-      "horaFin": "11:00",
-      "duracion": 120,
-      "estado": "confirmada",
-      "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-22T15:59:19.914Z"
-    },
-    {
-      "id": "1792698616722",
-      "contactId": "061026",
-      "contactNombre": "Vladimiro Lerena",
-      "contactEmpresa": "Cisco",
-      "contactTel": "+56950924649",
-      "titulo": "Primary Care Appointment",
-      "proposito": "General visit",
-      "fecha": "2026-10-23",
-      "horaInicio": "11:00",
-      "horaFin": "13:00",
-      "duracion": 120,
-      "estado": "confirmada",
-      "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-22T19:50:16.722Z"
-    },
-    {
       "id": "1793289637943",
       "contactId": "123456",
       "contactNombre": "Jose Linero",
