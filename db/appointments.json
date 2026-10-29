@@ -44,14 +44,15 @@
       "contactTel": "+56950924649",
       "titulo": "Cita de Ortopedia - Dr. James Whitaker - Community Hospital North",
       "proposito": "Cita de Ortopedia",
-      "fecha": "2026-10-30",
-      "horaInicio": "13:00",
-      "horaFin": "15:00",
+      "fecha": "2026-10-31",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-29T17:01:49.665Z"
+      "notas": "Reprogramada desde 2026-10-30 13:00. Motivo: Cambio de fecha y horario solicitado por el paciente",
+      "creadoEn": "2026-10-29T17:01:49.665Z",
+      "actualizadoEn": "2026-10-29T17:03:14.592Z"
     }
   ]
 }
