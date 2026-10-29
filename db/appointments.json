@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1793294594495",
+      "contactId": "061026",
+      "contactNombre": "Vladimiro Lerena",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+56950924649",
+      "titulo": "Cita de Ortopedia - Dr. James Whitaker, Community Hospital North, 7150 Clearvista Drive, Indianapolis",
+      "proposito": "",
+      "fecha": "2026-10-30",
+      "horaInicio": "09:00",
+      "horaFin": "11:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-29T17:23:14.495Z"
+    }
+  ]
 }
