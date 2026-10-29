@@ -130,6 +130,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1793294619042",
+          "tipo": "llamada",
+          "descripcion": "El paciente Vladimiro Lerena agendó una cita de Ortopedia para el viernes treinta de octubre de nueve a once de la mañana con el doctor James Whitaker.",
+          "asignadoA": "AI Agent",
+          "fecha": "2026-10-29T17:23:39.042Z"
+        },
+        {
           "id": "1793293798389",
           "tipo": "llamada",
           "descripcion": "El paciente Vladimiro Lerena canceló sus citas de Medicina General y Ortopedia debido a un viaje.",
@@ -154,7 +161,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-09-28T21:23:16.120Z",
-      "actualizadoEn": "2026-10-29T17:09:58.389Z"
+      "actualizadoEn": "2026-10-29T17:23:39.042Z"
     }
   ]
 }
