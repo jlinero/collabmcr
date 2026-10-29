@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1793292272669",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Cita de Medicina General con Dra. Laura Gómez en Community Hospital East, 1500 North Ritter Avenue, Indianapolis",
+      "proposito": "Medicina General",
+      "fecha": "2026-11-03",
+      "horaInicio": "08:00",
+      "horaFin": "10:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-10-29T16:44:32.669Z"
+    }
+  ]
 }
