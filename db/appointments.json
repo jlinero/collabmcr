@@ -9,13 +9,14 @@
       "titulo": "Cita de Medicina General con Dra. Laura Gómez en Community Hospital East, 1500 North Ritter Avenue, Indianapolis",
       "proposito": "Medicina General",
       "fecha": "2026-11-03",
-      "horaInicio": "08:00",
-      "horaFin": "10:00",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "reprogramada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-10-29T16:44:32.669Z"
+      "notas": "Reprogramada desde 2026-11-03 08:00. Motivo: El paciente solicitó cambiar la cita a la tarde.",
+      "creadoEn": "2026-10-29T16:44:32.669Z",
+      "actualizadoEn": "2026-10-29T16:47:09.735Z"
     }
   ]
 }
