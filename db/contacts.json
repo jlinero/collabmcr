@@ -22,6 +22,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mw46zwnbx9a3lkp2yod",
+          "tipo": "llamada",
+          "descripcion": "Incoming call from 573102634216 · Status: in progress",
+          "fecha": "2026-11-05T23:44:22.535Z"
+        },
+        {
           "id": "mw45ntx7evekwophxs",
           "tipo": "llamada",
           "descripcion": "Incoming call from 573102634216 · Status: in progress",
@@ -92,7 +98,7 @@
       ],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-11-05T23:06:59.515Z"
+      "actualizadoEn": "2026-11-05T23:44:22.535Z"
     },
     {
       "id": "120874",
