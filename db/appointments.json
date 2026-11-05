@@ -1,3 +1,21 @@
 {
-  "appointments": []
+  "appointments": [
+    {
+      "id": "1793922179934",
+      "contactId": "123456",
+      "contactNombre": "Jose Linero",
+      "contactEmpresa": "Cisco",
+      "contactTel": "+573102634216",
+      "titulo": "Sesión sobre AI Agent en Webex Contact Center",
+      "proposito": "Conocer más sobre AI Agent en Webex Contact Center",
+      "fecha": "2026-11-09",
+      "horaInicio": "13:00",
+      "horaFin": "15:00",
+      "duracion": 120,
+      "estado": "confirmada",
+      "agente": "",
+      "notas": "",
+      "creadoEn": "2026-11-05T23:42:59.934Z"
+    }
+  ]
 }
