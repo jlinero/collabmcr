@@ -228,11 +228,18 @@
       "presupuesto": "",
       "timeline": "",
       "notas": "",
-      "actividades": [],
+      "actividades": [
+        {
+          "id": "mwo2yvzo4xw7qdprc9t",
+          "tipo": "llamada",
+          "descripcion": "Incoming call from +576023981001 · Status: in progress",
+          "fecha": "2026-11-19T21:47:00.084Z"
+        }
+      ],
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-10-01T18:48:26.116Z"
+      "actualizadoEn": "2026-11-19T21:47:00.084Z"
     },
     {
       "id": "061026",
