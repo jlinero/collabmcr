@@ -230,6 +230,12 @@
       "notas": "",
       "actividades": [
         {
+          "id": "mwo338mmv3dlx5hghu",
+          "tipo": "llamada",
+          "descripcion": "Incoming call from +576023981001 · Status: in progress",
+          "fecha": "2026-11-19T21:50:23.086Z"
+        },
+        {
           "id": "mwo2yvzo4xw7qdprc9t",
           "tipo": "llamada",
           "descripcion": "Incoming call from +576023981001 · Status: in progress",
@@ -239,7 +245,7 @@
       "deals": [],
       "tickets": [],
       "creadoEn": "2026-04-23T15:56:43.723Z",
-      "actualizadoEn": "2026-11-19T21:47:00.084Z"
+      "actualizadoEn": "2026-11-19T21:50:23.086Z"
     },
     {
       "id": "061026",
