@@ -12,10 +12,11 @@
       "horaInicio": "08:00",
       "horaFin": "10:00",
       "duracion": 120,
-      "estado": "confirmada",
+      "estado": "cancelada",
       "agente": "",
-      "notas": "",
-      "creadoEn": "2026-11-20T19:53:16.807Z"
+      "notas": "Cancelada: no puedo ese día",
+      "creadoEn": "2026-11-20T19:53:16.807Z",
+      "actualizadoEn": "2026-11-20T20:38:21.983Z"
     }
   ]
 }
