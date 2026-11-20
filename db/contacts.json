@@ -22,6 +22,13 @@
       "notas": "",
       "actividades": [
         {
+          "id": "1795207122289",
+          "tipo": "llamada",
+          "descripcion": "Llamada con sentimiento neutral. Se confirmó una sesión futura y luego se canceló a solicitud del cliente con motivo no puedo ese día.",
+          "asignadoA": "Asistente virtual",
+          "fecha": "2026-11-20T20:38:42.289Z"
+        },
+        {
           "id": "mwf550yndhid5010kah",
           "tipo": "llamada",
           "descripcion": "Incoming call from 573102634216 · Status: in progress",
@@ -206,7 +213,7 @@
       ],
       "tickets": [],
       "creadoEn": "2026-04-22T19:22:00.305Z",
-      "actualizadoEn": "2026-11-13T15:37:50.111Z"
+      "actualizadoEn": "2026-11-20T20:38:42.289Z"
     },
     {
       "id": "120874",
